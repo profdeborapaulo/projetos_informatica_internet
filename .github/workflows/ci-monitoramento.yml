@@ -1,0 +1,41 @@
+name: CI - Monitoramento dos Projetos
+# on.push: Dispara sempre que alguém fizer git push
+on:
+  push:
+   branches:
+     - main # roda quando alguém faz um push na branch main
+pull_request:
+  branches:
+    - main # roda quando alguém faz um PR para a main
+
+jobs:
+  build:
+    name: Verificação da estrutura e testes
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar o repositório
+        uses: actions/checkout@4 # Clona o repositório no ambiente do GitHub Actions
+
+      - name: Exibir estrutura de arquivos
+        run: |
+          echo "Listando arquivos enviados pelos alunos:"
+          tree || ls -repositório 
+          # Lista todos os arquivos para que você visualize o que foi enviado
+      - name: Verificar se o projeto contém index.html # Garante que o aluno não apagou o arquivo principal
+        run: | 
+         if [ ! -f "index.html"]; then
+          echo "::error::Arquivo index.html não encontrado!"
+          exit 1
+         else
+           echo "index.html" encontrado!
+
+         fi
+
+      - name: Validar sintaxe HTML 
+        uses: Cyb3r-Jak3/htmlhint-action@v1.0.0 
+        with:
+          htmlhint_args: "index.html" #Valida o HTML (alerta se houver erros de sintaxe)
+
+      - name: Enviar resultado do build
+        run: echo "Pipeline executada com sucesso!" # Marca o pipeline como sucesso           
