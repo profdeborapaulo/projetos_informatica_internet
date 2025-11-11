@@ -1,52 +1,56 @@
 name: CI - Monitoramento dos Projetos
-# on.push: Dispara sempre que alguém fizer git push
+
+# Dispara quando há push ou pull request para a branch main
 on:
   push:
     branches:
-      - main   #roda quando alguém faz push na branch main
+      - main
   pull_request:
     branches:
-      - main   # roda quando alguém faz um PR para a main
+      - main
 
 jobs:
   build:
     name: Verificação de estrutura e testes
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  # Usa máquina Linux padrão do GitHub Actions
 
     steps:
+      # 1. Clona o repositório no ambiente do GitHub Actions
       - name: Clonar o repositório
-        uses: actions/checkout@v4 # Clona o repositório no ambiente do GitHub Actions
+        uses: actions/checkout@v4
 
+      # 2. Lista a estrutura de arquivos enviada pelo aluno
       - name: Exibir estrutura de arquivos
         run: |
           echo "Listando arquivos enviados pelos alunos:"
-          tree || ls -R # Lista todos os arquivos para que você visualize o que foi enviado  
+          tree || ls -R  # Usa tree se disponível, senão ls -R
 
-      - name: Verificar se o projeto contém index.html # Garante que o aluno não apagou o arquivo principal
+      # 3. Verifica se existe o arquivo index.html (obrigatório)
+      - name: Verificar se o projeto contém index.html
         run: |
           if [ ! -f "index.html" ]; then
             echo "::error::Arquivo index.html não encontrado!"
-            exit 1
+            exit 1  # Interrompe o pipeline se não encontrar
           else
-            echo " index.html encontrado!"
+            echo "index.html encontrado!"
           fi
 
-      - name: Validar sintaxe HTML (opcional)
-        uses: Cyb3r-Jak3/htmlhint-action@v1.0.0
+      # 4. Instala Node.js (necessário para rodar HTMLHint via npm)
+      - name: Instalar Node.js
+        uses: actions/setup-node@v4
         with:
-          htmlhint_args: "index.html"  #Valida o HTML (alerta se houver erros de sintaxe)
+          node-version: '18'  # Versão estável do Node
 
+      # 5. Instala HTMLHint globalmente
       - name: Instalar HTMLHint
         run: npm install -g htmlhint
 
-      - name: Validar index.html
-        run: htmlhint index.html
+      # 6. Valida todos os arquivos HTML do projeto
+      - name: Validar HTML com HTMLHint
+        run: |
+          echo "Validando arquivos HTML..."
+          htmlhint "**/*.html"  # Analisa todos os arquivos .html
 
-      - name: Run HTMLHint
-        uses: htmlhint/htmlhint-action@v1
-
-      - name: Run HTMLHint
-        uses: cyb3r-jak3/htmlhint-action@v1
-
+      # 7. Exibe mensagem final de sucesso
       - name: Enviar resultado do build
-        run: echo " Pipeline executada com sucesso!" # Marca o pipeline como sucesso        
+        run: echo "✅ Pipeline executada com sucesso!"
