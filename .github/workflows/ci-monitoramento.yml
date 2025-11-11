@@ -36,6 +36,12 @@ jobs:
         with:
           htmlhint_args: "index.html"  #Valida o HTML (alerta se houver erros de sintaxe)
 
+      - name: Instalar HTMLHint
+        run: npm install -g htmlhint
+
+      - name: Validar index.html
+        run: htmlhint index.html
+
 
       - name: Enviar resultado do build
         run: echo " Pipeline executada com sucesso!" # Marca o pipeline como sucesso        
