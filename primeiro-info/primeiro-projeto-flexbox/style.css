@@ -1,0 +1,29 @@
+.container{
+    background-color: #ccc;
+    height: 200px;
+    display: flex;
+    /* Direção:
+    flex-direction: row;
+    flex-direction: column;
+    flex-direction: row-reverse;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    justify-content: space-between;
+    */
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+
+}
+
+.item{
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    margin: 5px;
+    
+}
