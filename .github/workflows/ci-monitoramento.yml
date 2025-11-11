@@ -44,6 +44,9 @@ jobs:
 
       - name: Run HTMLHint
         uses: htmlhint/htmlhint-action@v1
-        
+
+      - name: Run HTMLHint
+        uses: cyb3r-jak3/htmlhint-action@v1
+
       - name: Enviar resultado do build
         run: echo " Pipeline executada com sucesso!" # Marca o pipeline como sucesso        
