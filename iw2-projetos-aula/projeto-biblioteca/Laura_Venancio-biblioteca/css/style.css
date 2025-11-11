@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #101010;
+    color: #CCCCCC;
+    line-height: 1.6;
+    background-image: url('../img/neo_quimica.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(10, 10, 10, 0.92);
+    z-index: -1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+h1, h2, h3 {
+    color: #FFFFFF;
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.site-header, .site-footer {
+    background-color: #1a1a1a;
+    background-image: repeating-linear-gradient(90deg, 
+        transparent, 
+        transparent 20px, 
+        rgba(0,0,0,0.2) 20px, 
+        rgba(0,0,0,0.2) 40px
+    );
+    text-align: center;
+    padding: 1.5rem 0;
+    border-bottom: 2px solid #FFFFFF;
+    position: relative;
+    z-index: 10;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.escudo-header {
+    width: 200px;
+    height: auto;
+}
+
+.site-header h1 {
+    font-size: 3rem;
+}
+
+.site-header p {
+    font-size: 1.1rem;
+    color: #CCCCCC;
+}
+
+.site-footer {
+    margin-top: 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-bottom: none;
+    border-top: 2px solid #FFFFFF;
+}
+
+.footer-grito {
+    display: block;
+    margin-top: 0.5rem;
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+#pagina-inicial h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #555;
+    position: relative;
+}
+
+#pagina-inicial h2::after {
+    content: 'SCCP';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1a1a1a;
+    padding: 0 15px;
+    font-family: 'Times New Roman', serif;
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.catalogo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.livro-card {
+    background-color: #252525;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.7);
+    cursor: pointer;
+    border: 2px solid #444;
+    transition: transform 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.livro-card:hover {
+    border-color: #FFFFFF;
+    transform: scale(1.03);
+}
+
+.livro-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+.livro-info {
+    padding: 1.5rem;
+}
+
+.livro-info h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.livro-info p {
+    font-size: 1rem;
+    color: #CCCCCC;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hidden {
+    display: none;
+}
+
+.detalhes-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.detalhes-capa img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+}
+
+.detalhes-conteudo h2 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.detalhes-conteudo .autor {
+    font-size: 1.5rem;
+    color: #CCCCCC;
+    margin-bottom: 2rem;
+    font-style: italic;
+    font-family: 'Poppins', sans-serif;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.detalhes-conteudo h3 {
+    font-size: 1.8rem;
+    margin: 2rem 0 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.detalhes-conteudo h3::before {
+    content: '⚔️';
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.detalhes-conteudo p {
+    margin-bottom: 1rem;
+}
+        
+.sinopse-texto {
+    text-align: justify;
+}
+
+.podcast-player audio {
+    width: 100%;
+    margin-top: 1rem;
+    border-radius: 8px;
+}
+        
+.info-adicional ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-adicional li {
+    background-color: #252525;
+    padding: 0.8rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+}
+        
+.info-adicional li strong {
+    color: #FFFFFF;
+}
+
+.btn-voltar {
+    display: inline-block;
+    background-color: #FFFFFF;
+    color: #101010;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    border: 1px solid #FFFFFF;
+    transition: background-color 0.2s;
+}
+
+.btn-voltar:hover {
+    background-color: #DDDDDD; 
+    color: #000000;
+}
+
+@media (max-width: 768px) {
+    .detalhes-layout {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .detalhes-capa {
+        margin-bottom: 2rem;
+    }
+            
+    .detalhes-capa img {
+        margin: 0 auto;
+    }
+
+    .detalhes-conteudo h2 {
+        font-size: 2.2rem;
+    }
+
+    .detalhes-conteudo .autor {
+        font-size: 1.2rem;
+    }
+
+    .header-container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .site-header h1 {
+        font-size: 2rem;
+    }
+}

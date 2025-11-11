@@ -1,0 +1,49 @@
+// Atribui destino e classe imaginários, também atribui passageiros adultos e criancas imaginários
+let destino = "Continente Europeu"
+let classe = "Executivo"
+let passageiroAdultos = 20
+let passageirosCriancas = 20
+let passageirosTotais = passageiroAdultos + passageirosCriancas
+// atribui um valor inicial ao custo como 0 para começar os calculos
+let custototal = 0;
+
+// fiz um if e else if para todos os destinos
+// Se o destino for == "Exemplo" e a classe for == Exemplo, será atribuido o valor das passagens para o custototal
+if (destino == "Norte do Brasil" && classe == "Executivo") {
+    custototal = ((passageiroAdultos * (2500 * 0.2)) + (passageirosCriancas * (1800 * 0.1)))
+}else if(destino == "Norte do Brasil" && classe == "Economico"){
+    custototal = ((passageiroAdultos * 2500) + (passageirosCriancas * 1800))
+}
+// após fiz isso para todos as situaçoes, destino e classes diferentes para calcular o custo total da viagem
+if (destino == "Sul do Brasil" && classe == "Economico") {
+    custototal = passageirosTotais * 200
+} else if(destino == "Sul do Brasil" ** classe == "Executivo"){
+    custototal = passageirosTotais * 400
+}
+
+if (destino == "Continente Asiático" && classe == "Economico") {
+    custototal = passageirosTotais * 4600
+} else if(destino == "Continente Asiático" && classe == "Executivo"){
+    custototal = passageirosTotais * 6000
+}
+
+if (destino == "Continente Europeu" && classe == "Economico") {
+    custototal = passageirosTotais * 5800
+} else if (destino == "Continente Europeu" && classe == "Executivo"){
+    custototal = passageirosTotais * 7300
+}
+
+if (destino == "Continente Africano" && classe == "Economico") {
+    custototal = passageirosTotais * 4200
+} else if(destino == "Continente Africano" && classe == "Executivo"){
+    custototal = passageirosTotais * 6900
+}
+//Imprimindo as variaveis e informaçoes
+console.log("*********************")
+console.log("O CUSTO TOTAL DO PACOTE É")
+console.log("A QUANTIDADE DE PASSAGEIROS ADULTOS É ", passageiroAdultos)
+console.log("A QUANTIDADE DE PASSAGEIROS INFANTIS É ", passageirosCriancas)
+console.log("O DESTINO ESCOLHIDO FOI ", destino)
+console.log("A CLASSE DO SEU VOO É ", classe)
+console.log("O CUSTO TOTAL DA VIAGEM É R$ ", custototal)
+console.log("*********************")

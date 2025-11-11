@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Library - History of Legends</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="header-logo"> 
+                    <img id="logo" src="./imgs/triforce.png" alt="">
+                </div>
+                <div class="header-title">
+                    <h1>Tale of the Hero</h1>
+                </div>
+                <div id="pesquisa">
+                    <p id="barra-pesquisa">clique aqui para pesquisar</p>
+                    <div id="lupa">
+                    <img id="lupa" src="./imgs/Lupa.webp" alt="">
+                </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <!-- Livros grid -->
+        <div class="books-grid">
+            <!-- Livros 1 -->
+            <div class="book-card" onclick="openModal(0)">
+                <div class="book-content">
+                    <img src="imgs/Ocarina.jpg" alt="Capa do livro 'The Legend of Zelda: Ocarina of Time'" class="book-cover" onerror="handleImageError(this, 'The Legend of Zelda: Ocarina of Time', 'Elena Santos', 'blue-900', 'purple-800')">
+                    <h3 class="book-title book-font">The Legend of Zelda: Ocarina of Time</h3>
+                    <p class="book-author">Akira Himekawa</p>
+                    <p class="book-info">Fantasia/Drama • 384 páginas</p>
+                </div>
+            </div>
+
+            <!-- Livros 2 -->
+            <div class="book-card" onclick="openModal(1)">
+                <div class="book-content">
+                    <img src="imgs/Majora's.webp" alt="Capa do livro 'The Legend of Zelda: Majora's Mask'" class="book-cover" onerror="handleImageError(this, 'The Legend of Zelda: Majoras Mask', 'Miguel Oliveira', 'pink-500', 'yellow-400')">
+                    <h3 class="book-title book-font">The Legend of Zelda: Majora's Mask/A Link to the Past</h3>
+                    <p class="book-author">Akira Himekawa</p>
+                    <p class="book-info">Fantasia/Drama • 408 páginas</p>
+                </div>
+            </div>
+
+            <!-- Livros 3 -->
+            <div class="book-card" onclick="openModal(2)">
+                <div class="book-content">
+                    <img src="imgs/Twilight.jpg" alt="Capa do livro 'The Legend of Zelda: Twilight Princess'" class="book-cover" onerror="handleImageError(this, 'The Legend of Zelda: Twilight Princess', 'Sofia Rodrigues', 'blue-400', 'indigo-600')">
+                    <h3 class="book-title book-font">The Legend of Zelda: Twilight Princess</h3>
+                    <p class="book-author">Akira Himekawa</p>
+                    <p class="book-info">Fantasia/Drama • 170 páginas</p>
+                </div>
+            </div>
+
+            <!-- Livros 4 -->
+            <div class="book-card" onclick="openModal(3)">
+                <div class="book-content">
+                    <img src="imgs/Swords.jpg" alt="Capa do livro 'The Legend of Zelda: Four Swords'" class="book-cover" onerror="handleImageError(this, 'The Legend of Zelda: Four Swords', 'Carlos Mendes', 'purple-900', 'blue-800')">
+                    <h3 class="book-title book-font">The Legend of Zelda: Four Swords</h3>
+                    <p class="book-author">Akira Himekawa</p>
+                    <p class="book-info">Fantasia/Drama • 378 páginas</p>
+                </div>
+            </div>
+
+            <!-- Livros 5 -->
+            <div class="book-card" onclick="openModal(4)">
+                <div class="book-content">
+                    <img src="imgs/Ages.jpg" alt="Capa do livro 'The Legend of Zelda: Oracle of Ages'" class="book-cover" onerror="handleImageError(this, 'The Legend of Zelda: Oracle of Ages', 'Ana Costa', 'amber-600', 'brown-700')">
+                    <h3 class="book-title book-font">The Legend of Zelda: Oracle of Seasons/Ages</h3>
+                    <p class="book-author">Akira Himekawa</p>
+                    <p class="book-info">Fantasia/Drama • 408 páginas</p>
+                </div>
+            </div>
+
+            <!-- Livros 6 -->
+            <div class="book-card" onclick="openModal(5)">
+                <div class="book-content">
+                    <img src="imgs/Minish.jpg" alt="Capa do livro 'The Legend of Zelda: Minish Cap'" class="book-cover" onerror="handleImageError(this, 'The Legend of Zelda: Minish Cap', 'Paulo Silva', 'gray-700', 'orange-500')">
+                    <h3 class="book-title book-font">The Legend of Zelda: Minish Cap/Phantom Hourglass</h3>
+                    <p class="book-author">Akira Himekawa</p>
+                    <p class="book-info">Fantasia/Drama • 384 páginas</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div id="bookModal" class="modal-overlay hidden" onclick="closeModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeModal(event)">
+                <span class="close-icon">✕</span>
+            </button>
+            
+            <div class="modal-body">
+                <div id="modalContent" class="modal-book">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Áudio para as sinopses -->
+    <audio id="synopsisAudio" style="display: none;"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+body, ul, li, h4{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    text-align: center;
+}
+
+li{
+    width: 130px;
+}
+
+/*Efeito Aplicado Somente a "a" dentro de "li" dentro de "menu*/
+.menu li a:hover{
+
+    text-transform:uppercase;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.header{
+    background-color: #1d1e20;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 479px;
+}
+
+.menu{
+    display: flex;
+}
+
+.menu li{
+    margin: 10px;
+}
+
+.menu li a{
+    display: block;
+    padding: 12px;
+    background-color: rgb(12, 12, 12);
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.header img{
+    height: 175px;
+}
+
+.container{
+    background-color: #ccc;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.item{
+    background-color: #575353;
+    color: #fff;
+    padding: 20px;
+    margin: 15px;
+    margin-inline: 25px;
+    width: 500px;
+}
+
+.texto{
+    background-color: #575353;
+    color: #fff;
+    padding: 20px;
+    margin: 15px;
+    margin-inline: 25px;
+    width: 500px;
+    margin-left: 600px;
+}
+
+.exemple{
+    width: 500px;
+    height: 330px;
+
+}
+
+h2{
+    text-align: justify;
+}
+
+h3{
+    text-align: justify;
+}
+

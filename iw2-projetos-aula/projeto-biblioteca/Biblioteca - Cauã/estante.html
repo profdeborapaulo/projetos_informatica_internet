@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estante</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script3.js"></script>
+</head>
+<body class="estanteBody">
+    <div class="navbar">
+    <nav>
+        
+            <ul>
+                <li>
+                    <a href="index.html">
+                        Início
+                    </a>
+                </li>
+                <li>
+                <li>
+                    <a href="estante.html" class="estante">
+                        Estante
+                    </a>
+                </li>
+                <li>
+                   <a href="index.html#sobreScroll"> Sobre </a> 
+                </li>
+            </ul>
+    </nav>
+    </div>
+
+    <h1 class="suaEstante"> Sua Estante </h1>
+
+    <div class="estantehtml">
+        <div class="barraDePesquisa">        
+            <input type="text" id="searchbar" placeholder="Digite sua busca aqui..." onkeyup="buscar()">
+        </div>
+
+        <div class="livros">
+            <div class="fileira" id="containerCards"></div>
+        </div>
+    </div>
+
+    <div class="botaoVerMaisEstante">
+        <button class="estanteVerMais" onclick="demonstrarMais()"> Ver Mais </button>
+    </div>
+
+    
+
+</body>
+</html>

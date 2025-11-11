@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LUG Biblioteca - Seu portal literário</title>
+    <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">LUG <span>Biblioteca</span></a>
+                <div class="links-navegacao">
+                    <a href="#livros">Livros</a>
+                    <a href="#contato">Contato</a>
+                    <a href="#sobre">Sobre</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="secao-principal">
+        <div class="conteudo-principal container">
+            <h1>Explore o Mundo Através dos Livros</h1>
+            <p>Descubra milhares de títulos em nossa coleção digital. Leia onde e quando quiser.</p>
+        </div>
+    </section>
+
+    <!-- LIVROS -->
+    <section id="livros" class="container livros-fixos">
+        <div class="titulo-secao">
+            <h2>Nossa Coleção</h2>
+            <p>Explore nossos livros mais populares e descubra sua próxima grande leitura</p>
+        </div>
+
+        <div class="grid-livros-container">
+            <div class="cartao-livro">
+                <a href="livro.html?id=0">
+                    <div class="capa-livro">
+                        <img src="assets/capas/noitesbrancas.jpg" alt="Capa Noites Brancas" />
+                    </div>
+                    <div class="info-livro">
+                        <h3>Noites Brancas</h3>
+                        <p class="autor">Fyodor Dostoevsky</p>
+                        <p>Romance | 128 páginas</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="cartao-livro">
+                <a href="livro.html?id=1">
+                    <div class="capa-livro">
+                        <img src="assets/capas/ametamorfose.jpg" alt="Capa A Metamorfose" />
+                    </div>
+                    <div class="info-livro">
+                        <h3>A Metamorfose</h3>
+                        <p class="autor">Franz Kafka</p>
+                        <p>Ficção | 96 páginas</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="cartao-livro">
+                <a href="livro.html?id=2">
+                    <div class="capa-livro">
+                        <img src="assets/capas/oanticristo.jpg" alt="Capa O Anticristo" />
+                    </div>
+                    <div class="info-livro">
+                        <h3>O Anticristo</h3>
+                        <p class="autor">Friedrich Nietzsche</p>
+                        <p>Filosofia | 125 páginas</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="cartao-livro">
+                <a href="livro.html?id=3">
+                    <div class="capa-livro">
+                        <img src="assets/capas/oprincipe.jpg" alt="Capa O Príncipe" />
+                    </div>
+                    <div class="info-livro">
+                        <h3>O Príncipe</h3>
+                        <p class="autor">Nicolau Maquiavel</p>
+                        <p>Política | 96 páginas</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="cartao-livro">
+                <a href="livro.html?id=4">
+                    <div class="capa-livro">
+                        <img src="assets/capas/cosmos.jpg" alt="Capa Cosmos" />
+                    </div>
+                    <div class="info-livro">
+                        <h3>Cosmos</h3>
+                        <p class="autor">Carl Sagan</p>
+                        <p>Astronomia | 488 páginas</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="cartao-livro">
+                <a href="livro.html?id=5">
+                    <div class="capa-livro">
+                        <img src="assets/capas/cafecomdeuspai.jpg" alt="Capa The Witcher - Tempo de Tempestade" />
+                    </div>
+                    <div class="info-livro">
+                        <h3>Café com Deus pai</h3>
+                        <p class="autor">Júnior Rostirola</p>
+                        <p>Religião | 421 páginas</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="contato">
+        <div class="container">
+            <h2>Tem Alguma Sugestão?</h2>
+            <p>Se você tem alguma sugestão de livro que gostaria de ver em nossa biblioteca, envie para nós!</p>
+            <div class="formulario-contato">
+                <input type="email" id="emailUsuario" placeholder="Seu email..." />
+                <button onclick="enviarEmail()">Enviar Sugestão</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+    function enviarEmail() {
+        const emailUsuario = document.getElementById('emailUsuario').value;
+        if(emailUsuario) {
+            const assunto = encodeURIComponent("Sugestão de Livro");
+            const corpo = encodeURIComponent("Olá, tenho a seguinte sugestão de livro:\n\nEnviado por: " + emailUsuario);
+            window.location.href = `mailto:seuemail@exemplo.com?subject=${assunto}&body=${corpo}`;
+        } else {
+            alert("Por favor, preencha seu email antes de enviar!");
+        }
+    }
+    </script>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="sobre">
+        <div class="conteudo-sobre">
+            <h2>Sobre Nós</h2>
+            <div class="bloco">
+                <p>
+                Fundada com a convicção de que a leitura é uma das mais nobres formas de conhecer o mundo,
+                a LUG Biblioteca nasceu para oferecer acesso a um acervo diversificado e cuidadosamente selecionado.
+                Cada obra presente em nossa coleção é escolhida pensando em despertar curiosidade, reflexão e inspiração.
+                </p>
+                <p>
+                    Mais do que simplesmente disponibilizar livros, buscamos criar uma experiência literária que transporte
+                    o leitor a diferentes épocas, culturas e perspectivas. Desde clássicos universais até obras contemporâneas,
+                    nosso objetivo é conectar cada visitante a histórias que possam transformar sua visão de mundo.
+                </p>
+                <p>
+                    Em nossa trajetória, prezamos pela excelência, diversidade e responsabilidade. Acreditamos que a
+                    literatura é um instrumento de aprendizado contínuo, capaz de formar cidadãos críticos, criativos
+                    e conscientes. A LUG Biblioteca é, assim, um espaço de encontro entre leitores, ideias e narrativas,
+                    onde cada página lida é um convite à descoberta.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="container">
+            <div class="rodape-conteudo">
+                <div class="logo-rodape">LUG Biblioteca</div>
+                <p class="direitos">© 2025 LUG Biblioteca. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

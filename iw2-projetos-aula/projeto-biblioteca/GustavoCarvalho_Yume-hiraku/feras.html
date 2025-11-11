@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Feras em campo</title>
+</head>
+
+<body>
+
+    <div class="logo-bookpage">
+        <a href="index.html">
+            <div class="back">
+                <img class="seta" src="img/seta-esquerda.png" alt="seta">
+                <h2>戻る</h2>
+            </div>
+        </a>
+        <div class="logo-center">
+            <img class="logo-page" src="img/logo.png" alt="logo">
+        </div>
+
+    </div>
+    <div class="container-content">
+        <div class="card-vi">
+            <img class="capa-1" src="capas/feras.png" alt="Capa do livro Feras em campo">
+        </div>
+
+        <div class="content-text">
+            <h1 class="text-content-titulo">Feras em campo</h1>
+            <p class="text-content-descricao">
+                Lia enfrenta os desafios da vida universitária e de jogar no time de futebol mais prestigiado do país,
+                até descobrir que terá que enfrentar em campo Martina, sua melhor amiga da adolescência, com quem teve
+                um rompimento difícil. Entre rivalidade, mágoas antigas e a atração que sempre existiu, Lia e Martina
+                precisarão lidar com sentimentos intensos dentro e fora do campo.
+                Feras em campo celebra amizade, amor entre garotas e a força de atletas mulheres que lutam pelo que
+                acreditam.
+            </p>
+
+
+            <div class="buttons">
+                <button id="btn-saiba-feras">Saiba mais</button>
+                <button id="btn-audio">Áudio-sinopse</button>
+            </div>
+
+
+            <div id="saida" class="saida"></div>
+
+
+            <div id="audio-player-container" class="audio-player-container" style="display: none;">
+                <button id="play-pause" class="play-btn">▶️</button>
+                <div class="progress-container">
+                    <div id="progress" class="progress"></div>
+                </div>
+                <span id="current-time">0:00</span> / <span id="duration">0:00</span>
+            </div>
+
+            <audio id="audio-sinopse" src="audio-sinopses/feras.mp3"></audio>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-bar">
+            <a href="index.html">
+                <h2>Home</h2>
+            </a>
+            <a href="quem-somos.html">
+                <h2>Quem somos</h2>
+            </a>
+            <a href="contato.html">
+                <h2>Contatos</h2>
+            </a>
+        </div>
+        <p>&copy; 2025 ゆめひらく図書館</p>
+    </div>
+</body>
+
+</html>

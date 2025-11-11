@@ -1,0 +1,254 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+    background-color: #faf4cda5;
+  font-family: "Garamond", "Palatino Linotype", "Times New Roman", serif;
+}
+.tituloVerde{
+    color: #596B39;
+}
+.tituloMarrom{
+    color: #7C3D2E;
+}
+.botaoMarrom{
+
+    background-color: #7C3D2E;
+    color: #fff; 
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold; 
+    text-decoration: none; 
+    display: inline-block;
+    justify-content: flex-end;
+    transition: background-color 0.3s ease;
+}
+.botaoMarrom:hover {
+  background-color: #5d2e24; 
+}
+
+.botaoVerde{
+    margin-top: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #596B39;
+    color: #fff; 
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold; 
+    text-decoration: none; 
+    display: inline-block;
+    justify-content: flex-end;
+    transition: background-color 0.3s ease;
+}
+.botaoVerde:hover {
+  background-color: #3d4d22; 
+}
+
+/*navbar - links externos*/
+.navbar1{
+    max-width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 10px solid #596B39;
+    box-shadow: 0 0 5px 0 rgb(0, 0, 0);
+}
+.tituloNav{
+    font-size: clamp(25px, 2vw, 100px);
+    margin-top: 15px;
+}
+.logo{
+    display: flex;
+    width: 6vw;
+    margin-left: 0.5vw;
+    margin-right: 2vw;
+}
+
+.contato-mail, .contato-git{
+    width: 4vw;
+    margin-left: 2vw;
+}
+.contato-mail{
+    margin-bottom: 10px;
+}
+
+/*footer*/
+.rodape {
+    background-color: #5d2e24;
+    color: white;
+    padding: 5vh 0;
+    text-align: center;
+    width: 100%;
+    margin-top: 20vhpx;
+    box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.rodape-conteudo {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.rodape p {
+    margin: 0;
+    font-size: clamp(14px, 1.5vw, 1150px);
+}
+
+.rodape-links a{
+    color: white;
+    height: 24px;
+    margin: 0 10px;
+}
+
+/*barra lateral*/
+
+/* Estilo para a lista suspensa */
+#filtroGeneros {
+    background-color: #7C3D2E;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 90%;
+    margin-left: 5%;
+}
+#filtroGeneros option {
+    background-color: #5d2e24; 
+    color: white;
+}
+#filtroLivrosForm label {
+    display: block;
+    color: white;
+    font-size: 16px;
+    margin: 20px auto 0;
+    text-align: center;
+}
+
+/*Container Central*/
+.containerSinopses{
+    display: flex;
+    flex-direction: row;
+}
+.listaLivros{    
+    background-color: #596B39;
+    height: 100vh;
+    max-width: 20vh;
+}
+.livrosListados{
+    cursor: pointer;
+    text-align: left;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 2vh;
+    font-size: clamp(15px, 1vw,100px);
+}
+
+.linha1{
+    margin-left: 2vh;
+    width: 80%;
+}
+
+/*imagens-Livros*/
+
+.livro1{
+    width: 30%;
+    position: absolute;
+    margin-top: 30%;
+    z-index: -1;
+    opacity: 0.5;
+    filter: blur(1.5px);
+}
+.livro2{
+    width: 30%;
+    position: absolute;
+    margin-top: 10%;
+    z-index: -1;
+    opacity: 0.5;
+    filter: blur(1.5px);
+}
+.livro3{
+    transform: scaleX(-1);
+    right: 0;
+    width: 30%;
+    position: absolute;
+    margin-top: 5%;
+    z-index: -1;
+    opacity: 0.5;
+    filter: blur(1.5px);
+}
+.livro4{
+    transform: scaleX(-1);
+    right: 0;
+    width: 30%;
+    position: absolute;
+    margin-top: 35%;
+    z-index: -1;
+    opacity: 0.5;
+    filter: blur(1.5px);
+}
+
+/*informações do livro*/
+
+.ano, .autor{
+    color: #7C3D2E;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: clamp(12px, 1.5vw, 40px);
+}
+.subContainerSinopse{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.sinopseTexto{
+    text-align: justify;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #E9E9DD;
+    padding: 2%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 2%;
+    margin-bottom: 10%;
+    box-shadow: 2px 2px 5px 5px rgb(0, 0, 0, 0.2);
+}
+#player-audio-btn{
+    width: 4vw;
+    height: 4vw;
+}
+.infoLivro{
+    flex-direction: column;
+}
+.tituloSinopse{
+    text-align: center;
+    font-size: clamp(40px, 3vw, 100px);
+}
+.textoSinopse{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #66443B;
+    font-size: 3.5vh;
+    width: 80%;
+}
+
+.capaLivroSinopse{
+    margin-left: 2%;
+    width: 16vw;
+    height: 50vh;
+    border-radius: 5px;
+}
+

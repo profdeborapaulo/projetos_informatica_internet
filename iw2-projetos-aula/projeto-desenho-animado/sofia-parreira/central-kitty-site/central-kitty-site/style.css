@@ -1,0 +1,328 @@
+/*Index*/
+.central-kitty-title-bar{
+    color: #FF1396;
+    width: 200px;
+}
+.home-banner{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+    margin-top: 10px;
+    background: #fec7cd;
+    padding-top: 20px;
+    padding-bottom: 30px;  
+}
+.home-banner-foto{
+    border-radius: 2%;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);   
+}
+.after-home-banner{
+    background-image: url(img/hello-wallpaper-fundo-heart.webp);
+    height: 450px;
+    padding-left: 60px;
+    width: auto;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.hello-kitties{
+    height: 360px;
+    width: auto;
+    display: inline-block;
+    flex-wrap: nowrap;
+    padding-top: 50px;
+    padding-left: 180px;
+    justify-items: center;
+}
+.foto-bem-vindo-banner{
+    display: flex;
+    padding-top: 10px;
+    padding-left: 50px;
+    justify-content: center;
+}
+.conteudo-after-banner{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}
+.carrossel-inicio{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-color: #ffdde1;
+    justify-items: center;
+}
+.carrossel-forma{
+    width: 60%;
+    height: auto;
+}
+.carousel-inner{
+    border-radius: 2%;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5); 
+}
+.info-links-container{
+    height: 450px;
+    background-color: #ffff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+.botoes-conjunto{
+    display: flex;
+    justify-content: center;
+    padding: 80px;   
+}
+.botoes-unidos{
+    display: flex;
+    justify-content: center;
+}
+.button-bar{
+    width: 120px;
+    margin: 40px;
+    height: auto;
+}
+.button-bar:hover{
+    transform: scale(1.05);
+}
+.container-home-final{
+    height: 450px;
+    width: auto;
+    background-image: url(img/hello-wallpaper-fundo-heart.webp);
+}
+.banner-avisos{
+    display: flex;
+    justify-content: center;
+}
+.footer{
+    height: 70px;
+    width: auto;
+    background-color: #c7636f;
+}
+.rodape{
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fce1e4;
+}
+
+/*Sobre Nós*/
+
+.container1-sobre{
+    height: fit-content;
+    width: auto;
+    background-color: #fec7cd;
+    display: inline-flex;
+}
+.banner-logo-sobre{
+    height: 500px;
+    width: auto;
+}
+.container-texto{
+    display: flex;
+    justify-content: center;
+    padding: 60px;
+    background-color: #ffff;
+    border-radius: 10%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #FF1396;
+    margin: 100px;
+    margin-right: 300px;
+}
+.title-sobre{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #b64662;
+}
+.p-sobre{
+    margin-top: 70px;
+    display: flex;
+    flex-wrap:wrap-reverse;
+}
+.container2-sobre{
+    height:min-content;
+    width: auto;
+    background-image: url(img/hello-wallpaper-fundo-heart.webp);
+}
+.container-texto2{
+    display: inline-flex;
+    padding: 60px;
+    align-items: center;
+    flex-direction:column;
+    background-color: #ffff;
+    border-radius: 10%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #FF1396;
+    margin: 100px;
+}
+.foto-me-sobre{
+    height: 300px;
+    width: auto;
+    border-radius: 70%;
+}
+.foto-me-sobre-edit{
+    display: inline-flex;
+    justify-content: center;
+    margin: 10px;
+    padding: 70px;
+
+    display: inline-flex;
+}
+.p-sobre2{
+    margin-top: 7px;
+    display: flex;
+    flex-wrap:wrap-reverse;
+}
+.hello-kitty-hi-sobre{
+    padding: 10%;
+    height: 550px;
+    width: auto;
+}
+
+/*Contato*/
+.container1-contato{
+    height: 450px;
+    width: auto;
+    background-color: #fec7cd;
+}
+.container2-contato{
+    height: 500px;
+    width: auto;
+    background-image: url(img/hello-wallpaper-fundo-heart.webp);
+}
+.container3-contato{
+    height: 450px;
+    width: auto;
+    background-color: #ffdde1;
+}
+.container-contato-main{
+    padding: 50px;
+    padding-top: 20px;
+    margin-bottom: 50px;
+    height: 390px;
+    width: fit-content;
+    justify-content: center;
+    justify-items: center;
+    background-color: #ffff;
+    border: 2px;
+    border-style: solid;
+    border-color: #FF1396;
+    border-radius: 5%;
+}
+.container-contato-main-position{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px ;
+}
+.h3-contato{
+    color: #ce147a;
+}
+.button-bar2{
+    width: 200px;
+    margin: 40px;
+    height: auto;
+}
+.button-bar2:hover{
+    transform: scale(1.05);
+}
+
+/*Aventuras*/
+.container-aventuras-main{
+    padding-top: 70px;
+    padding-bottom: 70px;
+    justify-self: center;
+    width: 650px;
+    height: fit-content;
+}
+.container-aventuras-fronteira{
+    justify-self: center;
+    width: 800px;
+    height: fit-content;
+    background-color: #fec7cd;
+    border-radius: 5%;
+}
+.container-aventuras-background{
+    background-image: url(img/hello-wallpaper-fundo-heart.webp);
+}
+
+/*História*/
+.container1-historia{
+    height: 450px;
+    width: auto;
+    background-color: #fec7cd;
+}
+.container-historia-main{
+    width: auto;
+    height: fit-content;
+    background-image: url(img/hello-wallpaper-fundo-heart.webp);
+}
+.container-texto-historia{
+    display: flex;
+    width: 850px;
+    justify-self: center;
+    padding: 60px;
+    align-items: center;
+    flex-direction:column;
+    background-color: #ffff;
+    border-radius: 10%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #FF1396;
+}
+.p-historia{
+    margin-top: 7px;
+    display: flex;
+    flex-wrap:wrap-reverse;
+}
+.title-historia{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #b64662;
+}
+hr{
+    color: #FF1396;
+}
+h4{
+    color: #c7636f;
+}
+.container-fotos-historia{
+    display:inline-flex;
+    width: auto;
+    height: 100px;
+    align-items: center;
+}
+.container-tamanho-hk-camera{
+    width: auto;
+    height: 300px;
+}
+.container-tamanho-banner-historia{
+    width: auto;
+    height: 350px;
+}
+.container-tamanho-hk-ballet{
+    width: auto;
+    height: 300px;
+}
+.fotos-historia{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.container-espaco-historia{
+    width: auto;
+    height: 50px;
+    background-image: url(img/hello-wallpaper-fundo-heart.webp);
+}

@@ -1,0 +1,496 @@
+body{
+  font-family: inter;
+  margin: 0px;
+}
+
+p{
+  text-align: center;
+}
+
+/*banner*/
+.banner{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #31312f;
+  height: 85vh;
+  width: 100%;
+  margin: 0px;
+  padding-bottom: 50px;
+  padding-top: 25px;
+}
+
+.banner-logo-title{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+/*navbar*/
+.buttons_nav_container{
+  display: flex;
+justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  width: 55%;
+}
+
+.buttons-navbar{
+  font-family: lexend peta;
+  text-decoration: none;
+  color: #d9d9d996;
+}
+
+.buttons-navbar:hover{
+  text-decoration: underline;
+}
+
+/*sobre*/
+.container-about{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 0px;
+  background-color: rgb(213, 213, 213);
+}
+
+.title-after-banner{
+  font-family: lexend peta;
+  font-size: 60px;
+  text-align: center;
+  width: 80%;
+  opacity: 0.7;
+}
+
+
+/*release romance section*/
+.release-romance-inner{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 150px 0px;
+  background-color: #fde407ac;  
+}
+
+.release-romance-inner-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+}
+
+.tags-books{
+ display: flex;
+ flex-direction: row-reverse;
+ flex-wrap: wrap;
+ justify-content: center;
+ align-items: center;
+ gap: 3px;
+ cursor: default;
+}
+
+.author-book{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+  margin: 20px 0px;
+  font-family: lexend peta;
+  color: #cf785a;
+}
+
+.presave-space-interaction{
+  display: flex;
+  flex-direction: row;
+  justify-self: start;
+  align-items: center;
+  width: 100%;
+}
+
+.presave-button{
+  background-color: transparent;
+  color: #81c4e7;
+  padding: 20px 20px;
+  border: solid 2px #81c4e7;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: lexend peta;
+  font-weight: 800;
+}
+
+.release-time{
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  justify-content: flex-end;
+  font-size: 20px;
+}
+
+.genre-logos{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px 0px;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  background-color: #31312f;
+}
+
+.genre-logos-img{
+  width: 230px;
+  height: auto;
+  margin: 0px;
+}
+
+/*livros em linha*/
+.books-container{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+  height: auto;
+  background-color: #31312f;
+  padding: 110px 0px;
+
+}
+
+.books-logo{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px; 
+  margin-bottom: 80px;
+}
+
+.card-book{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 15%;
+  height: 350px;
+  min-height: 280px;
+  padding: 20px;
+  background-color: hsl(60, 100%, 50%);
+}
+.card-book:hover{
+  scale: 1.07;
+  transition: 0.1s;
+}
+
+.book-squere{
+  align-self: center;
+  width: 80%;
+  height: auto;
+}
+
+.text-card-book{
+  font-family: lexend peta;
+  font-size: 7px;
+  text-align: start;
+  margin-top: 10px;
+}
+
+.writer{
+  font-weight: 700;
+  margin: 0px;
+  margin-top: 20px;
+  font-size: 12px;
+
+}
+
+.title-book-card{
+  font-weight: 600;
+  margin: 0px;
+  font-size: 10px;
+}
+
+.writer:hover,.title-book-card:hover{
+  opacity: 75%;
+} 
+
+/* shop page or part */
+
+.back-button-shop{
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 400;
+    border: 2px solid;
+    padding: 5px 10px 5px 10px;
+    cursor: pointer;
+    width: fit-content;
+    margin-top: 20px;
+}
+
+.shop{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+
+}
+
+.shop-inner{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    margin: 0px 30px;
+    width: 40%;
+
+}
+
+.banner-book-shop{
+    width: 100%;
+    height: auto;
+    border: 4px solid;
+    margin-top: 65px;
+}
+
+.library-name-shop{
+    font-size: 500%;
+}
+
+.title-book-shop{
+    font-size: 200%;
+}
+
+.library-name-shop, .title-book-shop{
+    margin: 0px;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.info-book{
+    display: flex;
+    flex-direction: row;
+    margin: 30px 0px;
+}
+
+.author-book-shop, .release-date{
+    display: flex;
+    flex-direction: column;
+    font-size: 20%;
+}
+
+.release-date{
+    margin-left: 30px;
+}
+
+.author-shop, .title-shop, .realise-shop, .date-shop{
+    font-size: 20px;
+    margin: 0px;
+    cursor: default;
+    text-align: start;
+}
+
+.author-shop, .realise-shop{
+    font-weight: 800;
+}
+
+.sinopse-button-audio{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    text-align: justify;
+    font-size: 18px;
+    align-self: center;
+    width: 40%;
+    align-items: center;
+}
+
+.purchase-button{
+    margin-top: 20px;
+    padding: 20px 30px 20px 30px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    font-family: lexend peta;
+    border: 2px solid;
+    background-color: transparent;
+}
+
+.audio-sinopse-shop{
+    margin: 30px;
+    width: 50%;
+}
+
+/*newsletter*/
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(213, 213, 213);
+  padding: 70px 0px;
+}
+
+.newsletter-text-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+  width: 45%;
+}
+
+.newsletter-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  font-family: lexend peta;
+
+}
+
+.newsletter-inputs{
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="email"], input[type="name"], textarea {
+  height: 45px;
+  font-size: 15px;
+  border-radius: 0px;
+  width: 300px;
+  max-width: 100%;
+  border: 1px solid #31312f;
+  color: #31312f;
+  background-color: transparent;
+}
+
+input[type="email"]::placeholder, input[type="name"]::placeholder, textarea::placeholder {
+  color: #31312f;
+}
+
+input[type="email"]:focus, input[type="name"]:focus, textarea:focus {
+  outline: none;
+  border: 2px solid #31312f;
+}
+
+.consent-area{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  margin-top: 10px;
+}
+
+input[type="checkbox"] {
+  width: 10px;
+  height: 10px; 
+  font-size: 15px;
+}
+
+.consent-text{
+  font-size: 50%;
+  width: 45%;
+}
+
+/*footer*/
+footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 80px 10px;
+  background-color: #31312f;
+
+}
+
+.footer-logo-reserv{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  width: 32%;
+}
+
+.footer-logo{
+  width: 40%;
+}
+
+.links-footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width:32%;
+  margin-top: 20px;
+}
+
+.home-biblioteca, .privacy-contact{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 20px;
+  width: 32%;
+}
+
+.btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #31312f;
+  border-radius: 50%;
+  font-size: 16.5px;
+  text-decoration: none;
+}
+
+.github {
+  background-color: #d9d9d996;
+}
+
+.twitter {
+  background-color: #d9d9d996;
+}
+
+.instagram {
+  background-color: #d9d9d996;
+ 
+}
+
+.error-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.error{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  font-family: lexend peta;
+  width: 50%;
+  align-self: center;
+}
+
+/* contact page */
+.contact-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 200px 0px;
+  background-color: rgb(213, 213, 213);
+  gap: 20px;
+  flex-direction: column;
+}

@@ -1,0 +1,54 @@
+.sobre-card {
+    display: flex;
+    flex-direction: row-reverse; /* Aqui está o truque */
+    align-items: center;
+    background-color: #808080;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.imagem-principal {
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+.texto-sobre {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+h2{
+    text-align: center;
+}
+
+.projetos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.projetos img {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Footer estilizado */
+footer {
+    background: #6EB4D1;
+    color: #fff;
+    text-align: center;
+    padding: 18px 0;
+    width: 100%;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.08);
+    margin-top: auto; /* faz o footer ir para o final */
+    position: static; /* remove o relative */
+}

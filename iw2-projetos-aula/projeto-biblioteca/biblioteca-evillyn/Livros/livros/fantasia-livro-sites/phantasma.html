@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Phantasma | BookClub</title>
+  <link rel="icon" type="image/png" href="/imagens/logo.png" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/Livros/livros/style.css" />
+</head>
+
+<body>
+   <!-- NAVBAR -->
+  <div id="nav">
+    <div class="logo" id="logo-img"><img src="/imagens/logo-1.png" alt="Logo" /></div>
+    <div id="nav-part2">
+      <div id="links">
+        <a href="/usando/rapido/biblioteca.html">Início</a>
+        <a href="#">Livros</a>
+        <a href="#">Autores</a>
+      </div>
+      <div id="icons">
+        <a href="/Contato/index.html"><button class="btn">Contato</button></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="logo-fixa" id="logo-substituta">
+    <img src="/imagens/logo-2.png" alt="Logo Fixa" />
+  </div>
+
+  <div id="cursor"></div>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <div id="main" data-scroll-container>
+    <div style="height: 130px;"></div> <!-- Espaço após navbar -->
+
+    <section class="sobre" id="page1">
+      <section class="autor-section">
+        <div class="carousel-container">
+          <div class="carousel-inner">
+            <div class="carousel-item"><img src="/Livros/livros/livrosOK/phantasma/capa.png" alt="Imagem 1" /></div>
+            <div class="carousel-item"><img src="/Livros/livros/livrosOK/phantasma/contra.png" alt="Imagem 2" /></div>
+            <div class="carousel-item"><img src="/Livros/livros/livrosOK/phantasma/capa.png" alt="Imagem 3" /></div>
+            <div class="carousel-item"><img src="/Livros/livros/livrosOK/phantasma/contra.png" alt="Imagem 4" /></div>
+            <div class="carousel-item"><img src="/Livros/livros/livrosOK/phantasma/capa.png" alt="Imagem 5" /></div>
+            <div class="carousel-item"><img src="/Livros/livros/livrosOK/phantasma/contra.png" alt="Imagem 6" /></div>
+          </div>
+        </div>
+
+        <div class="texto">
+          <h2 class="texti">PHANTASMA</h2>
+          <p>
+          Lilith é uma jovem que vive em um mundo consumido por criaturas sombrias conhecidas como fantasmas, que se alimentam de pesadelos. Lilith, no entanto, tem uma habilidade única: ela pode ver e interagir com essas criaturas, e até mesmo capturá-las. Em sua jornada, ela encontra um grupo de caçadores de fantasmas que a leva a uma academia onde ela pode aprimorar suas habilidades. Lá, ela se aprofunda nos mistérios por trás dos fantasmas, do seu passado, e de um segredo que pode mudar o destino do mundo. O livro é uma história de fantasia e aventura que explora temas como o poder da imaginação, a natureza da memória e o amor, em um mundo onde a linha entre a realidade e o sobrenatural é tênue.
+        
+        <audio id="audioPlayer" controls> 
+                <source src="/Livros/livros/audios/phantasma.mp4" type="audio/mp3">  
+              </audio>
+        </div>
+      </section>
+
+      <section class="info-section">
+        <h2>INFORMAÇÕES GERAIS</h2>
+
+        <div class="info-box">
+          <div class="info-number">01</div>
+          <div class="info-text">Autor(a): <br>Kaylie Smith.</div>
+        </div>
+
+        <div class="info-box">
+          <div class="info-number">02</div>
+          <div class="info-text">Lançamento: <br> 22/11/2022.</div>
+        </div>
+
+        <div class="info-box">
+          <div class="info-number">03</div>
+          <div class="info-text">Livro independente .</div>
+        </div>
+        
+        <div class="info-box">
+          <div class="info-number">04</div>
+          <div class="info-text">Quantidade de pagínas:  362.</div>
+        </div>
+        
+      </section>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

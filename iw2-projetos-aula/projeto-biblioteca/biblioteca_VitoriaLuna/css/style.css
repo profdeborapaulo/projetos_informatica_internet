@@ -1,0 +1,302 @@
+/* ==================== ESTILOS BASE ==================== */
+/* Reset básico e configuração da fonte principal */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lora", serif; /* Fonte principal para textos */
+  background-color: #f4eded; /* Cor de fundo suave */
+  color: #333; /* Cor do texto padrão */
+  box-sizing: border-box;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+  .container2,
+  .container3 {
+    width: calc(100% - 60px); /* Margem lateral de 30px */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    box-sizing: border-box;
+  }
+}
+
+/* ==================== LOGO ==================== */
+/* Estilização do logotipo principal */
+.imglogo {
+  width: 250px;
+  display: block;
+  margin: auto; /* Centraliza horizontalmente */
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+/* ==================== BARRA DE NAVEGAÇÃO ==================== */
+/* Container principal da navegação */
+.nav {
+  width: 100%; /* Ocupa toda a largura disponível */
+  max-width: none; /* Remove limite de largura */
+  text-align: center;
+  font-size: 16px;
+  padding: 15px 0 25px;
+  background-color: #fff; /* Fundo branco */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  position: relative;
+  z-index: 5; /* Garante que fique acima de outros elementos */
+  margin: 0;
+}
+
+/* Estilização dos itens da lista de navegação */
+.nav ul li {
+  list-style: none; /* Remove marcadores da lista */
+  display: inline-block; /* Alinha horizontalmente */
+  margin: 0 20px; /* Espaçamento entre itens */
+  position: relative;
+  font-family: "Arvo", serif; /* Fonte específica para navegação */
+}
+
+/* Links da navegação */
+.nav li a {
+  color: #3a3a3a; /* Cor padrão dos links */
+  text-decoration: none; /* Remove sublinhado */
+  padding: 10px 15px;
+  transition: color 0.3s; /* Transição suave na mudança de cor */
+}
+
+/* Efeito hover nos links */
+.nav li a:hover {
+  color: #141657; /* Cor azul escura no hover */
+}
+
+/* ==================== SUBMENU ==================== */
+/* Estilização do submenu dropdown */
+.nav ul li ul {
+  opacity: 0; /* Inicialmente invisível */
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  top: 100%; /* Posiciona abaixo do item pai */
+  background: #ffd54f; /* Fundo amarelo */
+  padding: 0;
+  min-width: 160px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease; /* Transição suave */
+  z-index: 10;
+}
+
+/* Responsividade da navegação */
+.nav-list {
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nav-item {
+  margin: 0.25rem 0;
+}
+
+/* Mostra submenu no hover */
+.nav ul li:hover > ul {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Links do submenu */
+.nav ul li ul li a {
+  display: block;
+  padding: 12px 16px;
+  color: #3a3a3a;
+  transition: all 0.2s ease;
+}
+
+/* Efeito hover nos links do submenu */
+.nav ul li ul li a:hover {
+  background-color: #fbc02d; /* Fundo amarelo mais escuro */
+  color: white;
+  border-left: 4px solid #141657; /* Borda lateral azul */
+}
+
+/* ==================== BOTÕES ==================== */
+button,
+.botaocont {
+  cursor: pointer; /* Cursor de ponteiro */
+}
+
+/* ==================== VARIÁVEIS DE CORES ==================== */
+/* Definição das cores principais do tema */
+:root {
+  --primary-gold: #dfb200; /* Dourado principal */
+  --medium-gold: #fbc02d; /* Dourado médio */
+  --dark-blue: #141657; /* Azul escuro */
+}
+
+/* ==================== TÍTULOS DE SEÇÃO ==================== */
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #141657; /* Azul escuro */
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: "Arvo", serif; /* Fonte serifada para títulos */
+}
+
+/* ==================== CARROSSEL DE AUTORES ==================== */
+/* Container da seção do carrossel */
+.carousel-section {
+  background-color: #f4eded; /* Fundo suave */
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  overflow: hidden; /* Esconde conteúdo que sai dos limites */
+}
+
+/* Container do carrossel */
+.carousel-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* Wrapper que controla o overflow */
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+  max-width: 64rem;
+}
+
+/* Track que contém os itens e se move */
+.carousel-track {
+  display: flex;
+  gap: 2.5rem; /* Espaçamento entre itens */
+  animation: scroll-carousel 20s linear infinite; /* Animação contínua */
+}
+
+/* Pausa animação no hover */
+.carousel-track:hover {
+  animation-play-state: paused;
+}
+
+/* Item individual do carrossel */
+.author-item {
+  flex-shrink: 0; /* Não permite encolhimento */
+}
+
+/* Imagens dos autores */
+.author-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%; /* Formato circular */
+  border: 4px solid #dfb200; /* Borda dourada */
+  object-fit: cover; /* Mantém proporção da imagem */
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+/* Efeito hover nas imagens dos autores */
+.author-image:hover {
+  transform: scale(1.1); /* Aumenta ligeiramente */
+}
+
+/* ==================== SEÇÃO DE LIVROS ==================== */
+.books-section {
+  margin-bottom: 2rem;
+}
+
+/* Grade responsiva de livros */
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Colunas responsivas */
+  gap: 1.5rem; /* Espaçamento entre cards */
+  max-width: 72rem;
+  margin: 0 auto; /* Centraliza a grade */
+}
+
+/* ==================== CARDS DE LIVROS ==================== */
+/* Card individual de cada livro */
+.book-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* Efeito hover no card */
+.book-card:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Sombra mais pronunciada */
+}
+
+/* Conteúdo interno do card */
+.book-card-content {
+  padding: 1rem;
+}
+
+/* Container da capa do livro */
+.book-cover-container {
+  aspect-ratio: 2 / 3; /* Proporção de livro */
+  margin-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.375rem;
+}
+
+/* Imagem da capa */
+.book-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Mantém proporção */
+}
+
+/* ==================== INFORMAÇÕES DO LIVRO ==================== */
+/* Título do livro */
+.book-title {
+  font-weight: bold;
+  font-size: 1.125rem;
+  color: #141657; /* Azul escuro */
+  margin-bottom: 0.5rem;
+  font-family: "Arvo", serif;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden; /* Trunca texto longo */
+}
+
+/* Nome do autor */
+.book-author {
+  color: #666; /* Cinza médio */
+  margin-bottom: 0.75rem;
+  font-size: 0.875rem;
+}
+
+/* ==================== PREÇOS ==================== */
+/* Container dos preços */
+.book-price-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Preço promocional */
+.sale-price {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #141657; /* Azul escuro */
+}
+
+/* Preço original (riscado) */
+.original-price {
+  font-size: 0.875rem;
+  color: #999; /* Cinza claro */
+  text-decoration: line-through; /* Texto riscado */
+}
+
+/* Badge de desconto */
+.discount-badge {
+  background-color: #dfb200; /* Fundo dourado */
+  color: white;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-weight: bold;
+}

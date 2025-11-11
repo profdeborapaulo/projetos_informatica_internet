@@ -1,0 +1,28 @@
+ body {
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #ff69b4;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        footer {
+            background-color: #ff69b4;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .card img {
+            max-height: 200px;
+            object-fit: cover;
+        }
+        .more-info {
+            display: none;
+        }
+.img-100-100 {
+    width: 
+}
+.rosa {
+    background-color: hotpink;
+}

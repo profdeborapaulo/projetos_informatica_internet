@@ -1,0 +1,187 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+     font-family: "Arimo", sans-serif;
+     color: #0C233A;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    width: 90vw;
+    align-items: center;
+    text-decoration: none;
+}
+header nav ul{
+    display: flex;
+    gap: 30px;
+    text-decoration: none;
+}
+header nav ul li{
+    align-items: center;
+    text-decoration: none;
+}
+a{
+     text-decoration: none;
+}
+.li{
+    text-decoration: none;
+}
+.categories{
+    overflow: hidden;
+    height: 500px;
+    display: flex;
+    transition: trasform 0.5 ease-in-out ;
+}
+.item{
+    height: 500px;
+    width: 100%;
+    position: relative;
+    inset: 0;
+    opacity: 0;
+
+}
+.active{
+    opacity: 1;
+    inset: 0;
+
+}
+.content{
+    position: absolute;
+    z-index: 1;
+    top: 20%;
+    left: 5vh;
+    color: white;
+    align-items: flex-start;
+    text-align: justify;
+    padding: 0 auto;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;}
+.title{
+    font-weight: 800 ;
+    text-transform: uppercase;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    padding: 20px  10px;
+}
+.title1{
+    font-weight: 800 ;
+    text-transform: uppercase;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    padding: 20px  10px;
+    color: white;
+}
+.text{
+    text-align: justify;
+    padding-right: 40%;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    color: #fff;
+}
+.dots{
+    display: flex;
+    gap: 20px;
+    position: relative;
+    align-items: center;
+    bottom: 44%;
+    justify-content: center;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 20px;
+
+}
+.dot{
+    width: 40px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: black;
+}
+.dot.active{
+    background-color: rgb(59, 219, 224);
+}
+.books{
+    display: flex;
+    position: relative;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+     
+}
+.book{
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px; 
+}
+.highlights{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    z-index: 1;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    top: 60%;
+}
+.border{
+    border-radius: 10px;
+}
+button{
+  background-color: #fff;
+  border: 0 solid #e2e8f0;
+  border-radius: 1.5rem;
+  box-sizing: border-box;
+  color: #0d172a;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 1rem 1.6rem;
+  text-align: center;
+  text-decoration: none #0d172a solid;
+  text-decoration-thickness: auto;
+  transition: all .1s cubic-bezier(.4, 0, .2, 1);
+  box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:hover {
+  background-color: rgb(59, 219, 224);
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  button {
+    font-size: 1.125rem;
+    padding: 1rem 2rem;
+  }
+}
+.imagem{
+    filter: brightness(80%) ;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+img{
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+
+}
+.imgHover:hover{
+    opacity: 0.7;
+    transform: translateY(-0.55em);
+    cursor: pointer;
+}
+@keyframes example {
+  0%   {transform: translateX(-0.25em);}
+  25%  {transform: translateX(-0.5em);}
+  50%  {transform: translateX(-0.75em);}
+  100% {transform: translateX(-1em);}
+}

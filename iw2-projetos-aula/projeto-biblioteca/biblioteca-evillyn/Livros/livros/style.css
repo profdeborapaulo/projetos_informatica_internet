@@ -1,0 +1,357 @@
+:root {
+  --item-count: 6;
+  --angle: calc(360deg / var(--item-count));
+  --animation-duration: 30s;
+}
+
+@font-face {
+  font-family: Futura;
+  src: url(/fontes/Futura-Bold.ttf);
+}
+@font-face {
+  font-family: Gilroy;
+  src: url(/fontes/Gilroy-Medium.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Gilroy';
+}
+
+*::selection {
+  color: #fff;
+  background-color: #000;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-top: -150px; /* sobe a div principal 50px */
+}
+
+/* NAVBAR */
+#nav {
+  position: relative;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+  box-sizing: border-box;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/* Classe para esconder a navbar */
+#nav.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none; /* para não atrapalhar cliques */
+  position: absolute; /* para tirar do fluxo fixo */
+}
+
+
+.logo img {
+  max-width: 100px;
+}
+
+#nav #nav-part2 {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+#links {
+  padding: 10px;
+}
+
+#nav-part2 #links a {
+  position: relative;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 14px;
+  margin: 0 20px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#nav-part2 #links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  transition: width 0.3s ease;
+}
+
+#nav-part2 #links a:hover {
+  color: black;
+  transform: scale(1.1);
+}
+
+#nav-part2 #links a:hover::after {
+  width: 100%;
+}
+
+#icons {
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #ffffff;
+}
+
+#icons i {
+  font-size: 18px;
+  margin: 0 20px;
+  font-weight: 100;
+}
+
+.logo-fixa {
+  position: fixed;
+  top: 20px;
+  left: 30px;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.logo-fixa img {
+  width: 90px;
+  height: auto;
+}
+
+/* BOTÃO */
+.btn {
+  display: inline-block;
+  background-color: transparent;
+  border: 1.1px solid #000;
+  border-radius: 8px;
+  color: #000;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 12px 24px;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background-color: #000;
+  color: #fff;
+  border-color: rgb(99, 99, 99);
+}
+
+/* CURSOR */
+#cursor {
+  height: 180px;
+  width: 180px;
+  background-color: rgba(224, 139, 189, 0.814);
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+/* SEÇÃO "SOBRE" */
+.sobre {
+  padding-top: 30px;
+  padding-bottom: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.autor-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+
+/* CARROSSEL */
+.carousel-container {
+    perspective: 1500px; 
+    position: relative;
+    width: 200px;
+    height: 280px;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+/* O contêiner que vai girar infinitamente */
+.carousel-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: rotate-carousel var(--animation-duration) linear infinite;
+}
+
+/* Estilo de cada item */
+.carousel-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    overflow: visible;
+    border-radius: 12px;
+    transition: transform 0.6s ease;
+}
+
+.carousel-item img {
+  border-radius: 5px;
+     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    filter: none;
+    box-shadow: none;
+}
+
+/* Posiciona e rotaciona cada item para formar o círculo */
+.carousel-item:nth-child(1) { transform: rotateY(calc(var(--angle) * 0)) translateZ(200px); }
+.carousel-item:nth-child(2) { transform: rotateY(calc(var(--angle) * 1)) translateZ(200px); }
+.carousel-item:nth-child(3) { transform: rotateY(calc(var(--angle) * 2)) translateZ(200px); }
+.carousel-item:nth-child(4) { transform: rotateY(calc(var(--angle) * 3)) translateZ(200px); }
+.carousel-item:nth-child(5) { transform: rotateY(calc(var(--angle) * 4)) translateZ(200px); }
+.carousel-item:nth-child(6) { transform: rotateY(calc(var(--angle) * 5)) translateZ(200px); }
+
+/* Animação para a rotação infinita */
+@keyframes rotate-carousel {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+}
+
+/* Efeito de hover para o item em foco */
+.carousel-item:hover img {
+      transform: scale(1.5);
+}
+
+/* TEXTO DO AUTOR */
+.autor-section .texto {
+  width: 500px; /* largura fixa */
+  flex: 0 0 500px; /* impede que cresça ou encolha */
+  padding-top: 35px;
+   margin-left: 280px;
+}
+
+.texto h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.texto p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.highlight-1 {
+  font-weight: bold;
+  color: #000;
+}
+
+.highlight-2 {
+  font-style: italic;
+}
+
+.texti {
+  background-color: black;
+  font-size: 11.1.rem;
+  color: white;
+  padding: 0 0.8rem;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.texto audio {
+  width: 100%;               /* ocupa toda a largura da div .texto */
+  max-width: 500px;          /* mesma largura do texto */
+  margin: 10px 0 0 0;        /* mantém um pequeno espaço acima */
+  display: block;
+  border-radius: 30px;
+  outline: none;             
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+
+/* INFO GERAL */
+.info-section {
+  padding-top: 180px;
+  max-width: 500px;
+  font-weight: 300;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.info-section h2 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.info-box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 35px;
+  background-color: #000;
+  color: white;
+  gap: 20px;
+  padding: 30px 150px;
+  border-radius: 2px;
+  min-height: 80px;
+}
+
+.info-number {
+  font-size: 45px;
+  font-weight: 900;
+  flex-shrink: 0;
+}
+
+.info-text {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .autor-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .carousel-container,
+  .autor-section .texto {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .info-box {
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .info-number {
+    margin-bottom: 10px;
+  }
+}

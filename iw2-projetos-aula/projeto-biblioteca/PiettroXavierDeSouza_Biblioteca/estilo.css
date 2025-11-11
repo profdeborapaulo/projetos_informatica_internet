@@ -1,0 +1,314 @@
+/*HTML*/
+
+
+body{
+    /*Alterção de fonte, alinhamento e background*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 30px;
+    text-align: center;
+    color: #f1f1f1;
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+
+    background-color: #dddddd;
+    background: url('img/background1.png') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+
+.item{
+    /*Estilização para itens na navbar*/
+    font-weight: bolder;
+    font-size: x-large;
+    transition: transform 0.5s ease-in-out, color 0.5s ease-in-out, text-shadow 0.5s ease-in-out;
+}
+
+.item:hover{
+    /*hover para itens na navbar*/
+    transform: scale(1.05);
+    color: #ffffff;
+    text-shadow: rgb(0, 0, 0) 0px 0px 20px;
+}
+
+@media (max-width: 700px){
+    .item{
+        font-size: large;
+    }
+}
+
+
+.navbar {
+    /*estilização para a própria navbar*/
+    background-color: #f1f1f1;
+    margin: 0px 100px;
+    
+    position: fixed;
+    top: 0;
+    width: 89.1%;
+    height: 80px;
+    box-shadow: 0 0 20px rgb(0, 0, 0, 0.3);
+    border-radius: 0px 0px 50px 50px;
+    border-style: double;
+    border-color: #0D0D0C;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: top 0.5s ease-in-out;
+}
+@media (max-width: 1917px) {
+    .navbar{
+        width: 100%;
+        margin: 0px
+    }
+}
+
+
+footer{
+    /*estilização para a footer, mantendo fixado e estilizando-o*/
+    background-color: #f1f1f1;
+    color: #2C2E2E;
+    position: static;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.3);
+    align-items: center;
+    align-content: center;
+    border-style: double;
+    border-color: #0D0D0C;
+
+    font-weight: bolder;
+}
+
+h1{
+    /*estilização para melhorar navegação em land-in page*/
+    scroll-margin-top: 105px;
+}
+
+hr{
+    /*estilização para melhor agradar visualmente no pop-up*/
+    margin: 10px -10px;
+}
+
+h2{
+    /*Deixa texto que não é destaque um pouco mais leve*/
+    font-weight: 550;
+    padding: 5px;
+    text-align: justify;
+}
+
+audio{
+    /*Torna caixa de áudio quadrada*/
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 92%;
+}
+
+button{
+    /*Estilização de botão, no estilo livro*/
+    transition: background-color 0.3s ease-in, transform 0.3s ease-in, box-shadow 0.3s ease-in;
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgb(37, 22, 0);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    border-style: double;
+    border-color: #928409;
+
+}
+
+button:hover{
+    /*faz botão "acender" ao passar-se o mouse em cima*/
+    background-color: rgb(247, 186, 125);
+    transform: scale(1.05);;
+    box-shadow: rgb(247, 186, 125) 0px 0px 20px;
+    
+}
+
+.intro {
+    /*estilização para primeiro card, de apresetação*/
+    height: fit-content;
+    color: #343a40;
+    border-style: double;
+    border-color: #0D0D0C;
+
+    text-align: justify;
+    margin: 40px 100px; /*primeiro valor acima e abaixo, segundo valor esquerda e direita*/
+    background-color: #f1f1f1;
+    padding: 10px 50px; /*primeiro valor acima e abaixo, segundo valor esquerda e direita*/
+    border-radius: 50px 50px 50px 50px;
+    box-shadow: 0 0 20px rgb(0, 0, 0, 0.3);
+}
+
+.livro {
+    color: #343a40;
+    /*Estilização para onde estão os livros, com overflow para armazenar mais livros em menos espaço*/
+    height: 570px;
+    align-content: center;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 300px;
+    place-items: center;
+    overflow-x: scroll;
+
+    border-style: double;
+    border-color: #0D0D0C;
+
+    text-align: left;
+    margin: 40px 100px; /*primeiro valor acima e abaixo, segundo valor esquerda e direita*/
+    background-color: #f1f1f1;
+    padding: 0px 40px; /*primeiro valor acima e abaixo, segundo valor esquerda e direita*/
+    border-radius: 50px 50px 8px 8px;
+    box-shadow: 0 0 20px rgb(0, 0, 0, 0.3);
+}
+
+.livros {
+    /*Alinhamento dos livros que estão dentro da div maior*/
+    align-content: center;
+    place-items: center;
+    align-items: center;
+    text-align: center;
+}
+
+.linhazinha{
+    /*linha para dividir livros na navbar*/
+    width: 1px;
+    height: 40px;
+    background-color: #343a40;
+}
+
+.linha-vertical {
+    /*linha que divide livros e informações nos cards e pop-ups*/
+    width: 1px;
+    height: 450px;
+    background-color: black;
+    margin: -100px;
+}
+
+a{
+    /*decoração de links*/
+    text-decoration: none;
+    color: #343a40;
+}
+
+img{
+    /*estilização padrão de todas as imagens do site*/
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+img:hover {
+    /*hover padrão para todas as imagens do site*/
+    cursor: pointer;
+    transform: scale(1.03);
+    box-shadow: #343a40 0px 0px 30px;
+}
+
+img[data-no-hover]:hover {
+    /*Usada para desativar hover e evitar conflito com os pop-ups*/
+  transform: none !important;
+  box-shadow: none !important;
+  cursor: default;
+}
+
+/*JS Pop-up*/
+
+#overlay {
+    /*estilização do plano de fundo de qunado o pop-up está aberto*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#popup {
+    /*Estilização do pop-up em si*/
+    color: #343a40;
+    margin-top: 25px;
+    background: #f1f1f1;
+    border-style: double;
+    border-color: #0D0D0C;
+
+    border-radius: 20px;
+    padding: 20px 40px 20px 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+
+    display: flex;
+    flex-direction: row;
+    gap: 200px;
+    align-items: center;
+
+    text-align: justify;
+    max-height: min-content;
+    max-width: 90%;
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+}
+
+@media (max-width: 1150px) {
+    /*ferramenta para tornar pop-up responsivo, alterando organização*/
+  #popup {  
+    width: 100%;
+    max-height: 80%;
+    overflow-y: scroll;
+    flex-direction: column;
+    gap: 100px;
+    text-align: center;
+    border-radius: 20px 8px 8px 20px;
+  }
+  h2{
+    text-align: center;
+    margin-left: 25px;
+  }
+ 
+}
+
+#popup.show {
+    /*faz pop-up aparecer*/
+    opacity: 1;
+    transform: scale(1);
+}
+
+span{
+    /*não permite pop-up ser exibido a todo momento*/
+    display:none
+}
+
+.capa{
+    /*estilização da capa presente no pop-up*/
+    max-height: 600px;
+}
+
+.close{
+    /*botão para fechar pop-up no site*/
+    max-width: 25px;
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+}
+
+.close:hover{
+    /*Hover no botãoo de fechar para retorno visual ao usuário*/
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: none;
+}

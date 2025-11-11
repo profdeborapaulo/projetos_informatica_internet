@@ -1,0 +1,472 @@
+/* Reset e configurações básicas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f8f5e6 0%, #e8f4e6 100%);
+    min-height: 100vh;
+    color: #2C2C2C;
+    line-height: 1.6;
+}
+
+/* Variáveis de cores */
+:root {
+    --primary: #2C5530;
+    --secondary: #6B8E23;
+    --accent: #D4AF37;
+    --light: #F8F5E6;
+    --dark: #2C2C2C;
+    --white: #ffffff;
+    --gray: #6B7280;
+    --gray-light: #E5E7EB;
+}
+
+/* Fontes */
+.book-font {
+    font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+/* Container responsivo */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+}
+
+/* Header */
+header {
+    background-color: #084327;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--white);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    padding: 24px;
+    
+}
+ 
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding-right: 60px;
+}
+
+#logo{
+    max-width: 50px;
+}
+
+#pesquisa{
+    min-width: 500px;
+    min-height: 38px;
+    background-color: white;
+    margin-left: 80px;
+    color: black;
+}
+
+#barra-pesquisa{
+    padding-left: 50px;
+    padding-top: 10px;
+    opacity: 0.5;
+}
+
+#lupa{
+    max-width: 30px;
+    margin-left: 5px;
+    margin-top: -15px;
+}
+
+@media (min-width: 768px) {
+    .header-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.header-title {
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .header-title {
+        text-align: left;
+    }
+}
+
+.header-title h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.header-title p {
+    opacity: 0.9;
+    font-size: 0.875rem;
+}
+
+/* Botão de acessibilidade */
+.accessibility-btn {
+    background-color: var(--accent);
+    color: var(--dark);
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+}
+
+/* Main content */
+main {
+    padding: 48px 0;
+}
+
+/* Grid de livros */
+.books-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-bottom: 48px;
+    margin-top: 48px;
+}
+
+@media (min-width: 768px) {
+    .books-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .books-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Cartão de livro */
+.book-card {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.book-card:hover {
+    transform: translateY(-8px) rotateX(5deg);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.book-content {
+    text-align: center;
+}
+
+.book-cover {
+    width: 192px;
+    height: 256px;
+    object-fit: cover;
+    margin: 0 auto 16px;
+    border-radius: 85x;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.book-card:hover .book-cover {
+    transform: scale(1.05);
+}
+
+.book-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--dark);
+    margin-bottom: 8px;
+}
+
+.book-author {
+    color: var(--secondary);
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.book-info {
+    font-size: 0.875rem;
+    color: var(--gray);
+}
+
+/* Modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal-content {
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    max-width: 896px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    animation: slideUp 0.4s ease-out;
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: var(--gray-light);
+    border-radius: 50%;
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    border: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-close:hover {
+    background: #d1d5db;
+}
+
+.close-icon {
+    font-size: 1.25rem;
+}
+
+.modal-body {
+    padding: 40px 24px 24px;
+}
+
+.modal-book {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+@media (min-width: 768px) {
+    .modal-book {
+        grid-template-columns: 240px 1fr;
+    }
+}
+
+.modal-cover {
+    width: 100%;
+    max-width: 240px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+.modal-details h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--dark);
+    margin-bottom: 8px;
+}
+
+.modal-author {
+    color: var(--secondary);
+    font-size: 1.125rem;
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+
+.modal-meta {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.meta-item {
+    background: var(--light);
+    padding: 12px;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.meta-label {
+    font-size: 0.875rem;
+    color: var(--gray);
+    margin-bottom: 4px;
+}
+
+.meta-value {
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.modal-synopsis {
+    margin-bottom: 24px;
+}
+
+.modal-synopsis h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--dark);
+    margin-bottom: 12px;
+}
+
+.synopsis-text {
+    line-height: 1.8;
+    color: var(--dark);
+}
+
+.read-button {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.read-button:hover {
+    transform: scale(1.05);
+    background-color: #234026;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { 
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Utilitários */
+.hidden {
+    display: none !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Fallbacks de gradientes para erro de imagem */
+.fallback-blue-purple {
+    background: linear-gradient(135deg, #1a365d 0%, #553c9a 100%);
+}
+
+.fallback-pink-yellow {
+    background: linear-gradient(135deg, #ec4899 0%, #f59e0b 100%);
+}
+
+.fallback-blue-indigo {
+    background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+}
+
+.fallback-purple-blue {
+    background: linear-gradient(135deg, #7e22ce 0%, #1e40af 100%);
+}
+
+.fallback-amber-brown {
+    background: linear-gradient(135deg, #d97706 0%, #7c2d12 100%);
+}
+
+.fallback-gray-orange {
+    background: linear-gradient(135deg, #374151 0%, #ea580c 100%);
+}
+
+/* Controles de áudio */
+.audio-controls {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.pause-button, .stop-button, .read-button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.read-button {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.read-button:hover {
+    transform: scale(1.05);
+    background-color: #234026;
+}
+
+.pause-button {
+    background-color: var(--accent);
+    color: var(--dark);
+}
+
+.pause-button:hover {
+    transform: scale(1.05);
+    background-color: #c19b2a;
+}
+
+.stop-button {
+    background-color: #dc2626;
+    color: var(--white);
+}
+
+.stop-button:hover {
+    transform: scale(1.05);
+    background-color: #b91c1c;
+}
+
+/* Status do áudio */
+.audio-status {
+    margin-top: 12px;
+    padding: 8px 12px;
+    background-color: var(--light);
+    border-radius: 6px;
+    font-size: 0.9rem;
+    color: var(--dark);
+    text-align: center;
+}

@@ -1,0 +1,69 @@
+<!-- livro.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Livro — OndaLibri</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="barra">
+  <div class="header--container">
+    <div class="logo">
+      <a href="index.html">OndaLibri</a>
+    </div>
+
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="index.html#carrossel-destaques">Destaques</a></li>
+        <li><a href="index.html#carrossel-autores">Autores</a></li>
+        <li><a href="index.html#carrossel-generos">Gêneros</a></li>
+      </ul>
+    </nav>
+  </div>
+  </header>
+  
+  <main class="livro-container">
+    <div class="livro-card-detalhe">
+    <!-- Capa -->
+     <img id="capa-livro" src="" alt="Capa do Livro" class="capa-livro">
+
+     <!-- Informações -->
+     <div class="info-livro">
+      <h1 id="titulo-livro">Título do Livro</h1>
+      <h2>Autor: <a id="link-autor" href="#">Nome do Autor</a></h2>
+
+      <!-- Sinopse -->
+       <h3>Sinopse</h3>
+       <p id="sinopse-text">...</p>
+       <audio id="sinopse-audio" controls>
+        <source id="sinopse-src" src="" type="audio/mpeg">
+        Seu navegador não suporta áudio.
+      </audio>
+
+       <!-- Detalhes -->
+       <ul id="detalhes-list">
+        <!-- preenchido dinamicamente -->
+        </ul>
+
+      <!-- Avaliações -->
+       <h3>Avaliações</h3>
+       <div class="avaliacoes" id="avaliacoes">
+        <!-- preenchido dinamicamente -->
+        </div>
+        </div>
+      </div>
+    </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; OndaLibri 2025</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/livros.js"></script>
+</body>
+</html>

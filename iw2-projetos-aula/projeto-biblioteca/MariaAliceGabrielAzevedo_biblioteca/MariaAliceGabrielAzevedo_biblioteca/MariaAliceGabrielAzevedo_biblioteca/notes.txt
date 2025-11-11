@@ -1,0 +1,54 @@
+ <div class="section2">
+                <img src="dom_quixote.jpg" alt="dom_quixote">
+                <h4>Dom Quixote de la Mancha</h4>
+                <h5>Miguel de Cervantes Saavedra</h5>
+                <h6>1605</h6>
+                <button>Clique aqui para mais!</button>
+                <h5>Editora: José Olympio Editora</h5>
+                <h5>Quantidade de páginas: 800 páginas</h5>
+                <h5>ISBN: 9788520933108</h5>
+            </div>
+
+            <div class="section2">
+                <img src="metamorfose.webp" alt="metamorfose">
+                <h4>A Metamorfose</h4>
+                <h5>Franz Kafka</h5>
+                <h6>1915>
+                <button>Clique aqui para mais!</button>
+                <h5>Editora: Editora Planeta do Brasil Ltda</h5>
+                <h5>Quantidade de páginas: 144 páginas</h5>
+                <h5>ISBN: 9788542217186</h5>
+            </div>
+
+             <div class="section2">
+                <img src="orgulho_preconceito.webp" alt="orgulho_preconceito">
+                <h4>Orgulho e Preconceito
+                <h5>Jane Austen
+                <h6>1813</h6>
+                <button>Clique aqui para mais!</button>
+                <h5>Editora: Penguin-Companhia
+                <h5>Quantidade de páginas: 576 páginas
+                <h5>ISBN: 978-8563560155
+            </div>
+
+            <div class="section2">
+                <img src="senhor_aneis.webp" alt="senhor_aneis">
+                <h4>O Senhor dos Anéis</h4>
+                <h5>J.R.R. Tolkien</h5>
+                <h6>1954</h6>
+                <button>Clique aqui para mais!</button>
+                <h5>Editora: Martins Fontes</h5>
+                <h5>Quantidade de páginas: 1211 páginas</h5>
+                <h5>ISBN: 978-8533613409</h5>
+            </div>
+
+             <div class="section2">
+                <img src="anne_frank.webp" alt="anne_frank">
+                <h4>O Diário de Anne Frank
+                <h5>Anne Frank</h5>
+                <h6>1947</h6>
+                <button>Clique aqui para mais!</button>
+                <h5>Editora: Novo Século
+                <h5>Quantidade de páginas: 320 páginas</h5>
+                <h5>ISBN: 9788542813227</h5>
+            </div>

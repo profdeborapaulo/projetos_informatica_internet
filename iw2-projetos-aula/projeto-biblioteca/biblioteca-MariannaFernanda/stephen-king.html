@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Dark book's</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="biblioteca">
+  <header class="cabecalho">
+    <h1 id="boasVindas">Biblioteca de Terror</h1>
+    <nav class="menu-navegacao">
+      <ul>
+        <li><a href="biblioteca.html">Página Inicial</a></li>
+        <li><a href="stephen-king.html">Stephen King</a></li>
+        <li><a href="Raphael-montes.html">Raphael Montes</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="livros-container">
+    <div class="livro" data-num="15">
+      <img src="fotos/livro15.png" alt="Joyland">
+      <p>Joyland</p>
+    </div>
+    <div class="livro" data-num="14">
+      <img src="fotos/livro14.png" alt="O Garoto do Colorado">
+      <p>O Garoto do Colorado</p>
+    </div>
+    <div class="livro" data-num="13">
+      <img src="fotos/livro13.png" alt="O Silêncio dos Inocentes">
+      <p>Christine</p>
+    </div>
+    <div class="livro" data-num="12">
+      <img src="fotos/livro12.png" alt="11/22/63">
+      <p>11/22/63</p>
+    </div>
+    <div class="livro" data-num="11">
+      <img src="fotos/livro11.png" alt="It - A Coisa">
+      <p>It - A Coisa</p>
+    </div>
+  </main>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="fechar">&times;</span>
+      <div class="modal-info">
+        <div class="livro-wrapper">
+          <img id="imgLivro" src="/placeholder.svg" alt="Capa do Livro">
+          <img id="garra" src="fotos/garra.png" class="garra" alt="Garra">
+        </div>
+        <div class="texto-livro">
+          <h2 id="tituloLivro"></h2>
+          <p id="autorLivro"></p>
+          <p id="descLivro"></p>
+          <div id="audioContainer" class="audio-container" style="display: none;">
+            <audio id="audioLivro" controls></audio>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

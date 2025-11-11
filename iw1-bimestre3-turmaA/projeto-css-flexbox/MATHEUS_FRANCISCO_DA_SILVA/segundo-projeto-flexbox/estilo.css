@@ -1,0 +1,102 @@
+body, ul, li, h4{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    text-align: center;
+}
+li{
+    width: 130px;
+}
+.menu li a:hover{
+    background-color: #575353;
+    color: tomato;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+.header{
+    background-color: palevioletred;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+.menu{
+    display: flex;
+}
+.menu li{
+    margin-left: 15px;
+}
+.menu li a{
+    display: block;
+    padding: 12px;
+    background-color: plum;
+}
+.header img{
+    border-radius: 100%;
+    width: 200px;
+}
+.container{
+    background-color: #ccc;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+.item{
+    background-color: #575353;
+}
+.contact-form {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    background-color: #521c1c;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+ 
+.contact-form h1 {
+    margin-top: 0;
+}
+ 
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+   
+}
+ 
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+ 
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid rgb(182, 49, 49);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+ 
+.contact-form button {
+    background-color: rgb(182, 49, 49);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+ 
+.contact-form button:hover {
+    background-color: #ccc;
+}
+.contato{
+    color: #fff;
+   
+}

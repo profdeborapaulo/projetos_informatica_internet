@@ -1,0 +1,219 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f9f9fb;
+  color: #222;
+}
+
+header {
+  height: 300px;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url('img/fundo.jpeg') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav {
+  position: absolute;
+  top: 130px;
+  right: 30px;
+  font-size: 2.5rem; 
+}
+
+nav a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 6px 10px;
+}
+
+nav a:hover, nav .ativo {
+  text-decoration: underline;
+  color: #ffcc00;
+}
+
+
+.card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+  margin-top: 20px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card img {
+  width: 68%;
+  height: 400px;
+  object-fit: cover;
+}
+
+
+.detalhes-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  gap: 20px;
+  text-align: center;
+}
+
+.detalhes-container img {
+  max-width: 380px;
+  border-radius: 10px;
+  
+}
+
+.info {
+  max-width: 600px;
+  text-align: justify;
+  font-size: 1.4rem; 
+  line-height: 1.2;    
+  margin-left: 30px;
+}
+
+
+.voltar {
+  position: absolute;
+  top: 115px;
+  left: 80px;
+  color: white;
+  background: transparent;
+  border: none;
+  font-size: 2.5rem;  
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.3s ease;
+  padding: 8px 14px; 
+}
+
+.voltar:hover {
+  transform: scale(1.2);  
+  color: #ffcc00;          
+}
+
+audio {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  border-radius: 20px;
+}
+
+.Destaques {
+  font-family: Arial, sans-serif;
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  margin-left: 30px;
+  text-align: left;
+  position: relative;
+}
+
+footer {
+  background: #04011f;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+.footer-links {
+  margin: 10px 0;
+}
+
+.footer-links a {
+  color: #ffcc00;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-social {
+  margin-top: 10px;
+}
+
+.footer-social a img {
+  width: 28px;
+  height: 28px;
+  margin: 0 8px;
+  transition: transform 0.2s;
+}
+
+.contato-container {
+  max-width: 700px;
+  margin: 40px auto;
+  margin-top: 5px;
+  padding: 20px;
+  text-align: center;
+}
+
+.contato-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 10px;
+  font-size: 1.4rem;
+}
+
+.contato-form label {
+  text-align: left;
+  font-weight: bold;
+  min-width: 100px;
+}
+
+.contato-form input,
+.contato-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.contato-form button {
+  background: #ffcc00;
+  border: none;
+  padding: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.contato-form button:hover {
+  background: #e6b800;
+  transform: scale(1.05);
+}
+

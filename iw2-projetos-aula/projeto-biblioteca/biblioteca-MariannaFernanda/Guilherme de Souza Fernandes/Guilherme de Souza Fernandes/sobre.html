@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Souza - Sobre</title>
+    <link rel="stylesheet" href="checkout.css">
+    <style>
+        .sobre-container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            padding: 32px 28px;
+        }
+        .sobre-container h1 {
+            text-align: center;
+            margin-bottom: 18px;
+        }
+        .sobre-container p {
+            font-size: 1.08rem;
+            color: #444;
+            margin-bottom: 18px;
+            line-height: 1.7;
+            text-align: justify;
+        }
+        .sobre-container ul {
+            margin-left: 18px;
+            margin-bottom: 18px;
+        }
+        .sobre-container li {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 6px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="img/header-icon.png" id="img_logo" alt="logo">
+        <ul id="header-list">
+            <a href="contato.html"><li>Contato</li></a>
+            <a href="sobre.html"><li>Sobre</li></a>
+        </ul>
+    </header>
+
+    <div class="sobre-container">
+        <h1>Sobre a Biblioteca Souza</h1>
+        <p>
+            A <strong>Biblioteca Souza</strong> é um projeto fictício criado para fins de estudo e demonstração de layouts web. Nosso objetivo é inspirar leitores e desenvolvedores a explorar o universo dos livros e da tecnologia.
+        </p>
+        <p>
+            Aqui você encontra uma seleção de obras clássicas e contemporâneas, com informações, capas e recursos interativos. Nenhum dos livros está realmente disponível para empréstimo ou venda.
+        </p>
+        <ul>
+            <li>Projeto sem fins lucrativos</li>
+            <li>Dados e imagens utilizados apenas para fins educacionais</li>
+            <li>Layout responsivo e moderno</li>
+        </ul>
+        <p>
+            Dúvidas ou sugestões? Entre em <a href="contato.html">contato conosco</a>!
+        </p>
+        <p style="text-align:center; color:#888; font-size:0.97rem;">
+            &copy; 2025 Biblioteca Souza. Todos os direitos reservados.
+        </p>
+    </div>
+
+    <footer style="background:#000000; border-top:1px solid #eee; margin-top:40px; padding:24px 0;">
+        <div style="max-width:900px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:18px; padding:0 24px;">
+            <div style="display:flex; align-items:center; gap:10px;">
+                <span style="font-weight:bold; font-size:1.1rem; color:#b3b2b2;">Biblioteca Souza</span>
+            </div>
+            <div style="display:flex; gap:22px; font-size:1rem;">
+                <a href="contato.html" style="color:#b3b2b2; text-decoration:none;">Contato</a>
+                <a href="sobre.html" style="color:#b3b2b2; text-decoration:none;">Sobre</a>
+                <a href="index.html" style="color:#b3b2b2; text-decoration:none;">Início</a>
+            </div>
+            <div style="color:#888; font-size:0.95rem;">
+                &copy; 2025 Biblioteca Souza
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        var logo = document.getElementById('img_logo');
+        logo.addEventListener('click', () => {
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

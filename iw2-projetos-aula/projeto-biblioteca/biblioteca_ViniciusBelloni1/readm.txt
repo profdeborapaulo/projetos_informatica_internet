@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Home - Livros</title>
+  <link rel="stylesheet" href="style_livros.css">
+</head>
+<body>
+  <header>
+    <div class="title">Biblioteca</div>
+  </header>
+
+  <div class="container">
+    <div class="card" data-id="1">
+      <div class="imagem"><img src="./img/livro_cientifico1.jpg" alt=""></div>
+      <div class="nome"><p>Devoradores de estrelas</p></div>
+    </div>
+
+    <div class="card" data-id="2">
+      <div class="imagem"><img src="./img/livro_cientifico10.jpg" alt=""></div>
+      <div class="nome"><p>Perdido em Marte</p></div>
+    </div>
+
+    <div class="card" data-id="3">
+      <div class="imagem"><img src="./img/livro_cientifico2.jpg" alt=""></div>
+      <div class="nome"><p>Duna</p></div>
+    </div>
+
+    <!-- outros cards... -->
+  </div>
+
+  <!-- script relativo (sem barra inicial) -->
+  <script src="app_livro.js"></script>
+</body>
+</html>

@@ -1,0 +1,243 @@
+html{
+    background-color: #1d1e20;
+}
+.contato-html{
+    background-color: #ccc;
+}
+body, ul, li,  h4{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    text-align: center;
+    background-color: #9E2522;
+    color: #fff;
+    font-weight:bolder;
+}
+h1, h4, p{
+    cursor: default;
+}
+li{
+    width: 130px;
+    text-align: center;
+}
+p{
+    color: #1d1e20;
+    font-weight: bold;
+}
+.texto-point{
+    color: #7a6622
+}
+h2{
+    color: #980b08;
+    font-weight: bolder;
+}
+h3{
+    color:#23554e;
+}
+.texto-categoria{
+    color: #8e3936;
+}
+h4{
+    color: #1d1e20;
+}
+.h4-hashira{
+    color:#980b08;
+}
+hr{
+    border-color: #7d6f3f;
+}
+.container-web{
+    padding: 50px;
+    background-color: #e0d9c2;
+    border-radius: 4%;
+    border-style: groove;
+    border-color: #9E2522;
+    margin: 90px;
+    margin-top: 20px;
+}
+.container-hashira{
+    padding: 50px;
+    background-color: #e0d9c2;
+    border-radius: 4%;
+    border-style: groove;
+    border-color: #9E2522;
+    margin: 90px;
+    margin-top: 20px;
+}
+.menu li a:hover{
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #396E66;
+    color: #E3CC76;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+.header{
+    background-color: #1d1e20;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.menu{
+    display: flex;
+}
+.menu li{
+    margin-left: 15px;
+}
+.menu li a{
+    display: block;
+    padding: 12px;
+    background-color: #9E2522;
+    border-radius: 5%;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+.conteudo-hashira{
+    display: flex;
+}
+.texto-hashira{
+    padding-left: 70px;
+    padding-top: 20px;
+}
+.item{
+    background-color: #e0d9c2;
+    color: #fff;
+    padding: 20px;
+    margin: 5px;
+    width: 300px;
+    border-radius: 5%;
+}
+img{
+    width: 280px;
+    height: 230px;
+    border-radius: 5%;
+}
+.logo{
+    border-radius: 100%;
+    width: 190px;
+    height: 120px;
+    cursor: pointer;
+}
+.item:hover img{
+
+    cursor: pointer;
+    overflow: hidden;
+    max-width: 100%;
+    -moz-transition: all 0.2;
+    -webkit-transition: all 0.2;
+    transition: all 0.2;
+    -moz-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+.img-historia-container{
+    width: 50%;
+    height: auto;
+}
+.foto-perfil{
+    width: 20%;
+    height: auto;
+}
+.web-fotos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.foto-perfil-hashira{
+    padding: 50px;
+    border-radius: 15%;
+    width: 25%;
+    height: auto;
+}
+.foto-full-hashira{
+    width: 25%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.rodape{
+    background-color: #9E2522;
+    color: #fff;
+} 
+#formulario{
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
+    }
+#formulario input[type="text"],
+#formulario input[type="email"],
+#formulario textarea{
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    }
+#formulario textarea{
+    height: 100px;
+    }
+#formulario input[type="submit"]{
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #af4846;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+    }
+#formulario input[type="submit"]:hover{
+    background-color: #396E66;
+    color: #E3CC76;
+    }
+    .spoiler{
+        padding: 80px;
+        justify-content: center;
+        background-color: #2a2c2e;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+        align-content: flex-start;
+        border-radius: 50%;
+        border-style: groove;
+        border-color: #E3CC76;
+        margin: 90px;
+        margin-top: 20px;
+    }
+    .spoiler-texto{
+        color: #e0d9c2;
+    }
+    .spoiler-titulo{
+        color: #c81512;
+    }
+    .container-contato{
+        height: 700px;
+        width: auto;
+    }
+    iframe{
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+    }

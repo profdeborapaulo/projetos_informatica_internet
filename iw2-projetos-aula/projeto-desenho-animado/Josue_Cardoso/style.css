@@ -1,0 +1,160 @@
+body, ul, li, h4{
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-image: url("celeiro.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3 );
+}
+.Gems{
+    background-image: url("Sala_das_bolhas.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3 );
+}
+.Fusions{
+    background-image: url("Rose_greg.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3 );
+}
+.Garnet{
+    background-image: url("Sala_das_bolhas.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3 );
+}
+.Perola{
+    background-image: url("Sala_perola.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3 );
+}
+.Ametista{
+    background-image: url("Big_rosquinha.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3 );
+}
+.Rose{
+    background-image: url("Quarto_de_rosee.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3 );
+}
+.Diamante{
+    background-image: url("Galaxia_Tp.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3 );
+}
+.Espinela{
+    background-image: url("JardimAntigo.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3 );
+}
+.Celeiro{
+    background-image: url("Celeiro_morada.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3 );
+}
+.Jasper{
+    background-image: url("Invasao.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3 );
+}
+.Casal{
+    background-image: url("Vista.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3 );
+}
+.Bismuto{
+    background-image: url("Sala_das_bolhas.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3 );
+}
+.card img {
+    height: 300px; 
+    width: 100%;   
+    object-fit: cover; 
+}
+.Serie{
+background-color: #f0f8ff;
+}
+.card {
+    margin-bottom: 20px;
+}
+h1, h3 {
+    color: #0066cc;
+}
+.card-header {
+    background-color: #0066cc;
+    color: white;
+}
+.card-body {
+    background-color: #ffffff;
+}
+.dropdown-menu {
+    background-color: #0066cc;
+}
+.dropdown-item {
+    color: white;
+}
+.dropdown-item:hover {
+    background-color: #0056b3;
+}
+.card {
+    margin-bottom: 20px;
+    border: 4px solid #0066cc;
+    border-radius: 10px;
+}
+.card-header {
+    background-color: #0066cc;
+    color: white;
+    border-bottom: 2px solid #000000;
+    font-size: 1.5rem;
+}
+.Humanos{
+    background-image: url("Templo_longe.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3 );
+}

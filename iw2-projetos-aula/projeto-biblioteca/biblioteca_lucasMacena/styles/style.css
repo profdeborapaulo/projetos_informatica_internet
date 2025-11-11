@@ -1,0 +1,370 @@
+:root {
+    --primary: #4a6fa5;
+    --secondary: #166088;
+    --accent: #4fc3dc;
+    --dark: #2e2e2e;
+    --light: #f8f9fa;
+    --transition: all 0.3s ease;
+    --border-radius: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--secondary);
+}
+
+.links-navegacao {
+    display: flex;
+    gap: 30px;
+}
+
+.links-navegacao a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+    transition: var(--transition);
+    position: relative;
+}
+
+.links-navegacao a:hover {
+    color: var(--primary);
+}
+
+.links-navegacao a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    bottom: -5px;
+    left: 0;
+    transition: var(--transition);
+}
+
+.links-navegacao a:hover::after {
+    width: 100%;
+}
+
+/* Seção principal */
+.secao-principal {
+    height: 400px;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+        url('../assets/banner.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#livros {
+    scroll-margin-top: 120px;
+}
+
+#contato {
+    scroll-margin-top: 180px;
+}
+
+#sobre {
+    scroll-margin-top: 80px;
+}
+
+.conteudo-principal h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.conteudo-principal p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Títulos de seção */
+.titulo-secao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--secondary);
+}
+
+.titulo-secao h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.titulo-secao p {
+    font-size: 1.1rem;
+    color: var(--dark);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Grid de livros */
+.grid-livros-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 15px; /* diminui um pouco o espaço entre eles */
+    padding-bottom: 20px;
+}
+
+.cartao-livro {
+    flex: 1; /* cada card divide igualmente o espaço */
+    max-width: calc(100% / 1); /* garante 6 por linha com gap */
+    min-width: 210px; /* evita ficar minúsculo em telas menores */
+    aspect-ratio: 3 / 5;
+    background: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: var(--transition);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.cartao-livro a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.cartao-livro:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.capa-livro {
+    height: 65%;
+    overflow: hidden;
+}
+
+.capa-livro img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.cartao-livro:hover .capa-livro img {
+    transform: scale(1.05);
+}
+
+.info-livro {
+    padding: 10px 15px;
+    flex-shrink: 0;
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info-livro h3 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: var(--secondary);
+}
+
+.info-livro p {
+    color: #666;
+    margin-bottom: 5px;
+    font-size: 0.85rem;
+}
+
+.info-livro .autor {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+/* Contato */
+.contato {
+    background: var(--secondary);
+    color: white;
+    padding: 80px 0;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.contato h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contato p {
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+}
+
+.formulario-contato {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.formulario-contato input {
+    flex: 1;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    font-size: 1rem;
+}
+
+.formulario-contato button {
+    padding: 15px 30px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.formulario-contato button:hover {
+    background: #3da8c1;
+}
+
+/* Sobre */
+.sobre {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(135deg, #f5f7fa, #ffffff); /* fundo suave e elegante */
+    padding: 40px 20px;
+    color: #2e2e2e;
+    font-family: 'Georgia', 'Times New Roman', serif; /* fonte literária */
+    line-height: 1.9;
+}
+
+.sobre .conteudo-sobre {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: justify; /* deixa o texto mais formal e “textudo” */
+}
+
+.sobre h2 {
+    font-size: 2.5rem;
+    color: var(--secondary);
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.sobre p {
+    font-size: 1.15rem;
+    margin-bottom: 25px;
+    color: #444;
+    text-indent: 2em; /* deixa mais literário, como livro */
+}
+
+.bloco {
+    padding: 30px;
+    border-radius: 20px;
+    width: 1000px;
+    background-color: var(--secondary);
+}
+
+.bloco p {
+    color: white;
+}
+
+
+/* Footer */
+footer {
+    background: var(--secondary);
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.rodape-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.logo-rodape {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.direitos {
+    color: #ffffff;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .cartao-livro { width: calc((100% - 80px) / 5); }
+}
+
+@media (max-width: 992px) {
+    .cartao-livro { width: calc((100% - 60px) / 4); }
+}
+
+@media (max-width: 768px) {
+    .cartao-livro { width: calc((100% - 40px) / 3); }
+}
+
+@media (max-width: 576px) {
+    .cartao-livro { width: calc((100% - 20px) / 2); }
+
+    nav { flex-direction: column; gap: 20px; }
+    .links-navegacao { flex-wrap: wrap; justify-content: center; }
+    .secao-principal { height: 300px; }
+    .conteudo-principal h1 { font-size: 2rem; }
+    .formulario-contato { flex-direction: column; }
+    .formulario-contato input { border-radius: 4px; margin-bottom: 10px; }
+    .formulario-contato button { border-radius: 4px; width: 100%; }
+}

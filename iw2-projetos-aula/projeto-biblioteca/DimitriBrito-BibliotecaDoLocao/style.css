@@ -1,0 +1,432 @@
+@font-face {
+    font-family: Louca;
+    src: url(./font/BagelFatOne-Regular.ttf);
+}
+@font-face {
+    font-family: Doida;
+    src: url(./font/ZCOOLKuaiLe-Regular.ttf);
+}
+@font-face {
+    font-family: Maluca;
+    src: url(./font/ZenLoop-Italic.ttf);
+}
+@font-face {
+    font-family: Noia;
+    src: url(./font/Karla-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: Bêbado;
+    src: url(./font/KaushanScript-Regular.ttf);
+}
+*{
+    margin: 0;
+}
+body{
+    background-color: #2e2e2e;
+    background-image: url(./img/parede-tijolo.png);
+    background-position: cover;
+    background-repeat: repeat;
+    background-position-x: center;
+    background-blend-mode: multiply;
+}
+.nav{
+    background-color: #1F1F1F;
+    height: 67px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.nav a{
+    color: white;
+    text-decoration-line: none;
+    font-family: Louca;
+    font-size: 35px;
+}
+.nav img{
+    width: 65px;
+}
+.listra-verde{
+    height: 20px;
+    background-color: #00FF26;
+    background-image: url(./img/listra-verde.png);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 20px 35px #8518F0;
+}
+.boas-vindas{
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boas-vindas img{
+    width: 700px;
+}
+.tijolitos img{
+    width: 100%;
+    height: 300px;
+}
+.banner{
+    height: 230px;
+    background-color: #00000067;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    border: 5px dashed purple;
+    border-left: 0px;
+    border-right: 0px;
+    border-image: repeating-linear-gradient(
+      to right,   
+      rgb(197, 19, 173) 0,       
+      rgb(197, 19, 173) 90px,     
+      transparent 10px,  
+      transparent 120px  
+  ) 1;
+}
+.banner-marketing{
+    text-align: center;
+}
+.banner h1{
+    font-family: Doida;
+    font-weight: 100;
+    color: white;
+    font-size: 60px;
+    text-shadow:0px 0px 20px #00ff263a;
+}
+.banner p{
+    font-family: Maluca;
+    color: rgb(206, 206, 206);
+    font-size: 40px;
+    margin-top: 15px;
+}
+.infantil-adulto{
+    height: 300px;
+    max-width: 1600px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+}
+.infantil{
+    color: rgb(201, 201, 201);
+    font-family: Doida;
+    font-size: 25px;
+    font-weight: 100;
+    text-align: center;
+    width: 400px;
+    padding: 50px;
+    border: 6px solid rgb(4, 167, 4);
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px purple;
+}
+.infantil a{
+    text-decoration: none;
+    color: inherit
+}
+.adulto{
+    color: rgb(201, 201, 201);
+    font-family: Doida;
+    font-size: 25px;
+    font-weight: 100;
+    text-align: center;
+    width: 400px;
+    padding: 50px;
+    border: 6px solid rgb(4, 167, 4);
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px purple;
+}
+.adulto a{
+    text-decoration: none;
+    color: inherit
+}
+.livros-famosos{
+    height: 550px;
+}
+.titulo-livros{
+    margin-top: 30px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+    background-image: url(./img/Quem\ é\ o\ Locão.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.titulo-livros h2{
+    font-family: Doida;
+    font-weight: 100;
+    color: white;
+    text-shadow: 0px 0px 10px purple;
+    font-size: 55px;
+}
+.livros{
+    display: flex;
+    justify-content: space-around;
+    height: 400px;
+    margin-top: 30px;
+
+}
+.book{
+    height: 350px;
+    width: 500px;
+    margin: 20px;
+    border-radius: 5px;
+}
+.capa-livro img{
+    width: 210px;
+    height: 300px;
+    border-radius: 5px;
+    box-shadow: -4px 4px 1px #00ff2669;
+    cursor: pointer;
+}
+.autor-livro{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin-top:2px;
+}
+.contos-terror{
+    margin-top: 40px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+}
+.terror{
+    background-color: #1f1f1f8f;
+    height: 250px;
+    width: 1400px;
+    border-radius: 30px;
+    background-image: url(./img/tentaculos.png);
+    background-position: right;
+    background-size: cover;
+}
+.terror h2{
+    font-family: Noia;
+    font-weight: bold;
+    color: white;
+    font-size: 38px;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.terror p{
+    font-family: Noia;
+    font-weight: 100;
+    color: white;
+    font-size: 17px;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+.premium{
+    height: 600px;
+}
+.plano{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+}
+.plano-textos{
+    text-align: center;
+    margin-right: 230px;
+}
+.plano-titulo{
+    font-family: Doida;
+    font-weight: 100;
+    color: white;
+    font-size: 38px;
+    text-shadow: 0px 0px 10px purple;
+    letter-spacing: 4px;
+    word-spacing: 7px;
+}
+.p{
+    font-family: Noia;
+    font-size: 20px;
+    color: white;
+    margin-top: 65px;
+}
+.plano-textos button{
+    margin-top: 65px;
+    padding: 20px;
+    width: 350px;
+    background-color: #AB1DDA;
+    border-radius: 5px;
+    border: 3px solid purple;
+    box-shadow: -9px 9px 15px rgb(7, 216, 7);
+    font-family: Bêbado;
+    color: white;
+    font-size: 25px;
+}
+.coringa-lendo img{
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px purple;
+}
+
+.contain-comentarios{
+    height: 500px;
+    background-color: rgba(150, 150, 150, 0.253);
+}
+
+.titulo-comentarios{
+    margin-top: 30px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+    background-image: url(./img/comentarios-decorativo.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.titulo-comentarios h2{
+    font-family: Doida;
+    font-weight: 100;
+    color: white;
+    text-shadow: 0px 0px 10px purple;
+    font-size: 55px;
+}
+.containn-comen{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+.comment{
+    height: 200px;
+    width: 260px;
+    background-color: #0000008a;
+    border-radius: 15px;
+    box-shadow: -4px 4px 2px #036111;
+}
+.comment img{
+    width: 165px;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+.comment p{
+    font-family: Noia;
+    color: white;
+    margin-top: 20px;
+    font-size: 17px;
+    margin-left: 15px;
+    width: 200px;
+}
+.comment h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    color: rgb(156, 156, 156);
+    margin-top: 20px;
+    margin-left: 15px;
+}
+.avaliacao{
+    margin-top: 30px;
+    margin-left: 74px;
+}
+.avaliacao img{
+    width: 165px;
+}
+.avaliacao p{
+    color: white;
+    font-family: Noia;
+}
+.footer{
+    margin-top: 50px;
+    height: 250px;
+    background-color: #1F1F1F;
+    box-shadow: 0px -10px 20px #05db25b7;
+}
+.logon{
+    height: 175px;
+    background-color: #2F2F2F;
+    text-align: center;
+}
+.logon img{
+    width: 400px;
+    margin-top: 15px;
+}
+.direitos{
+    background-color: #1F1F1F;
+    height: 45px;
+    text-align: center;
+}
+.direitos p{
+    color: white;
+    font-family: Noia;
+    font-size: 20px;
+    margin-top: 25px;
+}
+.card{
+    margin: 0 auto;
+    width: 1000px;
+    height: 1000px;
+    background-color: #1F1F1F;
+    border-radius: 15px;
+    margin-top: 40px;
+}
+.image-texto{
+    display: flex;
+    justify-content: center;
+}
+.capa-livro img{
+    margin-right: 40px;
+    margin-top: 40px;
+    border-radius: 15px;
+    width: 210px;
+    height: 300px;
+}
+.sobre-livro{
+    margin-top: 40px;
+    color: white;
+}
+.sobre-livro h2{
+    font-family: Doida;
+    font-size: 30px;
+}
+.sobre-livro p{
+    font-family: Noia;
+    margin-top: 15px;
+}
+.sobre-livro img{
+    width: 120px;
+    margin-top: 15px;
+}
+.sinopse-livro{
+    margin-top: 40px;
+    height: 400px;
+    background-color: #121212;
+}
+.sinopse-livro h2{
+    text-align: center;
+    font-family: Noia;
+    color: white;
+    font-size: 35px;
+}
+.sinopse-livro p{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    font-size: 19px;
+    text-align: center;
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.sinopse-livro audio{
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.curiosidades h2{
+    text-align: center;
+    font-family: Noia;
+    color: white;
+    font-size: 35px;
+}
+.curiosidades p{
+    color: white;
+    font-family: Noia;
+    font-size: 19px;
+    text-align: center;
+    width: 700px;
+    margin: 0 auto;
+    margin-top: 20px;
+}

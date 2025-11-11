@@ -1,0 +1,285 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Merriweather', serif;
+  background-color: #f8f6f2;
+  color: #333;
+}
+
+
+.logo {
+  position: absolute;  
+  top: 10px;            
+  right: 20px;         
+  width: 110px;        
+  height: auto;         
+  z-index: 1000;       
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  .logo {
+    width: 120px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo {
+    width: 100px;
+  }
+}
+
+
+header {
+  background-color: #7b9b77;
+  padding: 80px 30px;
+  color: black;
+  text-align: left;
+  position: relative;
+  animation: slideFadeIn 1.2s ease-out;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+@keyframes slideFadeIn {
+  0% { opacity: 0; transform: translateY(-50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+header p {
+  margin: 5px 0 0;
+  font-size: 1.2rem;
+}
+
+header img {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+}
+
+
+.descricao {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 20px;
+  color: #555;
+}
+
+
+.categorias {
+  padding: 40px 20px;
+}
+
+.categorias-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.categorias-header h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.categorias-header a {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #555;
+}
+
+.categorias-lista {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.categoria {
+  background-color: #fddede;
+  color:#333;
+  padding: 20px 30px;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.categoria:hover {
+  background-color: #fbb;
+  transform: scale(1.08);
+  animation: glowPulse 1.5s infinite alternate;
+}
+
+@keyframes glowPulse {
+  from {
+    box-shadow: 0 0 5px rgba(255, 100, 100, 0.3),
+                0 0 10px rgba(255, 100, 100, 0.4);
+  }
+  to {
+    box-shadow: 0 0 15px rgba(255, 100, 100, 0.6),
+                0 0 30px rgba(255, 100, 100, 0.8);
+  }
+}
+
+
+.mais-procurados {
+  padding: 20px;
+}
+
+h2 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  padding-left: 20px;
+}
+
+.fotos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+}
+
+.foto {
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.foto img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.foto span {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+.foto button {
+  background-color: #7b9b77;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.foto button:hover {
+  background-color: #93A889;
+}
+
+
+
+
+/* Responsividade*/ 
+@media (max-width: 768px) {
+  header {
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  header img {
+    position: static;
+    margin: 10px auto 0;
+    display: block;
+  }
+
+  header h1 { font-size: 1.8rem; }
+  header p { font-size: 1rem; }
+
+  .categoria {
+    font-size: 1rem;
+    padding: 15px 20px;
+  }
+
+  h2 { font-size: 1.3rem; }
+}
+
+@media (max-width: 480px) {
+  .descricao { font-size: 1rem; padding: 15px; }
+
+  .categorias { padding: 20px; }
+
+  .categoria {
+    font-size: 0.9rem;
+    padding: 12px 15px;
+  }
+
+  .foto {
+    padding: 8px;
+  }
+
+  h2 { font-size: 1.1rem; padding-left: 10px; }
+}
+
+   footer {
+      background-color:  #7b9b77;
+      color: #fff;
+      padding: 30px 20px;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 150px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    footer div {
+      max-width: 300px;
+    }
+
+    footer h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+      border-bottom: 2px solid #93A889;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    footer p, footer a {
+      font-size: 14px;
+      color: #ddd;
+      line-height: 1.6;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #93A889;
+    }
+
+  
+    .footer-bottom {
+      text-align: center;
+      width: 100%;
+      margin-top: 20px;
+      border-top: 1px solid #93A889;
+      padding-top: 10px;
+      font-size: 13px;
+      color: #ccc;
+    }

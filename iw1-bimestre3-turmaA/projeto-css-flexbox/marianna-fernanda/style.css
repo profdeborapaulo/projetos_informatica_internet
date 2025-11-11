@@ -1,0 +1,131 @@
+body, ul, li, p{
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;   
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 1.2rem;
+    background-color: rgb(252, 155, 219);
+}
+h1{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(253, 46, 167) ;
+    color: #fff;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+.header{
+    background-color: darkviolet;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 15px;
+}
+.menu{
+    display: flex;
+}
+.menu li{
+    margin-left: 20px;
+}
+.menu a{
+    display: block;
+    background-color: rgb(255, 26, 160);
+}
+#container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: flex-start;
+    background-color: rgb(252, 155, 219);;    
+}
+.item{
+    background-color: darkviolet;
+    color: #fff;
+    padding: 30px;
+    margin: 5px;
+    width: 250px;
+}
+img{
+    width: 250px;
+    height: 150px;
+    display: flex;
+
+}
+.logo{
+    border-radius: 100%;
+    width: 75px;
+    height: auto;
+}
+
+.personagem{
+    background-color: darkviolet;
+    color:#fff;
+    padding: 20px;
+    margin: 5px;
+    width: 2000px;
+    display: -webkit-inline-flex;
+}
+h6{
+display: -webkit-inline-flex;
+align-items: flex-start;
+}
+.img2{
+    width: 150px;
+    height: 100px;
+    display: -webkit-inline-flex;
+  
+}
+section{
+    background-color: #ffffff;
+    padding: 40px;
+    margin: 0px auto;
+    border-radius: 8px;
+    max-width: 600px;
+    box-shadow: 0 0 10px darkviolet;}
+
+    #formulario{
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        text-align: left;
+    }
+    #formulario input[type="text"],
+    #formulario input[type="email"],
+    #formulario textarea{
+        width: 100%;
+        padding: 100px;
+        margin-top: 5px;
+        border: 1px solid  rgb(255, 26, 160);
+        box-sizing: border-box;
+    }
+    #formulario textarea{
+        height: 100px;
+    }
+    #formulario input[type="submit"]{
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: darkviolet;
+        color: #eccbff;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    #formulario input[type="submit"]:hover{
+        background-color: #d38ffa;}
+        .img3{
+            width: 150px;
+            height: 100px;
+        }
+          
+        h5{
+            display: -webkit-inline-flex;
+align-items: flex-start;
+
+        }

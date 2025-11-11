@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OndaLibri</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- SwiperJS para o carrossel -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+
+<body>
+
+  <header class="barra">
+  <div class="header--container">
+    <div class="logo">
+      <a href="index.html">OndaLibri</a>
+    </div>
+
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="index.html#carrossel-destaques">Destaques</a></li>
+        <li><a href="index.html#carrossel-autores">Autores</a></li>
+        <li><a href="index.html#carrossel-generos">Gêneros</a></li>
+      </ul>
+    </nav>
+  </div>
+  </header>
+
+  <!-- Header -->
+   <header class="header">
+    <div class="overlay">
+      <h1 class="logo">OndaLibri</h1>
+      <p class="mensagem">"Os livros são navios que viajam através dos mares da imaginação." - George W. Curtis </p>
+    </div>
+  </header>
+
+  <!-- Carrossel de Livros -->
+  <section class="destaques" id="carrossel-destaques">
+    <h2>Livros em Destaque</h2>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+      </div>
+      <!-- Botões -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+    </section>
+
+
+
+  <section class="autores" id="carrossel-autores">
+    <h2>Autores Populares</h2>
+    <div class="swiper">
+      <div class="swiper-wrapper"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </section>
+
+
+  <!-- Carrossel de Gêneros -->
+  <section class="generos" id="carrossel-generos">
+    <h2>Gêneros Literários</h2>
+    <div class="swiper generos">
+      <div class="swiper-wrapper"><!-- preenchido via JS --></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; OndaLibri 2025</p>
+  </footer>
+
+  <script src="js/livros.js"></script> <!-- dados dos livros -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/index.js"></script> <!-- popula os carrosséis -->
+
+</body>
+</html>

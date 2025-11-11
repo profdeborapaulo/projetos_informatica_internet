@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frankenstein</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Página inicial</a></li>
+        </ul>
+        <div class="logo-area">
+          <span class="logo-text">Mage Books</span>
+          <a href="index.html">
+            <img src="img/2.png" alt="Logo" class="logo-img"
+          /></a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="obra-header">
+        <span class="obra-titulo">Conheça a Obra</span>
+      </div>
+      <button class="botao-voltar" onclick="window.history.back();">
+        &#8592; Voltar
+      </button>
+      <div class="obra-card">
+        <div class="obra-capa">
+          <img src="img/frankenstein.jpg" alt="Capa do livro Frankenstein" />
+        </div>
+        <div class="obra-detalhes">
+          <h1 class="titulo-livro">Frankenstein</h1>
+          <h2 class="subtitulo-livro">Mary Shelley</h2>
+          <div class="sinopse">
+            <span class="sinopse-titulo">Sinopse</span>
+            <audio controls style="vertical-align: middle; margin-left: 12px">
+              <source src="audio/frankenstein.m4a" type="audio/mpeg" />
+            </audio>
+            <p>
+              É a história de um ser humano criado em laboratório pelas mãos do
+              homem: o Dr. Victor Frankenstein. A criatura não tem nome; mas
+              adquire vontade própria e surpreendente o mundo com suas atitudes
+              e sentimentos. Inacreditável que este enredo fantástico que
+              inspirou tantos desdobramentos para outras histórias e dezenas de
+              filmes saiu da cabeça de uma garota de dezenove anos; em 1816.
+            </p>
+          </div>
+          <div class="obra-info">
+            <div>
+              <span class="info-titulo">Autor</span>
+              <span class="info-desc">Mary Shelley</span>
+            </div>
+            <div>
+              <span class="info-titulo">Ano de Publicação</span>
+              <span class="info-desc">2021</span>
+            </div>
+            <div>
+              <span class="info-titulo">Gênero</span>
+              <span class="info-desc">Romance Gótico</span>
+            </div>
+            <div>
+              <span class="info-titulo">Editora</span>
+              <span class="info-desc">CAMELOT EDITORA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

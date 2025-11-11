@@ -1,0 +1,8 @@
+cores: 
+
+--hollywood-cerise: #ef27a6ff;
+--tekhelet: #482671ff;
+--skobeloff: #0b7a75ff;
+--falu-red: #7b2d26ff;
+--dun: #d7c9aaff;
+

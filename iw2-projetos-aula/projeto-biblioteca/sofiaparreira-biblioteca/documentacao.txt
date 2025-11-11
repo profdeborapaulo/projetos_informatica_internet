@@ -1,0 +1,139 @@
+Documentação da primeira página do site, o index.
+
+`<head>`:
+* Define metadados e links para recursos externos.
+* Inclui:
+  * Codificação UTF-8 e configuração responsiva (`viewport`).
+  * Título da página: Vulpe Arcana.
+  * Ícone personalizado (favicon).
+  * Fonte externa "PT Sans" via Google Fonts.
+  * Arquivo CSS externo `style.css`.
+
+`<nav class="navbar">`:
+* Cria o menu de navegação principal.
+* Contém uma lista com três links:
+  * `Início` → index.html
+  * `Livros` → livros.html
+  * `Contato` → contato.html
+
+Seção inicial (`.container-inicial`):
+* Exibe o **título em imagem** (`va-titulo.png`).
+
+Boas-vindas (`.container-ini-1`):
+* Mostra uma **imagem de raposa** (`raposa-grass.png`).
+* Contém texto de boas-vindas (`<h1>` + parágrafo de apresentação).
+
+Livros em destaque (`.container-ini-2`):
+* Título: *LIVROS DESTAQUES* + subtítulo.
+* Carrossel simples de **capas de livros** em cards:
+  * Brumas, Corajosas, Coraline, Hobbit, Princesa, Terra.
+* Cada livro é exibido como imagem dentro de `<div class="card-carrossel">`.
+
+Etapas para ler os livros (`.container-ini-3`):
+* Título explicativo.
+* Três ícones que simbolizam etapas:
+  * Upload → Livro → Café.
+
+Reflexão sobre fantasia (`.container-ini-4`):
+* Texto explicando a importância da fantasia na literatura.
+* Ao lado, uma animação em GIF de um livro.
+
+
+Rodapé simples com direitos autorais:
+  * `© 2025 Sofia Parreira. Todos os direitos reservados.`
+
+----------------------------------------------------------------------------------------------------------
+
+Arquivo HTML das páginas dedicadas aos livros específicos.
+
+Cabeçalho (`<head>`):
+  * Define idioma, meta tags de viewport.
+  * Importa a fonte "PT Sans" do Google Fonts.
+  * Importa o CSS específico `livro-info.css`.
+  * Define o favicon (`img/raposa-icon.png`).
+
+Navbar (`<nav>`):
+  * Um menu fixo no topo com links para Início, Livros e Contato.
+
+Main (`<main>`):
+  * Container do livro (`.container-livro`): contém a capa (`.capa-livro`) e informações (`.texto-livro`).
+  * Inclui título, descrição do livro e botão **"Ouvir Sinopse"** com ícone de volume.
+  * Container de informações adicionais (`.container-info-livro`): mostra uma imagem de quadro com detalhes do livro.
+  * Outro container com título **"Deseja ler este livro?"**, texto de instrução e botão de Download que abre em nova aba (`target="_blank"`).
+
+Rodapé (`<footer>`):
+  * Créditos da página com direitos reservados.
+
+JavaScript (`script.js`):
+  * Linkado ao final, para controlar o botão de ouvir sinopse.
+
+----------------------------------------------------------------------------------------------------------
+
+CSS específico para páginas individuais de livros.
+
+Tipografia:
+  * Importa fontes "MedievalSharp" e "PT Sans".
+  * Configura variações (`regular`, `bold`, `italic`).
+
+Navbar (`.navbar`):
+  * Fixa no topo, com gradiente de cores (`#D2783A`, `#84AF31`, `#EBC66D`).
+  * Links com efeito de text-shadow dourado ao passar o mouse.
+
+Body (`body`):
+  * Fundo com imagem `wallpaper-booktree.png`.
+  * `background-attachment: fixed` para efeito de paralaxe.
+
+Container principal (`.container-livro`):
+  * Estrutura em grid (capa + informações).
+  * Fundo com imagem (`wallpaper-beige.jpg`), bordas arredondadas e sombra.
+
+Texto do livro (`.texto-livro`):
+  * Caixa destacada com cor de fundo dourada (`#EBC66D`).
+  * `h1` estilizado com fonte MedievalSharp e cor marrom (`#382112`).
+
+Botões (`.botao`, `.botao-sinopse`):
+  * Formato arredondado, cores verde/dourado, transição de escala no hover.
+  * `.botao-sinopse` tem ícone de volume acima do texto.
+
+Rodapé (`footer`):
+  * Fundo marrom escuro (`#442D1C`), texto dourado claro (`#FFEBAF`).
+
+----------------------------------------------------------------------------------------------------------
+
+CSS usado na página inicial (home).
+
+Tipografia: idem (`MedievalSharp` + `PT Sans`).
+
+Body: fundo bege (`#FFEBAF`), texto marrom escuro (`#442D1C`).
+
+Navbar: igual ao `livro-info.css` (gradiente, fixo, sombra).
+
+Seções principais:
+  * `.container-inicial`: imagem de fundo de biblioteca.
+  * `.raposa-inicial`: logo em forma de raposa com moldura arredondada.
+  * `.titulo-inicial`: título centralizado com efeito de blur no fundo.
+  * `.carrossel-inicio`: cards expansíveis ao passar o mouse.
+  * `.container-ini-3`: fundo de floresta com ícones interativos (`.card-etapa`).
+  * `.container-ini-4`: bloco final com livro destacado.
+
+Rodapé: igual ao de `livro-info.css`.
+
+----------------------------------------------------------------------------------------------------------
+
+CSS usado na página da estante de livros.
+
+Body: fundo fixo (`wallpaper-booktree.png`).
+
+Container (`.container`): organiza os cards em grid flexível.
+
+Cards de livros (`.card`):
+  * Têm altura de 480px, cantos arredondados e sombra.
+  * A parte superior é um **círculo colorido** (`clip-path: circle(...)`).
+  * Título (`h2`) aparece dentro da área circular.
+  * Parte inferior contém **sinopse + link** estilizado como botão arredondado.
+
+Interatividade:
+  * Hover nos cards reduz ou amplia o tamanho (`transform: scale`).
+  * Botões de **download/leitura** mudam de cor (laranja → verde) com `transform: scale(1.2)`.
+
+Rodapé: igual ao das outras páginas.

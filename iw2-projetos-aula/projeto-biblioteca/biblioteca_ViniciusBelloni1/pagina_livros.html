@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./pagina_livros.css" />
+    <title>livros</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="title">Biblioteca</div>
+      <nav>
+        <ul>
+          <a href="./index.html"><li>Home</li></a>
+          <a href="./livro.html"><li>livros</li></a>
+
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+
+      <div class="imagem">
+        <img id="imagem" src="" alt="" />
+      </div>
+      <div class="informacoes">
+        <div class="detalhes">
+          <p class="title" id="titulo"></p>
+          <div class="" id="informacoes">
+            <p id="autor"><span>Autor: </span></p>
+            <p id="editora"><span>Editora: </span></p>
+            <p id="lancamento"><span>Lançamento: </span></p>
+            <p id="paginas"><span>Pagínas: </span></p>
+            <hr />
+          </div>
+        </div>
+
+        <div class="descricao">
+          <span>Descrição</span>
+          <p id="descricao"></p>
+          <audio autoplay controls id="audioSinopse">
+              <source id="audio" src="" type="audio/mpeg">
+               O seu navegador não suporta a reprodução de áudio.
+          </audio>
+        </div>
+      </div>
+    </div>
+
+    <div class="titulo">
+      <p class="title">Livros Relacionados</p>
+    </div>
+
+    <div class="relacionados">
+      <div class="book">
+        <a href="./pagina_livros.html?id=1"><img class="imgHover" src="./img/livro_cientifico1.jpg" alt="" /></a>
+      </div>
+
+      <div class="book">
+        <a href="./pagina_livros.html?id=6"><img class="imgHover" src="./img/livro_de_fantasia1.jpeg" alt="" /></a>
+      </div>
+
+      <div class="book">
+        <a href="./pagina_livros.html?id=11"><img class="imgHover" src="./img/livro_de_suspense1.jpg" alt="" /></a>
+      </div>
+    </div>
+
+    <div class="titulo">
+      <p class="title">Comentarios</p>
+    </div>
+
+    <div class="comentarios">
+      <input id="caixaDeCometario" type="text" max="150"/>
+      <button onclick="comentar()">Comentar</button>
+    </div>
+
+    <div id="container"></div>
+   
+      
+    </div>
+    <script src="/app_pagina_livro.js"></script>
+  </body>
+</html>

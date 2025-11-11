@@ -1,0 +1,263 @@
+body, ul, li, h4{
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    text-align: center;
+}
+li{
+    width: 120px;
+}
+.menu li a:hover{
+    background-color: #ff38bd62;
+    color: rgba(255, 255, 255, 0.836);
+}
+a{
+    text-decoration: none;
+    color: #000000;
+}
+.header{
+    background-color: #5f5f5f;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.menu{
+    display: flex;
+}
+.menu li{
+    margin-left: 15px;
+}
+.menu li a{
+    display: block;
+    padding: 10px;
+    background-color: rgb(231, 231, 231);
+    border-radius: 15px;
+}
+.container{
+    background-color: #ec6148;
+    min-height: 870px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 10px;
+    box-shadow: 0 0 15px rgba(0.4, 0.4, 0.4, 0.4);
+    border: 2px solid#000000;
+    background-image: url(img/Flores.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+.row{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: nowrap;
+}
+.item{
+    background-color: #ab85b4;
+    color: #fff;
+    padding: 20px;
+    margin: 5px;
+    width: 300px;
+    display: block;
+    border: 2px solid black;
+    border-radius: 10px;
+
+}
+img{
+    width: 295px;
+    height: 295px;
+}
+.Ts{
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+} 
+footer{
+    background-color: #ab85b4;
+    color: #000000;
+    
+}
+#formulario{
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 30px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#formulario input[type="text"],
+#formulario input[type="email"],
+#formulario textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #081746;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#formulario textarea{
+    height: 100px;
+    resize: vertical;
+}
+#formulario input[type="submit"]:hover{
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    background-color: #656667;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+}
+#formulario input[type="submit"]:hover{
+    background-color: #828485;
+    transform: scale(1.05)
+}
+.header{
+    background-image: url("img/Fundo.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid#000000;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3 );
+}
+.header img{
+    border-radius: 1000px;
+    width: 100px;
+    height: 100px;
+}
+.form-container {
+    padding: 20px;
+    background-color: #ec6148;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    max-width: 30%;
+    margin: 20px auto;
+    border: 2px solid#000000;
+}
+.form-container2 {
+    padding: 20px;
+    background-color: #ddd;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4 );
+    max-width: 60%;
+    margin: 20px auto;
+    border: 2px solid#000000;
+    background-image: url(img/Flores_Palidas.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+.tamanho{
+    font-size: 23px;
+}
+.Texto{
+    font-size: 35px;
+}
+.form-container3{
+    padding: 10px;
+    background-color: #ab85b4;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    max-width: 35%;
+    margin: 20px auto;
+    color: #fff;
+    border: 2.5px solid#000000;
+}
+.form-container4{
+    padding: 5px;
+    background-color: #ab85b4;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    max-width: 31%;
+    margin: 20px auto;
+    color: #fff;
+    border: 2.5px solid#000000;
+}
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #ec6148;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    margin: 20px auto;
+    max-width: 90%;
+    border: 2.5px solid#000000;
+}
+.VestidoCake{
+    width: 100%;
+    height: auto;
+    border-radius: 10%;
+}
+.video-section {
+    margin: 20px auto;
+    max-width: 90%;
+    text-align: center;
+}
+.video-description {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #333;
+}
+.Rascunho{
+    background-color: #ab85b4;
+    color: #fff;
+    padding: 20px;
+    margin: 5px;
+    width: 300px;
+    display: block;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.container0{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #ec6148;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    margin: 20px auto;
+    max-width: 37%;
+    border: 2.5px solid#000000;
+}
+body {
+    background-image: url('img/Fundo.jfif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.form-container5{
+    padding: 10px;
+    background-color: #ab85b4;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    max-width: 38%;
+    margin: 20px auto;
+    color: #fff;
+    border: 2.5px solid#000000;
+}

@@ -1,0 +1,99 @@
+nav{
+
+}
+.container{
+  background-color: rgb(27, 214, 27);
+  margin :auto;
+  margin-top: 35px;
+  width: fit-content;
+  align-self: center;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:space-around;
+  align-items: flex-start;
+  align-content: flex-start;
+
+  
+  
+}
+body, ul, li,h4{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+  color: rgb(255, 255, 255);
+  margin: 10px;
+}
+
+h3{
+  color: rgb(0, 0, 0);
+}
+.ben-10{
+  width: 500px;
+  height: 400px;
+  margin-bottom: 5px;
+}
+.ben{
+  height: 250px;
+  width: 300px;
+  margin-bottom: 5px;
+}
+h4{
+  color: rgb(0, 0, 0);
+}
+.omnitrix{
+  width: 250px;
+  height: 200px;
+}
+
+.col-md-8{
+  width: 300px;
+  height: 250px;
+  
+}
+.curiosidades{
+  color: black;
+  align-self: center;
+}
+.filme{
+  width: 200px;
+  height: 200px;
+}
+
+.img-fluid {
+  width: 240px;
+  height: 150px;
+}
+
+.card{
+  margin :auto;
+  width: fit-content;
+  align-self: center;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:space-around;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+  .d-flex {
+    margin :20px;
+    width: fit-content;
+    align-self: center;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-items: flex-start;
+    align-content: flex-start;
+    
+  }

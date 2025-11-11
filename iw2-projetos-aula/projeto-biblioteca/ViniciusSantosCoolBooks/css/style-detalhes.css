@@ -1,0 +1,138 @@
+/* style-detalhes.css */
+
+/* Estilos globais para a página de detalhes */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #e5e5e5;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Container principal com o conteúdo da página */
+.container-livro {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* APLICANDO O LAYOUT DE DUAS COLUNAS */
+.livro-conteudo-principal {
+  display: flex;
+  gap: 40px; /* Espaço entre as duas colunas */
+}
+
+/* Estilos para a coluna da esquerda */
+.coluna-esquerda {
+  flex: 1; /* Faz a coluna crescer */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza a capa e as informações verticalmente */
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para a coluna da direita */
+.coluna-direita {
+  flex: 2; /* Faz a coluna da direita ser maior */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Estilos para o bloco de informações dentro da coluna esquerda */
+.livro-header {
+  text-align: center;
+}
+
+#livro-capa {
+  width: 100%; /* A capa ocupa 100% da largura da sua coluna */
+  max-width: 300px; /* Limita o tamanho máximo */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.info-geral {
+  flex-grow: 1;
+  text-align: left;
+}
+
+#livro-titulo {
+  font-size: 2.5em;
+  color: #333;
+  margin: 0 0 5px 0;
+}
+
+#livro-autor {
+  font-size: 1.5em;
+  color: #666;
+  margin: 0;
+  font-style: italic;
+}
+
+/* Esconde as infos adicionais por padrão */
+#mais-infos {
+  margin-top: 20px;
+  text-align: left;
+}
+
+#mais-infos p {
+  margin: 5px 0;
+  color: #555;
+}
+
+/* Estilo do botão de mais infos */
+.mais-livros-botao {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1em;
+  color: #7b0a0a;
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+
+/* Estilos para a sinopse e vídeo na coluna da direita */
+.resumo-container,
+.video-container {
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.resumo-container h2,
+.video-container h2 {
+  font-size: 2em;
+  color: #333;
+  border-bottom: 2px solid #7b0a0a;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+/* Vídeo responsivo 16:9 */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 8px;
+}

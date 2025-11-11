@@ -1,0 +1,16 @@
+.body{
+  
+        background-image: url("img/hdafundo.jpg");
+       
+}
+
+
+.custom-img-size{
+    width: 20%;
+    height: 5%;
+}
+.texto-limpo{
+    color: black;
+    text-align: center;
+
+}

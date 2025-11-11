@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+p{
+    font-family: 'PT Sans';
+    font-weight: 600;
+    font-size: larger;
+}
+
+h1{
+    font-family: 'MedievalSharp';
+    font-weight: bold;
+}
+
+h2{
+  font-family: "PT Sans", sans-serif;
+    font-weight: bold;
+}
+
+.pt-sans-regular {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.pt-sans-bold {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.pt-sans-regular-italic {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+.pt-sans-bold-italic {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.navbar {
+  position: fixed;         
+  top: 0;                  
+  left: 0;
+  width: 100vw;           
+  margin: 0;              
+  z-index: 1000;           
+  background: linear-gradient(135deg, #D2783A, #84AF31, #EBC66D);
+  padding: 25px 0;
+  box-shadow: 0px 4px 20px rgba(0,0,0,0.25);
+  font-family: 'MedievalSharp', cursive;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  gap: 150px;
+  font-family: 'MedievalSharp', cursive;
+}
+
+.navbar a {
+  color: #fff8dc;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 15px;
+  transition: 0.3s;
+  text-shadow: 0 0 12px #ffec8b, 0 0 20px #ffec8b;
+  font-family: 'MedievalSharp', cursive;
+}
+
+.navbar a:hover {
+  color: #FFEBAF;
+  text-shadow: 0 0 12px #D2783A, 0 0 20px #D2783A;
+  font-family: 'MedievalSharp', cursive;
+}
+
+@media (max-width: 600px) {
+  .navbar ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .navbar {
+    padding: 35px 0;
+  }
+}
+
+footer {
+  background-color: #442D1C;
+  color: #FFEBAF;  
+  padding: 20px;
+  text-align: center;   
+  font-size: 1rem; 
+  width: auto; 
+  margin: 0%;   
+}
+
+@media (max-width: 600px) {
+  footer {
+    font-size: 0.9rem;  
+    padding: 15px;      
+  }
+}
+
+body{
+    background-image: url(img/wallpaper-booktree.png);
+    background-repeat: no-repeat;
+    background-size: cover;       
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.contato-container {
+  max-width: 800px;
+  margin: 150px auto 50px auto;
+  background-color: #FFEBAF;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.contato-container h1 {
+  font-family: 'MedievalSharp', cursive;
+  color: #D2783A;
+  font-size: 3em;
+  margin-bottom: 15px;
+}
+
+.contato-container p {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  color: #442D1C;
+}
+
+.contato-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.contato-form label {
+  text-align: left;
+  font-weight: bold;
+  color: #442D1C;
+  font-family: 'PT Sans', sans-serif;
+}
+
+.contato-form input,
+.contato-form textarea {
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 1px solid #D2783A;
+  font-size: 0.9em;
+  resize: vertical;
+  font-family: 'PT Sans', sans-serif;
+}
+
+.contato-form input:focus,
+.contato-form textarea:focus {
+  outline: none;
+  border-color: #84AF31;
+  box-shadow: 0 0 5px #442D1C;
+}
+
+.contato-form .botao {
+  width: 100%;
+  height: 5vw;
+  padding: 10px 20px;
+  background-color: #84AF31;
+  color: #FFEBAF;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: bolder;
+  margin-top: 20px;
+  transition: 0.5s;
+  cursor: pointer;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 1.4em;
+  border-style: none;
+}
+
+.contato-form .botao:hover {
+  background-color: #442D1C;
+}
+
+@media (max-width: 600px) {
+  .contato-container {
+    margin: 120px 20px 50px 20px;
+    padding: 25px;
+  }
+
+  .contato-container h1 {
+    font-size: 2em;
+  }
+}

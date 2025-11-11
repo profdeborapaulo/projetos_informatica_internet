@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Dark book's</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="biblioteca">
+  <header class="cabecalho">
+    <h1 id="boasVindas">Biblioteca de Terror</h1>
+    <nav class="menu-navegacao">
+      <ul>
+        <li><a href="biblioteca.html">Página Inicial</a></li>
+        <li><a href="stephen-king.html">Stephen King</a></li>
+        <li><a href="Raphael-montes.html">Raphael Montes</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="livros-container">
+    <div class="livro" data-num="16">
+      <img src="fotos/livro16.png" alt="Dias Perfeitos">
+      <p>Dias Perfeitos</p>
+    </div>
+    <div class="livro" data-num="17">
+      <img src="fotos/livro17.png" alt="Jantar Secreto">
+      <p>Jantar Secreto</p>
+    </div>
+    <div class="livro" data-num="18">
+      <img src="fotos/livro18.png" alt="Suícidas">
+      <p>Suícidas</p>
+    </div>
+    <div class="livro" data-num="19">
+      <img src="fotos/livro19.png" alt="Uma Famíia Feliz">
+      <p>Uma Família Feliz</p>
+    </div>
+    <div class="livro" data-num="20">
+      <img src="fotos/livro20.png" alt="O vilarejo">
+      <p>O Vilarejo</p>
+    </div>
+  </main>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="fechar">&times;</span>
+      <div class="modal-info">
+        <div class="livro-wrapper">
+          <img id="imgLivro" src="/placeholder.svg" alt="Capa do Livro">
+          <img id="garra" src="fotos/garra.png" class="garra" alt="Garra">
+        </div>
+        <div class="texto-livro">
+          <h2 id="tituloLivro"></h2>
+          <p id="autorLivro"></p>
+          <p id="descLivro"></p>
+          <div id="audioContainer" class="audio-container" style="display: none;">
+            <audio id="audioLivro" controls></audio>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

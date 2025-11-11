@@ -1,0 +1,274 @@
+/* Define estilos para o layout, carrossel, modal e responsividade. */
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ADBABD;
+}
+
+.header {
+  width: auto;
+  min-height: 120px;
+  height: auto;
+  background-color: #6EB4D1;
+  text-align: center;
+  margin-bottom: 24px;
+  border-radius: 5px;
+  box-shadow: #222 0px 4px 12px;
+  padding: 20px 10px 30px 10px;
+}
+
+.header h1 {
+  color: #fff;
+  line-height: 1.2;
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  margin: 0 0 10px 0;
+}
+
+.top {
+  width: auto;
+  min-height: 1px;
+  background-color: #fff;
+  text-align: center;
+  margin-bottom: 24px;
+  border-radius: 5px;
+  box-shadow: #222 0px 4px 12px;
+  padding: 10px;
+}
+
+.carousel {
+  display: flex;
+  gap: 3px;
+  overflow-x: auto;
+  padding: 24px 0;
+  justify-content:center;
+  background: transparent;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel-item {
+  min-width: 160px;
+  max-width: 220px;
+  width: 90vw;
+  height: 320px;
+  color: #fff;
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  overflow: hidden;
+  padding: 12px 8px;
+  background: #262626;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  scroll-snap-align: start;
+}
+
+.carousel-item img {
+  width: 100%;
+  max-width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  background: #fff;
+  display: block;
+}
+
+.carousel-item p {
+  margin-top: 20px;
+  font-size: 1em;
+  color: #fff;
+  word-break: break-word;
+}
+
+.carousel-item img:hover {
+  transform: scale(1.03) translateY(-8px);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.6);
+  z-index: 2;
+}
+
+@media (max-width: 900px) {
+  .carousel-item {
+    min-width: 140px;
+    max-width: 160px;
+    height: 220px;
+    font-size: 1rem;
+    padding: 8px 4px;
+  }
+  .carousel-item img {
+    max-width: 140px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 1.3rem;
+    line-height: 1.1;
+  }
+  .header {
+    padding: 10px 4px 18px 4px;
+    min-height: 80px;
+  }
+  .carousel {
+    gap: 8px;
+    padding: 12px 0;
+  }
+  .carousel-item {
+    min-width: 110px;
+    max-width: 120px;
+    height: 150px;
+    font-size: 0.85rem;
+    padding: 4px 2px;
+  }
+  .carousel-item img {
+    max-width: 100px;
+    height: 70px;
+  }
+}
+
+/* Modal estilizado para mostrar informações do livro. */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.4); /* Fundo escuro/transparente */
+  justify-content: center;
+  align-items: center;
+}
+
+.livro-modal-content {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  align-items: stretch;
+  min-width: 320px;
+  min-height: 220px;
+  max-width: 700px;      
+  max-height: 90vh;      
+  background: #fff;      
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  padding: 32px 32px 32px 32px;
+  overflow: auto;
+}
+
+.livro-modal-esquerda, .livro-modal-direita {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.livro-modal-esquerda {
+  padding-right: 24px;
+  border-right: 2px solid #e0e0e0;
+}
+
+.livro-modal-direita {
+  align-items: center;
+  justify-content: center;
+  padding-left: 24px;
+}
+
+.livro-modal-direita img {
+  max-width: 220px;
+  max-height: 320px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  background: #fff;
+  object-fit: cover;
+}
+
+/* Responsivo */
+@media (max-width: 700px) {
+  .livro-modal-content {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 8px;
+}
+  .livro-modal-esquerda {
+    border-right: none;
+    border-bottom: 2px solid #e0e0e0;
+    padding-right: 0;
+    padding-bottom: 16px;
+  }
+  .livro-modal-direita {
+    padding-left: 0;
+    padding-top: 8px;
+  } }
+
+
+  /* Botão de áudio estilizado para ouvir a descrição do livro. */
+
+.descricao-com-som {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#btn-audio-descricao {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-left: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+#btn-audio-descricao img {
+  width: 30px;
+  height: 30px;
+  transition: filter 0.2s;
+}
+
+#btn-audio-descricao:hover img {
+  filter: brightness(1.2) drop-shadow(0 0 4px #6EB4D1);
+}
+
+
+footer {
+  width: 100%;
+  background-color: #6EB4D1; /* mesma cor da header */
+  color: #fff;
+  text-align: center;
+  padding: 18px 0 10px 0;
+  border-radius: 5px 5px 0 0;
+  box-shadow: #222 0px -2px 8px;
+  margin-top: 32px;
+}
+
+.rodape {
+  margin: 0;
+  font-size: 1em;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.footer-links {
+  margin-top: 8px;
+}
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 4px;
+  font-size: 0.95em;
+}
+.footer-links a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato - Biblioteca Virtual</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">Biblioteca</a>
+      <ul class="main-nav">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="contato.html" class="nav-link active">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="pagina-contato">
+    <h1>Contato</h1>
+    <form id="contact-form">
+      <label>Nome:<input type="text" name="nome" required></label><br><br>
+      <label>Email:<input type="email" name="email" required></label><br><br>
+      <label>Mensagem:<textarea name="mensagem" required></textarea></label><br><br>
+      <button type="submit">Enviar</button>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Biblioteca Virtual</p>
+  </footer>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(e){
+      e.preventDefault();
+      alert('Mensagem enviada com sucesso!');
+      window.location.href='index.html';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+
+
+
+
+let numero_de_passageiros_adultos= 3                                                         // Variavel de Passageiros adultos 
+let numero_de_passageiros_crianca= 2                                                         // Variavel de Passageiros crianças
+let numero_total_de_passageiros= numero_de_passageiros_adultos+numero_de_passageiros_crianca // Variavel de total de passageiros
+
+
+const classe= "executivo"                 // Variavel de classe da passagem
+const destino= "Continente asiatico"      // Variavel de destino do voo
+
+const norte= "Norte do brasil"            // Constante do destino Norte 
+const sul= "Sul do brasil"                // Constante do destino Sul
+const asiatico= "Continente asiatico"     // Constante do destino asiatico
+const europeu= "Continente europeu"       // Constante do destino europeu 
+const africano= "Continente africano"     // Constante do destino africano
+
+let norte_economica_adulto= 2500          // Preço da passagem para o norte economica de adulto
+let norte_economica_crianca= 1800         // Preço da passagem para o norte economica de criança
+
+let norte_executiva_adulto= norte_economica_adulto + (norte_economica_adulto*20 )/100          // Preço da passagem para o norte executiva de adulto 
+let norte_executiva_crianca= norte_economica_crianca + (norte_economica_crianca*10 )/100       // Preço da passagem para o norte excutiva de criança
+
+let sul_economica= 3000             // Preço da Passagem para o sul economica 
+let sul_executivo= 4000            // Preço da passagem  para o sul executiva
+
+let asiatico_economica= 4600       // Preço da passagem para a asia economica
+let asiatico_executiva= 6000       // Preço da passagem para a asia executiva
+
+let europeu_economica= 5800       // Preço da passagem  para a europa economica 
+let europeu_executivo= 7300       // preço da passagem para a europa executiva 
+
+let africano_economica= 4200      // Preço da Passagem para a africa economica
+let africano_executivo= 6900      // Preço  da passagem para a africa executiva
+
+let custo_economico_norte_adulto= numero_de_passageiros_adultos*norte_economica_adulto       // Custo da passagem da economica para adulto no norte multplicado pelos numeros de pessoas 
+let custo_economico_norte_crianca= numero_de_passageiros_crianca*norte_economica_crianca     // Custo da passagem da economica para criança no norte multplicado pelos numeros de pessoas 
+
+let custo_total_norte_economica= custo_economico_norte_adulto+custo_economico_norte_crianca   // Custo total das passagens da economica no norte 
+
+let custo_executivo_norte_adulto= numero_de_passageiros_adultos*norte_executiva_adulto       // Custo da passagem da executiva para adulto no norte multplicado pelos numeros de pessoas 
+let custo_executivo_norte_crianca= norte_executiva_crianca*numero_de_passageiros_crianca      // Custo da passagem da executiva para criança no norte multplicado pelos numeros de pessoas 
+
+let custo_total_norte_executivo=custo_executivo_norte_adulto+custo_executivo_norte_crianca   // Custo  total das passagens da executiva no norte 
+
+let custo_excutivo_sul= sul_executivo*numero_total_de_passageiros                // Custo da passagem da executiva no sul multplicado pelos numeros de pessoas 
+let custo_economico_sul=sul_economica*numero_total_de_passageiros                // Custo da passagem da economica no sul multplicado pelos numeros de pessoas
+
+let custo_excutivo_asicatico= asiatico_executiva*numero_total_de_passageiros    // Custo da passagem da executiva na asia multplicado pelos numeros de pessoas 
+let custo_economica_asiatica= asiatico_economica*numero_total_de_passageiros    // Custo da passagem da economica na asia multplicado pelos numeros de pessoas
+
+let custo_executivo_europeu= europeu_executivo*numero_total_de_passageiros   // Custo da passagem da executiva na europa multplicado pelos numeros de pessoas 
+let custo_economico_europeu= europeu_economica*numero_total_de_passageiros   // Custo da passagem da economica na europa multplicado pelos numeros de pessoas
+
+let custo_executivo_africano= africano_executivo*numero_total_de_passageiros   // Custo da passagem da executiva na africa multplicado pelos numeros de pessoas
+let custo_economico_africano= africano_economica*numero_total_de_passageiros   // Custo da passagem da economica na africa multplicado pelos numeros de pessoas
+
+let custo_total = 0   // Atribuição inicial da variavel custo total
+
+if (destino==norte){
+    if (classe=="executivo"){
+        custo_total = custo_total_norte_executivo                // Atibuição da variavel custo total pelo custo total do norte na executiva
+   
+
+    }
+    else if(classe=="economico"){
+        custo_total = custo_total_norte_economica                // Atibuição da variavel custo total pelo custo total do norte na economica
+     
+  
+}
+
+}
+else if(destino==sul){
+    if(classe=="executivo"){
+        custo_total=custo_excutivo_sul                  // Atibuição da variavel custo total pelo custo total do sul na executiva
+    
+        
+    }
+    else if(classe=="economico"){
+        custo_total=custo_economico_sul                // Atibuição da variavel custo total pelo custo total do sul  na economica
+      
+
+    }
+    
+}
+else if(destino==asiatico){
+    if(classe=="executivo"){
+        custo_total=custo_excutivo_asicatico                // Atibuição da variavel custo total pelo custo total da asia na executiva
+       
+
+        
+      
+
+    }
+    else if(classe=="economico"){
+        custo_total=custo_economica_asiatica                // Atibuição da variavel custo total pelo custo total da asia na economica
+     
+
+    }
+}
+else if(destino==africano){
+    if(classe=="executivo"){
+        custo_total=custo_executivo_africano              // Atibuição da variavel custo total pelo custo total da africa na executiva
+      
+
+    }
+    else if(classe=="economica"){
+        custo_total=custo_economico_africano               // Atibuição da variavel custo total pelo custo total da africa na economica
+       
+
+    }
+
+}
+else if(destino==europeu){
+    if(classe=="executivo"){
+        custo_total= custo_executivo_europeu                // Atibuição da variavel custo total pelo custo total da europa na executiva
+       
+    }
+    else if(classe=="economica"){
+        custo_total=custo_economico_europeu                   // Atibuição da variavel custo total pelo custo total da europa na economica
+       
+    }
+}
+
+console.log("*** O custo total do seu pacote é:")
+console.log()
+console.log("A Quantidade de Passageiros Adultos é:", numero_de_passageiros_adultos)
+console.log()
+console.log("A Quantidade de Passageiros Infantis é:",numero_de_passageiros_crianca)
+console.log()
+console.log("O destino escolhido é:", destino)
+console.log()
+console.log("A Classe do Seu Voo é:", classe)
+console.log()
+console.log("O custo total da viagem é:", custo_total)
+console.log()
+console.log("*** Fim do programa ***")

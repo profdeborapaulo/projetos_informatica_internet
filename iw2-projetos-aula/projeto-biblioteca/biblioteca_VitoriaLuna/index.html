@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PACBOOKS - Livraria Online</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/demais.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Arvo:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Cabeçalho e nav -->
+        <div class="header">
+            <div class="logo-container">
+                <img src="img/pacbooks.png" alt="logo" class="imglogo">
+            </div>
+            <nav role="navigation" class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Seção de livros -->
+        <div class="books-section">
+            <h2 class="section-title">Nossos Livros</h2>
+            <div class="books-grid" id="booksGrid"></div>
+        </div>
+    </div>
+
+    <!-- Modal do livro -->
+    <div id="bookModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="book-detail">
+                <div class="book-cover-container">
+                    <img id="modalBookCover" src="/placeholder.svg" alt="" class="modal-book-cover">
+                </div>
+                <div class="book-info">
+                    <h2 id="modalBookTitle" class="modal-book-title"></h2>
+                    <p id="modalBookAuthor" class="modal-book-author"></p>
+
+                    <div class="modal-book-price">
+                        <span id="modalBookSalePrice" class="sale-price"></span>
+                        <span id="modalBookPrice" class="original-price"></span>
+                        <span id="modalBookDiscount" class="discount-badge"></span>
+                    </div>
+
+                    <div class="book-synopsis">
+                        <h3>Sinopse</h3>
+                        <p id="modalBookSynopsis"></p>
+                    </div>
+
+                    <div class="audio-player">
+                        <h3>Áudio do Livro</h3>
+                        <audio controls id="audio"></audio>
+                        <p class="audio-note">Áudio de acessibilidade</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Metamorfose</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Página inicial</a></li>
+        </ul>
+        <div class="logo-area">
+          <span class="logo-text">Mage Books</span>
+          <a href="index.html">
+            <img src="img/2.png" alt="Logo" class="logo-img"
+          /></a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="obra-header">
+        <span class="obra-titulo">Conheça a Obra</span>
+      </div>
+      <button class="botao-voltar" onclick="window.history.back();">
+        &#8592; Voltar
+      </button>
+      <div class="obra-card">
+        <div class="obra-capa">
+          <img src="img/metamorfose.jpg" alt="Capa do livro Metamorfose" />
+        </div>
+        <div class="obra-detalhes">
+          <h1 class="titulo-livro">Metamorfose</h1>
+          <h2 class="subtitulo-livro">Franz Kafka</h2>
+          <div class="sinopse">
+            <span class="sinopse-titulo">Sinopse</span>
+            <audio controls style="vertical-align: middle; margin-left: 12px">
+              <source src="audio/metamorfose.m4a" type="audio/mpeg" />
+            </audio>
+            <p>
+              Edição traz introdução escrita por David Cronenberg, cineasta e
+              diretor de grandes produções, como A Mosca. Metamorfose foi
+              escrito por Franz Kafka em apenas vinte dias e, mais de um século
+              após sua primeira publicação, continua a instigar leitores e a
+              suscitar debates, inspirando interpretações que se renovam a cada
+              geração. Com uma narrativa que mescla simplicidade e elementos
+              absurdos, Kafka criou uma obra rica em significados; a partir da
+              perspectiva do homem transformado em inseto e da reação do mundo à
+              sua volta, a história aborda temas universais como estagnação,
+              mudança e o confronto com nossas incertezas e relações sociais.
+            </p>
+          </div>
+          <div class="obra-info">
+            <div>
+              <span class="info-titulo">Autor</span>
+              <span class="info-desc">Franz Kafka</span>
+            </div>
+            <div>
+              <span class="info-titulo">Ano de Publicação</span>
+              <span class="info-desc">2022</span>
+            </div>
+            <div>
+              <span class="info-titulo">Gênero</span>
+              <span class="info-desc">Literatura e Ficção</span>
+            </div>
+            <div>
+              <span class="info-titulo">Editora</span>
+              <span class="info-desc">Faro Editorial Eireli</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

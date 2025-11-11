@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca do Terror</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="biblioteca">
+  <header class="cabecalho">
+    <h1 id="boasVindas">Biblioteca de Terror</h1>
+    <nav class="menu-navegacao">
+      <ul>
+        <li><a href="biblioteca.html">Página Inicial</a></li>
+        <li><a href="stephen-king.html">Stephen King</a></li>
+        <li><a href="raphael-montes.html">Raphael Montes</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="livros-container">
+    <div class="livro" data-num="1">
+      <img src="fotos/livro1.png" alt="Drácula - Dark Edition">
+      <p>Drácula - Dark Edition</p>
+    </div>
+    <div class="livro" data-num="2">
+      <img src="fotos/livro2.png" alt="Lady Killers: Assassinas em Série">
+      <p>Lady Killers: Assassinas em Série</p>
+    </div>
+    <div class="livro" data-num="3">
+      <img src="fotos/livro3.png" alt="Ed & Lorraine Warren - Demonologistas">
+      <p>Ed & Lorraine Warren - Demonologistas</p>
+    </div>
+    <div class="livro" data-num="4">
+      <img src="fotos/livro4.png" alt="Psicose - Limited Edition">
+      <p>Psicose - Limited Edition</p>
+    </div>
+    <div class="livro" data-num="5">
+      <img src="fotos/livro5.png" alt="A Garota da Casa ao Lado">
+      <p>A Garota da Casa ao Lado</p>
+    </div>
+    <div class="livro" data-num="6">
+      <img src="fotos/livro6.png" alt="Frankenstein">
+      <p>Frankenstein</p>
+    </div>
+    <div class="livro" data-num="7">
+      <img src="fotos/livro7.png" alt="Medicina Macabra">
+      <p>Medicina Macabra</p>
+    </div>
+    <div class="livro" data-num="8">
+      <img src="fotos/livro8.png" alt="O Silêncio dos Inocentes">
+      <p>O Silêncio dos Inocentes</p>
+    </div>
+    <div class="livro" data-num="9">
+      <img src="fotos/livro9.png" alt="Fragmentos do Horror">
+      <p>Fragmentos do Horror</p>
+    </div>
+    <div class="livro" data-num="10">
+      <img src="fotos/livro10.png" alt="O Chamado de Cthulhu - Miskatonic Edition">
+      <p>O Chamado de Cthulhu - Miskatonic Edition</p>
+    </div>
+  </main>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="fechar">&times;</span>
+      <div class="modal-info">
+        <div class="livro-wrapper">
+          <img id="imgLivro" src="/placeholder.svg" alt="Capa do Livro">
+          <img id="garra" src="fotos/garra.png" class="garra" alt="Garra">
+        </div>
+        <div class="texto-livro">
+          <h2 id="tituloLivro"></h2>
+          <p id="autorLivro"></p>
+          <p id="descLivro"></p>
+          <div id="audioContainer" class="audio-container" style="display: none;">
+            <audio id="audioLivro" controls></audio>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

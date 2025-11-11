@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style-detalhes.css" />
+    <title>Detalhes do Livro</title>
+  </head>
+  <body>
+     <header class="barraNav">
+      <img src="css/img/Logo.png" alt="" class="logo" />
+      <div class="navLinks">
+        <a href="index.html" class="links">Inicio</a>
+       <a href="https://vinisetim.github.io/Portifolio_2025/" class="links">Contatos</a>
+      </div>
+    </header>
+
+    <main id="detalhes-livro-pagina">
+  <div class="container-livro">
+    <div class="livro-conteudo-principal">
+      <div class="coluna-esquerda">
+        <div class="livro-header">
+          <img
+            id="livro-capa"
+            src="css/img/1984-capa.jpg"
+            alt="Capa do livro"
+          />
+          <div class="info-geral">
+            <h1 id="livro-titulo">1984</h1>
+            <p id="livro-autor">George Orwell</p>
+            <div id="mais-infos" class="hidden">
+              <p id="livro-isbn">ISBN: 978-8535914849</p>
+              <p id="livro-ano">Ano: 2009</p>
+              <p id="livro-editora">Editora: Companhia das Letras</p>
+              <p id="livro-paginas">Páginas: 416</p>
+            </div>
+            <div class="mais-livros">
+              <button class="mais-livros-botao">
+                <span>MAIS INFOS</span>
+                <span class="arrow-down"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="coluna-direita">
+        <div class="resumo-container">
+          <h2>Sinopse</h2>
+          <p id="livro-sumario">
+    
+          </p>
+          <div class="audio-player">
+                    <button class="audio-button">▶</button>
+                    <span class="audio-status">Ouvir Resumo</span>
+                    <audio
+                      src="" id="audio-resumo"
+                    ></audio>
+                  </div>
+        </div>
+        <div class="video-container">
+          <h2>Resenha</h2>
+          <iframe
+            id="video-resenha"
+            width="560"
+            height="315"
+            src=""
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+    <footer>
+      <div class="barra-footer"></div>
+    </footer>
+    <script src="livros-detalhes.js"></script>
+  </body>
+</html>

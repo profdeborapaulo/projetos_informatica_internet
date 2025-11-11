@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Biblioteca Virtual</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="logo-li">
+                    <a href="index.html">
+                        <img class="logo" src="/img/logonav.png" alt="logo">
+                    </a>
+                </li>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="autor.html">Sobre o Autor</a></li>
+                <li><a href="livros.html">Livros</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="sobre-nos">
+        <img src="img/seta.png" alt="voltar" class="voltar" onclick="history.back()">
+
+        <div class="foto-livro" id="foto-livro"></div>
+
+        <div class="livro-texto">
+            <h1 id="titulo-livro"></h1>
+            <h3 id="autor"></h3>
+            <p class="sinopse" id="sinopse"></p>
+            
+            <div class="linha"></div>
+            
+            <div class="detalhes">
+                <h6 class="detalhes-item">Gênero: <br><span id="genero"></span></h6>
+                <h6 class="detalhes-item">Editora: <br><span id="editora"></span></h6>
+                <h6 class="detalhes-item">Ano de Publicação: <br><span id="ano"></span></h6>
+                <h6 class="detalhes-item">Tamanho: <br><span id="tamanho"></span></h6>
+            </div>
+
+            <div class="linha"></div>
+            <div class="botao-comprar">
+             <button class="comprar" id="comprar"></button>
+             
+            <div class="audio">
+
+        <div id="audio-play">
+            <audio class="audio-play" controls id="audio">
+
+
+            </audio>
+        </div>
+        </div>
+    </div>
+        </div>
+    </div>
+
+    
+
+    <script src="biblioteca.js"></script>
+</body>
+</html>

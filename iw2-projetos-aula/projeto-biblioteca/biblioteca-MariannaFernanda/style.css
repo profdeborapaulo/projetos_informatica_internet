@@ -1,0 +1,254 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Roboto:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Creepster', cursive, Arial, sans-serif;
+  background-color: black;
+  color: rgb(87, 1, 1);
+  height: auto;
+  min-height: 100vh;
+  padding-top: 150px;
+}
+
+.container {
+  background-color: rgba(49, 49, 49, 0.5);
+  width: 80%;
+  max-width: 600px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.entrada .container-content {
+  text-align: center;
+  font-family: "Creepster", system-ui;
+  font-weight: regular;
+  font-style: normal;
+  color: rgb(175, 0, 0);
+  font-size: larger;
+  z-index: 1000;
+}
+
+.entrada input, .entrada button {
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.entrada button {
+  background-color: rgb(202, 1, 1);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.entrada button:hover {
+  background-color: darkred;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgb(160, 2, 2);
+}
+
+.cabecalho {
+  text-align: center;
+  padding: 20px 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 15px crimson;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.cabecalho h1 {
+  font-size: 3rem;
+  color: crimson;
+  margin: 0;
+}
+
+.menu-navegacao ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.menu-navegacao a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.menu-navegacao a:hover {
+  color: crimson;
+}
+
+
+.biblioteca body {
+  font-family: 'Creepster', cursive, Arial, sans-serif;
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  color: rgb(87, 1, 1);
+  height: auto;
+  min-height: 100vh;
+  padding-top: 150px;
+}
+
+
+.livros-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+.livro {
+  text-align: center;
+  cursor: pointer;
+  background-color: #222;
+  padding: 10px;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.livro:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px crimson;
+}
+
+.livro img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border: 2px solid crimson;
+  transition: transform 0.3s;
+}
+
+.livro p {
+  font-family: Arial, sans-serif;
+  color: #e0e0e0;
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.95);
+  overflow: auto;
+}
+
+.modal-content {
+  background: #111;
+  margin: 5% auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 800px;
+  color: white;
+  text-align: center;
+  position: relative;
+  border: 2px solid crimson;
+  box-shadow: 0 0 20px crimson;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fechar {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.modal-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #f0f0f0;
+}
+
+.livro-wrapper {
+  position: relative;
+  width: 200px;
+  height: 300px;
+}
+
+#imgLivro {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 2px solid crimson;
+}
+
+#garra {
+  position: absolute;
+  top: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  animation: garraAnim 1s ease forwards;
+}
+
+@keyframes garraAnim {
+  0% { top: -150px; }
+  100% { top: 0; }
+}
+
+.capa-modal {
+  width: 200px;
+  height: 300px;
+  margin: 20px auto;
+  display: block;
+  border: 2px solid crimson;
+}
+
+.texto-livro {
+  text-align: center;
+}
+
+#tituloLivro {
+  font-family: 'Creepste' cursive, Arial, sans-serif;
+  font-size: 2em;
+  color: crimson;
+  margin-bottom: 10px;
+}
+
+#autorLivro {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #ccc;
+  margin-top: 0;
+}
+.texto-livro h2 {
+  font-size: 2em;
+  color: crimson;
+  margin-bottom: 10px;
+}
+
+.texto-livro p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1em;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  color: #e0e0e0;
+}

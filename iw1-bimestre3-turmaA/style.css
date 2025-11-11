@@ -1,0 +1,148 @@
+body, ul, li, h4{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-size: 1.2rem;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1{
+    text-align: center;
+    color: rgb(150, 87, 76);
+}
+
+p{
+    text-align: center;
+}
+
+.p-sobre{
+    text-align: justify;
+}
+
+.h3-sobre{
+    text-align: center;
+}
+
+.h4-sobre{
+    text-align: center;
+}
+
+li{
+    width: 130px;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+.header img{
+    height: 80px;
+    width: 80px;
+}
+.header{
+    background-color: rgb(150, 87, 76);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.menu {
+    display: flex;
+}
+
+.menu li {
+    margin-left: 15px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding: 12px;
+    background-color: rgba(167, 105, 94, 0.8);
+    border-radius: 5px;
+}
+
+.menu li a:hover {
+    background-color: rgba(117, 70, 61, 0.9);
+    color: #f9f9f9;
+}
+
+
+.container{
+    background-color: rgb(150, 87, 76);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: flex-start;
+    
+}
+
+.item{
+    background-color: rgba(117, 70, 61, 0.9);
+    padding: 20px;
+    margin: 5px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 300px;
+    width: 100%;
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+img{
+    width: 295px;
+    height: 180px;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.product-item {
+    background-color: rgb(150, 87, 76);
+    color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    max-width: 250px;
+    text-align: center;
+    flex: 1 1 220px;
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product-item h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.product-item p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.preco {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+.container-contato {
+    align-items: center;
+}

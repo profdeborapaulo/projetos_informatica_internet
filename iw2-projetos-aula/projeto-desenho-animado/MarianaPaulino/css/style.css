@@ -1,0 +1,107 @@
+h1{
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+body{
+    color: #fff;
+  font-family: "Akshar", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500px;
+  font-style: normal;
+
+}
+.minha-navbar{
+    background-color: rgba(27, 0, 55, 1);
+    
+}
+
+
+.navbar-nav .nav-link {
+    color: #fff; 
+
+}
+ .nav-item:hover{
+  background-color: rgba( 78, 56, 105, 1);
+  border-radius: 5px;
+ }
+
+.ravena{
+  background-color: rgba(27, 0, 55, 1);
+}
+.principal{
+ padding: 15px;
+  display: flex;
+  justify-content: center;
+
+}
+h5{
+  text-align: justify;
+  padding: 15px;
+}
+.card-text{
+  padding: 15px;
+}
+
+
+.img-fluid{
+    width: 40%;
+    height: 400px;
+
+}
+
+.img2 {
+    display: flex;
+    justify-content: center; 
+}
+.img2 .img-fluid {
+    width: 40%;
+    height: auto;
+    
+}
+h4{
+    text-align: justify;
+    margin: 50px;
+}
+.card-body {
+    background-color: rgba(97, 20, 10, 1);
+    color: #fff;
+}
+.jovenstitas{
+    background-color: rgba(19, 87, 19, 1);
+   
+}
+.jovens{
+    padding: 15px;
+}
+.caracteristicas{
+    background-color: rgba(97, 20, 10, 1);
+}
+.caracteristicas2{
+    padding: 10px ;
+}
+.caracteristicas3 {
+    padding: 35px;
+}
+
+.curiosidades{
+  background-color: rgba(198, 152, 0, 1)  ;
+  padding: 15px;
+}
+
+@media (max-width: 768px) {
+  .media {
+    flex-direction: column-reverse; 
+    align-items: flex-start; 
+  }
+  .media-body {
+    text-align: left; 
+  }
+}
+.mt-0{
+  padding: 15px;
+}
+.mr-3{
+  padding-bottom: 15px;
+}

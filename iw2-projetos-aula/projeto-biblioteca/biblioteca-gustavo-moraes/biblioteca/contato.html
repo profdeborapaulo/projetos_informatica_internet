@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.ico">
+    <link rel="manifest" href="img/favicon.ico">
+    <title>BIBLIOTECA CLIO</title>
+</head>
+<body>
+
+   <header>
+    <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+    <nav>
+     
+         <div class="search-box">
+  <input type="text" id="busca" placeholder="Buscar livro...">
+  <button type="button" onclick="buscarLivro()"><img src="img/procurar.png" id="img-busca"></button>
+</div>
+
+        <div class="link"><a href="index.html">Home</a></div>
+        <div class="link"><a href="livros.html">Livros</a></div>
+        <div class="link"><a href="contato.html">Contato</a></div>
+    </nav>
+</header>
+
+<div class="contato-container">
+    <div class="contato-form">
+        <h1>Contato</h1>
+        <p>Entre em contato conosco para mais informações.</p>
+
+        <form id="form-contato" onsubmit="enviarContato(event)">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Seu email" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <input type="text" id="mensagem" name="mensagem" rows="6" placeholder="Escreva sua mensagem..." required>
+
+            <input type="submit" value="Enviar" id="btn-contato">
+        </form>
+    </div>
+
+    <div class="contato-info">
+        <h2>Informações</h2>
+        <p><strong>Endereço:</strong> Rua Alfredo Ribeiro, 11, Carapicuíba, São Paulo</p>
+        <p><strong>Telefone:</strong> (11) 95443-4695</p>
+        <p><strong>Email:</strong> gustavomoraeser@gmail.com</p>
+        <br><br><br>
+
+        <p>Siga-nos nas redes sociais:</p>
+        <div class="social-links">
+            <a href="https://wa.me/5511954434695">WhatsApp</a> |
+            <a href="https://instagram.com/mor4esx__">Instagram</a> |
+            <a href="">Facebook</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+ <footer>
+  <div class="footer-content">
+    <div class="footer-logo">
+      <img src="img/logo.png" alt="Logotipo da Biblioteca Clio" />
+      <p>Biblioteca Clio - Inspirando a leitura para todos.</p>
+    </div>
+    <div class="social-icons">
+        <p>Redes sociais:</p> 
+        <a href="https://instagram.com/mor4esx__" target="_blank" aria-label="Instagram">
+          <img src="img/instagram.png" alt="Instagram" />
+        </a>
+        <a href="https://wa.me/5511954434695" target="_blank" aria-label="WhatsApp">
+          <img src="img/whatsapp.png" alt="WhatsApp" />
+        </a>
+        <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+          <img src="img/twitter.png" alt="Twitter" />
+        </a>
+      </div>
+    <div class="footer-contact">
+      <p><strong>Telefone:</strong> (11) 95443-4695</p>
+      <p><strong>Email:</strong> bibliotecaclio@gmail.com</p>
+      
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Biblioteca Clio. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+
+<script src="biblioteca.js"></script>
+
+
+</body>
+</html>

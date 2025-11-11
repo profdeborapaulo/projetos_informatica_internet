@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinopses</title>
+    <link rel="stylesheet" href="../css/style-livros.css">
+    </head>
+<body>
+
+    <header class="navbar1">
+       
+        <div class="logo">
+            <a class="logo" href="index.html">
+            <img src="../imgs/logoMi.png" alt="logo" class="logo">
+            </a>
+            <h1 class="tituloMarrom tituloNav">Heitor </h1> <h1 class="tituloVerde tituloNav">Mimi©</h1>
+        </div>
+        <nav>
+            <a href="https://github.com/mimiitr"><img src="../imgs/gitHub.png" alt="Meu Github" class="contato-git"></a>
+        </nav>
+    </header>
+
+    <div class="containerSinopses">
+
+            <div class="listaLivros">
+                <form id="filtroLivrosForm">
+                    <label for="filtroGeneros"><strong>Escolha uma categoria:</strong></label>
+                    <select id="filtroGeneros">
+                        <option value="classicos-brasileiros">Nacionais</option>
+                        <option value="terror">Terror</option>
+                        <option value="ficcao">Ficção</option>
+                        <option value="romance">Romance</option>
+                    </select>
+                </form>
+                <hr class="linha1">
+                
+            </div>
+
+
+
+        <div class="subContainerSinopse">
+
+        <img src="../imgs/livros.png" alt="" class="livro1">
+        <img src="../imgs/livros2.png" alt="" class="livro2">
+        <img src="../imgs/livros3.png" alt="" class="livro3">
+        <img src="../imgs/livros2.png" alt="" class="livro4">
+
+        <h1 class="tituloMarrom tituloSinopse" id="titulo-sinopse">Sinopses</h1>
+        <h1 class="tituloMarrom tituloSinopse" id="titulo-livro">Selecione um Livro</h1>
+
+            <div class="sinopseTexto">
+
+                <div class="iinfoLivro">
+
+                <p class="textoSinopse" id="paragrafo-sinopse"> </p>
+                <p class="autor" id="autor"></p>
+                <p class="ano" id="ano"></p>
+
+            </div>
+
+                <img id="player-audio-btn" src="../imgs/playIcon.png" alt="Play">
+                <audio id="audio-player" preload="auto"></audio>
+                <img src="../imgs/placeholderCapa.jpg" alt="" class="capaLivroSinopse" id="capa-livro">
+
+            </div>
+        </div>
+
+        </div>
+
+
+    </div>
+
+        <footer class="rodape">
+            <div class="rodape-conteudo">
+                <p>&copy; 2024 Mi. Todos os direitos reservados.</p>
+                <div class="rodape-links">
+                    <a href="https://github.com/mimiitr">Github</a>
+                </div>
+            </div>
+        </footer>
+
+    <script src="../js/appLivros.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Biblioteca Virtual</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <script src="biblioteca.js" defer></script>
+</head>
+
+    <header>
+ <nav>
+    <ul>
+      <a href="index.html"><li class="logo-li"> <img class="logo" src="/img/logonav.png" alt="logo"></li></a>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="autor.html">Sobre o Autor</a></li>
+        <li><a href="livros.html">Livros</a></li>
+        <li><a href="contato.html">Contato</a></li>
+    </ul>
+</nav>
+    </header>
+    <main>
+<body>
+  <div class="container" onsubmit="enviarContato(event)">
+    <div class="card">
+      <div class="intro">
+        <h1>Fale com a gente</h1>
+        <p>Preencha o formulário e retornaremos o contato o quanto antes.</p>
+      </div>
+
+      <form action="#" method="post">
+        <div class="campo">
+          <label for="nome">Nome completo</label>
+          <input class="input" id="nome" name="nome" type="text" placeholder="Seu nome" required />
+        </div>
+
+        <div class="campo">
+          <label for="email">E-mail</label>
+          <input class="input" id="email" name="email" type="email" placeholder="voce@exemplo.com" required />
+        </div>
+
+        <div class="campo">
+          <label for="telefone">Telefone</label>
+          <input class="input" id="telefone" name="telefone" type="tel" placeholder="(11) 99999-9999" />
+        </div>
+
+        <div class="campo">
+          <label for="assunto">Assunto </label>
+          <select id="assunto" name="assunto" required>
+            <option value="" disabled selected>Selecione o assunto</option>
+            <option value="duvida">Dúvida</option>
+            <option value="sugestao">Sugestão</option>
+            <option value="reclamacao">Reclamação</option>
+            <option value="outro">Outro</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="mensagem">Mensagem </label>
+          <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem" required></textarea>
+        </div>
+
+        <div class="actions">
+          <button type="reset" class="limpar">Limpar</button>
+          <button type="submit" class="enviar">Enviar</button>
+        </div>
+      </form>
+      
+
+      </div>
+    </div>
+  </div>
+   </main>
+      <footer>
+        <div class="footer-texto">
+            <p class="direitos">&copy; 2025 Acervo Raphael Montes. Todos os direitos reservados.</p>
+        </div>
+        <div class="footer-icons">
+            <img src="/img/instagram.png" alt="Instagram" class="icon">
+            <img src="/img/facebook.png" alt="Facebook" class="icon">
+            <img src="/img/github.png" alt="GitHub" class="icon">
+        </div>
+    </footer>
+   
+</body>
+</html>

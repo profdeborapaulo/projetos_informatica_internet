@@ -1,0 +1,388 @@
+@font-face {
+  font-family: 'CarlBrown';
+  src: url('Carl Brown Regular/CarlBrown.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;   /* remove o sublinhado */
+  color: inherit;          /* herda a cor do elemento pai */
+}
+
+body {
+  margin: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background: #fdf6e3;
+  color: #333;
+}
+
+/* Header */
+.barra{  
+  background-color:  rgba(255, 228, 196, 0.685);
+  border-bottom: 1px solid #ccc;
+  padding: 10px 20px;
+}
+
+.header--container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+  font-family: 'CarlBrown', serif;
+  color:white
+  border;
+}
+
+nav.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+nav.menu ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+nav.menu ul li a:hover {
+  color: #007BFF;
+}
+
+.header {
+  background: url('img/fundo.jpg') center/cover no-repeat;
+  height: 60vh;
+  position: relative;
+}
+
+h1 {
+  font-family: 'CarlBrown', serif;
+  color:rgb(0, 0, 0);
+  font-size: 60px;
+}
+
+.overlay {
+  background: rgba(255, 228, 196, 0.7);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mensagem {
+  font-size: 1.2rem;
+}
+
+/* Destaques */
+.destaques {
+  padding: 2rem;
+  text-align: center;
+}
+
+.destaques img {
+  height: 250px;
+  width: 180px;
+  border-radius: 8px;
+}
+
+.destaques h3 {
+  margin-top: .5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 2;
+}
+
+.destaques .livros-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;   
+  background: #fffbea;
+  border-radius: 8px;
+  width: 220px;
+  height: 280px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  margin: auto;              
+  position: relative;
+  transition: transform  0.2s;
+}
+
+.destaques .livros-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Autores redondos */
+.autores{
+  text-align: center;
+}
+
+.autor-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #f4e1b0;
+  margin-bottom: 0.5rem;
+}
+
+.autor-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;   /* Centraliza verticalmente */
+  background: #fffbea;
+  border-radius: 8px;
+  width: 200px;
+  height: 200px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  margin: auto;              /* Garante centralização no slide */
+  position: relative;
+  transition: transform  0.2s;
+}
+
+.autor-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* autores redondos */
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+.autor-card h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.autores .autor-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Gêneros quadrados */
+.generos .swiper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.generos .swiper-wrapper {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.generos .swiper-slide {
+  flex-shrink: 0;
+  width: 180px; /* ou 200px, dependendo do seu layout */
+  padding: 0.5px;
+}
+
+.generos {
+  padding: 1rem;
+  text-align: center;
+}
+
+.genero-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;   /* Centraliza verticalmente */
+  background: #fffbea;
+  border-radius: 8px;
+  width: 150px;
+  height: 150px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  margin: auto;              /* Garante centralização no slide */
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.genero-card img {
+  width: 80px;     /* Tamanho fixo da imagem */
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.genero-card span {
+  position: static;   /* agora o texto fica embaixo, não sobreposto */
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #333;
+  margin-top: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.generos .genero-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Livro */
+.livro-container {
+  display: flex;
+  gap: 2rem;
+  padding: 3rem;
+}
+
+.capa {
+  max-width: 300px;
+  max-height: 300px;
+  border-radius: 8px;
+}
+
+.info-livro {
+  max-width: 600px;
+}
+
+/* Card dos livros na home */
+.livro-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s;
+}
+.livro-card:hover {
+  transform: translateY(-5px);
+}
+.livro-card img {
+  width: 120px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.livro-card h3 {
+  margin: 0.5rem 0 0.2rem;
+  font-size: 1rem;
+}
+.livro-card .autor {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* Card de detalhes na página do livro */
+.livro-card-detalhe {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.livro-card-detalhe img.capa-livro {
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.livro-card-detalhe .info-livro {
+  flex: 1;
+}
+
+.livro-card-detalhe h1 {
+  margin-top: 0;
+}
+
+.livro-card-detalhe ul {
+  padding-left: 1rem;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background: #f4e1b0;
+  margin-top: 2rem;
+}
+
+/*Pagina Genero*/
+.genero-container {
+  padding: 2rem;
+  text-align: center;
+}
+
+.lista-livros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.lista-livros .livro-card {
+  background: #fffbea;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 1rem;
+  width: 180px;
+  transition: transform 0.2s;
+  text-align: center;
+}
+
+.lista-livros .livro-card:hover {
+  transform: translateY(-5px);
+}
+
+.lista-livros img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.autor-detalhe {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.autor-detalhe-card {
+  display: flex;
+  gap: 2rem;
+  background: #fffbea;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+  padding: 2rem;
+  max-width: 900px;
+  align-items: center;
+}
+
+.autor-detalhe-card img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.autor-info {
+  flex: 1;
+  text-align: left;
+}
+
+.autor-info h1 {
+  margin: 0 0 1rem;
+}
+
+.autor-info p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+}

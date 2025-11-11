@@ -1,0 +1,468 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cabeçalho do site */
+header {
+    height: 15%;
+    background: #e7d791;
+    color: #fff;
+    padding: 30px 0 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+/* Logo do cabeçalho */
+header img {
+    width: auto;
+    height: 80px;
+    object-fit: cover;
+}
+#logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Título principal */
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    color: #2d3142;
+}
+
+/* Container principal da página */
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 30px 24px 24px 24px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    flex: 1 0 auto;
+}
+
+/* Seção de destaques */
+.Destaques {
+    margin-bottom: 32px;
+    padding: 18px 0 10px 0;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.Destaques h1 {
+    font-size: 2rem;
+    color: #2d3142;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+}
+
+/* Estilo das seções de livros (destaques e populares) */
+section {
+    max-width: 100%;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 32px;
+    padding: 18px 0;
+    background: #f7f7f7;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    gap: 24px;
+    scrollbar-width: thin;
+    scrollbar-color: #4f5d75 #e0e0e0;
+}
+
+/* Scrollbar personalizada para as seções */
+section::-webkit-scrollbar {
+    height: 10px;
+}
+section::-webkit-scrollbar-thumb {
+    background: #4f5d75;
+    border-radius: 6px;
+}
+section::-webkit-scrollbar-track {
+    background: #e0e0e0;
+    border-radius: 6px;
+}
+
+/* Rodapé do site */
+footer {
+    flex-shrink: 0;
+    text-align: center;
+    padding: 20px 0;
+    background: #e7d791;
+    color: #2d3142;
+    margin-top: 40px;
+    margin-bottom: 0px;
+    width: 100%;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo dos cards dos livros */
+[class^="livros"] {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    padding: 10px;
+    min-width: 200px;
+    max-width: 275px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+/* Efeito hover nos cards dos livros */
+[class^="livros"]:hover {
+    box-shadow: 0 4px 16px rgba(79,93,117,0.18);
+    transform: translateY(-6px) scale(1.03);
+}
+
+/* Imagens dos livros */
+[class^="livros"] img {
+    width: 180px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    transition: transform 0.2s;
+}
+
+/* Efeito hover nas imagens dos livros */
+[class^="livros"] img:hover {
+    transform: scale(1.05);
+}
+
+/* Botão para carregar livros populares */
+#loadBooksBtn {
+    display: block;
+    margin: 30px auto 10px auto;
+    padding: 12px 28px;
+    background: #4f5d75;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#loadBooksBtn:hover {
+    background: #2d3142;
+}
+
+/* Container para livros carregados dinamicamente (não utilizado no HTML atual) */
+#booksContainer {
+    margin-top: 20px;
+}
+
+/* Classe utilitária para ocultar elementos */
+.oculto {
+    display: none;
+}
+
+/* Overlay para pop-up (não utilizado no JS atual, mas pode ser útil) */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Seção de livros populares inicialmente oculta */
+.destaques-populares-oculto {
+    display: none;
+}
+.destaques-populares-oculto>h1 {
+    color: #2d3142;
+    font-size: 2rem;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+}
+
+/* Estilo da seção de livros populares (igual à de destaques) */
+.destaques-populares-oculto section {
+    max-width: 100%;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 32px;
+    padding: 18px 0;
+    background: #f7f7f7;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    gap: 24px;
+    scrollbar-width: thin;
+    scrollbar-color: #4f5d75 #e0e0e0;
+}
+
+/* Estilo dos links de compra */
+a{
+    text-decoration: none;
+    background-color: #e7d791;
+    color: #2d3142;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+/* POPUP DE LIVRO */
+#popupLivro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+#popupLivro .popup-content {
+    background: #f5f5f5;
+    padding: 48px 60px 42px 60px;
+    max-width: 945px;
+    width: 90%;
+    max-height: 500px;
+    overflow-y: auto;
+    border-radius: 24px;
+    box-shadow: 0 12px 48px rgba(0,0,0,0.18);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #000;
+    position: relative;
+    border: 3px solid #bfa16b;
+    scrollbar-width: none;
+    scrollbar-color: #bfa16b #e0e0e0;
+}
+
+#popupLivro .popup-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 33px;
+    background: #bfa16b;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    box-shadow: 0 3px 9px rgba(0,0,0,0.08);
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#popupLivro .popup-close:hover {
+    background: #a88b4a;
+}
+
+#popupLivro h2 {
+    margin-top: 0;
+    color: #000;
+    font-size: 2.25em;
+    text-align: center;
+}
+
+#popupLivro .popup-flex {
+    display: flex;
+    gap: 27px;
+    align-items: flex-start;
+    margin-bottom: 27px;
+}
+
+#popupLivro img {
+    width: 165px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.10);
+    border: 2.25px solid #bfa16b;
+}
+
+#popupLivro table {
+    font-size: 1.5em;
+    border-collapse: collapse;
+    color: #000;
+}
+
+#popupLivro table td {
+    padding-right: 12px;
+    color: #000;
+}
+
+#popupLivro table td:first-child {
+    font-weight: bold;
+}
+
+#popupLivro .popup-sinopse {
+    background: #fffbe8;
+    border-left: 6px solid #cfbe9dff;
+    padding: 18px 24px;
+    border-radius: 9px;
+    font-size: 18px;
+    color: #000;
+}
+
+#popupLivro .popup-audio {
+    margin-top: 24px;
+    text-align: center;
+}
+
+#popupLivro audio {
+    width: 80%;
+}
+
+/* RESPONSIVIDADE PARA MOBILE */
+@media (max-width: 800px) {
+    .container {
+        max-width: 98vw;
+        padding: 10px 2vw 10px 2vw;
+        border-radius: 0;
+        margin: 0;
+        box-shadow: none;
+    }
+
+    header {
+        padding: 18px 0 10px 0;
+    }
+
+    #logo {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    header img {
+        height: 56px;
+    }
+
+    h1, .Destaques h1, .destaques-populares-oculto>h1 {
+        font-size: 1.3rem;
+        letter-spacing: 0.5px;
+    }
+
+    section, .destaques-populares-oculto section {
+        height: auto;
+        min-height: 220px;
+        padding: 10px 0;
+        gap: 10px;
+        border-radius: 8px;
+        margin-top: 16px;
+    }
+
+    [class^="livros"] {
+        min-width: 120px;
+        max-width: 140px;
+        padding: 4px;
+        border-radius: 6px;
+    }
+
+    [class^="livros"] img {
+        width: 90px;
+        height: 130px;
+        border-radius: 5px;
+        margin-bottom: 4px;
+    }
+
+    #loadBooksBtn {
+        font-size: 1rem;
+        padding: 8px 14px;
+        margin: 18px auto 8px auto;
+        border-radius: 4px;
+    }
+
+    footer {
+        font-size: 0.9em;
+        padding: 12px 0;
+        margin-top: 18px;
+    }
+}
+
+/* Responsividade para o pop-up */
+@media (max-width: 1000px) {
+    #popupLivro .popup-content {
+        max-width: 98vw !important;
+        padding: 18px 2vw 18px 2vw !important;
+        border-radius: 10px !important;
+    }
+    #popupLivro h2 {
+        font-size: 1.2em !important;
+    }
+    #popupLivro table {
+        font-size: 1em !important;
+    }
+    #popupLivro img {
+        width: 80px !important;
+        height: 120px !important;
+    }
+    #popupLivro .popup-close {
+        width: 32px !important;
+        height: 32px !important;
+        font-size: 18px !important;
+        top: 6px !important;
+        right: 6px !important;
+    }
+    #popupLivro audio {
+        width: 98% !important;
+    }
+    #popupLivro .popup-sinopse {
+        font-size: 1em !important;
+        padding: 8px 8px !important;
+        border-radius: 5px !important;
+    }
+    #popupLivro .popup-flex {
+        flex-direction: column !important;
+        gap: 10px !important;
+        max-height: 90vh !important;
+        overflow-y: auto !important;
+    }
+}
+
+/* Ajuste extra para telas muito pequenas */
+@media (max-width: 500px) {
+    #popupLivro .popup-content {
+        padding: 6vw 2vw 6vw 2vw !important;
+    }
+    #popupLivro h2 {
+        font-size: 1em !important;
+    }
+    #popupLivro table {
+        font-size: 0.9em !important;
+    }
+    #popupLivro img {
+        width: 60px !important;
+        height: 90px !important;
+    }
+}

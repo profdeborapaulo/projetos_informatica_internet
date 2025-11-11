@@ -1,0 +1,267 @@
+p {
+margin: 0;
+padding: 0;
+list-style-type: none;
+font-size: 1.3rem;
+font-family: Arial, Helvetica, sans-serif;
+}
+.container-all {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+.titulo {
+    text-align: center;
+    margin-top: 10px;
+}
+.sub-titulo1 {
+    margin: 40px;
+    text-align: center;
+}
+.sub-titulo2 {
+    margin: 40px;
+    text-align: center;
+}
+.container-1 {
+    height: 400px;
+    width: auto;
+    background-image: url(img/kim-all.jpg);     
+    text-align: center;
+    vertical-align: text-bottom;
+}
+.container-2 {
+    align-items: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    height: fit-content;
+    width: 1200;
+    background: grey;
+    text-align: right;
+    padding: 20px;
+    border-radius: 10px;
+}
+.container-2 img {
+    width: 200px;
+    height: 300px;
+    float: inline-end;
+    padding-right: 10px;
+    margin-left: 80px;
+}
+.container-2 p {
+    text-align: center;
+    text-align: justify;
+    padding: 5px;
+    margin: 6px;
+}
+.container-3 {
+    align-items: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    height: fit-content;
+    width: 1200;
+    background: grey;
+    text-align: right;
+    padding: 30px;
+    padding-left: 20px;
+    border-radius: 10px;
+}
+.container-3 img {
+    width: 200px;
+    height: 250px;
+    float: inline-start;
+    padding-left: 10px;
+    margin-right: 80px;
+}
+.container-3 p {
+    text-align: center;
+    text-align: justify;
+    padding: 5px;
+    margin: 6px;
+}
+.container-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 50px;
+}
+.container-flex img{
+    height: 285px;
+    width: 285px;
+}
+.container-flex card{
+    margin: 30px;
+}
+.container-4{
+    margin-top: 50px;
+    margin-left: 100px;
+    height: 600px;
+    width: 400px;
+    float: inline-start;
+    background-color: grey;
+    border-radius: 10px;
+}
+.container-4 img{
+    height: 500px;
+    width: 250px;
+    align-items: center;
+    margin-top: 40px;
+}
+.container-4{
+    text-align: center;
+}
+.container-5{
+    margin-top: 50px;
+    margin-left: 100px;
+    height: 600px;
+    width: 700px;
+    float: inline-start;
+    background-color: grey;
+    border-radius: 10px;
+}
+.container-6{
+    margin-top: 50px;
+    margin-right: 100px;
+    height: 600px;
+    width: 400px;
+    float: inline-end;
+    background-color: grey;
+    border-radius: 10px;
+}
+.container-6 img{
+    margin-top: 40px;
+    height: 500px;
+    width: 250px;
+    align-items: center;
+}
+.container-6{
+    text-align: center;
+}
+.container-7{
+    margin-top: 50px;
+    margin-right: 100px;
+    height: 600px;
+    width: 700px;
+    float: inline-end;
+    background-color: grey;
+    border-radius: 10px;
+}
+.container-8{
+    margin-top: 50px;
+    margin-left: 42px;
+    height: 760px;
+    width: 700px;
+    float: inline-start;
+    background-color: grey;
+    border-radius: 10px;
+}
+.container-9{
+    margin-top: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
+    height: 650px;
+    width: 480px;
+    float: inline-end;
+    background-color: grey;
+    border-radius: 10px;
+}
+.container-9 img{
+    margin-top: 40px;
+    height: 500px;
+    width: 330px;
+    align-items: center;
+}
+.container-9{
+    text-align: center;
+}
+.container-10{
+        text-align: center;
+        background-color: grey;
+        padding: 10px;
+        margin: 40px;
+        width: auto;
+        height: 500px;
+}
+#formulario{
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#formulario input[type="text"],
+#formulario input[type="email"],
+#formulario textarea{
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+#formulario textarea{
+    height: 100px;
+}
+#formulario input[type="submit"]{
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: orange;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#formulario input[type="submit"]:hover{
+    background-color: purple;
+}
+
+main{
+    padding: 20px;
+    text-align: center;
+}
+footer {
+    background: #ccc;
+    text-align: center;
+    padding: 10px;
+    margin-top: 100px;
+  }
+
+  /* Header personalizado */
+.header-custom {
+  background-color: #6EB4D1;
+    color: #fff;
+    padding: 30px 0 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-bottom: 40px;
+}
+.header-custom h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+.header-custom p {
+    font-size: 1.2rem;
+    margin-top: 0;
+    opacity: 0.9;
+}
+
+/* Footer estilizado */
+footer {
+    background: #6EB4D1;
+    color: #fff;
+    text-align: center;
+    padding: 18px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.08);
+}
+footer .rodape {
+    margin: 0;
+    font-weight: 500;
+}

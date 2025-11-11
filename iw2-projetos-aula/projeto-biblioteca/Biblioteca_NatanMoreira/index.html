@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glória Veterum - Biblioteca de Clássicos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Glória Veterum</h1>
+            <p>Uma jornada literária pela Grécia e Roma Antiga</p>
+        </div>
+        <button class="theme-switcher" id="theme-switcher" title="Mudar Tema">
+            <div class="theme-icon"></div>
+        </button>
+    </header>
+
+    <main>
+        <section class="carousel-container">
+            <div class="carousel-track" id="carousel-track">
+                </div>
+            <button class="carousel-button prev" id="prevBtn" title="Anterior">&#10094;</button>
+            <button class="carousel-button next" id="nextBtn" title="Próximo">&#10095;</button>
+        </section>
+
+        <section class="filters-container">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Buscar livro, autor...">
+                <button id="searchButton"><img src="images/icons/search.svg" alt="Buscar"></button>
+            </div>
+            <div class="filters">
+                <select id="filterAutor">
+                    <option value="">Todos os Autores</option>
+                </select>
+                <select id="filterGenero">
+                    <option value="">Todos os Gêneros</option>
+                </select>
+                <select id="filterEditora"> <option value="">Todas as Editoras</option>
+                </select>
+                <select id="filterAno"> <option value="">Todos os Anos</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="catalogo-grid">
+            <h2>Catálogo Completo</h2>
+            <div class="livros-grid" id="livros-grid-container">
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Projeto Escolar de Biblioteca Digital</p>
+    </footer>
+
+    <script src="js/database.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

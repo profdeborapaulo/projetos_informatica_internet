@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Academia dos Casos Arquivados | BookClub</title>
+  <link rel="icon" type="image/png" href="/imagens/logo.png" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/Livros/livros/style.css" />
+</head>
+
+<body>
+    <!-- NAVBAR -->
+  <div id="nav">
+    <div class="logo" id="logo-img"><img src="/imagens/logo-1.png" alt="Logo" /></div>
+    <div id="nav-part2">
+      <div id="links">
+        <a href="/usando/rapido/biblioteca.html">Início</a>
+        <a href="#">Livros</a>
+        <a href="#">Autores</a>
+      </div>
+      <div id="icons">
+        <a href="/Contato/index.html"><button class="btn">Contato</button></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="logo-fixa" id="logo-substituta">
+    <img src="/imagens/logo-2.png" alt="Logo Fixa" />
+  </div>
+
+  <div id="cursor"></div>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <div id="main" data-scroll-container>
+    <div style="height: 130px;"></div> <!-- Espaço após navbar -->
+
+    <section class="sobre" id="page1">
+      <section class="autor-section">
+        <div class="carousel-container">
+          <div class="carousel-inner">
+            <div class="carousel-item"><img src="/Livros/livros/livrosOK/academia-dos-casos-arquivados/capa.png" alt="Imagem 1" /></div>
+            <div class="carousel-item"><img src="/Livros/livros/livrosOK/academia-dos-casos-arquivados/contra.png" alt="Imagem 2" /></div>
+            <div class="carousel-item"><img src="/Livros/livros/livrosOK/academia-dos-casos-arquivados/capa.png" alt="Imagem 3" /></div>
+            <div class="carousel-item"><img src="/Livros/livros/livrosOK/academia-dos-casos-arquivados/contra.png" alt="Imagem 4" /></div>
+            <div class="carousel-item"><img src="/Livros/livros/livrosOK/academia-dos-casos-arquivados/capa.png" alt="Imagem 5" /></div>
+            <div class="carousel-item"><img src="/Livros/livros/livrosOK/academia-dos-casos-arquivados/contra.png" alt="Imagem 6" /></div>
+          </div>
+        </div>
+
+        <div class="texto">
+          <h2 class="texti">ACADEMIA DOS CASOS ARQUIVADOS</h2>
+          <p>
+            Avery Grambs é uma garota comum, com um futuro incerto, que vive de favor com a meia-irmã. No entanto, sua vida vira de cabeça para baixo quando ela é misteriosamente nomeada a única herdeira de Tobias Hawthorne, um bilionário que ela nunca conheceu. Para tomar posse da fortuna, Avery precisa se mudar para a mansão cheia de passagens secretas e enfrentar os quatro netos de Hawthorne, que foram deserdados e estão determinados a descobrir quem ela é e por que foi escolhida. Mas a mansão não é o que parece, e Avery se vê envolvida em um jogo mortal de mistérios, enigmas e traições, que pode levá-la à morte.
+         </p>
+
+         <audio id="audioPlayer" controls> 
+                <source src="/Livros/livros/audios/Academia-dos-casos-perdidos.m4a" type="audio/mp3">  
+              </audio>
+
+        </div>
+      </section>
+
+      <section class="info-section">
+        <h2>INFORMAÇÕES GERAIS</h2>
+
+        <div class="info-box">
+          <div class="info-number">01</div>
+          <div class="info-text">Autor(a): <br>Jennifer Lynn Barnes.</div>
+        </div>
+
+        <div class="info-box">
+          <div class="info-number">02</div>
+          <div class="info-text">Lançamento: <br>01/09/2020.</div>
+        </div>
+
+        <div class="info-box">
+          <div class="info-number">03</div>
+          <div class="info-text">Editora Arqueiro.</div>
+        </div>
+        
+        <div class="info-box">
+          <div class="info-number">04</div>
+          <div class="info-text">Quantidade de pagínas:  264.</div>
+        </div>
+        
+      </section>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+Biblioteca Clássica — Guia do Projeto
+
+Funcionamento do Projeto
+
+Este site apresenta uma biblioteca de livros clássicos, permitindo ao usuário:
+- Visualizar livros em destaque e populares.
+- Clicar em qualquer livro para abrir um pop-up com informações detalhadas, sinopse, link de compra e um player de áudio.
+- Alternar a exibição da seção "Mais populares" usando o botão Carregar livros.
+
+Estrutura dos Arquivos
+
+- index.html  
+  Página principal do site. Contém a estrutura HTML, incluindo:
+  - Cabeçalho com logo e título.
+  - Seção "Destaques do ano" com livros em destaque.
+  - Seção "Mais populares" (inicialmente oculta).
+  - Botão para exibir/ocultar livros populares.
+  - Rodapé com informações de contato.
+  - Inclusão do CSS externo e do script principal.
+
+- style.css  
+  Arquivo de estilos responsável pelo visual do site:
+  - Layout responsivo e moderno.
+  - Estilização dos cards dos livros, botões, pop-up, cabeçalho e rodapé.
+  - Oculta a seção .destaques-populares-oculto por padrão.
+
+- script.js  
+  Script JavaScript que:
+  - Define o array de livros com todas as informações necessárias.
+  - Controla a exibição do pop-up ao clicar em um livro.
+  - Alterna a visibilidade da seção de livros populares.
+  - Insere dinamicamente o conteúdo do pop-up, incluindo o player de áudio.
+
+- img/  
+  Pasta com as imagens das capas dos livros e o logo.
+
+- aud/  
+  Pasta com os arquivos de áudio para cada livro.
+
+- read-me.txt  
+  (Este arquivo) Instruções e informações do projeto.
+
+Instruções para Execução Local
+
+1. Baixe ou clone o projeto para uma pasta local.
+2. Certifique-se de que as pastas img/ e aud/ contenham as imagens e áudios referenciados nos arquivos.
+3. Abra o arquivo index.html em qualquer navegador moderno.
+4. Navegue pelo site:
+   - Clique nas capas dos livros para ver detalhes e ouvir o áudio.
+   - Use o botão Carregar livros para mostrar ou ocultar a seção "Mais populares".
+
+Observação:  
+Não é necessário servidor web para rodar localmente, basta abrir o index.html no navegador.
+
+Se precisar de mais informações, consulte os comentários nos arquivos ou entre em contato pelo e-mail do rodapé do

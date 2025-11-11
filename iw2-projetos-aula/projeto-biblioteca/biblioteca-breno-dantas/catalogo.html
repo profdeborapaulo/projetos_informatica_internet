@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ketab</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+  <link rel="manifest" href="icon/site.webmanifest">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="img/ketabbranco.png" alt="Logo da Biblioteca">
+      </a>
+    </div>
+
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="catalogo.html">Catálogo</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
+
+  <main class="catalogo">
+    <div id="catalogo-inicio" class="catalogo-inicio">
+      <h2>Escolha um gênero literário</h2>
+      <div class="generos-carousel">
+        <button class="genero-btn" data-genero="todos">Todos</button>
+        <button class="genero-btn" data-genero="ficcao">Ficção</button>
+        <button class="genero-btn" data-genero="tecnologia">Tecnologia</button>
+        <button class="genero-btn" data-genero="classicos">Clássicos</button>
+        <button class="genero-btn" data-genero="fantasia">Fantasia</button>
+        <button class="genero-btn" data-genero="romance">Romance</button>
+        <button class="genero-btn" data-genero="aventura">Aventura</button>
+        <button class="genero-btn" data-genero="terror">Terror</button>
+        <button class="genero-btn" data-genero="poesia">Poesia</button>
+        <button class="genero-btn" data-genero="historia">História</button>
+      </div>
+    </div>
+
+    <div id="saida-wrapper" class="catalogo-livros-wrapper hidden">
+      <div id="saida" class="catalogo-grid"></div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <a href="index.html">
+          <img src="img/ketabbranco.png" alt="Logo da Biblioteca">
+        </a>
+        <p>Ketab - Sua biblioteca virtual</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Informações</h4>
+        <ul>
+          <li><a href="#">Política de Privacidade</a></li>
+          <li><a href="#">Termos de Uso</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-social">
+        <h4>Siga-nos</h4>
+        <div class="social-icons">
+          <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+          <a href="#"><img src="img/twitter.png" alt="Twitter"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Ketab. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>

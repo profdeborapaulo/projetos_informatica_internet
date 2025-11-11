@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Biblioteca/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilo.css">
+    <script src="biblioteca.js"></script>
+    <title>Arquivo Professor Xavier - FUVEST</title>
+</head>
+<body>
+
+    <!--Barra de Navegação-->
+    <div class="navbar">
+        <a href="#2026" class="item">VESTIBULAR 2026</a>
+        <div class="linhazinha"></div>
+        <a href="#2027" class="item">VESTIBULAR 2027</a>
+        <a href="#"><img src="img/logo.png" height="70px" class="logo"></a>
+        <a href="#2028" class="item">VESTIBULAR 2028</a>
+        <div class="linhazinha"></div>
+        <a href="#2029" class="item">VESTIBULAR 2029</a>
+    </div>
+
+    
+    <!--Div em que o Pop-Up será gerado-->
+    <div id="PopUp"></div>
+
+    <br><br><br><br>
+
+    <!--Card para apresentação do website-->
+    <h1>BEM VINDO!</h1>
+
+    <div class="intro"> 
+
+    <h1>Quem Somos?</h1>
+    <h2>
+    O Arquivo Professor Xavier foi concebido com o objetivo de proporcionar acesso ao conhecimento de maneira clara, objetiva e estruturada, visando otimizar o processo de aprendizagem. Esta iniciativa busca atender aqueles que desejam aprofundar seus estudos e se preparar para exames e vestibulares, especialmente aqueles que enfrentam limitações de tempo para consultar materiais de pesquisa tradicionais. Nosso propósito é tornar o aprendizado mais eficiente, fornecendo recursos confiáveis e de fácil acesso, que possam servir como suporte na jornada acadêmica de cada usuário.
+    </h2>
+    <h2>
+    Nesta plataforma, encontram-se disponibilizadas todas as obras consideradas leitura obrigatória para os vestibulares da FUVEST, referentes ao período de 2026 a 2029. Cada livro é apresentado com informações detalhadas, incluindo um resumo conciso e esclarecedor, bem como a possibilidade de acesso à versão completa para leitura online, redirecionando o usuário para uma nova página dedicada à obra. Assim, garantimos que os estudantes tenham à sua disposição um acervo organizado e prático, que auxilie na preparação eficiente para os exames.
+    </h2>
+    <h2>
+    Neste website, prezamos pela máxima usabilidade, buscando oferecer uma experiência do usuário fluida, intuitiva e agradável. Cada elemento foi cuidadosamente planejado para que a navegação seja simples e acessível, permitindo que o aprendizado se desenvolva de maneira natural e eficiente. Desejamos sucesso a todos em sua trajetória acadêmica e reforçamos nosso compromisso com a educação: o conhecimento é, sem dúvida, o maior poder que podemos compartilhar.
+    </h2>
+
+    </div>
+
+    <!--Card com os livros para o vestibular de 2026-->
+    <br>
+
+    <h1 id="2026">LIVROS DE LEITURA OBRIGATÓRIA NO VESTIBULAR FUVEST 2026</h1>
+
+    <div class="livro"> 
+
+    <!--Livro-->
+    <div class="livros">
+        <h1>Opúsculo Humanitário</h1>
+        <img src="img/OpusculoHumanitario.webp" height="400px" id="OpusculoHumanitario" onclick="livro('OpusculoHumanitario')">
+        <br><br>
+    </div>
+    
+    <div class="linha-vertical"></div>
+
+    <!--Livro-->
+    <div class="livros">
+        <br>
+        <h1>Nebulosas</h1>
+        <br>
+        <img src="img/Nebulosas.webp" height="400px" id="Nebulosas" onclick="livro('Nebulosas')">
+        <br><br>
+    </div>
+    
+    <!--Estilização para separar livros-->
+    <div class="linha-vertical"></div>
+
+    <!--Livro-->
+    <div class="livros">
+        <h1>Memórias de Martha</h1>
+        <img src="img/MemoriasDeMartha.jpg" height="400px" id="MemoriasDeMartha" onclick="livro('MemoriasDeMartha')">
+        <br><br>
+    </div>
+    
+    <!--Estilização para separar livros-->
+    <div class="linha-vertical"></div>
+
+    <!--Livro-->
+    <div class="livros">
+        <h1>Caminho das Pedras</h1>
+        <img src="img/CaminhoDasPedras.jpg" height="400px" id="CaminhoDasPedras" onclick="livro('CaminhoDasPedras')">
+        <br><br>
+    </div>
+    
+    <!--Estilização para separar livros-->
+    <div class="linha-vertical"></div>
+
+    <!--Livro-->
+    <div class="livros">
+        <br>
+        <h1>O Cristo Cigano</h1>
+        <br>
+        <img src="img/OCristoCigano_Geografia.jpg" height="400px" id="OCristoCigano" onclick="livro('OCristoCigano')">
+        <br><br>
+    </div>
+    
+    <!--Estilização para separar livros-->
+    <div class="linha-vertical"></div>
+
+    <!--Livro-->
+    <div class="livros">
+        <br>
+        <h1>As Meninas</h1>
+        <br>
+        <img src="img/AsMeninas.jpg" height="400px" id="AsMeninas" onclick="livro('AsMeninas')">
+        <br><br>
+    </div>
+    
+    <!--Estilização para separar livros-->
+    <div class="linha-vertical"></div>
+
+    <!--Livro-->
+    <div class="livros">
+        <h1>Balada de Amor ao Vento</h1>
+        <img src="img/BaladaDeAmorAoVento.jpg" height="400px" id="BaladaDeAmorAoVento" onclick="livro('BaladaDeAmorAoVento')">
+        <br><br>
+    </div>
+    
+    <!--Estilização para separar livros-->
+    <div class="linha-vertical"></div>
+    
+    <!--Livro-->
+    <div class="livros">
+        <h1>Canção para Ninar Menino Grande</h1>
+        <img src="img/CancaoParaNinarMeninoGrande.jpg" height="400px" id="CancaoParaNinarMeninoGrande" onclick="livro('CancaoParaNinarMeninoGrande')">
+        <br><br>
+    </div>
+    
+    <!--Estilização para separar livros-->
+    <div class="linha-vertical"></div>
+
+    <!--Livro-->
+    <div class="livros">
+        <br>
+        <h1>A Visão das Plantas</h1>
+        <br>
+        <img src="img/AVisaoDasPlantas.jpg" height="400px" id="AVisaoDasPlantas" onclick="livro('AVisaoDasPlantas')">
+        <br><br>
+    </div>
+
+    </div>
+
+    <br>
+
+    <!--Card com os livros para o vestibular de 2027-->
+    <h1 id="2027">LIVROS DE LEITURA OBRIGATÓRIA NO VESTIBULAR FUVEST 2027</h1>
+
+    <!--Estilização para separar livros-->
+    <div class="livro"> 
+
+    <!--Livro-->
+    <div class="livros">
+        <h1>Opúsculo Humanitário</h1>
+        <img src="img/OpusculoHumanitario.webp" height="400px" id="OpusculoHumanitario" onclick="livro('OpusculoHumanitario')">
+        <br><br>
+    </div>
+    
+    <!--Estilização para separar livros-->
+    <div class="linha-vertical"></div>
+
+    <!--Livro-->
+    <div class="livros">
+        <br>
+        <h1>Nebulosas</h1>
+        <br>
+        <img src="img/Nebulosas.webp" height="400px" id="Nebulosas" onclick="livro('Nebulosas')">
+        <br><br>
+    </div>
+    
+    <!--Estilização para separar livros-->
+    <div class="linha-vertical"></div>
+
+    <!--Livro-->
+    <div class="livros">
+        <h1>Memórias de Martha</h1>
+        <img src="img/MemoriasDeMartha.jpg" height="400px" id="MemoriasDeMartha" onclick="livro('MemoriasDeMartha')">
+        <br><br>
+    </div>
+    
+    <!--Estilização para separar livros-->
+    <div class="linha-vertical"></div>
+    
+    <!--Livro-->
+    <div class="livros">
+        <h1>Caminho das Pedras</h1>
+        <img src="img/CaminhoDasPedras.jpg" height="400px" id="CaminhoDasPedras" onclick="livro('CaminhoDasPedras')">
+        <br><br>
+    </div>
+    
+    <!--Estilização para separar livros-->
+    <div class="linha-vertical"></div>
+
+    <!--Livro-->
+    <div class="livros">
+        <h1>A Paixão Segundo G. H.</h1>
+        <img src="img/APaixaoSegundoGH.jpg" height="400px" id="APaixaoSegundoGH" onclick="livro('APaixaoSegundoGH')">
+        <br><br>
+    </div>
+    
+    <!--Estilização para separar livros-->
+    <div class="linha-vertical"></div>
+
+    <!--Livro-->
+    <div class="livros">
+        <br>
+        <h1>Geografia</h1>
+        <br>
+        <img src="img/OCristoCigano_Geografia.jpg" height="400px" id="Geografia" onclick="livro('Geografia')">
+        <br><br>
+    </div>
+    
+    <!--Estilização para separar livros-->
+    <div class="linha-vertical"></div>
+    
+    <!--Livro-->
+    <div class="livros">
+        <h1>Balada de Amor ao Vento</h1>
+        <img src="img/BaladaDeAmorAoVento.jpg" height="400px" id="BaladaDeAmorAoVento" onclick="livro('BaladaDeAmorAoVento')">
+        <br><br>
+    </div>
+    
+    <!--Estilização para separar livros-->
+    <div class="linha-vertical"></div>
+
+    <div class="livros">
+        <h1>Canção para Ninar Menino Grande</h1>
+        <img src="img/CancaoParaNinarMeninoGrande.jpg" height="400px" id="CancaoParaNinarMeninoGrande" onclick="livro('CancaoParaNinarMeninoGrande')">
+        <br><br>
+    </div>
+    
+    <!--Estilização para separar livros-->
+    <div class="linha-vertical"></div>
+
+    <!--Livro-->
+    <div class="livros">
+        <br>
+        <h1>A Visão das Plantas</h1>
+        <br>
+        <img src="img/AVisaoDasPlantas.jpg" height="400px" id="AVisaoDasPlantas" onclick="livro('AVisaoDasPlantas')">
+        <br><br>
+    </div>
+
+    </div>
+
+    <br>
+
+    <!--Card com os livros para o vestibular de 2028-->
+    <h1 id="2028">LIVROS DE LEITURA OBRIGATÓRIA NO VESTIBULAR FUVEST 2028</h1>
+
+    <!--Estilização para separar livros-->
+    <div class="livro"> 
+
+    <div class="livros">
+        <h1>Conselhos à Minha Filha</h1>
+        <img src="img/ConselhosAMinhaFilha.jpg" height="400px" id="ConselhosAMinhaFilha" onclick="livro('ConselhosAMinhaFilha')">
+        <br><br>
+    </div>
+    
+    <!--Estilização para separar livros-->
+    <div class="linha-vertical"></div>
+
+    <!--Livro-->
+    <div class="livros">
+        <br>
+        <h1>Nebulosas</h1>
+        <br>
+        <img src="img/Nebulosas.webp" height="400px" id="Nebulosas" onclick="livro('Nebulosas')">
+        <br><br>
+    </div>
+    
+    <!--Estilização para separar livros-->
+    <div class="linha-vertical"></div>
+
+    <!--Livro-->
+    <div class="livros">
+        <h1>Memórias de Martha</h1>
+        <img src="img/MemoriasDeMartha.jpg" height="400px" id="MemoriasDeMartha" onclick="livro('MemoriasDeMartha')">
+        <br><br>
+    </div>
+    
+    <!--Estilização para separar livros-->
+    <div class="linha-vertical"></div>
+    
+    <!--Livro-->
+    <div class="livros">
+        <br>
+        <h1>João Miguel</h1>
+        <br>
+        <img src="img/JoaoMiguel.jpg" height="400px" id="JoaoMiguel" onclick="livro('JoaoMiguel')">
+        <br><br>
+    </div>
+    
+    <!--Estilização para separar livros-->
+    <div class="linha-vertical"></div>
+
+    <!--Livro-->
+    <div class="livros">
+        <h1>A Paixão Segundo G. H.</h1>
+        <img src="img/APaixaoSegundoGH.jpg" height="400px" id="APaixaoSegundoGH" onclick="livro('APaixaoSegundoGH')">
+        <br><br>
+    </div>
+    
+    <!--Estilização para separar livros-->
+    <div class="linha-vertical"></div>
+
+    <div class="livros">
+        <br>
+        <h1>Geografia</h1>
+        <br>
+        <img src="img/OCristoCigano_Geografia.jpg" height="400px" id="Geografia" onclick="livro('Geografia')">
+        <br><br>
+    </div>
+    
+    <!--Estilização para separar livros-->
+    <div class="linha-vertical"></div>
+
+    <!--Livro-->
+    <div class="livros">
+        <h1>Balada de Amor ao Vento</h1>
+        <img src="img/BaladaDeAmorAoVento.jpg" height="400px" id="BaladaDeAmorAoVento" onclick="livro('BaladaDeAmorAoVento')">
+        <br><br>
+    </div>
+    
+    <!--Estilização para separar livros-->
+    <div class="linha-vertical"></div>
+
+    <!--Livro-->
+    <div class="livros">
+        <h1>Canção para Ninar Menino Grande</h1>
+        <img src="img/CancaoParaNinarMeninoGrande.jpg" height="400px" id="CancaoParaNinarMeninoGrande" onclick="livro('CancaoParaNinarMeninoGrande')">
+        <br><br>
+    </div>
+    
+    <!--Estilização para separar livros-->
+    <div class="linha-vertical"></div>
+
+    <!--Livro-->
+    <div class="livros">
+        <br>
+        <h1>A Visão das Plantas</h1>
+        <br>
+        <img src="img/AVisaoDasPlantas.jpg" height="400px" id="AVisaoDasPlantas" onclick="livro('AVisaoDasPlantas')">
+        <br><br>
+    </div>
+
+    </div>
+
+    <br>
+
+    <!--Card com os livros para o vestibular de 2029-->
+    <h1 id="2029">LIVROS DE LEITURA OBRIGATÓRIA NO VESTIBULAR FUVEST 2029</h1>
+
+    <!--Estilização para separar livros-->
+    <div class="livro"> 
+
+    <!--Livro-->
+    <div class="livros">
+        <h1>Conselhos à Minha Filha</h1>
+        <img src="img/ConselhosAMinhaFilha.jpg" height="400px" id="ConselhosAMinhaFilha" onclick="livro('ConselhosAMinhaFilha')">
+        <br><br>
+    </div>
+    
+    <!--Estilização para separar livros-->
+    <div class="linha-vertical"></div>
+
+    <!--Livro-->
+    <div class="livros">
+        <br>
+        <h1>Nebulosas</h1>
+        <br>
+        <img src="img/Nebulosas.webp" height="400px" id="Nebulosas" onclick="livro('Nebulosas')">
+        <br><br>
+    </div>
+    
+    <!--Estilização para separar livros-->
+    <div class="linha-vertical"></div>
+
+    <!--Livro-->
+    <div class="livros">
+        <br>
+        <h1>Dom Casmurro</h1>
+        <br>
+        <img src="img/DomCasmurro.webp" height="400px" id="DomCasmurro" onclick="livro('DomCasmurro')">
+        <br><br>
+    </div>
+    
+    <!--Estilização para separar livros-->
+    <div class="linha-vertical"></div>
+    
+    <!--Livro-->
+    <div class="livros">
+        <br>
+        <h1>João Miguel</h1>
+        <br>
+        <img src="img/JoaoMiguel.jpg" height="400px" id="JoaoMiguel" onclick="livro('JoaoMiguel')">
+        <br><br>
+    </div>
+    
+    <!--Estilização para separar livros-->
+    <div class="linha-vertical"></div>
+
+    <!--Livro-->
+    <div class="livros">
+        <h1>Nós Matamos o Cão Tinhoso!</h1>
+        <img src="img/NosMatamosOCaoTinhoso.jpg" height="400px" id="NosMatamosOCaoTinhoso" onclick="livro('NosMatamosOCaoTinhoso')">
+        <br><br>
+    </div>
+    
+    <!--Estilização para separar livros-->
+    <div class="linha-vertical"></div>
+
+    <!--Livro-->
+    <div class="livros">
+        <br>
+        <h1>Geografia</h1>
+        <br>
+        <img src="img/OCristoCigano_Geografia.jpg" height="400px" id="Geografia" onclick="livro('Geografia')">
+        <br><br>
+    </div>
+    
+    <!--Estilização para separar livros-->
+    <div class="linha-vertical"></div>
+
+    <!--Livro-->
+    <div class="livros">
+        <h1>Incidente em Antares</h1>
+        <img src="img/IncidenteEmAntares.jpg" height="400px" id="IncidenteEmAntares" onclick="livro('IncidenteEmAntares')">
+        <br><br>
+    </div>
+    
+    <!--Estilização para separar livros-->
+    <div class="linha-vertical"></div>
+
+    <!--Livro-->
+    <div class="livros">
+        <h1>Canção para Ninar Menino Grande</h1>
+        <img src="img/CancaoParaNinarMeninoGrande.jpg" height="400px" id="CancaoParaNinarMeninoGrande" onclick="livro('CancaoParaNinarMeninoGrande')">
+        <br><br>
+    </div>
+    
+    <!--Estilização para separar livros-->
+    <div class="linha-vertical"></div>
+
+    <!--Livro-->
+    <div class="livros">
+        <br>
+        <h1>A Visão das Plantas</h1>
+        <br>
+        <img src="img/AVisaoDasPlantas.jpg" height="400px" id="AVisaoDasPlantas" onclick="livro('AVisaoDasPlantas')">
+        <br><br>
+    </div>
+
+    </div>
+
+    <br><br>
+
+    <footer>
+        <p>© 2025 Arquivo Professor Xavier. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

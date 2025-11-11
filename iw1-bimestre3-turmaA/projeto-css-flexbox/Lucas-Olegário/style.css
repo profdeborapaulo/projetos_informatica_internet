@@ -1,0 +1,133 @@
+body, ul, li,h4{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    text-align: center;
+}
+li{
+    width: 150px;
+}
+.menu li a:hover{
+    background-color: #575353;
+    color:blue;
+
+}
+a{
+    text-decoration: none;
+    color: #fff;
+
+}
+.header{
+    background-color: red;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.menu{
+    display: flex;
+}
+.menu li{
+    margin-left: 15px;
+
+}
+.menu li a{
+    display: block;
+    padding: 12px;
+    background-color:#f3631a;
+    
+
+}
+.container{
+    background-color:rgb(33, 82, 245);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-items: flex-start;
+    align-content: flex-start;
+
+}
+.item{
+    color: #fff;
+    margin: 10px;
+    width: 400px;
+    margin-left: 23px;
+  
+    
+}
+img{
+    width: 250px;
+    height: 250px
+    
+}
+body{
+    background-color:#f3631a;
+}
+
+.brawl-stars-logo{
+    width: 120px;
+    height: 120px;
+    
+
+}
+.Art-spike{
+    width: 600px;
+    height: 450px;
+    margin: 20px;
+
+   
+
+}
+h2{
+    background-color: rgb(11, 140, 11);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-items: flex-start;
+    align-content: flex-start;
+
+}
+
+.sobre{
+    background-color:#f3631a;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    
+}
+h3{
+    color: black;
+}
+hr{
+    width: 100%;
+    height: 1px;
+    border: 0px;
+}
+P{
+    margin: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.Personagens{
+    width: 600px;
+    height: 450px;
+    margin: 20px;
+
+   
+
+}
+.h3-especial{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.h2-spike{
+    margin: 20px;
+}

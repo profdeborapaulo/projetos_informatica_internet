@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PACBOOKS</title>
+  <!-- Importação dos arquivos CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/index.css">
+  <!-- Importação das fontes Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Arvo&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <!-- Logo -->
+    <img class="imglogo" src="img/pacbooks.png" alt="logo">
+
+    <!-- Menu de navegação -->
+    <nav role="navigation" class="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+
+    <!-- Seção do formulário de contato -->
+    <div class="form-section">
+      <h3 class="section-title">Envie sua Mensagem</h3>
+      <form class="contact-form">
+        <!-- Campo Nome -->
+        <div class="form-group">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+        </div>
+
+        <!-- Campo E-mail -->
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+        </div>
+
+        <!-- Campo Assunto -->
+        <div class="form-group">
+          <label for="assunto">Assunto</label>
+          <input type="text" id="assunto" name="assunto" placeholder="Digite o assunto" required>
+        </div>
+
+        <!-- Campo Mensagem -->
+        <div class="form-group">
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem..." required></textarea>
+        </div>
+
+        <!-- Botão de envio -->
+        <button type="submit" class="contact-btn butao">Enviar</button>
+      </form>
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> E não sobrou nenhum | BookClub</title>
+  <link rel="icon" type="image/png" href="/imagens/logo.png" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/Livros/livros/style.css" />
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <div id="nav">
+    <div class="logo" id="logo-img"><img src="/imagens/logo-1.png" alt="Logo" /></div>
+    <div id="nav-part2">
+      <div id="links">
+        <a href="/usando/rapido/biblioteca.html">Início</a>
+        <a href="#">Livros</a>
+        <a href="#">Autores</a>
+      </div>
+      <div id="icons">
+        <a href="/Contato/index.html"><button class="btn">Contato</button></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="logo-fixa" id="logo-substituta">
+    <img src="/imagens/logo-2.png" alt="Logo Fixa" />
+  </div>
+
+  <div id="cursor"></div>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <div id="main" data-scroll-container>
+    <div style="height: 130px;"></div> <!-- Espaço após navbar -->
+
+    <section class="sobre" id="page1">
+      <section class="autor-section">
+        <div class="carousel-container">
+          <div class="carousel-inner">
+            <div class="carousel-item"><img src="/Livros/livros/livrosOK/e-nao-sobrou-ninguem/capa.png" alt="Imagem 1" /></div>
+            <div class="carousel-item"><img src="/Livros/livros/livrosOK/e-nao-sobrou-ninguem/capa.png" alt="Imagem 2" /></div>
+            <div class="carousel-item"><img src="/Livros/livros/livrosOK/e-nao-sobrou-ninguem/capa.png" alt="Imagem 3" /></div>
+            <div class="carousel-item"><img src="/Livros/livros/livrosOK/e-nao-sobrou-ninguem/capa.png" alt="Imagem 4" /></div>
+            <div class="carousel-item"><img src="/Livros/livros/livrosOK/e-nao-sobrou-ninguem/capa.png" alt="Imagem 5" /></div>
+            <div class="carousel-item"><img src="/Livros/livros/livrosOK/e-nao-sobrou-ninguem/capa.png" alt="Imagem 6" /></div>
+          </div>
+        </div>
+
+        <div class="texto">
+          <h2 class="texti">E NÃO SOBROU NENHUM</h2>
+          <p>
+            Dez pessoas, todas com segredos do passado, são convidadas para passar um fim de semana em uma ilha isolada. Os anfitriões, misteriosos e desconhecidos, não aparecem. Em vez disso, uma voz os acusa de terem cometido crimes no passado, e um a um, os convidados começam a morrer de forma misteriosa. A trama é um jogo de gato e rato, onde os convidados se veem em um labirinto de mistérios, mentiras e traições. A narrativa é repleta de reviravoltas e surpresas, e o leitor é obrigado a se perguntar quem é o assassino, por que ele está matando as pessoas e se haverá alguém para sobreviver. O livro é um clássico do gênero de mistério e um dos mais famosos de Agatha Christie.
+         </p>
+
+         <audio id="audioPlayer" controls> 
+                <source src="/Livros/livros/audios/E não sobrou ninguém.m4a" type="audio/mp3">  
+              </audio>
+
+        </div>
+      </section>
+
+      <section class="info-section">
+        <h2>INFORMAÇÕES GERAIS</h2>
+
+        <div class="info-box">
+          <div class="info-number">01</div>
+          <div class="info-text">Autor(a): <br> Agatha Christie.</div>
+        </div>
+
+        <div class="info-box">
+          <div class="info-number">02</div>
+          <div class="info-text">Lançamento: <br>06/11/1939.</div>
+        </div>
+
+        <div class="info-box">
+          <div class="info-number">03</div>
+          <div class="info-text">Editora Nova Fronteira.</div>
+        </div>
+        
+        <div class="info-box">
+          <div class="info-number">04</div>
+          <div class="info-text">Quantidade de pagínas:  400.</div>
+        </div>
+        
+      </section>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

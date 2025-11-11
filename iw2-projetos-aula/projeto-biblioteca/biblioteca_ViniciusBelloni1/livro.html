@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style_livros.css" />
+    <title>Livros</title>
+  </head>
+  <body>
+    <header>
+      <div class="title">Biblioteca</div>
+      <nav>
+        <ul>
+          <a href="./index.html"><li>Home</li></a>
+          <a href="./livro.html"><li>livros</li></a>
+ 
+        </ul>
+      </nav>
+    </header>
+
+    <div class="inicial">
+      <div class="titulo">
+        <p class="title white">Nossos Livros</p>
+      </div>
+    </div>
+
+    <div class="categorias">
+      <div class="titulo2">
+        <p>Categorias &darr;</p>
+        <ul class="pop-up">
+          <a class="a" onclick="mostrarLivrosDeMesmaCategoria(event)" id="Suspense" href="">Suspense</a>
+          <a class="a" onclick="mostrarLivrosDeMesmaCategoria(event)" id="Fantasia" href="">Fantasia</a>
+          <a class="a" onclick="mostrarLivrosDeMesmaCategoria(event)" id="Ficção Científica" href="">Ficção Científica</a>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="card" data-id="2">
+        <a href="./pagina_livros.html?id=2">
+          <div class="imagem">
+            <img class="img" src="./img/livro_cientifico10.jpg" alt="" />
+          </div>
+          <div class="nome">
+            <p>Perdido em Marte</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card" data-id="8">
+        <a href="./pagina_livros.html?id=8">
+            <div class="imagem">
+              <img class="img" src="./img/livro_de_fantasia7.jpg" alt="" />
+            </div>
+            <div class="nome">
+              <p>Apôlion</p>
+            </div>
+        </a>
+        
+      </div>
+
+      <div class="card" data-id="4">
+        <a href="./pagina_livros.html?id=4">
+            <div class="imagem">
+                <img class="img" src="./img/livro_cientifico5.jpg" alt="" />
+            </div>
+            <div class="nome">
+                <p>O Problema dos Tres Corpos</p>
+            </div>
+        </a>
+      </div>
+
+      <div class="card" data-id="14">
+        <a href="./pagina_livros.html?id=14">
+            <div class="imagem">
+              <img class="img" src="./img/livro_de_suspense5.jpg" alt="" />
+            </div>
+            <div class="nome">
+              <p>A Paciente Slilenciosa</p>
+            </div>
+        </a>   
+      </div>
+
+      <div class="card" data-id="3">
+        <a href="./pagina_livros.html?id=3">
+            <div class="imagem">
+                <img class="img" src="./img/livro_cientifico2.jpg" alt="" />
+            </div>
+            <div class="nome">
+                <p>Duna</p>
+            </div>
+        </a>
+      </div>
+
+      <div class="card" data-id="13">
+        <a href="./pagina_livros.html?id=13">
+          <div class="imagem">
+              <img class="img" src="./img/livro_de_suspense4.jpg" alt="" />
+          </div>
+          <div class="nome">
+              <p>O Homem de Giz</p>
+          </div>
+        </a>        
+      </div>
+
+      <div class="card" data-id="10">
+        <a href="./pagina_livros.html?id=10">
+            <div class="imagem">
+              <img class="img" src="./img/livro_de_fantasia9.jpg" alt="" />
+            </div>
+            <div class="nome">
+              <p>Trono dos Monstros</p>
+            </div>
+        </a>
+      </div>
+
+      <div class="card" data-id="7">
+        <a href="./pagina_livros.html?id=7">
+            <div class="imagem">
+              <img class="img" src="./img/livro_de_fantasia3.jpg" alt="" />
+            </div>
+            <div class="nome">
+              <p>O Livro de Azrael</p>
+            </div>
+        </a>
+      </div>
+    </div>
+
+    <script src="./app_livro.js"></script>
+  </body>
+</html>

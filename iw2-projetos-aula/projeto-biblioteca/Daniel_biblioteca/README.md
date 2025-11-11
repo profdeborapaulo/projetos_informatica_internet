@@ -1,0 +1,1 @@
+A estrutura dos dados separa os áudios, gifs (que, originalmente seriam videos, porém ficaria muito pesado então trocamos por gifs, por isso da baixa qualidade) e as imagens, os arquivos soltos são toda o esqueleto, estilização e parte lógica do site.

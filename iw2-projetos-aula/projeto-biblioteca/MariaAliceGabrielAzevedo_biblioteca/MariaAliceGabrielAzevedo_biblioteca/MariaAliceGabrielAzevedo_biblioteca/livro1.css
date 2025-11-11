@@ -1,0 +1,196 @@
+
+.geral1 {
+  background-color: rgb(124, 109, 106); /* cor de fundo principal */
+  border-radius: 10px; /* cantos arredondados */
+  margin: 40px;/* espaço externo */
+  padding-bottom: 14px; /* espaço interno no final */
+}
+
+.geral1 img {
+  width: 350px; /* define largura fixa da imagem */
+  border-radius: 10px; /* bordas arredondadas */
+  margin-left: 40px; /*Define margin de 40px á esquerda*/
+  margin-top: 20px; /*Define margin de 20px ao topo*/
+  margin-bottom: 0;/*Define margin de 0px a parte debaixo*/
+  box-shadow: #4f4343 0px 3px 13px 0px; /*sombra*/
+}
+
+
+.capaesinopse {
+  display: flex; /* Coloca capa e sinopse lado a lado */
+}
+
+.sinopse {
+  background-color: rgb(198, 198, 198); /* cor do fundo */
+  max-width: 900px; /* largura máxima */
+  max-height: 700px; /* altura máxima */
+  border-radius: 10px; /* cantos arredondados */
+  margin-top: 20px; /*Define margin no topo*/
+  margin-left: 6%; /*Define margin na esquerda*/
+  box-shadow: #4f4343 0px 3px 13px 0px; /* sombra suave */
+  padding-bottom: 40px; /*espaço na parte debaixo*/
+}
+
+
+.sinopse h2 { /* Título da sinopse */
+  text-align: center; /*alinha o texto*/
+  font-size: 26px; /*tamanho da fonte*/
+  font-family: 'Chewy', cursive;/*estilo da fonte*/
+}
+
+
+.sinopse p { /* Texto da sinopse */
+  font-size: 19px; /*tamanho da fonte*/
+  text-align: center; /*alinha texto no meio*/
+  margin-left: 50px; /*define margin na esquerda*/
+  margin-right: 50px; /*define margin na direita*/
+  font-family: 'Comic Neue', cursive; /*estilo da fonte*/
+}
+
+.podcast { /* Centraliza o player de podcast */
+  display: flex; /*todos os itens na mesma linha*/
+  justify-content: center; /*centraliza o conteúdo*/
+}
+
+/* Player de áudio */
+audio {
+  width: 300px; /*define a largura*/
+  border-radius: 10px; /*arrendonda as bordas*/
+  background-color: #5b3333; /* cor de fundo do player */
+}
+
+/* Botões principais */
+button {
+  margin-left: 68%; /*define margin na esquerda*/
+  margin-top: 0px; /*define margin no topo*/
+  width: 290px; /*define a largura*/
+  height: 45px; /*define a largura*/
+  border-radius: 10px; /*arrendonda as bordas*/
+}
+
+/* Subtítulos */
+.geral1 h3 {
+  font-size: 24px; /*tamanho da fonte*/
+  margin-bottom: 30px; /*define margin embaixo*/
+  color: aliceblue; /*cor da fonte*/
+  margin-left: 20px; /*define margin na esquerda*/
+  font-family: 'Comic Neue', cursive; /*estilo da fonte*/
+}
+
+.star-rating { /*avaliação*/
+  padding: 2rem 3rem; /*define espaçamento*/
+  border-radius: 15px; /*arrendonda as bordas*/
+  background-color: rgb(104, 116, 91); /* verde musgo */
+  margin: 50px; /*define margin*/
+  margin-left: 220px; /*define margin na esquerda*/
+  margin-right: 220px; /*define margin na direita*/
+  justify-content: center; /*centraliza o conteúdo*/
+  box-shadow: #d8eaad 0px 3px 13px 0px;
+}
+
+/* Container das estrelas */
+.star-rating .stars {
+  flex-direction: row-reverse; /* ordem invertida das estrelas */
+  justify-content: center; /*centraliza o conteúdo*/
+  align-items: center; /*alinha os itens no centro*/
+  align-self: center; /*alinha os itens no centro*/
+  display: flex; /*todos os itens na mesma linha*/
+}
+
+/* Esconde os inputs de rádio (só usamos os labels visuais) */
+.star-rating input[type="radio"] {
+  display: none;
+}
+
+/* Aparência das estrelas */
+.star-rating label {
+  font-size: 2.5rem; /*tamanho da fonte*/
+  color: #e9e9e9;   /*cor da fonte*/           /* cor inicial (cinza claro) */
+  cursor: pointer;            /* cursor em forma de mãozinha */
+  transition: color 0.2s;
+  padding: 0 2px; /*define espaçamento*/
+  justify-content: center; /*centraliza o conteúdo*/
+  align-items: center; /*alinha os itens no centro*/
+  align-self: center; /*alinha os itens no centro*/
+  display: flex;/*todos os itens na mesma linha*/
+}
+
+/* Quando passa o mouse, estrelas ficam douradas */
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color: #ffc107; /*cor da fonte*/
+}
+
+/* Quando clicado, a estrela fica dourada */
+.star-rating input[type="radio"]:checked ~ label {
+  color: #ffc107; /*cor da fonte*/
+  animation: pulse 0.5s; /* animação de "pulsar" */
+}
+
+/* Animação das estrelas quando selecionadas */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+/* Texto da legenda de avaliação */
+legend {
+  color: #f5f5f5; /*cor da fonte*/
+  font-size: 25px; /*tamanho da fonte*/
+  text-align: center; /*alinha texto no meio*/
+  font-family: 'Comic Neue', cursive; /*estilo da fonte*/
+}
+
+
+.sinopse hr { /* Linha divisória dentro da sinopse */
+  border: none;
+  border-top: 2px solid #000000; /* cor preta */
+  margin: 20px 0; /*define margin*/
+  margin-left: 30px; /*define margin na esquerda*/
+  margin-right: 30px; /*define margin na direita*/
+}
+
+
+hr {/* Linha divisória genérica */
+  border: none;
+  border-top: 2px solid #f0f0f0; /* cor cinza claro */
+  margin: 20px 0; /*define margin*/
+  margin-left: 30px; /*define margin na esquerda*/
+  margin-right: 30px; /*define margin na direita*/
+}
+
+.voltar button {
+  padding: 17px 40px; /*define espaçamento*/
+  border-radius: 10px; /*arrendonda as bordas*/
+  border: 0; /*define 0 borda*/
+  background-color: rgb(73, 30, 31); /* fundo vinho */
+  box-shadow: #0000000d 0 0 8px;
+  letter-spacing: 1.5px; /* espaçamento maior entre letras */
+  text-transform: uppercase; /*converte para letras maiúsculas*/
+  font-size: 15px; /*tamanho da fonte*/
+  transition: all .5s ease; /*tempo de transição*/
+  color: #e9e9e9; /* cor do texto */
+  margin-bottom: 50px; /*define margin na parte debaixo*/
+  font-family: 'Comic Neue', cursive;/*estilo da fonte*/
+}
+
+/* Efeito ao passar o mouse */
+.voltar button:hover {
+  letter-spacing: 3px;/* espaçamento maior entre letras */
+  background-color: #ffc107;/* fundo dourado */
+  color: #f0f0f0; /*cor do texto*/
+  box-shadow: #ffc107 0px 4px 19px 0px; /* brilho dourado */
+  font-family: 'Comic Neue', cursive;/*estilo da fonte*/
+}
+
+
+button:active {/* Efeito ao clicar no botão */
+  letter-spacing: 2px; /*espaço entre as letras*/
+  background-color: #ffc107; /*define imagem de fundo*/
+  color: #f0f0f0; /*cor do texto*/
+  box-shadow: #ffc107 0px 0px 0px 0px;
+  transform: translateY(10px); /* dá impressão de afundar */
+  transition: 100ms; /*tempo de transição*/
+  font-family: 'Comic Neue', cursive;/*estilo da fonte*/
+}

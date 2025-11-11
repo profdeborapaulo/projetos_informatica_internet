@@ -1,0 +1,19 @@
+Criar um sistema para acessar os livros cadastrados em uma biblioteca virtual. Para isso, precisamos cadastrar os objetos da nossa biblioteca:
+ 
+Nome para biblioteca
+Endereço para biblioteca
+ 
+Um array chamado livros e vamos cadastrar três objetos para cada livro:
+- título
+- autor 
+- ano
+
+ 
+ 
+Vamos criar uma funçõa que irá percorrer o array dos livros cadastrados. Esta função será chamada por meio de um botão que teremos na nossa tela frontend -HTML.
+ 
+Vamos precisar:
+ 
+Um arquivo HTML
+Um arquivo CSS
+Um arquivo JAVASCRIPT

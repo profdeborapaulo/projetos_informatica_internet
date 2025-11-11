@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header, footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* --- Página Inicial (Catálogo) --- */
+.catalogo-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.livro-card {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.livro-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.livro-card img {
+    max-width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.livro-card h3 {
+    margin: 10px 0 5px;
+}
+
+.livro-card p {
+    color: gray;
+    margin: 0;
+}
+
+
+/* --- Página de Detalhes --- */
+#detalhes-livro-container {
+    display: flex;
+    gap: 30px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.detalhe-capa-container {
+    flex: 1;
+    max-width: 300px;
+    position: relative;
+    cursor: pointer;
+}
+
+.detalhe-capa-container img {
+    width: 100%;
+    border-radius: 8px;
+    display: block; 
+}
+
+.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Começa invisível */
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* O clique será no container pai */
+}
+
+.detalhe-info {
+    flex: 2;
+}
+
+.detalhe-info h2 {
+    margin-top: 0;
+}
+
+.sinopse-texto {
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.back-link {
+    text-decoration: none;
+    color: white;
+}
+
+/* Media Query para telas menores */
+@media (max-width: 768px) {
+    #detalhes-livro-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js"></script>
+    <title>Biblioteca</title>
+</head>
+<body>
+
+  <!-- Estrutura principal da página da biblioteca.-->
+
+<div class="header">
+  <h1>Bem-vindos à Biblioteca Fitipaldi</h1>
+  <h3>
+    Aqui você terá acesso a diversos tipos de Manhwas para ler e se aventurar em mundos incríveis criados por autores talentosos.
+  </h3>
+  <p>
+    Descubra novas histórias, acompanhe seus títulos favoritos e compartilhe suas leituras com amigos!
+  </p>
+
+  <button>Surpreenda me!</button> <!-- Botão "Surpreenda me!" abre um modal com um livro aleatório. -->
+  
+</div>
+
+    
+    <div class="top">
+
+      <!-- Carrosséis exibem livros com botão "Saiba Mais" para abrir detalhes. -->
+
+    <h2>Os mais lidos da Semana</h2>
+    </div>
+
+<div class="carousel">
+  <div class="carousel-item">
+    <img src="img/latna-saga.webp" alt="Latna Saga">
+    <p>Latna-Saga</p>
+
+    <button data-index="0">Saiba Mais</button>
+  </div>
+
+  <div class="carousel-item">
+    <img src="img/OIP.webp" alt="OIP">
+    <p>Ponto de Vista do Leitor Onisciente</p>
+
+    <button data-index="1">Saiba Mais</button>
+  </div>
+
+  <div class="carousel-item">
+    <img src="img/solo-levelling.webp" alt="Solo Levelling">
+    <p>Solo-Levelling</p>
+
+    <button data-index="2">Saiba Mais</button>
+  </div>
+
+  <div class="carousel-item">
+    <img src="img/swords-master.jpeg" alt="Swords Master">
+    <p>Filho Mais Novo do Mestre Espadachim</p>
+
+    <button data-index="3">Saiba Mais</button>
+  </div>
+
+  <div class="carousel-item">
+    <img src="img/world-afterthefall.webp" alt="World After the Fall">
+    <p>O Mundo Após a Queda</p>
+
+    <button data-index="4">Saiba Mais</button>
+  </div>
+
+  <div class="carousel-item">
+    <img src="img/standart.webp" alt="Standart">
+    <p>Essência da Reencarnação</p>
+
+    <button data-index="5">Saiba Mais</button>
+  </div>
+</div>
+
+<br>
+<br>
+
+<!-- Modal mostra informações detalhadas do livro selecionado, incluindo áudio da descrição. -->
+
+<div id="modal-livro" class="modal" style="display:none;">
+  <div class="modal-content livro-modal-content">
+    <span class="close-modal">&times;</span>
+    <div class="livro-modal-esquerda">
+      <h2 id="modal-titulo"></h2>
+      <h4 id="modal-autor"></h4>
+      <div class="descricao-com-som">
+        <p id="modal-descricao"></p>
+        <button id="btn-audio-descricao" title="Ouvir descrição" style="background:none;border:none;cursor:pointer;">
+          <img src="img/som.png" alt="Ouvir descrição" width="30" height="30">
+        </button>
+      </div>
+      <p id="modal-isbn"></p>
+      <p id="modal-ano"></p>
+      <p id="modal-editora"></p>
+      <p id="modal-paginas"></p>
+    </div>
+    <div class="livro-modal-direita">
+      <img id="modal-imagem" src="" alt="Capa do livro">
+    </div>
+  </div>
+</div>
+
+
+    <div class="top">
+
+    <h2>Atualizados Recentemente</h2>
+    </div>
+
+<div class="carousel">
+  <div class="carousel-item">
+    <img src="img/standart.webp" alt="Standart">
+    <p>Essência da Reencarnação</p>
+    <button data-index="5">Saiba Mais</button>
+  </div>
+  <div class="carousel-item">
+    <img src="img/world-afterthefall.webp" alt="World After the Fall">
+    <p>O Mundo Após a Queda</p>
+    <button data-index="4">Saiba Mais</button>
+  </div>
+  <div class="carousel-item">
+    <img src="img/swords-master.jpeg" alt="Swords Master">
+    <p>Filho Mais Novo do Mestre Espadachim</p>
+    <button data-index="3">Saiba Mais</button>
+  </div>
+  <div class="carousel-item">
+    <img src="img/solo-levelling.webp" alt="Solo Levelling">
+    <p>Solo-Levelling</p>
+    <button data-index="2">Saiba Mais</button>
+  </div>
+  <div class="carousel-item">
+    <img src="img/OIP.webp" alt="OIP">
+    <p>Ponto de Vista do Leitor Onisciente</p>
+    <button data-index="1">Saiba Mais</button>
+  </div>
+  <div class="carousel-item">
+    <img src="img/latna-saga.webp" alt="Latna Saga">
+    <p>Latna-Saga</p>
+    <button data-index="0">Saiba Mais</button>
+  </div>
+</div>
+
+
+<div id="modal-livro" class="modal" style="display:none;">
+  <div class="modal-content livro-modal-content">
+    <span class="close-modal">&times;</span>
+    <div class="livro-modal-esquerda">
+      <h2 id="modal-titulo"></h2>
+      <h4 id="modal-autor"></h4>
+      <div class="descricao-com-som">
+        <p id="modal-descricao"></p>
+        <button id="btn-audio-descricao" title="Ouvir descrição" style="background:none;border:none;cursor:pointer;">
+          <img src="img/som.png" alt="Ouvir descrição" width="30" height="30">
+        </button>
+      </div>
+      <p id="modal-isbn"></p>
+      <p id="modal-ano"></p>
+      <p id="modal-editora"></p>
+      <p id="modal-paginas"></p>
+    </div>
+    <div class="livro-modal-direita">
+      <img id="modal-imagem" src="" alt="Capa do livro">
+    </div>
+  </div>
+</div>
+
+
+<br>
+<br>
+
+<!-- Footer com links de contato e sobre. -->
+
+<footer>
+  <p class="rodape">&copy; 2025 Thiago Fitipaldi V. Fernandes. Todos os direitos reservados</p>
+  <div class="footer-links">
+    <a href="/projeto-pokemon/personagens/contato.html">Contato</a> | 
+    <a href="/projeto-pokemon/pokemon/potfolio.html">Sobre</a>
+  </div>
+</footer>
+
+</body>
+</html>

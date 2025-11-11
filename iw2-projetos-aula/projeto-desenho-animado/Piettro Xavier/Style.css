@@ -1,0 +1,18 @@
+.center {
+    padding-left: 75px;
+}
+
+h3 {
+    text-align: center;
+    text-decoration: dotted;
+}
+
+p {
+    text-align: justify;
+}
+
+a {
+    text-decoration: solid;
+    color: black;
+    font-weight: 500;
+}

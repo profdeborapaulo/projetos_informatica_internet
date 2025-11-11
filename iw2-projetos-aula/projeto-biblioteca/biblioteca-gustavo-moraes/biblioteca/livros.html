@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.ico">
+    <link rel="manifest" href="img/favicon.ico">
+    <title>BIBLIOTECA CLIO</title>
+</head>
+<body>
+       <header>
+    <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+    <nav>
+     
+           <div class="search-box">
+  <input type="text" id="busca" placeholder="Buscar livro...">
+  <button type="button" onclick="buscarLivro()"><img src="img/procurar.png" id="img-busca"></button>
+</div>
+
+
+        <div class="link"><a href="index.html">Home</a></div>
+        <div class="link"><a href="livros.html">Livros</a></div>
+        <div class="link"><a href="contato.html">Contato</a></div>
+    </nav>
+</header>
+
+    <main class="livros">
+        <h1>Conheça nosso catálogo</h1>
+        <p>Uma seleção especial feita para você aprender e se encantar.</p>
+
+        <div class="saida" id="saida">
+            <!-- Livros vão ser inseridos aqui pelo JS -->
+        </div>
+
+        <div class="banner">
+            <button onclick="mostrarLivros()">Mostrar Mais</button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="img/logo.png" alt="Logotipo da Biblioteca Clio" />
+                <p>Biblioteca Clio - Inspirando a leitura para todos.</p>
+            </div>
+            <div class="social-icons">
+                <p>Redes sociais:</p>
+                <a href="https://instagram.com/mor4esx__" target="_blank" aria-label="Instagram">
+                    <img src="img/instagram.png" alt="Instagram" />
+                </a>
+                <a href="https://wa.me/5511954434695" target="_blank" aria-label="WhatsApp">
+                    <img src="img/whatsapp.png" alt="WhatsApp" />
+                </a>
+                <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                    <img src="img/twitter.png" alt="Twitter" />
+                </a>
+            </div>
+            <div class="footer-contact">
+                <p><strong>Telefone:</strong> (11) 95443-4695</p>
+                <p><strong>Email:</strong> bibliotecaclio@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Biblioteca Clio. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="biblioteca.js"></script>
+</body>
+</html>

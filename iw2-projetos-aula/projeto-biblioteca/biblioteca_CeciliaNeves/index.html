@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stars.css">
+    <link rel="stylesheet" href="falling.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/wavesurfer.js@7"></script>
+    <link rel="icon" href="img/astroteca.png" type="image/png">
+    <title>Astroteca</title>
+</head>
+
+<body>
+    <header>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="index.html#livros">Livros</a></li>
+            <li><a href="index.html#sobre">Sobre</a></li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <img src="img/logo.png" class="l" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2500">
+    </div>
+
+    <div class="background">
+        <div class="stars"></div>
+        <div id="stars2"></div>
+        <h2> "Somos feitos de poeira de estrelas. Nós somos uma maneira do cosmos conhecer a si mesmo."</h2>
+        <h2 class="autor">– Carl Sagan</h2>
+        <div id="stars3"></div>
+    </div>
+
+    <div class="line">
+        <hr>
+        <img src="./img/e9e75a004b83a9b017f5ea2a70dfabaf-removebg-preview.png" alt="planeta">
+        <hr>
+    </div>
+
+    <div class="content">
+        <div class="intro" id="sobre" data-aos="fade-up" data-aos-duration="2500">
+            <div class="bottom">
+                <h1>Uma viagem pelos conceitos básicos da astronomia</h1>
+                <h4>Com o propósito de aproximar a astronomia de todos os públicos, reunindo conhecimentos de diferentes
+                    níveis de complexidade sobre o universo em um único lugar, a Astroteca foi criada visando a
+                    divulgação científica e o incentivo da iniciação astronômica. Aqui, você embarcará em uma jornada
+                    pelo conhecimento humano, explorando séculos de descobertas e reflexões que ajudaram a construir
+                    nossa compreensão da vastidão espacial. Cada obra apresentada representa um passo em nossa contínua
+                    busca por entender nosso lugar no cosmos.</h4>
+            </div>
+            <img src="./img/icon.png" class="planet-icon">
+        </div>
+
+        <div class="section">
+            <ul class="generos" data-aos="fade-up" data-aos-duration="2000">
+                <li>
+                    <img src="img/3.png" class="icon">
+                    <a href="index.html#livros">Conceitos Básicos</a>
+                </li>
+                <hr>
+                <li>
+                    <img src="img/5.png" class="icon">
+                    <a href="index.html#livros">Sci-Fi</a>
+                </li>
+                <hr>
+                <li>
+                    <img src="img/4.png" class="icon">
+                    <a href="index.html#livros">Divulgação Científica
+
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="start">
+            <h1 data-aos="fade-up">Inicie aqui a sua jornada astronômica</h1>
+            <button onclick="mostrarLivros()" class="inicie" >
+                <div class="start-section">
+                    <a href="index.html#livros" class="playbtn">
+                        <svg version="1.1" x="0px" y="0px" width="213.7px" height="213.7px" viewbox="0 0 213.7 213.7" enable-background="new 0 0 213.7 213.7" xml:space="preserve">
+                        <polygon class="triangle" id="XMLID_18_" fill="none" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-meterlimit="10" points="73.5,62.5 148.5,105.8 73.5,149.3"></polygon>
+                        <circle class="circle" id="XMLID_17_" fill="none" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-meterlimit="10" cx="106.8" cy="106.8" r="103.3"></circle>
+                        </svg>
+                    </a>
+
+                </div>
+            </button>
+        </div>
+
+        <div class="livros" id="livros" style="display: none">
+
+            <div class="livro" id="misterios">
+                <img src="./img/misterios.jpg" class="capa-img">
+                <div class="sinopse">
+                    <h3>Os Mistérios do Universo</h3>
+                    <p class="texto">Os Mistérios do Universo convida o leitor a explorar planetas, estrelas e galáxias
+                        em uma jornada repleta de curiosidade e descobertas. Com linguagem acessível, fotografias
+                        impressionantes e ilustrações envolventes, a obra aproxima leitores de todas as idades da
+                        astronomia. É um livro que transforma o espaço em um grande livro aberto, pronto para ser
+                        desvendado.</p>
+                    <button class="detalhes" onclick="showModal('misterios-modal')">Ver Detalhes</button>
+                </div>
+                <div class="modal" id="misterios-modal">
+                    <div class="modal-content">
+                        <span onclick="hideModal('misterios-modal', 'waveform-misterios')">&times;</span>
+                        <h1>Os Mistérios do Universo</h1>
+                        <div class="modal-body">
+                            <div class="modal-text">
+                                <p><img src="./img/misterios.jpg" class="livro-img">Uma jornada visual repleta de
+                                    fotografias, ilustrações e histórias que revelam segredos de mais de 100 objetos
+                                    celestes, com fatos surpreendentes e descobertas empolgantes sobre o Universo. Nesse
+                                    livro, o leitor explora o Sistema Solar e o espaço além, aprendendo sobre eclipses,
+                                    nascimento de planetas, explosões estelares, colisões de galáxias e muitos outros
+                                    fenômenos fascinantes. <br><br> <b>Editora: </b> Editora Sextante <br><br> <b>Autor:
+                                    </b> Will Gater <br><br> <b>Nº de Páginas: </b> 224 páginas </p>
+                            </div>
+                            <div class="audio">
+                                <br><br> <b>Sinopse em aúdio:</b>
+                                <div class="audio-content">
+                                    <button class="play" onclick="togglePlay('waveform-misterios')"><img
+                                            src="./img/play.svg" class="playBtn"></button>
+                                    <div id="waveform-misterios" class="waveform"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="livro" id="cosmos">
+                <img src="./img/cosmos.jpg" class="capa-img">
+                <div class="sinopse">
+                    <h3>Cosmos</h3>
+                    <p class="texto">Em Cosmos, Carl Sagan conduz o leitor por 14 bilhões de anos de evolução cósmica,
+                        explorando desde a origem da vida até a formação das galáxias. A obra une ciência, história,
+                        filosofia e arte para mostrar como nossa espécie começou a compreender o universo. Publicado em
+                        1980, continua sendo um dos maiores clássicos da divulgação científica, despertando fascínio
+                        pelo conhecimento e pelo papel da ciência na cultura humana.</p>
+                    <button class="detalhes" onclick="showModal('cosmos-modal')">Ver Detalhes</button>
+                </div>
+                <div class="modal" id="cosmos-modal">
+                    <div class="modal-content">
+                        <span onclick="hideModal('cosmos-modal', 'waveform-cosmos')">&times;</span>
+                        <h1>Cosmos</h1>
+                        <div class="modal-body">
+                            <div class="modal-text">
+                                <p><img src="./img/cosmos.jpg" class="livro-img">Escrito por um dos maiores divulgadores
+                                    da ciência do século XX, Cosmos retraça 14 bilhões de anos de evolução cósmica,
+                                    abordando a origem da vida, o cérebro humano, missões espaciais, a morte do Sol, a
+                                    evolução das galáxias e os pensadores que moldaram a ciência moderna. Com prosa
+                                    clara e envolvente, Carl Sagan conecta ciência a história, arte e filosofia,
+                                    revelando os segredos do planeta azul e nossa busca por identidade no vasto espaço.
+                                    Publicado em 1980, continua sendo uma das mais importantes obras de divulgação
+                                    científica, refletindo o fascínio humano pelo conhecimento.<br><br> <b>Editora: </b>
+                                    Companhia das Letras <br><br> <b>Autor: </b> Carl Sagan <br><br> <b>Nº de Páginas:
+                                    </b> 488 páginas</p>
+                            </div>
+                            <div class="audio">
+                                <br><br> <b>Sinopse em aúdio:</b>
+                                <div class="audio-content">
+                                    <button class="play" onclick="togglePlay('waveform-cosmos')"><img
+                                            src="./img/play.svg" class="playBtn"></button>
+                                    <div id="waveform-cosmos" class="waveform"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="livro" id="ponto-azul">
+                <img src="./img/pale-blue-dot.jpg" class="capa-img">
+                <div class="sinopse">
+                    <h3>Pálido Ponto Azul</h3>
+                    <p class="texto">Neste livro, Carl Sagan mostra como as descobertas científicas transformaram a
+                        forma como entendemos nosso lugar no universo. Ele defende que explorar o espaço pode ser vital
+                        para a sobrevivência da humanidade. Em linguagem clara e emocionante, a obra une ciência,
+                        filosofia e reflexão sobre nosso futuro coletivo.</p>
+                    <button class="detalhes" onclick="showModal('ponto-modal')">Ver Detalhes</button>
+                </div>
+                <div class="modal" id="ponto-modal">
+                    <div class="modal-content">
+                        <span onclick="hideModal('ponto-modal', 'waveform-ponto')">&times;</span>
+                        <h1>Pálido Ponto Azul</h1>
+                        <div class="modal-body">
+                            <div class="modal-text">
+                                <p><img src="./img/pale-blue-dot.jpg" class="livro-img">Um dos grandes astrônomos do
+                                    século XX, Carl Sagan mostra como descobertas científicas transformaram nossa visão
+                                    sobre quem somos e nosso lugar no Universo. Em Pálido ponto azul, ele investiga
+                                    questões como: temos algum privilégio cósmico? Qual deve ser nossa postura diante da
+                                    imensidão do espaço? Vale investir em missões espaciais mesmo com tantos problemas
+                                    na Terra? Com a mesma linguagem envolvente de Cosmos, Sagan revisita as primeiras
+                                    aventuras extraterrestres e reflete sobre o futuro da humanidade nas
+                                    estrelas.<br><br> <b>Editora: </b> Companhia das Letras <br><br> <b>Autor: </b> Carl
+                                    Sagan <br><br> <b>Nº de Páginas: </b> 336 páginas</p>
+                            </div>
+                            <div class="audio">
+                                <br><br> <b>Sinopse em aúdio:</b>
+                                <div class="audio-content">
+                                    <button class="play" onclick="togglePlay('waveform-ponto')"><img
+                                            src="./img/play.svg" class="playBtn"></button>
+                                    <div id="waveform-ponto" class="waveform"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="livro" id="universo">
+                <img src="./img/universo.jpg" class="capa-img">
+                <div class="sinopse">
+                    <h3>O Universo numa Casca de Noz</h3>
+                    <p class="texto">Stephen Hawking apresenta de forma acessível conceitos avançados da física, como a
+                        teoria-M, a supergravidade e a holografia. Com humor, clareza e belas ilustrações, ele guia o
+                        leitor pelo microcosmo quântico e pelo universo em larga escala. O resultado é uma jornada que
+                        revela como a ciência pode ser tão extraordinária quanto a ficção científica.</p>
+                    <button class="detalhes" onclick="showModal('universo-modal')">Ver Detalhes</button>
+                </div>
+                <div class="modal" id="universo-modal">
+                    <div class="modal-content">
+                        <span onclick="hideModal('universo-modal', 'waveform-universo')">&times;</span>
+                        <h1>O Universo numa Casca de Noz</h1>
+                        <div class="modal-body">
+                            <div class="modal-text">
+                                <p><img src="./img/universo.jpg" class="livro-img">Com astronautas engolidos por buracos
+                                    negros, viajantes do tempo, o debate sobre a origem do universo (e de todos nós),
+                                    seu possível fim e a existência de vida em outras galáxias, além de curiosos
+                                    questionamentos sobre o futuro biológico e tecnológico da humanidade em si, O
+                                    universo numa casca de noz é leitura obrigatória para aqueles que querem se
+                                    aventurar no que há de mais instigante hoje na física e para os que almejam ver como
+                                    muitas vezes a teoria pode ser muito mais extraordinária do que a ficção
+                                    científica.<br><br> <b>Editora: </b> Intrínseca <br><br> <b>Autor: </b> Stephen
+                                    Hawking <br><br> <b>Nº de Páginas: </b> 309 páginas</p>
+                            </div>
+                            <div class="audio">
+                                <br><br> <b>Sinopse em aúdio:</b>
+                                <div class="audio-content">
+                                    <button class="play" onclick="togglePlay('waveform-universo')"><img
+                                            src="./img/play.svg" class="playBtn"></button>
+                                    <div id="waveform-universo" class="waveform"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="livro" id="eu-robo">
+                <img src="./img/eurobo.jpg" class="capa-img">
+                <div class="sinopse">
+                    <h3>Eu, Robô</h3>
+                    <p class="texto">Clássico da ficção científica, Eu, Robô reúne nove contos que exploram a evolução
+                        dos autômatos e os dilemas éticos de sua convivência com os humanos. É neste livro que Asimov
+                        apresenta as famosas Três Leis da Robótica, que influenciam até hoje nossa visão sobre
+                        inteligência artificial. Com histórias que variam entre emoção e reflexão, a obra mostra por que
+                        Asimov é referência no gênero.</p>
+                    <button class="detalhes" onclick="showModal('eurobo-modal')">Ver Detalhes</button>
+                </div>
+                <div class="modal" id="eurobo-modal">
+                    <div class="modal-content">
+                        <span onclick="hideModal('eurobo-modal', 'waveform-eurobo')">&times;</span>
+                        <h1>Eu, Robô</h1>
+                        <div class="modal-body">
+                            <div class="modal-text">
+                                <p><img src="./img/eurobo.jpg" class="livro-img">Um dos maiores clássicos da literatura
+                                    de ficção científica, Eu, Robô, escrito por Isaac Asimov, é um conjunto de nove
+                                    contos interconectados pela Dra. Susan Calvin, que apresenta seus relatos sobre a
+                                    evolução dos autômatos através do tempo. É nessa obra que Asimov apresenta as
+                                    célebres Três Leis da Robótica, princípios que regem o comportamento dos autômatos
+                                    em toda a sua trajetória.<br><br> <b>Editora: </b> Editora Aleph <br><br> <b>Autor:
+                                    </b> Isaac Asimov <br><br> <b>Nº de Páginas: </b> 320 páginas</p>
+                            </div>
+                            <div class="audio">
+                                <br><br> <b>Sinopse em aúdio:</b>
+                                <div class="audio-content">
+                                    <button class="play" onclick="togglePlay('waveform-eurobo')"><img
+                                            src="./img/play.svg" class="playBtn"></button>
+                                    <div id="waveform-eurobo" class="waveform"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="livro" id="breve-historia">
+                <img src="./img/breve-historia.jpg" class="capa-img">
+                <div class="sinopse">
+                    <h3>Uma Breve História do Tempo</h3>
+                    <p class="texto">Com clareza e humor, Stephen Hawking explora algumas das maiores perguntas da
+                        humanidade: a origem do universo, a natureza do tempo e a existência de outras dimensões. O
+                        livro vai da física de partículas até a formação das galáxias, tornando o complexo acessível a
+                        todos. É uma leitura que aproxima leigos e estudiosos dos segredos mais profundos do cosmos.</p>
+                    <button class="detalhes" onclick="showModal('breve-modal')">Ver Detalhes</button>
+                </div>
+                <div class="modal" id="breve-modal">
+                    <div class="modal-content">
+                        <span onclick="hideModal('breve-modal', 'waveform-breve')">&times;</span>
+                        <h1>Uma Breve História do Tempo</h1>
+                        <div class="modal-body">
+                            <div class="modal-text">
+                                <p><img src="./img/breve-historia.jpg" class="livro-img">Uma das maiores mentes do mundo
+                                    moderno, Stephen Hawking conduz o leitor em busca de respostas para grandes
+                                    questões: Qual a origem do universo? Ele é infinito? O tempo sempre existiu? Há
+                                    outras dimensões? O que acontecerá quando tudo terminar? Com ilustrações criativas e
+                                    linguagem clara e bem-humorada, Hawking explora desde os mistérios da física de
+                                    partículas até a dinâmica de milhões de galáxias. Para os iniciados, Uma breve
+                                    história do tempo representa conceitos complexos; para os leigos, revela os segredos
+                                    mais profundos da criação.<br><br> <b>Editora: </b> Intrínseca <br><br> <b>Autor:
+                                    </b> Stephen Hawking <br><br> <b>Nº de Páginas: </b> 256 páginas</p>
+                            </div>
+                            <div class="audio">
+                                <br><br> <b>Sinopse em aúdio:</b>
+                                <div class="audio-content">
+                                    <button class="play" onclick="togglePlay('waveform-breve')"><img
+                                            src="./img/play.svg" class="playBtn"></button>
+                                    <div id="waveform-breve" class="waveform"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="livro" id="odisseia">
+                <img src="./img/2001.jpg" class="capa-img">
+                <div class="sinopse">
+                    <h3>Uma Odisseia no Espaço</h3>
+                    <p class="texto">Inspirado na parceria com Stanley Kubrick, 2001: Uma Odisseia no Espaço combina
+                        mistério, ficção científica e filosofia. A narrativa percorre desde a origem da inteligência
+                        humana até uma missão espacial marcada pelo enigmático monólito e pela presença de HAL 9000, uma
+                        IA ameaçadora. Clarke cria uma experiência literária que questiona a evolução e o futuro da
+                        humanidade.</p>
+                    <button class="detalhes" onclick="showModal('2001-modal')">Ver Detalhes</button>
+                </div>
+                <div class="modal" id="2001-modal">
+                    <div class="modal-content">
+                        <span onclick="hideModal('2001-modal', 'waveform-2001')">&times;</span>
+                        <h1>Uma Odisseia no Espaço</h1>
+                        <div class="modal-body">
+                            <div class="modal-text">
+                                <p><img src="./img/2001.jpg" class="livro-img">Nos primórdios da humanidade, quando a
+                                    fome e os predadores ameaçavam a raça humana, chega à Terra um objeto inusitado,
+                                    inacessível à limitada compreensão da mente pré-histórica, mas que influencia os
+                                    homens a descobrir coisas que permitem a sua própria evolução. Milhões de anos
+                                    depois, a descoberta de um monólito soterrado na Lua deixa os cientistas perplexos.
+                                    Para investigar esse mistério, a Terra envia ao espaço uma equipe altamente
+                                    treinada. Porém, o surgimento de pequenas falhas levanta a suspeita de que há algo
+                                    errado com a missão.<br><br> <b>Editora: </b> Editora Aleph <br><br> <b>Autor: </b>
+                                    Arthur C. Clarke <br><br> <b>Nº de Páginas: </b> 336 páginas</p>
+                            </div>
+                            <div class="audio">
+                                <br><br> <b>Sinopse em aúdio:</b>
+                                <div class="audio-content">
+                                    <button class="play" onclick="togglePlay('waveform-2001')"><img src="./img/play.svg"
+                                            class="playBtn"></button>
+                                    <div id="waveform-2001" class="waveform"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="livro" id="problema">
+                <img src="./img/problema.jpg" class="capa-img">
+                <div class="sinopse">
+                    <h3>O Problema dos Três Corpos</h3>
+                    <p class="texto">Misturando ciência e suspense, Liu Cixin narra uma trama que atravessa décadas, da
+                        Revolução Cultural chinesa até a ameaça de uma invasão alienígena. O livro explora dilemas
+                        éticos, políticos e cósmicos diante do contato com uma civilização à beira do colapso. Uma das
+                        obras mais impactantes da ficção científica contemporânea, que desafia a imaginação do leitor.
+                    </p>
+                    <button class="detalhes" onclick="showModal('problema-modal')">Ver Detalhes</button>
+                </div>
+                <div class="modal" id="problema-modal">
+                    <div class="modal-content">
+                        <span onclick="hideModal('problema-modal', 'waveform-problema')">&times;</span>
+                        <h1>O Problema dos Três Corpos</h1>
+                        <div class="modal-body">
+                            <div class="modal-text">
+                                <p><img src="./img/problema.jpg" class="livro-img">China, final dos anos 1960. Enquanto
+                                    o país inteiro está sendo devastado pela violência da Revolução Cultural, um pequeno
+                                    grupo de astrofísicos, militares e engenheiros começa um projeto ultrassecreto
+                                    envolvendo ondas sonoras e seres extraterrestres. Uma decisão tomada por um desses
+                                    cientistas mudará para sempre o destino da humanidade e, cinquenta anos depois, uma
+                                    civilização alienígena a beira do colapso planeja uma invasão. O problema dos três
+                                    corpos é uma crônica da marcha humana em direção aos confins do universo.
+                                    <br><br> <b>Editora: </b> Suma <br><br> <b>Autor: </b> Cixin Liu <br><br> <b>Nº de
+                                        Páginas: </b> 320 páginas
+                                </p>
+
+                            </div>
+                            <div class="audio">
+                                <br><br> <b>Sinopse em aúdio:</b>
+                                <div class="audio-content">
+                                    <button class="play" onclick="togglePlay('waveform-problema')"><img
+                                            src="./img/play.svg" class="playBtn"></button>
+                                    <div id="waveform-problema" class="waveform"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-left">
+            <img src="img/logo-footer.png" alt="">
+            <p> Sua porta de entrada para a astronomia, reunindo conhecimentos de diferentes complexidades para inspirar sua própria jornada no vasto e fascinante cosmos.</p>
+            <div class="socials">
+                <a href="index.html"><i class="fa-solid fa-house"></i></a>
+                <a href="index.html#livros"><i class="fa fa-book"></i></a>
+                <a href="index.html#sobre"><i class="fa-solid fa-info"></i></a>
+            </div>
+        </div>
+        <ul class="footer-right">
+                <li>
+                    <h2>Ficção Científica</h2>
+                    <ul class="box">
+                        <li><a href="index.html#eu-robo">Eu, Robô</a></li>
+                        <li><a href="index.html#odisseia">Uma Odisseia no Espaço</a></li>
+                        <li><a href="index.html#problema">O Problema dos Três Corpos</a></li>
+                    </ul>
+                </li>
+                <li class="features">
+                    <h2>Conceitos Básicos</h2>
+                    <ul class="box">
+                        <li><a href="index.html#cosmos">Cosmos</a></li>
+                        <li><a href="index.html#ponto-azul">Pálido Ponto Azul</a></li>
+                        <li><a href="index.html#misterios">Os Mistérios do Universo</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <h2>Divulgação Científica</h2>
+                    <ul class="box">
+                        <li><a href="index.html#universo">O Universo numa Casca de Noz</a></li>
+                        <li><a href="index.html#breve-historia">Uma Breve História do Tempo</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="footer-bottom">
+                <p>Todos os direitos reservados. &copy;Astroteca 2025</p>
+            </div>
+    </footer>
+    <script>
+        var playBtn = document.getElementById("playBtn");
+
+        const wavePlayers = {};
+
+        // Lista de players (id do container > arquivo de áudio)
+        const audios = {
+            "waveform-misterios": "audios/misterios.mp3",
+            "waveform-cosmos": "audios/cosmos.mp3",
+            "waveform-ponto": "audios/ponto.mp3",
+            "waveform-universo": "audios/universo.mp3",
+            "waveform-eurobo": "audios/eurobo.mp3",
+            "waveform-breve": "audios/breve.mp3",
+            "waveform-2001": "audios/2001.mp3",
+            "waveform-problema": "audios/problema.mp3"
+        };
+
+        Object.entries(audios).forEach(([id, url]) => {
+            const container = document.getElementById(id);
+            if (container) {
+                const wavesurfer = WaveSurfer.create({
+                    container: container,
+                    waveColor: "#0D0D0D",
+                    progressColor: "#F28749",
+                    barWidth: 3,
+                    barHeight: 0.5,
+                    barGap: 4,
+                    barRadius: 5,
+                    url: url
+                });
+                const cursor = document.querySelector('.wavesurfer-handle');
+
+                wavePlayers[id] = wavesurfer;
+            }
+        });
+
+        // Função para alternar play/pause
+        function togglePlay(id) {
+            const player = wavePlayers[id];
+            if (!player) return;
+            player.playPause();
+        }
+
+        function mostrarLivros() {
+            const livrosDiv = document.getElementById('livros');
+
+            livrosDiv.style.display = 'block';
+
+            livrosDiv.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+
+        }
+
+    </script>
+
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>

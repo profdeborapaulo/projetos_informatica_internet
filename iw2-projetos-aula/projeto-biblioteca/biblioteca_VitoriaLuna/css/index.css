@@ -1,0 +1,212 @@
+/* ==================== BLOCO PRINCIPAL DA HOME ==================== */
+/* Retângulo decorativo dourado */
+.retangulo {
+  width: 120px;
+  height: 8px;
+  background-color: var(--primary-gold); /* Usa variável CSS definida */
+  margin: -15px auto 40px; /* Centraliza e posiciona */
+  border-radius: 4px;
+}
+
+/* Bloco principal com imagem de fundo */
+.bloco {
+ background-image: url(../img/fundo1.png); /* Imagem de fundo */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; /* Mantém proporção da imagem */
+  width: 1000px;
+  height: 900px;
+  margin: 0 auto; /* Centraliza o bloco */
+  position: relative; /* Para posicionamento absoluto dos filhos */
+}
+
+/* ==================== TEXTOS DO BLOCO PRINCIPAL ==================== */
+/* Container de texto posicionado absolutamente */
+.texto {
+  position: absolute;
+  width: 300px;
+  height: auto;
+  left: 55%; /* Posiciona à direita */
+}
+
+/* Subtítulo h3 */
+.texto h3 {
+  position: absolute;
+  top: 150px;
+  left: 0;
+}
+
+/* Texto descritivo h2 */
+.texto h2 {
+  position: absolute;
+  top: 210px;
+  font-weight: 10; /* Peso da fonte leve */
+  font-size: 15px;
+}
+
+/* Título principal "PAC" */
+.bloco h1 {
+  position: absolute;
+  left: 22%;
+  top: 130px;
+  font-size: 50px;
+}
+
+/* Título "BOOKS" do logo */
+.bloco .h1logo {
+  position: absolute;
+  left: 19%;
+  top: 170px;
+  font-size: 50px;
+}
+
+/* Slogan principal */
+.bloco h4 {
+  position: absolute;
+  left: 10%;
+  top: 260px;
+}
+
+/* ==================== TEXTOS DO SEGUNDO BLOCO ==================== */
+/* Primeiro texto descritivo */
+.textosegundobloco {
+  position: absolute;
+  top: 645px;
+  left: 12%;
+  width: 25%;
+  text-align: justify; /* Justifica o texto */
+  font-size: 16px;
+}
+
+/* Segundo texto descritivo */
+.textosegundobloco2 {
+  position: absolute;
+  top: 740px;
+  left: 26%;
+  width: 20%;
+  text-align: justify;
+  font-size: 14px;
+}
+
+/* Terceiro texto descritivo */
+.textosegundobloco3 {
+  position: absolute;
+  top: 570px;
+  left: 65%;
+  width: 20%;
+  text-align: justify;
+  font-size: 15px;
+}
+
+/* Quarto texto descritivo */
+.textosegundobloco4 {
+  position: absolute;
+  top: 660px;
+  left: 58%;
+  width: 20%;
+  text-align: justify;
+  font-size: 15px;
+}
+
+/* Texto final/chamada para ação */
+.ultimo {
+  position: absolute;
+  top: 850px;
+  left: 37%;
+  width: 30%;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700; /* Negrito */
+}
+
+/* ==================== BOTÃO PRINCIPAL ==================== */
+/* Botão de call-to-action da página inicial */
+.botaoindex {
+  position: absolute;
+  top: 940px;
+  left: 45%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 50px; /* Bordas arredondadas */
+  width: 150px;
+  height: 50px;
+  background-color: var(--primary-gold); /* Cor dourada */
+  color: #3a3a3a; /* Texto escuro */
+}
+
+/* ==================== IMAGENS DECORATIVAS ==================== */
+/* Imagem do Pac-Man comendo */
+.comendoimg {
+  width: 300px;
+  position: absolute;
+  top: 500px;
+  left: 2%;
+}
+
+/* Imagem do Pac-Man em 45 graus */
+.pac45 {
+  width: 200px;
+  position: absolute;
+  top: 300px;
+  left: 75%;
+}
+
+/* ==================== FORMULÁRIO DE CONTATO ==================== */
+/* Seção do formulário */
+.form-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 800px;
+  margin: 3rem auto; /* Centraliza com margem */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Formulário principal */
+.contact-form {
+  display: flex;
+  flex-direction: column; /* Layout vertical */
+  gap: 1.5rem; /* Espaçamento entre campos */
+}
+
+/* Grupo de cada campo do formulário */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+/* Labels dos campos */
+.form-group label {
+  font-family: "Arvo", serif;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #141657; /* Azul escuro */
+}
+
+/* Inputs e textarea */
+.form-group input,
+.form-group textarea {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd; /* Borda cinza clara */
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: "Lora", serif;
+  transition: border 0.3s, box-shadow 0.3s; /* Transições suaves */
+}
+
+/* Estado de foco dos campos */
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none; /* Remove outline padrão */
+  border: 1px solid #3b82f6; /* Borda azul */
+  box-shadow: 0 0 6px rgba(59, 130, 246, 0.4); /* Sombra azul */
+}
+
+/* Botão do formulário */
+.contact-form button {
+  align-self: center; /* Centraliza o botão */
+  font-size: 1rem;
+  padding: 0.75rem 2rem;
+}

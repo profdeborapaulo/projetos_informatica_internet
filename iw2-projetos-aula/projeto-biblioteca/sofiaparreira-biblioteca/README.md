@@ -1,0 +1,5 @@
+Esse código implementa a reprodução de áudios em uma página web de forma organizada e controlada. Ele começa declarando uma variável que serve para armazenar a instância atual de áudio em execução. A lógica central é uma função responsável por tocar um som a partir de um caminho fornecido. Antes de iniciar a reprodução de um novo arquivo, essa função verifica se já existe algum áudio em execução, pausando-o e reiniciando seu tempo, garantindo que apenas um som seja reproduzido por vez.
+
+Após isso, o script associa diferentes botões da página a essa função. Cada botão tem um identificador único e, ao ser clicado, aciona a reprodução de um arquivo de áudio específico. Entre os exemplos de áudios vinculados estão arquivos relacionados a títulos como A Brumas de Avalon, Corajosas, Coraline, O Hobbit, A Princesa e A Terra.
+
+Assim, o código permite que o usuário clique em diferentes botões e ouça os áudios correspondentes, com a segurança de que o som anterior será interrompido antes de iniciar o próximo, evitando sobreposição ou ruído na execução.

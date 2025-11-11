@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>LIVRAGO</title>
+</head>
+<body>
+    <div class="header"><!-- elemento pai do menu de navegação-->
+    
+        <a href="index.html"><img src="img/logo.png" alt=""></a>
+        <div class="nav"> <!--Elemento filho: menu de navegação-->
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="importancia.html">Importância da leitura</a></li>
+    
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </div>      
+    </div>
+   <section class="formulario">
+    <div class="contact-form">
+        <h2>Contato</h2>
+        <form action="mailto:seuemail@exemplo.com" method="post" enctype="text/plain">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+   </section>
+   </body>
+</html>

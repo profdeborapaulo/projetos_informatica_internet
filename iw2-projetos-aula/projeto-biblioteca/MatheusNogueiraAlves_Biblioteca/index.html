@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Importa o CSS externo para estilos -->
+    <link rel="stylesheet" href="style.css">
+    <title>Biblioteca clássica</title>
+</head>
+
+<body>
+    <!-- Cabeçalho com logo e título -->
+    <header>
+        <div id="logo">
+            <img src="img/classic_book.png" alt="">
+            <h1>Classic book library</h1>
+        </div>
+    </header>
+    <div class="container">
+        <article>
+            <!-- Seção de destaques do ano -->
+            <div class="Destaques">
+                <h1>Destaques do ano</h1>
+                <section>
+                    <!-- Cada div representa um livro em destaque, com evento para abrir o pop-up -->
+                    <div class="livros1" onclick="mostrarPopupLivro(0)">
+                        <img src="img/assassinato-no-expresso-do-oriente.jpg" alt="">
+                    </div>
+                    <div class="livros2" onclick="mostrarPopupLivro(1)">
+                        <img src="img/hora-da-estrela.png" alt="">
+                    </div>
+                    <div class="livros3" onclick="mostrarPopupLivro(2)">
+                        <img src="img/dom-casmurro.jpg" alt="">
+                    </div>
+                    <div class="livros4" onclick="mostrarPopupLivro(3)">
+                        <img src="img/divina-comedia.jpg" alt="">
+                    </div>
+                    <div class="livros5" onclick="mostrarPopupLivro(4)">
+                        <img src="img/idiota.jpg" alt="">
+                    </div>
+                    <div class="livros6" onclick="mostrarPopupLivro(5)">
+                        <img src="img/cortico.jpg" alt="">
+                    </div>
+                </section>
+            </div>
+
+            <!-- Seção de livros populares, inicialmente oculta pelo CSS -->
+            <div class="destaques-populares-oculto">
+                <h1>Mais populares</h1>
+                <section>
+                    <!-- Cada div representa um livro popular, com evento para abrir o pop-up -->
+                    <div class="livros2" onclick="mostrarPopupLivro(1)">
+                        <img src="img/hora-da-estrela.png" alt="">
+                    </div>
+                    <div class="livros1" onclick="mostrarPopupLivro(0)">
+                        <img src="img/assassinato-no-expresso-do-oriente.jpg" alt="">
+                    </div>
+                    <div class="livros4" onclick="mostrarPopupLivro(3)">
+                        <img src="img/divina-comedia.jpg" alt="">
+                    </div>
+                    <div class="livros3" onclick="mostrarPopupLivro(2)">
+                        <img src="img/dom-casmurro.jpg" alt="">
+                    </div>
+                    <div class="livros6" onclick="mostrarPopupLivro(5)">
+                        <img src="img/cortico.jpg" alt="">
+                    </div>
+                    <div class="livros5" onclick="mostrarPopupLivro(4)">
+                        <img src="img/idiota.jpg" alt="">
+                    </div>
+                </section>
+            </div>
+    </div>
+    <!-- Botão para exibir ou ocultar os livros populares -->
+    <button id="loadBooksBtn">Carregar livros</button>
+    <div id="booksContainer"></div>
+    </div>
+    </article>
+    <!-- Rodapé com informações de contato -->
+    <footer>
+        <p>Biblioteca clássica &copy; 2025 --- Matheus Nogueira.A --- matheusnogalves2702@gmail.com</p>
+    </footer>
+    <!-- Importa o script JS principal -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

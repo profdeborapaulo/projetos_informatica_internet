@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Biblioteca Virtual</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="logo-li">
+                    <a href="index.html">
+                        <img class="logo" src="/img/logonav.png" alt="logo">
+                    </a>
+                </li>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="autor.html">Sobre o Autor</a></li>
+                <li><a href="livros.html">Livros</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="sobre-nos">
+        <img src="/img/raphamontes.png" alt="Raphael Montes" class="sobrenos-foto">
+        <div class="sobrenos-texto">
+            <h1>Sobre o Autor</h1>
+            <p class="sobre-nos-texto">
+                Raphael Montes é um renomado autor brasileiro, conhecido por suas obras de ficção policial e thrillers psicológicos. Além de autor, ele é roteirista e mestre em criar reviravoltas chocantes. Com uma narrativa envolvente, personagens complexos e um suspense psicológico intenso, ele conquistou leitores em todo o Brasil e no exterior. Entre suas obras mais aclamadas estão o sucesso Bom Dia Verônica, se tornou uma série da Netflix, e o best-seller Jantar Secreto.
+            </p>
+        </div>
+    </div>
+
+    <div class="linhadotempo-container">
+        <h1 class="linha-dotempo">Linha do Tempo de Raphael Montes</h1>
+        <div class="linha-com-botoes">
+            <button class="botao-scroll-esquerda" onclick="scrollLinhaDoTempo(-1)">&#10094;</button>
+
+            <div class="linhadotempo-horizontal" id="linhadotempo">
+                <div class="evento nascimento">
+                    <span class="icone">
+                        <img src="img/bolo.png" alt="nascimento" style="width:40px; height:40px;">
+                    </span>
+                    <h3>1990</h3>
+                    <p>Nasce no Rio de Janeiro, futuro mestre do suspense brasileiro.</p>
+                </div>
+
+                <div class="evento obra">
+                    <span class="icone">
+                        <img src="img/livro.png" alt="primeira obra" style="width:40px; height:40px;">
+                    </span>
+                    <h3>2011</h3>
+                    <p>Lança <strong>Suicidas</strong>, seu primeiro romance psicológico que impressiona leitores e críticos.</p>
+                </div>
+
+                <div class="evento obra">
+                   <span class="icone">
+                        <img src="img/livro.png" alt="segunda obra" style="width:40px; height:40px;">
+                    </span>
+                    <h3>2014</h3>
+                    <p>Lança <strong>Jantar Secreto</strong>, thriller que se torna best-seller e é muito comentado nas redes sociais.</p>
+                </div>
+
+                <div class="evento destaque">
+                    <span class="icone">
+                        <img src="img/trofeu.png" alt="destaque" style="width:40px; height:40px;">
+                    </span>
+                    <h3>2015</h3>
+                    <p>Reconhecimento nacional e internacional por seu talento no suspense e terror psicológico.</p>
+                </div>
+
+                <div class="evento obra">
+                    <span class="icone">
+                        <img src="img/livro.png" alt="terceira obra" style="width:40px; height:40px;">
+                    </span>
+                    <h3>2016</h3>
+                    <p>Publica <strong>O Vilarejo</strong>, aterrorizando leitores com histórias de terror psicológico.</p>
+                </div>
+
+                <div class="evento obra">
+                    <span class="icone">
+                        <img src="img/livro.png" alt="primeira obra" style="width:40px; height:40px;">
+                    </span>
+                    <h3>2020</h3>
+                    <p>Lança novas edições de <strong>Dias Perfeitos</strong>, mantendo sua reputação como autor de suspense envolvente.</p>
+                </div>
+            </div>
+
+            <button class="botao-scroll-direita" onclick="scrollLinhaDoTempo(1)">&#10095;</button>
+        </div>
+    </div>
+
+    <div class="descricao">
+        <div class="descricao-texto">
+            <h1 class="narrativa">Sobre a Narrativa</h1>
+            <p class="sobre">
+                A narrativa de Raphael Montes se destaca na literatura brasileira contemporânea por seu estilo direto, envolvente e perturbador. Suas histórias transitam entre suspense, terror e romance policial, explorando o lado sombrio das relações humanas. Com frases curtas, ritmo acelerado e cortes cinematográficos, cria uma leitura intensa e viciante. O uso de múltiplos narradores e pontos de vista fragmentados amplia a tensão, enquanto o mergulho psicológico revela obsessões e segredos de personagens comuns. Ao mesclar gêneros e abordar tabus de forma crua, Montes consolida uma escrita única, capaz de entreter, chocar e provocar reflexão sobre a natureza humana.
+            </p>
+        </div>
+        <img src="/img/narrativa.png" alt="logo" class="logo-home">
+    </div>
+
+    <footer>
+        <div class="footer-texto">
+            <p class="direitos">&copy; 2025 Acervo Raphael Montes. Todos os direitos reservados.</p>
+        </div>
+        <div class="footer-icons">
+            <img src="/img/instagram.png" alt="Instagram" class="icon">
+            <img src="/img/facebook.png" alt="Facebook" class="icon">
+            <img src="/img/github.png" alt="GitHub" class="icon">
+        </div>
+    </footer>
+
+    <script src="biblioteca.js" defer></script>
+</body>
+</html>

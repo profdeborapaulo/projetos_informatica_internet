@@ -1,0 +1,254 @@
+:root {
+    --primary: #4a6fa5;
+    --secondary: #166088;
+    --accent: #4fc3dc;
+    --dark: #2e2e2e;
+    --light: #f8f9fa;
+    --transition: all 0.3s ease;
+    --border-radius: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html, body {
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+    padding-bottom: 70px; /* espaço para o footer */
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--secondary);
+}
+
+.links-navegacao {
+    display: flex;
+    gap: 30px;
+}
+
+.links-navegacao a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+    transition: var(--transition);
+    position: relative;
+}
+
+.links-navegacao a:hover {
+    color: var(--primary);
+}
+
+.links-navegacao a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    bottom: -5px;
+    left: 0;
+    transition: var(--transition);
+}
+
+.links-navegacao a:hover::after {
+    width: 100%;
+}
+
+.livro-conteudo .sinopse {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    color: #444;
+    margin-top: 15px;
+
+    white-space: pre-line;
+}
+
+.livro-imagem {
+    flex: 1;
+    max-width: 300px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.livro-imagem img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.livro-imagem img:hover {
+    transform: scale(1.05);
+}
+
+.livro-conteudo {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.livro-conteudo h1 {
+    font-size: 2.5rem;
+    color: var(--primary);
+}
+
+.livro-conteudo .autor {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--secondary);
+}
+
+.livro-conteudo .detalhes {
+    font-size: 1rem;
+    color: #555;
+}
+
+.livro-conteudo .sinopse {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    color: #444;
+    margin-top: 15px;
+}
+
+.voltar {
+    padding: 10px 20px;
+    margin-right: 20px;
+    background: var(--secondary);
+    color: white;
+    border: none;   
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    text-decoration: none;
+    display: inline-block;
+    width: fit-content;
+}
+
+.voltar:hover {
+    background: #0e415d;
+}
+
+.botoes {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Footer */
+footer {
+    position: static; /* padrão, acompanha o fluxo da página */
+    width: 100%;
+    background: var(--secondary);
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 0.9rem;
+
+}
+
+
+.rodape-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.logo-rodape {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.direitos {
+    color: #ffffff;
+}
+
+.livro-container {
+    display: flex;          /* define layout horizontal */
+    gap: 40px;              /* espaço entre imagem e texto */
+    align-items: flex-start; /* alinha pelo topo */
+    margin-top: 50px;
+    margin-bottom: 90px;
+}
+
+.avaliacao {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.estrelas {
+    color: #FFD700;
+    font-size: 2rem; /* tamanho maior */
+}
+
+.estrelas span {
+    margin: 0 2px;
+}
+
+.numero-avaliacoes {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 5px; 
+    margin-bottom: 20px; 
+}
+
+
+
+@media (max-width: 768px) {
+    .livro-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .livro-imagem {
+        max-width: 80%;
+    }
+
+    .livro-conteudo {
+        width: 100%;
+        text-align: center;
+    }
+}
+

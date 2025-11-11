@@ -1,0 +1,34 @@
+Objetivo
+Nesta atividade, você irá criar uma página web simples utilizando o framework Bootstrap para apresentar seu desenho e personagem preferido. A página deve ser visualmente interessante e conter informações, imagens e elementos que refletem sua escolha.
+
+Instruções
+Escolha do Tema:
+
+Selecione um desenho ou personagem que você gosta (pode ser de uma série animada, quadrinhos, videogames, etc.).
+Estrutura da Página:
+
+A página deve conter pelo menos os seguintes elementos:
+Cabeçalho (Header): Inclua o título da sua página e uma breve descrição sobre o desenho ou personagem escolhido.
+Seção Principal: Adicione informações sobre o desenho e o personagem. Isso pode incluir:
+Uma breve biografia do personagem.
+Informações sobre o enredo do desenho.
+Características que você mais gosta sobre o personagem ou a história.
+Galeria de Imagens: Insira imagens do seu desenho e personagem. Você pode usar imagens da internet, mas certifique-se de que sejam apropriadas e, se possível, dê crédito ao autor.
+Seção de Curiosidades: Adicione uma lista de curiosidades ou fatos interessantes sobre o desenho ou personagem.
+Estilo e Design:
+
+Utilize o Bootstrap para tornar a página responsiva e esteticamente agradável.
+Experimente diferentes componentes do Bootstrap, como cards, imagens, botões e grid system, para organizar seu conteúdo de maneira interessante.
+Funcionalidades Adicionais (opcional):
+
+Adicione links para trailers, sites oficiais ou páginas de fã.
+Inclua uma seção de comentários ou sua opinião pessoal sobre o desenho/personagem.
+Entrega:
+
+Salve seu trabalho em um arquivo HTML e nomeie-o como personagem.html.
+Envie o arquivo através do teams, se não conseguir enviar pelo github e compartilhar o link
+Dicas
+Referências: Consulte a documentação do Bootstrap para entender como usar os componentes e personalizar sua página: Documentação do Bootstrap.
+Imagens: Utilize sites como Unsplash ou Pexels para encontrar imagens livres de direitos autorais.
+Teste: Sempre visualize sua página em diferentes dispositivos para garantir que ela está responsiva.
+Bom trabalho!!!

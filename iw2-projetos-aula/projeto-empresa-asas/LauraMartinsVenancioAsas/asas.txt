@@ -1,0 +1,73 @@
+Link do meu prótipo do Figma:
+https://www.figma.com/design/a92pq12S1EtLOr8ZnQWPOp/Asas?node-id=0-1&t=iGPL1ifQ2Qc5G9Mc-1
+
+
+Código JavaScript da empresa Asas:
+let destino = "Sul";
+let classe = "Economica";
+let numcriancas = 3;
+let numadulto = 8;
+let precoadulto = 0;
+let precocrianca = 0;
+
+if (destino === "Norte") {
+    if (classe === "Economica") {
+        precoadulto = 2500;
+        precocrianca = 1800;
+    } 
+    else if (classe === "Executiva") {
+        precoadulto = 2500 * 1.20;
+        precocrianca = 1800 * 1.10;
+    }
+} 
+else if (destino === "Sul") {
+    if (classe === "Economica") {
+        precoadulto = 3000;
+        precocrianca = 3000;
+    } 
+    else if (classe === "Executiva") {
+        precoadulto = 4000;
+        precocrianca = 4000;
+    }
+} 
+else if (destino === "Asia") {
+    if (classe === "Economica") {
+        precoadulto = 4600;
+        precocrianca = 4600;
+    } 
+    else if (classe === "Executiva") {
+        precoadulto = 6000;
+        precocrianca = 6000;
+    }
+} 
+else if (destino === "Europa") {
+    if (classe === "Economica") {
+        precoadulto = 5800;
+        precocrianca = 5800;
+    } 
+    else if (classe === "Executiva") {
+        precoadulto = 7300;
+        precocrianca = 7300;
+    }
+} 
+else if (destino === "Africa") {
+    if (classe === "Economica") {
+        precoadulto = 4200;
+        precocrianca = 4200;
+    } 
+    else if (classe === "Executiva") {
+        precoadulto = 6900;
+        precocrianca = 6900;
+    }
+}
+
+let totaladultos = numadulto * precoadulto;
+let totalcriancas = numcriancas * precocrianca;
+let total = totaladultos + totalcriancas;
+
+console.log("O custo total do pacote é:")
+console.log("A quantidade de Passageiros Adultos é: " + numadulto);
+console.log("A quantidade de Passageiros Infantis é: " + numcriancas);
+console.log("O destino escolhido foi: " + destino);
+console.log("a classe do seu voo é: " + classe);
+console.log("Custo total da viagem é: R$ " + total);

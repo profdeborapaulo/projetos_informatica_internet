@@ -1,0 +1,251 @@
+body, ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-size: 1.rem;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+}
+.legenda{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 5.cm;
+    padding: auto;
+    color: whitesmoke;
+   
+}
+h1{
+    text-align: center;
+}
+li{
+    width: 130px;
+}
+.sub{
+    padding-left: 30px;
+}
+.nav li a:hover{
+    background-color: black;
+    color: whitesmoke;
+    background: orangered;
+}
+a{
+    text-decoration: none;
+    color: white;
+
+}
+.header{
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+
+ 
+
+}
+.nav{
+    display: flex;
+    background-color: black;
+}
+.nav li{
+    margin-left: 15px;
+  
+    
+}
+.nav li a {
+    display: block;
+    padding: 12px;
+    
+}
+header{
+    margin-bottom: 0px;
+    margin-top: 20px;
+}
+
+.container{
+    background-image: url(./img/fundo_cartas4.png);
+    background-repeat: round;
+    background-image: repeating-linear-gradient(repeat-x);
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: flex-start;
+    padding: 100px;
+    box-sizing: content-box;
+}
+.container2{
+    background-image: url(./img/fundo_sombra3.png );
+    background-repeat: round;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content:space-around ;
+    align-items: flex-start;
+    align-content:flex-start ;
+    margin-top: 100px;
+    padding: 100px;
+    box-sizing: content-box;
+    
+    
+}
+.primeiro{
+    display: inline-block;
+}
+.Sobre{
+
+    display: inline-block;
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around ;
+    align-items: flex-start;
+    align-content:flex-start ;
+
+
+    
+}
+.paragrafo_sobre{
+    max-width: 60%;
+    width: 100%;
+    padding-left: 7%;
+    width: auto;
+    align-items: flex-start;
+
+}
+.ti{
+    color: #EBEBED;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 900px;
+    font-size: 100px;
+    justify-content: center;
+    padding-top: 10%;
+    margin-top: 0%;
+
+}
+.titulo2{
+   display: block;
+   max-width: 40%; 
+   width: 100%;
+   padding-left: 0%;
+}
+.sobre_img{
+      height: 250px;
+      max-width: 300px;
+      width: 100%;
+      width: auto;
+      align-items: flex-end;
+
+      
+      
+}
+.sobre_magic{
+
+    border-collapse: separate;
+    background-color: white;
+    width: auto;
+   
+   
+    
+}
+.cartas_magic{
+    background-color: #fff;
+    width: auto;
+    align-items: flex-start;
+}
+.estilos_magic{
+    background-color: #fff;
+    width: auto;
+    align-items: flex-start;
+}
+.img{
+    background-color: #575353;
+    color: #fff;
+    padding: 20px;
+    margin: 5px;
+    width: 300px;
+    
+}
+img{
+    width: 250px;
+    height: 350px;
+}
+
+img.logo{
+    width: 300px;
+    height: 150px;
+}
+img.img_do_inicio{
+    width: auto;
+    height: 150px;
+    margin-bottom: 10px;
+    align-self: start;
+    max-width: 100%;
+    width: 100%;
+    
+}
+.imagem_de_titulo{
+    background-image: url("./img/imagem_de_titulo.jpg");
+    height: 600px;
+    background-size: cover;
+    max-width: 100%;
+    margin-left: 0%;
+    margin-top: 0%;
+
+
+}
+.h4_inicial{
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    color: black;
+}
+.texto1{
+    margin-top: auto;
+    margin-right: auto;
+    padding-right: 10%;
+    padding-left: 40px;
+    
+}
+p{
+    font-family:Arial, Helvetica, sans-serif ;
+    color: black;
+    font-size: auto;
+    font-style: normal;
+}
+.footer{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: auto;
+    font-style: normal;
+    margin-bottom: 0%;
+}
+h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+}
+.paragrafo1{
+    padding: 20px;
+    margin: 10px auto;
+    border-radius: 8px;
+    max-width: 80%;
+
+}
+.imagem1{
+    max-width: 60%;
+    width: 40%;
+
+}
+
+.imagem_sobre1{
+    text-align: center;
+}
+footer{
+    background-color: black;
+}
+
+

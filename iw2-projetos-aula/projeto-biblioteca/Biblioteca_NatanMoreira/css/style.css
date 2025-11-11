@@ -1,0 +1,479 @@
+/* Definição das variáveis de tema */
+:root {
+    --cor-fundo: #f4f1ea;
+    --cor-texto: #333;
+    --cor-cabecalho-fundo: #3a2e2a;
+    --cor-cabecalho-texto: #ecf0f1;
+    --cor-card-fundo: #ffffff;
+    --cor-sombra: rgba(0, 0, 0, 0.1);
+    --cor-link: #3a2e2a;
+    --cor-borda-botao: #ecf0f1;
+}
+
+body.dark-mode {
+    --cor-fundo: #2c2c2c;
+    --cor-texto: #e0e0e0;
+    --cor-cabecalho-fundo: #1a1a1a;
+    --cor-cabecalho-texto: #f4f1ea;
+    --cor-card-fundo: #3a3a3a;
+    --cor-sombra: rgba(0, 0, 0, 0.2);
+    --cor-link: #f4f1ea;
+    --cor-borda-botao: #f4f1ea;
+}
+
+/* Estilos Gerais */
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: var(--cor-cabecalho-fundo);
+    color: var(--cor-cabecalho-texto);
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content h1 { margin: 0; font-size: 2.2rem; }
+.header-content p { margin: 5px 0 0; opacity: 0.8; }
+.header-content a { color: inherit; text-decoration: none; }
+
+/* Botão de Tema (Sol e Lua) - feito com CSS */
+.theme-switcher {
+    background: none;
+    border: 1px solid var(--cor-borda-botao);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.theme-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--cor-borda-botao);
+    transition: all 0.4s ease;
+    box-shadow: 0 0 5px var(--cor-borda-botao);
+}
+
+body.dark-mode .theme-icon {
+    background-color: transparent;
+    box-shadow: -3px 2px 0 0px var(--cor-borda-botao);
+}
+
+/* Estilos do Carrossel */
+.carousel-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 40px auto;
+    overflow: hidden;
+    padding: 0 50px;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.3);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.carousel-button:disabled { opacity: 0.3; cursor: default; }
+.carousel-button.prev { left: 10px; }
+.carousel-button.next { right: 10px; }
+
+
+/* Estilo do Card de Livro - ESTADO INICIAL PARA ANIMAÇÃO */
+.livro-card {
+    background-color: var(--cor-card-fundo);
+    box-shadow: 0 4px 8px var(--cor-sombra);
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    flex-shrink: 0;
+    margin: 0 15px; /* Margem para carrossel */
+    width: 300px; /* Largura fixa para cálculo fácil */
+    opacity: 0; /* Começa invisível */
+    transform: translateY(20px); /* Começa um pouco abaixo */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Transição suave */
+}
+
+/* ESTADO FINAL DA ANIMAÇÃO */
+.livro-card.fade-in {
+    opacity: 1; /* Fica visível */
+    transform: translateY(0); /* Volta à posição normal */
+}
+
+/* Atraso para efeito cascata */
+.livro-card:nth-child(2) { transition-delay: 0.1s; }
+.livro-card:nth-child(3) { transition-delay: 0.2s; }
+
+.livro-card a { color: var(--cor-texto); text-decoration: none; }
+.livro-card img { max-width: 100%; height: 300px; object-fit: cover; border-radius: 4px; }
+.livro-card h3 { margin: 15px 0 5px; }
+.livro-card p { margin: 0; font-style: italic; opacity: 0.8; }
+
+
+/* Grade de Livros */
+.catalogo-grid { max-width: 1200px; margin: 60px auto 40px; padding: 0 20px; }
+.catalogo-grid h2 { text-align: center; margin-bottom: 30px; font-size: 2rem; }
+.livros-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.livros-grid .livro-card { width: auto; margin: 0; } /* Reseta largura e margem para o grid */
+.aviso-nenhum-livro { text-align: center; font-size: 1.2rem; opacity: 0.7; }
+
+
+/* Página de Detalhes */
+#detalhes-livro-container { max-width: 900px; margin: 40px auto; padding: 20px; }
+.detalhe-flex { display: flex; gap: 30px; }
+.detalhe-flex img { max-width: 300px; height: auto; object-fit: contain; border-radius: 8px; box-shadow: 0 4px 8px var(--cor-sombra); }
+.detalhe-flex .info { flex: 1; }
+audio { width: 100%; margin-top: 20px; }
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: var(--cor-cabecalho-fundo);
+    color: var(--cor-cabecalho-texto);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .detalhe-flex { flex-direction: column; align-items: center; }
+}
+
+
+/* Definição das variáveis de tema */
+:root {
+    --cor-fundo: #f4f1ea;
+    --cor-texto: #333;
+    --cor-cabecalho-fundo: #3a2e2a;
+    --cor-cabecalho-texto: #ecf0f1;
+    --cor-card-fundo: #ffffff;
+    --cor-sombra: rgba(0, 0, 0, 0.1);
+    --cor-link: #3a2e2a;
+    --cor-borda-botao: #ecf0f1;
+    --cor-input-borda: #ccc;
+    --cor-input-fundo: #f9f9f9;
+    --cor-input-texto: #333;
+    --cor-placeholder: #888;
+}
+
+body.dark-mode {
+    --cor-fundo: #2c2c2c;
+    --cor-texto: #e0e0e0;
+    --cor-cabecalho-fundo: #1a1a1a;
+    --cor-cabecalho-texto: #f4f1ea;
+    --cor-card-fundo: #3a3a3a;
+    --cor-sombra: rgba(0, 0, 0, 0.2);
+    --cor-link: #f4f1ea;
+    --cor-borda-botao: #f4f1ea;
+    --cor-input-borda: #555;
+    --cor-input-fundo: #444;
+    --cor-input-texto: #e0e0e0;
+    --cor-placeholder: #a0a0a0;
+}
+
+/* Estilos Gerais */
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: var(--cor-cabecalho-fundo);
+    color: var(--cor-cabecalho-texto);
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content h1 { margin: 0; font-size: 2.2rem; }
+.header-content p { margin: 5px 0 0; opacity: 0.8; }
+.header-content a { color: inherit; text-decoration: none; }
+
+/* Botão de Tema (Sol e Lua) - feito com CSS */
+.theme-switcher {
+    background: none;
+    border: 1px solid var(--cor-borda-botao);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s;
+}
+
+.theme-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--cor-borda-botao);
+    transition: all 0.4s ease;
+    box-shadow: 0 0 5px var(--cor-borda-botao);
+}
+
+body.dark-mode .theme-icon {
+    background-color: transparent;
+    box-shadow: -3px 2px 0 0px var(--cor-borda-botao); /* Efeito de lua crescente */
+}
+
+/* Estilos do Carrossel */
+.carousel-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 40px auto;
+    overflow: hidden;
+    padding: 0 50px;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.3);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+.carousel-button:hover { background-color: rgba(0,0,0,0.5); }
+.carousel-button:disabled { opacity: 0.3; cursor: default; background-color: rgba(0,0,0,0.1); }
+.carousel-button.prev { left: 10px; }
+.carousel-button.next { right: 10px; }
+
+
+/* Estilo do Card de Livro - ESTADO INICIAL PARA ANIMAÇÃO */
+.livro-card {
+    background-color: var(--cor-card-fundo);
+    box-shadow: 0 4px 8px var(--cor-sombra);
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    flex-shrink: 0;
+    margin: 0 15px; /* Margem para carrossel */
+    width: 300px; /* Largura fixa para cálculo fácil */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Transição suave */
+}
+/* Apenas cards no grid devem começar escondidos. Carrossel deve ser visível. */
+.catalogo-grid .livro-card {
+    opacity: 0; /* Começa invisível no grid */
+    transform: translateY(20px); /* Começa um pouco abaixo no grid */
+}
+
+/* ESTADO FINAL DA ANIMAÇÃO */
+.livro-card.fade-in {
+    opacity: 1; /* Fica visível */
+    transform: translateY(0); /* Volta à posição normal */
+}
+
+/* Atraso para efeito cascata (apenas no grid) */
+.catalogo-grid .livro-card:nth-child(2) { transition-delay: 0.1s; }
+.catalogo-grid .livro-card:nth-child(3) { transition-delay: 0.2s; }
+.catalogo-grid .livro-card:nth-child(4) { transition-delay: 0.3s; }
+.catalogo-grid .livro-card:nth-child(5) { transition-delay: 0.4s; }
+.catalogo-grid .livro-card:nth-child(6) { transition-delay: 0.5s; }
+/* Adicione mais se sua grade inicial mostrar mais de 6 itens por linha */
+
+
+.livro-card a { color: var(--cor-link); text-decoration: none; }
+.livro-card a:hover { text-decoration: underline; }
+.livro-card img { max-width: 100%; height: 300px; object-fit: cover; border-radius: 4px; }
+.livro-card h3 { margin: 15px 0 5px; font-size: 1.3rem; }
+.livro-card p { margin: 0; font-style: italic; opacity: 0.8; }
+
+
+/* Nova seção de Busca e Filtros */
+.filters-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+    justify-content: center; /* Centraliza itens */
+    gap: 15px; /* Espaçamento entre os elementos */
+    background-color: var(--cor-card-fundo);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--cor-sombra);
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--cor-input-borda);
+    border-radius: 25px;
+    padding: 5px 15px;
+    background-color: var(--cor-input-fundo);
+    flex-grow: 1; /* Ocupa espaço disponível */
+    max-width: 400px; /* Limita a largura máxima da busca */
+}
+
+.search-box input {
+    border: none;
+    background: none;
+    outline: none;
+    color: var(--cor-input-texto);
+    padding: 5px 0;
+    font-size: 1rem;
+    flex-grow: 1;
+}
+
+.search-box input::placeholder {
+    color: var(--cor-placeholder);
+}
+
+.search-box button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search-box button img {
+    width: 20px;
+    height: 20px;
+    filter: var(--cor-input-texto-filter); /* Isso precisa de uma variável CSS */
+}
+
+/* NOVO: Variável para o filtro do ícone de busca, adaptando ao tema */
+:root { --cor-input-texto-filter: invert(0); } /* Modo claro: não inverte */
+body.dark-mode { --cor-input-texto-filter: invert(1); } /* Modo escuro: inverte */
+
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center; /* Centraliza os selects */
+}
+
+.filters select {
+    padding: 8px 12px;
+    border: 1px solid var(--cor-input-borda);
+    border-radius: 5px;
+    background-color: var(--cor-input-fundo);
+    color: var(--cor-input-texto);
+    font-size: 0.95rem;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+.filters select:focus {
+    border-color: var(--cor-link); /* Cor de destaque ao focar */
+}
+
+
+/* Grade de Livros */
+.catalogo-grid { max-width: 1200px; margin: 60px auto 40px; padding: 0 20px; }
+.catalogo-grid h2 { text-align: center; margin-bottom: 30px; font-size: 2rem; }
+.livros-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.livros-grid .livro-card { width: auto; margin: 0; } /* Reseta largura e margem para o grid */
+.aviso-nenhum-livro { text-align: center; font-size: 1.2rem; opacity: 0.7; padding: 20px; }
+
+
+/* Página de Detalhes */
+#detalhes-livro-container { max-width: 900px; margin: 40px auto; padding: 20px; }
+.detalhe-flex { display: flex; gap: 30px; }
+.detalhe-flex img { max-width: 300px; height: auto; object-fit: contain; border-radius: 8px; box-shadow: 0 4px 8px var(--cor-sombra); }
+.detalhe-flex .info { flex: 1; }
+.detalhe-flex .info h1 { font-size: 2.5rem; margin-bottom: 5px; }
+.detalhe-flex .info h2 { font-size: 1.5rem; margin-top: 0; opacity: 0.8; }
+.detalhe-flex .info h3 { font-size: 1.2rem; margin-top: 20px; margin-bottom: 5px; }
+.detalhe-flex .info p { line-height: 1.6; }
+audio { width: 100%; margin-top: 20px; background-color: var(--cor-input-fundo); border-radius: 5px; }
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: var(--cor-cabecalho-fundo);
+    color: var(--cor-cabecalho-texto);
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .filters-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .search-box {
+        width: 90%;
+        max-width: none;
+    }
+    .filters {
+        width: 90%;
+        justify-content: space-around;
+    }
+    .filters select {
+        flex-basis: 45%; /* Duas colunas em telas menores */
+    }
+}
+
+@media (max-width: 768px) {
+    .detalhe-flex { flex-direction: column; align-items: center; }
+    .carousel-container { padding: 0 20px; }
+    .carousel-button.prev { left: 0; }
+    .carousel-button.next { right: 0; }
+    .livros-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+    .livro-card { width: auto; margin: 0 5px; } /* Ajuste de margem para o carrossel em mobile */
+}
+
+@media (max-width: 480px) {
+    header { padding: 15px 20px; }
+    .header-content h1 { font-size: 1.8rem; }
+    .filters select { flex-basis: 100%; } /* Uma coluna em telas muito pequenas */
+    .catalogo-grid h2 { font-size: 1.8rem; }
+}

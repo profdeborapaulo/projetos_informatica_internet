@@ -1,0 +1,294 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #e5e5e5;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  padding-top: 70px; /* Altura da barra de navegação */
+  flex-grow: 1;
+}
+
+
+/* Estilos para a barra de navegação */
+.barraNav {
+  background-color: #7b0a0a;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo {
+  margin-left: 50px;
+  width: 200px;
+  height: auto;
+  margin: 20px;
+}
+
+.links{
+  color: #ddd;
+  text-decoration: none;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+.navLinks {
+  display: flex;
+  gap: 15px;
+  margin-right: 50px;
+  text-align: center;
+}
+
+.navLink {
+  background-color: #777;
+  width: 80px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+/* Estilos para a seção do carrossel */
+.carrossel-section{
+  padding: 40px 0;
+  text-align: center;
+}
+
+.titulo-section{
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #7b0a0a;
+  text-align: center;
+}
+
+.carrossel-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.seta{
+  background: #7B0A0A ;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10px;
+  border-radius: 5px;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+.seta:hover {
+  background: #A03434;
+}
+
+.carrossel-track-container{
+  width: 100%;
+  overflow: hidden;
+}
+
+.carrossel-track{
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.livro-destaque-card{
+  flex-shrink: 0;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  /* margin: 0 10px; */
+  box-sizing: border-box;
+}
+
+
+.livro-destaque-capa{
+ width: 250px; 
+ height: 380px; 
+ object-fit: cover; 
+ margin-right: 20px;
+ border-radius: 4px; 
+ box-shadow: 0 4px 8px rgba(0,0,0,0.15); 
+ border: 1px solid #ddd;
+}
+
+
+.livro-detalhes-conteudo{
+  text-align: left;
+  flex-grow: 1;
+}
+
+.livro-destaque-titulo{
+  font-size: 2.5em;
+  color: #333;
+  margin-top: 0;
+}
+
+.livro-destaque-autor{
+  font-size: 1.2em;
+  color: #555;
+  margin-top: -15px;
+  font-style: italic;
+}
+
+.livro-sumario{
+  font-size: 1em;
+  color: #666;
+  line-height: 1.5;
+}
+
+.audio-player{
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.audio-button{
+  background-color: #7B0A0A;
+  color: white;
+  border: none;
+  border-radius:50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.audio-button:hover{
+  background-color: #A03434;
+}
+
+.audio-status{
+  margin-left: 10px;
+  color: #7B0A0A;
+  font-weight: bold;
+}
+
+
+/* Estilos para a parte de mostrar mais livros lá */
+.bookplaceholder {
+  background-color: #888;
+  width: 200px;
+  height: 250px;
+  margin-right: 20px;
+}
+
+.book-list-container {
+  background-color: #b0b0b0;
+  flex-grow: 1;
+  height: 250px;
+}
+
+.mais-livros {
+  text-align: center;
+  padding: 20px;
+  width: auto;
+  margin: 0 auto;
+
+}
+
+.mais-livros-botao {
+  text-decoration: none;
+  color: #555;
+  font-size: 1.2em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0) !important;
+  border-bottom: 0px;
+  border: none !important;
+  background-color: #e5e5e500 !important;
+}
+
+.barra-footer {
+  background-color: #555;
+  height: 30px;
+}
+
+#livros-adicionais {
+  padding: 20px;
+  max-width: 5000px;
+  margin: 0 auto;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(250px, 1fr));
+  gap: 50px;
+}
+
+.book-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 10px;
+  max-width: 200px;
+  margin: 0 auto;
+
+}
+
+.livro-capa {
+  width: 100%;
+  height: 300px;
+  border-radius: 8px 8px 0 0;
+}
+
+.detalhes-livro {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.livro-titulo {
+  font-size: 1em;
+  margin: 0;
+  color: #333;
+}
+
+.livro-autor {
+  font-size: 0.8em;
+  margin: 5px 0 0 0;
+  color: #666;
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #555;
+}
+
+.hidden {
+  display: none;
+}

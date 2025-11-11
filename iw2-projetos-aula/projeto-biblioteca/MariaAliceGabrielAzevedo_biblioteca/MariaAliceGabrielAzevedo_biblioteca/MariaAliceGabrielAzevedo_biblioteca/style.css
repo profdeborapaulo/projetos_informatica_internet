@@ -1,0 +1,312 @@
+body {
+    background-color: rgb(217, 210, 201); /* Define a cor de fundo da página inteira */
+}
+
+header {
+    background-color: rgb(140, 158, 119); /* Cor de fundo do cabeçalho */
+    display: flex; /* Organiza os elementos do header lado a lado */
+    flex-wrap: nowrap; /* Impede que os itens quebrem de linha */
+    gap: 45px; /* Espaçamento horizontal entre os elementos */
+    border-radius: 10px; /* Bordas arredondadas */
+    overflow: hidden; /* Esconde conteúdo que ultrapasse os limites */
+    box-shadow: #4f7268 0px 3px 13px 0px; /* Sombra externa para dar profundidade */
+}
+
+header h4 {
+    transition: transform 0.3s ease; /* Animação suave quando sofrer transformações */
+    transform-origin: center bottom; /* Define o ponto de origem da transformação */
+    color: rgb(243, 243, 243); /* Cor do texto */
+    margin-left: 60px; /* Espaço à esquerda */
+    font-size: 23px; /* Tamanho da fonte */
+    font-family: 'Comic Neue', cursive; /* Fonte usada */
+}
+
+header h4:hover {
+    transform: scale(1.2); /* Aumenta o tamanho ao passar o mouse */
+    color: rgb(61, 26, 26); /* Troca a cor do texto */
+    font-family: 'Comic Neue', cursive; /* Mantém a mesma fonte */
+}
+
+nav {
+    position: relative; /* Base para posicionamento dos elementos internos */
+    width: 100%; /* Ocupa toda a largura */
+    height: auto; /* Altura automática */
+}
+
+nav > img {
+    position: absolute; /* Imagem fica posicionada dentro do nav */
+    width: 100%; /* Imagem ocupa toda a largura */
+    height: 100%; /* Imagem ocupa toda a altura */
+    filter: blur(2px); /* Aplica efeito de desfoque */
+}
+
+.estante {
+    background-color: rgba(240, 240, 240, 0.7); /* Fundo claro e semitransparente */
+    margin: 30px 80px; /* Espaçamento externo */
+    position: relative; /* Base para elementos internos */
+    padding: 20px; /* Espaçamento interno */
+    color: rgb(0, 0, 0); /* Cor do texto */
+    font-family: 'Comic Neue', cursive; /* Fonte usada */
+    text-align: center; /* Centraliza o conteúdo */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+.estante img {
+    width: 200px; /* Largura fixa da imagem */
+    height: auto; /* Altura ajusta proporcionalmente */
+}
+
+.sections {
+    display: flex; /* Organiza seções lado a lado */
+    justify-content: center; /* Centraliza os itens */
+    gap: 90px; /* Espaçamento entre eles */
+}
+
+section {
+    background-color: rgba(73, 30, 31, 0.9); /* Fundo escuro semitransparente */
+    max-height: 200px; /* Altura máxima */
+    max-width: 500px; /* Largura máxima */
+    border-radius: 10px; /* Bordas arredondadas */
+    margin: 40px; /* Espaçamento externo */
+    font-family: 'Comic Neue', cursive; /* Fonte usada */
+    box-shadow: #7c2323 0px 3px 13px 0px; /* Sombra avermelhada */
+}
+
+.livrospincipais {
+    background-color: rgb(179, 162, 162); /* Fundo em tom claro */
+    margin: 60px 40px 0 40px; /* Margem superior maior */
+    border-radius: 10px; /* Bordas arredondadas */
+    font-family: 'Comic Neue', cursive; /* Fonte usada */
+    box-shadow: #8b4b4b 0px 3px 13px 0px; /* Sombra escura */
+}
+
+.fileira1, .fileira2 {
+    display: flex; /* Alinha livros lado a lado */
+    gap: 100px; /* Espaço entre eles */
+    justify-content: center; /* Centraliza no container */
+}
+
+.livro {
+    position: relative; /* Base para frente e verso */
+    width: 300px; /* Largura do livro */
+    height: 550px; /* Altura do livro */
+    margin: 20px; /* Espaçamento externo */
+}
+
+/* frente */
+.section2 {
+    position: absolute; /* Fica sobreposta no livro */
+    top: 0; left: 0; /* Encosta no canto superior esquerdo */
+    width: 100%; height: 100%; /* Ocupa todo espaço */
+    background-color: rgb(97, 110, 82); /* Cor de fundo */
+    border-radius: 10px; /* Bordas arredondadas */
+    font-family: 'Comic Neue', cursive; /* Fonte usada */
+    box-shadow: #45625d 0px 3px 13px 0px; /* Sombra suave */
+    opacity: 1; /* Totalmente visível */
+    transform: scale(1); /* Tamanho normal */
+    transition: opacity 0.45s ease, transform 0.45s ease; /* Animações suaves */
+    pointer-events: auto; /* Pode interagir */
+    z-index: 2; /* Fica acima do verso */
+    padding-top: 20px; /* Espaço interno no topo */
+}
+
+.section2 img {
+    height: 230px; /* Altura da imagem da capa */
+    display: block; /* Força ser um bloco */
+    margin: 0 auto; /* Centraliza a imagem */
+}
+
+.section2 h4 {
+    justify-content: center; /* Centraliza texto */
+    margin: 20px auto 0; /* Espaçamento em cima */
+    display: flex; /* Torna flexível */
+    font-family: 'Comic Neue', cursive; /* Fonte usada */
+}
+
+/* verso */
+.section3 {
+    position: absolute; /* Sobreposta no livro */
+    top: 0; left: 0; /* Encosta no canto */
+    width: 100%; height: 100%; /* Ocupa todo espaço */
+    background-color: rgb(97, 110, 82); /* Cor igual à frente */
+    border-radius: 10px; /* Bordas arredondadas */
+    font-family: 'Comic Neue', cursive; /* Fonte usada */
+    box-shadow: #45625d 0px 3px 13px 0px; /* Sombra */
+    opacity: 0; /* Invisível no início */
+    transform: scale(0.9); /* Levemente menor */
+    pointer-events: none; /* Não interage */
+    transition: opacity 0.45s ease, transform 0.45s ease; /* Animação suave */
+    padding-top: 20px; /* Espaço no topo */
+    z-index: 1; /* Fica atrás da frente */
+}
+
+.section3 img {
+    height: 230px; /* Altura da imagem do verso */
+    display: block; /* Força bloco */
+    margin: 0 auto; /* Centraliza imagem */
+}
+
+.section3 h4 {
+    justify-content: center; /* Centraliza texto */
+    font-family: 'Comic Neue', cursive; /* Fonte usada */
+    margin: 20px auto 0; /* Espaço em cima */
+    display: flex; /* Flex container */
+}
+
+/* interação */
+.livro:hover .section3 {
+    opacity: 1; /* Fica visível */
+    transform: scale(1); /* Cresce ao tamanho normal */
+    pointer-events: auto; /* Agora pode interagir */
+    z-index: 3; /* Fica na frente da section2 */
+}
+
+.livro:hover .section2 {
+    opacity: 0; /* Some */
+    transform: scale(0.9); /* Diminui */
+    pointer-events: none; /* Deixa de interagir */
+}
+
+button {
+    height: 47px; /* Altura do botão */
+    padding: 17px 40px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    border: 0; /* Sem borda */
+    background-color: rgb(107, 59, 60); /* Fundo escuro */
+    box-shadow: #0000000d 0 0 8px; /* Sombra leve */
+    letter-spacing: 1.5px; /* Espaçamento entre letras */
+    text-transform: uppercase; /* Letras maiúsculas */
+    font-size: 12px; /* Tamanho do texto */
+    transition: all .5s ease; /* Animação suave */
+    color: #e9e9e9; /* Cor clara */
+    font-family: 'Comic Neue', cursive; /* Fonte usada */
+    margin: 10px auto; /* Centraliza */
+    display: block; /* Força ser bloco */
+}
+
+button:hover {
+    letter-spacing: 2px; /* Aumenta espaçamento das letras */
+    background-color: #ffc107; /* Cor de fundo amarela */
+    color: #f0f0f0; /* Texto claro */
+    box-shadow: #ffc107 0px 4px 19px 0px; /* Sombra amarela */
+    font-family: 'Comic Neue', cursive; /* Fonte usada */
+}
+
+input {
+    width: 200px; /* Largura fixa */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+.sobrenos {
+    background-color: rgb(114, 62, 62); /* Fundo vinho escuro */
+    border-radius: 10px; /* Bordas arredondadas */
+    color: #f3f2dd; /* Cor clara do texto */
+    margin-top: 4%; /* Espaço em cima */
+    margin-left: 10%; /* Espaço à esquerda */
+    margin-right: 10%; /* Espaço à direita */
+    padding-bottom: 8px; /* Espaço inferior */
+    gap: 20px; /* Espaço entre elementos */
+    box-shadow: #8b4b4b 0px 3px 13px 0px; /* Sombra */
+    font-size: 20px; /* Tamanho do texto */
+}
+
+label {
+    margin-left:10%; /* Espaço à esquerda */
+}
+
+input, select {
+    padding: 10px; /* Espaço interno */
+    height: 20px; /* Altura dos campos */
+    width: 80%; /* Largura relativa */
+    margin-left: 10%; /* Espaço à esquerda */
+    margin-top: 10px; /* Espaço em cima */
+}
+
+textarea {
+    padding: 10px; /* Espaçamento interno */
+    height: 100px; /* Altura do campo de texto */
+    width: 80%; /* Largura */
+    margin-left: 10%; /* Espaço à esquerda */
+    margin-top: 10px; /* Espaço em cima */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+.enviar {
+    height: 44px; /* Altura do botão */
+    width: 20%; /* Largura menor */
+    display: flex; /* Layout flexível */
+    margin-left: 65%; /* Empurra para a direita */
+    font-family: 'Comic Neue', cursive; /* Fonte usada */
+    border-radius: 10px; /* Bordas arredondadas */
+    letter-spacing: 1.5px; /* Espaçamento das letras */
+    text-transform: uppercase; /* Letras maiúsculas */
+    font-size: 15px; /* Tamanho do texto */
+    transition: all .5s ease; /* Animação suave */
+}
+
+.enviar:hover {
+    letter-spacing: 3px; /* Espaçamento maior */
+    background-color: #ffc107; /* Cor de fundo amarela */
+    color: #f0f0f0; /* Texto claro */
+    box-shadow: #ffc107 0px 4px 19px 0px; /* Sombra amarela */
+    font-family: 'Comic Neue', cursive; /* Fonte usada */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+.sobrenos h1 {
+    color: #dadada; /* Texto claro */
+    text-align: center; /* Centraliza */
+    font-size: 32px; /* Texto grande */
+    font-family: 'Comic Neue', cursive; /* Fonte usada */
+}
+
+.sobrenos p {
+    color: #dadada; /* Texto claro */
+    text-align: center; /* Centraliza */
+    font-size: 22px; /* Texto médio */
+    font-family: 'Comic Neue', cursive; /* Fonte usada */
+}
+
+footer {
+    background-color: rgb(100, 61, 61); /* Fundo vinho escuro */
+    font-size: 20px; /* Texto médio */
+    color: rgb(213, 213, 213); /* Texto claro */
+    text-align: center; /* Centralizado */
+    margin-top: 60px; /* Espaço superior */
+    max-height: 140px; /* Altura máxima */
+    border-radius: 10px; /* Bordas arredondadas */
+    font-family: 'Comic Neue', cursive; /* Fonte usada */
+    box-shadow: #8b4b4b 0px 3px 13px 0px; /* Sombra */
+    padding-bottom: 20px; /* Espaço inferior */
+}
+
+.github img {
+    max-width: 8%; /* Limita tamanho da imagem do GitHub */
+}
+
+h3 {
+    color: rgb(240, 240, 240); /* Texto claro */
+    margin: 0 50px; /* Espaços laterais */
+    font-size: 20px; /* Texto médio */
+    font-family: 'Comic Neue', cursive; /* Fonte usada */
+}
+
+h4 {
+    color: rgb(0, 0, 0); /* Texto escuro */
+    font-size: 20px; /* Texto médio */
+    font-family: 'Comic Neue', cursive; /* Fonte usada */
+}
+
+h5 {
+    color: rgb(0, 0, 0); /* Texto escuro */
+    margin-left: 10px; /* Espaço à esquerda */
+    font-size: 15px; /* Texto pequeno */
+    font-family: 'Comic Neue', cursive; /* Fonte usada */
+}
+
+h6 {
+    color: rgb(240, 240, 240); /* Texto claro */
+    margin-left: 10px; /* Espaço à esquerda */
+    font-size: 16px; /* Texto pequeno */
+    font-family: 'Comic Neue', cursive; /* Fonte usada */
+}

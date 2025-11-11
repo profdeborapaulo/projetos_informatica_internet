@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Biblioteca</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="title">Biblioteca</div>
+      <nav>
+        <ul>
+          <a class="li" href="./index.html"><li>Home</li></a>
+          <a class="li" href="./livro.html"><li>livros</li></a>
+        </ul>
+      </nav>
+    </header>
+
+      <div class="categories">
+        <div class="item active" id="image1">
+          <div class="imagem">
+            <img src="./img/imagem_livro.jpg" alt="" />
+          </div>
+
+          <div class="content">
+            <p class="title1">Biblioteca Virtual</p>
+            <p class="text">
+              Nossa biblioteca virtual é um espaço digital que reúne e
+              disponibiliza livros, artigos, revistas, documentos e outros
+              materiais de forma online. Diferente das bibliotecas físicas, ela
+              pode ser acessada de qualquer lugar e a qualquer hora, bastando
+              ter conexão com a internet. Além de oferecer praticidade, permite
+              a pesquisa rápida por temas e amplia o acesso ao conhecimento, já
+              que muitas vezes reúne obras raras ou de difícil acesso físico. É
+              uma ferramenta importante para estudantes, pesquisadores e
+              qualquer pessoa interessada em aprender.
+            </p>
+          </div>
+        </div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="dots">
+        <div class="dot active" id="dot1"></div>
+        <div class="dot" id="dot2"></div>
+        <div class="dot" id="dot3"></div>
+        <div class="dot" id="dot4"></div>
+      </div>
+
+      <div class="highlights">
+        <div>
+          <p class="title">Livros em Destaques</p>
+        </div>
+        <div class="books">
+          <div class="book card" data-id="1">
+           <a href="./pagina_livros.html?id=1"><img class="imgHover" src="./img/livro_cientifico1.jpg" alt="" /></a>
+          </div>
+          <div class="book card" data-id="6">
+            <a href="./pagina_livros.html?id=6"><img class="imgHover" src="./img/livro_de_fantasia1.jpeg" alt="" /></a>
+          </div>
+          <div class="book card" data-id="11">
+            <a href="./pagina_livros.html?id=11"><img class="imgHover" src="./img/livro_de_suspense1.jpg" alt="" /> </a>
+          </div>
+        </div>
+      </div>
+      <footer></footer>
+
+    <script src="./app.js"></script>
+    <script src="./app_livro.js"></script>
+  </body>
+</html>

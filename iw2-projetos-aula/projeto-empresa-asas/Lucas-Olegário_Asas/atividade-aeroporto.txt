@@ -1,0 +1,172 @@
+// Codigo pertencente a empresa Asas
+
+let numero_adultos = 3 // numero de passageiros adultos
+let numero_crianca = 1 // numero de passageiros crianças
+let total_de_passageiros = numero_adultos + numero_crianca // total de passageiros adultos e crianças
+
+const classe= "executivo" // constante classe
+const destino= "Europa" // constante destino
+
+const norte= "Norte" // constante norte
+const sul= "Sul" // constante sul
+const asia = "Asia" // constante asiatico
+const europa= "Europa" // constante europeu
+const africa = "Africa" // constante africano
+
+// Norte 
+
+// Classe economica
+
+let economica_norte = 2500 // preço da viagem economica norte
+let economica_norte_criança = 1800 // preço da viagem economica norte para crianças
+let viagem_en = 0 // quantidade de viagens para o norte economica
+let viagem_enc = 0 // quantidade de viagens para o norte economica criança
+let preço_economica_norte = economica_norte*viagem_en // preço total da viagem para o norte economica com base no preço da passagem vezes a quatidade de passageiros
+let preço_economica_norte_criança = economica_norte_criança*viagem_enc // preço total da viagem para o norte crianças economica com base no preço da passagem vezes a quatidade de passageiros 
+let total_preço_economica_norte = preço_economica_norte + preço_economica_norte_criança // total do preço da viagem economica norte com base na somatoria do preço total da viagem para o norte economica e preço total da viagem para o norte crianças economica
+let total_viagem_norte_economica = viagem_en + viagem_enc // total da quantidade de passagens com base na somatória das viagens norte economica e viagens norte crianças economica
+
+// Classe executiva
+
+let executiva_norte = 2500 + ( (2500*20)/100 ) // preço da viagem executiva norte
+let executiva_norte_criança = 1800 + (1800*10)/100 // preço da viagem executiva norte para crianças
+let viagem_En = 0 // quantidade de viagens para o norte executiva
+let viagem_Enc = 0 // quantidade de viagens para o norte executiva criança
+let preço_executiva_norte = executiva_norte*viagem_En // preço total da viagem para o norte executiva com base no preço da passagem vezes a quatidade de passageiros
+let preço_executiva_norte_criança = executiva_norte_criança*viagem_Enc // preço total da viagem para o norte crianças executiva com base no preço da passagem vezes a quatidade de passageiros 
+let total_preço_executiva_norte = preço_executiva_norte + preço_executiva_norte_criança // total do preço da viagem executiva norte com base na somatoria do preço total da viagem para o norte executiva e preço total da viagem para o norte crianças executiva
+let total_viagem_norte_executiva = viagem_En + viagem_Enc // total da quantidade de passagens com base na somatória das viagens norte executiva e viagens norte crianças executiva
+
+
+// Sul
+
+let economica_sul = 3000 // preço economica sul
+let executiva_sul = 4000 // preço executiva sul
+let viagem_es = 0 // total de viagens economica sul
+let viagem_Es = 0 // total de viagens executiva sul 
+let total_preço_economica_sul = economica_sul*viagem_es // preço total da viagem sul economica com base na multiplicação do preço da passagem economica sul vezes o numero de passagens economicas 
+let total_preço_executivo_sul = executiva_sul*viagem_Es // preço total da viagem sul executiva com base na multiplicação do preço da passagem executiva sul vezes o numero de passagens executiva
+
+//Continente asiatico
+
+let economica_asia = 4600 // preço economica continente asiatico
+let executiva_asia =  6000 // preço executiva continente asiatico
+let viagem_ea = 0 // total de viagens economica continente asiatico 
+let viagem_Ea = 0 // total de viagens executiva continente asiatico
+let total_preço_economica_a = economica_asia*viagem_ea // preço total da viagem para o continente asiatico economica com base na multiplicação do preço da passagem economica para o continente asiatico vezes o numero de passagens economicas para o continente asiatico
+let total_preço_executiva_a = executiva_asia*viagem_Ea// preço total da viagem para o continente asiatico economica com base na multiplicação do preço da passagem economica para o continente asiatico vezes o numero de passagens economicas para o continente asiatico
+
+// Continente europeu
+
+let economica_europa = 5800 // preço economica continente europeu
+let executiva_europa = 7300 // preço executiva continente europeu
+let viagem_ee = 0 // total de viagens economica continente europeu
+let viagem_Ee = 4 // total de viagens executiva continente europeu
+let total_preço_economica_E = economica_europa*viagem_ee // preço total da viagem para o continente europeu economica com base na multiplicação do preço da passagem economica para o continente europeu vezes o numero de passagens economicas para o continente europeu
+let total_preço_executiva_E = executiva_europa*viagem_Ee // preço total da viagem para o continente europeu economica com base na multiplicação do preço da passagem economica para o continente europeu vezes o numero de passagens economicas para o continente europeu
+
+//Continente africano
+
+let economica_africa =  4200 // preço economica continente africano
+let executiva_africa =  6900 // preço executiva continente africano
+let viagem_eA = 0 // total de viagens economica continente africano
+let viagem_EA = 0 // total de viagens executiva continente africano
+let total_preço_economica_A= economica_africa*viagem_eA // preço total da viagem para o continente africano economica com base na multiplicação do preço da passagem economica para o continente africano vezes o numero de passagens economicas para o continente africano
+let total_preço_executiva_A= executiva_africa*viagem_EA // preço total da viagem para o continente africano economica com base na multiplicação do preço da passagem africano para o continente africano vezes o numero de passagens economicas para o continente africano
+
+// Outras variaveis
+
+let custo_total_viagens = 0 // custo total das viagens
+let total_economica = 0 // total de passagens economicas
+let total_executiva = 0 // total de passagens executivas
+
+
+
+// If / Else
+
+if (destino==norte){ // Se o destino for norte 
+    if (classe=="executivo"){ // Se a classe for executiva 
+       ( custo_total_viagens = total_preço_executiva_norte, total_executiva = total_viagem_norte_executiva) // o custo total das viagens será igual total do preço da viagem executiva norte e o total de passagens executivas será igual total de viagens norte executiva
+       
+   
+
+    }
+    else if(classe=="economico"){ // Se senão a classe for executiva 
+        (custo_total_viagens = total_preço_economica_norte, total_economica = total_viagem_norte_economica)// o custo total das viagens será igual total do preço da viagem economica norte e o total de passagens economicas será igual total de viagens norte executiva
+     
+  
+}
+
+}
+else if(destino==sul){ // Se senão o destino for sul  
+    if(classe=="executivo"){ // Se a classe for executiva 
+        (custo_total_viagens = total_preço_executivo_sul, total_executiva = viagem_Es) // o custo total das viagens será igual total do preço da viagem executiva sul e o total de passagens executivas será igual o numero de viagens sul executiva
+     
+        
+    
+        
+    }
+    else if(classe=="economico"){  // Se senão a classe for economica 
+        (custo_total_viagens = total_preço_economica_sul, total_economica = viagem_es)  // o custo total das viagens será igual total do preço da viagem economica sul e o total de passagens economicas será igual o numero de viagens sul economica
+      
+
+    }
+    
+}
+
+else if(destino==europa){ // Se senão o destino for o continente europeu
+    if(classe=="executivo"){ // Se a classe for executiva 
+        (custo_total_viagens = total_preço_executiva_E, total_executiva = viagem_Ee) // o custo total das viagens será igual total do preço da viagem executiva para o continente europeu e o total de passagens executivas será igual o numero de viagens para o continente europeu executiva
+    }
+    else if(classe=="economico"){ // Se senão a classe for economica
+        (custo_total_viagens = total_preço_economica_E, total_economica = viagem_ee)  // o custo total das viagens será igual total do preço da viagem economica para o continente europeu e o total de passagens economicas será igual o numero de viagens para o continente europeu economica
+       
+    }
+}
+
+else if(destino==africa){ // Se senão o destino for o continente africano 
+    if(classe=="executivo"){ // Se a classe for executiva 
+        (custo_total_viagens = total_preço_executiva_A, total_executiva = viagem_EA) // o custo total das viagens será igual total do preço da viagem executiva para o continente africano e o total de passagens executivas será igual o numero de viagens para o continente africano executiva
+        
+
+    }
+    else if(classe=="economico"){ // Se senão a classe for economica
+        (custo_total_viagens = total_preço_economica_A, total_economica = viagem_eA) // o custo total das viagens será igual total do preço da viagem economica para o continente africano e o total de passagens economicas será igual o numero de viagens para o continente africano economica
+       
+
+    }
+
+}
+
+else if(destino==asia){ // Se senão o destino for o continente asiatico
+    if(classe=="executivo"){ // Se a classe for executiva 
+        (custo_total_viagens = total_preço_executiva_a, total_executiva = viagem_Ea)  // o custo total das viagens será igual total do preço da viagem executiva para o continente asiatico e o total de passagens executivas será igual o numero de viagens para o continente asiatico executiva 
+      
+
+    }
+    else if(classe=="economico"){ // Se senão a classe for economica
+        (custo_total_viagens = total_preço_economica_a, total_economica = viagem_ea) // o custo total das viagens será igual total do preço da viagem economica para o continente asiatico e o total de passagens economicas será igual o numero de viagens para o continente asiatico economica
+     
+
+    }
+}
+
+// Console.log
+
+console.log("*** O custo total do seu pacote é:") // console log mostrar o custo total do pacote
+console.log() // console log pular linha
+console.log("A Quantidade de Passageiros Adultos é:", numero_adultos) // console log mostrar a quantidade de passageiros adultos 
+console.log() // console log pular linha
+console.log("A Quantidade de Passageiros Infantis é:",numero_crianca) // console log mostrar a quantidade de passageiros crianças
+console.log() // console log pular linha
+console.log("A Quantidade de Passagens Executiva é:", total_executiva) // console log mostrar a quantidade de passagens executivas
+console.log() // console log pular linha
+console.log("A Quantidade de Passagens Economica é:", total_economica) // console log mostrar a quantidade de passagens economicas
+console.log() // console log pular linha
+console.log("O destino escolhido é:",destino) // console log mostrar o destino 
+console.log()// console log pular linha
+console.log("A Classe do Seu Voo é:",classe) // console log mostrar oa classe
+console.log() // console log pular linha 
+console.log("O custo total da viagem é:", custo_total_viagens) // console log mostrar o custo total
+console.log() // console log pular linha
+console.log("*** Fim do programa ***") // console log fim do programa

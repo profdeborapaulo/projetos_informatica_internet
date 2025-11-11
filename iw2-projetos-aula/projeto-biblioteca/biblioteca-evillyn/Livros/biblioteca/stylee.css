@@ -1,0 +1,329 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --bg-color: #1a1a1a;
+  --text-color: #f0f0f0;
+  --card-bg: #2d2d2d;
+  --primary-color: #000000;
+  --hover-overlay: rgba(0, 0, 0, 0.6);
+}
+
+/* ==================== RESET ==================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* ==================== LAYOUT PRINCIPAL ==================== */
+.container {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* NAVBAR */
+#nav {
+  position: relative;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+  box-sizing: border-box;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/* Classe para esconder a navbar */
+#nav.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none; /* para não atrapalhar cliques */
+  position: absolute; /* para tirar do fluxo fixo */
+}
+
+
+.logo img {
+  max-width: 100px;
+}
+
+#nav #nav-part2 {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+#links {
+  padding: 10px;
+}
+
+#nav-part2 #links a {
+  position: relative;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 14px;
+  margin: 0 20px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#nav-part2 #links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  transition: width 0.3s ease;
+}
+
+#nav-part2 #links a:hover {
+  color: black;
+  transform: scale(1.1);
+}
+
+#nav-part2 #links a:hover::after {
+  width: 100%;
+}
+
+#icons {
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #ffffff;
+}
+
+#icons i {
+  font-size: 18px;
+  margin: 0 20px;
+  font-weight: 100;
+}
+
+.logo-fixa {
+  position: fixed;
+  top: 20px;
+  left: 30px;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.logo-fixa img {
+  width: 90px;
+  height: auto;
+}
+
+/* BOTÃO */
+.btn {
+  display: inline-block;
+  background-color: transparent;
+  border: 1.1px solid #000;
+  border-radius: 8px;
+  color: #000;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 12px 24px;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background-color: #000;
+  color: #fff;
+  border-color: rgb(99, 99, 99);
+}
+
+/* CURSOR */
+#cursor {
+  height: 180px;
+  width: 180px;
+  background-color: rgba(224, 139, 189, 0.814);
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+/* ==================== SIDEBAR ==================== */
+.sidebar {
+  background: #fff;
+  padding: 2rem 1.5rem;
+  border: 1px solid #ddd;
+  border-bottom: 3px solid #000000; /* linha dourada inferior */
+  text-align: center;
+  border-radius: 0; /* sem cantos arredondados */
+  height: 400px; /* altura fixa */
+  overflow-y: auto; /* adiciona rolagem se ultrapassar */
+}
+
+/* Título */
+.sidebar-title {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: #000000; /* dourado */
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Linha decorativa abaixo do título */
+.sidebar-title::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: #000;
+  margin: 0.5rem auto 1rem;
+}
+
+/* Lista de categorias */
+.categories {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.categories li {
+  border-bottom: 1px solid #eee;
+}
+
+.categories a {
+  display: block;
+  padding: 0.8rem 0.5rem;
+  text-decoration: none;
+  color: #000;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Hover */
+.categories a:hover {
+  background: #f7f7f7;
+  color: #8a5858; /* dourado */
+}
+
+
+/* ==================== GRID DE LIVROS ==================== */
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Card fixo com overlay */
+.book-card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2/3; /* proporção igual para todos */
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 8px;
+  background: var(--card-bg);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+}
+
+.book-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Mantém proporção e corta excesso */
+  display: block;
+}
+
+/* ==================== OVERLAY (HOVER) ==================== */
+.book-card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--hover-overlay);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.book-card:hover .overlay {
+  opacity: 1;
+}
+
+.overlay h3 {
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.overlay p {
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+.overlay .btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.overlay .btn:hover {
+  background-color: #ffffff;
+  color: black;
+}
+
+/* ==================== BOTÃO "VER MAIS" ==================== */
+.load-more-btn {
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 2rem auto;
+  display: block;
+}
+
+.load-more-btn:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+/* ==================== RESPONSIVIDADE ==================== */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    max-width: 400px;
+    margin: 0 auto 2rem;
+  }
+}

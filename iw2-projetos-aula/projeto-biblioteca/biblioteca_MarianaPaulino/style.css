@@ -1,0 +1,876 @@
+body {
+	font-family: 'Lato', Arial, sans-serif;
+	margin: 0;
+	background: #f4f4f4;
+	color: #222;
+    text-align: center;
+	background-image: url('img/back.png') ;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+main {
+    flex: 1;
+}
+
+
+/*escritas*/
+p {
+	font-size: 1.1rem;
+	line-height: 1.6;
+	color: #383838;
+}
+p.direitos {
+	font-size: 0.9rem;
+	color: #383838;
+}
+h1 {
+ font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #482671;
+}
+h1.raphael_montes {
+   color: #EF27A6;
+}
+h1.narrativa {
+   color: #482671;
+   text-align: center;
+}
+h1.linha-dotempo {
+   text-align: center;
+  margin-bottom: 20px; 
+  color: #482671;
+}
+
+
+
+/* nav bar */
+nav {
+    background: #D7C9AA;
+    padding: 22px;
+    position: relative;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+nav ul li a {
+    margin: 0 40px;
+    text-decoration: none;
+    color: #482671;
+    font-size: 1.1rem;
+	font-family: Lato, sans-serif;
+	font-weight: 800;
+     display: inline-block; 
+    transition: transform 0.3s ease;
+ 
+}
+nav ul li a:hover {
+ transform: scale(1.1);
+}
+.logo-li {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+img.logo {
+    width: 127px;
+    height: auto;
+    display: block;
+    margin: 4px;
+    padding: 0;
+}
+
+
+
+
+
+
+/*index*/
+/*bem vindos e sobre a narrativa*/
+.descricao {
+    max-width: 1300px;
+    width: 100%;
+    background: #fff;
+    border-radius: 8px;
+    font-size: 1.1em;
+    box-sizing: border-box;
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 32px auto;
+    padding: 48px 32px;
+    gap: 32px;
+}
+
+.descricao-texto {
+    flex: 1;
+    text-align: left;
+}
+.sobre {
+	text-align: justify;
+	line-height: 1.6;
+	font-size: 1.1rem;
+	font-weight: 500;
+}
+.logo-home {
+    width: 300px;
+    height: auto;
+    display: block;
+}
+.btn-livros {
+   transition: 0.3s;
+   width: 200px;
+    height: auto;
+}
+
+.btn-livros:hover {
+   transform: scale(1.05);
+}
+
+
+/*sobre nós e sobre autor*/
+.sobre-nos {
+    max-width: 1300px;
+    width: 100%;
+    background: #fff;
+    border-radius: 8px;
+    font-size: 1.1em;
+    box-sizing: border-box;
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 32px auto;
+    padding: 48px 32px;
+    gap: 32px;
+}
+.sobrenos-foto {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+.sobre-nos-texto {
+    text-align: left;
+    font-size: 1.08em;
+    color: #383838;
+	line-height: 1.6;
+	flex: 1;
+	text-align: justify;
+	font-weight: 500;
+}
+
+/*linha do tempo*/
+.linhadotempo-container {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px 15px;
+  max-width: 1300px;
+  margin: auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+}
+
+.linha-com-botoes {
+  display: flex;
+  align-items: center; 
+  width: 100%;
+}
+
+.linhadotempo-horizontal {
+  display: flex;
+  overflow-x: scroll;
+  padding: 20px 0;
+  gap: 30px;
+  scroll-behavior: smooth;
+  flex: 1; 
+}
+
+.linhadotempo-horizontal::-webkit-scrollbar {
+  display: none;
+}
+
+.evento {
+  min-width: 220px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  text-align: center;
+  flex-shrink: 0;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background: #fafafa;
+}
+
+.evento:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.evento h3 {
+  margin-bottom: 10px;
+  color: #482671;
+  font-weight: bold;
+}
+
+.icone {
+  font-size: 30px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.evento.nascimento { border-top: 4px solid #0b7a75; }   
+.evento.obra { border-top: 4px solid #ef27a6; }        
+.evento.destaque { border-top: 4px solid #7b2d26; }     
+
+
+.botao-scroll-esquerda,
+.botao-scroll-direita {
+  background: #482671; 
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 20px;
+  transition: 0.3s;
+  width: 50px;       
+  height: 50px;      
+  flex-shrink: 0;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.botao-scroll-esquerda:hover,
+.botao-scroll-direita:hover {
+  background: #ef27a6; 
+}
+
+
+
+
+
+/*livros*/
+.descubra{
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #482671;
+  font-size: 1.8em;
+}
+
+#livros {
+	background: #fff;
+	padding: 40px 20px;
+	border-radius: 8px;
+	max-width: 1300px;
+	margin: 32px auto;
+}
+
+
+.colunas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.card-livro
+{
+    border: 1px solid #ccc;
+    border-radius: 14px;
+    width: 260px;
+    max-width: 95%;
+    text-align: center;
+    box-shadow: 2px 2px 16px #eee;
+    padding: 24px 18px;
+    background: #fafafa;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.card-livro:hover,
+.livro:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 4px 8px 20px #bbb;
+}
+.card-livro img,
+.livro img {
+    width: 180px;
+    max-width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+
+
+
+/*livro informações*/
+.foto-livro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+    padding: 16px;
+    margin-right: 32px;
+    min-width: 180px;
+    max-width: 20%;
+    height: auto;
+}
+
+.foto-livro img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+}
+.livro-texto {
+    text-align: left;
+    font-size: 1.08em;
+    color: #383838;
+	line-height: 1.6;
+	flex: 1;
+	text-align: justify;
+	font-weight: 500;
+}
+.linha{
+	height: 2px;
+	background-color: #D7C9AA;
+	border: none;
+	width: 100%;
+	max-width: 100%;
+}
+.detalhes{
+	max-width: 100%;
+	width: 100%;
+	margin: auto;
+	padding: 10px;
+	gap: 100px;
+	border-radius: 8px;
+	display: flex;
+	
+
+}
+.detalhes-item{
+	font-size: 15px;
+	color: #482671;
+	font-weight: 500;
+
+}
+span{
+    color: #383838;
+}
+.voltar{
+    width: 50px;
+	border: none;
+	cursor: pointer;
+	font-size: 1rem;
+	transition: background 0.2s, transform 0.2s;
+}
+/*ouvir sinopse*/
+button {
+    margin-bottom: 20px;
+    width: 200px;
+    height: auto;
+    background: #482671;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+
+/*audio*/
+.audio {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+}
+
+.audio-botao {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;    
+    padding: 10px;
+
+}
+.comprar {
+    display: flex;
+    justify-content: center;
+     margin-top: 20px;
+    margin-bottom: 20px;
+    height: auto;
+    background: #ffffff;
+    text-decoration: none;
+    
+ 
+}
+.botao-comprar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.comprar button {
+    background: #482671;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s;
+    width: 100%;
+    
+}
+.comprar button, .comprar button a {
+    color: #fff;
+    text-decoration: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.comprar button:hover {
+    color: #fff;
+    transform: scale(1.05);
+}
+#audio-play audio {
+    width: 100%;
+    min-width:25em ;
+    border-radius: 8px;
+}
+.audio {
+    display: flex;
+    max-width: 100%;
+}
+
+
+/*formulario contato*/
+.container {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.intro {
+  margin-bottom: 20px;
+}
+
+form {
+  display: grid;
+  gap: 15px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+}
+
+.campo label {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #482671;
+  display: flex;
+  align-items: flex-start;
+}
+
+.input, textarea, select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  align-items: center;
+}
+
+.enviar {
+  background: #482671;
+  color: white;
+}
+
+.limpar {
+  background: #eee;
+  color: #333;
+}
+
+
+/*footer*/
+footer {
+    background: #D7C9AA;
+    color: #482671;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 24px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+.footer-texto {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1rem; 
+    gap: 8px;
+    text-align: left;
+}
+
+
+.footer-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.footer-icons img {
+    width: 32px;
+    height: auto;
+    display: inline-block;
+    transition: transform 0.2s;
+}
+
+.footer-icons img:hover {
+    transform: scale(1.1);
+}
+
+
+
+/* responsividade */
+
+@media (max-width: 1200px) {
+
+    nav ul li a {
+        font-size: 1rem;
+        margin: 0 25px;
+    }
+    img.logo {
+        width: 110px;
+    }
+
+    .descricao, .sobre-nos {
+        padding: 36px 24px;
+        gap: 24px;
+    }
+    .logo-home, .sobrenos-foto {
+        width: 250px;
+    }
+
+    .evento {
+        min-width: 200px;
+        padding: 18px;
+    }
+    .botao-scroll-esquerda, .botao-scroll-direita {
+        width: 45px;
+        height: 45px;
+        font-size: 22px;
+    }
+
+    .card-livro {
+        width: 220px;
+        padding: 20px 15px;
+    }
+    .card-livro img {
+        width: 160px;
+        height: 220px;
+    }
+    #livros {
+        padding: 32px 16px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .footer-icons {
+        justify-content: center;
+        margin: 0;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    nav ul {
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 10px;
+    }
+    nav ul li a {
+        margin: 0 15px;
+        font-size: 0.95rem;
+    }
+    .logo-li {
+        position: static;
+        transform: none;
+        margin-bottom: 10px;
+    }
+    img.logo {
+        width: 100px;
+        margin: 0 auto 10px auto;
+        display: block;
+    }
+
+
+    .descricao, .sobre-nos {
+        flex-direction: column;
+        padding: 20px 16px;
+        gap: 16px;
+    }
+    .descricao-texto, .sobre-nos-texto {
+        text-align: center;
+        
+    }
+    .logo-home, .sobrenos-foto {
+        width: 180px;
+        margin: auto;
+    }
+
+
+    .linhadotempo-horizontal {
+        gap: 15px;
+    }
+    .evento {
+        min-width: 160px;
+        padding: 14px;
+    }
+
+
+    .colunas {
+        gap: 20px;
+    }
+    .card-livro {
+        width: 100%;
+        max-width: 180px; 
+        padding: 16px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .card-livro img {
+        width: 100%;
+        height: auto;
+        max-height: 180px;
+        object-fit: cover;
+        border-radius: 6px;
+    }
+
+ 
+    .foto-livro {
+        max-width: 80%;
+        margin: 16px auto;
+    }
+    .livro-texto {
+        font-size: 0.95em;
+    }
+  
+    .detalhes {
+        flex-direction: column;
+        gap: 12px;
+        padding: 10px;
+    }
+
+  
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 700px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 10px;
+        min-height: unset;
+    }
+  
+    .logo-li {
+        position: static;
+        left: unset;
+        top: unset;
+        transform: none;
+        margin-bottom: 10px;
+    }
+    img.logo {
+        margin: 0 auto 10px auto;
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+
+    nav ul li a {
+        font-size: 0.85rem;
+        margin: 0;
+    
+    }
+    
+    img.logo {
+        width: 90px;
+    }
+
+    .descricao, .sobre-nos {
+        padding: 16px 12px;
+        gap: 12px;
+ 
+    }
+    .logo-home, .sobrenos-foto {
+        width: 140px;
+    }
+
+    .linhadotempo-horizontal {
+        gap: 10px;
+    }
+    .evento {
+        min-width: 140px;
+        padding: 12px;
+    }
+
+    .colunas {
+        gap: 15px;
+    }
+    .card-livro {
+        width: 150px;
+        padding: 14px;
+    }
+    .card-livro img {
+        width: 100px;
+        height: 150px;
+    }
+
+    .foto-livro {
+        max-width: 100%;
+    }
+    .livro-texto {
+        font-size: 0.9em;
+        max-width: 100%;
+    }
+
+    .detalhes {
+        gap: 8px;
+    }
+    .audio{
+        flex-direction: column;
+        gap: 12px;
+           max-width: 100%;
+  
+    }
+   .audio-botao{
+        width: 50%;
+        background-color: rgb(119, 81, 207);
+   }
+   #audio-play{
+    max-width:100%; 
+    width: 100%;
+   }
+  
+   #audio-play audio {
+        width: 100%;
+        min-width: 300px;
+        max-width: 100%;
+        display: block;
+    }
+    .botao-comprar{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+   }
+
+@media (max-width: 900px) {
+    .botao-comprar {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 12px; 
+    }
+    .sobre-nos {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 16px 8px;
+        gap: 12px;
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .sobrenos-foto {
+        width: 120px;
+        margin-bottom: 10px;
+    }
+    .sobre-nos-texto {
+        text-align: center;
+        font-size: 0.95em;
+        padding: 0 4px;
+        text-align: justify;
+    }
+}

@@ -1,0 +1,300 @@
+body, ul, li, p{
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;   
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 1.2rem;
+}
+h1{
+    text-align: center;
+}
+h6{
+    text-align: center;
+    
+}
+.princ{
+    text-align: center;
+    color: rgb(79, 16, 121);
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+
+.menu{
+    display: flex;
+}
+.menu li{
+    margin-left: 20px;;
+}
+.menu a{
+    display: block;
+    background-color: #474646;
+    border-radius: 10%;
+}
+
+.galeria{
+    padding-left: 30px;
+    width: 500px;
+}
+.galeriatex{
+    position: relative;
+    left: 700px;
+    bottom: 280px;
+    width: 300px;
+}
+
+.galeriatex2{
+    position: relative;
+    left: 700px;
+    bottom: 280px;
+    width: 300px;
+}
+.item{
+    background-color: #3b58b8;
+    color: #fff;
+    padding: 20px;
+    margin: 5px;
+    width: 200px;
+  display: inline-block;
+}
+
+img{
+margin: 0 auto;
+
+}
+a{
+    color: #000000;
+    background-color: #ffffff;
+}
+.inicio {
+    background-color: #000000;
+    color: #e2e2e2;
+    padding: 20px;
+}
+.carousel{
+ position: absolute;
+    width: 800px;
+    height: 200px;
+    margin: 0 auto;
+
+}
+.oqe h2{
+    color: rgb(170, 126, 16);
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold
+}
+
+.habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza horizontalmente */
+    gap: 20px; /* Espaçamento entre imagens */
+    margin-top: 20px;
+}
+
+.habilidades img {
+    width: 100px; /* Ajuste o tamanho das imagens */
+    height: auto;
+    transition: transform 0.3s ease;
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra às imagens */
+}
+
+.habilidades img:hover {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3); /* Aumenta a sombra ao passar o mouse */
+}
+
+
+.oqee p {
+    text-align: justify; /* Alinha o texto para facilitar a leitura */
+    line-height: 1.6; /* Melhora o espaçamento entre as linhas */
+    font-size: 1.4rem; /* Tamanho padrão para o texto */
+}
+
+@media (max-width: 768px) {
+    .oqe p {
+        font-size: 1.9rem; /* Ajusta o tamanho do texto para telas menores */
+        padding: 10px; /* Adiciona espaçamento interno em telas menores */
+    }
+}
+
+@media (min-width: 1200px) {
+    .oqe p {
+        .oqe p{
+   
+    color: rgb(0, 0, 0);
+    text-align: justify;
+    font-size: 21px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 20px;
+    width: 1300px;
+    height: 200px;
+}
+    }
+}
+
+.oqee h2{
+    color: rgb(170, 126, 16);
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold
+}
+
+.oqe img{
+    
+        align-items: center;
+        left: 280px;
+           width: 150px;
+           background-color: #000000;
+           color: #fff;
+           padding: 20px;
+           margin: 5 px;
+      
+        
+       }
+.oqe p{
+   
+    color: rgb(0, 0, 0);
+    text-align: justify;
+    font-size: 21px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 20px;
+    width: 1300px;
+    height: 200px;
+}
+
+.skinprincipal{
+
+    padding-left:60px;
+    padding-right: 50px;
+    width: 900px;
+    height: 500px;
+    display: block;
+}
+.skin{
+
+ align-items: center;
+ position: relative;
+
+    width: 200px;
+    background-color: #3b58b8;
+    color: #fff;
+    padding: 20px;
+    margin: 5 px;
+    display: inline-block;
+left: 100px;
+    
+
+
+ 
+}
+.formulario {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contact-form {
+    background: #4c5be7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(29, 13, 104, 0.1);
+    width: 100%;
+    max-width: 600px;
+   
+}
+.contact-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid rgb(57, 54, 230);
+    box-sizing: border-box;
+}
+.contact-form textarea {
+    resize: vertical;
+    height: 150px;
+}
+.contact-form button {
+    background-color: rgb(43, 40, 196);
+    color: #000000;
+    border: none;
+    padding: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.contact-form button:hover {
+    background-color: #f9f8ff;
+}
+ .sobre{
+text-align: center;
+font-family: Arial, Helvetica, sans-serif;
+padding: 5px;
+ }
+
+ .container {
+     text-align: justify;
+     background-color: #ccd4f3;
+     padding: 20px;
+     margin: 10px auto;
+ }
+.container1{
+ 
+    padding-left: 230px;
+    padding-right: 230px;
+    text-align: justify;
+    background-color: #ffffff;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+    
+}
+
+
+.container2{
+   
+    padding: 50px;
+    text-align: justify;
+    border-radius: 10%;
+    background-color: #ffffff;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#container5{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: flex-start;
+    background-color: #ffffff;
+}
+
+.importancia{
+    color: rgb(79, 16, 121);
+}
+
+.imagem5{
+    align-items: center;
+    width: 200px;
+}

@@ -1,0 +1,523 @@
+/* ==================== ANIMAÇÃO PAC-MAN ==================== */
+/* GIF do Pac-Man com animação de desaparecimento */
+.pacman {
+  width: 400px;
+  height: auto;
+  animation: desaparecer 1s forwards; /* Animação de fade out */
+  animation-delay: 1s; /* Delay de 1 segundo */
+}
+
+/* ==================== TEXTO ANIMADO ==================== */
+/* Texto que aparece após o Pac-Man desaparecer */
+.texto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centraliza perfeitamente */
+  text-align: center;
+  opacity: 0; /* Inicialmente invisível */
+  animation: aparecer 1s forwards; /* Animação de fade in */
+  animation-delay: 2s; /* Aparece após 2 segundos */
+}
+
+/* Título do texto animado */
+.texto h1 {
+  font-size: 2.5rem;
+  color: #141657; /* Azul escuro */
+}
+
+/* Parágrafo do texto animado */
+.texto p {
+  font-size: 1.2rem;
+  color: #3a3a3a; /* Cinza escuro */
+}
+
+/* ==================== KEYFRAMES DAS ANIMAÇÕES ==================== */
+/* Animação de aparecer (fade in) */
+@keyframes aparecer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animação de desaparecer (fade out) */
+@keyframes desaparecer {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Animação do carrossel infinito */
+@keyframes scroll-carousel {
+  0% {
+    transform: translateX(0); /* Posição inicial */
+  }
+  100% {
+    transform: translateX(-50%); /* Move para a esquerda */
+  }
+}
+
+/* ==================== MODAL DE DETALHES DO LIVRO ==================== */
+/* Overlay do modal */
+.modal {
+  display: none; /* Inicialmente oculto */
+  position: fixed;
+  z-index: 1000; /* Fica acima de tudo */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+  animation: fadeIn 0.3s ease;
+}
+
+/* Conteúdo do modal */
+.modal-content {
+  background-color: white;
+  margin: 2% auto;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto; /* Scroll se necessário */
+  position: relative;
+  animation: slideIn 0.3s ease;
+}
+
+/* Botão de fechar modal */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+/* Efeito hover no botão fechar */
+.close:hover,
+.close:focus {
+  color: #000; /* Fica preto no hover */
+}
+
+/* ==================== LAYOUT DO MODAL ==================== */
+/* Grid para organizar capa e informações */
+.book-detail {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Capa menor, info maior */
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+/* Capa do livro no modal */
+.modal-book-cover {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Container das informações */
+.book-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ==================== INFORMAÇÕES DO LIVRO NO MODAL ==================== */
+/* Título do livro no modal */
+.modal-book-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #141657;
+  font-family: "Arvo", serif;
+}
+
+/* Autor do livro no modal */
+.modal-book-author {
+  font-size: 1.125rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+/* Container dos preços no modal */
+.modal-book-price {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Preços maiores no modal */
+.modal-book-price .sale-price {
+  font-size: 1.5rem;
+}
+
+.modal-book-price .original-price {
+  font-size: 1rem;
+}
+
+/* ==================== SINOPSE E ÁUDIO ==================== */
+/* Seção da sinopse */
+.book-synopsis {
+  margin-bottom: 1.5rem;
+}
+
+/* Título da sinopse */
+.book-synopsis h3 {
+  color: #141657;
+  margin-bottom: 0.5rem;
+  font-family: "Arvo", serif;
+}
+
+/* Texto da sinopse */
+.book-synopsis p {
+  line-height: 1.6; /* Espaçamento entre linhas */
+  color: #3a3a3a;
+}
+
+/* ==================== PLAYER DE ÁUDIO ==================== */
+/* Container do player */
+.audio-player {
+  margin-top: 1rem;
+}
+
+/* Título do player */
+.audio-player h3 {
+  color: #141657;
+  margin-bottom: 0.5rem;
+  font-family: "Arvo", serif;
+}
+
+/* Elemento de áudio */
+.audio-player audio {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+/* Nota sobre o áudio */
+.audio-note {
+  font-size: 0.875rem;
+  color: #666;
+  font-style: italic;
+}
+
+/* ==================== ANIMAÇÕES DO MODAL ==================== */
+/* Fade in do overlay */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Slide in do conteúdo */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px); /* Vem de cima */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==================== DESIGN RESPONSIVO ==================== */
+/* Tablets e dispositivos médios */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .nav-item {
+    margin: 0.25rem 0;
+  }
+
+  /* Grade de livros responsiva */
+  .books-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+
+  /* Modal em coluna única */
+  .book-detail {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Modal menor em mobile */
+  .modal-content {
+    margin: 5% auto;
+    padding: 1rem;
+    width: 95%;
+  }
+
+  /* Carrossel mais compacto */
+  .carousel-track {
+    gap: 1.5rem;
+  }
+
+  /* Imagens de autores menores */
+  .author-image {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* Smartphones */
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .logo {
+    width: 200px;
+  }
+
+  /* Uma coluna apenas */
+  .books-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==================== ESTILOS DA PÁGINA DE CONTATO ==================== */
+/* Container principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Seção com animação */
+.animacao-section {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  margin-top: 10px;
+  height: 300px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* GIF do Pac-Man na página de contato */
+.pacman-gif {
+  width: 200px;
+  height: 200px;
+  animation: desaparecer 1s forwards;
+  animation-delay: 1s;
+}
+
+/* Texto que aparece após a animação */
+.animacao-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+  animation: aparecer 1s forwards;
+  animation-delay: 2s;
+}
+
+/* Título  */
+.animacao-text h1 {
+  font-family: "Arvo", serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #141657;
+  margin-bottom: 1rem;
+}
+
+/* Subtítulo do hero */
+.animacao-text p {
+  font-size: 1.25rem;
+  color: #3a3a3a;
+}
+
+/* ==================== GRADE DE CONTATOS ==================== */
+/* Grid responsivo dos cartões de contato */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Cartão individual de contato */
+.contact-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Efeito hover no cartão */
+.contact-card:hover {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Ícone do cartão de contato */
+.contact-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  color: white;
+  font-size: 2rem;
+}
+
+/* Cor de fundo do ícone */
+.icon {
+  background-color: #60a5fa; /* Azul claro */
+}
+
+/* Título do cartão */
+.contact-card h2 {
+  font-family: "Arvo", serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #141657;
+  margin-bottom: 0.5rem;
+}
+
+/* Subtítulo do cartão */
+.contact-card h4 {
+  color: #3a3a3a;
+  margin-bottom: 1rem;
+}
+
+/* Descrição do cartão */
+.contact-card p {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+}
+
+/* Botão de contato */
+.contact-btn {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+/* Estilo do botão */
+.butao {
+  background-color: #3b82f6; /* Azul */
+}
+
+/* Hover do botão */
+.butao:hover {
+  background-color: #2563eb; /* Azul mais escuro */
+}
+
+/* ==================== INFORMAÇÕES ADICIONAIS ==================== */
+/* Seção de informações extras */
+.additional-info {
+  text-align: center;
+  margin-top: 3rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Título das informações */
+.additional-info h3 {
+  font-family: "Arvo", serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #141657;
+  margin-bottom: 1rem;
+}
+
+/* Texto das informações */
+.additional-info p {
+  color: #3a3a3a;
+  line-height: 1.8;
+}
+
+/* Texto pequeno */
+.additional-info .small-text {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-top: 1rem;
+}
+
+/* ==================== RESPONSIVIDADE ADICIONAL ==================== */
+/* Desktop */
+@media (min-width: 768px) {
+  .container {
+    padding: 3rem 2rem;
+  }
+
+  .animacao-section {
+    height: 400px;
+    margin-top: 10;
+  }
+
+  .pacman-gif {
+    width: 300px;
+    height: 300px;
+  }
+
+  .animacao-text h1 {
+    font-size: 3rem;
+  }
+
+  /* Três colunas no desktop */
+  .contact-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tablet */
+@media (min-width: 640px) and (max-width: 767px) {
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ==================== ÍCONES USANDO UNICODE ==================== */
+/* Ícones representados por emojis */
+.icon-whatsapp::before {
+  content: "💬"; /* Emoji de conversa */
+}
+
+.icon-email::before {
+  content: "✉️"; /* Emoji de email */
+}
+
+.icon-telegram::before {
+  content: "📤"; /* Emoji de envio */
+}

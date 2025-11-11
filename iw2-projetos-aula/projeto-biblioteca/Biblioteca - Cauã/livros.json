@@ -1,0 +1,88 @@
+[
+    {
+        "id": 1,
+        "capa": "img/TBGE.png",
+        "titulo": "O Ovo da Cabra Negra",
+        "genero": ["Terror,", "Drama"],
+        "autor": "Sen Takatsuki",
+        "editora": "JBC",
+        "ISBN": 9788533100015,
+        "ano": 2010,
+        "edicao": "1°",
+        "paginas": 273,
+        "sinopse": " O Ovo da Cabra Negra gira em torno da relação entre um jovem e sua mãe, uma assassina em série conhecida como 'A Cabra Negra'. Apesar de desaprovar as ações cruéis de sua mãe, o jovem começa a perceber impulsos semelhantes dentro de si mesmo. A história explora temas de violência gráfica e o estado mental do protagonista",
+        "audio": "audios/sinopseTBGE.opus"
+    },
+    {
+        "id": 2,
+        "capa": "img/metamorfose.png",
+        "titulo": "A Metamorfose",
+        "genero": ["Psicológico,", "Ficção"],
+        "autor": "Franz Kafka",
+        "editora": "Via Leitura",
+        "ISBN": 9788567097459,
+        "ano": 1915,
+        "edicao": "1°",
+        "paginas": 96,
+        "sinopse": "A Metamorfose gira em torno de Gregor Samsa, um caixeiro-viajante que, certa manhã, desperta transformado em um inseto gigante. Apesar de tentar continuar com sua rotina e responsabilidades familiares, ele enfrenta o repúdio e o isolamento de sua própria família. A história explora temas de alienação, identidade, responsabilidade e o impacto psicológico da mudança abrupta na vida de uma pessoa.",
+        "audio": "audios/sinopseMetamorfose.opus"
+    },
+    {
+        "id": 3,
+        "capa": "img/frankenstein.png",
+        "titulo": "Frankenstein",
+        "genero": ["Gótico,", "Horror"],
+        "autor": "Mary Shelley",
+        "editora": "Estampa",
+        "ISBN": 9780141439471,
+        "ano": 1818,
+        "edicao": "1°",
+        "paginas": 96,
+        "sinopse": "Frankenstein narra a história de Victor Frankenstein, um cientista determinado a desvendar os mistérios da criação da vida, que consegue dar forma a um ser a partir de cadáveres. Sua realização, porém, se transforma em pesadelo quando a criatura rejeitada pela sociedade começa a se voltar contra ele. A narrativa aborda temas como ambição desmedida, solidão, responsabilidade moral e os perigos de ultrapassar os limites da ciência.",
+        "audio": "audios/SinopseFrankenstein.opus"
+        
+    },
+    {
+        "id": 4,
+        "capa": "img/odisseia.png",
+        "titulo": "Odisseia",
+        "genero": ["Literatura Épica"],
+        "autor": "Homero",
+        "editora": "Penguin Classics",
+        "ISBN": 9780141439471,
+        "ano": "2003",
+        "edicao": "1°",
+        "paginas": 352,
+        "sinopse": "Odisseia conta a jornada de Odisseu, herói grego que tenta retornar para sua casa em Ítaca após a guerra de Troia. Ao longo do caminho, enfrenta desafios sobrenaturais, monstros e deuses que testam sua inteligência, coragem e resistência. A narrativa explora temas como perseverança, astúcia, lealdade e os conflitos entre destino e livre-arbítrio.",
+        "audio": "audios/sinopseOdisseia.opus"
+    },
+    {
+        "id": 5,
+        "capa": "img/iracema.png",
+        "titulo": "Iracema",
+        "genero": ["Romance,", "Nacional"],
+        "autor": "José de Alencar",
+        "editora": "Companhia das Letras",
+        "ISBN": 9788582850336,
+        "ano": "1865",
+        "edicao": "1°",
+        "paginas": 192,
+        "sinopse": "Iracema narra a história de amor entre a jovem índia Iracema e o colonizador europeu Martim, em meio ao encontro entre culturas diferentes. A narrativa explora o choque entre a vida indígena e a colonização, destacando elementos de pureza, paixão e tragédia. O romance aborda temas como identidade cultural, amor impossível e a transformação de um povo diante da invasão europeia.",
+        "audio": "audios/sinopseIracema.opus"
+    },
+    {
+        "id": 6,
+        "capa": "img/domquixote.png",
+        "titulo": "Dom Quixote",
+        "genero": ["Romance", "Sátira"],
+        "autor": "Miguel de Cervantes",
+        "editora": "Penguin Classics",
+        "ISBN": 9780142437230,
+        "ano": 1605,
+        "edicao": "1°",
+        "paginas": 992,
+        "sinopse": "Dom Quixote acompanha as aventuras de Alonso Quixano, um homem obcecado por livros de cavalaria que decide se tornar o cavaleiro andante Dom Quixote. Acompanhado de seu fiel escudeiro Sancho Pança, ele enfrenta situações absurdas e confunde a realidade com a fantasia. A narrativa explora temas como idealismo versus realidade, loucura, honra e a crítica social às convenções da época.",
+        "audio": "audios/sinopseDomQuixote.opus"
+    }
+    
+]

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A voz do Coração | BookClub</title>
+  <link rel="icon" type="image/png" href="/imagens/logo.png" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/Livros/livros/style.css" />
+</head>
+
+<body>
+   <!-- NAVBAR -->
+  <div id="nav">
+    <div class="logo" id="logo-img"><img src="/imagens/logo-1.png" alt="Logo" /></div>
+    <div id="nav-part2">
+      <div id="links">
+        <a href="/usando/rapido/biblioteca.html">Início</a>
+        <a href="#">Livros</a>
+        <a href="#">Autores</a>
+      </div>
+      <div id="icons">
+        <a href="/Contato/index.html"><button class="btn">Contato</button></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="logo-fixa" id="logo-substituta">
+    <img src="/imagens/logo-2.png" alt="Logo Fixa" />
+  </div>
+
+  <div id="cursor"></div>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <div id="main" data-scroll-container>
+    <div style="height: 130px;"></div> <!-- Espaço após navbar -->
+
+    <section class="sobre" id="page1">
+      <section class="autor-section">
+        <div class="carousel-container">
+          <div class="carousel-inner">
+            <div class="carousel-item"><img src="/Livros/livros/livrosOK/A-voz-do-coracao/capa.jpg" alt="Imagem 1" /></div>
+            <div class="carousel-item"><img src="/Livros/livros/livrosOK/A-voz-do-coracao/capa.jpg" alt="Imagem 2" /></div>
+            <div class="carousel-item"><img src="/Livros/livros/livrosOK/A-voz-do-coracao/capa.jpg" alt="Imagem 3" /></div>
+            <div class="carousel-item"><img src="/Livros/livros/livrosOK/A-voz-do-coracao/capa.jpg" alt="Imagem 4" /></div>
+            <div class="carousel-item"><img src="/Livros/livros/livrosOK/A-voz-do-coracao/capa.jpg" alt="Imagem 5" /></div>
+            <div class="carousel-item"><img src="/Livros/livros/livrosOK/A-voz-do-coracao/capa.jpg" alt="Imagem 6" /></div>
+          </div>
+        </div>
+
+        <div class="texto">
+          <h2 class="texti">A VOZ DO CORAÇÃO</h2>
+          <p>
+           Sewanee Chester, uma ex-atriz com sonhos interrompidos, encontra satisfação como narradora de audiolivros, mas não narra romances por não acreditar em finais felizes.
+          </p>
+          <p>
+           Ela aceita narrar o último livro de uma famosa autora de romances, em parceria com Brock McNight, a voz mais popular do mercado. Através do anonimato e de um pseudônimo, Sewanee e Brock desenvolvem uma conexão genuína que a faz recuperar a esperança, mas segredos do passado podem ameaçar essa nova felicidade. Logo que começa o trabalho sob seu antigo pseudônimo, ela e Brock criam uma conexão real, protegida pelo conforto do anonimato, e em pouco tempo ela recupera a capacidade de sonhar. Mas quando segredos são revelados, a realidade se impõe implacavelmente mais uma vez.
+          </p>
+
+           <!-- Audio -->
+              <audio id="audioPlayer" controls> 
+                <source src="/Livros/livros/audios/a-voz-do-coracao.m4a" type="audio/mp3">  
+              </audio>
+
+        </div>
+      </section>
+
+      <section class="info-section">
+        <h2>INFORMAÇÕES GERAIS</h2>
+
+        <div class="info-box">
+          <div class="info-number">01</div>
+          <div class="info-text">Autor(a): <br> Julia Whelan.</div>
+        </div>
+
+        <div class="info-box">
+          <div class="info-number">02</div>
+          <div class="info-text">Lançamento: <br>1 março 2023.</div>
+        </div>
+
+        <div class="info-box">
+          <div class="info-number">03</div>
+          <div class="info-text">Editora Arqueiro.</div>
+        </div>
+
+        <div class="info-box">
+          <div class="info-number">04</div>
+          <div class="info-text">Quantidade de pagínas:  400.</div>
+        </div>
+
+      </section>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
