@@ -4,7 +4,7 @@ on:
   push:
    branches:
      - main # roda quando alguém faz um push na branch main
-pull_request:
+  pull_request:
   branches:
     - main # roda quando alguém faz um PR para a main
 
