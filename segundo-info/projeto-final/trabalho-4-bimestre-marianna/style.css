@@ -1,0 +1,577 @@
+:root {
+  --lakers-purple: #4C1766; 
+  --lakers-gold: #EEAF2C; 
+  --lakers-lilac: #F4E6F9;
+  --text-brown: #583C00;
+  --bg-light: #F9F9F9;
+  --match-completed: #D4EDDA; 
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif; 
+  background-color: var(--bg-light);
+  color: var(--text-brown);
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(90deg, var(--lakers-purple), var(--lakers-gold));
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative; 
+}
+
+header h1 {
+    font-weight: 700;
+    font-size: 2.2rem;
+    margin: 0;
+}
+
+#header-logo {
+    position: absolute; 
+    left: 20px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    height: 150px; 
+    width: auto; 
+    object-fit: contain; 
+}
+
+.navbar {
+    flex-grow: 1; 
+    text-align: center;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; 
+    justify-content: center; 
+    gap: 40px; 
+}
+
+.nav-links li a {
+    color: white; 
+    text-decoration: none; 
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+.nav-links li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); 
+}
+
+
+
+main {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+section {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+h2 {
+  color: var(--lakers-purple);
+  border-bottom: 3px solid var(--lakers-gold);
+  padding-bottom: 10px;
+}
+
+h3 {
+    color: var(--lakers-purple);
+    margin-top: 5px;
+}
+
+#form-atleta, #form-jogador-xadrez {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: flex-end; 
+}
+
+.grupo-nome {
+    width: 24%;
+    min-width: 200px;
+}
+
+#cadastro-xadrez .grupo-nome {
+    width: 49.5%;
+    min-width: 250px;
+}
+
+.form-group {
+    position: relative;
+    padding-top: 10px;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #666;
+    font-size: 0.8rem;
+    pointer-events: none;
+    transition: 0.2s ease all;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    font-size: 1rem;
+    box-sizing: border-box;
+    background: transparent;
+    color: var(--text-brown);
+}
+
+.form-group input:focus, .form-group input:not(:placeholder-shown):valid {
+    border-bottom-color: var(--lakers-purple);
+}
+
+.form-group input:focus ~ label,
+.form-group input:not(:placeholder-shown):valid ~ label {
+    color: var(--lakers-purple);
+}
+
+#form-atleta button[type="submit"], #form-jogador-xadrez button[type="submit"] {
+    flex-grow: 1; 
+    padding: 12px 15px;
+    min-width: 150px;
+}
+
+button {
+  background-color: var(--lakers-gold);
+  color: var(--lakers-purple);
+  font-weight: bold;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover:not(:disabled) {
+  background-color: var(--lakers-purple);
+  color: white;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  color: #888;
+}
+
+.btn-remover {
+    background-color: #dc3545;
+    color: white;
+    font-size: 0.8rem;
+    padding: 5px 10px;
+}
+
+.btn-remover:hover {
+    background-color: #c82333;
+}
+
+#lista-ul, #lista-jogadores-xadrez-ul {
+  list-style: none;
+  padding: 0;
+}
+
+#lista-ul li, #lista-jogadores-xadrez-ul li {
+  background-color: var(--lakers-lilac);
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.atleta-info {
+    display: flex;
+    align-items: center;
+}
+
+#chaveamento {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+#third-place-container {
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+#third-place-match {
+    display: flex;
+    justify-content: center;
+}
+
+#bracket-container {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  padding-top: 10px;
+  justify-content: center;
+  width: 100%;
+}
+
+.round {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 250px;
+}
+
+.match {
+  background: var(--lakers-lilac);
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 30px; 
+  width: 220px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.match.completed {
+    background-color: var(--match-completed); 
+    border-left: 5px solid var(--lakers-gold);
+}
+
+.match-info {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--lakers-purple);
+    text-align: center;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed #ccc;
+}
+
+.match-details-inputs {
+    margin-bottom: 5px;
+}
+
+.match-details-inputs .detail-input {
+    width: 100%; 
+    padding: 3px 5px;
+    font-size: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: white; 
+}
+
+.match-details-inputs .detail-input::placeholder {
+    color: #999;
+}
+
+
+.team-slot {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  background: white;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.team-slot.winner {
+  background: var(--lakers-purple);
+  color: white;
+  font-weight: bold;
+}
+
+.score-input {
+  width: 30px;
+  height: 20px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 2px;
+}
+
+.team-slot img {
+    max-width: 18px;
+    max-height: 18px;
+    object-fit: contain;
+    margin-right: 5px;
+}
+
+#campeao-display {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  
+  background-color: var(--lakers-gold); 
+  color: var(--lakers-purple); 
+  
+  margin-top: 40px;
+  padding: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 100%; 
+  max-width: 600px; 
+}
+
+#campeao-display h3 {
+    color: var(--lakers-purple); 
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+#campeao-display p {
+    font-size: 1.1rem;
+    font-weight: normal;
+    margin: 5px 0;
+    color: var(--lakers-purple);
+}
+
+.hidden {
+  display: none;
+}
+
+#menu-navegacao {
+    text-align: center;
+    padding: 15px;
+}
+.btn-link {
+    display: inline-block;
+    background-color: var(--lakers-purple);
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+}
+.btn-link:hover {
+    background-color: var(--lakers-gold);
+    color: var(--lakers-purple);
+}
+
+#form-resultado-xadrez {
+    background: var(--lakers-lilac); 
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center; 
+}
+
+#form-resultado-xadrez select,
+#form-resultado-xadrez input {
+    background: white; 
+    height: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    flex: 1; 
+    min-width: 100px;
+    color: var(--text-brown); 
+}
+
+#form-resultado-xadrez input:not([type="file"]) + label {
+    display: none; 
+}
+
+#tabela-ranking-xadrez {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+#tabela-ranking-xadrez thead th {
+    background-color: var(--lakers-purple);
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+#tabela-ranking-xadrez tbody tr:nth-child(even) {
+    background-color: var(--lakers-lilac);
+}
+
+#tabela-ranking-xadrez tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+#tabela-ranking-xadrez tbody tr:hover {
+    background-color: #ffe6b2; 
+}
+
+#historico-partidas {
+    margin-top: 30px;
+}
+#historico-partidas-ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #fff;
+}
+#historico-partidas-ul li {
+    padding: 8px 15px;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+}
+#historico-partidas-ul li:last-child {
+    border-bottom: none;
+}
+ 
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+}
+
+.card {
+    width: 250px;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white; 
+}
+
+
+.card-organizacao {
+    background-color: var(--lakers-purple); 
+}
+
+.card-organizacao h3 {
+    color: white;
+}
+
+.card-visualizacao {
+    background-color: var(--lakers-gold); 
+    color: var(--text-brown); 
+}
+.card-visualizacao h3 {
+    color: var(--text-brown);
+}
+
+.card-notificacao {
+    background-color: #A06AB0; 
+}
+.card-notificacao h3 {
+    color: white;
+}
+
+
+
+.quem-somos-section {
+    background: linear-gradient(180deg, var(--lakers-gold), var(--lakers-purple));
+    color: white;
+    padding: 50px 10%;
+    text-align: left;
+    font-weight: 700;
+    line-height: 1.5;
+
+}
+
+.quem-somos-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: white; 
+    border-bottom: none; 
+}
+
+.quem-somos-section p {
+     font-size: 1.1em;
+     max-width: 800px;
+     font-weight: 500; 
+}
+        
+
+#contato-form {
+    max-width: 600px; 
+    margin: 30px auto; 
+}
+
+
+.form-group-contato {
+    position: relative;
+    padding-top: 10px;
+    margin-bottom: 30px; 
+}
+
+.form-group-contato label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #666;
+    font-size: 0.8rem;
+    pointer-events: none;
+    transition: 0.2s ease all;
+}
+
+.form-group-contato input,
+.form-group-contato textarea {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    font-size: 1rem;
+    box-sizing: border-box;
+    background: transparent;
+    color: var(--text-brown);
+    resize: vertical; 
+}
+
+
+.form-group-contato input:focus, 
+.form-group-contato input:not(:placeholder-shown):valid {
+    border-bottom-color: var(--lakers-purple);
+}
+
+.form-group-contato input:focus ~ label,
+.form-group-contato input:not(:placeholder-shown):valid ~ label {
+    color: var(--lakers-purple);
+}
+
+
+.form-group-contato textarea {
+    border: 2px solid #ccc; 
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.form-group-contato textarea:focus {
+    border-color: var(--lakers-purple);
+}

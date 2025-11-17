@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tournament Organizer - Contato</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <img src="logo.png" alt="Logo do Torneio" id="header-logo">
+    <h1> Tournament Organizer</h1>
+        
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="tabelasimples.html">Tabela de Eliminação Simples</a></li>
+                <li><a href="tabelaxadrez.html">Tabela por Pontuação</a></li>
+            </ul>
+        </nav>
+        <h1>&nbsp;</h1> 
+    </header>
+
+    <main>
+        <section id="contato-form">
+            <h2 style="text-align: center;">Entre em Contato</h2>
+            <p style="text-align: center; margin-bottom: 30px;">Preencha o formulário abaixo e retornaremos em breve.</p>
+
+
+                <form id="form-contato" action="https://formsubmit.co/mariannafernandadealmeida@gmail.com" method="POST">
+
+      <div class="form-group-contato">              
+     <input type="text" name="name" required>
+     <label for="nome">Seu Nome</label>
+     </div> 
+     <div class="form-group-contato">
+     <input type="email" name="email" required>
+     <label for="email">Seu Email</label>
+     </div>
+     <div class="form-group-contato">
+     <input type="text" name="assunto" required>
+     <label for="assunto">Assunto</label>
+     </div>
+     <div class="form-group-contato">
+                   <input type="text" name="mensagem" required>
+                   <label for="assunto">Sua mensagem</label>
+                </div>
+     <input type="hidden" name="_template" value="table">
+     <button type="submit" style="width: 100%; margin-top: 20px;">Enviar Mensagem</button>
+</form>
+                             
+            
+ </section>
+    </main>
+
+    <footer style="background-color: var(--lakers-purple); color: white; text-align: center; padding: 15px; font-size: 0.9em;">
+        &copy; 2025 Tournament Organizer. Todos os direitos reservados.
+    </footer>
+
+</body>
+</html>

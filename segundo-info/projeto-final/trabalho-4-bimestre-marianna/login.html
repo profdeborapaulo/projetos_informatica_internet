@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Signup Form</title>
+    <link rel="stylesheet" href="login.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+  <body>
+
+      <div class="container">
+          <div class="form-box login">
+              <form action="#">
+                  <h1>Entrada</h1>
+                  <div class="input-box">
+                      <input type="text" placeholder="Nome de usuário" required>
+                      <i class='bx bxs-user'></i>
+                  </div>
+                  <div class="input-box">
+                      <input type="password" placeholder="Senha" required>
+                      <i class='bx bxs-lock-alt' ></i>
+                  </div>
+                  <a href="index.html" class="btn" style="text-align: center; line-height: 48px;">Entrar</a>
+                  </form>
+          </div>
+
+          <div class="form-box register">
+              <form action="#">
+                  <h1>Registrar</h1>
+                  <div class="input-box">
+                      <input type="text" placeholder="Nome de usuário" required>
+                      <i class='bx bxs-user'></i>
+                  </div>
+                  <div class="input-box">
+                      <input type="email" placeholder="Email" required>
+                      <i class='bx bxs-envelope' ></i>
+                  </div>
+                  <div class="input-box">
+                      <input type="password" placeholder="Senha" required>
+                      <i class='bx bxs-lock-alt' ></i>
+                  </div>
+                  <button type="submit" class="btn">Registrar</button>
+                  </form>
+          </div>
+
+          <div class="toggle-box">
+              <div class="toggle-panel toggle-left">
+<div class="logo-container">
+                      <img src="logo.png" alt="Logo" class="logo">
+                  </div>
+
+                  <h1>Olá, seja bem vindo a </h1>
+                    <h2>Tournamente Organizer</h2>
+                  <h5>Somos um site para organização de tabelas, ajudamos você a organizar seus torneios e campeonatos </h5> 
+                  <p>Não tem uma conta?</p>
+                  <button class="btn register-btn">Registre aqui</button>
+              </div>
+
+              <div class="toggle-panel toggle-right">
+                  <h1>Seja bem-vindo!</h1>
+                  <p>Já tem uma conta?</p>
+                  <button class="btn login-btn">Entre aqui</button>
+              </div>
+          </div>
+      </div>
+
+      <script src="login.js"></script>
+  </body>
+</html>

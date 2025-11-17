@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador de Chaveamento</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.12.1/html2pdf.bundle.min.js" integrity="sha512-D25Z8/1q2z65ZpJ3NzY6XiPZfwjhbv34OTQHDIZd+KPK+uWCovGt+fMkSzW8ArzCMFUgZt6Cdu7qoXNuy6a2GA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <header>
+    <img src="logo.png" alt="Logo do Torneio" id="header-logo">
+    <h1>🏆 Tournament Organizer</h1>
+     <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Página Inicial</a></li>
+            <li><a href="tabelaxadrez.html">Tabelas Pontuação</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            </ul>
+    </nav>
+</header>
+
+  <main>
+    
+    <section id="cadastro">
+      <h2>1. Cadastro de Times</h2>
+      <form id="form-atleta">
+
+        <div class="grupo-nome" style="width: 30%;">
+            <div class="form-group">
+                <input type="text" id="nome-atleta" required>
+                <label for="nome-atleta">Nome do Time:</label>
+            </div>
+        </div>
+
+        <div class="grupo-nome" style="width: 30%;">
+            <div class="form-group">
+                <input type="text" id="logo-url">
+                <label for="logo-url">Logo (Link/URL - Opcional):</label>
+            </div>
+        </div>
+
+        <div class="grupo-nome" style="width: 30%;">
+            <div class="form-group">
+                <input type="file" id="logo-file" accept="image/*">
+                <label for="logo-file">Logo (Importar do PC - Opcional):</label>
+            </div>
+        </div>
+
+        <button type="submit">Adicionar Time</button>
+      </form>
+
+      <h3>Times Cadastrados (<span id="count-atletas">0</span>)</h3>
+      <ul id="lista-ul"></ul>
+      <button id="btn-gerar-chaveamento" disabled>Gerar Chaveamento</button>
+    </section>
+
+<div id="conteudo">
+    <section id="chaveamento" class="hidden">
+      <h2> Chaveamento do Torneio</h2>
+      
+      <div id="bracket-container">
+        </div>
+      
+      <div id="third-place-container" class="hidden">
+          <h3>Disputa de 3º Lugar</h3>
+          <div id="third-place-match">
+              </div>
+      </div>
+      
+      <div id="campeao-display">
+          </div>
+    </section>
+
+    <section id="ranking-xadrez" class="hidden">
+        <h2>Ranking de Xadrez (Torneio de Pontos)</h2>
+        <div id="form-resultado-xadrez">
+            </div>
+        <table id="tabela-ranking-xadrez">
+            </table>
+</div>
+   <button id="gerar-pdf">Gerar Pdf</button>
+   
+        </section>
+
+  </main>
+  
+   <footer style="background-color: var(--lakers-purple); color: white; text-align: center; padding: 15px; font-size: 0.9em;">
+        &copy; 2025 Tournament Organizer. Todos os direitos reservados.
+    </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

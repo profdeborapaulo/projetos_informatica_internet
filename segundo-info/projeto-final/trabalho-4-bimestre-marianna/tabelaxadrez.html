@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador de Ranking - Pontos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.12.1/html2pdf.bundle.min.js" integrity="sha512-D25Z8/1q2z65ZpJ3NzY6XiPZfwjhbv34OTQHDIZd+KPK+uWCovGt+fMkSzW8ArzCMFUgZt6Cdu7qoXNuy6a2GA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Logo" id="header-logo">
+    <h1>🏆 Tournament Organizer</h1>
+  <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Página Inicial</a></li>
+            <li><a href="tabelasimples.html">Tabelas Eliminação Simples</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            </ul>
+    </nav>
+  </header>
+
+
+ 
+<main>
+    <section id="cadastro-xadrez">
+      <h2> Cadastro de Jogadores</h2>
+      <form id="form-jogador-xadrez">
+        
+        <div class="grupo-nome" style="width: 49.5%;">
+          <div class="form-group">
+            <input type="text" id="nome-jogador-xadrez" required>
+            <label for="nome-jogador-xadrez">Nome do Jogador:</label>
+          </div>
+        </div>
+
+        <div class="grupo-nome" style="width: 49.5%;">
+          <div class="form-group">
+            <input type="number" id="pontos-iniciais-xadrez" value="0" min="0">
+            <label for="pontos-iniciais-xadrez">Pontos Iniciais (Opcional):</label>
+          </div>
+        </div>
+
+        <button type="submit">Adicionar Jogador</button>
+      </form>
+
+      <h3>Jogadores Cadastrados (<span id="count-jogadores-xadrez">0</span>)</h3>
+      <ul id="lista-jogadores-xadrez-ul"></ul>
+    </section>
+<div id="conteudo">
+    <section id="registro-partida">
+        <h2> Registro de Partidas</h2>
+        
+        <div id="form-resultado-xadrez">
+            <div class="grupo-nome">
+                <div class="form-group">
+                    <select id="jogador-branco-select"></select>
+                    <label>Jogador Branco</label>
+                </div>
+            </div>
+            
+            <div class="grupo-nome">
+                <div class="form-group">
+                    <select id="jogador-preto-select"></select>
+                    <label>Jogador Preto</label>
+                </div>
+            </div>
+            
+            <div class="grupo-nome">
+                <div class="form-group">
+                    <select id="resultado-select">
+                        <option value="">Resultado</option>
+                        <option value="1-0">1-0 (Branco Vence)</option>
+                        <option value="0-1">0-1 (Preto Vence)</option>
+                        <option value="1/2-1/2">1/2-1/2 (Empate)</option>
+                    </select>
+                    <label>Resultado</label>
+                </div>
+            </div>
+            
+            <div class="grupo-nome">
+                <div class="form-group">
+                    <input type="text" id="duracao-jogo" placeholder="Ex: 10 min">
+                    <label for="duracao-jogo">Duração do Jogo:</label>
+                </div>
+            </div>
+            
+            <div class="grupo-nome">
+                <div class="form-group">
+                    <input type="text" id="acrescimo-tempo" placeholder="Ex: +5s">
+                    <label for="acrescimo-tempo">Acréscimo (Incremento):</label>
+                </div>
+            </div>
+            
+            <button id="btn-registrar-partida">Registrar Partida</button>
+        </div>
+        
+        <div id="historico-partidas">
+            <h3>Histórico de Partidas</h3>
+            <ul id="historico-partidas-ul"></ul>
+            <button id="btn-limpar-partidas" class="btn-remover">Limpar Histórico</button>
+        </div>
+    </section>
+
+    <section id="ranking">
+      <h2> Tabela de Ranking e Desempate</h2>
+      
+      <table id="tabela-ranking-xadrez">
+        <thead>
+          <tr>
+            <th>Pos.</th>
+            <th>Nome</th>
+            <th>Pts Iniciais</th>
+            <th>Pts Ganhos</th>
+            <th>Pts Total</th>
+            <th>Vitórias</th>
+            <th>Jogos</th>
+          </tr>
+        </thead>
+        <tbody>
+          </tbody>
+      </table>
+      
+      <div id="aba-desempate">
+          <h3>Critérios de Desempate Aplicados</h3>
+          <p>A tabela é ordenada automaticamente utilizando os seguintes critérios:</p>
+          <ol>
+              <li>**Pontos Totais** (Critério principal)</li>
+              <li>**Número de Vitórias** (1º Desempate)</li>
+              <li>**Jogos Disputados** (2º Desempate)</li>
+          </ol>
+      </div>
+      </div>
+      <button id="gerar-pdf">Gerar Pdf</button>
+    </section>
+  
+  </main>
+   <footer style="background-color: var(--lakers-purple); color: white; text-align: center; padding: 15px; font-size: 0.9em;">
+        &copy; 2025 Tournament Organizer. Todos os direitos reservados.
+    </footer>
+
+  <script src="xadrez.js"></script>
+</body>
+</html>
