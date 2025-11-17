@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Usuário - Sistema de Monitoramento Empresarial</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+     <div class="sidebar-logo">
+            <a href="index.html" class="logo-link">
+                <img src="img/logo.png" alt="Logo do Sistema" class="logo">
+            </a>
+        </div>
+    <ul>
+      <li><a href="index.html"><h2>Menu</h2></a></li>
+      <li><span class="icon">👤</span> <a href="usuario.html">Usuário</a></li>
+      <li><span class="icon">📝</span> <a href="forms.html">Formulário</a></li>
+      <li><span class="icon">🎯</span> <a href="metas.html">Metas</a></li>
+      <li><span class="icon">🔔</span> <a href="not.html">Notificações</a></li>
+      <li><span class="icon">⚙️</span> <a href="config.html">Configurações</a></li>
+      <li><span class="icon">📞</span> <a href="contato.html">Contato</a></li>
+      <li><span class="icon">ℹ️</span> <a href="sobre.html">Sobre Nós</a></li>
+    </ul>
+  </aside>
+
+  <div class="main-content">
+    <header>
+      <h1>Gestão de Usuários</h1>
+    </header>
+
+    <main class="content-page">
+
+      <section class="user-login">
+        <h2>Entrar no Sistema</h2>
+        <p>Acesse seu painel de controle utilizando seu e-mail e senha cadastrados.</p>
+
+        <form class="simple-form" id="formLogin">
+          <div class="form-group">
+            <label for="login-email">E-mail Empresarial</label>
+            <input type="email" id="login-email" name="login-email" placeholder="exemplo@empresa.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="login-senha">Senha</label>
+            <input type="password" id="login-senha" name="login-senha" required>
+          </div>
+
+         <div class="form-group checkbox-group">
+    <label>
+        <input type="checkbox" id="esqueci-senha">
+        Esqueci minha senha
+    </label>
+</div>
+
+
+          <button type="submit" class="btn-primary">Entrar</button>
+          <span id="feedbackLogin" class="feedback-message" style="display: none;"></span>
+        </form>
+      </section>
+
+      <hr class="divider">
+
+      <section class="user-register">
+        <h2>Cadastro de Novo Usuário</h2>
+        <p>Preencha seus dados para criar uma conta e acessar o dashboard empresarial.</p>
+
+        <form class="simple-form" id="formCadastro">
+
+          <h3>Informações Pessoais</h3>
+          <div class="form-group">
+            <label for="cad-nome">Nome Completo</label>
+            <input type="text" id="cad-nome" name="cad-nome" placeholder="Digite seu nome completo" required>
+          </div>
+
+          <div class="form-group">
+            <label for="cad-email">E-mail Empresarial</label>
+            <input type="email" id="cad-email" name="cad-email" placeholder="exemplo@empresa.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="cad-telefone">Telefone</label>
+            <input type="tel" id="cad-telefone" name="cad-telefone" placeholder="(11) 98765-4321" required>
+          </div>
+
+          <h3>Informações Profissionais</h3>
+          <div class="form-group">
+            <label for="cad-empresa">Empresa</label>
+            <input type="text" id="cad-empresa" name="cad-empresa" placeholder="Nome da empresa" required>
+          </div>
+
+          <div class="form-group">
+            <label for="cad-cargo">Cargo / Função</label>
+            <input type="text" id="cad-cargo" name="cad-cargo" placeholder="Ex: Gerente de Operações">
+          </div>
+
+          <h3>Credenciais de Acesso</h3>
+          <div class="form-group">
+            <label for="cad-senha">Senha</label>
+            <input type="password" id="cad-senha" name="cad-senha" required>
+          </div>
+
+          <div class="form-group">
+            <label for="cad-confirmar-senha">Confirmar Senha</label>
+            <input type="password" id="cad-confirmar-senha" name="cad-confirmar-senha" required>
+          </div>
+
+          <button type="submit" class="btn-primary">Cadastrar Usuário</button>
+          <span id="feedbackCadastro" class="feedback-message" style="display: none;"></span>
+        </form>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>© 2025 Sistema de Monitoramento Empresarial - Projeto Educacional</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
