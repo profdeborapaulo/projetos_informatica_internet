@@ -1,0 +1,242 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    background-color: #EDDCBB;
+} 
+
+.navbar {
+      background-color: #EDDCBB;
+    box-shadow: 0 4px 16px 0 rgba(156, 58, 59, 0.15);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    }
+  
+.nav-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-link {
+    color: #4e4e4e;
+    padding: 15px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 1.3rem;
+}
+
+    .nav-link:hover {
+   transform: scale(1.1);
+    color: #D7C9AA;
+    background-color: #9C3A3B;
+
+    }
+
+    .navbar-brand img {
+      height: 45%;
+      width: auto;
+    }
+
+    .sair {
+      background-color: transparent;
+      color: #9C3A3B;   
+      border: 2px solid #9C3A3B;
+      transition: all 0.3s ease;
+       font-size: 1.3rem;
+        padding: 10px 15px;
+    }
+
+    .sair:hover {
+      background-color: #9C3A3B;
+      color: #D7C9AA;
+      transform: scale(1.1);
+    }
+    .perfil {
+      background-color: transparent;
+      color: #9C3A3B;   
+      transition: all 0.3s ease;
+      margin-right: 10px;
+       font-size: 1.3rem;
+        padding: 10px 15px;
+    }
+    .perfil:hover {
+      background-color: #9C3A3B;
+      color: #D7C9AA;
+      transform: scale(1.1);
+    }
+
+
+    .perfil {
+       color: #D7C9AA;
+    background-color: #9C3A3B;
+    }
+    .foto-lugares{
+    width: 30%;
+}
+
+.subtitulo {
+    color: #9C3A3B;
+    font-size: 5rem;
+    margin-bottom: 10px;
+    font-family: 'Italianno', cursive;
+}
+
+.text-muted {
+    font-size: 1.2rem;
+}
+
+.card-title {
+    font-size: 1.3rem;
+
+}
+.card-text {
+    font-size: 1.3rem;
+    text-align: justify;
+}
+span {
+   font-size: 1.2rem;
+}
+
+.generos span {
+      background-color: #f9f1e7;
+      border: 1px solid #d9c6b0;
+      color: #6b4b3e;
+      border-radius: 20px;
+      padding: 6px 12px;
+      margin: 4px;
+      display: inline-block;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 1.1rem;
+    }
+
+    .generos span.active {
+      background-color: #E4A67C;
+      color: #305167;
+    }
+
+    
+.numeros {
+  color: #f9f9f9;
+}
+
+.paragrafo {
+  color: #f9f9f9;
+  font-size: 1.3rem;
+}
+.btnEditarPerfil {
+      background-color: transparent;
+      color: #9C3A3B;   
+      border: 2px solid #9C3A3B;
+      transition: all 0.3s ease;
+       font-size: 1.3rem;
+        padding: 10px 10px;
+    }
+
+    .btnEditarPerfil:hover {
+      transform: scale(1.1);
+      background-color: transparent;
+      color: #9C3A3B;  
+      border: 2px solid #9C3A3B;
+    }
+    #modalEditarPerfil{
+  color: #f9f4eb;
+}
+#btnSalvarEdicao {
+   background-color: #9C3A3B;
+  color: #EDDCBB;
+  border: 3px solid #9C3A3B;
+  transition: all 0.3s ease;
+   font-size: 1.3rem;
+   padding: 10px 8px;
+}
+ #btnSalvarEdicao:hover {
+     background-color: transparent;
+  color: #9C3A3B;
+  transform: scale(1.07);
+   border: 3px solid #9C3A3B;
+}
+
+.cancelar {
+  background-color: transparent;
+  color: #9C3A3B;
+  border: 3px solid #9C3A3B;
+  transition: all 0.3s ease;
+  font-size: 1.3rem;
+   padding: 10px 8px;
+}
+
+.cancelar:hover {
+  background-color: #9C3A3B;
+  color: #EDDCBB;
+  transform: scale(1.07);
+}
+
+
+    .form-control {
+      border-radius: 10px;
+      background-color: #f9f1e7;
+      border: 1px solid #d9c6b0;
+      
+      
+    }
+
+    .form-control:focus {
+      border-color: #E4A67C;
+      box-shadow: 0 0 0 0.2rem rgba(217, 124, 72, 0.25);
+    }
+
+footer {
+    background: #9C3A3B;
+    color: #D7C9AA;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 40px;
+}
+.linha{
+    border: 1px solid #D7C9AA;
+    margin: 20px 0;
+}
+.subtitulo-cards{
+    color: #9C3A3B;
+    font-size: 4rem;
+    margin-bottom: 5px;
+    font-family: 'Italianno', cursive;
+}
+.subtitulo-footer{
+    color: #D7C9AA;
+    font-size: 4rem;
+    margin-bottom: 5px;
+    font-family: 'Italianno', cursive;
+}
+.paragrafo-footer{
+    color: #D7C9AA;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+
+
+.fab {
+    gap: 20px;
+    font-size: 2.5rem;
+    margin: 0 10px;
+    color : #D7C9AA;
+    transition: transform 0.3s ease;
+}
+.fab:hover {
+    transform: scale(1.2);
+    color: #FFFFFF;
+}
+
