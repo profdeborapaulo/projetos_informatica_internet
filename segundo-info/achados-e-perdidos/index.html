@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>    
+</body>
+</html>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-content">
+                <div>
+                    <img src="img/benfacil-logo.png" alt="Benfácil Logo">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#formularios">Formulários</a></li>
+                    <li><a href="#itens-encontrados">Itens Encontrados</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>ACHADOS E PERDIDOS</h1>
+            <p>Encontre seus itens perdidos nos ônibus com facilidade</p>
+            
+            <div id="items-carousel" class="carousel">
+                <div class="carousel-item">
+                    <div class="carousel-image">
+                        <img class="carousel-image" src="img/fone-1.jpg" alt="fone">
+                    </div>
+                    <h3>Fone Bluetooth</h3>
+                    <p>Encontrado em: 15/01/2024</p>
+                    <p>Local: Estação Barueri</p>
+                    <button class="btn" onclick="scrollToForm()">Agendar Busca</button>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-image">
+                        <img class="carousel-image" src="img/carteira.jpg" alt="carteira">
+                    </div>
+                    <h3>Carteira</h3>
+                    <p>Encontrado em: 14/01/2024</p>
+                    <p>Local: Terminal Pinheiros</p>
+                    <button class="btn" onclick="scrollToForm()">Agendar Busca</button>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-image">
+                        <img class="carousel-image" src="img/celular.jpg" alt="celular">
+                    </div>
+                    <h3>Celular Samsung</h3>
+                    <p>Encontrado em: 13/01/2024</p>
+                    <p>Local: Estação Jabaquara</p>
+                    <button class="btn" onclick="scrollToForm()">Agendar Busca</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section id="sobre" class="info-section">
+        <div class="container">
+            <div class="info-grid">
+                <div>
+                    <h2>Perdeu algo em nossos ônibus?</h2>
+                    <p>
+                        Não se preocupe! Pensando nisso, nós preparamos um achados e perdidos que cabe na 
+                        palma da sua mão, entre em contato com nossos colaboradores com muito mais facilidade para 
+                        saber com rapidez e praticidade o paradeiro daquele item perdido.
+                    </p>
+                </div>
+                <div>
+                    <img src="img/img-duvida.jpg" alt="Mulher pensativa" class="info-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lost Item Form -->
+    <section id="formularios" class="form-section">
+        <div class="form-container">
+            <h2>Registrar Item Perdido</h2>
+            <form id="lost-item-form">
+                <div class="form-group">
+                    <label for="item-name">Nome do Item</label>
+                    <input type="text" id="item-name" placeholder="Ex: Fone Bluetooth" required>
+                </div>
+                <div class="form-group">
+                    <label for="line">Linha ou Terminal</label>
+                    <input type="text" id="line" placeholder="Ex: Linha 123 ou Terminal Pinheiros">
+                </div>
+                <div class="form-group">
+                    <label for="user-name">Seu Nome</label>
+                    <input type="text" id="user-name" placeholder="Digite seu nome completo" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefone</label>
+                    <input type="tel" id="phone" placeholder="(11) 99999-9999" required>
+                </div>
+                <div class="form-group">
+                    <label for="lost-date">Data da Perda</label>
+                    <input type="date" id="lost-date">
+                </div>
+                <div class="form-group">
+                    <label>Foto do Item (opcional)</label>
+                    <div class="upload-area">
+                        <p>Clique para fazer upload ou arraste a imagem aqui</p>
+                    </div>
+                </div>
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Search Appointment Form -->
+    <section class="form-section" style="background: white;">
+        <div class="form-container">
+            <h2>Agendar Busca</h2>
+            <form>
+                <div class="form-group">
+                    <label for="search-name">Nome</label>
+                    <input type="text" id="search-name" placeholder="Digite seu nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="search-phone">Telefone</label>
+                    <input type="tel" id="search-phone" placeholder="(11) 99999-9999" required>
+                </div>
+                <div class="form-group">
+                    <label for="search-email">Email</label>
+                    <input type="email" id="search-email" placeholder="seu@email.com">
+                </div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="search-date">Data</label>
+                        <input type="date" id="search-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="search-time">Horário</label>
+                        <input type="time" id="search-time" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn">Agendar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Scheduled Items -->
+    <section id="itens-encontrados" class="scheduled-section">
+        <div class="container">
+            <h2>Itens agendados para busca</h2>
+            <div class="scheduled-grid">
+                <div class="scheduled-item">
+                    <div class="scheduled-item">
+                        <img class="carousel-image" src="img/fone-2.jpg" alt="fone">
+                    </div>
+                    <h3>Fone Bluetooth</h3>
+                    <p>Local: Estação Barueri</p>
+                </div>
+                <div class="scheduled-item">
+                    <div class="scheduled-item">
+                        <img class="carousel-image" src="img/carteira2.jpg" alt="carteira">
+                    </div>
+                    <h3>Carteira</h3>
+                    <p>Local: Estação Barueri</p>
+                </div>
+                <div class="scheduled-item">
+                    <div class="car">
+                        <img class="carousel-image" src="img/caderno.jpg" alt="">
+                    </div>
+                    <h3>Caderno</h3>
+                    <p>Local: Estação Barueri</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="sobre" class="footer">
+        <div class="footer-content">
+            <div>
+                <h3>Suporte</h3>
+                <p>achadoseperdidos@benfacil.com</p>
+                <p>11 94444-7815</p>
+                <p>11 94444-7815</p>
+            </div>
+            <div class="footer-divider">
+                <p>© 2024 - Benfácil | Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
