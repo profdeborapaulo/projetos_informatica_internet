@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KidLingo: Lições</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo-link">
+            <div class="logo">
+                <img src="img/kidlingo-logo.png" alt="Mascote Coruja">
+                <div style="background-image: linear-gradient(90deg, #6c5ce7, #a256f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">KidLingo</div>
+            </div>
+        </a>
+        <div class="user-actions">
+            <div class="points-badge">
+                0 
+            </div>
+            <a href="painel-acompanhamento.html" class="icon" title="Painel de Acompanhamento"></a>
+        </div>
+    </header>
+
+    <div id="content-container">
+
+        <section id="lessons-screen">
+            <h2 class="select-title" id="lesson-screen-title">Lições de Idioma</h2> 
+            
+            <p class="select-subtitle" id="lesson-status">Carregando a primeira lição...</p>
+
+            <div class="lesson-box" id="lesson-content">
+                <p>Aguarde...</p>
+            </div>
+            
+            <div class="lesson-box activity-box" id="activity-content" style="display: none;">
+                <h3 id="activity-title" style="color: var(--cor-cartao-frances);"></h3>
+                <p id="activity-subtitle" class="select-subtitle"></p>
+                <div id="quiz-container"></div> 
+            </div>
+            <div style="display: flex; gap: 10px; justify-content: center; width: 100%; max-width: 400px; margin: 20px auto 10px;">
+
+                <button id="prev-lesson-btn" class="btn btn-secundario lesson-btn" style="display: none; flex-grow: 1;">
+                    ← Anterior
+                </button>
+
+                <button id="next-lesson-btn" class="btn btn-secundario lesson-btn" style="flex-grow: 1;">
+                    Próxima Lição →
+                </button>
+
+            </div>
+
+            <div class="lesson-action-group">
+                <button id="back-lesson-btn" class="btn btn-secundario lesson-back-btn">
+                    ← Voltar para a Seleção
+                </button>
+
+                <button id="start-activity-btn" class="btn btn-principal lesson-complete-btn">
+                    Fazer Atividade 
+                </button>
+                
+                <button id="complete-lesson-btn" class="btn btn-principal lesson-complete-btn" style="display: none;">
+                    Lição Concluída (+10 Pontos) <span>✅</span>
+                </button>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 KidLingo | Educação Digital e Gamificada.</p>
+        <p><a href="painel-acompanhamento.html" class="footer-link">Acesso para Responsáveis</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

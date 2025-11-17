@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil - KidLingo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo-link">
+            <div class="logo">
+                <img src="img/kidlingo-logo.png" alt="Mascote Coruja KidLingo" width="40" height="40">
+                <div style="background-image: linear-gradient(90deg, #6c5ce7, #a256f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">KidLingo</div>
+            </div>
+        </a>
+        <div class="user-actions">
+            <a href="perfil.html" class="icon" title="Painel de Acompanhamento / Perfil"></a>
+        </div>
+    </header>
+
+    <main id="content-container"> 
+        
+        <section id="profile-screen">
+            
+            <h1 class="select-title">Meu Perfil de Aprendiz</h1>
+            <p class="select-subtitle">Visualize seu progresso, pontuação e conquistas desbloqueadas.</p>
+            
+            <div class="profile-header">
+                <img src="img/perfil.png" alt="Avatar do Usuário" class="profile-avatar" id="user-avatar">
+                <h2 id="user-name">Aprendiz KidLingo</h2>
+                <div class="points-display">
+                    <span id="profile-points-value">0</span> pontos totais
+                </div>
+            </div>
+
+            <h3 class="section-title">🏆 Conquistas Desbloqueadas</h3>
+            <div class="achievements-grid" id="achievements-display">
+                <p>Carregando conquistas...</p>
+                </div>
+
+
+        </section>
+            
+            <h3 class="section-title" style="margin-top: 40px;">🌍 Progresso por Idioma</h3>
+            <div class="stats-grid" id="profile-language-progress-grid">
+                <p>Carregando progresso dos idiomas...</p>
+            </div>
+            </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 KidLingo | Educação Digital e Gamificada.</p>
+        <p><a href="painel-acompanhamento.html" class="footer-link">Acesso para Responsáveis</a></p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
