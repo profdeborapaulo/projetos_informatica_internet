@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+<script type="text/javascript" src="javascript/script.js" defer></script>
+<script src="javascript/searchbar.js" defer></script>
+    <title>In to Academy</title>
+</head>
+<body>
+
+    <div class="navbar">
+        <img src="img/logo-in-to-academy.png" alt="" style="width: 15%;">
+
+        <div class="search-box">
+            <div class="row">
+                <input type="text" id="input-box" placeholder="Pesquisar" class="searchbar" autocomplete="off">
+                <button class="icon-search"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="result-box">
+                
+            </div>
+        </div>
+
+        <div class="navbar-btns-space">
+            <button class="navbar-button" id="entrar" onclick="location.href='login.html'">Entrar</button>
+        <button class="navbar-button" id="login" onclick="location.href='login.html'">Login</button>
+        <button id="theme-switch"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#231F20"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#231F20"><path d="M480-360q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Zm326-268Z"/></svg>
+    </button>
+        </div>
+    </div>
+
+<div class="banner" id="banner">
+    <div class="banner-content">
+        <h1 style="font-size: 64px;">Para todos os alunos,<span style="color: #7B2CBF; font-style: italic; font-family: inria serif;">
+        para todos</span></h1>
+        
+        <p style="font-size: 24px; text-align: start;">Somos uma organização sem fins lucrativos com a missão de oferecer uma educação gratuita de alta qualidade para qualquer pessoa, em qualquer lugar.</p>
+
+        <div class="banner-btn-space">
+            <button class="banner-btn" >Alunos</button>
+            <button class="banner-btn">Professores</button>
+            <button class="banner-btn">Pais</button>
+        </div>
+    </div>
+    <img src="img/banner-kid.png" alt="" style="object-fit: contain; margin: auto;">
+</div>
+
+<div class="subject-grade">
+    <div style="display: flex; flex-direction: column;">
+        <div class="subject-location">
+            <img src="img/math-icon.png" alt="" style="width: 80px;">
+            <p style="margin-left: 10px;">Matemática</p>
+        </div>
+        <div class="subject-location">
+            <img src="img/port-icon.png" alt="" style="width: 80px;">
+            <p style="margin-left: 10px;">Português</p>
+        </div>
+        <div class="subject-location">
+            <img src="img/hist-icon.png" alt="" style="width: 80px;">
+            <p style="margin-left: 10px;">História</p>
+        </div>
+        <div class="subject-location">
+            <img src="img/cien-icon.png" alt="" style="width: 80px;">
+            <p style="margin-left: 10px;">Ciências</p>
+        </div>
+        <div class="subject-location">
+            <img src="img/art-icon.png" alt="" style="width: 80px;">
+            <p style="margin-left: 10px;">Artes</p>
+        </div>
+        <div class="subject-location">
+            <img src="img/english-icon.png" alt="" style="width: 80px;">
+            <p style="margin-left: 10px;">Inglês</p>
+        </div>
+        <div class="subject-location">
+            <img src="img/geo-icon.png" alt="" style="width: 80px;">
+            <p style="margin-left: 10px;">Geografia</p>
+        </div>
+    </div>
+
+    <h1 style="font-size: 80px; font-family: inter; color: #7B2CBF; font-weight: bold; margin-left: 335px;">In to Academy</h1>
+</div>
+
+<div class="into-academy-description">
+    <h1 style="font-size: 64px; text-align: center;">Por que a In to Academy funciona?</h1>
+
+    <div class="into-academy-desc-items">
+    <div class="inner">
+        <img src="img/mind-icon.png" alt="" style="width: 120px; height: 120px;">
+        <h2 style="text-align: center;">Aprendizagem 
+personalizada</h2>
+
+<p style="width: 80%; text-align: center;">Os alunos praticam no próprio ritmo, 
+solucionando primeiramente suas 
+dificuldades de compreensão e, depois,
+acelerando o aprendizado.
+</p>
+    </div>
+
+    <div class="inner">
+        <img src="img/pilar-icon.png" alt="" style="width: 120px; height: 120px;">
+        <h2 style="text-align: center;">Conteúdo confiável</h2>
+
+<p style="width: 80%; text-align: center;">Criada por especialistas, a biblioteca da 
+In to Academy de prática e lições
+ confiáveis abrange matemática, ciências e
+ muito mais. Sempre gratuita para alunos e 
+professores.
+
+</p>
+    </div>
+
+    <div class="inner">
+        <img src="img/graph-icon.png" alt="" style="width: 120px; height: 120px;">
+        <h2 style="text-align: center;">Ferramentas para a 
+capacitação de professores
+</h2>
+
+<p style="width: 80%; text-align: center;">Com a In to Academy, os professores 
+conseguem identificar as dificuldades de
+ compreensão de seus alunos, personalizar
+ instruções e atender às necessidades de
+ cada um deles.
+</p>
+    </div>
+    </div>
+
+
+</div>
+
+<div class="teacher-area">
+    <img src="img/professores.png" alt="" style="width: 50%; height: 50%; margin-right: 50px; align-self: center;">
+    <div class="text-teacher">
+        <p style="color: rgb(136, 136, 136); margin-bottom: 0px;">Professores</p>
+
+        <h1 style="font-size: 48px; margin-top: 0px;">“Eu finalmente consigo identificar as <span style="color: #7B2CBF; font-style: italic; font-family: inria serif;">diferenças</span> em minha sala de aula. E isso tem sido fundamental para o envolvimento dos meus alunos.”</h1>
+
+        <p style="font-size: 22px;">Preparamos os professores para auxiliar sua turma toda. Ao todo, 90% dos professores que já usaram a In to Academy relatam que ela é eficiente.</p>
+
+        <button class="banner-btn" style="margin-top: 30px;">Professores</button>
+
+    </div>
+</div>
+
+<div class="relato-area">
+    <h1 style="font-size: 48px; font-weight: 400;">“Eu venho de uma família humilde. Vivemos em apenas um cômodo. Quando eu era criança, tinha medo de matemática. Mas, hoje, adoro essa matéria graças à In to Academy.”</h1>
+
+    <div style="display: flex; align-items: center; gap: 15px; ">
+        <div class="text-person">
+            <p style="font-weight: bold; margin: 0px; font-size: 24px;">Lara</p>
+            <p style="margin: 0px; font-size: 18px;">Brasília</p>
+        </div>
+        <img src="img/relato-foto.png" alt="">
+    </div>
+</div>
+
+<footer>
+    <div style="display: flex; justify-content: center; padding: 20px 0px; background-color: #7B2CBF; margin-top: 100px;">
+        <div style="width: 60%;">
+            <h2 style="font-size: 24px; color: #FFFFFF; font-family: inter;">In to Academy</h2>
+
+            <p style="color: #ffffffa9; width: 50%; font-size: 24px;">Nossa missão é oferecer uma educação gratuita e de alta qualidade para qualquer pessoa, em qualquer lugar.</p>
+
+            <p style="color: #ffffffa9; width: 50%; font-size: 24px;">A In to Academy é uma organização sem fins lucrativos. <span style="color: #FFFFFF; font-weight: bold; cursor: pointer;">Faça uma doação</span> ou <span style="color: #FFFFFF; font-weight: bold; cursor: pointer;">seja voluntário</span> hoje mesmo!</p>
+
+            <p style="font-size: 14px; color: rgb(255, 255, 255);">© 2025 In to Academy. Todos os direitos reservados.</p>
+        </div>
+        <div>
+            <h2 style="font-size: 24px; color: #FFFFFF; font-family: inter;">Links Úteis</h2>
+            <ul style="list-style: none; padding: 0;">
+                <li><a href="#banner" style="text-decoration: none; color: #FFFFFF;">Sobre Nós</a></li>
+                <li><a href="#" style="text-decoration: none; color: #FFFFFF;">Contato</a></li>
+                <li><a href="#" style="text-decoration: none; color: #FFFFFF;">Termos de Uso</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

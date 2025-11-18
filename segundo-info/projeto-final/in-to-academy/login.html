@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - In to Academy</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body class="body-login">
+  <div class="container">
+
+    <!-- Login Form -->
+     <div class="form-box login">
+      <form action="#">
+        <h1 style="font-family: inter; ">Login</h1>
+        <div class="input-box">
+          <input type="text" placeholder="Nome do usuário" required>
+          <i class="fa-solid fa-user"></i>
+        </div>
+        <div class="input-box">
+          <input type="password" placeholder="Senha" required>
+          <i class="fa-solid fa-lock"></i>
+        </div>
+        <div class="forgot-link">
+          <a href="#">Esqueceu a senha?</a>
+        </div>
+        <button type="submit" class="btn" style="color: #C5C5C5;" onclick="location.href='index.html'">Entrar</button>
+        <p>OU entre com mídias sociais</p>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-google"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-apple"></i></a>
+          <a href="#"><i class="fa-brands fa-microsoft"></i></a> <!-- Facebook, Apple, Google, Microsoft -->
+        </div>
+      </form>
+     </div>
+
+     <!-- Registration Form -->
+     <div class="form-box register">
+
+      <form action="#">
+        <h1 style="font-family: inter; ">Registre-se</h1>
+        <div class="input-box">
+          <input type="text" placeholder="Nome do usuário" required>
+          <i class="fa-solid fa-user"></i>
+        </div>
+         <div class="input-box">
+          <input type="email" placeholder="Email" required>
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+        <div class="input-box">
+          <input type="password" placeholder="Senha" required>
+          <i class="fa-solid fa-lock"></i>
+        </div>
+        <button type="submit" class="btn" onclick="location.href='index.html'" style="color: #C5C5C5;">Criar conta</button>
+        <p>OU registre-se com mídias sociais</p>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-google"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-apple"></i></a>
+          <a href="#"><i class="fa-brands fa-microsoft"></i></a> <!-- Facebook, Apple, Google, Microsoft -->
+        </div>
+      </form>
+     </div>
+
+     <!-- toggle box -->
+      <div class="toggle-box">
+      
+      <!-- toggle box left -->
+      <div class="toggle-panel toggle-left">
+        <h1 style="font-family: inter; color: #C5C5C5;">Bem-vindo de volta!</h1>
+        <p style="color: #C5C5C5;">Não possui uma conta?</p>
+        <button class="btn register-btn" style="color: #C5C5C5;">Criar conta</button>
+      </div>
+
+      <!-- toggle box right-->
+      <div class="toggle-panel toggle-right">
+        <h1 style="font-family: inter; color: #C5C5C5;">Olá, bem-vindo!</h1>
+        <p style="color: #C5C5C5;">Já possui uma conta?</p>
+        <button class="btn login-btn">Entrar</button>
+      </div>
+    </div>
+
+      
+  </div>
+</body>
+<script src="javascript/script.js"></script>
+<script src="javascript/login.js"></script>
+<script src="javascript/searchbar.js"></script>
+</html>
