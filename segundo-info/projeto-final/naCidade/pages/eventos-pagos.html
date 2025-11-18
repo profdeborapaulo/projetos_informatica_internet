@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>naCidade</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/icon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/icon/favicon-16x16.png">
+  <link rel="manifest" href="../assets/img/icon/site.webmanifest">
+</head>
+<body onload="verificarLogin()">
+
+  <!-- Navbar -->
+  <nav class="navbar bg-white border-bottom border-primary py-3">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a class="navbar-brand" href="index.html">
+        <img src="../assets/img/logo.png" alt="naCidade" height="30">
+      </a>
+
+      <div id="auth-buttons">
+        <a href="login.html" class="btn btn-outline-primary me-2">Entrar</a>
+        <a href="criar-conta.html" class="btn btn-primary">Criar conta</a>
+      </div>
+
+      <div id="menu-icon" class="d-none">
+        <button class="btn" id="menuToggle" onclick="abrirMenu()">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Menu lateral -->
+  <div class="offcanvas offcanvas-end shadow-lg" tabindex="-1" id="menuLateral">
+    <div class="offcanvas-header border-bottom border-primary bg-light">
+      <div class="d-flex align-items-center">
+        <img id="fotoMenu" src="https://cdn-icons-png.flaticon.com/512/149/149071.png" width="40" height="40" class="me-2 rounded-circle" alt="user">
+        <span id="nomeUsuario">Olá, Nome de usuário.</span>
+      </div>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+
+    <div class="offcanvas-body">
+      <div class="menu-section">
+        <p id="toggleEventos" class="fw-bold mb-1" style="cursor:pointer;">
+          Eventos <span id="toggleSub" class="ms-1">↓</span>
+        </p>
+        <ul id="subEventos" class="list-unstyled ms-3 d-none">
+          <li><a href="todos-eventos.html">Ver tudo</a></li>
+          <li><a href="musica.html">Música</a></li>
+          <li><a href="humor.html">Humor</a></li>
+          <li><a href="esportes.html">Esportes</a></li>
+          <li><a href="teatro.html">Teatros e espetáculos</a></li>
+          <li><a href="infantil.html">Infantil</a></li>
+          <li><a href="eventos-gratuitos.html">Eventos gratuitos</a></li>
+          <li><a href="eventos-pagos.html">Eventos pagos</a></li>
+        </ul>
+      </div>
+
+      <div class="menu-section mt-3">
+        <p><a href="cadastre-evento.html" class="fw-bold">Cadastre o seu evento</a></p>
+        <p><a href="perfil.html" class="fw-bold">Seu perfil</a></p>
+        <p><a href="contato.html" class="fw-bold">Contato</a></p>
+      </div>
+
+      <div class="mt-4">
+        <a href="#" id="sair" class="fw-bold text-danger">Sair →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Conteúdo -->
+   <main>
+  <section class="text-center mt-5 mb-5">
+    <div class="container">
+      <h2 class="fw-bold text-primary mb-4" id="tituloPagina">Eventos</h2>
+      <div class="row g-4" id="eventosContainer"></div>
+    </div>
+  </section>
+   </main>
+
+  <!-- Rodapé -->
+  <footer class="footer-nacidade mt-5 pt-4 pb-3 text-white">
+    <div class="container">
+      <div class="row align-items-center text-center text-md-start">
+        <div class="col-md-4 mb-4 mb-md-0">
+          <img src="../assets/img/logobranca.png" alt="naCidade" height="35" class="mb-2">
+          <p class="small mb-0">O seu guia de eventos, shows e experiências locais em Barueri e região.</p>
+        </div>
+        <div class="col-md-4 mb-4 mb-md-0">
+          <h6 class="fw-bold">Navegação</h6>
+          <ul class="list-unstyled mb-0">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="todos-eventos.html">Eventos</a></li>
+            <li><a href="cadastre-evento.html">Cadastre seu evento</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6 class="fw-bold">Siga o naCidade</h6>
+          <div class="social-icons d-flex justify-content-center justify-content-md-start gap-3 mt-2">
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="border-light mt-4 mb-3">
+      <div class="text-center small">
+        © 2025 <strong>naCidade</strong> — Todos os direitos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/script.js"></script>
+  <script src="../assets/js/listar-eventos.js"></script>
+</body>
+</html>
