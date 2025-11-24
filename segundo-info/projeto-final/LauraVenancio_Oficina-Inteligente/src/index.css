@@ -1,0 +1,103 @@
+/*
+  ARQUIVO: src/index.css
+  DESCRIÇÃO: A "Pintura" e o "Polimento" do site.
+  Aqui nós personalizamos o Bootstrap com nossas cores.
+*/
+
+/* 1. Nossa paleta de cores "automotiva" */
+:root {
+  --cor-primaria: #1E3A8A;     /* Azul-cobalto (profissional) */
+  --cor-secundaria: #374151;  /* Cinza-chumbo (para menus) */
+  --cor-acento: #F59E0B;       /* Laranja (para a logo e destaques) */
+  --cor-fundo: #f8f9fa;        /* Cinza-claro (fundo da página) */
+  --cor-sucesso: #198754;      /* Verde (confirmar) */
+  --cor-perigo: #dc3545;       /* Vermelho (sair, cancelar) */
+  --cor-texto: #212529;        /* Preto suave */
+  --cor-branca: #ffffff;
+  --cor-borda: #dee2e6;
+}
+
+/* 2. Estilos base para a "carroceria" */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  /* Usa nosso cinza-claro como cor de fundo */
+  background-color: var(--cor-fundo) !important; 
+  color: var(--cor-texto);
+}
+
+/* 3. "Polimento" dos componentes do Bootstrap */
+
+/* Força os botões primários a usarem nosso azul */
+.btn-primary {
+  background-color: var(--cor-primaria);
+  border-color: var(--cor-primaria);
+  color: var(--cor-branca);
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+.btn-primary:hover {
+  background-color: #1a3273; /* Azul um pouco mais escuro */
+  border-color: #1a3273;
+}
+
+/* Garante que os botões de ação tenham texto branco */
+.btn-danger {
+  color: var(--cor-branca);
+}
+.btn-success {
+  color: var(--cor-branca);
+}
+
+/* Força os textos a usarem nossas cores */
+.text-primary {
+  color: var(--cor-primaria) !important;
+}
+.text-warning {
+  color: var(--cor-acento) !important;
+}
+
+/* Deixa os "cards" (caixas) com visual mais moderno */
+.card {
+  border: none; /* Remove a borda padrão */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Sombra suave */
+  border-radius: 12px; /* Bordas mais arredondadas */
+}
+
+/* Deixa o menu de navegação com nosso cinza-chumbo */
+.bg-dark {
+  background-color: var(--cor-secundaria) !important;
+}
+
+/* --- A CORREÇÃO DA LOGO --- */
+/* Esta regra faz a logo (ícone) ficar LARANJA
+   apenas quando estiver dentro de um menu escuro. */
+.navbar-dark .navbar-brand .text-primary {
+  color: var(--cor-acento) !important; 
+}
+/* E mantém o texto ao lado da logo BRANCO */
+.navbar-dark .navbar-brand span {
+  color: var(--cor-branca) !important;
+}
+/* --- FIM DA CORREÇÃO --- */
+
+/* Ajustes nos modais (janelas flutuantes) */
+.modal-content {
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Ajustes de contraste para as caixas de alerta */
+.alert-info {
+  background-color: #cfe2ff;
+  color: #052c65;
+  border-color: #b6d4fe;
+}
+.alert-warning {
+  background-color: #fff3cd;
+  color: #664d03;
+  border-color: #ffecb5;
+}
