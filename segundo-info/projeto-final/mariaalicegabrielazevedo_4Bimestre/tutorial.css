@@ -1,0 +1,549 @@
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+/*estilização do corpo do site*/
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+
+body{
+    background-color:rgb(242, 242, 242); 
+    padding-top: 80px; 
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+/*estilização do cabeçalho do site*/
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+
+header{
+    background-color: rgb(99, 150, 187); /*define a cor do fundo*/
+    max-height: 80px;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 65px;
+    position: fixed; 
+    top: 0;          
+    left: 0;       
+    width: 100%;     
+    z-index: 100;  /*faz que ele fique por cima de todo conteúdo*/
+}
+
+/*logo da header*/
+header img{
+    max-width: 130px;
+    margin-left: 8%;
+    border-radius: 5px;
+    margin-top: 1%;
+}
+
+/*texto da header*/
+header h1{
+    font-size: 20px;
+}
+
+/*link da header*/
+header a {
+    text-decoration: none;
+    color: rgb(231, 226, 224);
+    margin-left: 4%;
+}
+
+/*fake hr criado*/
+.fakehr{
+    width: 1px;
+    height: 80px;
+    background-color:  rgb(231, 226, 224);
+    margin-left: 3%;
+    display: flex;
+    justify-content: center; 
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+/*inicio do corpo do site*/
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*estilização dos textos de tutorial*/
+.tutorial{
+  margin-top: 3%;
+}
+
+.tutorial a{
+  text-decoration: none;
+  text-align: center;
+  color: rgb(21, 21, 21);
+}
+
+.tutorial h1{
+  font-size: 55px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.tutorial p{
+  font-family: 'Lato', sans-serif;
+  font-size: 21px;
+  margin-bottom: 3%;
+}
+
+/*estilização do botão que direciona pra página de dúvidas*/
+.button_duvidas{
+   background-color: rgb(242, 242, 242);
+    width: 30%;
+    height: 20%;
+    padding: 10px 20px;
+   border: 2px solid rgb(145, 187, 175);
+    border-radius: 5px;
+    box-shadow: #186374 0px 2px 4px 0px;
+    text-transform: uppercase;
+    transition: all .5s ease;
+    display: block;
+    font-size: 12px;
+    margin-top: auto; 
+    margin-left: auto;
+    margin-right: auto; 
+    margin-bottom: 0; 
+    align-self: center; 
+}
+
+
+.button_duvidas:hover {
+  letter-spacing: 1px;
+  background-color: rgb(99, 150, 187); 
+  color: #f0f0f0;
+  box-shadow: rgb(99, 150, 187) 0px 2px 9px 0px;
+  font-family: 'Comic Neue', cursive;
+  width: 30%;
+    height: 20%;
+}
+
+
+/*união de todos os tutoriais*/
+.tutoriais{
+    background-color: rgb(242, 242, 242);
+    border: 2px solid rgb(145, 187, 175);
+    border-radius: 5px;
+    box-shadow: #186374 0px 3px 8px 0px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 100px;
+    padding: 10px;
+    margin-top: 5%;
+    margin-left: 1.3%;
+     margin-right: 1.3%;
+}
+
+/*estilização de todas as imagens juntas*/
+.tutoriais img{
+    max-width: 90%; 
+    height: auto;
+    border-radius: 5px;
+    
+}
+/*estilização de cada imagem*/
+.imagem{
+    width: 30%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contêiner do Texto e Botão*/
+.texto_botao{
+    flex: 1; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    padding: 10px;
+    padding-left: 0; 
+    text-align: left;
+    color: rgb(22, 21, 20); 
+    margin-left: 2%;
+}
+
+/*estilização do texto do container do texto e botão*/
+.texto_botao h4 {
+    margin: 0 0 5px 0; 
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+}
+
+/*estilização do botãontainer do texto e botão*/
+.texto_botao button {
+    align-self: flex-start; 
+    margin-top: 5px;
+    padding: 5px 10px;
+}
+
+
+/* Contêiner do Item de Tutorial */
+.imposto_renda, .inss, .serasa, .fgts, .nota_fiscal, .boleto, .passaporte, .curriculo, .eleitor{
+  background-color: rgb(242, 242, 242);
+  border: 2px solid rgb(145, 187, 175);
+  border-radius: 5px;
+  display: flex; 
+  flex-direction: row; 
+  align-items: center; 
+  justify-content: flex-start; 
+  max-height: 120px; 
+  min-height: 120px; 
+  max-width: 450px;
+  min-width: 450px; 
+  transition: ease 0.5s;
+  padding: 10px; 
+  margin-top: 1%;
+   margin-bottom: 1%;
+}
+
+.imposto_renda:hover, .inss:hover, .serasa:hover, .fgts:hover, .nota_fiscal:hover, .boleto:hover, .passaporte:hover, .curriculo:hover, .eleitor:hover{
+  background-color: rgb(242, 242, 242);
+  border: 2px solid rgb(145, 187, 175);
+  border-radius: 5px;
+  display: flex; 
+  flex-direction: row; 
+  align-items: center; 
+  justify-content: flex-start; 
+  height: 150px;
+  width :480px;
+  padding: 5px; 
+  transition: ease 0.5s;
+  box-shadow: #186374 0px 6px 17px 0px;
+  letter-spacing: 1.5px;
+}
+
+/*botão pra abrir o modal*/
+.open-modal{
+    background-color: rgb(242, 242, 242);
+    width: 120px;
+    height: 40px;
+    padding: 10px 20px;
+   border: 2px solid rgb(145, 187, 175);
+    border-radius: 5px;
+    box-shadow: #186374 0px 2px 4px 0px;
+    text-transform: uppercase;
+    transition: all .5s ease;
+    display: block;
+    font-size: 12px;
+    margin-top: auto; 
+    margin-left: auto;
+    margin-right: auto; 
+    margin-bottom: 0; 
+    align-self: center; 
+}
+
+
+.open-modal:hover {
+  letter-spacing: 1px;
+  background-color: rgb(99, 150, 187); 
+  color: #f0f0f0;
+  box-shadow: rgb(99, 150, 187) 0px 2px 9px 0px;
+  font-family: 'Comic Neue', cursive;
+  width: 130px;
+  height: 50px;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*modal*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*findo do modal*/
+dialog {
+    width: 80%; 
+    max-width: 80%;
+    max-height: 90%;
+    background-image: url(img/fundo1.png);
+}
+
+/*estilização do modal + imagem*/
+.conjunto_modal{
+     flex-wrap: nowrap;
+    display: flex;
+    align-items: center;
+}
+
+ /*textos do modal*/
+
+.conjunto_modal h1{
+    color: #3c4144;
+    font-size: 50px;
+    margin-bottom: 2%;
+}
+
+.conjunto_modal p{
+    color: #343a3c;
+    font-size: 17px;
+    margin-bottom: 2%;
+}
+
+.conjunto_modal li{
+    color: #343a3c;
+    font-size: 17px;
+    margin-bottom: 2%;
+    
+}
+ 
+/*botão de fechar o modal*/
+dialog .close-modal {
+    position:fixed;
+    top: 10px;  
+    right: 10px;
+    margin: 10px; 
+    padding: 10px 15px;
+    background-color: #f44336; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 10; 
+    transition: ease 0.5s;
+    width: 6%;
+    height: 7%;
+    font-size: 20px;
+}
+
+dialog .close-modal:hover {
+    position:fixed;
+    top: 10px;  
+    right: 10px;
+    margin: 10px; 
+    padding: 10px 15px;
+    background-color: #15582f; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 10; 
+    letter-spacing: 1.5px;
+    transition: ease 0.5s;
+}
+
+/*fundo do dialog*/
+dialog::backdrop {
+    background-color: rgba(14, 27, 43, 0.6); 
+    transition: background-color 0.3s ease-in-out;
+}
+
+/*Seção do passo a passo*/
+.accordion-body{
+  background-color: #f6f6f5;
+  height: 400px;
+}
+
+.accordion-body2{
+  background-color: #f6f6f5;
+  height: 750px;
+}
+
+/*texto da Seção do passo a passo*/
+.accordion-body h1{
+  color: rgb(99, 150, 187);
+  box-shadow: rgb(99, 150, 187) 0px 2px 9px 0px;
+  background-color: rgb(242, 242, 242);
+  border: 2px solid rgb(145, 187, 175);
+  font-family: 'Montserrat', sans-serif;
+}
+
+/*estilização da div intruções*/
+.intrucoes{
+  background-color: rgb(99, 150, 187);
+  width: 70%;
+  height: 250px;
+  margin-left: 15%;
+  margin-top: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+   box-shadow: rgb(99, 150, 187) 0px 2px 9px 0px;
+   transition:  ease 0.5s;
+}
+
+.intrucoes:hover{
+  background-color: rgb(99, 150, 187);
+  width: 75%;
+  height: 270px;
+  margin-left: 13%;
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+   box-shadow: rgb(99, 150, 187) 0px 4px 16px 0px;
+   transition:  ease 0.5s;
+   letter-spacing: 1.5px;
+}
+
+.intrucoes p {
+  text-align: center;
+  margin-right: 30%;
+  width: 100%;
+  font-size: 20px;
+  color: aliceblue;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+/*div do card da dica*/
+.dica {
+  position: relative;
+  width: 300px;
+  height: 550px;
+  margin: 20px;
+}
+
+/* para o card da dica pulsar */
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, 0) scale(1); 
+    }
+    50% {
+        transform: translate(-50%, 0) scale(1.05); 
+    }
+    100% {
+        transform: translate(-50%, 0) scale(1);
+    }
+}
+/*parte da fente do card das dicas*/
+
+.section2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  font-family: 'Comic Neue', cursive;
+ background-color: rgb(242, 242, 242);
+  border: 2px solid rgb(145, 187, 175);
+  border-radius: 5px;
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+  pointer-events: auto;
+  z-index: 2;
+  padding-top: 15px;
+  margin-left: 550px;
+  margin-top: 40px;
+  animation-name: pulse;        
+    animation-duration: 2s;       
+    animation-timing-function: ease-in-out; 
+    animation-iteration-count: infinite;
+}
+
+.section2 img {
+  height: 230px;
+  display: block;
+  margin: 0 auto;
+}
+
+.section2 h1 {
+  justify-content: center;
+  margin: 20px auto 0;
+  display: flex; 
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+/* verso do card das dicas */
+
+.section3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+    font-family: 'Nunito Sans', sans-serif;
+ background-color: rgb(242, 242, 242);
+  border: 2px solid rgb(145, 187, 175);
+  border-radius: 5px;
+  opacity: 0;
+  transform: scale(0.9);
+  pointer-events: none;
+  transition: opacity 0.45s ease, transform 0.45s ease;
+  padding-top: 20px;
+  z-index: 1;
+  margin-left: 400px;
+  margin-top: 40px;
+}
+
+.section3 img {
+  height: 230px;
+  display: block;
+  margin: 0 auto;
+}
+
+.section3 h1 {
+  justify-content: center;
+    font-family: 'Nunito Sans', sans-serif;
+  margin: 20px auto 0;
+  text-align: center;
+  display: flex;
+  font-size: 18px;
+  height: 100%;
+  width: 200px;
+  color:black;
+}
+
+/* interação */
+
+.dica:hover .section3 {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+  z-index: 3;
+}
+
+.dica:hover .section2 {
+  opacity: 0;
+  transform: scale(0.9);
+  pointer-events: none;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ESTILIZAÇÃO DO FOOTER */
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+footer {
+    background-color: rgb(99, 150, 187); 
+    color: rgb(213, 213, 213); 
+    font-size: 20px; 
+    text-align: center; 
+    font-family: 'Comic Neue', cursive; 
+    margin-top: 50px; 
+    padding-top: 20px; 
+    padding-bottom: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 -5px 10px -5px rgba(48, 76, 96, 0.5); 
+}
+
+/* Estilização da Imagem do GitHub  */
+.github {
+    margin-top: 10px; 
+    margin-bottom: 0;
+}
+
+.github img {
+    width: 100px; 
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*estilização dos textos*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+h1{
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+p{
+  width: 40%;
+  text-align: center;
+  margin-left: 30%;
+  font-family: 'Nunito Sans', sans-serif;
+}

@@ -1,0 +1,403 @@
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+/*estilização do corpo do site*/
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+
+body{
+    background-color:rgb(242, 242, 242); 
+    padding-top: 80px; 
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+/*estilização do cabeçalho do site*/
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+
+header{
+    background-color: rgb(99, 150, 187); /*define a cor do fundo*/
+    max-height: 80px;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 65px;
+    position: fixed; 
+    top: 0;          
+    left: 0;       
+    width: 100%;     
+    z-index: 100;  /*faz que ele fique por cima de todo conteúdo*/
+}
+
+/*logo da header*/
+header img{
+    max-width: 130px;
+    margin-left: 8%;
+    border-radius: 5px;
+    margin-top: 1%;
+}
+
+/*texto da header*/
+header h1{
+    font-size: 20px;
+}
+
+/*link da header*/
+header a {
+    text-decoration: none;
+    color: rgb(231, 226, 224);
+    margin-left: 4%;
+}
+
+/*fake hr criado*/
+.fakehr{
+    width: 1px;
+    height: 80px;
+    background-color:  rgb(231, 226, 224);
+    margin-left: 3%;
+    display: flex;
+    justify-content: center; 
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+/*inicio do corpo do site*/
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*estilização imagem e texto da seção 1*/
+.itens_inicio{
+    flex-wrap: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+/*textos da seção 1*/
+.text_inicio h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 55px;
+}
+
+.text_inicio h3{
+    font-family: 'Lato', sans-serif;
+    font-size: 28px;
+}
+
+.text_inicio p{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 20px;
+}
+
+/*palavra que muda*/
+#palavra {
+  color: rgb(145, 187, 175);
+  font-weight: bold;
+  transition: opacity 0.5s ease;
+}
+
+/*estilização da imagem do menino loiro confuso*/
+.container1{
+    background-color: rgb(145, 187, 175);
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    color: white;
+    max-width: 800px;
+    margin: 50px;
+    margin-right: 10px;
+    border-radius: 6px;
+    box-shadow: #186374 0px 3px 13px 0px;
+}
+
+
+.container1 img{
+    width: 100%;
+    height: auto;
+}
+
+.container1 h3{
+    position: absolute;
+    top: 85%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    background-color: rgba(60, 102, 125, 0.5); /* fundo semitransparente */
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/*textos de como funciona*/
+
+.centro{
+  font-family: 'Segoe UI', sans-serif;
+  background-color: rgb(242, 242, 242);
+  color: #0d0c0c;
+  padding: 40px 20px;
+  line-height: 1.6;
+  margin-top: 5%;
+}
+
+.centro h1 {
+    text-align: center; /* centraliza o texto do h1 e o texto do p */
+    color: rgb(19, 17, 17);
+    margin-bottom: 2%;
+}
+
+
+.centro p {
+    text-align: center;
+    max-width: 700px; 
+    margin: 0 auto;   /* Centraliza o bloco do parágrafo nessa largura limitada */
+}
+
+/*cards como funciona*/
+
+.como_funciona{
+    margin-top: 5%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    margin-bottom: 10%;
+}
+
+.como_funciona h4{
+    color: #0d0c0c;
+}
+
+.como_funciona p{
+    margin: 10%;
+}
+
+/*numeros dos cards*/
+
+.item1 img{
+    margin-top: 10%;
+    margin-bottom: 5%;
+    max-width: 50%;
+    height: auto;
+}
+
+.item2 img{
+    margin-top: 10%;
+    margin-bottom: 5%;
+    max-width: 30%;
+    height: auto;
+}
+
+.item3 img{
+    margin-top: 10%;
+    margin-bottom: 5%;
+    max-width: 30%;
+    height: auto;
+}
+
+/*cards: como funciona*/
+
+.item1, .item2, .item3{
+    background-color: rgb(242, 242, 242);
+    border: 2px solid rgb(145, 187, 175);
+    border-radius: 5px;
+    box-shadow: #186374 0px 3px 8px 0px;
+    justify-content: center;
+    text-align: center;
+    max-height: 450px;
+    max-width: 350px;
+    min-height: 400px; 
+    min-width: 350px; 
+    transition: ease 1s;
+}
+
+/*estilização do hover dos cards como funciona*/
+
+.item1:hover, .item2:hover, .item3:hover{
+    background-color: rgb(242, 242, 242);
+    border: 2px solid rgb(145, 187, 175);
+    border-radius: 5px;
+    box-shadow: #186374 0px 3px 8px 0px;
+    justify-content: center;
+    text-align: center;
+    max-height: 450px;
+    max-width: 350px;
+    min-height: 420px; 
+    min-width: 370px; 
+    transition: ease 0.5s;
+    letter-spacing: 1px;
+}
+
+/*estilização do objetivo*/
+
+.objetivo{
+    background-color: #dbe2e3;
+    border: 2px solid rgb(145, 187, 175);
+    border-radius: 5px;
+    box-shadow: #186374 0px 3px 8px 0px;
+    margin: 5%;
+    transition: ease 0.5s;
+}
+
+/*objetivo ao passar o mouse*/
+
+.objetivo:hover{
+    background-color: #dbe2e3;
+    border: 2px solid rgb(145, 187, 175);
+    border-radius: 5px;
+    box-shadow: #186374 0px 3px 8px 0px;
+    margin: 4%;
+    transition: ease 0.5s;
+}
+
+/*estilização dos textos: objetivo*/
+
+.objetivo h1{
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.objetivo p{
+    text-align: center;
+    max-width: 850px; 
+    margin: 0 auto; 
+    margin-bottom: 20px;     
+    margin-left: auto;      
+    margin-right: auto;
+}
+
+/*texto de contato*/
+
+.contato h1 {
+  text-align: center;
+  color: black;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+/*estilização de formulário*/
+
+#formulario {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: rgb(242, 242, 242);
+    border: 2px solid rgb(145, 187, 175);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #444;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+/*estilização de quando a área esta selecionada*/
+
+input:focus,
+textarea:focus {
+  border-color: #e91e63;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/*estilizações do botão de enviar*/
+.enviar {
+  background-color: #30baae;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.enviar:hover {
+  background-color: #d81b60;
+}
+
+/*estilização do rodapé*/
+
+footer {
+  background-color: rgb(99, 150, 187);
+  color: rgb(213, 213, 213); 
+  font-size: 20px; 
+  text-align: center; 
+  font-family: 'Comic Neue', cursive; 
+  margin-top: 50px; 
+  padding-top: 20px; 
+  padding-bottom: 20px; 
+  border-radius: 10px; 
+  box-shadow: 0 -5px 10px -5px rgba(48, 76, 96, 0.5); 
+}
+
+/*estilização do icone github*/
+
+.github {
+  margin-top: 10px; 
+  margin-bottom: 0;
+}
+
+.github img {
+ width: 100px;
+ max-width: 100%; 
+ height: auto; 
+ display: block; 
+ margin: 0 auto; 
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+/*estilização dos textos*/
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+
+h1{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif; 
+}
+
+h2{
+    font-size: 60px;
+    flex-wrap: wrap;
+    max-width: 750px;
+    margin-left: 70px;   
+}
+
+h3{
+    font-size: 26px;
+    max-width: 750px;
+    margin-left: 70px;
+    margin-top: 26px;
+    font-family: 'Lato', sans-serif;
+}
+
+h4 {
+  text-align: center;
+  font-weight: normal;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  font-family: 'Lato', sans-serif;
+}
+
+p{
+    max-width: 750px;
+    font-size: 20px;
+    margin-left: 70px;
+    margin-top: 26px;
+    font-family: 'Nunito Sans', sans-serif;
+}

@@ -1,0 +1,354 @@
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+/*estilização do corpo do site*/
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+
+body{
+    background-color:rgb(242, 242, 242); 
+    padding-top: 80px; 
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+/*estilização do cabeçalho do site*/
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+
+header{
+    background-color: rgb(99, 150, 187); /*define a cor do fundo*/
+    max-height: 80px;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 65px;
+    position: fixed; 
+    top: 0;          
+    left: 0;       
+    width: 100%;     
+    z-index: 100;  /*faz que ele fique por cima de todo conteúdo*/
+}
+
+/*logo da header*/
+header img{
+    max-width: 130px;
+    margin-left: 8%;
+    border-radius: 5px;
+    margin-top: 1%;
+}
+
+/*texto da header*/
+header h1{
+    font-size: 20px;
+}
+
+/*link da header*/
+header a {
+    text-decoration: none;
+    color: rgb(231, 226, 224);
+    margin-left: 4%;
+}
+
+/*fake hr criado*/
+.fakehr{
+    width: 1px;
+    height: 80px;
+    background-color:  rgb(231, 226, 224);
+    margin-left: 3%;
+    display: flex;
+    justify-content: center; 
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+/*inicio do corpo do site*/
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*estilização dos textos explicando sobre o que a página é*/
+.oque h1{
+    font-size: 60px;
+    color: #0b0b0b;
+}
+
+.oque p{
+    font-size: 20px;
+    margin-top: 2%;
+    width: 40%;
+    margin-left: 30%;
+}
+
+hr{
+    margin-bottom: 5%;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+/*estilizaçao das imagens mudando*/
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/*div das imagens*/
+.carrosel {
+    max-width: 60%; 
+    position: relative; 
+    margin: auto;
+    overflow: hidden; 
+    height: 500px; 
+}
+
+/*imagens que mudam*/
+.img_carrosel { 
+    position: absolute; 
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+    opacity: 0; 
+    transition: opacity 1.5s ease-in-out; 
+    pointer-events: none; 
+}
+
+/* classe para a imagem ativa */
+.img_carrosel.active-slide {
+    opacity: 1;     
+    pointer-events: auto; 
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+/* 3. ESTILIZAÇÃO DOS CARD*/
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/*união de todos os cards*/
+.cards {
+  background-color: rgb(242, 242, 242);
+    border: 2px solid rgb(145, 187, 175);
+    border-radius: 5px;
+    box-shadow: #186374 0px 3px 8px 0px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 100px;
+    margin-top: 8%;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding: 20px;
+}
+
+/* Base de Estilo para TODOS os cards */
+.inss, .imposto-renda, .fgts, .darf, .score, .comprovante_renda, .fiador, .caucao, .orcamento_domestico, .seguro_residencial, 
+.inflacao, .pib, .taxa_selic, .politica_publica, .fake_news {
+   background-color: rgb(242, 242, 242);
+    border: 2px solid rgb(145, 187, 175);
+    border-radius: 10px;
+    padding: 15px; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+    text-align: center;
+    max-height: 280px; 
+    min-height: 280px; 
+    max-width: 220px;
+    min-width: 200px; 
+    transition: ease 0.5s;
+}
+
+/* Base de Estilo para TODOS os cards ao passar o mouse */
+.inss:hover, .imposto-renda:hover, .fgts:hover, .darf:hover, .score:hover, .comprovante_renda:hover, .fiador:hover, .caucao:hover,
+ .orcamento_domestico:hover, .seguro_residencial:hover, .inflacao:hover, .pib:hover, .taxa_selic:hover, .politica_publica:hover, .fake_news:hover {
+   background-color: rgb(242, 242, 242);
+    border: 2px solid rgb(145, 187, 175);
+    border-radius: 10px;
+    padding: 15px; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+    text-align: center;
+    max-height: 295px; 
+    min-height: 295px; 
+    max-width: 235px;
+    transition: ease 0.5s;
+    min-width: 235px; 
+    box-shadow: #186374 0px 6px 17px 0px;
+    letter-spacing: 2px;
+}
+
+/* Imagens dos cards */
+.inss img, .imposto-renda img, .fgts img, .darf img, .score img, .comprovante_renda img, .fiador img, .caucao img, .orcamento_domestico img, .seguro_residencial img, 
+.inflacao img, .pib img, .taxa_selic img, .politica_publica img, .fake_news img{
+    margin-top: 5%;
+    margin-bottom: 4%;
+    max-width: 60%;
+    height: auto;
+    align-self: center;
+    border-radius: 5px;
+}
+
+/* texto dos cards */
+.inss h4, .imposto-renda h4, .fgts h4, .darf h4, .score h4, .comprovante_renda h4, .fiador h4, .caucao h4, .orcamento_domestico h4, .seguro_residencial h4, .inflacao h4,
+ .pib h4, .taxa_selic h4, .politica_publica h4, .fake_news h4 {
+    color: rgb(48, 48, 48);
+    font-family: 'Lato', sans-serif;
+}
+
+/* Botão "O que é?" */
+
+.open-modal{
+       background-color: rgb(242, 242, 242);
+    width: 120px;
+    height: 40px;
+    padding: 10px 20px;
+   border: 2px solid rgb(145, 187, 175);
+    border-radius: 5px;
+    box-shadow: #186374 0px 2px 4px 0px;
+    text-transform: uppercase;
+    transition: all .5s ease;
+    display: block;
+    font-size: 12px;
+    margin-top: auto; 
+    margin-left: auto;
+    margin-right: auto; 
+    margin-bottom: 0; 
+    align-self: center; 
+}
+
+
+.open-modal:hover {
+  letter-spacing: 2px;
+  background-color: rgb(99, 150, 187); 
+  color: #f0f0f0;
+  box-shadow: rgb(99, 150, 187) 0px 2px 9px 0px;
+  font-family: 'Comic Neue', cursive;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+/* 4. ESTILIZAÇÃO DOS MODAIS */
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Aplica o estilo para TODOS os modais  */
+
+dialog {
+    width: 80%; 
+    max-width: 80%;
+    max-height: 90%;
+    background-image: url(img/fundo1.png);
+}
+
+/*seções dentro dos modais*/
+
+.conjunto_modal{
+     flex-wrap: nowrap;
+    display: flex;
+    align-items: center;
+}
+/*texto: seções dentro dos modais*/
+.conjunto_modal h1{
+    color: #3c4144;
+    font-size: 50px;
+    margin-bottom: 2%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.conjunto_modal p{
+    color: #343a3c;
+    font-size: 21px;
+    margin-bottom: 2%;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.conjunto_modal li{
+    color: #343a3c;
+    font-size: 21px;
+    margin-bottom: 2%;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+dialog .close-modal {
+    position:fixed;
+    top: 10px;  
+    right: 10px;
+    margin: 10px; 
+    padding: 10px 15px;
+    background-color: #f44336; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 10; 
+    transition: ease 0.5s;
+    width: 6%;
+    height: 7%;
+    font-size: 20px;
+}
+
+dialog .close-modal:hover {
+    position:fixed;
+    top: 10px;  
+    right: 10px;
+    margin: 10px; 
+    padding: 10px 15px;
+    background-color: #15582f; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 10; 
+    letter-spacing: 1.5px;
+    transition: ease 0.5s;
+}
+
+/*fundo do dialog*/
+dialog::backdrop {
+    background-color: rgba(14, 27, 43, 0.6); 
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ESTILIZAÇÃO DO FOOTER */
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+footer {
+    background-color: rgb(99, 150, 187); 
+    color: rgb(213, 213, 213); 
+    font-size: 20px; 
+    text-align: center; 
+    font-family: 'Comic Neue', cursive; 
+    margin-top: 50px; 
+    padding-top: 20px; 
+    padding-bottom: 20px; 
+    border-radius: 10px;
+    box-shadow: 0 -5px 10px -5px rgba(48, 76, 96, 0.5); 
+}
+
+.github {
+    margin-top: 10px; 
+    margin-bottom: 0;
+}
+
+.github img {
+    width: 100px; 
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ESTILIZAÇÃO DOS TEXTOS */
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+h1{
+    text-align: center;
+    margin-top: 3%;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+h4{
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
+}
+
+p{
+    text-align: center;
+    margin-bottom: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: 17px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--links do bootstrap--> 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+<!--link do css-->
+<link rel="stylesheet" href="inicio.css">
+
+<!--link para linkar as fontes de texto-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+
+    <title>Página inicial</title>
+</head>
+<body>
+
+    <header>
+
+      <!--logo-->
+        <img src="img/baixados.png" alt="logo">
+        <div class="fakehr"> </div>
+
+        <!--link das outras páginas-->
+        <a href="inicio.html"> <h1> Início </h1></a>
+        <a href="oque.html"> <h1> O que é? </h1></a>
+        <a href="tutorial.html"> <h1> Tutorial </h1></a>
+        <a href="duvidas.html"> <h1> Dúvidas </h1></a>
+
+    </header>
+
+    
+  <div class="itens_inicio"> <!--união da div dos textos e imagem-->
+
+    <div class="text_inicio"> <!--textos da seção 1-->
+
+    <h2> Começar a vida adulta pode parecer <span id="palavra">assustador.</span> </h2>
+    <h3> Nós te ajudamos a fazer essa iniciacação sem constragimento e medo.</h3>    
+    <p>Auxiliamos no significado dos complexos termos, como executá-los, 
+        te auxiliando do início até o fim dos processos. Ao invés de complicar, nós descomplicamos tudo para que você tenha máxima compreensão 
+e saia sem dúvidas.</p> 
+      
+      </div>
+
+      <div class="container1"> <!--fundo da imagem-->
+    <img src="img/loiro1.png" alt="loiro_confuso" class="loiro_inicio">
+    <h3> Fonte segura de informação. </h3>
+  </div>
+  </div>
+  <hr>
+
+  <div class="centro"> <!--textos de como funciona-->
+<h1> Como Funciona </h1>
+ <p>Abaixo, você poderá entender o funcionamento das páginas do nosso site, recomendamos que você leia para que sua experiência seja 100% clara e descomplicada.</p>
+</div>
+  
+  <div class="como_funciona"> <!--cards de como funciona-->
+   
+        <div class="item1">
+            <img src="img/num1.png" alt="descomplica"
+            title="card-descomplica">
+            <h4>O que é</h4>
+            <p>Significado dos termos, oque são eles, em qual situação eles se encaixam, etc.</p>
+             </div>
+
+        <div class="item2">
+              <img src="img/num2.png" alt="descomplica"
+            title="card-descomplica">
+                <h4>Tutorial</h4>
+                <p>Tutorial de como realizar cada tarefa, e resolver situações, passo a passo para que não hajam dúvidas.</p>
+                 </div>
+
+        <div class="item3">
+                    <img src="img/num3.png" alt="duvidas"
+                    title="card-duvidas">
+                    <h4>Dúvidas</h4>
+                    <p>Central com respostas para dúvidas frequentes, você pode buscar se a sua também está lá.</p>
+                     </div>
+
+       
+    </div> <!--encerra a div "como funciona"-->
+
+
+     <div class="objetivo"> <!--container do objetivo-->
+
+    <h1> Nosso objetivo </h1>
+    <p> A partir de conversa com pessoas entre 18 e 24 anos, nós observamos que a passagem da
+         vida adolescente para a vida adulta foi extremamente conturbada para a maioria das pessoas.</p>
+
+    <p>Apesar de ensinar muitas coisas importantes, a esola acaba não nos preparando para isso, principalmente
+         no meio financeiro. Por isso acabamos associando a vida adulta a desconforto e dor de cabeça.</p>
+
+    <p>Pensando nisso, fizemos uma pesquisa cm pessoas já adultas,  para identifcar os prinicpais problemas
+         e dúvidas que foram geradas nesse período. </p>
+         
+      </div> <!--encerra a div "objetivo"-->
+
+         <hr>
+
+         <!--áre ade contato-->
+
+         <div class="contato">
+            <h1>Contato</h1>
+            <h4> Caso tenha alguma dúvida, sugestão, ou crítica construitiva, você pode nos enviar uma mensagem: </h4>
+             <form action="" id="formulario">
+         
+  <label for="nome">Nome:</label><!-- Campo para o nome do usuário -->
+  <br>
+ 
+  <input type="text" id="nome" name="nome" required> <!-- Input de texto para o nome.'required' obriga o preenchimento antes do envio.-->
+  <br>
+
+  <label for="email">Email:</label><!-- Campo para o e-mail do usuário -->
+  <br>
+
+  <input type="email" id="email" name="email" required> <!-- Input de texto para o email.'required' obriga o preenchimento antes do envio.-->
+  <br>
+  
+  <label for="mensagem">Mensagem:</label> <!-- Campo para a mensagem do usuário -->
+  <br>
+  
+  <textarea name="mensagem" id="mensagem" cols="30" rows="10"></textarea> <!-- Área de texto para mensagens mais longas.'cols' e 'rows' definem o tamanho inicial da caixa.-->
+
+  <input class="enviar" type="submit" value="Enviar"> <!-- Botão para enviar o formulário -->
+
+</form>
+         </div>
+
+         </div>
+
+          <footer>   <!-- Rodapé do site -->
+    <div class="rodape">&copy; 2025 aluna: Maria Alice; Todos os direitos reservados.</div>  <!-- Direitos autorais -->
+
+    
+    <div class="github"> <!-- Link para o GitHub -->
+      <a href="https://github.com/mariaalicegz">
+        <img src="/img/github.png" alt="Descrição da imagem" />
+      </a>
+    </div>
+  </footer>
+
+<!--Utilizando o "v libras"-->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+     <!--para linkar o script do javascript-->    <script src="javascript/scriptt.js"></script>
+</body>
+</html> 

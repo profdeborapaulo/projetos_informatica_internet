@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <!--para linkar com o bootstrap--->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+<!--para linkar com o documento de estilização (css)-->
+<link rel="stylesheet" href="tutorial.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+    <title>Página inicial</title>
+</head>
+<body>
+    <header>
+      <!--logo-->
+        <img src="img/baixados.png" alt="logo">
+
+        <div class="fakehr"> </div>
+
+        <!--link para outras páginas-->
+        <a href="inicio.html"> <h1> Início </h1></a>
+        <a href="oque.html"> <h1> O que é? </h1></a>
+        <a href="tutorial.html"> <h1> Tutorial </h1></a>
+        <a href="duvidas.html"> <h1> Dúvidas </h1></a>
+    </header>
+
+
+
+    <div class="tutorial"> 
+    <h1> Tutorial </h1>
+    <p> Abaixo você pode escolher um assunto, e te proporcionaremos um tutorial simples, passo a passo. 
+        Caso não consiga resolver mesmo com o tutorial, pode acessar a central de dúvidas:</p>
+      <a href="duvidas.html" class="button_duvidas"> 
+    Acessar central de dúvidas. 
+       </a>
+
+<!------------------------------------------------------------------------------------------------------------------------------------->
+<!--Todos os tutoriais-->
+<!------------------------------------------------------------------------------------------------------------------------------------->
+
+        <div class="tutoriais">
+
+<!------------------------------------------------------------------------------------------------------------------------------------->
+<!--card do imposto de renda-->
+<!------------------------------------------------------------------------------------------------------------------------------------->
+          <div class="imposto_renda">
+
+             <div class="imagem">
+
+            <img src="img/imposto_renda.jpg" 
+            tittle="iness">
+            </div>
+
+             <div class="texto_botao">
+
+            <h4>Como declarar o Imposto de Renda?</h4>
+             <button class="open-modal"
+     data-modal="modal-1">Ler Tutorial</button>
+
+     </div>
+</div> <!--fecha imposto_renda-->
+     <div class="modal_s"> <!--modal do imposto de renda-->
+    
+     <dialog id="modal-1">
+       
+                <h1 class="modal-tittle"> Como declarar o Imposto de Renda? </h1>
+
+                <p>Aqui embaixo tem o passo a passo pra você declarar seu Imposto de Renda. No final, tem uma ótima dica te esperando! </p>
+
+                      <hr>
+
+             <div class="accordion" id="accordionPanelsStayOpenExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+        Primeiro Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+      <div class="accordion-body">
+        
+       <h1> Separe seus documentos </h1>
+
+       <div class="intrucoes">
+       <p>Informe de rendimentos (salário, aposentadoria, investimentos)</p>
+       <p>Comprovantes de despesas médicas, educação, pensão, etc.</p>
+       <p>Informações de bens (carros, imóveis, contas bancárias)</p>
+       <p>CPF dos dependentes (se tiver)</p></div>
+
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+        Segundo Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+      <div class="accordion-body">
+       <h1>Escolha como declarar</h1>
+       <div class="intrucoes">
+       <p>Online: direto no site Meu Imposto de Renda com sua conta Gov.br</p>
+       <p>Programa IRPF 2025: baixe no seu computador ou app no celular.</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+        Terceiro Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+      <div class="accordion-body">
+       <h1>Preencha seus dados</h1>
+       <div class="intrucoes">
+       <p>Dados pessoais, endereço, ocupação</p>
+       <p>Informe seus rendimentos (salário, aposentadoria, aluguéis, etc.)</p>
+       <p>Declare seus bens e dívidas</p>
+       <p>Inclua dependentes e despesas dedutíveis (educação, saúde, previdência)</p>  </div>
+      </div>
+    </div>
+  </div>
+   <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+        Quarto Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+      <div class="accordion-body">
+       <h1>Revise tudo com carinho
+</h1><div class="intrucoes">
+       <p>Dá uma última olhada pra ver se não esqueceu nada ou digitou errado. Um errinho pode atrasar sua restituição ou gerar multa</p> 
+      </div></div>
+    </div>
+  </div>
+    <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+        Quinto Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
+      <div class="accordion-body2">
+       <h1>Envie e pronto!</h1>
+       <div class="intrucoes">
+       <p>- Clique em “Entregar”</p>
+       <p>- Salve o recibo (tipo o comprovante de que você fez tudo certinho)</p></div>
+       
+       <div class="dica">
+
+        <div class="section2">
+          <img src="img/dica.png">
+        </div>
+
+        <div class="section3">
+          <h1>Se você tiver gastos com educação ou saúde, guarda tudo! Essas despesas podem virar dedução e te ajudar a pagar menos imposto.</h1>
+        </div>
+
+       </div> <!--Encerra as divs das dicas-->
+
+
+      </div> <!--fecha a div accordion-body-->
+    </div> <!--fecha a div accordion-collapse collapse-->
+  </div> <!--fecha a div accordion-item -->
+</div><!--fecha a div accordion-->
+
+<!--botão de fechar o modal-->
+             <button 
+             class="close-modal" 
+             data-modal="modal-1"
+            type="button">
+            fechar
+             </button>   
+              
+     </dialog>
+
+     </div> <!--Fecha a div modal-->
+       
+
+<!--------------------------------------------------------------------------------------------------------------------------------------->
+<!--COMO CONTRIBUIR PRO INSS-->
+
+ <div class="inss">
+
+             <div class="imagem">
+
+            <img src="img/insss.jpg" 
+            tittle="iness">
+            </div>
+
+             <div class="texto_botao">
+
+            <h4>Como contribuir para o INSS?</h4>
+             <button class="open-modal"
+     data-modal="modal-2">Ler Tutorial</button>
+
+     </div>
+</div>
+     <div class="modal_s"> <!--modal do inss-->
+    
+     <dialog id="modal-2">
+       
+                <h1 class="modal-tittle"> Como contribuir para o INSS? </h1>
+
+                <p>Aqui embaixo tem o passo a passo pra você contribuir para o INSS. No final, tem uma ótima dica te esperando! </p>
+
+                      <hr>
+
+             <div class="accordion" id="accordionPanelsStayOpenExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+        Primeiro Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+      <div class="accordion-body">
+        
+       <h1> Crie seu cadastro no Meu INSS </h1>
+       <div class="intrucoes">
+       <p>Acesse <a href="meu.inss.gov.br">MeuINSS</a></p>
+       <p>- Faça login com sua conta Gov.br</p>
+       <p>Se ainda não tiver cadastro no INSS, dá pra fazer lá mesmo</p></div>
+
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+        Segundo Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+      <div class="accordion-body">
+       <h1>Escolha o tipo de contribuição</h1><div class="intrucoes">
+       <p>Você vai precisar gerar uma Guia da Previdência Social (GPS). Existem dois valores principais:</p>
+       <p>20% do salário desejado: dá direito à aposentadoria por tempo de contribuição</p>
+       <p>11% do salário mínimo: mais simples, mas só dá aposentadoria por idade</p> </div>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+        Terceiro Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+      <div class="accordion-body">
+       <h1>Gere a guia de pagamento</h1> <div class="intrucoes">
+       <p>No site do <a href="meu.inss.gov.br">Meu INSS</a>, vá em "Emitir Guia de Pagamento (GPS)"</p>
+       <p>Preencha seus dados, escolha o tipo de contribuinte e o valor</p>
+       <p>A guia vai ser gerada com código de barras pra pagar no banco ou app</p> </div>
+      </div>
+    </div>
+  </div>
+   <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+        Quarto Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+      <div class="accordion-body2">
+       <h1>Pague e pronto
+</h1> <div class="intrucoes">
+      <p>Você pode pagar pelo app do seu banco, lotérica ou caixa eletrônico
+</p>
+<p>Guarde o comprovante! Ele é a prova de que você tá contribuindo certinho</p> </div>
+  <div class="dica">
+
+        <div class="section2">
+          <img src="img/dica.png">
+        </div>
+
+        <div class="section3">
+          <h1>Se quiser mais praticidade, dá pra agendar o pagamento todo mês no seu banco. E se tiver dúvidas sobre qual plano escolher, posso te ajudar a simular o valor ideal pra você!
+</h1>
+        </div>
+
+       </div> <!--Encerra as divs das dicas-->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--botão de fechar o modal-->
+             <button 
+             class="close-modal" 
+             data-modal="modal-2"
+            type="button">
+            fechar
+             </button>   
+    
+     </dialog>
+
+     </div> <!--Fecha a div modal-->
+        
+
+<!---------------------------------------------------------------------------------------------------------------------------------------->
+<!--Como consultar e limpar o nome-->
+
+<div class="serasa">
+
+             <div class="imagem">
+
+            <img src="img/serasa.jpg" 
+            tittle="iness">
+            </div> <!--div da imagem-->
+
+             <div class="texto_botao">
+
+            <h4>Como consultar e limpar seu nome?</h4>
+             <button class="open-modal"
+     data-modal="modal-3">Ler Tutorial</button>
+
+     </div> <!--texto botao-->
+</div> <!--div serasa-->
+     <div class="modal_s"> <!--modal serasa-->
+    
+     <dialog id="modal-3">
+       
+                <h1 class="modal-tittle"> Passo a passo para consultar e limpar seu nome (CPF) </h1>
+                
+
+                <p>Aqui embaixo tem o passo a passo pra você consultar e limpar seu nome. No final, tem uma ótima dica te esperando! </p>
+
+                      <hr>
+
+             <div class="accordion" id="accordionPanelsStayOpenExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+        Primeiro Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+      <div class="accordion-body">
+        
+       <h1>  os sites certos </h1><div class="intrucoes">
+     <p>Vai direto no que importa: entra no Serasa, SPC Brasil ou Boa Vista. Esses são os birôs de crédito que mostram se seu nome tá sujo. Dá pra consultar de graça com seu CPF e uma conta simples.
+</p></div>
+
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+        Segundo Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+      <div class="accordion-body">
+       <h1>Veja quem te negativou</h1><div class="intrucoes">
+      <p>Depois de logar, você vai ver quais empresas colocaram seu nome na lista de inadimplentes, o valor da dívida e há quanto tempo ela tá lá. Isso é essencial pra saber com quem negociar.
+</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+        Terceiro Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+      <div class="accordion-body">
+       <h1>Negocie sem medo</h1><div class="intrucoes">
+     <p>A maioria dos sites já mostra ofertas de negociação com desconto. Tem dívida que cai até 90%! Você pode pagar à vista ou parcelar. E o melhor: tudo online, sem precisar falar com atendente.
+</p>
+       <p>O Feirão Limpa Nome da Serasa rola com frequência e reúne várias empresas com condições especiais.
+</p>
+       <p>Bancos e lojas também têm programas próprios de renegociação com até 99% de desconto.</p></div>
+      </div>
+    </div>
+  </div>
+   <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+        Quarto Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+      <div class="accordion-body">
+       <h1>Pague e acompanhe
+</h1><div class="intrucoes">
+       <p>Fechou o acordo? Paga certinho e guarda o comprovante. O nome costuma sair da lista de negativados em até 5 dias úteis. Fica de olho no status lá no site onde você negociou.
+</p></div>
+      </div>
+    </div>
+  </div>
+    <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+        Quinto Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
+      <div class="accordion-body2">
+       <h1>Cuida do seu crédito daqui pra frente</h1><div class="intrucoes">
+       <p>Com o nome limpo, você pode voltar a ter crédito, mas vai com calma! Evita parcelar tudo, paga em dia e acompanha seu score (pontuação de crédito). Isso ajuda a manter o CPF saudável.</p></div>
+       <div class="dica">
+
+        <div class="section2">
+          <img src="img/dica.png">
+        </div>
+
+        <div class="section3">
+          <h1>Antes de aceitar qualquer acordo, compare os descontos em mais de um site! Às vezes, a mesma dívida aparece com condições diferentes no Serasa, no SPC Brasil ou direto com a empresa. Um clique a mais pode te render economia real.
+</h1>
+        </div>
+
+       </div>
+<!--Encerra as divs das dicas-->
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--botão de fechar o modal-->
+             <button 
+             class="close-modal" 
+             data-modal="modal-3"
+            type="button">
+            fechar
+             </button>   
+              
+     </dialog>
+
+     </div> <!--Fecha a div modal-->
+  
+
+<!--------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------>
+
+<!--Segunda Fileira-->
+
+<!--SACAR SEU FGTS-->
+
+
+          <div class="fgts">
+
+             <div class="imagem">
+
+            <img src="img/fgts.jpg" 
+            tittle="iness">
+            </div>
+
+             <div class="texto_botao">
+
+            <h4>Como sacar seu FGTS?</h4>
+             <button class="open-modal"
+     data-modal="modal-4">Ler Tutorial</button>
+
+     </div>
+</div> <!--fecha imposto_renda-->
+
+     <div class="modal_s"> <!--modal fgts-->
+    
+     <dialog id="modal-4">
+       
+                <h1 class="modal-tittle"> Passo a passo pra sacar seu FGTS (sem enrolação)
+                </h1>
+
+                <p>Aqui embaixo tem o passo a passo pra sacar seu FGTS (sem enrolação)
+. No final, tem uma ótima dica te esperando! </p>
+
+                      <hr>
+
+             <div class="accordion" id="accordionPanelsStayOpenExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+        Primeiro Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+      <div class="accordion-body">
+        
+       <h1> Baixe o app FGTS
+ </h1><div class="intrucoes">
+      <p>Vai na loja de apps do seu celular (Play Store ou App Store) e baixa o app FGTS da Caixa. É por lá que tudo acontece hoje em dia, sem fila, sem papelada.</p>
+      </div></div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+        Segundo Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+      <div class="accordion-body">
+       <h1>Faça login com sua conta gov.br</h1><div class="intrucoes">
+      <p>Se você já tem conta no gov.br, é só entrar. Se não tiver, cria rapidinho com seu CPF. Essa conta é tipo sua identidade digital pra acessar serviços públicos.
+      </p></div>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+        Terceiro Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+      <div class="accordion-body">
+       <h1>Veja se você pode sacar
+</h1><div class="intrucoes">
+       <p>Saque-rescisão (quando é demitido sem justa causa)</p>
+       <p>Saque-aniversário (todo ano no mês do seu aniversário)</p>
+       <p>Saque por aposentadoria, doença grave ou compra da casa própria</p></div>
+      
+      </div>
+    </div>
+  </div>
+   <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+        Quarto Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+      <div class="accordion-body">
+       <h1>Solicite o saque
+</h1><div class="intrucoes">
+       <p>Se tiver saldo disponível, clique em “Solicitar Saque", escolha a modalidade e informe uma conta bancária pra receber. Pode ser da Caixa ou de outro banco.</p></div>
+      </div>
+    </div>
+  </div>
+    <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+        Quinto Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
+      <div class="accordion-body2">
+       <h1>Acompanhe o pagamento</h1><div class="intrucoes">
+      <p>Depois de pedir, dá pra acompanhar o status no próprio app. O dinheiro costuma cair em até 5 dias úteis, dependendo da modalidade.
+</p></div>
+       <div class="dica">
+
+        <div class="section2">
+          <img src="img/dica.png">
+        </div>
+
+        <div class="section3">
+          <h1>Se você aderiu ao saque-aniversário, mas foi demitido, não pode sacar o valor total da conta. Então pense bem antes de ativar essa opção, ela pode te impedir de pegar uma grana maior lá na frente!
+</h1>
+        </div>
+
+       </div> <!--Encerra as divs das dicas-->
+
+
+      </div> <!--fecha a div accordion-body-->
+    </div> <!--fecha a div accordion-collapse collapse-->
+  </div> <!--fecha a div accordion-item -->
+</div><!--fecha a div accordion-->
+
+<!--botão de fechar o modal-->
+             <button 
+             class="close-modal" 
+             data-modal="modal-4"
+            type="button">
+            fechar
+             </button>   
+              
+     </dialog>
+
+     </div> <!--Fecha a div modal-->
+       
+
+<!--------------------------------------------------------------------------------------------------------------------------------------->
+<!--Como emitir uma nota fiscal sendo MEI-->
+
+ <div class="nota_fiscal">
+
+             <div class="imagem">
+
+            <img src="img/nota_fiscal.png" 
+            tittle="iness">
+            </div>
+
+             <div class="texto_botao">
+
+            <h4>Como emitir uma nota fiscal sendo MEI?</h4>
+             <button class="open-modal"
+     data-modal="modal-5">Ler Tutorial</button>
+
+     </div>
+</div>
+     <div class="modal_s"> <!--modal nota fiscal-->
+    
+     <dialog id="modal-5">
+       
+                <h1 class="modal-tittle"> Como emitir uma nota fiscal sendo MEI </h1>
+
+                <p>Aqui embaixo tem o passo a passo de omo emitir uma nota fiscal sendo MEI. No final, tem uma ótima dica te esperando! </p>
+
+                      <hr>
+
+             <div class="accordion" id="accordionPanelsStayOpenExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+        Primeiro Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+      <div class="accordion-body">
+        
+       <h1> Descubra qual tipo de nota você precisa emitir  
+ </h1><div class="intrucoes">
+      <p>Se você presta serviços, vai emitir uma NFS-e (Nota Fiscal de Serviço Eletrônica). Se vende produtos, será uma NF-e ou NFC-e. Isso depende do que você oferece e para quem está vendendo.
+</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+        Segundo Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+      <div class="accordion-body">
+       <h1>Faça seu cadastro no sistema certo </h1><div class="intrucoes">
+       <p>Você vai precisar de documentos como CNPJ, CPF, comprovante de endereço e inscrição municipal ou estadual (se tiver).</p>
+       <p>Para NFS-e, o cadastro é feito no site da prefeitura da sua cidade.  
+       </p>
+       <p>Para NF-e ou NFC-e, o cadastro é feito na Secretaria da Fazenda do seu estado.</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+        Terceiro Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+      <div class="accordion-body">
+       <h1>Acesse o sistema de emissão  
+</h1><div class="intrucoes">
+      <p>Depois de cadastrado, você vai acessar o portal da prefeitura ou da Sefaz.  
+Alguns lugares oferecem emissores gratuitos. Outros exigem que você use um sistema próprio ou contrate um emissor online.
+</p></div>
+      </div>
+    </div>
+  </div>
+   <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+        Quarto Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+      <div class="accordion-body">
+       <h1>Preencha os dados da nota  
+
+</h1><div class="intrucoes">
+      <p>informar os dados do cliente  
+</p>
+<p>Descrever o serviço ou produto  
+</p>
+<p>Colocar o valor  
+</p>
+<p>Selecionar a data  </p>
+<p>O sistema calcula os impostos automaticamente. Como MEI, você já paga um valor fixo mensal, então não precisa se preocupar com ISS ou ICMS na nota.
+</p></div></div> </div> </div>
+<div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+        Quinto Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
+      <div class="accordion-body2">
+       <h1> Emita e envie a nota  
+</h1><div class="intrucoes">
+      <p>Depois de revisar tudo, clique em emitir.  
+</p>
+<p>A nota será gerada em PDF e você pode enviar por e-mail ou imprimir.  
+</p>
+<p>Guarde uma cópia para controle e organização.
+</p>
+<p>Selecionar a data  </p>
+<p>O sistema calcula os impostos automaticamente. Como MEI, você já paga um valor fixo mensal, então não precisa se preocupar com ISS ou ICMS na nota.
+</p></div>
+  <div class="dica">
+
+        <div class="section2">
+          <img src="img/dica.png">
+        </div>
+
+        <div class="section3">
+          <h1>Se você atende clientes em mais de uma cidade, pode ser necessário se cadastrar em mais de uma prefeitura.  
+</h1>
+        </div>
+
+       </div> <!--Encerra as divs das dicas-->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--botão de fechar o modal-->
+             <button 
+             class="close-modal" 
+             data-modal="modal-5"
+            type="button">
+            fechar
+             </button>   
+     </dialog>
+
+     </div> <!--Fecha a div modal-->
+        
+
+<!---------------------------------------------------------------------------------------------------------------------------------------->
+<!--Como gerar um boleto bancário-->
+
+<div class="boleto">
+
+             <div class="imagem">
+
+            <img src="img/boelto.jpg">
+            </div>
+
+             <div class="texto_botao">
+
+            <h4>Como gerar um boleto bancário?</h4>
+             <button class="open-modal"
+     data-modal="modal-6">Ler Tutorial</button>
+
+     </div>
+</div>
+     <div class="modal_s"> <!--modal do boleto bancário-->
+    
+     <dialog id="modal-6">
+       
+                <h1 class="modal-tittle"> Passo a passo  gerar um boleto bancário </h1>
+
+                <p>Pra gerar e pagar um boleto bancário do jeito certo, você precisa usar uma plataforma confiável, preencher os dados com atenção e seguir os prazos. Aqui vai o passo a passo sem mistério</p>
+
+                      <hr>
+
+             <div class="accordion" id="accordionPanelsStayOpenExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+        Primeiro Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+      <div class="accordion-body">
+        
+       <h1> Escolha uma plataforma de emissão </h1><div class="intrucoes">
+     <p>Você pode usar bancos, apps de pagamento (como PagBank, Mercado Pago, PicPay) ou sistemas como Conta Azul, Facilite ou InfinitePay.
+     </p></div>
+
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+        Segundo Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+      <div class="accordion-body">
+       <h1>Faça seu cadastro</h1><div class="intrucoes">
+      <p>Informe seus dados pessoais ou da empresa, como CPF ou CNPJ, nome completo, e-mail e conta bancária para receber o pagamento.
+</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+        Terceiro Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+      <div class="accordion-body">
+       <h1>Preencha os dados do boleto</h1><div class="intrucoes">
+       <p>Inclua as informações do pagador</p>
+       <p>Valor a ser cobrado </p>
+       <p>Data de vencimento</p>
+       <p>Descrição do serviço ou produto </p>
+       <p>Multa e juros em caso de atraso (se quiser aplicar)</p></div>
+
+      </div>
+    </div>
+  </div>
+   <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+        Quarto Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+      <div class="accordion-body">
+       <h1>Gere o boleto
+</h1><div class="intrucoes">
+       <p>A plataforma vai criar o boleto com código de barras e linha digitável. Você pode salvar em PDF, enviar por e-mail ou imprimir.
+       </p></div>
+      </div>
+    </div>
+  </div>
+    <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+        Quinto Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
+      <div class="accordion-body">
+       <h1>Pague o boleto</h1><div class="intrucoes">
+       <p>Abra o app, vá na opção de pagamentos e escaneie o código de barras ou cole a linha digitável.
+       </p></div></div> </div> </div>
+        <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false" aria-controls="panelsStayOpen-collapseSix">
+        Sexto Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse">
+      <div class="accordion-body">
+       <h1>Confirme os dados e pague </h1><div class="intrucoes">
+       <p>Verifique se o valor e o beneficiário estão corretos. Escolha a conta para débito e confirme o pagamento.
+</p></div></div> </div> </div>
+        <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+        Sétimo Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
+      <div class="accordion-body2">
+       <h1>Guarde o comprovante</h1><div class="intrucoes">
+       <p>Salve o recibo ou print da tela. Ele pode ser útil se houver algum problema com a compensação.
+ </p></div>
+       <div class="dica">
+
+        <div class="section2">
+          <img src="img/dica.png">
+        </div>
+
+        <div class="section3">
+          <h1>Se você for o emissor, evite gerar boletos com vencimento muito curto. Isso pode atrapalhar o pagamento e gerar inadimplência. E se for o pagador, nunca deixe pra última hora — boletos vencidos podem ter juros e nem sempre são aceitos em todos os apps.
+          </h1>
+        </div>
+
+       </div>
+<!--Encerra as divs das dicas-->
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--botão de fechar o modal-->
+             <button 
+             class="close-modal" 
+             data-modal="modal-6"
+            type="button">
+            fechar
+             </button>   
+              
+     </dialog>
+
+     </div> <!--Fecha a div modal-->
+  
+
+<!--------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------>
+
+<!--Terceira Fileira-->
+
+<!--TIRAR PASSAPORTE-->
+
+
+          <div class="passaporte">
+
+             <div class="imagem">
+
+            <img src="img/passaporte.jpeg" 
+            tittle="iness">
+            </div>
+
+             <div class="texto_botao">
+
+            <h4>Como tirar seu passaporte?</h4>
+             <button class="open-modal"
+     data-modal="modal-7">Ler Tutorial</button>
+
+     </div>
+</div> <!--fecha imposto_renda-->
+     <div class="modal_s"> <!--modal do passaporte-->
+    
+     <dialog id="modal-7">
+       
+                <h1 class="modal-tittle"> Passo a passo de como tirar seu passaporte
+                </h1>
+
+                <p>Aqui embaixo tem o passo a passo pra sacar seu FGTS (sem enrolação)
+. No final, tem uma ótima dica te esperando! </p>
+
+                      <hr>
+
+             <div class="accordion" id="accordionPanelsStayOpenExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+        Primeiro Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+      <div class="accordion-body">
+        
+       <h1> - Preencha o formulário online
+ </h1><div class="intrucoes">
+      <p>Acesse o site <a href="https://www.gov.br/pt-br/servicos/obter-passaporte-comum-para-brasileiro">Polícia Federal</a> e preencha o formulário com seus dados pessoais. No final, você vai gerar um protocolo e um boleto (GRU) para pagamento.
+      </p>
+      </div></div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+        Segundo Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+      <div class="accordion-body">
+       <h1>Pague a taxa  
+</h1><div class="intrucoes">
+      <p>O valor atual é de R$ 257,25 para o passaporte comum. Pague o boleto em qualquer banco ou app até a data de vencimento.
+      </p>
+      </div></div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+        Terceiro Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+      <div class="accordion-body">
+       <h1>Agende o atendimento  
+</h1><div class="intrucoes">
+      <p>Depois que o pagamento for compensado (leva até 3 dias úteis), volte ao site da PF e agende um horário no posto mais próximo. Em cidades grandes, as vagas podem acabar rápido, então fique de olho.
+</p></div>
+      </div>
+    </div>
+  </div>
+   <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+        Quarto Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+      <div class="accordion-body">
+       <h1>Vá ao posto da Polícia Federal </h1><div class="intrucoes">
+       <p>No dia agendado, leve os documentos obrigatórios:
+       </p>
+       <p>Documento de identidade (RG, CNH ou carteira de trabalho)</p>
+       <p> CPF (se não estiver no RG)</p>
+       <p>Título de eleitor e comprovantes de voto ou justificativa das últimas eleições</p>
+        <p>Documento que comprove quitação com o serviço militar (homens)</p>
+       <p>Comprovante de pagamento da GRU</p>
+       
+      </div></div>
+    </div>
+  </div>
+    <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+        Quinto Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
+      <div class="accordion-body2">
+       <h1>Retire o passaporte  
+</h1><div class="intrucoes">
+      <p>Depois do atendimento, é só esperar. O prazo médio é de 6 a 10 dias úteis. Você será avisado para buscar o passaporte no mesmo posto onde fez o atendimento. Leve um documento com foto pra retirar.
+      </p></div>
+       <div class="dica">
+
+        <div class="section2">
+          <img src="img/dica.png">
+        </div>
+
+        <div class="section3">
+          <h1>Se você vai viajar em breve, não deixe pra última hora. Em épocas de alta demanda, os agendamentos podem demorar semanas. E lembre-se: o passaporte tem validade de 10 anos, então vale a pena se organizar com calma.
+          </h1>
+        </div>
+
+       </div> <!--Encerra as divs das dicas-->
+
+
+      </div> <!--fecha a div accordion-body-->
+    </div> <!--fecha a div accordion-collapse collapse-->
+  </div> <!--fecha a div accordion-item -->
+</div><!--fecha a div accordion-->
+
+<!--botão de fechar o modal-->
+             <button 
+             class="close-modal" 
+             data-modal="modal-7"
+            type="button">
+            fechar
+             </button>   
+              
+     </dialog>
+
+     </div> <!--Fecha a div modal-->
+       
+
+<!--------------------------------------------------------------------------------------------------------------------------------------->
+<!--MONSTAR CURRÍCULO GRÁTIS-->
+
+ <div class="curriculo">
+
+             <div class="imagem">
+
+            <img src="img/curriculo.jpg" 
+            tittle="iness">
+            </div>
+
+             <div class="texto_botao">
+
+            <h4>Como montar currículo?</h4>
+             <button class="open-modal"
+     data-modal="modal-8">Ler Tutorial</button>
+
+     </div>
+</div>
+     <div class="modal_s"> <!--modal do curriculo-->
+    
+     <dialog id="modal-8">
+       
+                <h1 class="modal-tittle"> Como montar seu currículo online e gratuito </h1>
+
+                <p>Aqui embaixo tem o passo a passo de omo emitir uma nota fiscal sendo MEI. No final, tem uma ótima dica te esperando! </p>
+
+                      <hr>
+
+             <div class="accordion" id="accordionPanelsStayOpenExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+        Primeiro Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+      <div class="accordion-body">
+        
+       <h1> Escolha uma plataforma gratuita  
+
+ </h1><div class="intrucoes">
+      <p>Algumas das mais populares e fáceis de usar são:  
+      </p>
+      <p><a href="https://www.canva.com/pt_br/criar/curriculo">Canva</a></p>
+      <p><a href="https://www.livecareer.com.br/curriculo/gratis">LiveCarrer</a></p>
+      <p><a href="https://ocurriculo.com.br"> O currículo
+
+      </a></p> </div>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+        Segundo Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+      <div class="accordion-body">
+       <h1>Crie uma conta rápida</h1><div class="intrucoes">
+       <p>Você só precisa de um e-mail ou pode entrar com sua conta do Google. Isso permite salvar e editar seu currículo depois.
+      </div>
+    </div></div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+        Terceiro Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+      <div class="accordion-body">
+       <h1>Escolha um modelo simples   
+</h1><div class="intrucoes">
+      <p>Prefira modelos limpos e objetivos. Evite muitos ícones ou cores chamativas. O foco é mostrar suas informações com clareza.
+      </p>
+      </div>
+    </div>
+  </div></div>
+   <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+        Quarto Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+      <div class="accordion-body">
+       <h1>Preencha os campos essenciais  
+       </h1><div class="intrucoes">
+      <p> Nome completo e dados de contato  </p>
+<p> Objetivo profissional (curto e direto)  </p>
+<p>Formação acadêmica  </p>
+<p>Experiência profissional (com datas e funções)  
+  <p>Cursos e habilidades extras (idiomas, informática, etc.)
+</p></div> </div> </div> </div>
+
+<div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+        Quinto Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
+      <div class="accordion-body2">
+       <h1> Revise e baixe em PDF  
+</h1><div class="intrucoes">
+      <p>Leia tudo com atenção, corrija erros e salve em PDF. Isso garante que o layout fique certinho quando enviar por e-mail ou imprimir.
+</p></div>
+  <div class="dica">
+
+        <div class="section2">
+          <img src="img/dica.png">
+        </div>
+
+        <div class="section3">
+          <h1>SSe você está começando e não tem muita experiência, foque nas suas habilidades e cursos. E nunca minta no currículo — empresas costumam checar as informações. Um currículo honesto e bem feito vale mais que um cheio de firulas.
+          </h1>
+        </div>
+
+       </div> <!--Encerra as divs das dicas-->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--botão de fechar o modal-->
+             <button 
+             class="close-modal" 
+             data-modal="modal-8"
+            type="button">
+            fechar
+             </button>   
+     </dialog>
+
+     </div> <!--Fecha a div modal-->
+        
+
+<!---------------------------------------------------------------------------------------------------------------------------------------->
+<!--Como emitir o título de eleitor-->
+
+<div class="eleitor">
+
+             <div class="imagem">
+
+            <img src="img/titulo_eleitor.jpg" 
+            tittle="iness">
+            </div>
+
+             <div class="texto_botao">
+
+            <h4>Como emitir o título de eleitor online?</h4>
+             <button class="open-modal"
+     data-modal="modal-9">Ler Tutorial</button>
+
+     </div>
+</div>
+     <div class="modal_s"> <!--modal do eleitor-->
+    
+     <dialog id="modal-9">
+       
+                <h1 class="modal-tittle"> Passo a passo de como emitir o título de eleitor online</h1>
+
+                <p>Pra gerar e pagar um boleto bancário do jeito certo, você precisa usar uma plataforma confiável, preencher os dados com atenção e seguir os prazos. Aqui vai o passo a passo sem mistério</p>
+
+                      <hr>
+
+             <div class="accordion" id="accordionPanelsStayOpenExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+        Primeiro Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+      <div class="accordion-body">
+        
+       <h1> Acesse o site<a href="https://www.tse.jus.br/servicos-eleitorais/titulo-net">Título do TSE</a> </h1><div class="intrucoes">
+     <p>Clique em “Iniciar seu atendimento a distância” e selecione a opção “Não tenho” para quem ainda não tem título.
+     </p>
+      </div></div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+        Segundo Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+      <div class="accordion-body">
+       <h1>Preencha seus dados pessoais  
+</h1><div class="intrucoes">
+      <p>Informe nome completo, data de nascimento, nome dos pais e envie fotos dos documentos: RG ou CNH, comprovante de residência e uma selfie segurando o documento.
+      </p></div>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+        Terceiro Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+      <div class="accordion-body">
+       <h1>Escolha sua cidade e zona eleitoral  
+</h1><div class="intrucoes">
+<p>Você vai indicar onde quer votar. O sistema mostra as opções disponíveis com base no seu endereço.
+</p></div>
+      </div>
+    </div>
+  </div>
+   <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+        Quarto Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+      <div class="accordion-body">
+       <h1>Envie o pedido e anote o protocolo  
+</h1><div class="intrucoes">
+       <p>Depois de revisar tudo, envie o formulário. Você vai receber um número de protocolo para acompanhar o andamento.</p>
+      </div></div>
+    </div>
+  </div>
+    <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+        Quinto Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
+      <div class="accordion-body">
+       <h1>Acesse seu título no app e-Título  
+</h1><div class="intrucoes">
+       <p>Quando aprovado, seu título será digital. Baixe o app e-Título no celular e pronto, você já pode votar.
+       </p></div></div></div></div>
+        <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false" aria-controls="panelsStayOpen-collapseSix">
+        Sexto Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse">
+      <div class="accordion-body">
+       <h1>Confirme os dados e pague </h1><div class="intrucoes">
+       <p>Verifique se o valor e o beneficiário estão corretos. Escolha a conta para débito e confirme o pagamento.
+</p></div></div></div></div>
+        <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+        Sétimo Passo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
+      <div class="accordion-body2">
+       <h1>Guarde o comprovante</h1><div class="intrucoes">
+       <p>Salve o recibo ou print da tela. Ele pode ser útil se houver algum problema com a compensação.
+ </p></div>
+       <div class="dica">
+
+        <div class="section2">
+          <img src="img/dica.png">
+        </div>
+
+        <div class="section3">
+          <h1>SAntes de enviar o pedido do título, confere se seus documentos estão legíveis e atualizados. Foto borrada ou documento vencido pode atrasar tudo. E se você tiver RG com CPF incluso, melhor ainda — menos papel pra enviar e mais agilidade na aprovação.</h1>
+        </div>
+
+       </div>
+<!--Encerra as divs das dicas-->
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--botão de fechar o modal-->
+             <button 
+             class="close-modal" 
+             data-modal="modal-9"
+            type="button">
+            fechar
+             </button>   
+              
+     </dialog>
+
+     </div> <!--Fecha a div modal-->
+  
+         </div><!--fecha a div dos tutorial em geral-->
+
+          <footer>   <!-- Rodapé do site -->
+    <div class="rodape">&copy; 2025 aluna: Maria Alice; Todos os direitos reservados.</div>  <!-- Direitos autorais -->
+
+    
+    <div class="github"> <!-- Link para o GitHub -->
+      <a href="https://github.com/mariaalicegz">
+        <img src="/img/github.png" alt="Descrição da imagem" />
+      </a>
+    </div>
+  </footer>
+
+  <!--Utilizando o "v libras"-->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+        <script src="javascript/scriptt.js"></script>
+</body>
+</html>

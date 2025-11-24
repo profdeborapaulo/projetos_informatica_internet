@@ -1,0 +1,161 @@
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+/*estilização do corpo do site*/
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+
+body{
+    background-color:rgb(226, 229, 235);
+    padding-top: 80px; 
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+/*estilização do cabeçalho do site*/
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+
+header{
+    background-color: rgb(99, 150, 187); 
+    max-height: 80px;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 65px;
+    position: fixed; 
+    top: 0;          
+    left: 0;       
+    width: 100%;     
+    z-index: 100;  
+}
+
+/*logo da header*/
+header img{
+    max-width: 130px;
+    margin-left: 8%;
+    border-radius: 5px;
+    margin-top: 1%;
+}
+
+/*texto da header*/
+header h1{
+    font-size: 20px;
+}
+
+/*link da header*/
+header a {
+    text-decoration: none;
+    color: rgb(231, 226, 224);
+    margin-left: 4%;
+}
+
+/*fake hr criado*/
+.fakehr{
+    width: 1px;
+    height: 80px;
+    background-color:  rgb(231, 226, 224);
+    margin-left: 3%;
+    display: flex;
+    justify-content: center; 
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+/*inicio do corpo do site*/
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*titulo e subtitulo das dúvidas*/
+.duvidas{
+    margin-top: 3%;
+}
+
+.duvidas h1{
+    font-size: 55px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.duvidas p{
+    font-size: 21px;
+    font-family: 'Nunito Sans', sans-serif;
+    text-align: center;
+    margin-bottom: 30px; 
+}
+
+/*estilização das duvidas */
+.accordion-item {
+    border-radius: 10px; 
+    overflow: hidden; 
+    border: 2px solid rgb(99, 150, 187); 
+    width: 50%;
+    height: 80%;
+    justify-self: center;
+    font-size: 16px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.accordion-button {
+    background-color: #eeeeee; 
+    color: #313131;
+    height: 70px;
+    text-align: left;
+    box-shadow: none !important;
+    border: 2px solid rgb(99, 150, 187);
+    font-size: 18px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+/**quando ele estiver selecionado*/
+.accordion-button:not(.collapsed) {
+    background-color: rgb(99, 150, 187);
+    color: #ecedee; 
+    filter: none;
+}
+
+.accordion-body {
+    background-color: #f1f1f1; 
+    color: #343a40;
+    border-top: 1px solid #dee2e6;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ESTILIZAÇÃO DO FOOTER */
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+footer {
+    background-color: rgb(99, 150, 187); 
+    color: rgb(213, 213, 213); 
+    font-size: 20px; 
+    text-align: center; 
+    font-family: 'Comic Neue', cursive; 
+    margin-top: 50px; 
+    padding-top: 20px; 
+    padding-bottom: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 -5px 10px -5px rgba(48, 76, 96, 0.5); 
+}
+
+/* Estilização da Imagem do GitHub  */
+.github {
+    margin-top: 10px; 
+    margin-bottom: 0;
+}
+
+.github img {
+    width: 100px; 
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*estilização dos textos*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+h1{
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+p{
+  width: 40%;
+  text-align: center;
+  margin-left: 30%;
+  font-family: 'Nunito Sans', sans-serif;
+}

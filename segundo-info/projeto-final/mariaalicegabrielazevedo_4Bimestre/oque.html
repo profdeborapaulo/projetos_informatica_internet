@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--links do bootstrap--> 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+<!--link do css-->
+<link rel="stylesheet" href="oque.css">
+
+<!--link para linkar as fontes de texto-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+
+
+    <title>Página inicial</title>
+</head>
+<body>
+
+    <header>
+
+      <!--logo-->
+        <img src="img/baixados.png" alt="logo">
+        <div class="fakehr"> </div>
+
+        <!--link das outras páginas-->
+        <a href="inicio.html"> <h1> Início </h1></a>
+        <a href="oque.html"> <h1> O que é? </h1></a>
+        <a href="tutorial.html"> <h1> Tutorial </h1></a>
+        <a href="duvidas.html"> <h1> Dúvidas </h1></a>
+
+    </header>
+
+    <div class="oque"> <!--div que explica o que é-->
+     <h1>O que é?</h1>
+    <p>Selecione um dos cards abaixo, O que é? seu significado, para que serve, e quando usar, da maneira mais simples possível.</p>
+  </div> <hr>
+
+    <!--CARROSEL-->
+
+    <div class="carrosel">
+      <img src="img/carrosel1.png" class="img_carrosel">
+      <img src="img/carrosel2.png" class="img_carrosel">
+      <img src="img/carrosel3.png" class="img_carrosel">
+</div>
+
+    <!--ENCERRAMENTO DO CARROSEL-->
+   
+    <div class="cards"> <!--todos os cards-->
+
+        <div class="inss">
+
+            <img src="img/insss.jpg" 
+            tittle="iness"> <!--imagem da capa do card-->
+            <h4>INSS</h4>
+             <button class="open-modal"
+     data-modal="modal-1">O que é?</button>
+
+     </div> <!--fecha a div inss-->
+
+
+<!------------------------------------------------------------------------------------------------------------------------------------------->
+<!--modal do inss-->
+<!------------------------------------------------------------------------------------------------------------------------------------------->
+     <div class="inss-modal"> 
+    
+     <dialog id="modal-1">
+
+      <div class="conjunto_modal">
+
+      <div class="texto_modal">
+       
+                <h1 class="modal-tittle"> O que é INSS? </h1>
+
+                <p> O INSS é o Instituto Nacional do Seguro Social. Ele é tipo um cofrinho gigante do governo onde todo mundo que trabalha
+                     coloca um pouquinho de dinheiro todo mês. Esse dinheiro serve para garantir que, se um dia você não puder trabalhar
+                      (por idade, doença, acidente, etc.), você ainda tenha uma grana para viver. </p>
+
+                      </div> <!--texto_modal-->
+
+                      <div class="img_modal">
+                        <img src="img/menina_triste.png" alt="menina_triste">
+                      </div> <!--img_modal-->
+
+                      </div> <!--conjunto_modal-->
+
+                      <hr>
+
+      <div class="conjunto_modal">
+
+        <img src="img/menina_pensativa.png">
+
+      <div class="texto_modal">
+              <h1 class="modal-tittle"> Como funciona? </h1>
+              <p> Imagina que você está começando a trabalhar com carteira assinada. Todo mês, uma parte do seu salário vai direto para o INSS,
+                 você nem vê esse dinheiro, mas ele está lá, guardadinho.
+          Esse valor que você contribui te dá direito a vários benefícios, como:
+            <li>Aposentadoria (quando você estiver mais velho e parar de trabalhar)</li>
+            <Li>Auxílio-doença (se ficar doente e não puder trabalhar)</li>
+            <li>Salário-maternidade (para quem tem filho)</li>
+            <li>Pensão por morte (para a família, se algo acontecer com você)</li>
+ </p>
+
+      </div> 
+
+ </div>
+                     <hr>
+
+                     
+      <div class="conjunto_modal">
+
+      <div class="texto_modal">
+
+               <h1 class="modal-tittle"> Quem pode contribuir? </h1>
+
+                <p> Basicamente, qualquer pessoa que trabalha pode contribuir: Empregado com carteira assinada, autônomo ou freelancer, MEI (microeemprendedor Individual) ou pessoa sem renda fixa.</p>
+      </div>
+
+      <img src="img/loiro_confiante.png">
+      </div>
+
+             <button 
+             class="close-modal" 
+             data-modal="modal-1"
+            type="button">
+          fechar
+             </button>   
+             
+     </dialog>
+
+     </div> <!--Fecha a div inss-modal-->
+
+<!------------------------------------------------------------------------------------------------------------------------------------------->
+<!--card do imposto de renda-->
+<!------------------------------------------------------------------------------------------------------------------------------------------->
+
+     <!--Imposto de renda-->
+     <div class="imposto-renda">
+      
+
+            <img src="img/imposto_renda.jpg" 
+            tittle="iness">
+            <h4>Imposto de Renda</h4>
+
+             <button class="open-modal"
+     data-modal="modal-2">O que é?</button>
+
+     </div>
+
+<!------------------------------------------------------------------------------------------------------------------------------------------->
+<!--modal do imposto de renda-->
+
+     <div class="inss-modal">
+    
+     <dialog id="modal-2">
+      <div class="conjunto_modal">
+        
+
+      <div class="texto_modal">
+       
+                <h1 class="modal-tittle"> O que é Imposto de Renda? </h1>
+
+                <p>O Imposto de Renda (IR) é um valor que você paga ao governo com base no quanto você ganhou durante o ano. É como se fosse uma “prestação de contas”: você diz tudo o que recebeu, e o governo verifica se você pagou o que devia de imposto.
+
+                </p>
+                <p>Existem dois tipos principais:
+- IRPF: Imposto de Renda da Pessoa Física (você, eu, qualquer pessoa)
+- IRPJ: Imposto de Renda da Pessoa Jurídica (empresas)
+</p> </div> <!--div texto modal-->
+                      
+<div class="img_modal">
+                      <img src="img/menina_triste.png">
+      </div> <!--div img_modal-->
+     </div> <!--conjuntomodal-->
+      <hr>
+
+              
+<div class="conjunto_modal">
+  <div class="img_modal">
+  <img src="img/menina_pensativa.png">
+</div>
+
+      <div class="texto_modal">
+               <h1 class="modal-tittle"> Quem precisa declarar? </h1>
+
+                <p> Você só precisa declarar se se encaixar em alguma dessas situações:
+- Ganhou mais de R$ 30.639,90 no ano (valor de 2025)
+- Teve renda de aluguel, pensão, aposentadoria
+- Comprou ou vendeu bens (carro, casa, ações)
+- Teve investimentos com lucro
+- Recebeu auxílio do governo acima de certo valor
+</p> </div>
+
+
+</div>
+<hr>
+
+<div class="conjunto_modal">
+
+      <div class="texto_modal">
+  <h1 class="modal-tittle"> Por que isso existe? </h1>
+  <p>O dinheiro arrecadado com o IR vai para serviços públicos: saúde, educação, segurança, infraestrutura. É uma forma de redistribuir a grana e manter o país funcionando.
+Mas também é uma forma de controle: o governo sabe quem tá ganhando quanto e se tá tudo dentro da lei.
+</p>
+      </div>
+      <div class="img_modal">
+        <img src="img/loiro_confiante.png">
+      </div>
+
+
+             <button 
+             class="close-modal" 
+             data-modal="modal-2"
+            type="button">
+          fechar
+             </button>   
+             
+     </dialog>
+
+     </div> <!--Fecha a div modal-->
+
+<!------------------------------------------------------------------------------------------------------------------------------------------->
+<!--card do FGTS-->
+<!------------------------------------------------------------------------------------------------------------------------------------------->
+
+     <!--FGTS-->
+     <div class="fgts">
+
+            <img src="img/fgts.jpg" 
+            tittle="fgts">
+            <h4>FGTS</h4>
+
+             <button class="open-modal"
+     data-modal="modal-3">O que é?</button>
+
+     </div>
+
+<!------------------------------------------------------------------------------------------------------------------------------------------->
+<!--modal do FGTS-->
+
+     <div class="fgts-modal">
+    
+     <dialog id="modal-3">
+      <div class="conjunto_modal">
+
+      <div class="texto_modal">
+       
+                <h1 class="modal-tittle"> O que é FGTS? </h1>
+
+                <p>O FGTS é tipo uma poupança forçada que o governo criou pra te proteger em momentos difíceis. Todo mês, a empresa onde você trabalha com carteira assinada deposita 8% do seu salário numa conta no seu nome, lá na Caixa Econômica Federal.
+Esse dinheiro não vai direto pra você, mas fica guardado e pode ser sacado em situações específicas.
+                </p>  </div>
+                <div class="img_model">
+                  <img src="img/menina_triste.png">
+                </div>
+      </div>
+
+                      <hr>
+
+      <div class="conjunto_modal">
+        <div class="img_model">
+  <img src="img/menina_pensativa.png">
+ </div>
+
+      <div class="texto_modal">
+
+              <h1 class="modal-tittle"> Como funciona? </h1>
+              <p> - Você não precisa fazer nada: o depósito é automático, feito pela empresa.
+- O dinheiro vai acumulando numa conta do FGTS.
+- Você pode consultar o saldo pelo app FGTS ou pelo site da Caixa.
+
+ </p> </div>
+ 
+      </div>
+
+                     <hr>
+                     <div class="conjunto_modal">
+
+      <div class="texto_modal">
+
+               <h1 class="modal-tittle"> Quando você pode usar? </h1>
+
+                <p> Você pode sacar o FGTS em casos como:
+- Demissão sem justa causa
+- Compra da casa própria
+- Aposentadoria
+- Doença grave
+- Falecimento do trabalhador (a família pode sacar)
+Também existe o saque-aniversário, onde você pode retirar uma parte do FGTS todo ano no mês do seu aniversário — mas tem regras e limitações.
+
+</p> </div>
+<hr> <div class="img_model">
+  <img src="img/loiro_confiante.png">
+</div> </div>
+
+             <button 
+             class="close-modal" 
+             data-modal="modal-3"
+            type="button">
+          fechar
+             </button>   
+             
+     </dialog>
+
+     </div> <!--Fecha a div modal-->
+
+<!------------------------------------------------------------------------------------------------------------------------------------------->
+<!--card DARF-->
+<!------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+     <!--DARF-->
+     <div class="darf">
+
+            <img src="img/darf.jpg" 
+            tittle="iness">
+            <h4>DARF</h4>
+             <button class="open-modal"
+     data-modal="modal-4">O que é?</button>
+
+     </div>
+<!------------------------------------------------------------------------------------------------------------------------------------------->
+<!--modal do DARF-->
+
+
+     <div class="darf-modal">
+    
+     <dialog id="modal-4">
+
+       <div class="conjunto_modal">
+      
+
+      <div class="texto_modal">
+       
+                <h1 class="modal-tittle"> O que é DARF? </h1>
+
+                <p>O DARF é um boleto oficial que você usa pra pagar impostos ao governo. Ele serve pra várias situações: imposto de renda, multa, ganho com investimentos, etc.
+É como se fosse o “boleto da Receita Federal”. </p>
+      </div>
+      <div class="img_model">
+        <img src="img/menina_triste.png">
+      </div> </div>
+
+                      <hr>
+
+                       <div class="conjunto_modal">
+      <div class="img_model">
+        <img src="img/menina_pensativa.png">
+      </div>
+
+      <div class="texto_modal">
+              <h1 class="modal-tittle"> Como funciona? </h1>
+              <p> - Você gera o DARF no site da Receita ou em plataformas como o app “Meu Imposto de Renda”.
+- Ele vem com um código, valor e data de vencimento.
+- Você paga no banco ou pelo app do seu banco, como qualquer boleto.
+ </p> </div> </div>
+
+                     <hr>
+                      <div class="conjunto_modal">
+      
+
+      <div class="texto_modal">
+
+               <h1 class="modal-tittle"> Quando você precisa fazer isso? </h1>
+
+                <p> - Quando declara o Imposto de Renda e tem imposto a pagar.
+- Quando vende ações ou fundos e precisa pagar imposto sobre o lucro.
+- Quando recebe multa da Receita ou precisa regularizar alguma pendência.
+
+
+</p></div>
+<div class="img_model">
+  <img src="img/loiro_confiante.png">
+</div></div>
+<hr>
+
+             <button 
+             class="close-modal" 
+             data-modal="modal-4"
+            type="button">
+          fechar
+             </button>   
+             
+     </dialog>
+
+     </div> <!--Fecha a div modal-->
+
+<!------------------------------------------------------------------------------------------------------------------------------------------->
+<!--card do score-->
+<!------------------------------------------------------------------------------------------------------------------------------------------->
+
+        <!--SCORE-->
+     <div class="score">
+
+            <img src="img/score.jpg" 
+            tittle="score">
+            <h4>Score</h4>
+
+             <button class="open-modal"
+     data-modal="modal-5">O que é?</button>
+
+     </div>
+
+<!------------------------------------------------------------------------------------------------------------------------------------------->
+<!--modal do score-->
+
+     <div class="score-modal">
+    
+     <dialog id="modal-5">
+       <div class="conjunto_modal">
+      
+
+      <div class="texto_modal">
+       
+                <h1 class="modal-tittle"> O que é Score de Crédito? </h1>
+
+                <p>O score de crédito é uma pontuação que vai de 0 a 1000 e mostra o quanto você é considerada uma pessoa confiável para pagar contas e dívidas. É como se fosse um “boletim financeiro” que empresas consultam antes de te emprestar dinheiro, aprovar um cartão de crédito ou um financiamento.
+Quanto maior o seu score, mais chances você tem de conseguir crédito com boas condições (juros menores, limites maiores, etc.). </p> </div>
+
+<div class="img_model">
+  <img src="img/menina_triste.png">
+</div> </div>
+
+
+
+                      <hr>
+ <div class="conjunto_modal">
+      <div class="img_model">
+        <Img src="img/menina_pensativa.png">
+      </div>
+
+      <div class="texto_modal">
+              <h1 class="modal-tittle"> Como funciona? </h1>
+              <p> O score é calculado por empresas como Serasa, Boa Vista e SPC Brasil, com base em vários fatores, como:
+- Se você paga suas contas em dia
+- Se tem dívidas em aberto
+- Seu histórico de crédito (cartões, empréstimos, financiamentos)
+- Seu tempo de relacionamento com o mercado
+- Atualização dos seus dados cadastrais
+Eles usam tudo isso pra prever se você é uma pessoa que costuma pagar direitinho ou se representa risco de inadimplência. 
+
+ </p> </div> </div>
+
+                     <hr>
+                      <div class="conjunto_modal">
+      
+
+      <div class="texto_modal">
+
+               <h1 class="modal-tittle"> Quando você precisa se preucupar com isso? </h1>
+
+                <p> - For pedir um cartão de crédito
+- Quiser financiar um carro ou imóvel
+- Solicitar empréstimo pessoal
+- Tentar comprar algo parcelado em lojas
+Se seu score estiver baixo, pode ser que neguem o crédito ou ofereçam com juros bem altos.
+</p></div>
+    
+      <div class="img_model">
+        <img src="img/loiro_confiante.png">
+      </div></div>
+<hr>
+
+             <button 
+             class="close-modal" 
+             data-modal="modal-5"
+            type="button">
+          fechar
+             </button>   
+             
+     </dialog>
+
+     </div> <!--Fecha a div modal-->
+
+
+
+     <!--Segunda fileira-->
+<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!------------------------------------------------------------------------------------------------------------------------------------------->
+<!--card do comprovante de renda-->
+<!------------------------------------------------------------------------------------------------------------------------------------------->
+
+        <div class="comprovante_renda">
+
+            <img src="img/comprovacao-de-renda.jpg" 
+            tittle="comprovante de renda">
+            <h4>Comprovante de Renda</h4>
+             <button class="open-modal"
+     data-modal="modal-6">O que é?</button>
+
+     </div>
+
+<!------------------------------------------------------------------------------------------------------------------------------------------->
+<!--modal do comprovante de renda-->
+
+     <div class="comprovante_renda-modal">
+    
+     <dialog id="modal-6">
+
+       <div class="conjunto_modal">
+      
+
+      <div class="texto_modal">
+       
+                <h1 class="modal-tittle"> O que é Comprovante de Renda? </h1>
+
+                <p> É um documento que mostra quanto dinheiro você ganha regularmente, seja por salário, pensão, aposentadoria ou trabalho autônomo. </p>
+      </div>
+      <div class="img_model">
+        <img src="img/menina_triste.png">
+      </div> </div>
+                      <hr>
+ <div class="conjunto_modal">
+      <div class="img_model">
+        <img src="img/menina_pensativa.png"></div>
+
+      <div class="texto_modal">
+              <h1 class="modal-tittle"> Como funciona? </h1>
+              <p> Pode ser apresentado de várias formas, como holerite (contracheque), extrato bancário, declaração de imposto de renda ou recibos de pagamento. O importante é que ele comprove que você tem uma fonte de renda estável.</p>
+      </div></div>
+                     <hr>
+ <div class="conjunto_modal">
+      
+
+      <div class="texto_modal">
+               <h1 class="modal-tittle"> Por que existe? </h1>
+
+                <p> É usado para mostrar que você tem condições de pagar por algo — como aluguel, financiamento, cartão de crédito ou matrícula em cursos. É uma forma de dar segurança para quem está te oferecendo um serviço ou produto.</p>
+      </div>
+      <div class="img_model">
+        <img src="img/loiro_confiante.png">
+      </div> </div>
+
+             <button 
+             class="close-modal" 
+             data-modal="modal-6"
+            type="button">
+          fechar
+             </button>   
+             
+     </dialog>
+
+     </div> <!--Fecha a div modal-->
+
+<!------------------------------------------------------------------------------------------------------------------------------------------->
+<!--card do fiador-->
+<!------------------------------------------------------------------------------------------------------------------------------------------->
+
+     <!--IFIADOR-->
+     <div class="fiador">
+
+            <img src="img/fiadorr.jpg" 
+            tittle="fiador">
+            <h4>Fiador</h4>
+
+             <button class="open-modal"
+     data-modal="modal-7">O que é?</button>
+
+     </div>
+
+<!------------------------------------------------------------------------------------------------------------------------------------------->
+<!--modal do fiador-->
+
+     <div class="inss-modal">
+    
+     <dialog id="modal-7">
+       <div class="conjunto_modal">
+      
+
+      <div class="texto_modal">
+       
+                <h1 class="modal-tittle"> O que é um Fiador </h1>
+
+                <p> É uma pessoa que se responsabiliza por pagar uma dívida sua caso você não consiga. É muito comum em contratos de aluguel. 
+
+                </p></div>
+                <div class="img_model"><img src="img/menina_triste.png"></div></div>
+                
+                      <hr>
+ <div class="conjunto_modal">
+      
+<div class="img_model">
+  <img src="img/menina_pensativa.png">
+</div>
+      <div class="texto_modal">
+              <h1 class="modal-tittle"> Como funciona? </h1>
+              <p> O fiador precisa ter uma boa renda e, muitas vezes, um imóvel próprio registrado em seu nome. Ele assina o contrato junto com você e, se você não pagar, ele pode ser cobrado legalmente.
+ </p></div></div>
+
+                     <hr>
+ <div class="conjunto_modal">
+      
+
+      <div class="texto_modal">
+               <h1 class="modal-tittle"> Por que existe?</h1>
+
+                <p> Serve como garantia para o dono do imóvel ou empresa. Se você não pagar, eles têm alguém para recorrer. Por isso, ser fiador é uma responsabilidade grande e exige confiança.
+
+</p></div>
+<div class="img_model">
+  <img src="img/loiro_confiante.png">
+</div>
+<hr>
+
+
+             <button 
+             class="close-modal" 
+             data-modal="modal-7"
+            type="button">
+          fechar
+             </button>   
+             
+     </dialog>
+
+     </div> <!--Fecha a div modal-->
+
+
+<!------------------------------------------------------------------------------------------------------------------------------------------->
+<!--card do caução-->
+<!------------------------------------------------------------------------------------------------------------------------------------------->
+     <!--CAUÇÃO-->
+     <div class="caucao">
+
+            <img src="img/caucao.jpg" 
+            tittle="caução">
+            <h4>Caução</h4>
+
+             <button class="open-modal"
+     data-modal="modal-8">O que é?</button>
+
+     </div>
+
+<!------------------------------------------------------------------------------------------------------------------------------------------->
+<!--mdoal do caucao-->
+
+     <div class="caucao-modal">
+    
+     <dialog id="modal-8">
+       <div class="conjunto_modal">
+      
+
+      <div class="texto_modal">
+       
+                <h1 class="modal-tittle"> O que é um Caução? </h1>
+
+                <p>É um valor que você paga no início de um contrato (geralmente de aluguel) como garantia.</p></div>
+                <div class="img_modal">
+                  <img src="img/menina_triste.png">
+                </div></div>
+
+                      <hr>
+ <div class="conjunto_modal">
+      
+<div class="img_modal">
+  <img src="img/menina_pensativa.png">
+</div>
+      <div class="texto_modal">
+              <h1 class="modal-tittle"> Como funciona? </h1>
+              <p> Normalmente, a caução é equivalente a até três meses de aluguel. Esse valor fica guardado e, se no final do contrato estiver tudo certo — sem dívidas ou danos no imóvel — ele é devolvido com correção monetária.
+
+ </p></div></div>
+
+                     <hr>
+ <div class="conjunto_modal">
+      
+
+      <div class="texto_modal">
+               <h1 class="modal-tittle"> Por que existe? </h1>
+
+                <p> Protege o proprietário contra prejuízos. Se houver algum problema, ele pode usar esse valor para cobrir os custos. É uma alternativa ao fiador ou ao seguro-fiança
+</p></div>
+<div class="img_modal">
+  <img src="img/loiro_confiante.png">
+</div></div>
+<hr>
+
+             <button 
+             class="close-modal" 
+             data-modal="modal-8"
+            type="button">
+          fechar
+             </button>   
+             
+     </dialog>
+
+     </div> <!--Fecha a div modal-->
+
+<!------------------------------------------------------------------------------------------------------------------------------------------->
+<!--card do orçamento doméstico-->
+<!------------------------------------------------------------------------------------------------------------------------------------------->
+     <!--Orçamento Doméstico-->
+     <div class="orcamento_domestico">
+
+            <img src="img/orçamento_domestico.jpg" 
+            tittle="orçamento_domestico">
+            <h4>Orçamento Doméstico</h4>
+             <button class="open-modal"
+     data-modal="modal-9">O que é?</button>
+
+     </div>
+<!------------------------------------------------------------------------------------------------------------------------------------------->
+<!--modal do orçamento doméstico-->
+<!------------------------------------------------------------------------------------------------------------------------------------------->
+     <div class="orcamento_domestico-modal">
+    
+     <dialog id="modal-9">
+       <div class="conjunto_modal">
+      
+
+      <div class="texto_modal">
+       
+                <h1 class="modal-tittle"> O que é Orçamento Doméstico? </h1>
+
+                <p>É um planejamento financeiro que ajuda você a controlar o dinheiro que entra e sai da sua casa.</p>
+      </div>
+      <div class="img_modal">
+        <img src="img/menina_triste.png"></div>
+      </div>
+                      <hr>
+ <div class="conjunto_modal">
+      
+
+    
+        <div class="img_Modal">
+          <img src="img/menina_pensativa.png">
+        </div>  <div class="texto_modal">
+              <h1 class="modal-tittle"> Como funciona? </h1>
+              <p> Você anota tudo que ganha (salário, bicos, pensão) e tudo que gasta (contas, mercado, transporte, lazer). Com isso, dá pra ver onde está gastando demais e onde pode economizar.
+ </p></div></div>
+
+                     <hr>
+  <div class="conjunto_modal"> 
+      
+
+      <div class="texto_modal">
+               <h1 class="modal-tittle"> Por que isso existe? </h1>
+
+                <p> Ajuda a evitar dívidas, guardar dinheiro e tomar decisões mais conscientes. É como um mapa que mostra pra onde seu dinheiro está indo e como você pode melhorar sua vida financeira.
+</p></div>
+<div class="img_modal">
+  <img src="img/loiro_confiante.png">
+</div>
+<hr>
+
+             <button 
+             class="close-modal" 
+             data-modal="modal-9"
+            type="button">
+          fechar
+             </button>   
+             
+     </dialog>
+
+<!------------------------------------------------------------------------------------------------------------------------------------------->
+<!--card do seguro residencial-->
+<!------------------------------------------------------------------------------------------------------------------------------------------->
+     </div> <!--Fecha a div modal-->
+
+        <!--Seguro Residencial-->
+     <div class="seguro_residencial">
+
+            <img src="img/seguro_residencial.jpeg" 
+            tittle="seguro_residencial">
+            <h4>Seguro Residencial</h4>
+
+             <button class="open-modal"
+     data-modal="modal-10">O que é?</button>
+
+     </div>
+
+<!------------------------------------------------------------------------------------------------------------------------------------------->
+<!--modaldo seguro residencial-->
+<!--ard----------------------------------------------------------------------------------------------------------------------------------------->
+     <div class="seguro_residencial-modal">
+    
+     <dialog id="modal-10">
+        <div class="conjunto_modal">
+      
+
+      <div class="texto_modal">
+       
+                <h1 class="modal-tittle"> O que é Seguro Residencial? </h1>
+
+                <p>É um serviço que protege sua casa ou apartamento contra imprevistos, como incêndios, roubos, alagamentos ou danos elétricos.</p>
+      </div>
+      <div class="img_modal">
+        <img src="img/menina_triste.png"></div>
+      </div>
+                      <hr>
+  <div class="conjunto_modal">
+      
+<div class="img_modal">
+  <img src="img/menina_pensativa.png">
+</div>
+      <div class="texto_modal">
+              <h1 class="modal-tittle"> Como funciona? </h1>
+              <p> Você paga um valor mensal ou anual e, se acontecer algum problema coberto pelo contrato, a seguradora paga parte ou todo o prejuízo. Alguns seguros também oferecem serviços extras, como chaveiro, encanador ou eletricista.
+ </p></div></div>
+
+                     <hr>
+  <div class="conjunto_modal">
+      
+
+      <div class="texto_modal">
+               <h1 class="modal-tittle"> Por que isso existe? </h1>
+
+                <p>  Dá tranquilidade e segurança. Em vez de arcar sozinho com um prejuízo grande, você tem ajuda financeira para resolver o problema.
+
+</p></div>
+<div class="img_modal">
+  <img src="img/loiro_confiante.png"></div>
+</div>
+<hr>
+  
+             <button 
+             class="close-modal" 
+             data-modal="modal-10"
+            type="button">
+          fechar
+             </button>   
+             
+     </dialog>
+
+     </div> <!--Fecha a div modal-->
+
+       <!--Terceira fileira-->
+<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!------------------------------------------------------------------------------------------------------------------------------------------->
+<!--card da inflação-->
+<!------------------------------------------------------------------------------------------------------------------------------------------->
+ <div class="inflacao">
+
+            <img src="img/inflacao.jpg" 
+            tittle="inflacao">
+            <h4>Inflação</h4>
+
+             <button class="open-modal"
+     data-modal="modal-11">O que é?</button>
+
+     </div>
+
+<!------------------------------------------------------------------------------------------------------------------------------------------->
+<!--modal da inflação-->
+<!------------------------------------------------------------------------------------------------------------------------------------------->  
+
+     <div class="inflacao-modal">
+    
+     <dialog id="modal-11">
+        <div class="conjunto_modal">
+      
+
+      <div class="texto_modal">
+       
+                <h1 class="modal-tittle"> O que é Inflação? </h1>
+
+                <p> É o aumento geral dos preços de produtos e serviços ao longo do tempo.</p></div>
+                <div class="img_Modal">
+                  <img src="img/menina_triste.png"></div>
+                </div>
+
+                      <hr>
+  <div class="conjunto_modal">
+      
+<div class="img_modal">
+  <img src="img/menina_pensativa.png">
+</div>
+      <div class="texto_modal">
+              <h1 class="modal-tittle"> Como funciona? </h1>
+              <p> Quando a inflação está alta, o dinheiro perde valor, ou seja, com a mesma quantia você compra menos coisas. Isso pode acontecer por vários motivos: aumento na demanda, queda na produção, alta nos custos ou até decisões do governo.</p></div></div>
+                     <hr>
+
+               <h1 class="modal-tittle"> Por que existe? </h1>
+
+                <p> A inflação mostra como está o equilíbrio da economia. Um pouco de inflação é normal, mas quando sobe demais, afeta o poder de compra das pessoas e pode gerar instabilidade.</p>
+             <button 
+             class="close-modal" 
+             data-modal="modal-11"
+            type="button">
+          fechar
+             </button>   
+             
+     </dialog>
+
+     </div> <!--Fecha a div modal-->
+
+
+<!------------------------------------------------------------------------------------------------------------------------------------------->
+<!--card do PIB-->
+<!------------------------------------------------------------------------------------------------------------------------------------------->     
+     <!--PIB-->
+     <div class="pib">
+
+            <img src="img/fiadorr.jpg" 
+            tittle="pib">
+            <h4>PIB</h4>
+
+             <button class="open-modal"
+     data-modal="modal-12">O que é?</button>
+
+     </div>
+
+<!------------------------------------------------------------------------------------------------------------------------------------------->
+<!--modal do PIB-->
+<!------------------------------------------------------------------------------------------------------------------------------------------->      
+     <div class="pib-modal">
+    
+     <dialog id="modal-12">
+        <div class="conjunto_modal">
+      
+
+      <div class="texto_modal">
+       
+                <h1 class="modal-tittle"> O que é  PIB </h1>
+
+                <p> É a soma de tudo que um país produz em bens e serviços durante um período (geralmente um ano).
+                </p></div>
+                <div class="img_Modal">
+                  <img src="img/menina_triste.png"></div>
+                </div>
+                
+                      <hr>
+  <div class="conjunto_modal">
+      <div class="img_modal">
+        <img src="img/menina_pensativa.png">
+      </div>
+
+      <div class="texto_modal">
+              <h1 class="modal-tittle"> Como funciona? </h1>
+              <p> O PIB inclui o que é produzido por empresas, governos e pessoas. Se o PIB cresce, significa que a economia está se desenvolvendo. Se cai, pode indicar crise ou recessão.
+ </p></div></div>
+
+                     <hr>
+  <div class="conjunto_modal">
+      
+
+      <div class="texto_modal">
+               <h1 class="modal-tittle"> Por que existe?</h1>
+
+                <p> Serve para medir o tamanho e a saúde da economia de um país. É usado para comparar países, definir políticas públicas e entender se a população está melhorando de vida.
+</p></div>
+<div class="img_modal">
+  <img src="img/loiro_confiante.png">
+</div>
+<hr>
+
+
+             <button 
+             class="close-modal" 
+             data-modal="modal-12"
+            type="button">
+          fechar
+             </button>   
+             
+     </dialog>
+
+     </div> <!--Fecha a div modal-->
+
+<!------------------------------------------------------------------------------------------------------------------------------------------->
+<!--card da taxa selic-->
+<!-------------------------------------------------------------------------------------------------------------------------------------------> 
+
+     <!--TAXA SELIC-->
+     <div class="taxa_selic">
+
+            <img src="img/taxa_selic.jpg" 
+            tittle="taxa_selic">
+            <h4>Taxa Selic</h4>
+
+             <button class="open-modal"
+     data-modal="modal-13">O que é?</button>
+
+     </div>
+<!------------------------------------------------------------------------------------------------------------------------------------------->
+<!--modal da taxa selic-->
+<!-------------------------------------------------------------------------------------------------------------------------------------------> 
+     <div class="taxa_selic-modal">
+    
+     <dialog id="modal-13">
+         <div class="conjunto_modal">
+      
+
+      <div class="texto_modal">
+                <h1 class="modal-tittle"> O que é Taxa Selic? </h1>
+
+                <p>É a taxa básica de juros da economia brasileira, definida pelo Banco Central.</p></div>
+                <div class="img_img_modal">
+                  <img src="img/menina_triste.png"></div>
+                </div>
+
+                      <hr>
+  <div class="conjunto_modal">
+      
+<div class="img_modal">
+  <img src="img/menina_pensativa.png">
+</div>
+      <div class="texto_modal">
+              <h1 class="modal-tittle"> Como funciona? </h1>
+              <p> Ela influencia todas as outras taxas de juros — como as de empréstimos, financiamentos e investimentos. Quando a Selic sobe, o crédito fica mais caro e o consumo diminui; quando cai, o crédito fica mais barato e a economia tende a crescer.
+ </p></div></div>
+
+                     <hr>
+  <div class="conjunto_modal">
+      
+
+      <div class="texto_modal">
+               <h1 class="modal-tittle"> Por que existe? </h1>
+
+                <p> É usada para controlar a inflação e manter a economia equilibrada. Também afeta diretamente quanto você ganha em aplicações financeiras como poupança e Tesouro Direto.</p></div>
+                <div class="img_modal">
+                  <img src="img/loiro_confiante.png">
+                </div>
+<hr>
+
+             <button 
+             class="close-modal" 
+             data-modal="modal-13"
+            type="button">
+          fechar
+             </button>   
+             
+     </dialog>
+
+     </div> <!--Fecha a div modal-->
+
+
+<!------------------------------------------------------------------------------------------------------------------------------------------->
+<!--card da Política pública-->
+<!------------------------------------------------------------------------------------------------------------------------------------------->     
+     <!--Política pública-->
+     <div class="politica_publica">
+
+            <img src="img/politica_publica.jpg" 
+            tittle="politica_publica">
+            <h4>Política pública</h4>
+             <button class="open-modal"
+     data-modal="modal-14">O que é?</button>
+
+     </div>
+
+<!------------------------------------------------------------------------------------------------------------------------------------------->
+<!--modal da Política pública-->
+<!-------------------------------------------------------------------------------------------------------------------------------------------> 
+
+     <div class="politica_publica-modal">
+    
+     <dialog id="modal-14">
+         <div class="conjunto_modal">
+      
+
+      <div class="texto_modal">
+                <h1 class="modal-tittle"> O que é Política pública? </h1>
+
+                <p>São ações e programas criados pelo governo para melhorar a vida da população.</p></div>
+                <div class="img_modal">
+                  <img src="img/menina_triste.png"></div>
+                </div>
+                      <hr>
+  <div class="conjunto_modal">
+      <div class="img_modal">
+        <img src="img/menina_pensativa.png">
+      </div>
+
+      <div class="texto_modal">
+              <h1 class="modal-tittle"> Como funciona? </h1>
+              <p> Podem ser voltadas para saúde, educação, segurança, meio ambiente, entre outros. São planejadas, colocadas em prática e depois avaliadas para ver se estão funcionando.</p>
+                     <hr></div></div>
+  <div class="conjunto_modal">
+      
+
+      <div class="texto_modal">
+               <h1 class="modal-tittle"> Por que isso existe? </h1>
+
+                <p> Para garantir direitos, reduzir desigualdades e resolver problemas sociais. É uma forma de o Estado agir para atender às necessidades da sociedade.</p></div>
+<hr>
+<div class="img_modal">
+  <img src="img/loiro_confiante.png">
+</div>
+             <button 
+             class="close-modal" 
+             data-modal="modal-14"
+            type="button">
+          fechar
+             </button>   
+             
+     </dialog>
+
+     </div> <!--Fecha a div modal-->
+
+<!------------------------------------------------------------------------------------------------------------------------------------------->
+<!--card da Fake news-->
+<!-------------------------------------------------------------------------------------------------------------------------------------------> 
+
+        <!--Fake News-->
+     <div class="fake_news">
+
+            <img src="img/seguro_residencial.jpeg" 
+            tittle="fake_news">
+            <h4>Fake News</h4>
+
+             <button class="open-modal"
+     data-modal="modal-15">O que é?</button>
+
+     </div>
+
+<!------------------------------------------------------------------------------------------------------------------------------------------->
+<!--modal da Fake news-->
+<!-------------------------------------------------------------------------------------------------------------------------------------------> 
+
+     <div class="fake_news-modal">
+    
+     <dialog id="modal-15">
+        <div class="conjunto_modal">
+      
+
+      <div class="texto_modal">
+       
+                <h1 class="modal-tittle"> O que é Fake News? </h1>
+
+                <p>São notícias falsas ou distorcidas, criadas para enganar, manipular ou provocar reações emocionais.</p>
+                 </div>
+      <div class="img_modal"><img src="img/menina_triste.png"></div></div>
+                      <hr>
+  <div class="conjunto_modal">
+           
+<div class="img_Modal">
+  <img src="img/menina_pensativa.png">
+</div> 
+
+<div class="texto_modal">
+
+              <h1 class="modal-tittle"> Como funciona? </h1>
+              <p> Circulam principalmente nas redes sociais e se espalham rápido porque apelam para o emocional das pessoas. Muitas vezes parecem verdadeiras, mas não têm fontes confiáveis.</p></div></div>
+  
+                     <hr>
+  <div class="conjunto_modal">
+      
+
+      <div class="texto_modal">
+               <h1 class="modal-tittle"> Por que isso existe? </h1>
+
+                <p>  Podem ser usadas para influenciar opiniões, prejudicar pessoas ou grupos, causar medo ou confusão. Por isso, é importante sempre verificar se a informação é verdadeira antes de compartilhar.</p></div>
+                <div class="img_Modal"><img src="img/loiro_confiante.png"></div></div>
+<hr>
+  
+             <button 
+             class="close-modal" 
+             data-modal="modal-15"
+            type="button">
+          fechar
+             </button>   
+             
+     </dialog>
+
+     </div> <!--Fecha a div modal-->
+
+</div>
+
+    <footer>   <!-- Rodapé do site -->
+    <div class="rodape">&copy; 2025 aluna: Maria Alice; Todos os direitos reservados.</div>  <!-- Direitos autorais -->
+
+    
+    <div class="github"> <!-- Link para o GitHub -->
+      <a href="https://github.com/mariaalicegz">
+        <img src="/img/github.png" alt="Descrição da imagem" />
+      </a>
+    </div>
+  </footer>
+
+  <!--Utilizando o "v libras"-->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+       
+    <script src="javascript/scriptt.js"></script>
+   
+</body>
+</html>
+
