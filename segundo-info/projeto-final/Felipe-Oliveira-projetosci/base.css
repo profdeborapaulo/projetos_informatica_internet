@@ -1,0 +1,112 @@
+/* Importa as variáveis de design do nosso style.css principal */
+@import url('style.css'); 
+
+/* --- Layout de Formulário Centralizado --- */
+.auth-body {
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    
+    /* Magia para centrar o conteúdo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 450px;
+    padding: 2.5rem;
+    background-color: var(--cor-branco);
+    border-radius: var(--raio-borda);
+    box-shadow: var(--sombra-suave);
+    border: 1px solid var(--cor-borda);
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.auth-header .logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--cor-principal);
+    text-decoration: none;
+}
+
+.auth-header h1 {
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* --- Estilos de Formulário --- */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--cor-texto);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    font-family: var(--fonte-principal);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-borda);
+}
+
+.form-group textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--cor-principal);
+    box-shadow: 0 0 0 3px rgba(13, 138, 129, 0.1);
+}
+
+/* Links e Mensagens */
+.auth-link {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.auth-link a {
+    color: var(--cor-principal);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Mensagens de erro ou sucesso */
+.message {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: var(--raio-borda);
+    text-align: center;
+    font-weight: 600;
+    display: none; /* Começa escondido */
+}
+
+.message.success {
+    background-color: #e0f2f1; /* Verde claro */
+    color: var(--cor-secundaria);
+    display: block;
+}
+
+.message.error {
+    background-color: #ffebee; /* Vermelho claro */
+    color: #c62828; /* Vermelho escuro */
+    display: block;
+}

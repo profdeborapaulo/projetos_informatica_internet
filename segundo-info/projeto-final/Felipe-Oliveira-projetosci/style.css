@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    /* Verde Científico (Teal) */
+    --cor-principal: #0D8A81; 
+    /* Verde Secundário (Mais escuro, para hovers/botões) */
+    --cor-secundaria: #0A6D66;
+    
+    /* Neutros */
+    --cor-fundo: #F8F9FA;         /* Off-white suave */
+    --cor-branco: #FFFFFF;
+    --cor-texto: #212529;         /* Cinza escuro (quase preto) */
+    --cor-texto-secundario: #6C757D; /* Cinza claro */
+    --cor-borda: #E0E0E0;         /* Cinza para bordas */
+
+    /* Tipografia */
+    --fonte-principal: 'Inter', sans-serif;
+    
+    /* Componentes */
+    --raio-borda: 6px;
+    --sombra-suave: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0D8A81;
+    color: #212529;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #6c757d;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+.logo {
+    height: 60px;
+    width: auto;
+    border-radius: 50%;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}   
+
+header img {
+    max-width: 100px;
+    height: auto;
+}
+
+header h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+nav a {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #0D8A81;
+}
+
+/* --- Estilo dos Componentes (Botões) --- */
+.btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: var(--raio-borda);
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--cor-principal);
+    color: var(--cor-branco);
+}
+.btn-primary:hover {
+    background-color: var(--cor-secundaria);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--cor-principal);
+    border: 1px solid var(--cor-borda);
+    padding: 0.4rem 0.8rem;
+}
+.btn-secondary:hover {
+    background-color: var(--cor-fundo);
+    border-color: var(--cor-principal);
+}
+
+/* --- 2. Barra de Busca (Inputs) --- */
+.search-section {
+    margin-bottom: 2.5rem;
+}
+
+.search-section input[type="search"] {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    font-size: 1rem;
+    font-family: var(--fonte-principal);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-borda);
+    color: var(--cor-texto);
+}
+/* Foco sutil */
+.search-section input[type="search"]:focus {
+    outline: none;
+    border-color: var(--cor-principal);
+    box-shadow: 0 0 0 3px rgba(13, 138, 129, 0.1);
+}
+
+/* --- 3. Lista de Cards --- */
+.dataset-list h2 {
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--cor-borda);
+    padding-bottom: 0.5rem;
+}
+
+.dataset-card {
+    background-color: var(--cor-branco);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-borda);
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--sombra-suave);
+    transition: box-shadow 0.3s ease;
+}
+
+.dataset-card:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.dataset-card h3 {
+    color: var(--cor-principal);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.card-meta {
+    font-size: 0.9rem;
+    color: var(--cor-texto-secundario);
+    margin-bottom: 1rem;
+}
+.card-meta .author {
+    font-weight: 600;
+}
+.card-meta .date {
+    margin-left: 1rem;
+}
+
+.dataset-card .description {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    color: var(--cor-texto);
+}
+
+.main-nav .welcome-message {
+    font-weight: 600;
+    color: var(--cor-texto-secundario);
+    margin-right: 1.5rem;
+    font-size: 0.95rem;
+}
+
+/* Novo estilo para a secção de upload */
+.upload-section {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid var(--cor-borda);
+    padding-bottom: 2.5rem;
+}

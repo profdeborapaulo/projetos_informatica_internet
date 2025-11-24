@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Plataforma Scientia</title>
+    <link rel="stylesheet" href="style.css"> <link rel="stylesheet" href="base.css">  
+</head>
+<body class="auth-body">
+
+    <div class="auth-container">
+        <header class="auth-header">
+            <a href="index.html" class="logo"><img src="logo.png" alt="logo" class="logo"></a>
+            <h1>Login</h1>
+        </header>
+
+        <div id="message-container" class="message"></div>
+
+        <form id="login-form">
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Entrar</button>
+        </form>
+
+        <div class="auth-link">
+            <p>Não tem uma conta? <a href="registrar.html">Crie uma agora</a></p>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

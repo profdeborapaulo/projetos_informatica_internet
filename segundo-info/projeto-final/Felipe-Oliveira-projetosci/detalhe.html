@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe do Dataset - Plataforma Scientia</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="detalhe.css"> 
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="index.html">
+                <img src="caminho/para/tua-logo.svg" alt="Scientia Logo" class="logo">
+            </a>
+            <nav class="main-nav" id="main-nav">
+                </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            
+            <section id="detalhe-container">
+                <p>A carregar detalhes do dataset...</p>
+            </section>
+
+            <hr class="separator">
+
+            <section id="comentarios-container">
+                <h2>Discussão e Colaboração (Módulo 4)</h2>
+                
+                <form id="comment-form" style="display: none;">
+                    <textarea placeholder="Deixe um comentário..." required></textarea>
+                    <button type="submit" class="btn btn-primary">Publicar Comentário</button>
+                </form>
+                <p id="comment-login-notice">
+                    <a href="login.html">Faça login</a> para participar na discussão.
+                </p>
+
+                <div id="comment-list">
+                    </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script> 
+    <script src="detalhe.js"></script>
+</body>
+</html>

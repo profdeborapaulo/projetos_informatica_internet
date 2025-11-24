@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Conta - Plataforma Scientia</title>
+    <link rel="stylesheet" href="style.css"> <link rel="stylesheet" href="base.css">  
+</head>
+<body class="auth-body">
+
+    <div class="auth-container">
+        <header class="auth-header">
+            <a href="index.html" class="logo"><img src="logo.png" alt="Scientia Logo" class="logo"></a>
+            <h1>Criar Nova Conta</h1>
+        </header>
+
+        <div id="message-container" class="message"></div>
+
+        <form id="register-form">
+            <div class="form-group">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" required>
+            </div>
+
+            <div class="form-group">
+                <label for="afiliacao">Afiliação (Opcional)</label>
+                <input type="text" id="afiliacao" name="afiliacao">
+            </div>
+
+            <div class="form-group">
+                <label for="area_especializacao">Área de Especialização (Opcional)</label>
+                <input type="text" id="area_especializacao" name="area_especializacao">
+            </div>
+
+            <div class="form-group">
+                <label for="biografia">Biografia (Opcional)</label>
+                <textarea id="biografia" name="biografia"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Registar</button>
+        </form>
+
+        <div class="auth-link">
+            <p>Já tem uma conta? <a href="login.html">Faça Login</a></p>
+        </div>
+    </div>
+
+    <script src="registrar.js"></script>
+</body>
+</html>

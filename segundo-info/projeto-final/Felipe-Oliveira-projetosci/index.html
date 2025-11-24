@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal - Scientia</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="index.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <img src="logo.png" alt="Logo Scientia" title="Scientia Logo" class="logo">
+            <nav class="main-nav" id="main-nav">
+                <a href="login.html" class="btn btn-primary">Login</a>
+            </nav>
+        </div>
+    </header>
+    <h4 style="text-align: center;">Seja bem-vindo ao</h4>
+    <h4 style="text-align: center;">Scientia</h4>
+    <p style="text-align: center;">Uma plataforma colaborativa para pesquisadores compartilharem, descobrirem e analisarem dados científicos entre disciplinas.</p>
+    <main class="main-content">
+        <div class="container">
+            
+            <section class="search-section">
+                <form id="search-form">
+                    <input type="search" id="search-input" placeholder="Buscar por palavra-chave nos títulos e descrições...">
+                </form>
+            </section>
+
+            <section class="upload-section" id="upload-section" style="display: none;">
+                <a href="upload.html" class="btn btn-primary">Fazer Novo Upload de Dataset</a>
+            </section>
+            <section class="dataset-list" id="dataset-list-container">
+
+            <section class="dataset-list">
+                <h2>Datasets Recentes</h2>
+
+                <article class="dataset-card">
+                    <h3>Análise Comparativa de Amostras de Gelo Antártico</h3>
+                    <p class="card-meta">
+                        <span class="author">Por: Dr. Helena Santos</span>
+                        <span class="date">Upload em: 20/10/2025</span>
+                    </p>
+                    <p class="description">
+                        Este conjunto de dados contém medições de isótopos de oxigénio e dióxido de carbono 
+                        de núcleos de gelo recolhidos durante a expedição...
+                    </p>
+                    <a href="#" class="btn btn-secondary">Ver Detalhes e Comentar</a>
+                </article>
+
+                <article class="dataset-card">
+                    <h3>[Resultado Nulo] Efeito do Composto X-1A em Células Hepáticas</h3>
+                    <p class="card-meta">
+                        <span class="author">Por: Equipa BioResearch</span>
+                        <span class="date">Upload em: 19/10/2025</span>
+                    </p>
+                    <p class="description">
+                        Tentativa de replicar o estudo Y. O composto X-1A não demonstrou 
+                        alteração estatisticamente significativa na viabilidade celular...
+                    </p>
+                    <a href="#" class="btn btn-secondary">Ver Detalhes e Comentar</a>
+                </article>
+
+                </section>
+                
+        </div>
+    </main>
+
+</body>
+</html>

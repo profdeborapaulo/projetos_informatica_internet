@@ -1,0 +1,104 @@
+/* Estilos para a página de detalhe */
+
+#detalhe-container {
+    background-color: var(--cor-branco);
+    padding: 2.5rem;
+    border-radius: var(--raio-borda);
+    box-shadow: var(--sombra-suave);
+    border: 1px solid var(--cor-borda);
+    margin-bottom: 2.5rem;
+}
+
+#detalhe-container h1 {
+    color: var(--cor-principal);
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.meta-info {
+    font-size: 1rem;
+    color: var(--cor-texto-secundario);
+    margin-bottom: 2rem;
+}
+.meta-info strong {
+    color: var(--cor-texto);
+}
+
+.dataset-descricao {
+    line-height: 1.7;
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+}
+
+/* O botão de download */
+.btn-download {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    background-color: var(--cor-principal);
+    color: var(--cor-branco);
+    text-decoration: none;
+    border-radius: var(--raio-borda);
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+.btn-download:hover {
+    background-color: var(--cor-secundaria);
+}
+
+/* Separador */
+.separator {
+    border: 0;
+    border-top: 1px solid var(--cor-borda);
+    margin: 2.5rem 0;
+}
+
+/* Secção de Comentários */
+#comentarios-container h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+#comment-form {
+    margin-bottom: 2rem;
+}
+#comment-form textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 1rem;
+    font-family: var(--fonte-principal);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-borda);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+#comment-list {
+    margin-top: 2rem;
+}
+
+.comment-card {
+    background-color: var(--cor-fundo); /* Um cinza muito claro */
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-borda);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.comment-card strong {
+    color: var(--cor-principal);
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.comment-card p {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+}
+
+.comment-card small {
+    color: var(--cor-texto-secundario);
+    font-size: 0.9rem;
+}
