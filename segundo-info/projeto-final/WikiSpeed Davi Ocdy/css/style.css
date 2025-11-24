@@ -1,0 +1,173 @@
+body {
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #202122;
+  scroll-behavior: smooth;
+}
+
+/*  Cabeçalho  */
+header {
+  background-color: #2c3e50;
+  color: #f6f7f8;
+  padding: 15px 15px 0px 15px;
+  text-align: center;
+  border-bottom: 1px solid #a2a9b1;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+#inicio {
+  max-width: 300px;
+}
+
+#PagIn {
+  max-width: 300px;
+}
+
+#logo {
+  width: 60px;
+  margin-bottom: -20px;
+  border-radius: 50px;
+  margin-right: 10px;
+}
+
+#pesquisa {
+  width: 100%;
+  max-width: 400px;
+  min-height: 35px;
+  padding-left: 0px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-width: 100px;
+}
+
+
+#barra-pesquisa {
+  opacity: 0.6;
+  font-weight: normal;
+  margin-bottom: -20px;
+  padding-top: 7px;
+}
+
+
+/* Breadcrumb  */
+nav.breadcrumb {
+  background-color: #ffffff;
+  padding: 8px 15px;
+  font-size: 14px;
+  border-bottom: 1px solid #a2a9b1;
+}
+
+nav.breadcrumb a {
+  color: #0645ad;
+  text-decoration: none;
+  margin-right: 5px;
+}
+
+nav.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+#voltar a {
+  background-color: white;
+  max-width: 75px;
+  margin-left: 20px;
+  padding: 5px 10px 5px 10px;
+  margin-top: 20px;
+  text-decoration: none;
+  border: 2px solid #a2a9b1;
+}
+
+/*  Corpo principal  */
+main {
+  max-width: 980px;
+  margin: 25px auto;
+  background-color: #ffffff;
+  padding: 25px;
+  border: 1px solid #a2a9b1;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/*  Seções  */
+.section {
+  margin-bottom: 40px;
+  font-size: 1.1em;
+}
+
+.section h2 {
+  border-bottom: 1px solid #a2a9b1;
+  padding-bottom: 3px;
+  color: #202122;
+  font-size: 20px;
+  margin-top: 25px;
+}
+
+.section p {
+  text-align: justify;
+  margin: 10px 0;
+}
+
+/*  Rodapé  */
+footer {
+  background-color: #2c3e50;
+  text-align: center;
+  padding: 10px;
+  font-size: 13px;
+  color: #f6f7f8;
+}
+
+/*  Índice lateral estilo wiki  */
+.side-index {
+  position: fixed;
+  top: 120px;
+  right: 20px;
+  width: 210px;
+  background: #ffffff;
+  border: 1px solid #a2a9b1;
+  padding: 10px 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.side-index h3 {
+  margin-top: 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: #202122;
+  text-align: left;
+  border-bottom: 1px solid #a2a9b1;
+  padding-bottom: 4px;
+}
+
+.side-index ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side-index li {
+  margin: 5px 0;
+}
+
+.side-index a {
+  color: #0645ad;
+  text-decoration: none;
+}
+
+.side-index a:hover {
+  text-decoration: underline;
+  color: #0b0080;
+}
+
+/*  Responsivo  */
+@media (max-width: 1024px) {
+  .side-index {
+    display: none;
+  }
+} 

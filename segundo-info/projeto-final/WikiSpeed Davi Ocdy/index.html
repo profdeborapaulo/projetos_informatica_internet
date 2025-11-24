@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wiki de Speedruns</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="shortcut icon" href="./Imgs/Logo.png">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f6f7f8;
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: white;
+      text-align: left;
+      padding: 20px;
+      font-size: 1.8em;
+      font-weight: bold;
+    }
+
+    .breadcrumb {
+      margin-top: -1px;
+      margin-bottom: 50px;
+      padding: 0 20px;
+      font-size: 0.9em;
+      border-top: #a2a9b1 solid;
+      border-width: 0.8px;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .section {
+      background: white;
+      padding: 20px;
+      border-radius: 6px;
+      margin-bottom: 25px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      font-size: 1.1em;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: #2c3e50;
+    }
+
+    footer {
+      text-align: center;
+      background: #2c3e50;
+      color: white;
+      padding: 15px;
+      font-size: 0.9em;
+      margin-top: 20px;
+    }
+
+    /* GRID DAS IMAGENS */
+    .game-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .game-card {
+      border: 1px solid #a2a9b1;
+      background: #ffffff;
+      border-radius: 8px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      max-width: 274px;
+    }
+
+    .game-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .game-card img {
+      width: 100%;
+      height: 370px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .game-card div {
+      padding: 12px;
+    }
+
+    /*  Índice lateral  */
+    .side-index {
+      position: fixed;
+      top: 120px;
+      right: 20px;
+      width: 203px;
+      background: #fff;
+      border: 1px solid #a2a9b1;
+      border-radius: 4px;
+      padding: 10px 15px;
+      font-size: 14px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    .side-index h3 {
+      margin: 0 0 8px 0;
+      font-size: 15px;
+      font-weight: bold;
+      border-bottom: 1px solid #a2a9b1;
+      padding-bottom: 4px;
+      color: #202122;
+    }
+
+    .side-index ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .side-index li {
+      margin: 6px 0;
+    }
+
+    .side-index a {
+      text-decoration: none;
+      color: #0645ad;
+      transition: color 0.2s;
+    }
+
+    .side-index a:hover {
+      text-decoration: underline;
+      color: #0b0080;
+    }
+
+    /* Esconde o índice em telas menores */
+    @media (max-width: 1024px) {
+      .side-index {
+        display: none;
+      }
+    }
+
+    @media (max-width: 800px) {
+      #pesquisa {
+        margin-top: 0px;
+        margin-left: 0%;
+        width: 60%;
+      }
+    }
+
+    /* === Estilo da Barra de Pesquisa === */
+    .search-box {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 400px;
+      margin: 10px 0 25px 0;
+      background: #fff;
+      border: 1px solid #a2a9b1;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+      transition: box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .search-box:focus-within {
+      border-color: #36c;
+      box-shadow: 0 0 0 3px rgba(66, 139, 202, 0.2);
+    }
+
+    .search-box img {
+      position: absolute;
+      left: 10px;
+      width: 20px;
+      opacity: 0.6;
+      pointer-events: none;
+    }
+
+    .search-box input {
+      flex: 1;
+      padding: 10px 35px;
+      border: none;
+      outline: none;
+      font-size: 14px;
+      background: transparent;
+      color: #202122;
+    }
+
+    .search-box input::placeholder {
+      color: #6c757d;
+    }
+
+    .search-box button {
+      position: absolute;
+      right: 8px;
+      background: none;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      color: #6c757d;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+    }
+
+    .search-box button:hover {
+      opacity: 1;
+    }
+
+    /* Ajuste responsivo */
+    @media (max-width: 800px) {
+      .search-box {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <script src="./JavaScript/script.js"></script>
+
+  <header>
+    <div>
+      <a href="./index.html" id="inicio" style="text-decoration: none; color: white;">
+        <img src="./Imgs/Logo.png" alt="SpeedWiki" id="logo">SpeedWiki
+      </a>
+    </div>
+  </header>
+
+  <nav class="breadcrumb">
+    <span>Pagina Principal</span> ›
+  </nav>
+
+  <main>
+    <section class="section">
+
+      <h1>Do que se trata a Speedwiki?</h1>
+      <p>
+        A <strong>SpeedWiki</strong> é uma plataforma criada para ajudar jogadores e entusiastas que desejam se aprofundar nas práticas
+        de <em>Speedrun</em>, oferecendo guias detalhados, estratégias otimizadas e rotas completas tanto para <em>Speedrun</em> quanto
+        para <em>categorias 100%</em>. Nosso foco é destacar e valorizar jogos menos conhecidos ou pouco explorados,
+        proporcionando um espaço onde a comunidade possa aprender, compartilhar conhecimento e aprimorar suas
+        habilidades.
+      </p>
+
+
+      <h2>O que é uma "Speedrun"?</h2>
+      <p>
+        Uma <strong>speedrun</strong> é o ato de completar um jogo de vídeo game o mais rápido possível,
+        normalmente sob condições específicas e categorias definidas pela comunidade.
+        Jogadores — conhecidos como <em>speedrunners</em> — treinam rotas, dominam mecânicas
+        e exploram falhas (<em>glitches</em>) para encurtar o tempo de conclusão.
+      </p>
+
+      <p>
+        Essa prática evoluiu de simples desafios pessoais para uma cultura global, com
+        eventos beneficentes como o <strong>Games Done Quick (GDQ)</strong>, onde jogadores do mundo
+        inteiro demonstram suas habilidades enquanto arrecadam fundos para causas sociais.
+      </p>
+
+      <h2>Categorias Comuns de Speedruns</h2>
+      <ul style="margin-left: 20px;">
+        <li><strong>Any%</strong> – Termine o jogo o mais rápido possível, sem a necessidade de completar tudo.</li>
+        <li><strong>100%</strong> – Complete o jogo totalmente, com todos os itens e objetivos.</li>
+        <li><strong>Glitchless</strong> – Não é permitido usar falhas ou exploits; apenas jogabilidade normal.</li>
+        <li><strong>Low%</strong> – Termine o jogo com o mínimo de recursos possível.</li>
+        <li><strong>TAS (Tool-Assisted Speedrun)</strong> – Criada com ferramentas e emuladores para precisão perfeita.
+        </li>
+      </ul>
+
+      <p>
+        O verdadeiro espírito de uma speedrun está na <em>dedicação</em>, <em>criatividade</em> e
+        <em>comunidade</em> que mantêm essa prática viva e empolgante!
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Explore Speedruns por Jogo</h2>
+
+      <container id="container">
+        <div id="pesquisa">
+          <div id="barra-pesquisa" class="search-box">
+            <img src="./Imgs/Lupa.webp" alt="Buscar" id="Lupa">
+            <input id="search-input" type="search" placeholder="Pesquise seus jogos aqui..."
+              aria-label="Pesquisar jogos">
+          </div>
+        </div>
+      </container>
+      <p>Escolha um jogo para conhecer suas rotas, categorias e estratégias:</p>
+
+      <div class="game-grid">
+        <a href="Wikis/Kirby Triple Deluxe.html" class="game-card">
+          <img src="./Imgs/CapaK.jpg" alt="Kirby Triple Deluxe">
+          <div>
+            <h3>Kirby Triple Deluxe</h3>
+
+          </div>
+        </a>
+
+        <a href="Wikis/Lego Batman 2.html" class="game-card">
+          <img src="./Imgs/CapaB.jpg" alt="Lego Batman 2">
+          <div>
+            <h3>Lego Batman 2</h3>
+
+          </div>
+        </a>
+
+        <a href="Wikis/Pokepark.html" class="game-card">
+          <img src="./Imgs/CapaP.webp" alt="PokéPark Wii">
+          <div>
+            <h3>PokéPark Wii</h3>
+
+          </div>
+        </a>
+
+        <a href="Wikis/Sonic Unleashed.html" class="game-card">
+          <img src="./Imgs/CapaS.webp" alt="Sonic Unleashed">
+          <div>
+            <h3>Sonic Unleashed</h3>
+
+          </div>
+        </a>
+
+        <a href="Wikis/The Stanley Parable Ultra Deluxe.html" class="game-card">
+          <img src="./Imgs/CapaT.avif" alt="">
+          <div>
+            <h3>The Stanley Parable <br> Ultra Deluxe</h3>
+
+          </div>
+        </a>
+
+        <a href="Wikis/Crash Mind Over Mutant.html" class="game-card">
+          <img src="./Imgs/CapaC.png" alt="">
+          <div>
+            <h3>Crash: Mind Over <br> Mutant</h3>
+
+          </div>
+        </a>
+
+        <a href="Wikis/Steven Universe Save The Light.html" class="game-card">
+          <img src="./Imgs/CapaSU.jpg" alt="">
+          <div>
+            <h3>Steven Universe: Save The Light</h3>
+
+          </div>
+        </a>
+
+        <a href="Wikis/Hyper Light Drifter.html" class="game-card">
+          <img src="./Imgs/CapaH.jpg" alt="">
+          <div>
+            <h3>Hyper Light <br> Drifter</h3>
+
+          </div>
+        </a>
+
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 – Guia de Speedrun & 100% | Criado por fãs para fãs</p>
+  </footer>
+
+  <aside class="side-index">
+    <h3>Índice</h3>
+    <ul>
+      <li><a href="./Wikis/Kirby Triple Deluxe.html">Kirby Triple Deluxe</a></li>
+      <li><a href="./Wikis/Lego Batman 2.html">Lego Batman 2</a></li>
+      <li><a href="./Wikis/Pokepark.html">PokéPark Wii</a></li>
+      <li><a href="./Wikis/Sonic Unleashed.html">Sonic Unleashed</a></li>
+      <li><a href="./Wikis/The Stanley Parable Ultra Deluxe.html">The Stanley Parable Ultra Deluxe</a></li>
+      <li><a href="./Wikis/Crash Mind Over Mutant.html">Crash: Mind Over Mutant</a></li>
+      <li><a href="./Wikis/Steven Universe Save The Light.html">Steven Universe: Save The Light</a></li>
+      <li><a href="./Wikis/Hyper Light Drifter.html">Hyper Light Drifter</a></li>
+    </ul>
+  </aside>
+
+</body>
+
+</html>
