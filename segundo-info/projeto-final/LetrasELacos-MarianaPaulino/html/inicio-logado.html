@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LETRAS E LAÇOS</title>
+
+  <!-- ====================== BOOTSTRAP ====================== -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ===================== FONT AWESOME ===================== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  
+  <!-- ====================== GOOGLE FONTS ====================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Italianno&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" />
+
+  <!-- ====================== CSS PERSONALIZADO ====================== -->
+  <link rel="stylesheet" href="/css/inicio-logado.css" />
+</head>
+<body>
+  <!-- ========== NAVBAR ========== -->
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #EDDCBB; box-shadow: 0 4px 16px rgba(156, 58, 59, 0.15);">
+      <div class="container-fluid position-relative">
+        <!-- Logo -->
+        <a class="navbar-brand" href="inicio.html" style="margin-left: 35px;">
+          <img src="/img/logo.png" alt="Logo do site" class="img-fluid logo" style="width: 4em;" />
+        </a>
+
+        <!-- Botão hamburguer -->
+        <button class="navbar-toggler" style="border-color: #9C3A3B;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav d-flex flex-lg-row flex-column align-items-center gap-5 text-center">
+            <li class="nav-item"><a class="nav-link inicio-logado" href="inicio-logado.html"><i class="fas fa-home"></i> Início</a></li>
+            <li class="nav-item"><a class="nav-link" href="biblioteca.html"><i class="fas fa-book"></i> Biblioteca</a></li>
+            <li class="nav-item"><a class="nav-link" href="comunidade.html"><i class="fas fa-users"></i> Comunidade</a></li>
+            <li class="nav-item"><a class="nav-link" href="reviews.html"><i class="fas fa-star"></i> Reviews</a></li>
+            <li class="nav-item"><a class="nav-link" href="missoes.html"><i class="fas fa-trophy"></i> Missões</a></li>
+
+            <!-- Mobile -->
+            <li class="nav-item d-lg-none mt-3">
+              <a class="btn perfil w-100" href="perfil.html"><i class="fas fa-user"></i> Perfil</a>
+            </li>
+            <li class="nav-item d-lg-none mt-2 mb-3">
+              <a class="btn sair w-100" href="inicio.html"><i class="fas fa-sign-out-alt"></i> Sair</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Desktop -->
+        <div class="d-none d-lg-flex align-items-center gap-2 position-absolute end-0 me-4">
+          <a class="btn perfil" href="perfil.html"><i class="fas fa-user"></i> Perfil</a>
+          <a class="btn sair" href="inicio.html"><i class="fas fa-sign-out-alt"></i> Sair</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ========== CONTEÚDO ========== -->
+  <div class="height" style="height: 55px;"></div>
+
+  <div class="container py-5 mt-5">
+    <h1 id="boasVindas" class="mb-4"></h1>
+    <div class="row g-4 align-items-start">
+
+      <!-- COLUNA ESQUERDA -->
+      <div class="col-12 col-lg-8">
+        <div class="card shadow-sm mb-4 p-4">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3 gap-3">
+              <i class="fa-solid fa-clock fa-3x mt-0" style="color: #9C3A3B;"></i>
+              <h2 class="subtitulo-cards mb-0 mt-1">Sua Atividade Recente</h2>
+            </div>
+            <div id="atividadeRecenteContainer" class="row g-2"></div>
+          </div>
+        </div>
+
+        <div class="card shadow-sm mb-4 p-4">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3 gap-3">
+              <i class="fas fa-lightbulb fa-3x mt-0 me-2" style="color: #305167;"></i>
+              <h2 id="tituloSugestoes" class="titulo-sugestoes"></h2>
+            </div>
+            <div class="row row-cols-2 row-cols-md-3 g-3" id="sugestoesLivrosContainer">
+              <div class="col">
+                <div class="card h-100 text-center">
+                  <img src="..." class="card-img-top" alt="Capa Livro 1" />
+                  <div class="card-body p-2">
+                    <small>Título do Livro</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COLUNA DIREITA -->
+      <div class="col-12 col-lg-4">
+        <div class="card text-center mb-4 p-4 shadow-sm">
+          <div class="card-body">
+            <img src="/img/M.png" alt="Foto Perfil" class="rounded-circle mb-3" style="width: 40%; object-fit: cover;" />
+            <h5 class="card-title fw-semibold" id="nomeUsuarioCard"></h5>
+            <a href="perfil.html" class="btn verPerfil mt-2">
+              <i class="fas fa-user-edit me-1"></i> Ver Perfil
+            </a>
+          </div>
+        </div>
+
+        <div class="card shadow-sm mb-4 p-4">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3 gap-1">
+              <i class="fa-solid fa-bolt fa-2x me-3" style="color: #305167;"></i>
+              <h2 class="card-title mb-0" style="font-size: 1.7rem;">Missão do Mês</h2>
+            </div>
+            <div id="progressoMissaoCircular" class="text-center my-3">
+              <p class="text-muted">Carregando progresso...</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card shadow-sm p-4">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3 gap-1">
+              <i class="fas fa-users mb-2 fa-2x me-3" style="color: #305167;"></i>
+              <h2 class="card-title" style="font-size: 1.6rem;">Atividade de Amigos</h2>
+            </div>
+            <ul class="list-unstyled mb-0">
+              <li class="d-flex align-items-center mb-2 gap-3">
+                <img src="/img/H.png" class="rounded-circle" style="width: 20%;" />
+                <span class="card-text">Henrique começou a ler 'Corte de Névoa'</span>
+              </li>
+              <li class="d-flex align-items-center gap-3">
+                <img src="/img/R.png" class="rounded-circle" style="width: 20%;" />
+                <span class="card-text">Rayssa avaliou 'Duna' com 5 estrelas</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h3 class="subtitulo-footer" id="contato">Letras & Laços</h3>
+          <p class="paragrafo-footer">Conectando leitores apaixonados por histórias. Descubra, compartilhe e celebre a leitura com uma comunidade vibrante.</p>
+        </div>
+        <div class="col-md-4">
+          <h3 class="subtitulo-footer">Contato</h3>
+          <ul class="list-unstyled" style="font-size: 1.2rem;">
+            <li>Email: contato@letraselacos.com.br</li>
+            <li><i class="fas fa-phone"></i> Telefone: (11) 1234-5678</li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h3 class="subtitulo-footer">Siga-nos</h3>
+          <a href="#"><i class="fab fa-facebook fa-3x"></i></a>
+          <a href="#"><i class="fab fa-twitter fa-3x"></i></a>
+          <a href="#"><i class="fab fa-instagram fa-3x"></i></a>
+        </div>
+      </div>
+      <div class="linha"></div>
+      <div class="text-center mt-3">
+        <p>&copy; 2025 Letras & Laços. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+    <!-- ========== SCRIPTS ========== -->
+  <script src="/js/cadastro.js"></script>
+  <script src="/js/missoes.js"></script>
+  <script src="/js/inicio-logado.js"></script>
+</body>
+</html>

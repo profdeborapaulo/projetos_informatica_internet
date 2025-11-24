@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LETRAS E LAÇOS</title>
+ 
+     <!-- ========== BOOTSTRAP ========== -->
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+    />
+    <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+    <!-- ========== FONT AWESOME ========== -->
+    <link 
+        rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" 
+    />
+
+    <!-- ========== FONTES GOOGLE ========== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Italianno&family=Lato:wght@300;400;700;900&display=swap" 
+        rel="stylesheet" 
+    />
+
+    <!-- ========== CSS PERSONALIZADO ========== -->
+    <link rel="stylesheet" href="/css/login.css" />
+</head>
+
+<body>
+   <!-- ====================== NAVBAR ====================== -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top" 
+            style="background-color: #EDDCBB; box-shadow: 0 4px 16px rgba(156, 58, 59, 0.15);">
+            <div class="container-fluid position-relative">
+
+              <!-- Logo -->
+                <a class="navbar-brand" href="inicio.html" style="margin-left: 35px;">
+                    <img src="/img/logo.png" alt="Logo do site" class="img-fluid logo" style="width: 4em;" />
+                </a>
+
+                <!-- Botão hamburguer -->
+                <button class="navbar-toggler" style="border-color: #9C3A3B;" type="button" 
+                    data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menu -->
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav d-flex flex-lg-row flex-column align-items-center gap-4 text-center">
+                        <li class="nav-item"><a class="nav-link" href="inicio.html"><i class="fas fa-home"></i> Início</a></li>
+                        <li class="nav-item"><a class="nav-link" href="inicio.html"><i class="fas fa-book"></i> Como Funciona?</a></li>
+                        <li class="nav-item"><a class="nav-link" href="inicio.html"><i class="fas fa-users"></i> Nossos Leitores</a></li>
+                        <li class="nav-item"><a class="nav-link" href="inicio.html"><i class="fa-solid fa-phone"></i> Contato</a></li>
+
+                       <!-- Mobile -->
+                        <li class="nav-item d-lg-none mt-3">
+                            <a class="btn entrar" href="login.html">Entrar</a>
+                        </li>
+                        <li class="nav-item d-lg-none mt-2 mb-3">
+                            <a class="btn cadastrar" href="cadastro.html">Cadastrar</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!--  Desktop -->
+                <div class="d-none d-lg-flex align-items-center gap-2 position-absolute end-0 me-4">
+                    <a class="btn entrar" href="login.html">Entrar</a>
+                    <a class="btn cadastrar" href="cadastro.html">Cadastrar</a>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <body>
+       <!-- ====================== CONTEÚDO ====================== -->
+        <section>
+            <div class="height" style="height: 55px;"> </div>
+            <div class="container py-5 pt-5 mt-5 h-100 login-card">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col col-xl-10">
+                        <div class="card" style=" background-color: #f9f4eb ;">
+                            <div class="row g-0">
+                                <div class="col-md-6 col-lg-5 d-none d-md-block">
+                                    <img src= "/img/login.png"
+                                        alt="login form" class="img-fluid" style=" height: 100%;" />
+                                </div>
+                                <div class="col-md-6 col-lg-7 d-flex align-items-center">
+                                    <div class="card-body p-4 p-lg-5 text-black">
+
+                                        <form id="formLogin">
+
+                                            <div class="d-flex align-items-center mb-3 pb-1 ">
+                                                <img src="/img/logo.png" style="width: 20%;">
+                                                <h1 class=" mb-0 titulo"> Entrar </h1>
+                                            </div>
+
+                                            <div class="form-outline mb-4 mt-5">
+                                                <label class="form-label" for="emailLogin">Email</label>
+                                                <div class="mb-3 icon-input">
+                                                    <i class="fa-solid fa-envelope"></i>
+                                                    <input type="email" id="emailLogin" class="form-control form-control-lg"  placeholder="seu@email.com" required />
+                                                </div>
+
+                                                <div class="form-outline mb-4 ">
+                                                    
+                                                    <label class="form-label mt-3" for="senhaLogin">Senha</label>
+                                                    <div class="mb-4 icon-input">
+                                                        <i class="fa-solid fa-lock"></i>
+                                                        <input type="password" id="senhaLogin" class="form-control form-control-lg"  placeholder="SuaSenha" required />
+                                                    </div>
+
+                                                    <div class="d-grid mt-4">
+                                                        <button class="btn btn-custom btn-lg" id="btnLogin" type="submit">Entrar</button>
+                                                    </div>
+
+                                                    <p class="mb-5 mt-5 pb-lg-2 text-center" >
+                                                        Não tem uma conta? <a href="cadastro.html" style="color: #9C3A3B;">Cadastre-se</a>
+                                                    </p>
+
+                                                </form>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ====================== FOOTER ====================== -->
+                <footer>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h3 class="subtitulo-footer">Letras & Laços</h3>
+                                <p class="paragrafo-footer">Conectando leitores apaixonados por histórias. Descubra, compartilhe e celebre a leitura com uma comunidade vibrante.</p>
+                            </div>
+                            <div class="col-md-4">
+                                <h3 class="subtitulo-footer">Contato</h3>
+                                <ul class="list-unstyled" style="font-size: 1.2rem;">
+                                    <li>Email: contato@letraselacos.com.br</li>
+                                    <li><i class="fas fa-phone"></i> Telefone: (11) 1234-5678</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <h3 class="subtitulo-footer">Siga-nos</h3>
+                                <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                                <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+                                <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                            </div>
+                        </div>
+                        <div class="linha"></div>
+                        <div class="text-center mt-3">
+                            <p>&copy; 2025 Letras & Laços. Todos os direitos reservados.</p>
+                        </div>
+                    </div>
+                </footer>
+
+                <!-- ========== SCRIPTS ========== -->
+                <script src="/js/cadastro.js"></script>
+            </body>
+        </html>
