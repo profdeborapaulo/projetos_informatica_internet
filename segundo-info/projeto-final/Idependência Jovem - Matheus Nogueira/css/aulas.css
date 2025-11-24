@@ -1,0 +1,378 @@
+.aula-section {
+  color: white;
+  padding: 60px 20px;
+  max-width: 950px;
+  margin: 0; /* alinhar conteúdo à esquerda dentro do layout */
+}
+
+/* Quando a seção também usa a classe .container, sobrescrever o container centralizador
+   para que a área da aula use largura total (mas com padding) e mantenha o sidebar à direita. */
+.aula-section.container {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding-left: 24px;
+  padding-right: 24px;
+  box-sizing: border-box;
+}
+
+.aula-section h1 {
+  color: #FACC15;
+  font-size: 2.3em;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.descricao {
+  text-align: left;
+  color: #d4d4d4;
+  margin-bottom: 35px;
+  font-size: 1.05em;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  background: #000;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  margin-bottom: 35px;
+}
+
+.video-container iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border: none;
+}
+
+.acoes-video {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: #1E1E22;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 45px;
+  gap: 10px;
+}
+
+.btn-principal {
+  background-color: #1E3A8A;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-principal:hover {
+  background-color: #3B82F6;
+}
+
+.btn-secundario {
+  background: none;
+  border: 1px solid #3B82F6;
+  color: #3B82F6;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-secundario:hover {
+  background: #3B82F6;
+  color: white;
+}
+
+.info-video {
+  color: #aaa;
+  font-size: 0.9em;
+}
+
+.texto-apoio {
+  background: #202124;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+  line-height: 1.7;
+  margin-bottom: 50px;
+}
+
+.texto-apoio h2 {
+  color: #3B82F6;
+  margin-bottom: 20px;
+  font-size: 1.4em;
+}
+
+.texto-apoio h3 {
+  color: #FACC15;
+  margin-top: 25px;
+  margin-bottom: 12px;
+}
+
+.texto-apoio ul {
+  list-style: none;
+  padding: 0;
+}
+
+.texto-apoio li {
+  margin-bottom: 8px;
+  color: #ddd;
+  display: flex;
+  align-items: center;
+}
+
+.texto-apoio li i {
+  color: #3B82F6;
+  margin-right: 8px;
+}
+
+.bloco-destaque {
+  background: #1E3A8A;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  font-style: italic;
+}
+
+.recursos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.recurso-card {
+  background: #1E1E22;
+  border: 1px solid #3B82F6;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: 0.3s;
+}
+
+.recurso-card i {
+  color: #FACC15;
+  font-size: 1.4em;
+}
+
+.recurso-card:hover {
+  background: #2a2b32;
+}
+
+.navegacao-aula {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.navegacao-aula .cta-button {
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.navegacao-aula .voltar {
+  background: none;
+  border: 1px solid #3B82F6;
+  color: #3B82F6;
+}
+
+.navegacao-aula .voltar:hover {
+  background: #3B82F6;
+  color: white;
+}
+
+.navegacao-aula .proxima {
+  background: #FACC15;
+  color: #000;
+}
+
+.navegacao-aula .proxima:hover {
+  background: #FFE46E;
+}
+
+/* Layout da página de aula com sumário lateral */
+.module-layout {
+  display: flex; /* usar flex torna o layout mais previsível */
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 30px;
+  width: 100%;
+}
+
+.sidebar {
+  background: #17181b;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+  position: relative;
+  width: 300px;
+  flex: 0 0 300px;
+}
+
+/* Conteúdo principal dentro da coluna esquerda */
+.aula-conteudo {
+  padding-right: 10px;
+  flex: 1 1 auto;
+  min-width: 0; /* evita overflow que força quebra de linha */
+}
+
+.aula-conteudo h1 {
+  text-align: left;
+}
+
+.aula-conteudo .descricao {
+  text-align: left;
+}
+
+.module-layout > * {
+  min-width: 0;
+}
+
+/* Barra de progresso (compatível com marcação usada nas aulas) */
+.barra-progresso {
+  background: #3b3b3b;
+  border-radius: 20px;
+  height: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.barra-progresso .progresso {
+  height: 100%;
+  background: #3B82F6;
+  width: 0%; /* ajuste via inline style ou JS para refletir progresso */
+  transition: width 0.3s ease;
+}
+
+.sidebar h2 {
+  color: #FACC15;
+  font-size: 1.1em;
+  margin-bottom: 12px;
+}
+
+.lesson-navigation {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.lesson-navigation li a {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: #d4d4d4;
+  text-decoration: none;
+  transition: background 0.18s, color 0.18s;
+}
+
+.lesson-navigation li a:hover {
+  background: #232429;
+  color: #fff;
+}
+
+.lesson-navigation li a.active {
+  background: #1E3A8A;
+  color: #fff;
+  font-weight: 700;
+}
+
+/* ---------- Regras responsivas para páginas de aula ---------- */
+@media (max-width: 900px) {
+  .container {
+    width: 95%;
+    padding: 0 10px;
+  }
+
+  /* Empilha sidebar e conteúdo principal */
+  .module-layout {
+    flex-direction: column;
+    gap: 20px;
+    align-items: stretch;
+  }
+
+  /* No mobile, esconder a sidebar para focar no conteúdo principal */
+  .sidebar {
+    display: none;
+  }
+
+  .aula-conteudo {
+    padding-right: 0;
+    width: 100%;
+  }
+
+  /* Vídeo já é responsivo pela técnica de padding-bottom, manter comportamento */
+  .video-container {
+    margin-bottom: 24px;
+    border-radius: 10px;
+  }
+
+  /* Ações do vídeo: botões empilhados em telas menores */
+  .acoes-video {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .acoes-video .btn-principal,
+  .acoes-video .btn-secundario {
+    width: 100%;
+  }
+
+  /* Recursos e conteúdo de apoio em uma coluna quando necessário */
+  .recursos {
+    grid-template-columns: 1fr;
+  }
+
+  .navegacao-aula {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navegacao-aula .cta-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 40px 12px;
+  }
+
+  .aula-section h1 {
+    font-size: 1.6em;
+  }
+
+  .descricao {
+    font-size: 0.98em;
+  }
+
+  .sidebar h2 {
+    font-size: 1rem;
+  }
+
+  .lesson-navigation li a {
+    padding: 9px 10px;
+    font-size: 0.95em;
+  }
+}
+

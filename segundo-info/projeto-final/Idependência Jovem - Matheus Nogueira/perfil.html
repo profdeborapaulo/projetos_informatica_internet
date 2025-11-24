@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil | Independência Jovem</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/perfil.css">
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <div class="logo"><a href="/index.html">Independência Jovem</a></div>
+      <ul class="nav-links">
+        <li><a href="/index.html">Início</a></li>
+        <li><a href="#cursos">Cursos</a></li>
+        <li><a href="/perfil.html" class="active">Perfil</a></li>
+        <li><a href="/contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="perfil-section container">
+      <div class="perfil-info">
+        <div class="avatar-wrap">
+          <img id="profileAvatar" src="/img/avatar.png" alt="Foto do usuário">
+          <div class="avatar-controls">
+            <input type="file" id="profileImageInput" accept="image/*">
+            <label for="profileImageInput" class="avatar-btn">Escolher foto</label>
+            <button id="clearProfileImage" type="button" class="avatar-clear">Remover foto</button>
+          </div>
+        </div>
+        <div class="perfil-details">
+          <h1 id="profileName">Matheus Nogueira</h1>
+          <p id="profileEmailP"><strong>E-mail:</strong> <span id="profileEmail">matheus.nogueira@etec.sp.gov.br</span></p>
+          <p id="profileCourseP"><strong>Curso Técnico:</strong> <span id="profileCourse">Informática para Internet</span></p>
+          <p><strong>Progresso geral:</strong> <span id="profileProgress">75%</span></p>
+          <div class="profile-actions">
+            <button id="editProfileBtn" class="edit-profile-btn">Editar perfil</button>
+          </div>
+        </div>
+      </div>
+
+      <h2 id="cursos">Seus Cursos</h2>
+      <br>
+      <div class="curso-grid">
+        <div class="curso-card" data-curso="vida-domestica">
+          <h3>Vida Doméstica</h3>
+          <p>Cuide da casa e aprenda pequenos reparos com segurança.</p>
+          <div class="progress-bar"><div style="width: 0%"></div></div>
+          <p class="progresso">0% concluído</p>
+        </div>
+
+        <div class="curso-card" data-curso="financas">
+          <h3>Finanças Pessoais</h3>
+          <p>Aprenda a controlar gastos e planejar seu dinheiro.</p>
+          <div class="progress-bar"><div style="width: 0%"></div></div>
+          <p class="progresso">0% concluído</p>
+        </div>
+
+        <div class="curso-card" data-curso="culinaria">
+          <h3>Culinária Prática</h3>
+          <p>Receitas simples e rápidas para o dia a dia.</p>
+          <div class="progress-bar"><div style="width: 0%"></div></div>
+          <p class="progresso">0% concluído</p>
+        </div>
+
+        <div class="curso-card" data-curso="saude-mental">
+          <h3>Saúde Mental</h3>
+          <p>Equilibre suas emoções e melhore seu bem-estar.</p>
+          <div class="progress-bar"><div style="width: 0%"></div></div>
+          <p class="progresso">0% concluído</p>
+        </div>
+
+        <div class="curso-card" data-curso="manutencao">
+          <h3>Manutenção de Automóveis</h3>
+          <p>Aprenda cuidados básicos com o seu carro.</p>
+          <div class="progress-bar"><div style="width: 0%"></div></div>
+          <p class="progresso">0% concluído</p>
+        </div>
+
+        <div class="curso-card" data-curso="etiqueta">
+          <h3>Etiqueta Profissional</h3>
+          <p>Melhore sua postura e comunicação no trabalho.</p>
+          <div class="progress-bar"><div style="width: 0%"></div></div>
+          <p class="progresso">0% concluído</p>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Modal de edição do perfil -->
+    <div id="profileModal" class="modal" style="display:none;">
+      <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <h3 id="modalTitle">Editar perfil</h3>
+        <div class="modal-body">
+          <label class="modal-label">Nome
+            <input id="modalName" type="text" class="modal-input" />
+          </label>
+          <label class="modal-label">E-mail
+            <input id="modalEmail" type="email" class="modal-input" />
+          </label>
+          <label class="modal-label">Curso
+            <input id="modalCourse" type="text" class="modal-input" />
+          </label>
+        </div>
+        <div class="modal-actions">
+          <button id="modalSaveProfile" class="avatar-btn">Salvar</button>
+          <button id="modalCancelProfile" class="avatar-clear">Cancelar</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Aulas Salvas pelo usuário -->
+    <section class="perfil-section container">
+      <h2>Aulas Salvas</h2>
+      <div class="saved-section">
+        <div id="savedLessonsContainer" class="saved-list">
+          <p class="empty">Você não salvou nenhuma aula ainda.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+   <p>&copy; 2025 Matheus Nogueira Alves | <a href="/contato.html">Contato</a></p>
+  </footer>
+  <script src="/js/script.js"></script>
+</body>
+</html>
+

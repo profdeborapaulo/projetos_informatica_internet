@@ -1,0 +1,110 @@
+.hero-section {
+  background: #231F20;
+  text-align: center;
+  padding: 90px 20px;
+}
+
+.hero-section h1 {
+  color: #FACC15;
+  font-size: 2.5em;
+  margin: 10px 0;
+}
+
+.hero-section p {
+  max-width: 600px;
+  margin: 15px auto 30px;
+  color: #cecece;
+}
+
+.cta-button {
+  background-color: #1E3A8A;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  display: inline-block;
+}
+.cta-button:hover {
+  background-color: #3B82F6;
+}
+
+/* -------- Aulas / Cards -------- */
+.content-section {
+  padding: 60px 8%;
+}
+
+.content-section h2 {
+  color: #FACC15;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 1.8em;
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+ .card {
+  background: #231F20;
+  border-left: 5px solid #3B82F6;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 25px;
+  width: 100%;
+  text-align: left;
+  transition: all 0.2s ease;
+ }
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.4);
+}
+
+.card h3 {
+  color: #FACC15;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #eaeaea;
+  font-size: 0.95em;
+  margin-bottom: 15px;
+}
+
+.card .cta-button {
+  align-self: flex-start;
+  background-color: #1E3A8A;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.card .cta-button:hover {
+  background-color: #3B82F6;
+  transform: scale(1.05);
+}
+
+/* -------- Footer -------- */
+footer {
+  background-color: #1E3A8A;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 60px;
+}
+
+footer a {
+  color: #FACC15;
+}
+footer a:hover {
+  color: #3B82F6;
+}
