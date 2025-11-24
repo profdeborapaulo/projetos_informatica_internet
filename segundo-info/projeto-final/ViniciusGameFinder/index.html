@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Game Finder - Where Can I Buy It</title>
+  </head>
+  <body>
+    <div class="container-principal">
+     <header>
+    <img src="IMG/game_finder_pc_logo.png" alt="Game Finder PC Logo" class="site-logo"> 
+    
+    <div class="header-info">
+      <span>
+        <a href="https://github.com/Vinisetim " target="_blank" rel="noopener noreferrer"
+          >Made by: @vinisetim<img src="IMG/github-logo.png" alt="" /></a
+      ></span>
+    </div>
+</header>
+
+     <section class="banner">
+        <span class="banner-title">JOGO EM DESTAQUE</span>
+        
+        <div class="featured-game-frame" id="silksong-banner-search"> 
+            <img src="IMG/banner.jpeg" alt="Hollow Knight: Silksong" />
+        </div>
+    </section>
+      <main class="conteudo-principal">
+        <section class="game-finder-area">
+          <h2>Where Can I Buy IT?</h2>
+          <p>
+            Pesquise qual a melhor loja para comprar ou baixar um jogo desejado.
+            Descubra os preços, descontos e idiomas do jogo em um só clique.
+          </p>
+
+          <div class="search-container">
+            <input
+              type="text"
+              id="game-search-input"
+              placeholder="Search for a Game"
+            />
+            <button id="search-button">Where Can I Buy IT ▶</button>
+          </div>
+
+          <div id="game-results-display"></div>
+        </section>
+
+        <aside class="barra-lateral-top-jogos">
+          <h2>HISTÓRICO</h2>
+          <div class="conteudo-top-jogos">
+            <div class="top-jogos">
+              <ul id="search-history-list">
+                <li style="color: #6b7280; font-style: italic;">Nenhum jogo pesquisado.</li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+      </main>
+    </div>
+    <script src="script.js" defer></script>
+  </body>
+</html>
