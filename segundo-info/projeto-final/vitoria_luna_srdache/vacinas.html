@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SRD - Cuidados com seu melhor amigo</title>
+  <link rel="stylesheet" href="css/forms.css">
+<link rel="stylesheet" href="css/geral.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <nav class="nav">
+        <div class="logo">
+          <img src="img/logo.svg" alt="Logo da empresa">
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+        <li><a href="adote.html">Adote</a></li>
+        <li><a href="feira.html">Feiras e Lares</a></li>
+        <li><a href="vacinas.html">Cuidados </a></li>
+        <li><a href="agendamento.html">Agendamentos</a></li>
+        <li><a href="forms.html">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="comeco">
+      <h1>CUIDADOS PARA MANTER SEU CACHORRO SAUDÁVEL</h1>
+      <p>Vacinas, castração e muito amor: o trio essencial para o bem-estar do seu melhor amigo 🐾</p>
+    </section>
+
+    <section class="cards">
+      <div class="card_1">
+        <h1>Vacinas</h1>
+        <p>As vacinas são fundamentais para proteger seu cão contra doenças graves como cinomose, parvovirose e raiva. Além de garantir a saúde do animal, a vacinação previne surtos e mantém toda a comunidade mais segura. Verifique sempre o calendário com um veterinário!</p>
+        <button onclick="window.location.href='feira.html'">Procure locais próximos</button>
+      </div>
+
+      <div class="card_2">
+        <h1>Castração</h1>
+        <p>A castração é um ato de cuidado e responsabilidade. Ela ajuda a evitar doenças, reduz comportamentos agressivos e previne ninhadas indesejadas. Além disso, cães castrados vivem mais e melhor. Procure clínicas de confiança e informe-se sobre campanhas gratuitas.</p>
+       <button onclick="window.location.href='feira.html'">Ver campanhas de castração</button>
+
+      </div>
+
+      <div class="card_3">
+        <h1>Cuidados Extras</h1>
+        <p>Manter o bem-estar do seu cão vai além da alimentação e vacinas. Banhos regulares, visitas ao veterinário, brincadeiras diárias e muito carinho fazem toda diferença. A saúde mental e o amor são parte essencial da vida do seu melhor amigo!</p>
+      </div>
+    </section>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-info">
+        <h3>Contato</h3>
+        <p><strong>Email:</strong> contato@srdache.com.br</p>
+        <p><strong>WhatsApp:</strong> (11) 94765-3045</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Links Úteis</h3>
+        <ul>
+          <li><a href="adote.html">Adote</a></li>
+          <li><a href="feira.html">Feiras e Lares</a></li>
+          <li><a href="vacinas.html">Cuidados</a></li>
+          <li><a href="agendamento.html">Agendamentos</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-rights">
+        <p>&copy; 2025 SRDache — Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+  const currentLocation = window.location.href;
+  const menuItems = document.querySelectorAll('.nav-links a');
+
+  menuItems.forEach(item => {
+    if (item.href === currentLocation) {
+      item.classList.add('active');
+    }
+  });
+</script>
+<script src="js/session.js"></script> 
+  
+  <script src="js/script.js"></script>
+</body>
+</html>

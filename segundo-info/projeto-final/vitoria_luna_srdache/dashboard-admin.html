@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Admin - SRDache</title>
+    
+    <link rel="stylesheet" href="css/geral.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+
+    <style>x
+        /* Estilos do Dashboard */
+        body { background-color: #f4f7f6; } /* Fundo levemente cinza */
+
+        .dashboard-container {
+            padding: 40px 10%;
+            min-height: 80vh;
+        }
+
+        .dashboard-header {
+            margin-bottom: 30px;
+            border-bottom: 3px solid #BF8847;
+            padding-bottom: 15px;
+        }
+
+        .dashboard-header h1 {
+            color: #2F2519; /* Cor principal */
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+        }
+
+        .dashboard-header p {
+            color: #5C5243;
+            font-size: 1.1em;
+        }
+
+        /* Layout em Grid para Cards e Gráficos */
+        .stats-grid, .charts-grid {
+            display: grid;
+            gap: 20px;
+            margin-bottom: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+
+        /* Card de Estatísticas */
+        .stat-card {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .stat-card h3 {
+            font-size: 1.2rem;
+            color: #999;
+            margin-bottom: 5px;
+        }
+
+        .stat-card .value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #BF8847;
+        }
+
+        .stat-card .trend {
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+
+        .trend.positive { color: #28a745; }
+        .trend.negative { color: #dc3545; }
+
+        /* Estilo dos Gráficos */
+       /* Estilo dos Gráficos */
+/* Estilo dos Gráficos */
+.chart-container {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    grid-column: span 2; /* Ocupa 2 colunas para ser maior */
+    
+    /* 🎨 CORREÇÃO: Define uma altura fixa para o contêiner do gráfico */
+    height: 400px; 
+    max-height: 400px;
+    position: relative; /* Importante para o Canvas se ajustar corretamente */
+}
+/* Opcional: Garante que o canvas ocupe o espaço */
+.chart-container canvas {
+    max-width: 100%;
+    height: 100%;
+}
+
+
+        /* Botões de Ação */
+        .admin-actions {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+        }
+
+        .admin-actions button {
+            background-color: #8A2BE2; /* Roxo para ações admin */
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .admin-actions button:hover {
+            background-color: #6A1BAE;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+           <nav class="nav">
+    <div class="logo"><img src="img/logo.svg" alt="Logo da empresa"></div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="adote.html">Adote</a></li>
+        <li><a href="feira.html">Feiras e Lares</a></li>
+        <li><a href="vacinas.html">Cuidados </a></li>
+        <li><a href="agendamento.html">Agendamentos</a></li>
+        <li><a href="forms.html">Contato</a></li>
+        </ul>
+</nav>
+        </header>
+
+        <main class="dashboard-container">
+            <div class="dashboard-header">
+                <h1>Painel de Controle </h1>
+                <p>Visão geral e gestão da plataforma SRDache.</p>
+            </div>
+
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <h3>Adoções (Mês Atual)</h3>
+                    <div class="value" id="adocoes-mes">14</div>
+                    <p class="trend positive">+16% vs. Mês Anterior</p>
+                </div>
+                
+                <div class="stat-card">
+                    <h3>Agendamentos (Total)</h3>
+                    <div class="value" id="agendamentos-total">71</div>
+                    <p class="trend">Estável</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Pets Cadastrados</h3>
+                    <div class="value" id="pets-cadastrados">19</div>
+                    <p class="trend positive">+5 novos</p>
+                </div>
+            </section>
+
+            <section class="charts-grid">
+                <div class="chart-container">
+                    <h2>Comparação de Adoções</h2>
+                    <canvas id="adoptionChart" height="150"></canvas>
+                </div>
+            </section>
+
+           
+        </main>
+
+        <footer>
+    <div class="footer-container">
+      <div class="footer-info">
+        <h3>Contato</h3>
+        <p><strong>Email:</strong> contato@srdache.com.br</p>
+       <p><strong>WhatsApp:</strong> (11) 94765-3045</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Links Úteis</h3>
+        <ul>
+          <li><a href="adote.html">Adote</a></li>
+          <li><a href="feira.html">Feiras e Lares</a></li>
+          <li><a href="vacinas.html">Cuidados</a></li>
+          <li><a href="agendamento.html">Agendamentos</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-rights">
+        <p>&copy; 2025 SRDache — Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+    </div>
+
+    <script src="js/session.js"></script>
+    <script>
+        // Lógica de Inicialização do Gráfico Chart.js
+        document.addEventListener('DOMContentLoaded', function() {
+            // Verifica se o usuário é Admin (boa prática, embora o session.js já proteja)
+            const session = getSession();
+            if (!session || !session.isAdmin) {
+                // Se, por algum erro, não for admin, redireciona.
+                window.location.href = 'login-admin.html';
+                return;
+            }
+
+            const ctx = document.getElementById('adoptionChart').getContext('2d');
+            const adoptionChart = new Chart(ctx, {
+                type: 'bar', // Tipo de gráfico: barras
+                data: {
+                    labels: ['Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov'],
+                    datasets: [{
+                        label: 'Adoções Concluídas',
+                        data: [2, 6, 7, 5, 9, 11, 15, 12, 14, 12, 12, 15], // Dados simulados
+                        backgroundColor: '#BF8847', // Cor principal do SRDache
+                        borderColor: '#A6713A',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        title: {
+                            display: true,
+                            text: 'Adoções Concluídas por Mês (2025)'
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
