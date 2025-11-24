@@ -1,0 +1,288 @@
+.perfil-section {
+  color: white;
+  padding: 60px 20px;
+}
+
+.perfil-info {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  background: #202124;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
+.perfil-info img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 3px solid #FACC15;
+}
+
+/* Avatar controls */
+.avatar-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar-controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* esconder input nativo e usar label estilizado */
+.avatar-controls input[type="file"] {
+  display: none;
+}
+
+.avatar-btn {
+  display: inline-block;
+  background: transparent;
+  color: #FACC15;
+  border: 1px solid #FACC15;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.12s ease, color 0.12s ease, transform 0.08s ease;
+}
+.avatar-btn:hover {
+  background: rgba(250,204,21,0.12);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.avatar-clear {
+  display: inline-block;
+  background: transparent;
+  border: 1px solid #F87171;
+  color: #F87171;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.avatar-clear:hover {
+  background: rgba(248,113,113,0.08);
+  color: #fff;
+}
+
+/* Ajustes no avatar para melhor visual */
+#profileAvatar {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #FACC15;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+}
+
+/* Detalhes do perfil */
+.perfil-details {
+  flex: 1;
+}
+
+/* Botão de editar perfil (sutil) */
+.edit-profile-btn {
+  background: transparent;
+  color: #FACC15;
+  border: 1px solid rgba(250,204,21,0.08);
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.edit-profile-btn:hover { background: rgba(250,204,21,0.06); }
+
+/* Modal (pop-up) */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.5);
+  z-index: 9998;
+}
+.modal-content {
+  background: #141414;
+  border-radius: 12px;
+  padding: 20px;
+  width: 92%;
+  max-width: 480px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  border: 1px solid rgba(255,255,255,0.04);
+}
+.modal-content h3 {
+  color: #FACC15; /* título do modal em amarelo */
+  margin: 0 0 8px 0;
+}
+.modal-body { display: flex; flex-direction: column; gap: 12px; margin-top: 8px; }
+.modal-label { color: #e0e0e0; font-size: 0.95rem; display: flex; flex-direction: column; gap:6px; }
+.modal-input {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.04);
+  padding: 8px 10px;
+  border-radius: 6px;
+  color: #e0e0e0;
+}
+.modal-input:focus { outline: none; box-shadow: 0 8px 24px rgba(59,130,246,0.08); border-color: rgba(59,130,246,0.6); }
+.modal-actions { display:flex; gap:10px; justify-content:flex-end; margin-top:14px; }
+
+.perfil-info h1 {
+  color: #FACC15;
+  margin-bottom: 5px;
+}
+
+.perfil-info p {
+  color: #e0e0e0;
+  margin-bottom: 4px;
+}
+
+.curso-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.curso-card {
+  background: #231F20;
+  padding: 25px;
+  border-radius: 10px;
+  border-left: 5px solid #3B82F6;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.curso-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+.curso-card h3 {
+  color: #FACC15;
+  margin-bottom: 10px;
+}
+
+.curso-card p {
+  color: #ccc;
+  font-size: 0.9em;
+  margin-bottom: 18px; /* Aumenta o espaçamento entre sinopse e barra */
+  line-height: 1.4;
+}
+
+/* Responsividade para área de perfil */
+@media (max-width: 800px) {
+  .perfil-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 14px;
+  }
+
+  .perfil-details {
+    width: 100%;
+  }
+
+  .avatar-wrap {
+    align-items: center;
+  }
+
+  .curso-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content { padding: 14px; }
+  .modal-input { padding: 8px; }
+}
+
+.progress-bar {
+  background: #3b3b3b;
+  border-radius: 20px;
+  height: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.progress-bar div {
+  height: 100%;
+  background: #3B82F6;
+}
+
+.progresso {
+  color: #ccc;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+/* Seção de Aulas Salvas */
+.saved-section {
+  margin-top: 30px;
+}
+
+.saved-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+}
+
+.saved-item {
+  background: #1F1B23;
+  padding: 14px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.saved-item {
+  background: #231F20; /* mesmo fundo dos curso-card */
+  padding: 20px; /* igualar espaçamento */
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  border-left: 5px solid #3B82F6; /* mesma borda dos cards */
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.saved-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+}
+
+.saved-item a {
+  color: #FACC15; /* destaque como o título dos cards */
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.05em;
+  display: block;
+}
+
+.saved-item button.remove-saved {
+  background: transparent;
+  border: 1px solid #F87171;
+  color: #F87171;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.saved-item p.meta {
+  color: #aaa;
+  font-size: 0.85em;
+  margin: 0;
+}

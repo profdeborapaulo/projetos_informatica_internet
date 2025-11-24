@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #292829;
+  color: #374151;
+  line-height: 1.6;
+}
+
+a {
+  color: #3B82F6;
+  text-decoration: none;
+  transition: 0.3s;
+}
+a:hover {
+  color: #FACC15;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #161954;
+  padding: 15px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+/* tornar o header referência para posicionamento do dropdown */
+header { position: relative; }
+
+nav.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo a {
+  color: #FACC15;
+  font-size: 1.6em;
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #FACC15;
+}
+
+.hero-section {
+  background: #231F20;
+  text-align: center;
+  padding: 90px 20px;
+}
+
+.hero-section h1 {
+  color: #FACC15;
+  font-size: 2.5em;
+  margin: 10px 0;
+}
+
+.hero-section p {
+  max-width: 600px;
+  margin: 15px auto 30px;
+  color: #cecece;
+}
+
+.cta-button {
+  background-color: #1E3A8A;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  display: inline-block;
+}
+.cta-button:hover {
+  background-color: #3B82F6;
+}
+
+/* -------- Seções de Conteúdo -------- */
+.content-section {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.content-section h2 {
+  color: #FACC15;
+  font-size: 1.8em;
+  margin-bottom: 30px;
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+ .card {
+  background: #231F20;
+  border-left: 5px solid #3B82F6;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 25px;
+  width: 100%;
+  text-align: left;
+  transition: all 0.2s ease;
+ }
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Cards de aula concluída */
+.aula-card.completed {
+  border-left-color: #10B981;
+}
+
+.aula-card.completed h3 {
+  color: #10B981;
+}
+
+.aula-card.completed .cta-button {
+  background-color: #10B981;
+}
+
+.card h3 {
+  color: #FACC15;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #ffffff;
+  font-size: 0.95em;
+}
+
+/* -------- Rodapé -------- */
+footer {
+  background-color: #1E3A8A;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 50px;
+}
+footer a {
+  color: #FACC15;
+}
+footer a:hover {
+  color: #3B82F6;
+}
+
+/* ---------- Global responsive rules ---------- */
+@media (max-width: 900px) {
+  nav.container {
+    /* manter logo e hamburger em linha horizontal */
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px;
+    /* não posicionar o nav - usamos o header como referência para o dropdown */
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 8px;
+    display: none; /* escondido por padrão em mobile, será aberto pelo botão */
+  position: absolute; /* dropdown full-width, referenciado ao header */
+  left: 0;
+  top: 100%; /* começa exatamente no final (parte mais baixa) do header */
+  transform: none;
+  width: 100vw; /* ocupa toda a largura da tela */
+    background: #161954;
+    padding: 8px 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+    z-index: 999;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 10px 12px;
+    background: transparent;
+    border-radius: 8px;
+    width: 100%;
+  }
+
+  /* botão hamburger visível em telas menores */
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.08);
+    color: #fff;
+    padding: 8px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: auto; /* empurra o botão para a direita */
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .hero-section {
+    padding: 60px 12px;
+  }
+
+  .card-grid {
+    gap: 18px;
+  }
+
+  .cta-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 96%;
+    padding: 0 10px;
+  }
+
+  .hero-section {
+    padding: 36px 10px;
+  }
+
+  .hero-section h1 {
+    font-size: 1.6em;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  /* Make footer and small text more compact */
+  footer {
+    padding: 16px 8px;
+  }
+}
+
+/* Esconder o botão hamburger em telas grandes */
+@media (min-width: 901px) {
+  .nav-toggle { display: none; }
+}
