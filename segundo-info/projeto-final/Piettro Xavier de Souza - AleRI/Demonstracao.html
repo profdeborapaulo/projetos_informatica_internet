@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AleRi - Demonstração</title>
+    <link rel="icon" type="image/png" href="img/logoPNG.png"/>
+    <link rel="stylesheet" href="StyleRegioes.css">
+    
+</head>
+<body>
+
+  <br>
+
+  <a href="#" id="copiarID0601">ID: 0601</a>
+
+<script>
+  (function() {
+    const id = "0601";
+    const link = document.getElementById("copiarID0601");
+
+    // Função de fallback caso o clipboard não funcione
+    const copyFallback = function(text) {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.left = '-9999px';
+      document.body.appendChild(ta);
+      ta.select();
+      try {
+        document.execCommand('copy');
+        alert('ID copiado: ' + text); // mantém apenas o alert de cópia
+      } catch(e) {
+        alert('Copie manualmente: ' + text);
+      }
+      document.body.removeChild(ta);
+    };
+
+    // Função de copiar
+    const copiarID = function() {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(String(id))
+          .then(function() {
+            alert('ID copiado: ' + id); // mantém apenas o alert de cópia
+          })
+          .catch(function() {
+            copyFallback(String(id));
+          });
+      } else {
+        copyFallback(String(id));
+      }
+      return false;
+    };
+
+    // Adiciona onclick ao link
+    link.onclick = copiarID;
+
+    // Adiciona data-id
+    link.setAttribute("data-id", id);
+
+    // Salva no localStorage sem alert
+    localStorage.setItem(id, "ID armazenado: " + id);
+
+  })();
+</script>
+
+    <br>
+    <br>
+    <br>
+
+    <a href="index.html">Voltar ao Início</a> <!-- Botão para retorno à tela de Login -->
+
+    <br>
+    <br>
+
+    <img src="img/mapa.jpg"> <!-- Imagem de Mapa da Região, em cores -->
+
+    <div id="regioes"><div id="laranja-1762731727654" class="container laranja">
+
+
+<div class="card">
+  <div class="first-content"> <!-- Parte frontal do card; que fica sempre a mostra -->
+    <span>
+    <h1 class="nomeregiao"><a class="textolaranja">Noroeste</a></h1>
+    <h1><a class="textolaranja" >ESTADO: NORMAL</a></h1>
+    </span>
+  </div>
+  <div class="second-content"> <!-- Parte do card exibidsa com hover, mostra opções para alterar estado de cada região -->
+<span class="grid">
+<h3 onclick="seca('laranja-1762731727654')"><a class="textolaranja">Seca</a></h3> <!-- Determina região em seca -->
+<h3 onclick="normal('laranja-1762731727654')"><a  class="textolaranja">Normal</a></h3> <!-- Determina região em estado normal -->
+<h3 onclick="cheia('laranja-1762731727654')"><a class="textolaranja">Cheia</a></h3> <!-- Determina região em cheia -->
+</span>
+  </div>
+  <div class="second-content">
+  <span class="grid">
+
+</span>
+  </div>
+</div>
+  </div></div>
+   
+    </div>
+  </div>
+
+<div id="regioes"><div id="azul-1762731727654" class="container azul">
+
+
+<div class="card">
+  <div class="first-content"> <!-- Parte frontal do card; que fica sempre a mostra -->
+    <span>
+    <h1 class="nomeregiao"><a>Nordeste</a></h1>
+    <h1><a>ESTADO: NORMAL</a></h1>
+    </span>
+  </div>
+  <div class="second-content"> <!-- Parte do card exibidsa com hover, mostra opções para alterar estado de cada região -->
+<span class="grid">
+<h3 onclick="seca('azul-1762731727654')"><a>Seca</a></h3> <!-- Determina região em seca -->
+<h3 onclick="normal('azul-1762731727654')"><a>Normal</a></h3> <!-- Determina região em estado normal -->
+<h3 onclick="cheia('azul-1762731727654')"><a>Cheia</a></h3> <!-- Determina região em cheia -->
+</span>
+  </div>
+  <div class="second-content">
+  <span class="grid">
+
+</span>
+  </div>
+</div>
+  </div></div>
+   
+    </div>
+  </div>
+
+  <div id="regioes"><div id="verde-1762731727654" class="container verde">
+
+
+<div class="card">
+  <div class="first-content"> <!-- Parte frontal do card; que fica sempre a mostra -->
+    <span>
+    <h1 class="nomeregiao"><a>Sudoeste</a></h1>
+    <h1><a>ESTADO: NORMAL</a></h1>
+    </span>
+  </div>
+  <div class="second-content"> <!-- Parte do card exibidsa com hover, mostra opções para alterar estado de cada região -->
+<span class="grid">
+<h3 onclick="seca('verde-1762731727654')"><a>Seca</a></h3> <!-- Determina região em seca -->
+<h3 onclick="normal('verde-1762731727654')"><a>Normal</a></h3> <!-- Determina região em estado normal -->
+<h3 onclick="cheia('verde-1762731727654')"><a>Cheia</a></h3> <!-- Determina região em cheia -->
+</span>
+  </div>
+  <div class="second-content">
+  <span class="grid">
+
+</span>
+  </div>
+</div>
+  </div></div>
+   
+    </div>
+  </div>
+
+    <div id="regioes"><div id="roxo-1762731727654" class="container roxo">
+
+
+<div class="card">
+  <div class="first-content"> <!-- Parte frontal do card; que fica sempre a mostra -->
+    <span>
+    <h1 class="nomeregiao"><a>Sudeste</a></h1>
+    <h1><a>ESTADO: NORMAL</a></h1>
+    </span>
+  </div>
+  <div class="second-content"> <!-- Parte do card exibidsa com hover, mostra opções para alterar estado de cada região -->
+<span class="grid">
+<h3 onclick="seca('roxo-1762731727654')"><a>Seca</a></h3> <!-- Determina região em seca -->
+<h3 onclick="normal('roxo-1762731727654')"><a>Normal</a></h3> <!-- Determina região em estado normal -->
+<h3 onclick="cheia('roxo-1762731727654')"><a>Cheia</a></h3> <!-- Determina região em cheia -->
+</span>
+  </div>
+  <div class="second-content">
+  <span class="grid">
+
+</span>
+  </div>
+</div>
+  </div></div>
+   
+    </div>
+  </div>
+
+</div>
+
+<script src="regiao.js"></script> <!-- script usado para alterar estado das regiões com botões -->
+
+
+<div vw class="enabled"> <!-- script de acessibilidade -->
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+  </div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+  new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - AleRi</title>
+    <link rel="icon" type="image/png" href="img/logoPNG.png"/>
+    <link rel="stylesheet" href="StyleLogin.CSS">
+    
+</head>
+
+<body>
+
+  <!-- Formulário responsável por receber e analisar o ID de uma região -->
+<form class="form" onsubmit="pararegiao(); return false;">
+    <p class="form-title">Insira o Código da Sua Região</p>
+
+    <div class="input-container">
+        <input placeholder="Código da Região" type="text" id="CodRegiao">
+    </div>
+
+    <button class="submit" type="submit">
+        Entrar
+    </button>
+
+    <p class="signup-link">
+        Ou Crie Uma
+        <a href="NovaRegiao.html">Nova Região</a>
+    </p>
+</form>
+
+<script src="login.js"></script> <!-- Script para funcionalidades de login -->
+
+
+<div vw class="enabled"> <!-- Script de acessibilidade -->
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+  </div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+  new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+
+</body>
+</html>

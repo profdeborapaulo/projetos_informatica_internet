@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Região</title>
+    <link rel="icon" type="image/png" href="img/logoPNG.png"/>
+    <link rel="stylesheet" href="StyleRegioes.css">
+</head>
+<body>
+
+<div id="conteudo"></div>
+
+<!-- Script para pegar conteúdo de página criada e salvar neste arquivo (imita banco de dados) -->
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+
+    const dados = localStorage.getItem(id);
+
+    if (!dados) {
+        document.body.innerHTML = "<h1>Região não encontrada!</h1>";
+    } else {
+        document.getElementById("conteudo").innerHTML = dados;
+    }
+</script>
+
+<script src="regiao.js"></script> <!-- Script para funcionalidades de região -->
+
+<div vw class="enabled"> <!-- Script para acessibilidade -->
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+  </div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+  new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+
+</body>
+</html>
