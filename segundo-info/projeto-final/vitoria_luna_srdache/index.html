@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRDache seu novo melhor amigo</title><link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/geral.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+    <header>
+       <nav class="nav">
+    <div class="logo">
+      <img src="img/logo.svg" alt="Logo da empresa">
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+        <li><a href="adote.html">Adote</a></li>
+        <li><a href="feira.html">Feiras e Lares</a></li>
+        <li><a href="vacinas.html">Cuidados </a></li>
+        <li><a href="agendamento.html">Agendamentos</a></li>
+        <li><a href="forms.html">Contato</a></li>
+    </ul>
+    
+  </nav>
+        <div class="ftprincipal">
+            <div class="textprincipal">
+              <h3>ADOTE UM PET</h3>
+            <h1>VENHA PROCURAR O MAIS NOVO MEMBRO DA SUA FAMILIA!</h1>
+       <button onclick="window.location.href= 'adote.html'" >PROCURAR🐕</button>
+       </div>
+        </div>
+    </header>
+    
+ <section class="oqoferecemos">
+  <h1>O QUE VOCÊ PODE ACHAR EM NOSSO SITE</h1>
+
+  <div class="cards">
+  <div class="card">
+    <h2>ADOÇÃO ONLINE</h2>
+    <img src="img/Texto do seu parágrafo.png" alt="">
+    <p>Aqui temos uma página inteira com pets disponíveis em toda a região da Zona Oeste de SP; Além de você poder agendar a adoção online!</p>
+    <button onclick="window.location.href='adote.html'">SAIBA MAIS</button>
+  </div>
+
+  <div class="card">
+    <h2>AGENDAMENTO DE EXAMES</h2>
+    <img src="img/Texto do seu parágrafo (1).png" alt="">
+    <p>Aqui nessa página você pode agendar exames nas instituições públicas da região, facilitando o processo e economizando tempo.</p>
+    <button onclick="window.location.href='agendamento.html'">SAIBA MAIS</button>
+  </div>
+
+  <div class="card">
+    <h2>FEIRAS DE ADOÇÃO E LARES TEMPORÁRIOS</h2>
+    <img src="img/Texto do seu parágrafo (2).png" alt="">
+    <p>Temos um mundo inteiro de oportunidades para conhecer as instituições e poder contribuir ao seu desenvolvimento.</p>
+    <button onclick="window.location.href='feira.html'">SAIBA MAIS</button>
+  </div>
+
+  <div class="card">
+    <h2>CUIDADOS E VACINAS</h2>
+    <img src="img/Texto do seu parágrafo (3).png" alt="">
+    <p>Aqui todos podemos encontrar um manual de cuidados aos cachorros, com vacinas e muitos outros cuidados, para dar a melhor atenção ao seu amigo de 4 patas.</p>
+    <button onclick="window.location.href='vacinas.html'">SAIBA MAIS</button>
+  </div>
+</div>
+
+  </div>
+</section>
+
+<section class="srd">
+ <div class="textosrd">
+  <h2>SEM RAÇA DEFINIDA!</h2>
+  <p>Os cachorros sem raça definida são cães resultado da mistura de diferentes raças ao longo de gerações, o que os torna únicos em tamanho, cor e pelagem, sem um padrão pré-definido. </p>
+  <p>Apesar de serem tão unicos aproximadamente 30 milhões de animais domésticos abandonados no país atualmente.</p>
+ </div>
+
+ <div class="fotosrd">
+  <img src="img/doiscachorros.png" alt="">
+ </div>
+</section>
+
+<section class="srd2">
+ <div class="textosrd2">
+  <h2>🐾 Faça Parte do Projeto SRDache</h2>
+  <p>O SRDache é uma plataforma segura e confiável que abriga cães em busca de um novo lar. Nosso propósito é conectar instituições governamentais e não governamentais, como ONGs e abrigos, a pessoas dispostas a adotar com responsabilidade e amor.</p>
+  <p>Aqui, quem cadastra os cães são apenas instituições verificadas, garantindo transparência, segurança e cuidado em cada adoção.</p>
+  <p>Se você faz parte de uma ONG, abrigo ou instituição que deseja cadastrar cães para adoção, junte-se ao projeto SRDache!
+Contribua para transformar histórias de abandono em histórias de amor e esperança. 💛</p>
+<button onclick="window.location.href='forms.html'" >FAÇA PARTE</button>
+ </div>
+
+ <div class="fotosrd2">
+  <img src="img/voluntario.svg" alt="">
+ </div>
+</section>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-info">
+        <h3>Contato</h3>
+        <p><strong>Email:</strong> contato@srdache.com.br</p>
+       <p><strong>WhatsApp:</strong> (11) 94765-3045</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Links Úteis</h3>
+        <ul>
+          <li><a href="adote.html">Adote</a></li>
+          <li><a href="feira.html">Feiras e Lares</a></li>
+          <li><a href="vacinas.html">Cuidados</a></li>
+          <li><a href="agendamento.html">Agendamentos</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-rights">
+        <p>&copy; 2025 SRDache — Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+  const currentLocation = window.location.href;
+  const menuItems = document.querySelectorAll('.nav-links a');
+
+  menuItems.forEach(item => {
+    if (item.href === currentLocation) {
+      item.classList.add('active');
+    }
+  });
+</script>
+<script src="js/session.js"></script> 
+  
+  <script src="js/script.js"></script>
+</body>
+</html>

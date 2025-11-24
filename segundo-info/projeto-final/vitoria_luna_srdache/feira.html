@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRDache seu novo melhor amigo</title><link rel="stylesheet" href="css/adote.css">
+    <link rel="stylesheet" href="css/geral.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+    <header>
+       <nav class="nav">
+    <div class="logo">
+      <img src="img/logo.svg" alt="Logo da empresa">
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+        <li><a href="adote.html">Adote</a></li>
+        <li><a href="feira.html">Feiras e Lares</a></li>
+        <li><a href="vacinas.html">Cuidados </a></li>
+        <li><a href="agendamento.html">Agendamentos</a></li>
+        <li><a href="forms.html">Contato</a></li>
+        </ul>
+  </nav>
+        <div class="ftprincipal">
+            <div class="textprincipal">
+            <h1>20 MILHÕES DE CACHORROS ABANDONADOS NO MUNDO</h1>
+           
+       </div>
+       <div class="imgprincipal">
+        <img src="img/feiraadocao.jpg" alt="cachorroeseunovodono">
+       </div>
+        </div>
+    </header>
+
+    <section class="home-cards">
+        <div class="home-card card">
+            <h3>FEIRA DE ADOÇÃO</h3>
+            <p>Conheça os pets em um evento presencial. A oportunidade perfeita para interagir e se apaixonar! Nossas feiras acontecem a cada 15 dias em locais variados.</p>
+          
+        </div>
+        <div class="home-card card">
+            <h3>LAR TEMPORÁRIO</h3>
+            <p>Ofereça um abrigo seguro e amoroso para um pet resgatado enquanto ele espera por sua família definitiva. Uma ajuda vital para a causa animal.</p>
+            
+        </div>
+    </section>
+    <h1>COMEÇE FILTRANDO A FEIRA OU LAR TEMPORÁRIO IDEAL PARA VOCÊ 🐾</h1>
+    <section>
+    <select name="cidade" id="cidades">
+        <option value="">Todas as Cidades</option>
+        <option value="Barueri">Barueri</option>
+        <option value="Carapicuíba">Carapicuíba</option>
+        <option value="Osasco">Osasco</option>
+        <option value="Itapevi">Itapevi</option>
+        <option value="Jandira">Jandira</option>
+        <option value="Santana de Parnaíba">Santana de Parnaíba</option>
+    </select>
+
+    <select name="larfeira" id="larfeira">
+        <option value="larTemporario">Lar Temporário</option>
+        <option value="feiraAdocao">Feira de Adoção</option>
+        <option value="centrosServico">Centros de Serviço/Exame</option>
+    </select>
+  
+    <button id="btnFiltrar">Filtrar 🐾</button>
+</section>
+
+<section class="mostrasdogs" id="mostrarfeira">
+</section>
+
+
+<script src="js/scriptfeira.js"></script>
+ <footer>
+    <div class="footer-container">
+      <div class="footer-info">
+        <h3>Contato</h3>
+        <p><strong>Email:</strong> contato@srdache.com.br</p>
+       <p><strong>WhatsApp:</strong> (11) 94765-3045</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Links Úteis</h3>
+        <ul>
+          <li><a href="adote.html">Adote</a></li>
+          <li><a href="feira.html">Feiras e Lares</a></li>
+          <li><a href="vacinas.html">Cuidados</a></li>
+          <li><a href="agendamento.html">Agendamentos</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-rights">
+        <p>&copy; 2025 SRDache — Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+  const currentLocation = window.location.href;
+  const menuItems = document.querySelectorAll('.nav-links a');
+
+  menuItems.forEach(item => {
+    if (item.href === currentLocation) {
+      item.classList.add('active');
+    }
+  });
+</script>
+<script src="js/session.js"></script> 
+ <script src="js/script.js"></script>
+
+</body>
+</html>

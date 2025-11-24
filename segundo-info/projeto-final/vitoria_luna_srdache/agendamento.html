@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendamento de Exames</title>
+  <link rel="stylesheet" href="css/agen.css">
+  <link rel="stylesheet" href="css/geral.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <div class="logo">
+        <img src="img/logo.svg" alt="Logo da empresa">
+      </div>
+      <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+        <li><a href="adote.html">Adote</a></li>
+        <li><a href="feira.html">Feiras e Lares</a></li>
+        <li><a href="vacinas.html">Cuidados </a></li>
+        <li><a href="agendamento.html">Agendamentos</a></li>
+        <li><a href="forms.html">Contato</a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>VENHA AGENDAR SUA CONSULTA EM REDE PÚBLICA</h1>
+    <div class="calendar-container">
+      <div class="calendar" id="novembro">
+        <h2>Novembro 2025</h2>
+        <div class="days" id="days-novembro"></div>
+      </div>
+
+      <div class="calendar" id="dezembro">
+        <h2>Dezembro 2025</h2>
+        <div class="days" id="days-dezembro"></div>
+      </div>
+    </div>
+  </main>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="fechar">&times;</span>
+      <h3>Agendar Exame</h3>
+      <p id="dataSelecionada"></p>
+
+      <label for="exame">Tipo de exame:</label>
+      <select id="exame">
+        <option value="">Selecione...</option>
+        <option>Raio-X</option>
+        <option>Ultrassom</option>
+        <option>Check-up</option>
+      </select>
+
+      <label for="unidade">Unidade:</label>
+      <select id="unidade">
+        <option value="">Selecione...</option>
+        <option value="CEPABarueri">CEPA Barueri</option>
+        <option value="USAItapevi">USA Itapevi</option>
+        <option value="CCZOsasco">CCZ Osasco</option>
+      </select>
+
+      <label for="horario">Horário:</label>
+      <select id="horario" disabled>
+        <option value="">Selecione a unidade primeiro</option>
+      </select>
+
+      <button id="confirmar">Confirmar Agendamento</button>
+    </div>
+  </div>
+
+  <script src="js/agen.js"></script>
+<footer>
+    <div class="footer-container">
+      <div class="footer-info">
+        <h3>Contato</h3>
+        <p><strong>Email:</strong> contato@srdache.com.br</p>
+       <p><strong>WhatsApp:</strong> (11) 94765-3045</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Links Úteis</h3>
+        <ul>
+          <li><a href="adote.html">Adote</a></li>
+          <li><a href="feira.html">Feiras e Lares</a></li>
+          <li><a href="vacinas.html">Cuidados</a></li>
+          <li><a href="agendamento.html">Agendamentos</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-rights">
+        <p>&copy; 2025 SRDache — Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+  const currentLocation = window.location.href;
+  const menuItems = document.querySelectorAll('.nav-links a');
+
+  menuItems.forEach(item => {
+    if (item.href === currentLocation) {
+      item.classList.add('active');
+    }
+  });
+
+  
+  
+</script>
+<script src="js/session.js"></script> 
+  <script src="js/agen.js"></script>
+</body>
+</html>

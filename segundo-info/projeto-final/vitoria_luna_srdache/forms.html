@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRDache seu novo melhor amigo</title>
+    
+        <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/geral.css">
+    
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    <header>
+       <nav class="nav">
+    <div class="logo">
+      <img src="img/logo.svg" alt="Logo da empresa">
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+        <li><a href="adote.html">Adote</a></li>
+        <li><a href="feira.html">Feiras e Lares</a></li>
+        <li><a href="vacinas.html">Cuidados </a></li>
+        <li><a href="agendamento.html">Agendamentos</a></li>
+        <li><a class="active" href="forms.html">Contato</a></li>     </ul> 
+  </nav>
+    </header>
+    
+    
+
+    <section class="forms">
+        <div class="img-container">
+            <img src="img/melhroamigo.jpg" alt="Foto de um cachorro sorrindo">
+        </div>
+        
+        <div class="form-container">
+            <h2>Envie Sua Mensagem</h2>
+            
+            <form action="https://formspree.io/f/xvgvealk" method="POST">
+                
+                <label for="nome">Nome completo:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required
+                            pattern="[A-Za-z\s]+" 
+                            title="O nome deve conter apenas letras e espaços.">
+
+                <label for="assunto">Assunto:</label>
+                <select id="assunto" name="assunto" required>
+                    <option value="">Selecione</option>
+                    <option value="adoção">Adoção</option>
+                    <option value="duvida">Dúvida</option>
+                    <option value="reclamacao">Reclamação</option>
+                    <option value="faça-parte">Faça parte</option>
+                </select>
+
+                <label for="descricao">Descrição:</label>
+                <textarea id="descricao" name="descricao" placeholder="Escreva sua mensagem aqui..." required></textarea>
+
+                <label for="telefone">Número de celular:</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" required
+                            pattern="[0-9]{10,11}"
+                            title="O telefone deve conter 10 ou 11 dígitos numéricos (com DDD).">
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="_replyto" placeholder="exemplo@email.com" required>
+
+                <input type="hidden" name="_subject" value="Nova Mensagem (Contato) - SRDAche">
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+<footer>
+    <div class="footer-container">
+      <div class="footer-info">
+        <h3>Contato</h3>
+        <p><strong>Email:</strong> contato@srdache.com.br</p>
+       <p><strong>WhatsApp:</strong> (11) 94765-3045</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Links Úteis</h3>
+        <ul>
+          <li><a href="adote.html">Adote</a></li>
+          <li><a href="feira.html">Feiras e Lares</a></li>
+          <li><a href="vacinas.html">Cuidados</a></li>
+          <li><a href="agendamento.html">Agendamentos</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-rights">
+        <p>&copy; 2025 SRDache — Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+  
+<script>
+    // Script de marcação do link ativo
+    const currentLocation = window.location.href;
+    const menuItems = document.querySelectorAll('.nav-links a');
+
+    menuItems.forEach(item => {
+        // Remove a marcação 'active' de todos (garantia de limpeza)
+        item.classList.remove('active');
+        
+        // Verifica se a URL do link corresponde à URL atual
+        if (item.href === currentLocation) {
+            item.classList.add('active');
+        }
+    });
+
+    // Caso a marcação da classe 'active' já esteja no HTML (como eu adicionei acima)
+    // este script não fará nada, mas é uma boa prática mantê-lo.
+</script>
+
+<script src="js/session.js"></script> 
+<script src="js/script.js"></script>
+
+</body>
+</html>

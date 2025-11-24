@@ -1,0 +1,204 @@
+/* CONTEÚDO PRINCIPAL */
+main {
+  padding: 40px 20px;
+}
+
+h1 {
+  color: #2b7a78;
+  text-align: center;
+  font-size: 1.8em;
+  margin-bottom: 30px;
+}
+
+/* CALENDÁRIOS */
+.calendar-container {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.calendar {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  padding: 20px;
+  width: 300px;
+  transition: transform 0.3s;
+}
+
+.calendar:hover {
+  transform: translateY(-5px);
+}
+
+.calendar h2 {
+  color: #2b7a78;
+  margin-bottom: 10px;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.day {
+  background: #def2f1;
+  border-radius: 8px;
+  padding: 10px 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.day:hover {
+  background: #3aafa9;
+  color: white;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  backdrop-filter: blur(3px);
+  /* Ajuste para rolagem no celular */
+  overflow-y: auto; 
+}
+
+/* CAIXA DO FORMULÁRIO */
+.modal-content {
+  background-color: #ffffff;
+  margin: 8% auto;
+  padding: 30px 25px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 420px;
+  text-align: left;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.4s ease;
+  position: relative;
+}
+
+/* BOTÃO DE FECHAR (X) */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 22px;
+  color: #888;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close:hover {
+  color: #000;
+}
+
+
+.modal-content h3 {
+  color: #2b7a78;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #F9F2DE;
+  padding-bottom: 8px;
+}
+
+
+#dataSelecionada {
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  padding: 8px 10px;
+  margin-bottom: 15px;
+  color: #555;
+  font-weight: 500;
+}
+
+
+label {
+  font-weight: 600;
+  color: #444;
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+select, input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  outline: none;
+  background-color: #fafafa;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+select:focus, input:focus {
+  border-color: #2b7a78;
+  box-shadow: 0 0 5px rgba(43,122,120,0.3);
+}
+
+
+button#confirmar {
+  width: 100%;
+  background: #2b7a78;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  margin-top: 25px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: 0.3s;
+}
+
+button#confirmar:hover {
+  background-color: #3aafa9;
+  transform: translateY(-2px);
+}
+
+/* ANIMAÇÃO SUAVE */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsividade */
+@media (max-width: 650px) {
+    .calendar {
+        width: 100%; /* Ocupa a largura total em telas menores */
+        max-width: 350px;
+    }
+    .calendar-container {
+        padding: 0 10px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    .modal-content {
+        margin: 5% auto; /* Ajusta a margem superior para mais espaço */
+    }
+}
+
+
+    /* Estilo para os dias inteiros indisponíveis (Novembro) */
+    .day-indisponivel {
+        background-color: #e0e0e0; /* Fundo cinza claro */
+        color: #999; /* Texto cinza escuro */
+        cursor: not-allowed; /* Ícone de proibido */
+        opacity: 0.6;
+    }
+
+    /* Estilo para os horários ocupados no dropdown do modal */
+    .horario-ocupado {
+        background-color: #fff0f0; 
+        color: #d9534f; /* Cor que indica perigo/ocupado (vermelho) */
+        font-style: italic;
+    }

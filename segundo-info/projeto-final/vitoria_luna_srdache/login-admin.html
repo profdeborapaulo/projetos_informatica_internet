@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Admin - SRDache</title>
+    <link rel="stylesheet" href="css/forms.css"> 
+    <link rel="stylesheet" href="css/geral.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header>
+       <nav class="nav">
+            <div class="logo">
+                <img src="img/logo.svg" alt="Logo da empresa">
+            </div>
+        <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+        <li><a href="adote.html">Adote</a></li>
+        <li><a href="feira.html">Feiras e Lares</a></li>
+        <li><a href="vacinas.html">Cuidados </a></li>
+        <li><a href="agendamento.html">Agendamentos</a></li>
+        <li><a href="forms.html">Contato</a></li>
+        </ul>
+        </nav>
+        <section class="forms">
+            <div class="img-container">
+                <img src="img/melhroamigo.jpg" alt="Cachorro deitado">
+            </div>
+            <div class="form-container">
+                <h2>🛠️ Login do Administrador</h2>
+                <p id="errorMessage" style="color: #d9534f; margin-bottom: 15px;"></p>
+                <form id="adminLoginForm">
+                    <label for="email">E-mail Admin:</label>
+                    <input type="email" id="email" name="email" placeholder="admin@srdache.com.br" required>
+
+                    <label for="senha">Senha Admin:</label>
+                    <input type="password" id="senha" name="senha" placeholder="********" required>
+
+                    <button type="submit">Entrar</button>
+                    
+                    <p style="margin-top: 20px; text-align: center;">
+                        É Usuário Comum? <a href="login.html">Clique aqui</a>
+                    </p>
+                </form>
+            </div>
+        </section>
+    </header>
+
+   <footer>
+    <div class="footer-container">
+      <div class="footer-info">
+        <h3>Contato</h3>
+        <p><strong>Email:</strong> contato@srdache.com.br</p>
+       <p><strong>WhatsApp:</strong> (11) 94765-3045</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Links Úteis</h3>
+        <ul>
+          <li><a href="adote.html">Adote</a></li>
+          <li><a href="feira.html">Feiras e Lares</a></li>
+          <li><a href="vacinas.html">Cuidados</a></li>
+          <li><a href="agendamento.html">Agendamentos</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-rights">
+        <p>&copy; 2025 SRDache — Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+    <script src="js/session.js"></script>
+    <script src="js/login-admin.js"></script>
+    <script>
+        // Mantém a funcionalidade de menu ativo
+        const currentLocation = window.location.href;
+        const menuItems = document.querySelectorAll('.nav-links a');
+        menuItems.forEach(item => {
+            if (item.href === currentLocation) {
+                item.classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>

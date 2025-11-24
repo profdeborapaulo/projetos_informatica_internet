@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRDache seu novo melhor amigo</title><link rel="stylesheet" href="css/adote.css">
+    <link rel="stylesheet" href="css/geral.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+ <header>
+  <nav class="nav">
+    <div class="logo">
+      <img src="img/logo.svg" alt="Logo da empresa">
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+        <li><a href="adote.html">Adote</a></li>
+        <li><a href="feira.html">Feiras e Lares</a></li>
+        <li><a href="vacinas.html">Cuidados </a></li>
+        <li><a href="agendamento.html">Agendamentos</a></li>
+        <li><a href="forms.html">Contato</a></li>
+    </ul>
+  </nav>
+
+  <div class="ftprincipal">
+    <div class="textprincipal">
+      <h1>ADOTE</h1>
+      <p>Encontre o pet ideal e transforme uma vida 💛</p>
+    </div>
+
+    <div class="imgprincipal">
+      <img src="img/FEIRA.avif" alt="Cachorro e seu novo dono">
+    </div>
+  </div>
+</header>
+
+
+    <h1>COMEÇE FILTRANDO PARA O PET IDEAL PARA VOCÊ 🐾</h1>
+    <section>
+    <select name="cidade" id="cidades">
+        <option value="">Todas as Cidades</option>
+        <option value="Barueri">Barueri</option>
+        <option value="Carapicuíba">Carapicuíba</option>
+        <option value="Osasco">Osasco</option>
+        <option value="Itapevi">Itapevi</option>
+        <option value="Jandira">Jandira</option>
+        <option value="Santana de Parnaíba">Santana de Parnaíba</option>
+    </select>
+  
+    <select name="porte" id="porte">
+        <option value="">Todos os portes</option>
+        <option value="Pequeno">Pequeno</option>
+        <option value="Médio">Médio</option>
+        <option value="Grande">Grande</option>
+    </select>
+  
+    <select name="pelagem" id="pelagem">
+        <option value="">Todas as pelagens</option>
+        <option value="Curta">Curta</option>
+        <option value="Média">Média</option>
+        <option value="Longa">Longa</option>
+    </select>
+    <button id="btnFiltrar">Filtrar 🐾</button>
+</section>
+
+<section class="mostrasdogs" id="mostrardogs">
+    <div class="card adicionar-card" id="adicionarPetCard">
+        <div class="adicionar-conteudo">
+            <span>+</span>
+            <h3>Adicionar Pet</h3>
+            <p>Seja da equipe SRD</p>
+        </div>
+    </div>
+</section>
+
+<div id="modal" class="modal" aria-hidden="true">
+  <div class="modal-content">
+    <button id="fecharmodal" class="fecharmodal">&times;</button>
+    <img id="imgmodal" src="" alt="">
+    <h1 id="nomemodal"></h1>
+    <p id="infomodal"></p>
+    <p id="historiamodal"></p>
+    <button id="queroadotar">Quero Adotar 💖</button>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+ <footer>
+    <div class="footer-container">
+      <div class="footer-info">
+        <h3>Contato</h3>
+        <p><strong>Email:</strong> contato@srdache.com.br</p>
+       <p><strong>WhatsApp:</strong> (11) 94765-3045</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Links Úteis</h3>
+        <ul>
+          <li><a href="adote.html">Adote</a></li>
+          <li><a href="feira.html">Feiras e Lares</a></li>
+          <li><a href="vacinas.html">Cuidados</a></li>
+          <li><a href="agendamento.html">Agendamentos</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-rights">
+        <p>&copy; 2025 SRDache — Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+  const currentLocation = window.location.href;
+  const menuItems = document.querySelectorAll('.nav-links a');
+
+  menuItems.forEach(item => {
+    if (item.href === currentLocation) {
+      item.classList.add('active');
+    }
+  });
+</script>
+<script src="js/session.js"></script> 
+ <script src="js/script.js"></script>
+
+</body>
+</html>
