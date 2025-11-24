@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InstalaFácil - Tutoriais Domésticos</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <nav class="navbar navbar-expand-lg fixed-top" 
+       style="background-color: #ffffff; box-shadow: 0 4px 16px rgba(156, 58, 59, 0.15);">
+    <div class="container-fluid position-relative">
+
+      <!-- Logo -->
+      <a class="navbar-brand" href="index.html" style="margin-left: 35px;">
+        <img src="img/logo_meensina (2).png" alt="Logo do site" class="img-fluid logo" style="width: 3em;" />
+      </a>
+
+      <!-- Botão menu mobile-->
+      <button class="navbar-toggler" style="border-color: #000000;" type="button" 
+        data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Links de navegação -->
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav d-flex flex-lg-row flex-column align-items-center gap-5 text-center">
+          <li class="nav-item"><a class="nav-link" href="index.html"> Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html"> Tutorial </a></li>
+          <li class="nav-item"><a class="nav-link comunidade" href="index.html"> Contribuintes </a></li>
+          <li class="nav-item"><a class="nav-link comunidade" href="contato.html"> Contato </a></li>
+
+          <!-- Opções para mobile -->
+          <li class="nav-item d-lg-none mt-3">
+            <a class="btn perfil w-100" href="login.html"> Entrar </a>
+          </li>
+          <li class="nav-item d-lg-none mt-2 mb-3">
+            <a class="btn sair w-100" href="cadastro.html"> Cadastrar </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Botões para desktop -->
+      <div class="d-none d-lg-flex align-items-center gap-2 position-absolute end-0 me-4">
+        <a class="btn perfil" href="login.html"> Entrar </a>
+        <a class="btn sair" href="cadastro.html"> Cadastrar </a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+
+<!-- CONTEÚDO PRINCIPAL  -->
+<div class="contato-container">
+  
+  <!-- Formulário de Contato -->
+  <div class="contato-form">
+      <h1>Contato</h1>
+      <p>Entre em contato conosco para mais informações.</p>
+
+      <form id="form-contato" onsubmit="enviarContato(event)">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Seu email" required>
+
+          <label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" name="mensagem" rows="6" placeholder="Escreva sua mensagem..." required></textarea>
+
+          <input type="submit" value="Enviar" id="btn-contato">
+      </form>
+  </div>
+
+  <!-- Informações de Contato -->
+  <div class="contato-info">
+      <h2>Informações</h2>
+      <p><strong>Endereço:</strong> Rua Alfredo Ribeiro, 11, Carapicuíba, São Paulo</p>
+      <p><strong>Telefone:</strong> (11) 95443-4695</p>
+      <p><strong>Email:</strong> gustavomoraeser@gmail.com</p>
+      <br><br><br>
+
+      <p>Siga-nos nas redes sociais:</p>
+      <div class="social-links">
+          <a href="https://wa.me/5511954434695">WhatsApp</a> |
+          <a href="https://instagram.com/mor4esx__">Instagram</a> |
+          <a href="">Facebook</a>
+      </div>
+  </div>
+</div>
+
+
+
+<!-- FOOTER-->
+<footer class="bg-light text-center py-3 border-top">
+  <p class="mb-0 text-secondary">© 2025 MeEnsina! — Seu guia de manutenção doméstica</p>
+</footer>
+
+
+
+<!-- SCRIPT-->
+<script>
+  // Função de envio do formulário de contato
+  function enviarContato(event) {
+    event.preventDefault();
+    const nome = document.getElementById("nome").value;
+    const email = document.getElementById("email").value;
+    const mensagem = document.getElementById("mensagem").value;
+
+    // Validação simples dos campos
+    if(nome && email && mensagem){
+      alert(`Mensagem enviada com sucesso!\nNome: ${nome}\nEmail: ${email}\nMensagem: ${mensagem}`);
+      document.getElementById("form-contato").reset();
+    } else {
+      alert("Preencha todos os campos!");
+    }
+  }
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InstalaFácil - Tutoriais Domésticos</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+<!-- Estilos Header -->
+<style>
+#user-header {
+  display: flex;
+  align-items: center;
+  gap: 5px; 
+}
+
+@media (max-width: 992px) {
+#user-header {
+  display: flex;
+  align-items: center;      
+  justify-content: center;   
+  gap: 5px;                  
+  position: fixed;         
+  top: 7px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2000;
+  font-size: 13px;
+  padding: 2px 18px;
+}
+
+#user-header img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+}
+</style>
+
+<!-- Header -->
+<header>
+  <nav class="navbar navbar-expand-lg fixed-top" 
+       style="background-color: #ffffff; box-shadow: 0 4px 16px rgba(156, 58, 59, 0.15);">
+    <div class="container-fluid position-relative">
+      <a class="navbar-brand" href="inicio.html" style="margin-left: 35px;">
+        <img src="img/logo_meensina (2).png" alt="Logo do site" class="img-fluid logo" style="width: 3em;" />
+      </a>
+
+      <button class="navbar-toggler" style="border-color: #000000;" type="button" 
+        data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav d-flex flex-lg-row flex-column align-items-center gap-5 text-center">
+          <li class="nav-item"><a class="nav-link" href="#fundo1"> Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="#fundo2"> Tutorial </a></li>
+          <li class="nav-item"><a class="nav-link comunidade" href="#fundo4"> Contribuintes </a></li>
+          <li class="nav-item"><a class="nav-link comunidade" href="contato.html"> Contato </a></li>
+        </ul>
+      </div>
+
+      <div class="d-none d-lg-flex align-items-center gap-2 position-absolute end-0 me-4" id="user-header"></div>
+    </div>
+  </nav>
+</header>
+
+<!-- Fundo1 -->
+<div class="fundo1" id="fundo1">
+  <div class="txt1">
+    <h1><strong>MeEnsina!</strong></h1>
+    <p>O MeEnsina! é um site criado para ajudar você a realizar pequenas instalações e manutenções em casa. 
+      Encontre tutoriais simples, dicas práticas e guias passo a passo para aprender a consertar, montar e 
+      instalar diferentes itens domésticos de forma fácil e segura.</p>
+  </div>
+  <img src="img/img1.png" alt="Imagem ilustrativa sobre manutenção doméstica">
+</div>
+
+<!-- Fundo2 -->
+<div id="fundo2">
+  <section class="container py-5" id="categorias">
+    <h2 class="text-center mb-4">Categorias de Tutoriais</h2>
+    <div class="row g-4">
+
+      <!-- Card Elétrica -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body text-center">
+            <img src="img/lampada.png" width="70" alt="Elétrica" class="mb-3">
+            <h5 class="card-title">Instalações Elétricas</h5>
+            <p class="card-text">Aprenda a trocar chuveiros, tomadas, interruptores e lâmpadas com segurança.</p>
+            <a href="categorias.html?tipo=eletrico" class="btn btn-primary">Ver tutoriais</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card Hidráulica -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body text-center">
+            <img src="img/torneira.png" width="70" alt="Hidráulica" class="mb-3">
+            <h5 class="card-title">Hidráulica Básica</h5>
+            <p class="card-text">Conserte vazamentos, troque torneiras e aprenda sobre conexões e vedações.</p>
+            <a href="categorias.html?tipo=hidraulico" class="btn btn-primary">Ver tutoriais</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card Móveis -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body text-center">
+            <img src="img/moveis.png" width="70" alt="Montagem" class="mb-3">
+            <h5 class="card-title">Montagem de Móveis</h5>
+            <p class="card-text">Aprenda passo a passo a montar prateleiras, mesas e cadeiras com praticidade.</p>
+            <a href="categorias.html?tipo=moveis" class="btn btn-primary">Ver tutoriais</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+<!-- Busca -->
+<div class="container my-5">
+  <h2 class="text-center mb-4">Aprenda a instalar e fazer manutenção em itens domésticos</h2>
+  <section class="d-flex justify-content-center">
+    <div class="input-group w-75 shadow-sm">
+      <input type="text" id="campoBusca" class="form-control" placeholder="Ex: chuveiro Lorenzetti, torneira, ventilador...">
+      <button class="btn btn-primary" onclick="buscar()">Buscar</button>
+    </div>
+  </section>
+</div>
+
+<!-- Resultados -->
+<div class="container mb-5">
+  <section id="resultado" class="bg-white p-4 rounded shadow-sm">
+    <p class="text-secondary text-center"> Busque tutoriais usando o campo acima.</p>
+  </section>
+</div>
+
+<!-- Script Busca -->
+<script>
+const API_URL = "https://68ecdd76eff9ad3b14039a17.mockapi.io/tutoriais";
+
+function normalizarTexto(texto) {
+  return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+}
+
+function converterLinkYoutube(url) {
+  if (!url) return "";
+  if (url.includes("youtube.com/watch?v=")) {
+    const id = url.split("v=")[1].split("&")[0];
+    return `https://www.youtube.com/embed/${id}`;
+  } else if (url.includes("youtu.be/")) {
+    const id = url.split("youtu.be/")[1].split("?")[0];
+    return `https://www.youtube.com/embed/${id}`;
+  } else {
+    return url;
+  }
+}
+
+async function buscar() {
+  const termo = normalizarTexto(document.getElementById("campoBusca").value);
+  const container = document.getElementById("resultado");
+  container.innerHTML = `<p class="text-secondary text-center"> Buscando tutoriais...</p>`;
+
+  try {
+    const resposta = await fetch(API_URL);
+    const tutoriais = await resposta.json();
+
+    let filtrados = tutoriais;
+    if (termo) {
+      filtrados = tutoriais.filter(t =>
+        (t.titulo && normalizarTexto(t.titulo).includes(termo)) ||
+        (t.tipo && normalizarTexto(t.tipo).includes(termo)) ||
+        (t.marca && normalizarTexto(t.marca).includes(termo))
+      );
+    }
+
+    if (filtrados.length === 0) {
+      container.innerHTML = `<p class="text-danger text-center">Nenhum tutorial encontrado </p>`;
+      return;
+    }
+
+    container.innerHTML = "";
+    filtrados.forEach(t => {
+      const div = document.createElement("div");
+      div.classList.add("col-12", "col-md-6", "col-lg-4", "mb-4");
+
+      const passosHTML = t.passos?.length
+        ? `<ol>${t.passos.map(p => `<li>${p}</li>`).join("")}</ol>`
+        : "<p class='text-muted'>Sem passos cadastrados.</p>";
+
+      const videoHTML = t.video
+        ? `<div class="ratio ratio-16x9 mt-3"><iframe src="${converterLinkYoutube(t.video)}" frameborder="0" allowfullscreen></iframe></div>`
+        : "";
+
+      div.innerHTML = `
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title text-primary">${t.titulo}</h5>
+            <p><strong>Tipo:</strong> ${t.tipo || "Não informado"}</p>
+            ${t.marca ? `<p><strong>Marca:</strong> ${t.marca}</p>` : ""}
+            ${t.autor ? `<p><strong>Autor:</strong> ${t.autor}</p>` : ""}
+            <p class="mt-3"><strong>Passos:</strong></p>
+            ${passosHTML}
+            ${videoHTML}
+          </div>
+        </div>`;
+      container.appendChild(div);
+    });
+
+  } catch (erro) {
+    console.error("Erro ao buscar:", erro);
+    container.innerHTML = `<p class="text-danger text-center">Erro ao conectar com o servidor 😢</p>`;
+  }
+}
+</script>
+
+<!-- Fundo4 -->
+<div id="fundo4">
+  <section class="py-5 fundo4" id="envio-tutorial">
+    <div class="container">
+      <h2 class="text-center text-primary mb-4">Envie seu Tutorial</h2>
+      <p class="text-center text-secondary mb-5">Tem alguma dica ou tutorial que gostaria de compartilhar? Envie seu vídeo e passo a passo!</p>
+
+      <form class="row g-3 needs-validation" novalidate id="formTutorial">
+        <div class="col-md-6">
+          <label for="nome" class="form-label">Seu nome</label>
+          <input type="text" class="form-control" id="nome" required>
+        </div>
+
+        <div class="col-md-6">
+          <label for="email" class="form-label">E-mail</label>
+          <input type="email" class="form-control" id="email" required>
+        </div>
+
+        <div class="col-12">
+          <label for="titulo" class="form-label">Título do tutorial</label>
+          <input type="text" class="form-control" id="titulo" required>
+        </div>
+
+        <div class="col-12">
+          <label for="passos" class="form-label">Passo a passo</label>
+          <textarea class="form-control" id="passos" rows="5" required></textarea>
+        </div>
+
+        <div class="col-12">
+          <label for="video" class="form-label">Link do vídeo</label>
+          <input type="url" class="form-control" id="video" placeholder="https://youtube.com/..." required>
+        </div>
+
+        <div class="col-12 text-center">
+          <button class="btn btn-primary btn-lg" type="submit">Enviar Tutorial</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</div>
+
+<!-- Comentários -->
+<section class="container my-5" id="comentarios">
+  <h2 class="text-center mb-4">Comentários</h2>
+
+  <!-- Formulário -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-body">
+      <h5 class="card-title">Deixe seu comentário</h5>
+      <form id="formComentario">
+        <div class="mb-3">
+          <input type="text" class="form-control" id="nomeComentario" placeholder="Seu nome" required>
+        </div>
+        <div class="mb-3">
+          <textarea class="form-control" id="textoComentario" rows="3" placeholder="Escreva seu comentário..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Carrossel -->
+  <h2 class="text-center mb-4">O que estão dizendo sobre o MeEnsina</h2>
+  <div id="carouselComentarios" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner" id="carouselInner">
+
+      <!-- Comentários Fixos -->
+      <div class="carousel-item active">
+        <div class="card mx-auto shadow-sm" style="max-width: 600px;">
+          <div class="card-body text-center">
+            <h5 class="card-title">Daniel Moraes</h5>
+            <p class="card-text">“O MeEnsina me ajudou muito a encontrar tutoriais práticos e rápidos.”</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="card mx-auto shadow-sm" style="max-width: 600px;">
+          <div class="card-body text-center">
+            <h5 class="card-title">Fábio Martins</h5>
+            <p class="card-text">“Excelente plataforma! Encontrei conteúdos de qualidade.”</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="card mx-auto shadow-sm" style="max-width: 600px;">
+          <div class="card-body text-center">
+            <h5 class="card-title">Italo Mendes</h5>
+            <p class="card-text">“Recomendo demais! Aprender nunca foi tão fácil.”</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controles -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselComentarios" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselComentarios" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Próximo</span>
+    </button>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-light text-center py-3 border-top">
+  <p class="mb-0 text-secondary">© 2025 MeEnsina! — Seu guia de manutenção doméstica</p>
+</footer>
+
+<!-- Script Perfil e Comentários -->
+<script src="script.js"></script>
+<script>
+  const userHeader = document.getElementById("user-header");
+  const usuario = JSON.parse(localStorage.getItem("usuarioLogado"));
+
+  if (usuario) {
+    userHeader.innerHTML = `
+      <span style="margin-right: 8px;">${usuario.nome}</span>
+      <a href="perfil.html">
+        <img src="${usuario.foto}" alt="Foto do usuário" style="width: 35px; height: 35px; border-radius: 50%; cursor: pointer;">
+      </a>`;
+    userHeader.classList.remove("d-none");
+  } else {
+    userHeader.innerHTML = `
+      <a class="btn perfil" href="login.html">Entrar</a>
+      <a class="btn sair" href="cadastro.html">Cadastrar</a>`;
+    userHeader.classList.remove("d-none");
+  }
+
+  const form = document.getElementById("formComentario");
+  const carouselInner = document.getElementById("carouselInner");
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    const nome = document.getElementById("nomeComentario").value.trim();
+    const texto = document.getElementById("textoComentario").value.trim();
+    if (!nome || !texto) return;
+
+    const item = document.createElement("div");
+    item.classList.add("carousel-item");
+    item.innerHTML = `
+      <div class="card mx-auto shadow-sm" style="max-width: 600px;">
+        <div class="card-body text-center">
+          <h5 class="card-title">${nome}</h5>
+          <p class="card-text">${texto}</p>
+        </div>
+      </div>`;
+    carouselInner.appendChild(item);
+    form.reset();
+    alert("Seu comentário foi adicionado com sucesso!");
+  });
+</script>
+
+</body>
+</html>

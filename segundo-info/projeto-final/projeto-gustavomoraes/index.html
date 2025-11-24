@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InstalaFácil - Tutoriais Domésticos</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+  <!-- Header -->
+
+<!-- HEADER -->
+<header>
+  <nav class="navbar navbar-expand-lg fixed-top" 
+       style="background-color: #ffffff; box-shadow: 0 4px 16px rgba(156, 58, 59, 0.15);">
+    <div class="container-fluid position-relative">
+
+      <!-- Logo -->
+      <a class="navbar-brand" href="index.html" style="margin-left: 35px;">
+        <img src="img/logo_meensina (2).png" alt="Logo do site" class="img-fluid logo" style="width: 3em;" />
+      </a>
+
+      <!-- Botão menu mobile-->
+      <button class="navbar-toggler" style="border-color: #000000;" type="button" 
+        data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Links de navegação -->
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav d-flex flex-lg-row flex-column align-items-center gap-5 text-center">
+          <li class="nav-item"><a class="nav-link" href="#fundo1"> Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="#fundo2"> Tutorial </a></li>
+          <li class="nav-item"><a class="nav-link comunidade" href="#fundo4"> Contribuintes </a></li>
+          <li class="nav-item"><a class="nav-link comunidade" href="contato.html"> Contato </a></li>
+
+          <!-- Opções para mobile -->
+          <li class="nav-item d-lg-none mt-3">
+            <a class="btn perfil w-100" href="login.html"> Entrar </a>
+          </li>
+          <li class="nav-item d-lg-none mt-2 mb-3">
+            <a class="btn sair w-100" href="cadastro.html"> Cadastrar </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Botões para desktop -->
+      <div class="d-none d-lg-flex align-items-center gap-2 position-absolute end-0 me-4">
+        <a class="btn perfil" href="login.html"> Entrar </a>
+        <a class="btn sair" href="cadastro.html"> Cadastrar </a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+  <!-- Fundo1 -->
+  <div class="fundo1" id="fundo1">
+    <div class="txt1">
+      <h1><strong>MeEnsina!</strong></h1>
+      <p>O MeEnsina! é um site criado para ajudar você a realizar pequenas instalações e manutenções em casa. 
+        Encontre tutoriais simples, dicas práticas e guias passo a passo para aprender a consertar, montar e 
+        instalar diferentes itens domésticos de forma fácil e segura.</p>
+    </div>
+    <img src="img/img1.png" alt="Imagem ilustrativa sobre manutenção doméstica">
+  </div>
+
+  <!-- Fundo2 / Categorias -->
+  <div id="fundo2">
+    <section class="container py-5" id="categorias">
+      <h2 class="text-center mb-4">Categorias de Tutoriais</h2>
+      <div class="row g-4">
+
+        <!-- Categoria 1 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body text-center">
+              <img src="img/lampada.png" width="70" alt="Elétrica" class="mb-3">
+              <h5 class="card-title">Instalações Elétricas</h5>
+              <p class="card-text">Aprenda a trocar chuveiros, tomadas, interruptores e lâmpadas com segurança.</p>
+              <a href="categorias.html?tipo=eletrico" class="btn btn-primary">Ver tutoriais</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Categoria 2 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body text-center">
+              <img src="img/torneira.png" width="70" alt="Hidráulica" class="mb-3">
+              <h5 class="card-title">Hidráulica Básica</h5>
+              <p class="card-text">Conserte vazamentos, troque torneiras e aprenda sobre conexões e vedações.</p>
+              <a href="categorias.html?tipo=hidraulico" class="btn btn-primary">Ver tutoriais</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Categoria 3 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body text-center">
+              <img src="img/moveis.png" width="70" alt="Montagem" class="mb-3">
+              <h5 class="card-title">Montagem de Móveis</h5>
+              <p class="card-text">Aprenda passo a passo a montar prateleiras, mesas e cadeiras com praticidade.</p>
+              <a href="categorias.html?tipo=moveis" class="btn btn-primary">Ver tutoriais</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+  <!-- Busca -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Aprenda a instalar e fazer manutenção em itens domésticos</h2>
+    <section class="d-flex justify-content-center">
+      <div class="input-group w-75 shadow-sm">
+        <input type="text" id="campoBusca" class="form-control" placeholder="Ex: chuveiro Lorenzetti, torneira, ventilador...">
+        <button class="btn btn-primary" onclick="buscar()">Buscar</button>
+      </div>
+    </section>
+  </div>
+
+  <!-- Resultados -->
+  <div class="container mb-5">
+    <section id="resultado" class="bg-white p-4 rounded shadow-sm">
+      <p class="text-secondary text-center">Busque tutoriais usando o campo acima.</p>
+    </section>
+  </div>
+
+  <!-- Fundo4 -->
+  <div id="fundo4">
+    <section class="py-5 fundo4" id="envio-tutorial">
+      <div class="container">
+        <h2 class="text-center text-primary mb-4">Envie seu Tutorial</h2>
+        <p class="text-center text-secondary mb-5">
+          Tem alguma dica ou tutorial que gostaria de compartilhar? Envie seu vídeo e passo a passo, nosso administrador irá avaliar e publicar se aprovado!
+        </p>
+
+        <form class="row g-3 needs-validation" novalidate id="formTutorial">
+          <div class="col-md-6">
+            <label for="nome" class="form-label">Seu nome</label>
+            <input type="text" class="form-control" id="nome" required>
+            <div class="invalid-feedback">Por favor, informe seu nome.</div>
+          </div>
+
+          <div class="col-md-6">
+            <label for="email" class="form-label">E-mail</label>
+            <input type="email" class="form-control" id="email" required>
+            <div class="invalid-feedback">Por favor, informe um e-mail válido.</div>
+          </div>
+
+          <div class="col-12">
+            <label for="titulo" class="form-label">Título do tutorial</label>
+            <input type="text" class="form-control" id="titulo" required>
+            <div class="invalid-feedback">Por favor, informe o título do tutorial.</div>
+          </div>
+
+          <div class="col-12">
+            <label for="passos" class="form-label">Passo a passo</label>
+            <textarea class="form-control" id="passos" rows="5" required></textarea>
+            <div class="invalid-feedback">Por favor, descreva os passos do tutorial.</div>
+          </div>
+
+          <div class="col-12">
+            <label for="video" class="form-label">Link do vídeo (YouTube ou outro)</label>
+            <input type="url" class="form-control" id="video" placeholder="https://youtube.com/..." required>
+            <div class="invalid-feedback">Por favor, insira o link do vídeo.</div>
+          </div>
+
+          <div class="col-12 text-center">
+            <button class="btn btn-primary btn-lg" type="submit">Enviar Tutorial</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
+
+  <!-- Comentários -->
+  <section class="container my-5" id="comentarios">
+    <h2 class="text-center mb-4">Comentários</h2>
+
+    <!-- Formulário -->
+    <div class="card mb-4 shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">Deixe seu comentário</h5>
+        <form id="formComentario">
+          <div class="mb-3">
+            <input type="text" class="form-control" id="nomeComentario" placeholder="Seu nome" required>
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control" id="textoComentario" rows="3" placeholder="Escreva seu comentário..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Carrossel -->
+    <h2 class="text-center mb-4">O que estão dizendo sobre o MeEnsina</h2>
+
+    <div id="carouselComentarios" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner" id="carouselInner">
+
+        <!-- Comentários fixos -->
+        <div class="carousel-item active">
+          <div class="card mx-auto shadow-sm" style="max-width: 600px;">
+            <div class="card-body text-center">
+              <h5 class="card-title">Daniel Moraes</h5>
+              <p class="card-text">“O MeEnsina me ajudou muito a encontrar tutoriais práticos e rápidos. Interface fácil e intuitiva!”</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="card mx-auto shadow-sm" style="max-width: 600px;">
+            <div class="card-body text-center">
+              <h5 class="card-title">Fábio Martins</h5>
+              <p class="card-text">“Excelente plataforma! Encontrei conteúdos de qualidade e bem explicados.”</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="card mx-auto shadow-sm" style="max-width: 600px;">
+            <div class="card-body text-center">
+              <h5 class="card-title">Italo Mendes</h5>
+              <p class="card-text">“Recomendo demais! Aprender nunca foi tão fácil com o MeEnsina.”</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="card mx-auto shadow-sm" style="max-width: 600px;">
+            <div class="card-body text-center">
+              <h5 class="card-title">Maíra Polonio</h5>
+              <p class="card-text">“Mesmo morando sozinha, aprendi a fazer manutenção dos itens da casa facilmente com o MeEnsina!😊”</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controles -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselComentarios" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselComentarios" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Próximo</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Script Comentários -->
+  <script>
+    const form = document.getElementById("formComentario");
+    const carouselInner = document.getElementById("carouselInner");
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const nome = document.getElementById("nomeComentario").value.trim();
+      const texto = document.getElementById("textoComentario").value.trim();
+
+      if (!nome || !texto) return;
+
+      const item = document.createElement("div");
+      item.classList.add("carousel-item");
+
+      item.innerHTML = `
+        <div class="card mx-auto shadow-sm" style="max-width: 600px;">
+          <div class="card-body text-center">
+            <h5 class="card-title">${nome}</h5>
+            <p class="card-text">${texto}</p>
+          </div>
+        </div>
+      `;
+
+      carouselInner.appendChild(item);
+      form.reset();
+      alert("Seu comentário foi adicionado com sucesso!");
+    });
+  </script>
+
+  <!-- Footer -->
+  <footer class="bg-light text-center py-3 border-top">
+    <p class="mb-0 text-secondary">© 2025 MeEnsina! — Seu guia de manutenção doméstica</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

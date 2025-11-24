@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil do Usuário</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* Corpo */
+    body {
+      background-color: #f5f6fa;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Card perfil */
+    .perfil-card {
+      max-width: 500px;
+      margin: 60px auto;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      background: #fff;
+      padding: 30px;
+      text-align: center;
+    }
+
+  
+    .perfil-img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+      border: 3px solid #3F88C5;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .perfil-img:hover {
+       opacity: 0.8; 
+    }
+
+  
+    .btn-editar {
+      background-color: #3F88C5;
+      color: #fff;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 30px;
+      margin-top: 15px;
+      transition: 0.3s;
+    }
+    .btn-editar:hover {
+      background-color: #053E61;
+      transform: scale(1.02);
+    }
+
+    .btn-sair {
+      background-color: rgb(255, 133, 133);
+      color: #fff;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 30px;
+      margin-top: 15px;
+      transition: 0.3s;
+    }
+    .btn-sair:hover {
+      background-color: red;
+      transform: scale(1.02);
+    }
+
+   
+    #inputFoto { display: none; }
+    .texto-clique { font-size: 0.9rem; color: #888; }
+
+    label { display: flex; color: #888; }
+
+  
+    .btn-perfil {
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      background-color: #3F88C5;
+      color: #fff;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+    .btn-perfil:hover {
+      background-color: #053E61;
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Card perfil -->
+  <div class="perfil-card">
+
+    <!-- Botão voltar -->
+    <button onclick="voltarPagina()" class="btn-perfil" style="height: 50px; align-self: start;">
+      ← Voltar
+    </button>
+
+    <!-- Foto usuário -->
+    <div style="position: relative; display: inline-block;">
+      <img id="fotoUsuario" src="img/usuario.png" alt="Foto do Usuário" class="perfil-img">
+      <input type="file" id="inputFoto" accept="image/*">
+    </div>
+    <p class="texto-clique">Clique na foto para alterar</p>
+
+    <!-- Dados principais -->
+    <h3 id="nomeUsuario">Nome do Usuário</h3>
+    <p id="emailUsuario" class="text-muted">email@exemplo.com</p>
+
+    <hr>
+
+    <!-- Informações adicionais -->
+    <h5 class="text-start">Informações adicionais</h5>
+    <label>Data de nascimento:</label>
+    <input type="date" id="infoAdicional" class="form-control mb-3">
+
+    <label>Telefone:</label>
+    <input type="text" id="infoAdicional" class="form-control mb-3" placeholder="(11) 12345-6789">
+
+    <label>Endereço:</label>
+    <input type="text" id="infoAdicional" class="form-control mb-3" placeholder="Endereço...">
+
+    <label>Cidade:</label>
+    <input type="text" id="infoAdicional" class="form-control mb-3" placeholder="Cidade...">
+
+    <!-- Botões -->
+    <button class="btn-editar w-100">Salvar informações</button>
+    <button class="btn-sair w-100" id="sair" onclick="sair()">Sair</button>
+  </div>
+
+  <!-- Script perfil -->
+  <script>
+    const usuarioLocal = JSON.parse(localStorage.getItem("usuarioLogado"));
+    const API_URL = "https://68ecdd76eff9ad3b14039a17.mockapi.io/usuarios";
+    const imagemPadrao = "img/usuario.png";
+
+    // Verificação login
+    if (!usuarioLocal || !usuarioLocal.id) {
+      alert("Você precisa estar logado para acessar o perfil!");
+      window.location.href = "login.html";
+    } else {
+      carregarPerfil(usuarioLocal.id);
+    }
+
+    // Carregar perfil
+    async function carregarPerfil(id) {
+      try {
+        const resposta = await fetch(`${API_URL}/${id}`);
+        if (!resposta.ok) throw new Error("Erro ao buscar perfil");
+        const usuario = await resposta.json();
+
+        document.getElementById("nomeUsuario").textContent = usuario.nome;
+        document.getElementById("emailUsuario").textContent = usuario.email;
+        document.getElementById("fotoUsuario").src = usuario.foto || imagemPadrao;
+        document.getElementById("infoAdicional").value = usuario.infoAdicional || "";
+
+      } catch (erro) {
+        console.error("Erro:", erro);
+        alert("Erro ao carregar dados do perfil.");
+      }
+    }
+
+    // Alterar foto
+    document.getElementById("fotoUsuario").addEventListener("click", () => {
+      document.getElementById("inputFoto").click();
+    });
+
+    document.getElementById("inputFoto").addEventListener("change", async (e) => {
+      const arquivo = e.target.files[0];
+      if (!arquivo) return;
+
+      const reader = new FileReader();
+      reader.onload = async () => {
+        const novaFoto = reader.result;
+        try {
+          const resposta = await fetch(`${API_URL}/${usuarioLocal.id}`, {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ foto: novaFoto })
+          });
+          if (!resposta.ok) throw new Error("Erro ao atualizar foto");
+
+          document.getElementById("fotoUsuario").src = novaFoto;
+          usuarioLocal.foto = novaFoto;
+          localStorage.setItem("usuarioLogado", JSON.stringify(usuarioLocal));
+          alert("Foto atualizada com sucesso!");
+        } catch (erro) {
+          console.error("Erro:", erro);
+          alert("Erro ao atualizar foto.");
+        }
+      };
+      reader.readAsDataURL(arquivo);
+    });
+
+    // Salvar info
+    document.querySelector(".btn-editar").addEventListener("click", async () => {
+      const info = document.getElementById("infoAdicional").value.trim();
+      try {
+        const resposta = await fetch(`${API_URL}/${usuarioLocal.id}`, {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ infoAdicional: info })
+        });
+        if (!resposta.ok) throw new Error("Erro ao salvar informações");
+        alert("Informações salvas com sucesso!");
+      } catch (erro) {
+        console.error("Erro:", erro);
+        alert("Erro ao salvar as informações adicionais.");
+      }
+    });
+
+    // Sair
+    function sair() {
+      const sair = document.getElementById('sair');
+      if (sair) {
+        window.location.href = "index.html";
+      }
+    }
+
+    // Voltar
+    function voltarPagina() {
+      window.history.back();
+    }
+  </script>
+</body>
+</html>
