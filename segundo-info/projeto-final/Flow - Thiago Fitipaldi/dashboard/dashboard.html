@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Flow - Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <script src="dashboard.js"></script>
+  <script src="dashboard-graf.js"></script>
+  <script src="inshgt.js"></script>
+</head>
+<body>
+  <main class="wrap">
+
+    <header class="header-card">
+      <div class="saldo-titulo">Seu Saldo</div>
+      <div id="saldo" class="valor">R$ 0,00</div>
+    </header>
+
+    <section class="grid grid-2">
+      <div class="card-receita">
+        <h3>Adicionar Receitas</h3>
+        <label class="field">
+          <span class="label">Valor</span>
+          <input id="input-receita" type="text" placeholder="R$ 0,00">
+        </label>
+
+        <div class="historico-rec">
+          <small>Histórico de receitas</small>
+          <ul id="receita-historico">
+            <li>...</li>
+          </ul>
+        </div>
+
+        <button id="add-receita" class="btn-green">Adicionar Receita</button>
+      </div>
+
+      <div class="card-despesa">
+        <h3>Adicionar Despesas</h3>
+        <label class="field">
+          <span class="label">Valor</span>
+          <input id="input-despesa" type="text" placeholder="R$ 0,00">
+        </label>
+
+        <label class="field">
+          <span class="label">Categoria</span>
+          <select id="categoria">
+            <option>Comida</option>
+            <option>Transporte</option>
+            <option>Moradia</option>
+            <option>Lazer</option>
+            <option>Outros</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span class="label">Descrição</span>
+          <input id="descricao" type="text" placeholder="Almoço, Netflix, Conta...">
+        </label>
+
+        <button id="add-despesa" class="btn-red">Adicionar Despesa</button>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card-pizza">
+        <h3>Distribuição de Gastos</h3>
+        <div id="chart-root" class="pie-placeholder" aria-hidden="true"></div>
+      </div>
+
+      <div class="card-dica">
+        <h3>Insights</h3>
+        <p id="insights">Reveja assinaturas e defina metas de poupança.</p>
+      </div>
+    </section>
+
+    <section class="card-historico">
+      <h3>Histórico de Transações</h3>
+      <div id="transacoes" class="transacoes">
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

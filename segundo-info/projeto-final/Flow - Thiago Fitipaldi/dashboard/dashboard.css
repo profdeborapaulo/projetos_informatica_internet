@@ -1,0 +1,168 @@
+:root{
+  --teal:#0b8b81;
+  --teal-dark:#06675f;
+  --bg:#ffffff;
+  --muted:#7a7a7a;
+  --card-border:#111;
+  --radius:8px;
+  --pad:18px;
+  --max:1100px;
+}
+
+
+*{box-sizing:border-box}
+
+html,body{
+  height:100%;
+  margin:0;
+  background:var(--bg);
+  font-family:'Poppins',sans-serif;
+  color:#111
+}
+.wrap{
+  max-width:var(--max);
+  margin:28px auto;
+  padding:0 20px;
+  display:flex;
+  flex-direction:column;
+  gap:20px
+}
+
+.header-card{
+  background:var(--teal);
+  color:#fff;
+  border-radius:12px;
+  padding:22px;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  width:100%;
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+}
+.saldo-titulo{
+  font-weight:600;
+  opacity:0.95
+}
+.valor{
+  font-size:28px;
+  font-weight:700
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px
+}
+.grid-2{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px
+}
+
+.card-receita,
+.card-despesa,
+.card-pizza,
+.card-dica,
+.card-historico{
+  background:#fff;
+  border:2px solid var(--card-border);
+  border-radius:8px;
+  padding:18px;
+  min-height:160px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+.card-receita h3,
+.card-despesa h3,
+.card-pizza h3,
+.card-dica h3,
+.card-historico h3{
+  margin:0;
+  font-weight:600
+}
+
+.input-receita input,
+.field input,
+.field select{
+  width:100%;
+  padding:10px;
+  border:2px solid #111;
+  border-radius:4px;
+  font-size:14px;
+  background:transparent;
+}
+
+.btn-green, .btn-red{
+  padding:12px 16px;
+  border-radius:6px;
+  border:0;
+  color:#fff;
+  font-weight:600;
+  cursor:pointer;
+  width:100%;
+}
+.btn-green{background:#00cfa5}
+.btn-red{background:#e33a3a}
+
+.historico-rec{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  font-size:13px;
+  color:#333
+}
+.historico-rec ul{
+  margin:0;
+  padding-left:18px
+}
+
+
+
+.card-dica p{
+  margin:0;
+  font-size:14px;
+  color:#222
+}
+
+
+.card-historico{
+  grid-column:1 / -1;
+  min-height:220px
+}
+.transaçoes, .transacoes, #transações {
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+.tx{
+  padding:10px;
+  border-radius:6px;
+  background:transparent;
+  border-bottom:1px dashed rgba(0,0,0,0.06)
+}
+.tx-amount{
+  font-weight:600
+}
+.tx-desc,.tx-date{
+  font-size:13px;
+  color:#333
+}
+
+.field{
+  display:block
+}
+.label{
+  display:block;
+  margin-bottom:6px;
+  color:var(--muted);
+  font-size:13px
+}
+
+@media (max-width:900px){
+  .grid{grid-template-columns:1fr}
+  .grid-2{grid-template-columns:1fr}
+  .pie-placeholder{width:140px;height:140px}
+  .valor{font-size:22px}
+}

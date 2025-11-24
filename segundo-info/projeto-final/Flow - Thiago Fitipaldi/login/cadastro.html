@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flow - Cadastro</title>
+    <link rel="stylesheet" href="/login/style.css">
+    <script type="module" src="cadastro.js"></script>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="brand">
+                <img src="/img/logo-Flow.png" alt="Flow" class="logo">
+            </a>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="card">
+            <h1>Criar Conta</h1>
+            <p class="frase">Comece a organizar suas finanças em poucos passos.</p>
+            
+      <form id="cadastro" action="#" method="post" novalidate>
+        <label class="nome">
+          <span class="label">Nome completo</span>
+          <input type="text" name="name" placeholder="Seu nome" required>
+        </label>
+
+        <label class="nome">
+          <span class="label">E‑mail</span>
+          <input type="email" name="email" placeholder="seu@exemplo.com" required>
+        </label>
+
+        <label class="nome">
+          <span class="label">Senha</span>
+          <input type="senha" name="senha" placeholder="••••••••" required>
+        </label>
+
+        <label class="nome">
+          <span class="label">Confirmar senha</span>
+          <input type="senha_con" name="senha_con" placeholder="••••••••" required>
+        </label>
+
+        <label class="concordo">
+          <input type="checkbox" name="terms" required>
+          <span>Li e concordo com os <a href="#" class="link-sm">termos de uso</a>.</span>
+        </label>
+
+        <button type="submit" class="botao">Criar Conta</button>
+
+        <div class="signup">
+            <span>Já possui uma conta? <a href="login.html" class="link-sm">Entrar</a></span>
+        </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+    <p>© 2025 Flow — Sua parceira financeira</p>
+  </footer>
+    
+</body>
+</html>

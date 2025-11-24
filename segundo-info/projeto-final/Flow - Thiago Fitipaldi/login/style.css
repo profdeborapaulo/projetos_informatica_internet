@@ -1,0 +1,186 @@
+:root{
+  --teal:#0b8b81;
+  --teal-dark:#06675f;
+  --bg:#ffffff;
+  --muted:#7a7a7a;
+  --card-bg:#f7f7f7;
+  --radius:10px;
+  --max:900px;
+}
+
+*{box-sizing:border-box}
+
+html,body{
+  height:100%;
+  margin:0;
+  font-family:Montserrat, sans-serif;
+  background:var(--bg);
+  color:#111;
+}
+.container{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:0 18px;
+}
+
+.header{
+  background:transparent;
+  padding:18px 0;
+  border-bottom:1px solid rgba(0,0,0,0.04);
+  position:relative;
+  z-index:3;
+}
+.header .brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+  color:inherit;
+}
+.logo{
+  width:42px;
+  height:auto;
+  display:block;
+}
+
+.main{
+  position:relative;
+  min-height:72vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:28px 18px;
+  z-index:1;
+}
+
+.main::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(6,103,95,0.72), rgba(11,139,129,0.45)),
+    url('/img/fundo.avif');
+  background-size:cover;
+  background-position:center;
+  filter:contrast(0.95) saturate(0.95);
+  z-index:0;
+}
+
+.card{
+  position:relative;
+  z-index:2;
+  width:100%;
+  max-width:420px;
+  background: rgba(255,255,255,0.92);
+  border-radius:var(--radius);
+  padding:26px;
+  box-shadow:0 12px 30px rgba(6,103,95,0.18);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(0,0,0,0.06);
+}
+.card h1
+{margin:0 0 8px;
+  font-size:22px
+}
+.frase, .muted{
+  color:var(--muted);
+  font-size:14px;
+  margin-bottom:14px
+}
+
+.nome{
+  display:block;
+  margin-bottom:12px
+}
+.nome .label{
+  display:block;
+  font-size:13px;
+  color:var(--muted);
+  margin-bottom:6px
+}
+.nome input,
+.nome select{
+  width:100%;
+  padding:10px 12px;
+  border:1px solid rgba(0,0,0,0.14);
+  border-radius:6px;
+  font-size:15px;
+  background: rgba(255,255,255,0.96);
+}
+
+.concordo, .checkbox{
+  display:flex;
+  align-items:center;
+  gap:8px;font-size:14px;
+  color:var(--muted);
+  margin-bottom:12px
+}
+.concordo input{
+  transform:scale(1.02);
+  margin-right:8px
+}
+
+.botao{
+  display:inline-block;
+  padding:12px 14px;
+  border-radius:8px;
+  border:0;
+  cursor:pointer;
+  font-weight:600;
+  background:var(--teal);
+  color:#fff;
+  width:100%;
+  margin-top:6px;
+}
+
+.link-sm{
+  font-size:13px;
+  color:var(--teal-dark);
+  text-decoration:none
+}
+.link-sn{
+  font-size:13px;
+  color:var(--teal-dark);
+  text-decoration:none
+}
+.link{
+  color:var(--teal-dark);
+  font-weight:600;
+  text-decoration:none
+}
+
+.signup, .signup-cta{
+  margin-top:12px;
+  display:flex;
+  gap:8px;
+  align-items:center;
+  justify-content:center;
+  font-size:14px;
+  color:var(--muted)
+}
+
+.footer{
+  position:relative;
+  z-index:3;
+  text-align:center;
+  padding:18px 0;
+  color:var(--muted);
+  font-size:13px
+}
+
+@media (
+  max-width:480px
+  ){
+  .card{
+    padding:18px
+  }
+  .container{
+    padding:0 12px
+  }
+  .logo{
+    width:36px
+  }
+  .main::before{
+    background-position: center top
+  }
+}

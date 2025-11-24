@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flow - Login</title>
+    <link rel="stylesheet" href="/login/style.css">
+    <script type="module" src="cadastro.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="brand">
+                <img src="/img/logo-Flow.png" alt="Flow" class="logo">
+            </a>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="card">
+            <h1>Entrar</h1>
+            <p class="muted"> Acesse sua conta para gerenciar suas finanças.</p>
+
+            <form  id="login" action="#" method="post" novalidate>
+                <label class="nome">
+                    <span class="label">E-mail</span>
+                    <input type="email" name="email" placeholder="seu@exemplo" required>
+                </label>
+
+        <label class="nome">
+          <span class="label">Senha</span>
+          <input type="senha" name="senha" placeholder="••••••••" required>
+        </label>
+
+        <div class="row">
+            <label class="checkbox">
+                <input type="checkbox" name="Lembrar-me">
+                <span>Lembrar-me</span>
+            </label>
+            <a href="#" class="link-sn">Esqueceu sua senha</a>
+        </div>
+
+        <button type="submit" class="botao">Entrar</button>
+
+        <div class="signup-cta">
+            <span>Ainda não possui uma conta?</span>
+            <a href="cadastro.html" class="link">Crie uma Conta</a>
+        </div>
+
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+    <p>© 2025 Flow — Sua parceira financeira</p>
+  </footer>
+
+</body>
+</html>
