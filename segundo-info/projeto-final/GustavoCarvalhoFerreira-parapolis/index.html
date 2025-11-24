@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>ParaPolis — Transparência Política</title>
+</head>
+
+<body>
+    <header class="topbar" role="banner">
+        <div class="brand" aria-hidden>
+            <img class="logo" src="logo.png" alt="ParaPolis Logo">
+            <div>
+                <h1>PARAPOLIS</h1>
+                <small>Transparência que transforma. Democracia que aproxima.</small>
+            </div>
+        </div>
+    </header>
+
+    <main class="container" role="main">
+        <div class="page-head">
+            <div class="page-title">
+                <h2>Parapolis</h2>
+                <p>Transparência e controle social sobre as atividades políticas no Brasil</p>
+            </div>
+
+            
+          
+            <div class="page-actions">
+                <button class="btn primary" id="focusBtn" aria-expanded="false">Foco no político</button>
+
+                <div id="focusSearch" class="focus-search" aria-hidden="true">
+                    <input id="focusInput" type="search" placeholder="Buscar político (nome)..."
+                        aria-label="Buscar político">
+                    <ul id="focusResults" class="focus-results" role="listbox" aria-label="Resultados da busca"></ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- resto do conteúdo (mantive seu HTML original) -->
+        <div class="tabs" role="tablist" aria-label="Seções do site">
+            <div class="tab active" data-target="dash">Visão Geral</div>
+            <div class="tab" data-target="reps">Representantes</div>
+            <div class="tab" data-target="proj">Projetos</div>
+            <div class="tab" data-target="hist">Histórico</div>
+        </div>
+
+        <div class="grid" id="dash">
+            <div class="card kpi">
+                <div class="label">Projetos Ativos</div>
+                <div class="value">59.282 <span>em andamento</span></div>
+            </div>
+            <div class="card kpi">
+                <div class="label">Projetos Aprovados</div>
+                <div class="value">200 <span>este ano</span></div>
+            </div>
+            <div class="card kpi">
+                <div class="label">Taxa de Aprovação</div>
+                <div class="value">0,33% <span>do total</span></div>
+            </div>
+            <div class="card panel-large">
+                <div class="section-title">
+                    <h3>Status dos Projetos</h3>
+                    <div class="muted">Distribuição por status atual</div>
+                </div>
+                <div class="status-blocks">
+                    <div class="status-block approved-status">
+                        <div class="block-title">Aprovados</div>
+                        <div class="muted">0,33% do total</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width:10%"></div>
+                        </div>
+                    </div>
+                    <div class="status-block pending-status">
+                        <div class="block-title">Em tramitação</div>
+                        <div class="muted">99,4% do total</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width:85%"></div>
+                        </div>
+                    </div>
+                    <div class="status-block rejected-status">
+                        <div class="block-title">Rejeitados</div>
+                        <div class="muted">0,13% do total</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width:5%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="top-reps-section">
+                    <div class="section-title">
+                        <h3>Representantes Mais Ativos</h3>
+                        <div class="muted">Top 5 por número de projetos ativos</div>
+                    </div>
+
+
+
+                    <div class="mini-list">
+                        <div class="mini-item">
+                            <div class="left">
+                                <img class="rep-photo" src="erika.png" alt="Erika Hilton">
+                                <div>
+                                    <div class="rep-name">Erika Hilton</div>
+                                    <div class="rep-party">PSOL · SP</div>
+                                </div>
+                            </div>
+                            <div class="rep-projects-count">
+                                <div class="project-num">18</div>
+                                <div class="project-label">projetos</div>
+                            </div>
+                        </div>
+                        <div class="mini-item">
+                            <div class="left">
+                                <img class="rep-photo" src="kim.png" alt="Kim Kataguiri">
+                                <div>
+                                    <div class="rep-name">Kim Kataguiri</div>
+                                    <div class="rep-party">UNIÃO · SP</div>
+                                </div>
+                            </div>
+                            <div class="rep-projects-count">
+                                <div class="project-num">16</div>
+                                <div class="project-label">projetos</div>
+                            </div>
+                        </div>
+                        <div class="mini-item">
+                            <div class="left">
+                                <img class="rep-photo" src="tabata.png" alt="Kim Kataguiri">
+                                <div>
+                                    <div class="rep-name">Tabata Amaral</div>
+                                    <div class="rep-party">PSB · SP</div>
+                                </div>
+                            </div>
+                            <div class="rep-projects-count">
+                                <div class="project-num">14</div>
+                                <div class="project-label">projetos</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card panel-side">
+                <div class="section-title">
+                    <h3>Projetos por Partido</h3>
+                    <div class="muted">Total de projetos ativos por partido</div>
+                </div>
+                <div class="party-projects-list">
+                    <div class="party-item">
+                        <div class="muted">PSOL</div>
+                        <div class="project-count">48</div>
+                    </div>
+                    <div class="party-item">
+                        <div class="muted">Pt</div>
+                        <div class="project-count">27</div>
+                    </div>
+                    <div class="party-item">
+                        <div class="muted">PL</div>
+                        <div class="project-count">27</div>
+                    </div>
+                    <div class="party-item">
+                        <div class="muted">União</div>
+                        <div class="project-count">16</div>
+                    </div>
+                    <div class="party-item">
+                        <div class="muted">PSB</div>
+                        <div class="project-count">14</div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="rep-grid-container">
+             <article class="rep-card" data-id="7">
+    <img class="rep-photo" src="chris.png" alt="Chris Tonietto">
+    <div class="rep-info">
+        <h4>Chris Tonietto</h4>
+        <small>Deputada Federal · PL · RJ</small>
+    </div>
+
+    <div class="rep-stats">
+        <div class="num">9</div>
+        <div class="sub">Projetos Ativos</div>
+        <div class="progress-bar-rep">
+            <div class="progress-fill-rep" style="width:90%"></div>
+        </div>
+    </div>
+
+    <div class="rep-actions">
+        <button class="btn" data-action="details" data-name="Chris Tonietto">Ver Detalhes</button>
+    </div>
+</article>
+
+
+
+                <article class="rep-card" data-id="2"> <img class="rep-photo" src="nicolas.png" alt="Nicolas Ferreira">
+                    <div class="rep-info">
+                        <h4>Nicolas Ferreira</h4> <small>Deputado Federal · PL · MG</small>
+                    </div>
+                    <div class="rep-stats">
+                        <div class="num">11</div>
+                        <div class="sub">Projetos Ativos</div>
+                        <div class="progress-bar-rep">
+                            <div class="progress-fill-rep" style="width:88%"></div>
+                        </div>
+                    </div>
+                    <div class="rep-actions"> <button class="btn" data-action="details" data-name="Nicolas Ferreira">Ver
+                            Detalhes</button> </div>
+                </article>
+
+
+
+                <article class="rep-card" data-id="3"> <img class="rep-photo" src="erika.png" alt="Erika Hilton">
+                    <div class="rep-info">
+                        <h4>Erika Hilton</h4> <small>Deputada Federal · PSOL · SP</small>
+                    </div>
+                    <div class="rep-stats">
+                        <div class="num">18</div>
+                        <div class="sub">Projetos Ativos</div>
+                        <div class="progress-bar-rep">
+                            <div class="progress-fill-rep" style="width:96%"></div>
+                        </div>
+                    </div>
+                    <div class="rep-actions"> <button class="btn" data-action="details" data-name="Erika Hilton">Ver
+                            Detalhes</button> </div>
+                </article>
+
+
+
+                <article class="rep-card" data-id="4"> <img class="rep-photo"
+                        src="tabata.png"
+                        alt="Tabata Amaral">
+                    <div class="rep-info">
+                        <h4>Tabata Amaral</h4> <small>Deputada Federal · PSB · SP</small>
+                    </div>
+                    <div class="rep-stats">
+                        <div class="num">14</div>
+                        <div class="sub">Projetos Ativos</div>
+                        <div class="progress-bar-rep">
+                            <div class="progress-fill-rep" style="width:97%"></div>
+                        </div>
+                    </div>
+                    <div class="rep-actions"> <button class="btn" data-action="details" data-name="Tabata Amaral">Ver
+                            Detalhes</button> </div>
+                </article>
+                <article class="rep-card" data-id="5"> <img class="rep-photo" src="wendel.png" alt="Wendel Lagartixa">
+                    <div class="rep-info">
+                        <h4>Wendel Lagartixa</h4> <small>Deputado Estadual · PL · RN</small>
+                    </div>
+                    <div class="rep-stats">
+                        <div class="num">7</div>
+                        <div class="sub">Projetos Ativos</div>
+                        <div class="progress-bar-rep">
+                            <div class="progress-fill-rep" style="width:91%"></div>
+                        </div>
+                    </div>
+                    <div class="rep-actions"> <button class="btn" data-action="details" data-name="Wendel Lagartixa">Ver
+                            Detalhes</button> </div>
+                </article>
+                <article class="rep-card" data-id="6"> <img class="rep-photo"
+                        src="kim.png"
+                        alt="Kim Kataguiri">
+                    <div class="rep-info">
+                        <h4>Kim Kataguiri</h4> <small>Deputado Federal · UNIÃO · SP</small>
+                    </div>
+                    <div class="rep-stats">
+                        <div class="num">16</div>
+                        <div class="sub">Projetos Ativos</div>
+                        <div class="progress-bar-rep">
+                            <div class="progress-fill-rep" style="width:89%"></div>
+                        </div>
+                    </div>
+                    <div class="rep-actions"> <button class="btn" data-action="details" data-name="Kim Kataguiri">Ver
+                            Detalhes</button> </div>
+                </article>
+            </div>
+
+            <div class="projects-wrap">
+                <div class="section-title">
+                    <h3>Projetos em Destaque</h3>
+                    <div class="muted">Entenda os principais projetos em tramitação</div>
+                </div>
+                <div class="accordion" data-acc>
+                    <div class="acc-head">
+                        <div>
+                            <div class="acc-title">PL 18/2025 — Segurança Pública</div>
+                            <div class="muted">Transmitação · Segurança</div>
+                        </div>
+                        <div class="tags">
+                            <div class="tag">Em transmitação</div>
+                        </div>
+                    </div>
+                    <div class="acc-body"> O PL 18/2025 muda regras da Lei do Caminhoneiro para ajustar a fiscalização
+                        de caminhões com eixos suspensos que têm isenção de pedágio. </div>
+                </div>
+                <div class="accordion" data-acc>
+                    <div class="acc-head">
+                        <div>
+                            <div class="acc-title">PEC 3/21 — PEC da Blindagem</div>
+                            <div class="muted">Rejeitada pela CCJ · política</div>
+                        </div>
+                        <div class="tags">
+                            <div class="tag">Negado</div>
+                        </div>
+                    </div>
+                    <div class="acc-body"> A PEC 3/21 quer dar mais proteção a deputados e senadores, tornando mais
+                        difícil processá-los por crimes sem autorização do próprio Congresso. </div>
+                </div>
+                <div class="accordion" data-acc>
+                    <div class="acc-head">
+                        <div>
+                            <div class="acc-title">PDL 3/25 — antiaborto</div>
+                            <div class="muted">Aprovado em 1ª votação · saúde</div>
+                        </div>
+                        <div class="tags">
+                            <div class="tag">Aprovado</div>
+                        </div>
+                    </div>
+                    <div class="acc-body"> O PDL 3/25 cancela uma resolução do Conanda que tratava de diretrizes para
+                        casos de aborto em crianças e adolescentes vítimas de estupro. </div>
+                </div>
+            </div>
+
+            <div class="table-wrap card">
+                <div class="section-title">
+                    <h3>Histórico Recente</h3>
+                    <div class="muted">Últimos projetos e decisões</div>
+                </div>
+                <table aria-label="histórico de projetos">
+                    <thead>
+                        <tr>
+                            <th>Projeto</th>
+                            <th>Autor</th>
+                            <th>Partido</th>
+                            <th>Status</th>
+                            <th>Data</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>PDL 3/25 — antiaborto</td>
+                            <td>Chris Tonietto</td>
+                            <td>PL</td>
+                            <td><span class="status approved">Aprovado</span></td>
+                            <td>05/11/2025</td>
+                        </tr>
+                        <tr>
+                            <td>PEC 3/21 - PEC da Blindagem</td>
+                            <td>Celso Sabino</td>
+                            <td>PSDB</td>
+                            <td><span class="status rejected">Rejeitado</span></td>
+                            <td>24/09/2025</td>
+                        </tr>
+                        <tr>
+                            <td>PL 18/2025 — Segurança Pública</td>
+                            <td>Ricardo Lewandowski</td>
+                            <td>Poder Executivo</td>
+                            <td><span class="status pending">Em tramitação</span></td>
+                            <td>23/04/2025</td>
+                        </tr>
+                        <tr>
+                            <td>PL PopRua — Lei da População em Situação de Rua</td>
+                            <td>Erika Hilton</td>
+                            <td>PSOL</td>
+                            <td><span class="status approved">Aprovado</span></td>
+                            <td>17/01/2024</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </main>
+    <div class="overlay" id="overlay" aria-hidden="true">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button class="close" id="closeModal" aria-label="Fechar">✕</button>
+            <div class="profile">
+                <div class="photo" id="modalPhoto"></div>
+                <div>
+                    <h3 id="modalName">Nome</h3>
+                    <small id="modalRole">Cargo · Partido · Estado</small>
+                    <div class="modal-tag-container"> <span class="tag" id="modalTag">PT · SP</span> </div>
+                </div>
+            </div>
+            <div class="bio" id="modalBio"> Biografia breve do(a) representante. </div>
+            <div class="modal-stats">
+                <div class="stat-card">
+                    <div class="muted">Projetos Ativos</div>
+                    <div class="big" id="modalProjects">12</div>
+                </div>
+                <div class="stat-card">
+                    <div class="muted">Presença em Votações</div>
+                    <div class="big" id="modalPresence">94%</div>
+                </div>
+            </div>
+            <div class="modal-actions"> <button class="btn">Projetos Recentes</button> <button class="btn">Histórico de
+                    Votos</button> </div>
+        </div>
+    </div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>
+      &copy; 2025 ParaPolis — Transparência que transforma.
+      <a href="quem-somos.html" class="footer-link">Quem Somos</a>
+    </p>
+  </div>
+</footer>
+</body>
+
+</html>
