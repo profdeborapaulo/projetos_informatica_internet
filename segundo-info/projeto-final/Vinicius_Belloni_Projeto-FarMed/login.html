@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="./login.css">
+    <title>Login</title>
+</head>
+<body>
+     <div class="flex">
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart"viewBox="0 0 16 16">
+                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+            </svg>
+        </div>
+        <p class="FarmaMed"> FarmaMed</p>
+    </div>
+    <div class="container">
+
+            <div>
+                <p class="Bem-vindo">Bem-Vindo</p>
+                <p class="cinza">Entre com sua conta ou crie uma nova</p>
+            </div>
+    
+
+        <div class="campos">
+            <label for="input" >Nome</label>
+            <input type="text" id="Nome" placeholder="Seu Nome">
+        </div>
+
+        <div class="campos">
+            <label for="input">Senha</label>
+            <input type="password" id="Senha" placeholder="***********">
+        </div>
+
+        <div class="button" id="botaoEntrar">
+            <button onclick="verificacao(); return false">Entrar</button>
+        </div>
+
+        <div class="cadastrar">
+            <p>Você não tem uma conta? <a href="./cadastrar.html" onclick="">Crie uma</a></p>
+        </div>
+    </div>
+
+    <script src="./scriptLogin.js"></script>
+</body>
+</html>

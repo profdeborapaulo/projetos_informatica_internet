@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="./remedio.css">
+    <script ></script>
+    <title>Remedio</title>
+</head>
+<body>
+    <div class="Voltar">
+            <a onclick="voltarPagina()" ><i class="fa-solid fa-arrow-left"></i> Voltar</a>
+    </div>
+
+    <div class="Inicio">
+        
+        <div class="remedio">
+            <p id="Nome" class="title"></p>
+            <p>Redutor de acidez estomacal para tratamento de gastrite e úlceras.</p>
+        </div>
+        <div class="tipo">
+            <p>Protetor Gastrico</p>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div>
+            <div class="flex">
+                <div class="formato-medicamento3">
+                    <div class="topo">
+                        
+                        <p > <i class="fa-solid fa-pills"></i>  Formato do Medicamento</p>
+                    </div>
+                    <div>
+                        <p class="tipo2">Comprido/Capsula</p>
+                        <p class="quantidade">Cada capsula tem 20g de Omeprazol</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav">
+                <div onclick="mudar(1)" id="1" class="item ativo">
+                    <p>Bula Simplificada</p>
+                </div>
+                <div onclick="mudar(2)" id="2" class="item">
+                    <p>Como Usar</p>
+                </div>
+                <div onclick="mudar(3)" id="3" class="item">
+                    <p>Efeitos</p>
+                </div>
+                <div onclick="mudar(4)" id="4" class="item">
+                    <p>Avisos</p>
+                </div>
+            </div>
+            <div id="mudar">
+                <div class="formato-medicamento " id="paraQueServe">
+                    <p class="serve">Para que serve?</p>
+                    <p class="quantidade">Redutor de acidez estomacal para tratamento de gastrite e úlceras.</p>
+                </div>
+
+                <div class="Tomar">
+                    <div class="formato-medicamento" id="comoTomar">
+                        <div class="topo">
+                        
+                            <p>  <i class="fa-solid fa-circle-info"></i> Como Tomar</p>   
+                        </div>
+                        <div>
+                            <p class="quantidade" >Adultos: 1 cápsula de 20mg ao dia, antes do café da manhã.</p>
+                        </div>
+
+                    </div>
+                
+                    <div class="formato-medicamento2" id="quandoTomar">
+                        <div class="topo">
+                            
+                            <p> <i class="fa-regular fa-clock"></i> Quando Tomar</p>
+                        </div>
+                        <div>
+                            <p>1 vez ao dia, pela manhã em jejum</p>
+                        </div>
+                    </div>       
+                </div>
+
+
+                <div class="aviso" id="aviso">
+                    <div class="topo">
+                        
+                        <p> <i class="fa-solid fa-triangle-exclamation"></i> Atenção: Dose Máxima</p>
+                    </div>
+                    <p>Máximo 40mg por dia (uso prolongado requer orientação médica)</p>
+                </div>
+
+                <div class="formato-medicamento" >
+                    <p class="bold">Principais cuidados</p>
+                    <ul id="cuidados">
+                    </ul>
+                </div>
+            </div>
+
+           
+        </div>
+        <aside>
+            <div class="formato-medicamento">
+                <div class="topo">
+                    
+                    <p><i class="fa-regular fa-clock"></i> Registar Dose</p>
+                </div>
+                <div>
+                    <label for="input">Horario da dose</label>
+                    <input type="time" name="" class="input" id="horario">
+                    <button id="botao" onclick="modal()"><i class="fa-solid fa-plus"></i></button>
+                </div>     
+            </div>
+            <div class="formato-medicamento">
+                <div class="topo">
+                    <p>Horario de doses</p>
+                </div>
+                <p class="quantidade">Nenhuma dose registrada ainda</p>
+            </div>
+        </aside>
+    </div>
+
+
+
+    <dialog>
+        <div>
+            <p>Como você esta hoje?</p>
+            <p>Registre sintomas e a eficácia do medicamento</p>
+        </div>
+
+        
+            <div>
+                <legend>O remedio até agora</legend>
+                <div class="formulario">
+                    <p >
+                        <input type="radio" name="saude" id="Melhorou" value="Melhorou muito"><label for="Melhorou">Melhorou muito</label>
+                    </p>   
+                    <p>
+                        <input type="radio" name="saude" id="Médio" value="Médio">
+                        <label for="Médio">Médio</label>
+                    </p>
+                    <p>
+                        <input type="radio" name="saude" id="Pouco" value="Pouco">
+                        <label for="Pouco">Pouco</label>
+                    </p>
+                    <p>
+                        <input type="radio" name="saude" id="Nada" value="Nada">
+                        <label for="Nada">Nada</label>
+                    </p>
+                </div>
+                
+            </div>
+            <div>
+                <legend>Sintomas</legend>
+                <div class="formulario" id="sintomas">
+                    <p>
+                        <input type="checkbox" name="sintomas" id="NenhumSintoma" value="Nenhum sintoma">
+                        <label for="NenhumSintoma">Nenhum sintoma</label>
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <label for="descreva">Outro sintoma:</label>
+                <input type="text" class="input2" id="descreva" placeholder="Descreva qualquer outro sintoma">
+            </div>
+
+            <div>
+                <button onclick="modal()" id="Cancelar" style="background-color: white; color: black;">Cancelar</button>
+                <button onclick="adicionarRemedio()" onclick="modal()" onclic id="adicionar">Registrar Dose</button>
+            </div>
+
+       
+    </dialog>
+    
+
+
+    <script src="./remedio.js"></script>
+    <script src="./scriptRemedio.js"></script>
+    <script src="./formularioRemedio.js"></script>
+</body>
+</html>

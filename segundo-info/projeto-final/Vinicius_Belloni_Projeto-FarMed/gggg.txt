@@ -1,0 +1,726 @@
+
+Categorias
+[
+    {
+        "_id": "690a6f384e84c1327ed3c097",
+        "nome": "cardiovascular",
+        "descricao": "Medicamentos para saúde e tratamento do sistema cardiovascular",
+        "info": "Esta categoria inclui medicamentos para hipertensão, arritmias, insuficiência cardíaca e outras condições relacionadas ao coração e vasos sanguíneos.",
+        "icon": "fa-solid fa-heart"
+    },
+    {
+        "_id": "690a6fc84e84c1327ed3c099",
+        "nome": "Analgésico",
+        "descricao": "Medicamentos para alívio de dores e inflamações",
+        "info": "Categoria que abrange analgésicos simples, anti-inflamatórios e medicamentos para dor moderada a severa.",
+        "icon": "fa-solid fa-pills"
+    },
+    {
+        "_id": "690a703d4e84c1327ed3c09b",
+        "nome": "Antibiótico",
+        "descricao": "Medicamentos para combate a infecções bacterianas",
+        "info": "Antibióticos de diversas classes para tratamento de infecções bacterianas em diferentes sistemas do corpo.",
+        "icon": "fa-solid fa-syringe"
+    },
+    {
+        "_id": "690a709f4e84c1327ed3c09d",
+        "nome": "respiratorio",
+        "descricao": "Medicamentos para problemas respiratórios",
+        "info": "Tratamentos para asma, bronquite, alergias respiratórias e outras condições do sistema respiratório.",
+        "icon": "fa-solid fa-lungs"
+    },
+    {
+        "_id": "690a70de4e84c1327ed3c09f",
+        "nome": "ortopedico",
+        "descricao": "Medicamentos para ossos, músculos e articulações",
+        "info": "Tratamentos para dores articulares, musculares, osteoporose e outras condições ortopédicas.",
+        "icon": "fa-solid fa-bone"
+    },
+    {
+        "_id": "690a713a4e84c1327ed3c0a2",
+        "nome": "neurologico",
+        "descricao": "Medicamentos para tratamento do sistema nervoso",
+        "info": "Inclui medicamentos para doenças neurológicas, transtornos mentais, epilepsia, Parkinson e outras condições do sistema nervoso.",
+        "icon": "fa-solid fa-brain"
+    }
+]
+
+
+Medicamentos
+[
+    {
+        "_id": "690a555f598111c6bb8d96a8",
+        "nome": "Losartana 50mg",
+        "categoria": "cardiovascular",
+        "descricao": "Controle da pressão arterial"
+    },
+    {
+        "_id": "690a55c4598111c6bb8d96aa",
+        "nome": "Atenolol 25mg",
+        "categoria": "Beta-bloqueador",
+        "descricao": "Tratamento de hipertensão e angina"
+    },
+    {
+        "_id": "690a574c598111c6bb8d96ac",
+        "nome": "Atenolol 25mg",
+        "categoria": "cardiovascular",
+        "descricao": "Tratamento de hipertensão e angina"
+    },
+    {
+        "_id": "690a57bf598111c6bb8d96b0",
+        "nome": "Sinvastatina 20mg",
+        "categoria": "cardiovascular",
+        "descricao": "Redução do colesterol"
+    },
+    {
+        "_id": "690a5859598111c6bb8d96b2",
+        "nome": "Enalapril 10mg",
+        "categoria": "cardiovascular",
+        "descricao": "Controle da pressão arterial"
+    },
+    {
+        "_id": "690a58dc598111c6bb8d96b4",
+        "nome": "Fluoxetina 20mg",
+        "categoria": "neurologico",
+        "descricao": "Tratamento de depressão e ansiedade"
+    },
+    {
+        "_id": "690a590d598111c6bb8d96b6",
+        "nome": "Diazepam 5mg",
+        "categoria": "Ansiolítico",
+        "descricao": "Controle de ansiedade"
+    },
+    {
+        "_id": "690a5923598111c6bb8d96b8",
+        "nome": "Diazepam 5mg",
+        "categoria": "neurologico",
+        "descricao": "Controle de ansiedade"
+    },
+    {
+        "_id": "690a5997598111c6bb8d96ba"
+    },
+    {
+        "_id": "690a59b1598111c6bb8d96bc",
+        "nome": "Carbamazepina 200mg",
+        "categoria": "neurologico",
+        "descricao": "Controle de epilepsia"
+    },
+    {
+        "_id": "690a5acf81cd69f05c488ca4",
+        "nome": "Dipirona 500mg",
+        "categoria": "Analgésico",
+        "descricao": "Indicado para alívio de dores e febre"
+    },
+    {
+        "_id": "690a5b1181cd69f05c488ca6",
+        "nome": "Paracetamol 750mg",
+        "categoria": "Analgésico",
+        "descricao": "Alívio de dores leves a moderadas"
+    },
+    {
+        "_id": "690a5b5081cd69f05c488ca8",
+        "nome": "Ibuprofeno 600mg",
+        "categoria": "Analgésico",
+        "descricao": "Alívio de dor e inflamação"
+    },
+    {
+        "_id": "690a5b8281cd69f05c488caa",
+        "nome": "Nimesulida 100mg",
+        "categoria": "Analgésico",
+        "descricao": "Tratamento de processos inflamatórios"
+    },
+    {
+        "_id": "690a5bd7ba97742d8f5b6f39",
+        "nome": "Amoxicilina 500mg",
+        "categoria": "Antibiótico",
+        "descricao": "Tratamento de infecções bacterianas"
+    },
+    {
+        "_id": "690a5c25bb062aa09063fabb",
+        "nome": "Azitromicina 500mg",
+        "categoria": "Antibiótico",
+        "descricao": "Infecções respiratórias e de pele"
+    },
+    {
+        "_id": "690a5c50bb062aa09063fabd",
+        "nome": "Cefalexina 500mg",
+        "categoria": "Antibiótico",
+        "descricao": "Tratamento de infecções bacterianas"
+    },
+    {
+        "_id": "690a5c81bb062aa09063fabf",
+        "nome": "Ciprofloxacino 500mg",
+        "categoria": "Antibiótico",
+        "descricao": "Infecções do trato urinário"
+    },
+    {
+        "_id": "690a5d11bb062aa09063fac1",
+        "nome": "Salbutamol",
+        "categoria": "respiratorio",
+        "descricao": "Alívio de broncoespasmo"
+    },
+    {
+        "_id": "690a5d54bb062aa09063fac3",
+        "nome": "Loratadina 10mg",
+        "categoria": "respiratorio",
+        "descricao": "Alívio de alergias respiratórias"
+    },
+    {
+        "_id": "690a5e9cbb062aa09063fac5",
+        "nome": "Montelucaste 10mg",
+        "categoria": "respiratorio",
+        "descricao": "Controle da asma"
+    },
+    {
+        "_id": "690a5efcbb062aa09063fac7",
+        "nome": "Cálcio + Vitamina D",
+        "categoria": "ortopedico",
+        "descricao": "Fortalecimento ósseo"
+    },
+    {
+        "_id": "690a5f4dbb062aa09063fac9",
+        "nome": "Diclofenaco 50mg",
+        "categoria": "ortopedico",
+        "descricao": "Alívio de dor e inflamação"
+    },
+    {
+        "_id": "690a5f81bb062aa09063facb",
+        "nome": "Glicosamina 1500mg",
+        "categoria": "Condroprotetor",
+        "descricao": "Saúde das articulações"
+    },
+    {
+        "_id": "690b6d067cdae78eea8eeaad",
+        "nome": "Glicosamina 1500mg",
+        "categoria": "Condroprotetor",
+        "descricao": "Saúde das articulações"
+    }
+]
+
+
+
+Remedios
+[
+    {
+        "_id": "6907bd5a6d0d2f09ec29fd1a",
+        "nome": "Dipirona 500mg",
+        "categoria": "Analgésico",
+        "descricao": "Indicado para alívio de dores e febre",
+        "armazenamento": "Conservar em temperatura ambiente, ao abrigo da luz e umidade",
+        "avisos": [
+            "Não utilizar em caso de alergia à dipirona ou outros derivados pirazolônicos",
+            "Evite o uso prolongado sem acompanhamento médico",
+            "Suspender o uso e procurar orientação médica em caso de febre persistente ou reações alérgicas",
+            "Não é recomendado para gestantes sem orientação médica"
+        ],
+        "comoTomar": "Adultos: 1 comprimido de 500mg a cada 6 a 8 horas, conforme necessidade ou prescrição médica.",
+        "composicao": "Cada comprimido contém 500mg de dipirona sódica.",
+        "doseMaxima": "4000mg (4g) por dia",
+        "efeitos": [
+            "Reações alérgicas leves (coceira, vermelhidão)",
+            "Raramente queda de pressão",
+            "Muito raramente agranulocitose (redução de glóbulos brancos)"
+        ],
+        "frequencia": "A cada 6 a 8 horas, se necessário"
+    },
+    {
+        "_id": "690b6e767cdae78eea8eeab0",
+        "nome": "Atenolol 25mg",
+        "categoria": "cardiovascular",
+        "descricao": "Medicamento utilizado no tratamento da hipertensão arterial e angina do peito.",
+        "composicao": "Cada comprimido contém 25mg de atenolol.",
+        "comoTomar": "Adultos: geralmente 1 comprimido de 25mg a 50mg ao dia, conforme prescrição médica.",
+        "frequencia": "1 vez ao dia, de preferência no mesmo horário",
+        "doseMaxima": "Máximo 100mg por dia",
+        "efeitos": [
+            "Fadiga",
+            "Tontura",
+            "Frio nas extremidades",
+            "Bradicardia (batimentos lentos)"
+        ],
+        "avisos": [
+            "Não interrompa o uso abruptamente",
+            "Evite dirigir se sentir tontura ou cansaço",
+            "Use com cautela em pacientes com diabetes ou problemas respiratórios",
+            "Não utilize durante a gravidez sem orientação médica"
+        ],
+        "armazenamento": "Conservar em temperatura ambiente e protegido da umidade"
+    },
+    {
+        "_id": "690b707e7cdae78eea8eeab6",
+        "nome": "Sinvastatina 20mg",
+        "categoria": "cardiovascular",
+        "descricao": "Medicamento indicado para reduzir os níveis de colesterol e prevenir doenças cardiovasculares.",
+        "composicao": "Cada comprimido contém 20mg de sinvastatina.",
+        "comoTomar": "Adultos: 1 comprimido de 20mg à noite, conforme orientação médica.",
+        "frequencia": "1 vez ao dia, preferencialmente à noite",
+        "doseMaxima": "Máximo 80mg por dia (somente sob supervisão médica)",
+        "efeitos": [
+            "Dor muscular",
+            "Dor de cabeça",
+            "Distúrbios digestivos",
+            "Insônia leve"
+        ],
+        "avisos": [
+            "Evite consumo de álcool em excesso",
+            "Não use durante a gravidez ou amamentação",
+            "Informe o médico se sentir dor muscular intensa",
+            "Evite o consumo de suco de grapefruit"
+        ],
+        "armazenamento": "Conservar em local seco, fresco e protegido da luz"
+    },
+    {
+        "_id": "690b8c8e7cdae78eea8eeab8",
+        "nome": "Losartana 50mg",
+        "categoria": "cardiovascular",
+        "descricao": "Medicamento usado para controle da pressão arterial alta.",
+        "composicao": "Cada comprimido contém 50mg de losartana potássica.",
+        "comoTomar": "1 comprimido de 50mg ao dia ou conforme prescrição médica.",
+        "frequencia": "1 vez ao dia, preferencialmente no mesmo horário.",
+        "doseMaxima": "100mg por dia.",
+        "efeitos": [
+            "Tontura",
+            "Fadiga",
+            "Dor nas costas",
+            "Tosse seca"
+        ],
+        "avisos": [
+            "Não interrompa o tratamento sem orientação médica.",
+            "Monitore regularmente a pressão arterial.",
+            "Não use durante a gravidez.",
+            "Evite suplementos de potássio sem orientação."
+        ],
+        "armazenamento": "Manter em temperatura ambiente, ao abrigo da luz."
+    },
+    {
+        "_id": "690b8cdc7cdae78eea8eeaba",
+        "nome": "Atenolol",
+        "categoria": "cardiovascular",
+        "descricao": "Utilizado para tratar pressão alta e problemas cardíacos.",
+        "composicao": "Cada comprimido contém 25mg de atenolol.",
+        "comoTomar": "1 comprimido de 25mg ao dia, conforme orientação médica.",
+        "frequencia": "1 vez ao dia.",
+        "doseMaxima": "100mg por dia.",
+        "efeitos": [
+            "Cansaço",
+            "Tontura",
+            "Frio nas extremidades",
+            "Batimentos lentos"
+        ],
+        "avisos": [
+            "Não interromper o uso abruptamente.",
+            "Evite dirigir se sentir tontura.",
+            "Informe o médico se tiver asma ou diabetes."
+        ],
+        "armazenamento": "Guardar em local seco e fresco."
+    },
+    {
+        "_id": "690b8d427cdae78eea8eeabc",
+        "nome": "Fluoxetina 20mg",
+        "categoria": "neurologico",
+        "descricao": "Usado para tratar depressão, ansiedade e transtornos obsessivo-compulsivos.",
+        "composicao": "Cada cápsula contém 20mg de fluoxetina.",
+        "comoTomar": "1 cápsula de 20mg ao dia, preferencialmente pela manhã.",
+        "frequencia": "1 vez ao dia.",
+        "doseMaxima": "80mg por dia.",
+        "efeitos": [
+            "Insônia",
+            "Náusea",
+            "Dor de cabeça",
+            "Ansiedade leve"
+        ],
+        "avisos": [
+            "Não interrompa o tratamento abruptamente.",
+            "Evite o consumo de álcool.",
+            "Pode demorar algumas semanas para fazer efeito completo."
+        ],
+        "armazenamento": "Conservar em temperatura ambiente e protegido da luz."
+    },
+    {
+        "_id": "690b8d6a7cdae78eea8eeabe",
+        "nome": "Diazepam 5mg",
+        "categoria": "neurologico",
+        "descricao": "Usado para tratar ansiedade, insônia e convulsões.",
+        "composicao": "Cada comprimido contém 5mg de diazepam.",
+        "comoTomar": "1 comprimido à noite ou conforme prescrição médica.",
+        "frequencia": "1 vez ao dia ou conforme necessidade.",
+        "doseMaxima": "30mg por dia.",
+        "efeitos": [
+            "Sonolência",
+            "Tontura",
+            "Cansaço",
+            "Dependência se usado por longo tempo"
+        ],
+        "avisos": [
+            "Evite dirigir após o uso.",
+            "Não misture com álcool.",
+            "Uso prolongado pode causar dependência."
+        ],
+        "armazenamento": "Guardar em local seco e fresco."
+    },
+    {
+        "_id": "690b8d847cdae78eea8eeac0",
+        "nome": "Carbamazepina 200mg",
+        "categoria": "neurologico",
+        "descricao": "Usado para epilepsia, neuralgia e transtorno bipolar.",
+        "composicao": "Cada comprimido contém 200mg de carbamazepina.",
+        "comoTomar": "1 comprimido de 200mg duas vezes ao dia ou conforme orientação médica.",
+        "frequencia": "2 vezes ao dia.",
+        "doseMaxima": "1200mg por dia.",
+        "efeitos": [
+            "Tontura",
+            "Sonolência",
+            "Náusea",
+            "Visão turva"
+        ],
+        "avisos": [
+            "Informe o médico sobre outros medicamentos em uso.",
+            "Pode causar tontura — evite dirigir.",
+            "Monitore os níveis sanguíneos regularmente."
+        ],
+        "armazenamento": "Conservar em temperatura ambiente, longe da umidade."
+    },
+    {
+        "_id": "690b8db87cdae78eea8eeac2",
+        "nome": "Paracetamol 750mg",
+        "categoria": "Analgésico",
+        "descricao": "Usado para aliviar dores e reduzir febre.",
+        "composicao": "Cada comprimido contém 750mg de paracetamol.",
+        "comoTomar": "1 comprimido a cada 6 a 8 horas, conforme necessidade.",
+        "frequencia": "A cada 6 a 8 horas.",
+        "doseMaxima": "4000mg por dia.",
+        "efeitos": [
+            "Raramente náusea",
+            "Em altas doses pode causar danos ao fígado"
+        ],
+        "avisos": [
+            "Não exceder a dose máxima diária.",
+            "Evite o uso com bebidas alcoólicas.",
+            "Procure orientação médica se a dor persistir."
+        ],
+        "armazenamento": "Conservar em local fresco e seco."
+    },
+    {
+        "_id": "690b8dd87cdae78eea8eeac4",
+        "nome": "Ibuprofeno 600mg",
+        "categoria": "Analgésico",
+        "descricao": "Usado para tratar inflamações, dores e febre.",
+        "composicao": "Cada comprimido contém 600mg de ibuprofeno.",
+        "comoTomar": "1 comprimido a cada 8 horas, conforme orientação médica.",
+        "frequencia": "A cada 8 horas.",
+        "doseMaxima": "2400mg por dia.",
+        "efeitos": [
+            "Dor abdominal",
+            "Azia",
+            "Tontura"
+        ],
+        "avisos": [
+            "Evite o uso em jejum.",
+            "Não usar por mais de 10 dias sem orientação médica.",
+            "Cautela em pessoas com problemas gástricos."
+        ],
+        "armazenamento": "Guardar em local seco e ao abrigo da luz."
+    },
+    {
+        "_id": "690b8dee7cdae78eea8eeac6",
+        "nome": "Nimesulida 100mg",
+        "categoria": "Analgésico",
+        "descricao": "Indicada para dores e inflamações de curta duração.",
+        "composicao": "Cada comprimido contém 100mg de nimesulida.",
+        "comoTomar": "1 comprimido a cada 12 horas, após as refeições.",
+        "frequencia": "A cada 12 horas.",
+        "doseMaxima": "200mg por dia.",
+        "efeitos": [
+            "Dor de estômago",
+            "Náusea",
+            "Sonolência"
+        ],
+        "avisos": [
+            "Evite o uso prolongado.",
+            "Contraindicado em pessoas com problemas hepáticos.",
+            "Usar apenas sob orientação médica."
+        ],
+        "armazenamento": "Conservar em local fresco e seco."
+    },
+    {
+        "_id": "690b8e177cdae78eea8eeac8",
+        "nome": "Azitromicina 500mg",
+        "categoria": "Antibiótico",
+        "descricao": "Tratamento de infecções respiratórias, de garganta e de pele.",
+        "composicao": "Cada comprimido contém 500mg de azitromicina di-hidratada.",
+        "comoTomar": "1 comprimido de 500mg ao dia por 3 dias.",
+        "frequencia": "1 vez ao dia.",
+        "doseMaxima": "500mg por dia.",
+        "efeitos": [
+            "Náusea",
+            "Diarreia",
+            "Dor abdominal",
+            "Tontura"
+        ],
+        "avisos": [
+            "Complete o tratamento conforme prescrição.",
+            "Evite o uso com antiácidos sem orientação.",
+            "Não use em caso de alergia a macrolídeos."
+        ],
+        "armazenamento": "Conservar em local fresco e protegido da umidade."
+    },
+    {
+        "_id": "690b8e357cdae78eea8eeaca",
+        "nome": "Cefalexina 500mg",
+        "categoria": "Antibiótico",
+        "descricao": "Usado para tratar infecções bacterianas como amigdalite e infecção urinária.",
+        "composicao": "Cada cápsula contém 500mg de cefalexina monoidratada.",
+        "comoTomar": "1 cápsula a cada 6 ou 8 horas.",
+        "frequencia": "A cada 6 a 8 horas.",
+        "doseMaxima": "4000mg por dia.",
+        "efeitos": [
+            "Náusea",
+            "Diarreia",
+            "Dor abdominal"
+        ],
+        "avisos": [
+            "Evite interromper o tratamento.",
+            "Use com cautela em pacientes com problemas renais.",
+            "Informe o médico se houver diarreia intensa."
+        ],
+        "armazenamento": "Guardar em local seco e protegido da luz."
+    },
+    {
+        "_id": "690b8e567cdae78eea8eeacc",
+        "nome": "Ciprofloxacino 500mg",
+        "categoria": "Antibiótico",
+        "descricao": "Tratamento de infecções urinárias, respiratórias e intestinais.",
+        "composicao": "Cada comprimido contém 500mg de ciprofloxacino.",
+        "comoTomar": "1 comprimido a cada 12 horas.",
+        "frequencia": "A cada 12 horas.",
+        "doseMaxima": "1500mg por dia.",
+        "efeitos": [
+            "Náusea",
+            "Tontura",
+            "Diarreia",
+            "Insônia"
+        ],
+        "avisos": [
+            "Evite exposição solar excessiva.",
+            "Não use junto com antiácidos.",
+            "Complete o tratamento mesmo que os sintomas melhorem."
+        ],
+        "armazenamento": "Manter em temperatura ambiente, longe da luz."
+    },
+    {
+        "_id": "690b8e7c7cdae78eea8eeace",
+        "nome": "Salbutamol",
+        "categoria": "respiratorio",
+        "descricao": "Utilizado para aliviar crises de asma e bronquite.",
+        "composicao": "Cada dose contém 100mcg de salbutamol.",
+        "comoTomar": "1 a 2 inalações conforme necessidade.",
+        "frequencia": "Usar quando necessário.",
+        "doseMaxima": "8 inalações por dia.",
+        "efeitos": [
+            "Tremores",
+            "Taquicardia",
+            "Tontura",
+            "Dor de cabeça"
+        ],
+        "avisos": [
+            "Não exceda a dose recomendada.",
+            "Use apenas conforme plano de tratamento.",
+            "Procure o médico se os sintomas persistirem."
+        ],
+        "armazenamento": "Manter em temperatura ambiente, longe da umidade."
+    },
+    {
+        "_id": "690b8ea87cdae78eea8eead0",
+        "nome": "Loratadina 10mg",
+        "categoria": "Antialérgico / Anti-histamínico",
+        "descricao": "Usado para aliviar sintomas de alergias como espirros e coceira.",
+        "composicao": "Cada comprimido contém 10mg de loratadina.",
+        "comoTomar": "1 comprimido de 10mg ao dia.",
+        "frequencia": "1 vez ao dia.",
+        "doseMaxima": "10mg por dia.",
+        "efeitos": [
+            "Sonolência leve",
+            "Dor de cabeça",
+            "Boca seca"
+        ],
+        "avisos": [
+            "Evite dirigir se sentir sonolência.",
+            "Use com cautela em problemas hepáticos.",
+            "Não misture com álcool."
+        ],
+        "armazenamento": "Guardar em local seco e fresco."
+    },
+    {
+        "_id": "690b8ede7cdae78eea8eead2",
+        "nome": "Montelucaste 10mg",
+        "categoria": "respiratorio",
+        "descricao": "Usado para prevenir crises de asma e aliviar rinite alérgica.",
+        "composicao": "Cada comprimido contém 10mg de montelucaste de sódio.",
+        "comoTomar": "1 comprimido à noite.",
+        "frequencia": "1 vez ao dia, à noite.",
+        "doseMaxima": "10mg por dia.",
+        "efeitos": [
+            "Dor de cabeça",
+            "Insônia",
+            "Dor abdominal"
+        ],
+        "avisos": [
+            "Não indicado para crises agudas.",
+            "Use regularmente para manter o controle da asma.",
+            "Informe o médico se houver alterações de humor."
+        ],
+        "armazenamento": "Conservar em temperatura ambiente e protegido da umidade."
+    },
+    {
+        "_id": "690b8f3b7cdae78eea8eead4",
+        "nome": "Cálcio + Vitamina D",
+        "categoria": "ortopedico",
+        "descricao": "Ajuda na absorção de cálcio e fortalecimento ósseo.",
+        "composicao": "Cada cápsula contém 2000UI de colecalciferol (Vitamina D3).",
+        "comoTomar": "1 cápsula ao dia.",
+        "frequencia": "1 vez ao dia.",
+        "doseMaxima": "4000UI por dia.",
+        "efeitos": [
+            "Raros efeitos adversos",
+            "Aumento de cálcio no sangue em uso excessivo"
+        ],
+        "avisos": [
+            "Não exceder a dose recomendada.",
+            "Evitar uso prolongado sem acompanhamento médico.",
+            "Manter fora do alcance de crianças."
+        ],
+        "armazenamento": "Guardar em local fresco, seco e protegido da luz."
+    },
+    {
+        "_id": "690b8f607cdae78eea8eead6",
+        "nome": "Complexo B",
+        "categoria": "ortopedico",
+        "descricao": "Conjunto de vitaminas do complexo B que auxiliam na energia e metabolismo.",
+        "composicao": "Contém vitaminas B1, B2, B3, B5, B6, B12 e ácido fólico.",
+        "comoTomar": "1 comprimido ao dia após refeição.",
+        "frequencia": "1 vez ao dia.",
+        "doseMaxima": "1 comprimido por dia.",
+        "efeitos": [
+            "Urina amarelada",
+            "Náusea leve ocasional"
+        ],
+        "avisos": [
+            "Evite exceder a dose diária.",
+            "Não substitui uma alimentação equilibrada.",
+            "Consultar médico para uso prolongado."
+        ],
+        "armazenamento": "Conservar em local seco, fresco e protegido da luz."
+    },
+    {
+        "_id": "690b8f777cdae78eea8eead8",
+        "nome": "Vitamina C",
+        "categoria": "ortopedico",
+        "descricao": "Fortalece a imunidade e auxilia na absorção de ferro.",
+        "composicao": "Cada comprimido contém 1g (1000mg) de ácido ascórbico.",
+        "comoTomar": "Dissolver 1 comprimido em água e tomar 1 vez ao dia.",
+        "frequencia": "1 vez ao dia.",
+        "doseMaxima": "2000mg por dia.",
+        "efeitos": [
+            "Azia",
+            "Desconforto abdominal leve"
+        ],
+        "avisos": [
+            "Não exceder a dose máxima diária.",
+            "Cautela em pacientes com cálculo renal.",
+            "Consumir logo após o preparo."
+        ],
+        "armazenamento": "Manter o tubo fechado e protegido da umidade."
+    },
+    {
+        "_id": "6912569de7c104a10004bc6f",
+        "nome": "Enalapril 10mg",
+        "categoria": "cardiovascular",
+        "descricao": "Medicamento utilizado para o tratamento da hipertensão arterial e insuficiência cardíaca.",
+        "composicao": "Cada comprimido contém 10mg de maleato de enalapril.",
+        "comoTomar": "Adultos: 1 comprimido de 10mg ao dia, podendo ser ajustado conforme orientação médica.",
+        "frequencia": "1 vez ao dia",
+        "doseMaxima": "40mg por dia, conforme orientação médica",
+        "efeitos": [
+            "Tontura",
+            "Tosse seca persistente",
+            "Fadiga",
+            "Tontura ao levantar-se rapidamente"
+        ],
+        "avisos": [
+            "Não interrompa o tratamento sem orientação médica",
+            "Evite uso durante a gravidez",
+            "Monitore regularmente a pressão arterial",
+            "Informe seu médico se apresentar inchaço no rosto ou dificuldade para respirar"
+        ],
+        "armazenamento": "Conservar em temperatura ambiente, protegido da umidade e da luz"
+    },
+    {
+        "_id": "69125708e7c104a10004bc82",
+        "nome": "Amoxicilina 500mg",
+        "categoria": "Antibiótico",
+        "descricao": "Antibiótico utilizado no tratamento de infecções bacterianas, como infecções respiratórias, urinárias, de pele e ouvido.",
+        "composicao": "Cada cápsula contém 500mg de amoxicilina tri-hidratada.",
+        "comoTomar": "Adultos: 1 cápsula de 500mg a cada 8 horas, conforme orientação médica.",
+        "frequencia": "A cada 8 horas",
+        "doseMaxima": "3000mg (3g) por dia, conforme prescrição médica",
+        "efeitos": [
+            "Náusea",
+            "Diarreia leve",
+            "Dor abdominal",
+            "Erupções cutâneas em casos de alergia"
+        ],
+        "avisos": [
+            "Use apenas sob prescrição médica",
+            "Não interrompa o tratamento antes do prazo indicado, mesmo com melhora dos sintomas",
+            "Informe o médico em caso de alergia a penicilinas ou cefalosporinas",
+            "Pode reduzir a eficácia de anticoncepcionais orais"
+        ],
+        "armazenamento": "Conservar em temperatura ambiente, protegido da umidade e da luz"
+    },
+    {
+        "_id": "691257b9e7c104a10004bc98",
+        "nome": "Diclofenaco 50mg",
+        "categoria": "ortopedico",
+        "descricao": "Medicamento utilizado para aliviar dores, inflamações e febre em diversas condições, como dores musculares, articulares e cólicas.",
+        "composicao": "Cada comprimido contém 50mg de diclofenaco sódico.",
+        "comoTomar": "Adultos: 1 comprimido de 50mg a cada 8 ou 12 horas, conforme necessidade e orientação médica.",
+        "frequencia": "A cada 8 a 12 horas, conforme orientação médica",
+        "doseMaxima": "150mg por dia",
+        "efeitos": [
+            "Dor ou desconforto no estômago",
+            "Náusea",
+            "Tontura",
+            "Retenção de líquidos"
+        ],
+        "avisos": [
+            "Evite o uso prolongado sem orientação médica",
+            "Não utilize em caso de úlcera gástrica ou sangramento gastrointestinal",
+            "Use com cautela em pacientes com problemas cardíacos, renais ou hepáticos",
+            "Evite o consumo de álcool durante o tratamento"
+        ],
+        "armazenamento": "Conservar em local seco, fresco e protegido da luz"
+    }
+]
+
+Login
+
+        "_id": "6917b1b34a57490b257bd742",
+        "nome": "admin",
+        "senha": "123",
+        "remedios": [
+            {
+                "nome": "Dipirona 500mg",
+                "horario": "19:27",
+                "sintoma": [
+                    [
+                        "Reações alérgicas leves (coceira, vermelhidão)",
+                        "Raramente queda de pressão"
+                    ]
+                ],
+                "eficacia": "Médio",
+                "OutriosSintomas": "legal",
+                "data": "15/11/2025"
+            }
+        ]
+    },
+    

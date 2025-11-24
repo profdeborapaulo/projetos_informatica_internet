@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Inicio</title>
+</head>
+
+<body>
+    <header>
+      
+        <div id="mudar">
+            <a  href="./login.html"><button class="botaoEntrar"><i class="fa-solid fa-arrow-right-to-bracket"></i>  Entrar</button></a>
+        </div>
+    </header>
+
+
+    <div class="Inicio">
+        <div class="introducao">
+            <div class="flex">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart"viewBox="0 0 16 16">
+                        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                    </svg>
+                </div>
+                <p class="FarmaMed"> FarmaMed</p>
+            </div>
+            <p class="title">Guia Completos de Medicamentos</p>
+            <p>Encontre informações confiáveis sobre medicamentos, bulas, indicações e contraindicações no FarmaMed</p>
+            <div class="procura">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="Buscar" placeholder="  Medicamentos">
+                <button onclick="buscar()" id="button">Buscar</button>
+            </div>
+
+            <div class="pesquisa">
+                    <ul class="pop-up">
+                        
+                    </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div>
+        <p class="text">Categorias de Medicamentos</p>
+    </div>
+
+    <div class="categorias"></div>
+
+    <div>
+        <p class="text">Porque Usar o Nosso Guia?</p>
+        <p class="cinza2">Oferecemos as informações mais completas e confiáveis sobre medicamentos</p>
+    </div>
+
+    <div class="informacoes">
+        <div class="informacao">
+            <div class="Icon"><i class="fa-solid fa-shield"></i></div>
+            <div>
+                <p class="bold">Informações Confiáveis</p>
+                <p class="cinza">Dados verificados e atualizados constantemente por profissionais da saúde</p>
+            </div>
+        </div>
+
+        <div class="informacao">
+            <div class="Icon"><i class="fa-solid fa-book-open"></i></div>
+            <div>
+                <p class="bold">Bulas Completas</p>
+                <p class="cinza">Acesso a bulas detalhadas de todos os medicamentos cadastrados</p>
+            </div>
+        </div>
+
+        <div class="informacao">
+            <div class="Icon"><i class="fa-regular fa-clock"></i></div>
+            <div>
+                <p class="bold">Disponível Todos os dias</p>
+                <p class="cinza">Consulte informações sobre medicamentos a qualquer hora do dia</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./scriptIndex.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+body{
+    padding: 0;
+    height: 100em;
+    /* box-sizing: border-box; */
+    background-color: #F6F8FB;
+    font-family:  "Open Sans", sans-serif;
+    margin: 0;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.container{
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    width: 30em;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+.Bem-vindo{
+    font-weight: 600;
+    justify-self: center;
+    font-size: 25px;
+}
+.cinza{
+    color: gray;
+}
+.login{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+    border-radius: 10px;
+    padding: 7px 15px;
+    width: 90%;
+    margin-bottom: 30px;
+}
+.login p {
+    margin: 0;
+}
+.campos input{
+    display: flex;
+    width: 100%;
+    justify-self: left;
+    background-color: #F6F8FB;
+    border-radius: 10px;
+    padding: 7px;
+    border-color: gray;
+    border: 15px;
+    color: black;
+    margin-top: 0;
+}
+.campos{
+    text-align: left;
+    align-self: left;
+    width: 90%;
+}
+.container *{
+    margin-top: 20px;
+}
+button{
+    display: flex;
+    background-color: #1173D4;
+    color: white;
+    justify-self: left;
+    text-align: left;
+    font-family:  "Open Sans", sans-serif;
+    font-size: 15px;
+    padding: 19px 17px;
+    border-style: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 300%;
+    justify-content: center;
+}
+button:hover{
+    opacity: 0.8;
+}
+.Entrar{
+    background-color: #F6F8FB;
+    padding: 10px;
+    border-radius: 10px;
+    width: 50%;
+    text-align: center;
+    justify-content: flex-start;
+}
+.button{
+    display: flex;
+    position: relative;
+    width: 90%;
+    align-self: left;
+}
+.FarmaMed{
+    font-weight: bold;
+    font-size: 25px;
+}
+.Cadastrar{
+    text-decoration: none;
+    display: flex;
+    position: relative;
+    width: 90%;
+    align-self: center;
+}

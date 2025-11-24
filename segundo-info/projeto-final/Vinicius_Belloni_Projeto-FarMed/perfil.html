@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="./perfil.css">
+    <title>Perfil</title>
+</head>
+<body>
+    <div class="Voltar">
+            <a onclick="voltarPagina()"  class="voltar"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
+            <div class="Sair" id="mudar">
+                <a  href="./login.html"><button class="botaoEntrar" id="sair" onclick="sair()"><i class="fa-solid fa-arrow-right-to-bracket"></i>  Sair</button></a>
+            </div>
+    </div>
+
+    <div class="Inicio">
+        <div class="remedio">
+            <p class="title">Meu Perfil</p>
+            <p>Acompanhe seu histórico de medicamentos</p>
+        </div>
+    </div>
+
+
+
+    <div class="container">
+        <div class="formato-medicamento">
+            <div class="topo">
+                <p class="titulo2"><i class="fa-regular fa-calendar"></i>Calendario</p>
+            </div>
+            <div>
+                <input id="date" type="date"/>
+                <button class="botaoEntrar2" onclick="vericarMedicamentos()">Buscar</button>
+            </div>
+        </div>
+
+
+        <div class="formato-medicamento2">
+            <div>
+                <p class="titulo">Doses registradas</p>
+            </div>
+            <div class="mid">
+                <i class="fa-regular fa-calendar"></i>
+                <p class="cinza">Nenhuma dose registrada nessa data</p>
+              
+            </div>
+        </div>
+    </div>
+
+    <script src="./scriptPerfil.js"></script>
+    <script src="./perfil.js"></script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+body{
+    padding: 0;
+    /* box-sizing: border-box; */
+    background-color: #F6F8FB;
+    font-family:  "Open Sans", sans-serif;
+    margin: 0;
+}
+body{
+    height: auto;
+    width: auto;
+}
+header{
+    background: linear-gradient(90deg,rgba(33, 130, 228, 1) 69%, rgba(44, 201, 130, 1) 88%) ;
+    display: flex;
+    justify-content: right;
+    padding-right: 15em;
+    padding-top: 1em;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.botaoEntrar{
+    background-color: #2DD272;
+    padding: 10px 17px;
+    gap: 5px;
+}
+.FarmaMed{
+    font-size: 25px;
+}
+.Inicio{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+    justify-content: center;
+    background: linear-gradient(90deg,rgba(33, 130, 228, 1) 69%, rgba(44, 201, 130, 1) 88%);
+    color: white;
+}
+.title{
+    font-weight: 800;
+    font-size: 50px;
+    color: white;
+
+}
+.introducao{
+     text-align: center;
+}
+.procura{
+    position: relative;
+    text-align: center;
+    background-color: #ffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px ;
+    width: 30rem;
+    justify-self: center;
+    border-radius: 20px;
+    gap: 20px;
+
+}
+input{
+    justify-content: flex-start;
+    border-style: none;
+    font-family:  "Open Sans", sans-serif;
+}
+input:focus-visible {
+    outline: none;
+}
+.procura i{
+    color: gray;
+}
+.categorias{
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.text{
+    font-weight: 750;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.icon{
+    display: flex;
+    gap: 10px;
+    color: black;
+}
+.Titulo{
+    margin: 0;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    
+}
+.cadaCategoria{
+    background-color: white;
+    padding: 40px;
+    border-radius: 10%;
+    border-color: gray;
+}
+.cadaCategoria:hover{
+    transform: translateY(-0.55em);
+    cursor: pointer;
+}
+.cinza{
+    color: gray;
+}
+.cinza2{
+    color: gray;
+    text-align: center;
+    margin-top: 0;
+}
+.gg-heart,
+.gg-heart::after {
+  border: 2px solid;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  width: 12px;
+  height: 10px;
+  border-bottom: 0;
+  background-color: red;
+}
+.gg-heart {
+  box-sizing: border-box;
+  position: relative;
+  transform: translate(
+      calc(-10px / 2 * var(--ggs, 1)),
+      calc(-6px / 2 * var(--ggs, 1))
+    )
+    rotate(-45deg) scale(var(--ggs, 1));
+  display: block;
+}
+.gg-heart::after,
+.gg-heart::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+}
+.gg-heart::after {
+  right: -9px;
+  transform: rotate(90deg);
+  top: 5px;
+}
+.gg-heart::before {
+  width: 11px;
+  height: 11px;
+  border-left: 2px solid;
+  border-bottom: 2px solid;
+  left: -2px;
+  top: 3px;
+}
+.informacoes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 10%;
+}
+.informacao{
+    flex-wrap: wrap; 
+    text-align: center;
+    padding: 20px;
+}
+.Icon{
+    display: inline;
+    padding: 15px;
+    background-color: #2d83d998;
+    align-items: center;
+    border-radius: 100%;
+    text-align: center;
+    color: #1173D4;
+}
+.bold{
+    font-weight: bold;
+}
+input{
+    border-style: none;
+}
+button{
+    background-color: #1173D4;
+    color: white;
+    font-family:  "Open Sans", sans-serif;
+    font-size: 15px;
+    padding: 19px 17px;
+    border-style: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+button:hover{
+    opacity: 0.8;
+}
+a{
+    text-decoration: none;
+}
+.pop-up{
+    display: flex;
+    padding-left: 0;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    width: 30rem;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    text-decoration: none;
+    color: black;
+
+}
+.a{
+    text-decoration: none;
+    width: 100%;
+    display: none;
+}
+.a:hover{
+    background-color: #1173D4;
+}

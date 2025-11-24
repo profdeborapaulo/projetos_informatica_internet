@@ -1,0 +1,200 @@
+body{
+    padding: 0;
+    height: 100em;
+    /* box-sizing: border-box; */
+    background-color: #F6F8FB;
+    font-family:  "Open Sans", sans-serif;
+    margin: 0;
+}
+.Inicio{
+    display: flex;
+    align-items: self-end;
+    justify-content: space-between;
+    width: 100%;
+    height: 10em;
+    background: linear-gradient(90deg,rgba(33, 130, 228, 1) 69%, rgba(44, 201, 130, 1) 88%);
+    color: white;
+    flex-direction: row;
+}
+.remedio{
+    flex-direction: column;
+    padding-left: 10em;
+}
+.Voltar{
+    flex-direction: row;
+    background: linear-gradient(90deg,rgba(33, 130, 228, 1) 69%, rgba(44, 201, 130, 1) 88%);
+    padding-left: 10em;
+    padding-top: 20px;
+    background-color: transparent;
+    border-style: none;
+    color: #F6F8FB;
+    cursor: pointer;
+}
+.tipo{
+    display: flex;
+    align-self: self-end;
+    justify-self: flex-end;
+    flex-direction: row;
+    border-radius: 30px;
+    background-color: #2DD272;
+    padding: 5px 25px;
+    margin-right: 15em;
+    margin-bottom: 30px;
+
+}
+.title{
+    font-size: 35px;
+    font-weight: bold;
+}
+.formato-medicamento{
+    position: relative;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 2em;
+    padding: 5px 3em;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.topo{
+    display: flex;
+    gap: 10px;
+}
+.topo p{
+    font-weight: bold;
+    font-size: 20px;
+}
+.tipo2{
+    color: #1187E0;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 0;
+}
+.quantidade{
+    color: gray;
+    text-align: center;
+}
+.serve{
+    font-weight: bold;
+    font-size: 20px;
+}
+.Tomar{
+    display: flex;
+    margin-top: 2em;
+    gap: 20px;
+}
+.Tomar .formato-medicamento2{
+    margin-left: 0;
+}
+.formato-medicamento2{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 2em;
+    padding: 5px 3em;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.aviso{
+    position: relative;
+    background-color: #F7F0F2;
+    border-color: red;
+    border-radius: 20px;
+    margin-top: 2em;
+    padding: 5px 3em;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    color: red;
+}
+.bold{
+    font-weight: bold;
+    font-size: 20px;
+}
+.container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    padding: 20px 30px;
+    margin-left: 5em;
+    margin-right: 5em;
+    flex-wrap: wrap;
+
+
+}
+.flex{
+    display: flex;
+}
+.formato-medicamento3{
+    position: relative;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 2em;
+    padding: 5px 3em;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    flex-grow: 1;
+}
+
+.input{
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+.input2{
+    width: 80%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+button{
+      background-color: #1976d2;
+      border: none;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+}
+.nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 90%;
+    background-color: #EEF2F6;
+    text-align: center;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 20px;
+    color: gray;
+    margin-top: 1em;
+    cursor: pointer;
+    gap: 10px;
+}
+.item:hover{
+    opacity: 0.8;
+    background-color:  #F8FAFC ;
+    border-radius: 20px;
+}
+.ativo{
+    background-color: #F8FAFC;
+    border-radius: 20px;
+    color: black;
+}
+dialog{
+    border-style: none;
+    padding: 30px;
+}
+/* dialog .formulario{
+    display: flex;
+    flex-direction: column;
+   
+}
+.alternativa{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.alternativa input{
+    align-self: flex-start;
+    justify-self: flex-start;
+} */
