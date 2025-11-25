@@ -1,0 +1,133 @@
+<aside id="app-sidebar" class="sidebar d-flex flex-column">
+  <div class="sidebar-top d-flex align-items-center justify-content-center fs-3 px-3 py-3">
+    <div class="d-flex align-items-center gap-2">
+      <img src="/public/img/logo-AmanhaMaisLeve.ico" alt="logo" class="sidebar-logo">
+      <strong class="sidebar-brand">Renda+</strong>
+    </div>
+   
+    </button>
+  </div>
+  <hr>  
+
+  <div class="sidebar-user text-center py-3">
+    <div class="avatar rounded-circle  text-white mx-auto mb-2"></div>
+    <div class="fw-bold" id="sidebar-username">Usuário</div>
+    <small style="color: #ffffff;"  id="sidebar-email"><span id="emailUsuario" data-userid="1"></small>
+  </div>
+  <hr>
+
+  <div class="sidebar-user text-center py-2">
+     <h1 class="m-0 fs-4" style="color: rgb(240, 240, 240);">
+              Página Usuario do <b style="color: #38a138;">Renda+</b>  </h1>
+              <p
+                id="data"
+                style="font-size: 20px; margin: 0; padding: 0; color: #ffffff;"
+              ></p>
+  </div>
+  
+  <nav class="nav flex-column  fs-5 px-2 mt-3" id="sidebar-nav">
+    <div class="sidebar-item">
+    <a href="usuario.html" class="nav-link d-flex align-items-center gap-2" data-key="dashboard">
+      <i class="bi bi-house"></i><span class="link-label">Dashboard</span>
+    </a>
+    </div>
+    <div class="sidebar-item">
+    <a href="adicionarMeta.html" class="nav-link d-flex align-items-center gap-2" data-key="metas">
+      <i class="bi bi-flag"></i><span class="link-label">Metas</span>
+    </a>
+    </div>
+    <div class="sidebar-item">
+    <a href="#contas" class="nav-link d-flex align-items-center gap-2" data-key="contas">
+      <i class="bi bi-wallet2"></i><span class="link-label">Contas</span>
+    </a>
+    </div>
+    <div class="sidebar-item" data-bs-toggle="modal" data-bs-target="#guardarDinheiroModal">
+    <a href="#guardar" class="nav-link d-flex align-items-center gap-2" data-key="guardar">
+      <i class="bi bi-piggy-bank"></i><span class="link-label" >Guardar</span>
+    </a>
+    </div>
+    <div class="mt-auto m-0 px-2 pb-3">
+      <button id="sidebar-logout" class="btn fs-3 w-100 d-flex align-items-center gap-2">
+        <i class="bi bi-box-arrow-right"></i><span class="link-label">Sair</span>
+      </button>
+    </div>
+  </nav>
+
+  <style>
+    .avatar{
+        background-color: var(--vyellow);
+        font-size: 1.5rem;
+        
+    }
+.sidebar-item span{
+  
+    margin-bottom: 4px;
+    cursor: pointer;
+    color: white;
+}
+
+i{
+    color: white;
+}
+.sidebar-item:hover{
+    background-color: var(--vescuro2);
+    color: white;
+    transition: background-color 0.3s ease;
+    border-radius: 8px;
+}
+    :root {
+    --vescuro: #235321;
+    --vescuro2: #1b3f1a;
+    --vclaro: #4e6e3c;
+    --vyellow: #a7c957;
+    --bege: #f3f3f3;
+    --rojo: #bc4749;
+  }
+/* minimal styles to make sidebar work as dashboard */
+
+
+
+    .sidebar{
+      width: 260px;
+      min-width: 260px;
+      max-width: 260px;
+      height: 100vh;
+      position: fixed;
+      left: 0;
+      top: 0;
+      background: linear-gradient(to right, var(--vescuro), var(--vclaro));;
+      border-right: 1px solid rgba(0,0,0,0.04);
+      display: flex;
+      flex-direction: column;
+      transition: width .25s ease;
+      z-index: 1030;
+      color: #fff;
+    }
+    .sidebar .sidebar-top{border-bottom:1px solid rgba(0,0,0,0.04)}
+    .sidebar-logo{width:36px;height:auto}
+    .sidebar-user .avatar{width:48px;height:48px;display:flex;align-items:center;justify-content:center;font-weight:700}
+    .sidebar .nav-link{color:#333;border-radius:.375rem;padding:.6rem .75rem}
+    .sidebar .nav-link.active{background:#e9f6ea;color:#086b21}
+    .sidebar .nav-link i{font-size:1.15rem}
+    .sidebar .link-label{white-space:nowrap;transition:opacity .15s ease}
+
+    /* collapsed state */
+    .sidebar-collapsed .sidebar{
+      width: 78px;
+      min-width: 78px;
+      max-width: 78px;
+    }
+    .sidebar-collapsed .link-label{opacity:0;pointer-events:none}
+    .sidebar-collapsed .sidebar-brand{display:none}
+    .sidebar-collapsed .sidebar-user{display:none}
+
+    /* content push helper: add left padding to main content */
+    .with-sidebar { padding-left: 260px !important; transition: padding-left .25s ease; }
+    .sidebar-collapsed .with-sidebar { padding-left: 78px !important; }
+    @media (max-width: 767.98px){
+      .sidebar{transform: translateX(-100%); position:fixed}
+      .sidebar.show{transform: translateX(0)}
+      .with-sidebar{padding-left:0}
+    }
+  </style>
+</aside>

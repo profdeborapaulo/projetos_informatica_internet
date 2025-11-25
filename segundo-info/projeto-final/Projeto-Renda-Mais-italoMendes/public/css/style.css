@@ -1,0 +1,934 @@
+@import url(https://fonts.bunny.net/css?family=poppins:100,300,500,600,700);
+
+  /* ============================= */
+  /*  VARIÁVEIS GLOBAIS */
+  /* ============================= */
+  :root {
+    --vescuro: #235321;
+    --vescuro2: #143013;
+    --vclaro: #6a994e;
+    --vyellow: #a7c957;
+    --bege: #f3f3f3;
+    --rojo: #bc4749;
+  }
+
+  /* ============================= */
+  /*  ESTILOS GERAIS */
+  /* ============================= */
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bege);
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+  }
+
+  b {
+    font-weight: 700;
+    color: var(--vclaro);
+  }
+
+  h1 {
+    font-weight: 600;
+    color: #161616;
+  }
+
+  h3 {
+    font-weight: 500;
+    color: #161616;
+    font-size: 4em;
+  }
+
+  /* ============================= */
+  /*  COMPONENTES BÁSICOS */
+  /* ============================= */
+  button {
+    background-color: white;
+    border: 3px solid var(--vclaro);
+    padding: 5px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    color: var(--vclaro);
+    margin-left: 0.5em;
+    border-radius: 8px;
+  }
+
+  .button-text {
+    font-weight: 600;
+    font-size: 1em;
+    color: var(--vclaro);
+  }
+  button:hover .button-text {
+    color: white ;
+  }
+  .filtro:hover {
+    background-color: var(--vclaro);
+    color: white;
+    transition: all 0.3s ease;
+  }
+
+  input,
+  textarea {
+    border: 2px solid #c4c4c4 !important;
+    border-radius: 8px;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1em;
+    margin-bottom: 1em;
+  }
+
+  /* ============================= */
+  /*  NAVBAR */
+  /* ============================= */
+  .navbar {
+    background-color: white;
+    margin-bottom: 0.3em;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+  .navbar button{
+    background-color: var(--vclaro);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 20px;
+    font-size: 1em;
+    margin-left: 0.5em;
+    transition: all 0.3s ease;
+  }
+  
+  .conta button{
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: var(--vescuro);
+
+  }
+
+
+
+  .navbar img {
+    width: 3em;
+    height: auto;
+  }
+
+  .navbar a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    font-size: 1.2em;
+    padding-left: 2.3em;
+  }
+
+  .navbar a:hover {
+    color: var(--vclaro);
+    transition: all 0.3s ease;
+  }
+
+  .navbar button:hover {
+    background-color: var(--vclaro);
+    transition: all 0.3s ease;
+    
+  }
+
+  #inicio {
+    color: var(--vescuro);
+    font-weight: 700;
+  }
+  .navbar-center h1{
+    font-size: 2em;
+    font-weight: 700;
+    color: #212529
+  }
+  .circle{
+    width: 3em;
+    height: 3em;
+    background-color: var(--vclaro);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+
+  }
+
+
+  /*  HEADER */
+ 
+  header {
+    background: linear-gradient(to right, var(--vescuro), var(--vclaro));
+    color: white;
+    padding-top: 5em;
+  }
+
+  header h1 {
+    font-size: 3.5em; 
+  }
+
+  header button {
+    font-size: 1.3em;
+    background-color: var(--vescuro);
+    border: none;
+    color: white;
+    border-radius: 8px;
+    padding: 10px 25px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.596);
+    transition: all 0.3s ease;
+  }
+
+  header button:hover {
+    transform: scale(1.1);
+    background-color: #28492f;
+  }
+
+  header .button-text {
+    color: white;
+  }
+
+  #logo {
+    width: 40em;
+    height: auto;
+  }
+
+  #logo-header {
+    width: 27em;
+    height: auto;
+  margin: 3em;
+    border-radius: 100%;
+  }
+
+  #Leve {
+    color: var(--vclaro);
+  }
+
+  #subtitulo,
+  #bem-vindo {
+    color: white;
+    font-weight: 700;
+  }
+
+  .slogan {
+    border: 5px solid var(--vescuro);
+    width: 100%;
+    background-color: var(--vescuro);
+  }
+
+  .slogan p {
+    margin-top: 0.5em;
+  }
+
+  /* ============================= */
+  /*  MAIN */
+  /* ============================= */
+  main {
+    background-color: #f5f5f5f1;
+    
+  } 
+
+  main h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+  }
+
+  main h2 {
+    font-size: 1.6em;
+    margin-bottom: 1em;
+    font-weight: 700;
+  }
+
+  /* ====== SEÇÕES ====== */
+
+  /* --- Como Trabalhamos --- */
+  .comoTrabalhamos {
+    background-color: #f7f7f7;
+    padding: 2em;
+    border-radius: 10px;
+    margin-bottom: 2em;
+  }
+  .card-trabalhamos{
+    border-radius: 10px;
+        border: none;
+      border-bottom: 5px solid var(--vclaro);
+
+
+
+  }
+  .comoTrabalhamos img {
+    width: 8em;
+    height: auto;
+    margin-top: 1em;
+  }
+
+  /* --- Cards e Passos --- */
+  .cards-container {
+    margin-top: -6em;
+    height: auto;
+      font-size: 1em;
+  }
+  .cards {
+    background-color: white;
+    border-radius: 10px;
+    width: 15em;
+    border-bottom: 5px solid var(--vescuro);
+    text-align: center;
+
+    height: auto;
+  }
+
+  .cards h1{
+    font-size: 1.5rem;
+  }
+  .text-renda { color: var(--vclaro); }
+
+  #objetivo{
+    background-color: white;
+  }
+
+  /* --- Quem Somos --- */
+  .Quem-somos img {
+    width: 25em;
+    height: auto;
+    margin-top: 1em;
+  }
+  #sobre-nos{
+    background-color: rgb(252, 252, 252);
+  }
+
+  /* ============================= */
+  /* 👤 LOGIN */
+  /* ============================= */
+  .login {
+    width: 100%;
+    min-height: 200px;
+    padding-top: 5em;
+  }
+
+  .login button {
+    background-color: var(--vescuro);
+    padding: 8px 20px;
+    font-size: 1.1em;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .login button:hover {
+    background-color: #2c682a;
+    transform: scale(1.1);
+  }
+
+  /* ============================= */
+  /* 💰 ÁREA FINANCEIRA */
+  /* ============================= */
+  .visao-geral {
+    text-align: center;
+  }
+  #porquinho{
+    width: 3em;
+    height: auto;
+  }
+
+  .visao-geral h3 {
+    font-weight: 700;
+    color: #161616;
+    font-size: 2rem;
+  }
+
+  .saldo-card {
+    border-radius: 12px;
+    padding: 25px;
+    background-color: #fff;
+
+    
+  }
+
+  .saldo-card h4 {
+    font-weight: 500;
+    color: #212529;
+    font-size: 2rem;
+  }
+
+  .saldo-card .valor {
+    font-size: 4rem;
+    color: #2e7d32;
+    font-weight:600;
+  }
+  .valor{
+    font-size: 4rem;
+    color: #2e7d32;
+    font-weight: 700;
+  }
+
+  /* --- Guardar / Depositar --- */
+  .guardar-card {
+    border-radius: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+
+  ;
+  }
+  .saldo-card h4{
+    font-size: 1.4rem;
+    opacity: 70%;
+  }
+  .guardar-card h4{
+    font-size: 1.4rem;
+    text-align: left;
+    font-weight: 500 !important;
+  }
+
+
+
+
+
+
+
+  .guardar-card h4 {
+    font-weight: 700;
+    color: #3a3a3a;
+  }
+
+  .valor-btn {
+    background-color: #fff;
+    border: 2px solid var(--vclaro);
+    border-radius: 8px;
+    padding: 6px 14px;
+    font-weight: 600;
+    color: var(--vescuro);
+    transition: 0.2s;
+  }
+
+  .valor-btn:hover {
+    background-color: #e6f4e7;
+  }
+
+  /* --- Botões de ação --- */
+  .btn-enviar {
+    background-color: var(--vescuro);
+    color: white;
+  }
+
+  .btn-verde {
+    background-color: var(--vclaro);
+    border: none;
+    color: white;
+    font-weight: 500;
+  }
+
+  .btn-verde:hover {
+    background-color: #588b3e;
+  }
+
+  .btn-depositar {
+    border: 2px solid var(--vclaro);
+    background-color: #fff;
+    color: var(--vescuro);
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 8px;
+    transition: 0.3s;
+  }
+
+  .btn-depositar:hover {
+    background-color: var(--vclaro);
+    color: #fff;
+  }
+
+  /* --- Estados e Contas --- */
+  .btn-estado {
+    border: none;
+    border-radius: 20px;
+    padding: 6px 18px;
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+
+  .btn-estado.inativo {
+    background-color: #cfcfcf;
+    color: #2d2d2d;
+  }
+
+  .btn-estado.ativo {
+    background-color: #ffffff;
+    color: #2d2d2d;
+    border: 1px solid #ddd;
+  }
+
+  .conta {
+  border: none;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+  }
+
+  .conta-pendente {
+    border-color: #e42326;
+  }
+
+  .conta-distante {
+    border-color: #4caf50;
+  }
+
+  .conta-proxima {
+    border-color: #3a3042;
+  }
+
+  /* --- Movimentações --- */
+  .movimentacoes {
+    background-color: rgb(214, 214, 214);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .movimentacoes h3 {
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+
+  .movimentacoes span {
+    font-weight: 700;
+  }
+
+  /* ============================= */
+  /* 💼 CARDS FINANCEIROS */
+  /* ============================= */
+  .financeiro-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+
+  }
+
+  .card-financeiro {
+    border-radius: 15px;
+    padding: 2rem;
+    width: 400px;
+    color: white;
+    text-align: center;
+  }
+
+  .card-financeiro h3 {
+    font-weight: 600;
+  }
+
+  .card-financeiro .valor {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .entrada {
+    background-color: var(--vescuro);
+  }
+
+  .entrada .valor {
+    color: #00fc00;
+    font-size: 2rem;
+  }
+
+  .despesa {
+    background-color: #921717;
+  }
+
+  .despesa .valor {
+    color: #ff6969;
+    font-size: 2rem;
+  }
+
+  /* ============================= */
+  /* 🎨 OUTROS ELEMENTOS */
+  /* ============================= */
+  .highlight {
+    color: var(--vclaro);
+  }
+
+  .square-box {
+    background-color: var(--vclaro);
+    width: 100%;
+    min-height: 200px;
+  }
+
+  .icon {
+    width: 1.5em;
+    height: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--vescuro);
+    border-radius: 50%;
+    font-size: 2em;
+  }
+
+  .icon h1 {
+    color: white;
+  }
+
+  /* --- Usuário --- */
+  .user {
+    background: linear-gradient(to right, #2d4221, #4c944b);
+    color: white !important;
+    opacity: 99%;
+
+  }
+
+  .user h1,
+  .user h3 {
+    color: white;
+  }
+
+  .user h3 {
+    font-weight: 700;
+  }
+
+  .mes {
+    background-color: rgb(247, 247, 247);
+    border-radius: 8px;
+    font-size: 0.5em;
+  }
+  .porquinho-img{
+    width: 12em;
+    height: auto;
+  }
+
+  .mes h3 {
+    color: rgb(8, 8, 8) !important;
+    font-weight: 700;
+  }
+
+  .Despesas h3 {
+    font-weight: 600;
+    font-size: 2rem;
+  }
+  #valor{
+    font-size: 1.7rem;
+  }
+  .btn-paga{
+    background: var(--vclaro);
+    transition: all 0.3s ease;
+  }
+  .btn-paga:hover{
+    background: #588b3e;
+    color: white;
+  }
+  .btn-excluir{
+    background-color: var(--rojo);
+    border: 2px solid var(--rojo);
+    color: var(--rojo);
+    transition: all 0.3s ease;
+  }
+  /* --- Botão de Detalhes --- */
+  .button-detalhes {
+    font-weight: 700;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin: 1em 0 0 0;
+    
+  }
+
+  .button-detalhes:hover {
+    transform: scale(1.1);
+  }
+  .despesas-container{
+    background-color: #FAFAFA;
+  }
+
+  /* --- Ordem --- */
+  #ordem {
+    text-align: right;
+    margin-top: -2.5em;
+    margin-right: 2em;
+    font-weight: 700;
+    border: 3px solid var(--vescuro);
+    color: var(--vescuro);
+  }
+
+  /* --- Modal --- */
+  .modal-content {
+    background-color: transparent;
+    border: none;
+  }
+  .modal-header {
+    border-bottom: none;
+    background-color: var(--vescuro);
+    color: white;
+    font-weight: 600;
+    border-top-left-radius: 10px;
+  }
+  .modal-body{
+    background-color: rgb(236, 236, 236);
+    color: #161616;
+    font-weight: 500;
+  }
+  .contas-container .valor{
+    font-size: 1.2rem;
+
+  }
+  .contas{
+    width: 100%;
+    margin: 1em 0;  
+  }
+  /*rodape*/
+  footer {
+    background: linear-gradient(to right,var(--vescuro2), #356634);
+      color: #ffffff;
+      text-align: center;
+      padding: 20px 0;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      margin-top: 40px;
+  }
+  .linha{
+      border: 1px solid #ffffff;
+      margin: 20px 0;
+  }
+  .subtitulo-cards{
+      color: var(--vyellow);
+      font-size: 3rem;
+      margin-bottom: 5px;
+      font-family: 'Poppins', sans-serif;
+  }
+  .subtitulo-footer{
+      color: #ffffff;
+      font-size: 2rem;
+      margin-bottom: 5px;
+      font-family: 'Poppins', sans-serif;
+  }
+  .paragrafo-footer{
+      color: #ffffff;
+      font-size: 1rem;
+      margin-bottom: 20px;
+      text-align: justify;
+  }
+  
+  .li-footer{
+      text-align: justify;
+  }
+  
+  .fab {
+      gap: 20px;
+      font-size: 1.5rem;
+      margin: 0 10px;
+      color : #ffffff;
+      transition: transform 0.3s ease;
+  }
+  .fab:hover {
+      transform: scale(1.2);
+      color: #FFFFFF;
+  }
+  #usuario-name{
+    color: rgb(20, 20, 20);
+  }
+ 
+
+  .navbar-center h1 {
+    margin: 0;
+    pointer-events: auto;
+    font-size: 1.1rem; 
+  }
+  .metas{
+    padding: 2rem;
+  }
+  .header-metas{
+  min-height: 100px;
+  box-sizing: border-box;
+  }
+  .imagens-metas img{
+    width: 30em;
+    height: auto;
+  }
+  .header-metas h3{
+    color: rgba(255, 255, 255, 0.966);
+    font-weight: 400;
+    font-size: 2rem;
+  }
+  .header-metas h1{
+    color: white;
+    font-weight: 700;
+    font-size: 3.5rem;
+  }
+  .header-metas i{
+    color: var(--vclaro);
+  }
+.livros-financas img{
+  width: 15em;
+  height: auto;
+
+}
+#graficoPizza, #graficoBarras {
+  height: 300px !important;
+}
+
+  
+  @media (max-width: 767.98px) {
+    .navbar-center {
+      padding: 0 3.5rem; 
+      transform: translateX(-50%);
+      top: 50%;
+    }
+    .navbar-center h1 { font-size: 1rem; }
+  }
+
+  @media (max-width: 768px) {
+    .imagens-metas {
+    display: none;
+  }
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 5px;
+    
+      }
+    .porquinho-img{
+      display: none;
+    }
+
+    .navbar a {
+      padding-left: 0;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+    }
+
+    header button {
+      font-size: 1.1em;
+      padding: 8px 20px;
+    }
+    header p{
+      font-size: 1rem;
+    }
+
+    #logo {
+  display: none;
+    }
+    #comeceAgora{
+      margin-bottom: 20px;
+    }
+    .logo{
+      width: 8em;
+      margin: 0;
+    }
+    #logo-header {
+      width: 15rem;
+      height: auto;
+      margin-left: 0;
+    }
+
+    main h1 {
+      font-size: 2em;
+    }
+
+    main h2 {
+      font-size: 1.3em;
+    }
+    .texto{
+      font-size: 0.9rem;
+      display: flex;
+      justify-content: center;
+
+    }
+    #logo-header{
+     display: none;
+    }
+    .cards {
+      width: 100%;
+      margin-bottom: 1em;
+    }
+    .card-trabalhamos{
+      margin-bottom: 1em;
+    }
+    .subtitulo-footer .paragrafo-footer{
+    font-size: 0.5rem;
+    }
+
+    .financeiro-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .card-financeiro {
+      width: 100%;
+      margin-bottom: 1em;
+    }
+    #usuario-name{
+      font-size: 1.3rem;
+    }
+    .saldo-card .valor{
+    font-size: 3rem;
+    }
+    .navbar-center h1{
+      display: none;
+    }
+    .navbar img{
+      width: 2.5em;
+      height: auto;
+      display:flex ;
+
+    }
+    .header-metas h1{
+    color: white;
+    font-weight: 700;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+  .header-metas h3{
+    color: rgba(255, 255, 255, 0.966);
+    font-weight: 400;
+    font-size: 1.2rem;
+  }
+  .card-meta{
+    display: none;
+  }
+  }
+
+.navbar .btn.btn-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.85rem;
+  line-height: 1;
+  border-width: 1px;
+}
+
+
+@media (max-width: 768px) {
+  .navbar { padding: 0.2rem 0.5rem; }
+  .navbar .navbar-brand img { width: 2rem; height: auto; }
+  .navbar-center h1 { font-size: 0.95rem; margin: 0; }
+  .navbar b { display: none !important; } /* esconde "Renda+" */
+  .navbar .nav-link { font-size: 0.9rem; padding-left: 0.5rem; }
+  .navbar .btn { padding: 0.2rem 0.5rem; font-size: 0.75rem; border-radius: 6px; }
+  .navbar .btn.btn-sm { padding: 0.15rem 0.4rem; font-size: 0.7rem; }
+  .navbar img { max-width: 2.2rem; }
+  header { padding-top: 3.5em; } /* reduz espaço do header em mobile */
+}
+
+
+@media (max-width: 768px) {
+  #app-sidebar, .sidebar {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+  }
+
+  main.with-sidebar {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  .sidebar-top,
+  .sidebar-user,
+  #sidebar-root {
+    display: none !important;
+  }
+}
+

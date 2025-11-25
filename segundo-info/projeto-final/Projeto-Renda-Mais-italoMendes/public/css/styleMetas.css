@@ -1,0 +1,270 @@
+@import url(https://fonts.bunny.net/css?family=poppins:100,300,500,600,700);
+
+  /*  VARIÁVEIS GLOBAIS */
+  :root {
+    --vescuro: #235321;
+    --vescuro2: #143013;
+    --vclaro: #6a994e;
+    --vyellow: #a7c957;
+    --bege: #f3f3f3;
+    --rojo: #bc4749;
+  }
+
+  /*  ESTILOS GERAIS */
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bege);
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+  }
+
+  b {
+    font-weight: 700;
+    color: var(--vclaro);
+  }
+
+  h1 {
+    font-weight: 600;
+    color: #161616;
+  }
+
+  h3 {
+    font-weight: 500;
+    color: #161616;
+    font-size: 2em;
+  }
+
+  /*  COMPONENTES BÁSICOS */
+  button {
+    background-color: white;
+    border: 3px solid var(--vclaro);
+    padding: 5px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    color: var(--vclaro);
+    margin-left: 0.5em;
+    border-radius: 8px;
+  }
+
+  .button-text {
+    font-weight: 600;
+    font-size: 1em;
+    color: var(--vclaro);
+  }
+  button:hover .button-text {
+    color: white ;
+  }
+  .filtro:hover {
+    background-color: var(--vclaro);
+    color: white;
+    transition: all 0.3s ease;
+  }
+
+  input,
+  textarea {
+    border: 2px solid #c4c4c4 !important;
+    border-radius: 8px;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1em;
+    margin-bottom: 1em;
+  }
+
+  /*  NAVBAR */
+  
+  .navbar {
+    background-color: white;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+  .navbar button{
+    background-color: var(--vclaro);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 20px;
+    font-size: 1em;
+    margin-left: 0.5em;
+    transition: all 0.3s ease;
+  }
+  
+  .conta button{
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: var(--vescuro);
+
+  }
+
+
+
+  .navbar img {
+    width: 3em;
+    height: auto;
+  }
+
+  .navbar a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    font-size: 1.1em;
+    padding-left: 2.3em;
+  }
+
+  .navbar a:hover {
+    color: var(--vclaro);
+    transition: all 0.3s ease;
+  }
+
+  .navbar button:hover {
+    background-color: var(--vclaro);
+    transition: all 0.3s ease;
+    
+  }
+
+  #inicio {
+    color: var(--vescuro);
+    font-weight: 700;
+  }
+  .navbar-center h1{
+    font-size: 2em;
+    font-weight: 700;
+    color: #212529
+  }
+  .circle{
+    width: 3em;
+    height: 3em;
+    background-color: var(--vclaro);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+
+  }
+
+
+  header {
+    background: linear-gradient(to right, var(--vescuro), var(--vclaro));
+    color: white;
+    padding: 2em;
+  }
+
+  header h1 {
+    font-size: 3.5em; 
+  }
+
+  header button {
+    font-size: 1.2em;
+    background-color: var(--vescuro);
+    border: none;
+    color: white;
+    border-radius: 8px;
+    padding: 10px 25px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.596);
+    transition: all 0.3s ease;
+  }
+
+  header button:hover {
+    background-color: var(--vclaro);
+  }
+
+  header .button-text {
+    color: white;
+  }
+  #saldoGuardado{
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--vclaro);
+  }
+
+  #guardado-meta{
+    font-size: 1.6rem;
+    font-weight:700;
+    color: var(--vescuro);
+    margin: 0;
+    padding: 0;
+  }
+
+/* ==== Estilo geral dos cards de metas ==== */
+.card-meta {
+  border-radius: 16px;
+  transition: all 0.25s ease;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.card-meta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ==== Botão de três pontos (menu) ==== */
+.btn-dots-lg {
+  background: transparent;
+  border: none;
+  color: #6c757d;
+  font-size: 1.2rem;
+  padding: 4px;
+  transition: color 0.2s ease;
+}
+
+.btn-dots-lg:hover {
+  color: #000;
+}
+
+/* ==== Dropdown do menu ==== */
+.dropdown-menu {
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  min-width: 140px;
+}
+
+.dropdown-item {
+  font-size: 0.9rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown-item.text-danger:hover {
+  background-color: #ffe6e6;
+}
+
+/* ==== Título e textos do card ==== */
+.card-meta .card-title {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.card-meta .card-text {
+  color: #555;
+  flex-grow: 1;
+}
+
+.card-meta p {
+  margin-bottom: 0.25rem;
+  color: #444;
+}
+
+/* Mobile: navbar compacta e remover a palavra "Renda+" (mesma regra para página de metas) */
+@media (max-width: 768px) {
+  .navbar { padding: 0.2rem 0.5rem; }
+  .navbar .navbar-brand img { width: 2rem; height: auto; }
+  .navbar-center h1 { font-size: 0.95rem; margin: 0; }
+  .navbar-center b { display: none !important; } /* esconde "Renda+" */
+  .navbar .nav-link { font-size: 0.9rem; padding-left: 0.5rem; }
+  .navbar .btn { padding: 0.2rem 0.5rem; font-size: 0.75rem; border-radius: 6px; }
+  .navbar .btn.btn-sm { padding: 0.15rem 0.4rem; font-size: 0.7rem; }
+  .navbar img { max-width: 2.2rem; }
+}
+

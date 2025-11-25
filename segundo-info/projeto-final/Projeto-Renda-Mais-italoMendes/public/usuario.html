@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Renda+ - Usuario</title>
+ <link rel="icon" href="img/logo-renda.ico">
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+ <link rel="stylesheet" href="css/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+  
+  <!-- container que receberá o componente sidebar -->
+  <div id="sidebar-root"></div>
+
+  <main class="with-sidebar">
+
+    <div class="user">
+      <div class="container-usuario container p-3">
+        <!-- Visão Geral -->
+        <div class="container container-visao-geral">
+          <div class="d-flex mes justify-content-center"></div>
+
+          <div class="row justify-content-center g-4">
+            <!-- Card Saldo -->
+            <div class="col-md-5">
+              <div class="saldo-card text-left">
+                <h4>Saldo de <span id="mes"></span></h4>
+                <p class="valor" id="Saldo"></p>
+                <button class="button button-detalhes" data-bs-toggle="modal" data-bs-target="#modalDetalhes">Ver detalhes</button>
+              </div>
+            </div>
+
+            <!-- Card Guardar -->
+            <div class="col-md-5">
+              <div class="guardar-card text-center shadow rounded" id="cardGuardar">
+                <div class="saldo-card text-center">
+                  <h4>Dinheiro Guardado</h4>
+                 
+                  <p class="valor" id="valorGuardado">R$ 0,00</p>
+                  <button id="btn-depositar-guardado" class="button-detalhes" type="button" data-bs-toggle="modal" data-bs-target="#guardarDinheiroModal">Depositar Dinheiro</button>
+                </div>
+
+                <div id="cardConfirmado" class="d-none">
+                  <h4 class="text-center" style="font-size: 2rem;">Você tem:</h4>
+                  <p class="text-center valor m-4">R$ 0,00</p>
+                  <div class="d-flex justify-content-between m-3">
+                    <button class="btn btn-light w-50 me-2" id="btnVoltar">Guardar</button>
+                    <button class="btn btn-success w-50" id="btnDepositarConfirm">Depositado</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+
+
+    
+    <!-- Saudação -->
+    <div class="saudacao p-3 text-center" style="background-color:rgb(250, 250, 250);">
+      <h1 class="m-0">Olá, <span id="usuario-name" data-userid="1"></span></h1>
+      <p style="font-size: 20px; opacity: 50%; font-weight: 400;">Veja como está seu financeiro desse mês</p>
+    </div>
+
+
+
+    
+    <div id="container-graficos" class="container border-0 my-4"></div>
+
+    <!-- Contas -->
+    <div class="contas">
+      <div class="container container-contas p-3 mt-3">
+        <div class="row g-4">
+          <!-- Coluna esquerda -->
+          <div class="col-12 col-md-8 col-lg-9">
+            <div class="row row-cols-1 g-4">
+              <div class="col">
+                <div class="conta p-1 text-left card shadow border-0 rounded-4 h-100">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-start flex-column flex-md-row">
+                      <div>
+                       
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coluna direita: Resumo -->
+          <div class="col-12 col-md-4 col-lg-3">
+            <div class="card resumo-contas p-4 border-0 rounded-4 h-100">
+              <div class="card-body d-flex flex-column justify-content-between h-100">
+                <div>
+                  <h5 class="fw-bold">Resumo</h5>
+                  <p class="mb-2">Total pendente: <strong id="total-pendente">R$ 230,00</strong></p>
+                  <p>Número de Despesas: <strong id="despesas-quantidade">10</strong></p>
+                  <p>Despesas Pagas: <strong id="despesas-pagas">9</strong></p>
+                </div>
+
+                <div class="mt-1 d-grid gap-2">
+                  <button class="btn btn-paga" style="color: white;" data-bs-toggle="modal" data-bs-target="#Despesas-modal">Adicionar Conta</button>
+                  <button class="button-sair filtro rounded-3" id="filtrar-por-data">Filtrar por prazo</button>
+                  <button class="btn btn-outline-secondary" id="exportar-lista">Exportar (CSV)</button>
+
+                  <div class="flex-column justify-content-center align-items-center text-center mt-3">
+                    <p><span id="pendentes">2</span> Despesas <b id="pendente">pendentes</b></p>
+                    <p><span id="Proximas">2</span> Despesas <b id="proximo">próximas</b></p>
+                    <p><span id="distantes">2</span> Despesas <b>distantes</b></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- /row -->
+      </div>
+    </div>
+
+    <!-- Metas -->
+    <section class="metas">
+      <div class="header-metas">
+        <header class="container-fluid py-5 bg-success-subtle rounded-4">
+          <div class="row align-items-center">
+            <!-- Coluna 1: Texto -->
+            <div class="col-lg-6 text-white ps-5">
+              <h1 class="fw-bold display-5">Metas e Planejamentos</h1>
+              <h3 class="mb-4">Organize suas metas financeiras</h3>
+
+              <div class="card card-meta  mb-3 border-0 shadow-sm" style="border-bottom: 5px solid #198754;">
+                <div class="card-body d-flex align-items-center">
+                  <i class="bi bi-flag-fill fs-4 me-3"></i>
+                  <span class="fw-medium fs-5">Adicione sua primeira meta</span>
+                </div>
+              </div>
+
+              <div class="card card-meta mb-3 border-0 shadow-sm" style="border-bottom: 5px solid #198754;">
+                <div class="card-body d-flex align-items-center">
+                  <i class="bi bi-graph-up-arrow fs-4 me-3"></i>
+                  <span class="fw-medium fs-5">Junte e veja ela se concretizando</span>
+                </div>
+              </div>
+
+              <div class="buttom-adicionarMeta">
+                <button class="mt-3" onclick="window.location ='adicionarMeta.html'"   style="background-color: #6a994e;">
+                  Adicionar Meta
+                </button>
+              </div>
+            </div>
+
+            <!-- Coluna 2: Imagens -->
+            <div class="col-lg-6 imagens-metas">
+              <div class="row g-3">
+                <div class="col-12">
+                  <img src="img/familia-rio.jpg" alt="Família viajando" class="img-fluid rounded-4 shadow">
+                </div>
+                <div class="col-md-6">
+                  <img src="img/familia-formando.png" alt="Formatura"     class="img-fluid rounded-4 shadow">
+                </div>
+                <div class="col-md-6">
+                  <img src="img/familia-crianca.png" alt="Criança brincando"    class="img-fluid rounded-4 shadow">
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal Adicionar Despesa -->
+  <div class="modal fade" tabindex="-1" id="Despesas-modal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+
+        <div class="modal-body">
+          <div id="formulario">
+            <div id="formDespesa">
+              <h4 class="text-center">Adicione sua Despesa</h4>
+              <div class="form-label">
+                <label for="descricao">Descrição:</label>
+                <input type="text" id="descricao" class="form-control" placeholder="Ex: Supermercado, Luz, Internet..." />
+              </div>
+
+              <div class="form-label">
+                <label for="valor">Valor:</label>
+                <input type="number" id="valor" class="form-control" placeholder="R$ 0,00" />
+              </div>
+
+              <div class="form-label">
+                <label for="data">Data de Vencimento:</label>
+                <input type="date" id="dataVencimento" class="form-control" />
+
+                <label for="tipoDespesa" class="form-label">Tipo de despesa</label>
+                <select id="tipoDespesa" class="form-select">
+                  <option value="fixa">Fixa</option>
+                  <option value="variavel" selected>Variável</option>
+                  <option value="outros">Outros</option>
+                </select>
+              </div>
+
+              <button class="btn btn-success w-100 m-0" id="btnAdicionar" data-bs-dismiss="modal">Adicionar Despesa</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Primeira Visita -->
+  <div class="modal fade" id="firstVisitModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="firstVisitLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="firstVisitLabel">Bem-vindo ao Renda+</h5>
+        </div>
+        
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <h4>Nos conte um pouco sobre voce, para que possamos te ajudar melhor! </h4>
+              <label for="rendaMensal" class="form-label">Renda mensal (R$)</label>
+              <input type="number" step="0.01" min="0" class="form-control" id="rendaMensal" placeholder="0.00" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="metaMensal" class="form-label"> Meta mensal(R$)</label>
+              <input type="number" step="0.01" min="0" class="form-control" id="metaMensal" placeholder="0.00" required>
+            </div>
+          </form>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" id="firstVisitSave">Salvar e Continuar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Detalhes -->
+  <div class="modal fade" id="modalDetalhes" tabindex="-1" aria-labelledby="modalFinanceiroLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-body" style="background-color: transparent;">
+          <div class="financeiro-container">
+            <div class="movimentacoes">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+
+              <div class="saldo-container bg-white p-3 rounded mb-3">
+                <h3 class="mb-4">Saldo em conta</h3>
+                <h3 id="Saldo">R$ 0,00</h3>
+                <span id="Atualizado">Atualizado em 10/09/2023 às 14:30</span>
+              </div>
+
+              <div class="table-responsive">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>Data</th>
+                      <th>Descrição</th>
+                      <th>Categoria</th>
+                      <th>Valor</th>
+                      <th>Tipo</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>01/09/2023</td>
+                      <td>Compra Supermercado</td>
+                      <td>Alimentação</td>
+                      <td>R$ 150,00</td>
+                      <td>Despesa</td>
+                    </tr>
+                    <tr>
+                      <td>03/09/2023</td>
+                      <td>Salário Mensal</td>
+                      <td>Renda</td>
+                      <td>R$ 2000,00</td>
+                      <td>Receita</td>
+                    </tr>
+                    <tr>
+                      <td>05/09/2023</td>
+                      <td>Conta de Luz</td>
+                      <td>Serviços</td>
+                      <td>R$ 100,00</td>
+                      <td>Despesa</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div> <!-- /movimentacoes -->
+          </div> <!-- /financeiro-container -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal depositar dinheiro guardado -->
+<div class="modal fade" id="guardarDinheiroModal" tabindex="-1" aria-labelledby="guardarDinheiroModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="guardarDinheiroModalLabel">Dinheiro Guardado 💰</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="valorGuardar" class="form-label">Quanto de dinheiro você pretende guardar?</label>
+                    <input type="number" class="form-control" id="valorGuardar" step="0.01" min="0" placeholder="Ex: 100.00">
+                    <div class="form-text">O valor será **subtraído** do seu Saldo atual.</div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success" id="btnSalvarGuardado">Guardar Dinheiro</button>
+            </div>
+        </div>
+    </div>
+</div>
+  <!-- Rodapé -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h3 class="subtitulo-footer">Renda+</h3>
+          <p class="fst-italic mt-4" style="color: #e1ffcf;">Mais controle, mais aprendizado, mais Renda+.</p>
+        </div>
+
+        <div class="col-md-4">
+          <h3 class="subtitulo-footer">Contato</h3>
+          <ul class="list-unstyled">
+            <li>Email: contato@Renda+.com.br</li>
+            <li>Telefone: (11) 1234-5678</li>
+          </ul>
+        </div>
+
+        <div class="col-md-4">
+          <h3 class="subtitulo-footer">Siga-nos</h3>
+          <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+          <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+          <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+        </div>
+      </div>
+
+      <div class="linha"></div>
+      <div class="text-center mt-3">
+        <p>&copy; 2025 Renda+. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Carrega o componente sidebar e em seguida sidebar.js -->
+  <script src="js/loadSidebar.js"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+ <script type="module">
+  import { loadComponent } from '/js/utils/loadComponent.js';
+  import { inicializarGraficosDashboard } from '/js/components/graficos-dashboard.js';
+
+  (async () => {
+    try {
+      // carrega o HTML do componente
+      await loadComponent('/components/graficos-dashboard.html', 'container-graficos');
+
+      // O componente `graficos-dashboard` gerencia o botão de "Atualizar gráfico".
+      // Não inicializamos automaticamente aqui para evitar atualizações automáticas.
+
+    } catch (err) {
+      console.error('Erro ao carregar graficos-dashboard:', err);
+    }
+  })();
+</script>
+
+
+  <!-- seu script geral -->
+  <script src="js/script.js"></script>
+  
+</body>
+</html>
