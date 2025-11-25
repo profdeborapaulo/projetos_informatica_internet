@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CYBER GUARDIAN 3.0</title>
+  <link rel="stylesheet" href="style7.css">
+  <script src="https://kit.fontawesome.com/a2e0e9d6b2.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- tela de carregamento -->
+  <div id="loading-screen">
+    <h1>ON-SRCURITY</h1>
+    <p id="loading-text">Inicializando sistema de defesa ESIUOL...</p>
+    <div class="loading-bar"><div class="progress"></div></div>
+  </div>
+
+  <!-- tela principal -->
+  <div id="gameScreen" class="hidden">
+    <h1>ON-SECURITY: Sistema de Defesa Virtual</h1>
+
+    <div id="hud">
+      <p>💾 Confiança: <span id="trust">100%</span></p>
+      <p>⚠️ Ameaça: <span id="threat">0%</span></p>
+    </div>
+
+    <div class="console" id="log"></div>
+
+    <div id="esiuol">
+      <p id="esiuol"> ESIOUL: Sistema online. Monitorando ameaças...</p>
+    </div>
+
+    <div id="controls">
+      <button id="blockBtn"> Bloquear</button>
+      <button id="allowBtn">Permitir</button>
+      <button id="scanBtn"> Escanear</button>
+      <button id="isolateBtn"> Desconectar</button>
+    </div>
+
+    <!-- botões -->
+    <div id="system-controls">
+      <button id="restartBtn">🔁 Reiniciar</button>
+      <button id="closeBtn">❌ Fechar</button>
+    </div>
+
+    <audio id="alertSound" src="https://assets.mixkit.co/sfx/preview/mixkit-alert-alarm-1005.mp3"></audio>
+    <audio id="successSound" src="https://assets.mixkit.co/sfx/preview/mixkit-achievement-bell-600.mp3"></audio>
+  </div>
+
+ <!-- VLibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+  
+  <script src="script.js"></script>
+</body>
+</html>
+

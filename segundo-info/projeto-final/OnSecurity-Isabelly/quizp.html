@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz</title>
+  <link rel="stylesheet" href="style4.css">
+  <script src="https://kit.fontawesome.com/a2e0e9d6b2.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Phishing</h1>
+
+    <nav class="nav"> 
+     <a href="index.html">
+    <img src="logo.png" alt="Logo CiberJornada" class="logo">
+  </a>
+
+    <div class="menu-icon">&#9776;</div>
+
+    <div class="menu-links">
+      <a href="index.html"><i class="fas fa-home"></i><span>Início</span></a>
+      <a href="etapas.html"><i class="fas fa-route"></i><span>Etapas</span></a>
+      <a href="aprenda.html"><i class="fas fa-book-open"></i><span>Aprenda</span></a>
+      <a href="testes.html"><i class="fas fa-tasks"></i><span>Testes</span></a>
+      <a href="simulacao.html"><i class="fas fa-laptop-code"></i><span>Simulações</span></a>
+      <a href="denuncia.html"><i class="fas fa-exclamation-triangle"></i><span>Denúncia</span></a>
+      <a href="sobrenos.html"><i class="fas fa-users"></i><span>Sobre Nós</span></a>
+    </div>
+  </nav>
+
+    <form id="quizForm">
+
+      <!-- Pergunta 1 -->
+      <div class="question">
+        <h2>1️. O principal objetivo de um ataque de phishing é:</h2>
+        <label class="option"><input type="radio" name="q1" value="0"> Melhorar o desempenho da internet.</label>
+        <label class="option"><input type="radio" name="q1" value="1">  Roubar informações pessoais e financeiras das vítimas.</label>
+        <label class="option"><input type="radio" name="q1" value="0">Corrigir erros de segurança em sites.</label>
+        <label class="option"><input type="radio" name="q1" value="0">Bloquear o acesso de usuários a páginas da web.</label>
+      </div>
+
+      <!-- Pergunta 2 -->
+      <div class="question">
+        <h2>2️. Qual atitude ajuda a evitar cair em golpes de phishing?</h2>
+        <label class="option"><input type="radio" name="q2" value="0"> Clicar em todos os links recebidos por e-mail.</label>
+        <label class="option"><input type="radio" name="q2" value="0">Ignorar avisos de segurança do navegador.</label>
+        <label class="option"><input type="radio" name="q2" value="1"> Conferir o endereço do site e desconfiar de mensagens suspeitas.</label>
+        <label class="option"><input type="radio" name="q2" value="0"> Enviar dados pessoais sempre que solicitarem.</label>
+      </div>
+
+    </form>
+
+    <button class="btn" type="button" onclick="finalizarQuiz()">Finalizar Quiz</button>
+
+    <p id="resultado"></p>
+    <div id="extraButtons"></div>
+  </div>
+
+   <footer>
+    <div>
+      <h3>Contato</h3>
+      <p>Email: <a href="mailto:bellylouuise08@gmail.com">bellylouuise08@gmail.com</a></p>
+      <p>Telefone: (11) 55555-5555</p>
+      <p>Endereço: Rua cogumelitos, 555 - São Paulo, SP</p>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; 2025 - Todos os direitos reservados.
+    </div>
+  </footer>
+
+   <!-- VLibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

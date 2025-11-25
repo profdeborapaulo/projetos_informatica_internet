@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #b3b3b3, #9a9a9a);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centraliza verticalmente */
+  align-items: center;     /* Centraliza horizontalmente */
+}
+
+/* NAVBAR */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 25px; /* menor */
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.nav a {
+  text-decoration: none;
+}
+
+.logo {
+  width: clamp(100px, 8vw, 140px);
+  cursor: pointer;
+}
+
+.menu-icon {
+  font-size: 26px;
+  cursor: pointer;
+  color: #333;
+  transition: transform 0.3s ease;
+}
+
+.menu-icon:hover {
+  transform: scale(1.1);
+}
+
+/* MENU OCULTO */
+.menu-links {
+  position: absolute;
+  top: 60px;
+  right: 25px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  border-radius: 8px;
+  padding: 12px;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  animation: fadeIn 0.4s ease;
+}
+
+.menu-links.active {
+  display: flex;
+}
+
+/* LINKS */
+.menu-links a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.menu-links a:hover {
+  color: #6a5acd;
+  transform: translateX(4px);
+}
+
+.menu-links i {
+  font-size: 1rem;
+  color: #6a5acd;
+  width: 20px;
+}
+
+/* CONTEÚDO */
+.container {
+  width: 100%;
+  max-width: 500px; /* bem menor */
+  padding: 15px;
+  margin-top: 80px; /* para navbar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CARD PRINCIPAL */
+.card {
+  background: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  padding: 30px 20px;
+  text-align: center;
+  border: 3px solid #a58de4;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+h1 {
+  color: #000;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.descricao {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Lista de tópicos */
+.topicos {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.topicos li {
+  margin: 6px 0;
+}
+
+.topicos a {
+  color: #4b3fbf;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.topicos a:hover {
+  color: #6b5be6;
+  text-decoration: underline;
+  transform: scale(1.05);
+}
+
+/* Botão */
+.botao {
+  background: #7b6ad6;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 35px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.botao:hover {
+  background-color: #5e4ebf;
+  transform: scale(1.05);
+}
+
+/* FOOTER (opcional — pode remover se quiser menos altura total) */
+footer {
+  background-color: #ffffff;
+  color: #7b63b6;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
+  font-size: 13px;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 600px) {
+  .card {
+    padding: 20px 15px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  .descricao {
+    font-size: 0.9rem;
+  }
+
+  .botao {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+/* ANIMAÇÃO */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

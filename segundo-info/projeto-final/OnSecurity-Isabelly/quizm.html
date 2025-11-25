@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz</title>
+  <link rel="stylesheet" href="style4.css">
+  <script src="https://kit.fontawesome.com/a2e0e9d6b2.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Malware</h1>
+
+    <nav class="nav"> 
+     <a href="index.html">
+    <img src="logo.png" alt="Logo CiberJornada" class="logo">
+  </a>
+
+    <div class="menu-icon">&#9776;</div>
+
+    <div class="menu-links">
+      <a href="index.html"><i class="fas fa-home"></i><span>Início</span></a>
+      <a href="etapas.html"><i class="fas fa-route"></i><span>Etapas</span></a>
+      <a href="aprenda.html"><i class="fas fa-book-open"></i><span>Aprenda</span></a>
+      <a href="testes.html"><i class="fas fa-tasks"></i><span>Testes</span></a>
+      <a href="simulacao.html"><i class="fas fa-laptop-code"></i><span>Simulações</span></a>
+      <a href="denuncia.html"><i class="fas fa-exclamation-triangle"></i><span>Denúncia</span></a>
+      <a href="sobrenos.html"><i class="fas fa-users"></i><span>Sobre Nós</span></a>
+    </div>
+  </nav>
+
+    <form id="quizForm">
+
+      <!-- Pergunta 1 -->
+      <div class="question">
+        <h2>1️. O que é um malware</h2>
+        <label class="option"><input type="radio" name="q1" value="0"> Um programa criado para acelerar o funcionamento do computador.</label>
+        <label class="option"><input type="radio" name="q1" value="0"> Um software usado apenas para proteger arquivos pessoais.</label>
+        <label class="option"><input type="radio" name="q1" value="1"> Um programa malicioso que pode causar danos e roubar informações.</label>
+        <label class="option"><input type="radio" name="q1" value="0"> Um tipo de antivírus avançado.</label>
+      </div>
+
+      <!-- Pergunta 2 -->
+      <div class="question">
+        <h2>2️. Qual das opções abaixo ajuda a evitar infecções por malware?</h2>
+        <label class="option"><input type="radio" name="q2" value="0"> Baixar qualquer arquivo encontrado na internet.</label>
+        <label class="option"><input type="radio" name="q2" value="1">  Instalar antivírus e evitar clicar em links suspeitos.</label>
+        <label class="option"><input type="radio" name="q2" value="0"> Compartilhar senhas com pessoas de confiança.</label>
+        <label class="option"><input type="radio" name="q2" value="0"> Usar sites desconhecidos sem verificar a segurança.</label>
+      </div>
+
+    </form>
+
+      <button class="btn" type="button" onclick="finalizarQuiz()">Finalizar Quiz</button>
+
+    <p id="resultado"></p>
+    <div id="extraButtons"></div>
+  </div>
+
+  </div>
+
+   <footer>
+    <div>
+      <h3>Contato</h3>
+      <p>Email: <a href="mailto:bellylouuise08@gmail.com">bellylouuise08@gmail.com</a></p>
+      <p>Telefone: (11) 55555-5555</p>
+      <p>Endereço: Rua cogumelitos, 555 - São Paulo, SP</p>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; 2025 - Todos os direitos reservados.
+    </div>
+  </footer>
+
+   <!-- VLibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
