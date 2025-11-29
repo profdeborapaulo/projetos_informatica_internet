@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações do Sistema - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+     <div class="sidebar-logo">
+            <a href="index.html" class="logo-link">
+                <img src="img/logo.png" alt="Logo do Sistema" class="logo">
+            </a>
+        </div>
+    <ul>
+
+      <li><a href="index.html"><h2>Menu</h2></a></li>
+
+      <li><span class="icon">👤</span> <a href="usuario.html">Usuário</a></li>
+
+      <li><span class="icon">📝</span> <a href="forms.html">Formulário</a></li>
+
+      <li><span class="icon">🎯</span> <a href="metas.html">Metas</a></li>
+      
+      <li><span class="icon">🔔</span> <a href="not.html">Notificações</a></li>
+
+      <li><span class="icon">⚙️</span> <a href="config.html">Configurações</a></li>
+
+      <li><span class="icon">📞</span> <a href="contato.html">Contato</a></li>
+
+      <li><span class="icon">ℹ️</span> <a href="sobre.html">Sobre Nós</a></li>
+    </ul>
+  </aside>
+
+<div class="main-content">
+    <header>
+        <h1>Configurações do Sistema</h1>
+    </header>
+
+    <main class="content-page">
+        <section class="system-settings">
+            <h2>Preferências de Visualização</h2>
+            <div class="setting-item">
+                <label>Tema Escuro</label>
+                <input type="checkbox" id="dark-mode-toggle">
+            </div>
+            <div class="setting-item">
+                <label>Formato de Data</label>
+                <select id="date-format">
+                    <option>DD/MM/AAAA (Padrão Brasil)</option>
+                    <option>MM/DD/AAAA (Padrão EUA)</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="data-management">
+            <h2>Gerenciamento de Dados</h2>
+            <div class="setting-item">
+                <label>Status da Conexão de Dados</label>
+                <span class="status-ok">ONLINE</span>
+            </div>
+            <div class="setting-item">
+                <label>Exportar Histórico</label>
+                <button class="btn-primary" id="btnDownload">Download CSV</button>
+            </div>
+            <span id="feedbackConfig" class="feedback-message" style="display: none;"></span>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Sistema de Monitoramento Residencial - Projeto Educacional</p>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Definição de Metas - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+ <aside class="sidebar">
+     <div class="sidebar-logo">
+            <a href="index.html" class="logo-link">
+                <img src="img/logo.png" alt="Logo do Sistema" class="logo">
+            </a>
+        </div>
+    <ul>
+
+      <li><a href="index.html"><h2>Menu</h2></a></li>
+
+      <li><span class="icon">👤</span> <a href="usuario.html">Usuário</a></li>
+
+      <li><span class="icon">📝</span> <a href="forms.html">Formulário</a></li>
+
+      <li><span class="icon">🎯</span> <a href="metas.html">Metas</a></li>
+      
+      <li><span class="icon">🔔</span> <a href="not.html">Notificações</a></li>
+
+      <li><span class="icon">⚙️</span> <a href="config.html">Configurações</a></li>
+
+      <li><span class="icon">📞</span> <a href="contato.html">Contato</a></li>
+
+      <li><span class="icon">ℹ️</span> <a href="sobre.html">Sobre Nós</a></li>
+    </ul>
+  </aside>
+
+
+<div class="main-content">
+    <header>
+        <h1>Definição de Metas e Entradas</h1>
+    </header>
+
+    <main class="content-page">
+        <section class="form-section">
+            <h2>Metas de Consumo Mensal (Global)</h2>
+            <form id="forms-metas-form" class="simple-form">
+                
+                <div class="form-group">
+                    <label for="meta_energia">Meta Energia (kWh)</label>
+                    <input type="number" id="meta_energia" value="150" min="0">
+                </div>
+                
+                <div class="form-group">
+                    <label for="meta_agua">Meta Água (L)</label>
+                    <input type="number" id="meta_agua" value="10000" min="0">
+                </div>
+                
+                <div class="form-group">
+                    <label for="meta_gas">Meta Gás (m³)</label>
+                    <input type="number" id="meta_gas" value="15" min="0">
+                </div>
+
+                <div class="form-group">
+                    <label for="meta_internet">Meta Internet (GB)</label>
+                    <input type="number" id="meta_internet" value="300" min="0">
+                </div>
+                
+                <div class="form-group">
+                    <label for="meta_lixo">Meta Lixo (kg)</label>
+                    <input type="number" id="meta_lixo" value="50" min="0">
+                </div>
+                
+                <div class="form-group">
+                    <label for="meta_alimentacao">Meta Alimentação (R$)</label>
+                    <input type="number" id="meta_alimentacao" value="1000" min="0">
+                </div>
+                <span id="feedbackFormsMetas" class="feedback-message" style="display: none;"></span>
+                <button type="submit" class="btn-primary">Salvar Metas</button>
+            </form>
+        </section>
+
+        <section class="form-section">
+            <h2>Registro Manual (Alimentação)</h2>
+            <form id="forms-registro-form" class="simple-form">
+                <div class="form-group">
+                    <label for="data_gasto">Data do Gasto</label>
+                    <input type="date" id="data_gasto" required>
+                </div>
+                <div class="form-group">
+                    <label for="valor_gasto">Valor (R$)</label>
+                    <input type="number" id="valor_gasto" step="0.01" min="0" required>
+                </div>
+<span id="feedbackFormsRegistro" class="feedback-message" style="display: none;"></span>
+<button type="submit" class="btn-primary">Registrar Gasto</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Sistema de Monitoramento Residencial - Projeto Educacional</p>
+    </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

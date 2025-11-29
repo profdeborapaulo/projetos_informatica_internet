@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DM Enterprise</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <a href="index.html" class="logo-link">
+                <img src="img/logo.png" alt="Logo do Sistema" class="logo">
+            </a>
+        </div>
+
+        <ul>
+            <li><a href="index.html"><h2>Menu</h2></a></li>
+            <li><span class="icon">👤</span> <a href="usuario.html">Usuário</a></li>
+            <li><span class="icon">📝</span> <a href="forms.html">Formulário</a></li>
+            <li><span class="icon">🎯</span> <a href="metas.html">Metas</a></li> 
+            <li><span class="icon">🔔</span> <a href="not.html">Notificações</a></li>
+            <li><span class="icon">⚙️</span> <a href="config.html">Configurações</a></li>
+            <li><span class="icon">📞</span> <a href="contato.html">Contato</a></li>
+            <li><span class="icon">ℹ️</span> <a href="sobre.html">Sobre Nós</a></li>
+        </ul>
+    </aside>
+
+    <div class="main-content">
+        <header>
+            <h1>DM Enterprise</h1>
+        </header>
+
+        <main class="dashboard">
+
+            <section id="alertasMetas" class="alerts-section"></section>
+
+            <section class="cards">
+                <div class="card">
+                    <h2>Energia</h2>
+                    <p><span id="energia">0</span> kWh</p>
+                    <div class="barra-container"><div id="barraEnergia" class="barra"></div></div>
+                </div>
+
+                <div class="card">
+                    <h2>Água</h2>
+                    <p><span id="agua">0</span> L</p>
+                    <div class="barra-container"><div id="barraÁgua" class="barra"></div></div>
+                </div>
+
+                <div class="card">
+                    <h2>Gás</h2>
+                    <p><span id="gas">0</span> m³</p>
+                    <div class="barra-container"><div id="barraGás" class="barra"></div></div>
+                </div>
+
+                <div class="card">
+                    <h2>Internet</h2>
+                    <p><span id="internet">0</span>TB</p>
+                    <div class="barra-container"><div id="barraInternet" class="barra"></div></div>
+                </div>
+
+                <div class="card">
+                    <h2>Lixo</h2>
+                    <p><span id="lixo">0</span>T</p>
+                    <div class="barra-container"><div id="barraLixo" class="barra"></div></div>
+                </div>
+
+                <div class="card">
+                    <h2>Alimentação</h2>
+                    <p>R$ <span id="alimentacao">0</span></p>
+                    <div class="barra-container"><div id="barraAlimentação" class="barra"></div></div>
+                </div>
+                
+                <div class="card special-card">
+                    <h2>Projeção de Custo Total (Estimativa)</h2>
+                    <p>R$ <span id="custoProjetado">0,00</span></p>
+                    <p class="small-text">Baseado no consumo médio e metas.</p>
+                </div>
+            </section>
+
+            <section class="resumo">
+                <h1>Resumo Geral do Consumo:</h1>
+
+                <h3>Gráfico de pizza:</h3>
+                <div class="grafico-pizza"></div>
+
+                <h3>Gráfico em coluna:</h3>
+                <div class="grafico-resumo">
+                    <div class="coluna" id="colEnergia"><span class="percent"></span></div>
+                    <div class="coluna" id="colAgua"><span class="percent"></span></div>
+                    <div class="coluna" id="colGas"><span class="percent"></span></div>
+                    <div class="coluna" id="colInternet"><span class="percent"></span></div>
+                    <div class="coluna" id="colLixo"><span class="percent"></span></div>
+                    <div class="coluna" id="colAlimentacao"><span class="percent"></span></div>
+                </div>
+
+                <div class="legenda">
+                    <span>Energia</span>
+                    <span>Água</span>
+                    <span>Gás</span>
+                    <span>Internet</span>
+                    <span>Lixo</span>
+                    <span>Alimentação</span>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2025 Sistema de Monitoramento Empresarial - Projeto Educacional</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

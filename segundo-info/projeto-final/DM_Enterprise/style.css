@@ -1,0 +1,486 @@
+/* 1. VARIÁVEIS, RESET E LAYOUT BASE */
+
+:root {
+    /* -- Cores de Interface (Tema Claro - Padrão) -- */
+    --cor-primaria: #005f73;
+    --cor-secundaria: #0096c7;
+    --cor-texto-principal: #343a40;
+    --cor-fundo-app: #f8f9fa;
+    --cor-card-fundo: #ffffff;
+    --cor-borda: #dee2e6;
+    --cor-rodape: #e9ecef;
+    --cor-texto-secundario: #6c757d;
+
+    /* -- Cores de Status e Destaque -- */
+    --cor-sucesso: #40916c;
+    --cor-alerta: #e63946;
+    --cor-destaque-icone: #ffd166;
+
+    /* -- Cores de Consumo -- */
+    --cor-energia: #ffb703;
+    --cor-agua: #219ebc;
+    --cor-gas: #fb8500;
+    --cor-internet: #8338ec;
+    --cor-lixo: #3a86ff;
+    --cor-alimentacao: #6a994e;
+}
+
+/* -- Tema Escuro (Override de Variáveis) -- */
+body.dark-mode {
+    --cor-primaria: #1a1a1a;
+    --cor-secundaria: #2b339c;
+    --cor-texto-principal: #f8f9fa;
+    --cor-fundo-app: #121212;
+    --cor-card-fundo: #1e1e1e;
+    --cor-borda: #333333;
+    --cor-rodape: #2c2c2c;
+    --cor-texto-secundario: #aaaaaa;
+    --cor-destaque-icone: #ffd166;
+}
+
+/* -- Reset Básico -- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* -- Corpo do Documento -- */
+body {
+    background: var(--cor-fundo-app);
+    color: var(--cor-texto-principal);
+    display: flex;
+    min-height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* 2. SIDEBAR (Barra Lateral de Navegação) */
+
+.sidebar {
+    width: 230px;
+    height: 100vh;
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-principal);
+    padding: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    box-shadow: 2px 0 5px rgba(192, 91, 91, 0.1);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* -- Conteúdo da Sidebar -- */
+.sidebar ul {
+    list-style: none;
+    padding-top: 20px;
+}
+
+.sidebar, 
+.sidebar a, 
+.sidebar h2 {
+    color: white;
+}
+
+.sidebar h2 {
+    font-size: 1.4em;
+    padding: 15px 25px 30px;
+    letter-spacing: 1px;
+}
+
+/* -- Itens da Lista -- */
+.sidebar ul li {
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 25px;
+    transition: background 0.2s;
+}
+
+.sidebar ul li:hover {
+    background-color: var(--cor-secundaria);
+}
+
+.icon {
+    font-size: 18px;
+    color: var(--cor-destaque-icone);
+}
+
+/* 3. CONTEÚDO PRINCIPAL (Header, Main, Section) */
+
+.main-content {
+    margin-left: 230px;
+    width: calc(100% - 230px);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    transition: margin-left 0.3s, width 0.3s;
+}
+
+/* -- Cabeçalho -- */
+header {
+    background-color: var(--cor-card-fundo);
+    padding: 20px 30px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+header h1 {
+    font-size: 1.6em;
+    color: var(--cor-secundaria);
+}
+
+/* -- Conteúdo Central -- */
+.dashboard,
+.content-page {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    flex-grow: 1;
+}
+
+/* -- Estrutura de Seções / Cards -- */
+section {
+    background: var(--cor-card-fundo);
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    border: 1px solid var(--cor-borda);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+section h2 {
+    font-size: 1.3em;
+    color: var(--cor-texto-principal);
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--cor-borda);
+    transition: color 0.3s, border-color 0.3s;
+}
+
+/* 4. DASHBOARD (Cards, Barras e Gráficos) */
+
+/* -- Cards Gerais -- */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    text-align: center;
+    padding: 20px;
+    background: var(--cor-card-fundo);
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card p {
+    font-size: 1.8em;
+    font-weight: 600;
+    margin: 10px 0 15px;
+    color: var(--cor-texto-principal);
+}
+
+/* -- Barra de Progresso -- */
+.barra-container {
+    height: 12px;
+    background: var(--cor-borda);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.barra {
+    height: 100%;
+    width: 0%;
+    border-radius: 6px;
+    transition: width 0.5s ease-in-out;
+}
+
+/* -- Gráfico Pizza / Colunas -- */
+.grafico-pizza {
+    width: 250px;
+    height: 250px;
+    margin: 30px auto;
+    border-radius: 50%;
+    background-color: var(--cor-card-fundo);
+    border: 3px solid var(--cor-borda);
+}
+
+.grafico-resumo {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    height: 250px;
+    margin: 30px 0 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--cor-texto-principal);
+}
+
+/* -- Colunas do Gráfico -- */
+.coluna {
+    position: relative;
+    width: 14%;
+    height: 0;
+    margin: 0 5px;
+    border-radius: 4px 4px 0 0;
+    transition: height 0.5s ease-out, background-color 0.5s;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.coluna .percent {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+    font-weight: bold;
+    color: var(--cor-texto-principal);
+    display: none;
+    white-space: nowrap;
+}
+
+.dark-mode .coluna .percent {
+    color: #fff;
+}
+
+/* -- Legenda do Gráfico -- */
+.legenda {
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.85em;
+    color: var(--cor-texto-secundario);
+}
+
+.special-card {
+    background-color: var(--cor-secundaria);
+    color: white;
+    border: 1px solid var(--cor-secundaria);
+}
+
+.special-card p {
+    color: white;
+}
+
+/* 5. ALERTAS E NOTIFICAÇÕES */
+
+.alerta {
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    font-weight: 500;
+    border-left: 5px solid;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.alerta-perigo {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-left-color: var(--cor-alerta);
+}
+
+.dark-mode .alerta-perigo {
+    background-color: #58151c;
+    color: #f8d7da;
+}
+
+.alerta-aviso {
+    background-color: #fff3cd;
+    color: #856404;
+    border-left-color: #ffc107;
+}
+
+.dark-mode .alerta-aviso {
+    background-color: #664d03;
+    color: #fff3cd;
+}
+
+.notification-list {
+    list-style: none;
+    padding: 0;
+}
+
+.notification-list li {
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--cor-borda);
+    color: var(--cor-texto-secundario);
+}
+
+.notification-list li:last-child {
+    border-bottom: none;
+}
+
+/* 6. FORMULÁRIOS E BOTÕES */
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input:not([type="checkbox"]):not([type="radio"]),
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 4px;
+    background-color: var(--cor-card-fundo);
+    color: var(--cor-texto-principal);
+    transition: border-color 0.2s, background-color 0.3s, color 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--cor-secundaria);
+    outline: none;
+}
+
+.setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--cor-borda);
+}
+
+.setting-item label {
+    flex-grow: 1;
+    font-weight: 500;
+}
+
+.setting-item select {
+    width: auto;
+    min-width: 200px;
+}
+
+.btn-primary,
+.btn-submit {
+    background-color: var(--cor-secundaria);
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.2s;
+    text-align: center;
+    display: inline-block;
+}
+
+.btn-primary:hover,
+.btn-submit:hover {
+    background-color: #0077a0;
+}
+
+.feedback-message {
+    display: block;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+    transition: opacity 0.3s;
+}
+
+.status-ok {
+    background-color: var(--cor-sucesso);
+    color: white;
+}
+
+.status-error {
+    background-color: var(--cor-alerta);
+    color: white;
+}
+
+/* 7. RODAPÉ */
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: var(--cor-rodape);
+    color: var(--cor-texto-secundario);
+    width: 100%;
+    margin-top: auto;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* 8. RESPONSIVIDADE (Mobile) */
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+        box-shadow: none;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding-top: 10px;
+    }
+
+    .sidebar h2 {
+        display: none;
+    }
+
+    .sidebar ul li {
+        flex: 1 1 auto;
+        flex-direction: column;
+        padding: 8px 10px;
+        margin: 0;
+        font-size: 0.9em;
+        text-align: center;
+    }
+
+    /* -- Conteúdo Ajustado -- */
+    .dashboard,
+    .content-page {
+        width: 95%;
+        margin: 20px auto;
+        padding: 0 5px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+}
+
+.sidebar-logo {
+    width: 100%;
+    padding: 15px 0; 
+    text-align: center; 
+}
+
+.sidebar-logo .logo {
+    width: 120px; 
+    height: auto; 
+   
+}
+
+.sidebar-logo .logo:hover {
+    opacity: 0.8;
+}

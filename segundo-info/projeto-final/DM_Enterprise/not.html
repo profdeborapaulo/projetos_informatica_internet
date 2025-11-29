@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notificações - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+      <div class="sidebar-logo">
+            <a href="index.html" class="logo-link">
+                <img src="img/logo.png" alt="Logo do Sistema" class="logo">
+            </a>
+        </div>
+    <ul>
+
+      <li><a href="index.html"><h2>Menu</h2></a></li>
+
+      <li><span class="icon">👤</span> <a href="usuario.html">Usuário</a></li>
+
+      <li><span class="icon">📝</span> <a href="forms.html">Formulário</a></li>
+
+      <li><span class="icon">🎯</span> <a href="metas.html">Metas</a></li>
+      
+      <li><span class="icon">🔔</span> <a href="not.html">Notificações</a></li>
+
+      <li><span class="icon">⚙️</span> <a href="config.html">Configurações</a></li>
+
+      <li><span class="icon">📞</span> <a href="contato.html">Contato</a></li>
+
+      <li><span class="icon">ℹ️</span> <a href="sobre.html">Sobre Nós</a></li>
+    </ul>
+  </aside>
+
+
+<div class="main-content">
+    <header>
+        <h1>Central de Notificações e Alertas</h1>
+    </header>
+
+    <main class="content-page">
+        <section class="alerts">
+            <h2>Alertas de Alta Prioridade</h2>
+            <div class="alerta alerta-perigo">
+                <strong>Alerta de Energia:</strong> Consumo 35% acima da média nas últimas 24h. (18/09 - 14:30)
+            </div>
+            <div class="alerta alerta-aviso">
+                <strong>Aviso de Água:</strong> Atingido 80% da meta mensal. Reavalie o uso. (17/09 - 09:00)
+            </div>
+        </section>
+
+        <section class="alerts-history">
+            <h2>Histórico Recente</h2>
+            <ul class="notification-list">
+                <li><span class="status-ok">✔</span> Gasto de Alimentação registrado com sucesso. (17/09)</li>
+                <li><span class="status-info">ℹ️</span> Manutenção da internet concluída. Serviço normalizado. (15/09)</li>
+                <li><span class="status-ok">✔</span> Meta de Gás redefinida para 50 m³. (10/09)</li>
+            </ul>
+             <div class="setting-item">
+                <button class="btn-primary" id="btnHistoricoNotificacoes">Ver histórico completo</button>
+                <span id="feedbackConfig" class="feedback-message" style="display: none;"></span>
+</div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Sistema de Monitoramento Residencial - Projeto Educacional</p>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Definir Metas de Consumo - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+          <div class="sidebar-logo">
+            <a href="index.html" class="logo-link">
+                <img src="img/logo.png" alt="Logo do Sistema" class="logo">
+            </a>
+        </div>
+        <ul>
+            <li><a href="index.html"><h2>Menu</h2></a></li>
+
+            <li><span class="icon">👤</span> <a href="usuario.html">Usuário</a></li>
+
+            <li><span class="icon">📝</span> <a href="forms.html">Formulário</a></li>
+
+            <li><span class="icon">🎯</span> <a href="metas.html">Metas</a></li> 
+
+            <li><span class="icon">🔔</span> <a href="not.html">Notificações</a></li>
+
+            <li><span class="icon">⚙️</span> <a href="config.html">Configurações</a></li>
+
+            <li><span class="icon">📞</span> <a href="contato.html">Contato</a></li>
+            
+            <li><span class="icon">ℹ️</span> <a href="sobre.html">Sobre Nós</a></li>
+        </ul>
+    </aside>
+
+    <div class="main-content">
+        <header>
+            <h1>Definir Metas de Consumo Mensal</h1>
+        </header>
+
+        <main class="content-page">
+            <section class="goal-settings">
+                <h2>Defina seus Limites Máximos</h2>
+                <form id="goalForm" class="simple-form">
+                    
+                    <div class="form-group">
+                        <label for="metaEnergia">Energia (kWh/mês)</label>
+                        <input type="number" id="metaEnergia" value="200" min="0" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="metaAgua">Água (m³/mês - 1m³ = 1000L)</label>
+                        <input type="number" id="metaAgua" value="10" min="0" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="metaGas">Gás (m³/mês)</label>
+                        <input type="number" id="metaGas" value="15" min="0" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="metaInternet">Internet (TB/mês)</label>
+                        <input type="number" id="metaInternet" value="300" min="0" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="metaLixo">Lixo (T/mês)</label>
+                        <input type="number" id="metaLixo" value="50" min="0" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="metaAlimentacao">Alimentação (R$/mês)</label>
+                        <input type="number" id="metaAlimentacao" value="1000" min="0" required>
+                    </div>
+
+<span id="feedbackFormsMetas" class="feedback-message" style="display: none;"></span>
+<button type="submit" class="btn-primary">Salvar Metas</button>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2025 Sistema de Monitoramento Residencial - Projeto Educacional</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

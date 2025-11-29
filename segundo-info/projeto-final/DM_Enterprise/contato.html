@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contato - Monitoramento Residencial</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<aside class="sidebar">
+     <div class="sidebar-logo">
+            <a href="index.html" class="logo-link">
+                <img src="img/logo.png" alt="Logo do Sistema" class="logo">
+            </a>
+        </div>
+     <ul>
+        <li><a href="index.html"><h2>Menu</h2></a></li>
+        
+         <li><span class="icon">👤</span> <a href="usuario.html">Usuário</a></li>
+
+          <li><span class="icon">📝</span> <a href="forms.html">Formulário</a></li>
+
+          <li><span class="icon">🎯</span> <a href="metas.html">Metas</a></li>
+
+           <li><span class="icon">🔔</span> <a href="not.html">Notificações</a></li>
+
+            <li><span class="icon">⚙️</span> <a href="config.html">Configurações</a></li>
+
+            <li><span class="icon">📞</span> <a href="contato.html">Contato</a></li>
+
+             <li><span class="icon">ℹ️</span> <a href="sobre.html">Sobre Nós</a></li>
+</ul>
+</aside>
+
+<div class="main-content">
+    <header>
+         <h1>Fale Conosco</h1>
+         </header>
+
+<main class="content-page">
+<h2>Envie sua Mensagem, Dúvida ou Sugestão:</h2>
+<form action="" method="POST" class="contact-form">
+<div class="form-group">
+<label for="nome">Seu Nome:</label>
+<input type="text" id="nome" name="nome" required>
+</div>
+
+<div class="form-group">
+<label for="email">Seu E-mail:</label>
+<input type="email" id="email" name="email" required>
+</div>
+
+<div class="form-group">
+<label for="assunto">Assunto:</label>
+<select id="assunto" name="assunto">
+<option value="duvida">Dúvida sobre o Dashboard</option>
+<option value="sugestao">Sugestão de Melhoria</option>
+<option value="parceria">Proposta de Parceria</option>
+<option value="outro">Outro</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="mensagem">Mensagem:</label>
+<textarea id="mensagem" name="mensagem" rows="6" required></textarea>
+ </div>
+
+<button type="submit" class="btn-primary">Enviar Mensagem</button>
+<span id="feedbackContato" class="feedback-message status-ok" style="display: none;"></span> 
+</form>
+ </section>
+
+<section class="info-contact">
+<h2>Outras Formas de Contato</h2>
+<p>📞 Telefone: (11) 99999-9999</p>
+<p>📍 Endereço: Etec Antônio Furlan - BARUERI/SP, Brasil</p>
+</section>
+</main>
+
+<footer>
+     <p>© 2025 Sistema de Monitoramento Residencial - Projeto Educacional</p>
+    </footer>
+ </div>
+<script src="script.js"></script>
+</body>
+</html>
