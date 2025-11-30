@@ -8,11 +8,25 @@ Definição de Metas - metas.html Permite ao usuário definir metas numéricas m
 
 Formulário de Registro - forms.html Formulário para o registro manual de gastos pontuais, especialmente para a categoria Alimentação.
 
-Central de Notificações - not.html Central que exibe alertas de alta prioridade (ex: consumo acima da média) e um histórico de notificações. Configurações do Sistema - config.html Opções para Alternar Tema (Dark Mode), definir formato de data e simular Exportação de Histórico (Download CSV). Perfil do Usuário - usuario.html Cadastro e gestão de informações pessoais e credenciais de acesso do usuário.
+Central de Notificações - not.html Central que exibe alertas de alta prioridade (ex: consumo acima da média) e um histórico de notificações.
+
+Configurações do Sistema - config.html Opções para Alternar Tema (Dark Mode), definir formato de data e simular Exportação de Histórico (Download CSV).
+
+Perfil do Usuário - usuario.html Cadastro e gestão de informações pessoais e credenciais de acesso do usuário.
 
 Informações - sobre.html, contato.html Telas estáticas para informações sobre a missão do projeto e um formulário de contato.
 
-Estrutura do Projeto: index.html Dashboard Principal (Início) metas.html Definição de Metas forms.html Registro Manual not.html Central de Notificações config.html Configurações do Sistema usuario.html Perfil de Usuário contato.html Formulário de Contato sobre.html Sobre o Projeto style.css Estilização global e variáveis CSS script.js Lógica do sistema (Metas, Gráficos, Dark Mode, LocalStorage)
+Estrutura do Projeto:
+index.html Dashboard Principal (Início)
+metas.html Definição de Metas
+forms.html Registro Manual 
+not.html Central de Notificações 
+config.html Configurações do Sistema
+usuario.html Perfil de Usuário 
+contato.html Formulário de Contato 
+sobre.html Sobre o Projeto 
+style.css Estilização global e variáveis CSS 
+script.js Lógica do sistema (Metas, Gráficos, Dark Mode, LocalStorage)
 
 Design e Paleta de Cores: O design adota um layout de Dashboard moderno e funcional.
 
