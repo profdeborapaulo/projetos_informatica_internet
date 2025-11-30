@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Profissional</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #f6f8fc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .caixa {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 480px;
+      padding: 40px 30px;
+      text-align: center;
+      transition: 0.4s;
+    }
+
+    h2 {
+      font-size: 22px;
+      color: #222;
+      margin-bottom: 6px;
+    }
+
+    p {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+
+    input[type="text"], input[type="email"] {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 18px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    input:focus {
+      border-color: #5fa8f6;
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(90,167,255,0.2);
+    }
+
+    button {
+      width: 100%;
+      background-color: #64a9ff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: 0.3s;
+    }
+
+    button:disabled {
+      background-color: #b9d5ff;
+      cursor: not-allowed;
+    }
+
+    button:hover:not(:disabled) {
+      background-color: #5598f0;
+    }
+
+    .etapa {
+      display: none;
+      animation: fade 0.4s ease-in-out;
+    }
+
+    .etapa.ativa {
+      display: block;
+    }
+
+    @keyframes fade {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    .caixa-verificacao {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 20px;
+      font-size: 14px;
+      text-align: left;
+    }
+
+    .categoria {
+      background: #f8f9fb;
+      padding: 14px;
+      border-radius: 10px;
+      border: 1px solid #e0e0e0;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .categoria:hover {
+      background: #e9f1ff;
+      border-color: #64a9ff;
+    }
+
+    .categoria.selecionada {
+      background: #dbe9ff;
+      border-color: #64a9ff;
+    }
+
+    .icone-verificacao {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: 2px solid #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.3s;
+    }
+
+    .categoria.selecionada .icone-verificacao {
+      background-color: #64a9ff;
+      border-color: #64a9ff;
+    }
+
+    .icone-verificacao::after {
+      content: "✔";
+      color: white;
+      font-size: 14px;
+      opacity: 0;
+      transition: 0.2s;
+    }
+
+    .categoria.selecionada .icone-verificacao::after {
+      opacity: 1;
+    }
+
+    .mensagem-sucesso {
+      display: none;
+    }
+
+    .mensagem-sucesso h2 {
+      color: #2b8a3e;
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="caixa">
+    <!-- ETAPA 1 -->
+    <div class="etapa ativa" id="etapa1">
+      <h2>Informações pessoais</h2>
+      <p>Preencha seus dados para continuar</p>
+      <input type="text" id="nome" placeholder="Digite seu nome completo">
+      <input type="text" id="cep" placeholder="Digite seu CEP">
+      <input type="text" id="celular1" placeholder="(11) 95082-5594">
+      <button onclick="proximaEtapa(1)">Continuar</button>
+    </div>
+
+    <!-- ETAPA 2 -->
+    <div class="etapa" id="etapa2">
+      <h2>Cadastro</h2>
+      <p>Informe seu e-mail e aceite os termos</p>
+      <input type="email" id="email" placeholder="Digite seu e-mail">
+      <div class="caixa-verificacao">
+        <input type="checkbox" id="termos">
+        <label for="termos">Li e concordo com a <a href="#">Política de Privacidade</a> e os <a href="#">Termos de Uso</a></label>
+      </div>
+      <button onclick="proximaEtapa(2)">Continuar</button>
+    </div>
+
+    <!-- ETAPA 3 -->
+    <div class="etapa" id="etapa3">
+      <h2>Escolha a categoria principal</h2>
+     
+
+      <div class="categoria" data-cat="design" onclick="selecionarCategoria(this)">
+        <span>🎨 Design</span>
+        <div class="icone-verificacao"></div>
+      </div>
+
+      <div class="categoria" data-cat="reforma" onclick="selecionarCategoria(this)">
+        <span>🏗️ Reforma</span>
+        <div class="icone-verificacao"></div>
+      </div>
+
+      <div class="categoria" data-cat="mecanica" onclick="selecionarCategoria(this)">
+        <span>🔧 Mecânica</span>
+        <div class="icone-verificacao"></div>
+      </div>
+
+      <div class="categoria" data-cat="saude" onclick="selecionarCategoria(this)">
+        <span>🩺 Saúde</span>
+        <div class="icone-verificacao"></div>
+      </div>
+
+      <button id="btn3" onclick="proximaEtapa(3)" disabled>Continuar</button>
+    </div>
+
+    <!-- ETAPA 4 -->
+    <div class="etapa" id="etapa4">
+      <h2>Escolha sua subcategoria</h2>
+      <p>Selecione uma especialização</p>
+      <div id="subcategorias"></div>
+      <button id="finalizar" onclick="finalizar()" disabled>Finalizar cadastro</button>
+    </div>
+
+    <!-- SUCESSO -->
+    <div class="mensagem-sucesso" id="sucesso">
+      <h2>✅ Cadastro concluído!</h2>
+      <p>Obrigado por se cadastrar. Em breve entraremos em contato.</p>
+      <button onclick="voltarInicio()">Voltar à tela inicial</button>
+    </div>
+  </div>
+
+  <script>
+    let categoriaSelecionada = "";
+    let subcategoriaSelecionada = "";
+
+    const subcategorias = {
+      design: ["Criação de marcas", "Desenvolvimento", "Audiovisual"],
+      reforma: ["Arquiteto", "Engenheiro", "Empreiteiro", "Eletricista", "Encanador", "Limpeza", "Eletrodomésticos"],
+      mecanica: ["Funilaria", "Mecânica geral", "Auto elétrica", "Vidraçaria"],
+      saude: ["Estética", "Para o corpo", "Para a mente", "Para a família"]
+    };
+
+    function proximaEtapa(etapa) {
+      const atual = document.getElementById(`etapa${etapa}`);
+      const proxima = document.getElementById(`etapa${etapa + 1}`);
+
+      if (etapa === 3 && !categoriaSelecionada) return;
+
+      atual.classList.remove("ativa");
+      proxima.classList.add("ativa");
+
+      if (etapa === 3) renderizarSubcategorias(categoriaSelecionada);
+    }
+
+    function selecionarCategoria(elemento) {
+      document.querySelectorAll("#etapa3 .categoria").forEach(cat => cat.classList.remove("selecionada"));
+      elemento.classList.add("selecionada");
+      categoriaSelecionada = elemento.getAttribute("data-cat");
+      document.getElementById("btn3").disabled = false;
+    }
+
+    function renderizarSubcategorias(cat) {
+      const container = document.getElementById("subcategorias");
+      container.innerHTML = "";
+      subcategorias[cat].forEach(sub => {
+        const div = document.createElement("div");
+        div.className = "categoria";
+        div.innerHTML = `<span>${sub}</span><div class='icone-verificacao'></div>`;
+        div.onclick = () => selecionarSubcategoria(div, sub);
+        container.appendChild(div);
+      });
+    }
+
+    function selecionarSubcategoria(elemento, sub) {
+      document.querySelectorAll("#subcategorias .categoria").forEach(el => el.classList.remove("selecionada"));
+      elemento.classList.add("selecionada");
+      subcategoriaSelecionada = sub;
+      document.getElementById("finalizar").disabled = false;
+    }
+
+    function finalizar() {
+      document.querySelectorAll(".etapa").forEach(s => s.classList.remove("ativa"));
+      document.getElementById("sucesso").style.display = "block";
+    }
+
+    function voltarInicio() {
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>

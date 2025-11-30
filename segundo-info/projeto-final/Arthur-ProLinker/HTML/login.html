@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login e Cadastro</title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Work Sans', Arial, sans-serif;
+      background-color: #f6f7f8;
+      color: #111618;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-width: 900px;
+      width: 100%;
+      background: #fff;
+      border-radius: 10px;
+      border: 1px solid #dbe2e6;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .secao-formulario {
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .secao-formulario h2 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .secao-formulario p {
+      color: #617c89;
+      margin-bottom: 30px;
+    }
+
+    label {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 18px;
+      border-radius: 8px;
+      border: 1px solid #dbe2e6;
+      font-size: 1rem;
+      outline: none;
+      transition: border 0.2s;
+    }
+
+    input:focus {
+      border-color: #1193d4;
+    }
+
+    .botao {
+      background-color: #1193d4;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      padding: 12px;
+      cursor: pointer;
+      transition: background 0.2s;
+      width: 100%;
+      font-size: 1rem;
+    }
+
+    .botao:hover {
+      background-color: #0f7cb3;
+    }
+
+    .texto-pequeno {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #617c89;
+      margin-top: 12px;
+    }
+
+    .texto-pequeno a {
+      color: #1193d4;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .texto-pequeno a:hover {
+      text-decoration: underline;
+    }
+
+    .divisoria {
+      background-color: #f6f7f8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="secao-formulario">
+      <h2>Bem-vindo de volta!</h2>
+      <p>Acesse sua conta para continuar.</p>
+
+      <form onsubmit="event.preventDefault(); window.location.href='index.html';">
+        <label for="login-email">Email ou Usuário</label>
+        <input type="text" id="login-email" placeholder="ex: seuemail@dominio.com" />
+
+        <label for="login-senha">Senha</label>
+        <input type="password" id="login-senha" placeholder="Digite sua senha" />
+
+        <button type="submit" class="botao">Entrar</button>
+      </form>
+    </div>
+
+
+<div class="secao-formulario divisoria">
+  <h2>Novo por aqui?</h2>
+  <p>Junte-se a milhares de profissionais.</p>
+
+  <form onsubmit="event.preventDefault(); window.location.href='index.html';">
+    <label for="cad-nome">Nome Completo</label>
+    <input type="text" id="cad-nome" placeholder="ex: João da Silva" />
+
+    <label for="cad-email">Email</label>
+    <input type="email" id="cad-email" placeholder="ex: seuemail@dominio.com" />
+
+
+    <label for="cad-telefone">Telefone</label>
+    <input type="tel" id="cad-telefone" placeholder="(11) 90000-0000" />
+
+    <label for="cad-senha">Crie uma senha</label>
+    <input type="password" id="cad-senha" placeholder="Mínimo 8 caracteres" />
+  
+    <button type="submit" class="botao">Registrar</button>
+  </form>
+</div>
+
+  </div>
+</body>
+</html>
