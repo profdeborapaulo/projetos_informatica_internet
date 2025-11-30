@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OrçaFácil - Gestor Pessoal</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+</head>
+<body>
+
+    <section id="login-page">
+        <div class="login-card">
+            <div class="logo-area">
+                <i class="fa-solid fa-wallet login-icon"></i>
+                <h2>OrçaFácil</h2>
+            </div>
+            <p>Seu controle financeiro pessoal.</p>
+            
+            <form id="login-form">
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" id="username-input" placeholder="Digite seu nome" autocomplete="off">
+                </div>
+                
+                <button type="submit" class="btn btn-login">
+                    Entrar <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </form>
+
+            <div class="divider-text">ou</div>
+
+            <button id="guest-btn" class="btn btn-guest">
+                Continuar sem Login
+            </button>
+        </div>
+    </section>
+
+    <section id="landing-page" class="hidden">
+        <div class="landing-content">
+            <div class="hero-icon-container">
+                <i class="fa-solid fa-piggy-bank hero-icon" aria-hidden="true"></i>
+            </div>
+            <h1>Olá, <span id="user-greeting">Visitante</span>!</h1>
+            <p>Controle suas despesas com inteligência.<br>Seus dados estão seguros neste dispositivo.</p>
+            
+            <button id="start-btn" class="btn btn-large">
+                Acessar Painel
+            </button>
+        </div>
+    </section>
+
+    <div id="app" class="hidden">
+        
+        <header>
+            <div class="header-content">
+                <h1><i class="fa-solid fa-wallet" aria-hidden="true"></i> OrçaFácil</h1>
+                
+                <div class="header-actions">
+                    <button id="tutorial-btn" class="icon-btn" aria-label="Como usar o site">
+                        <i class="fa-solid fa-book-open"></i>
+                    </button>
+
+                    <button id="faq-btn" class="icon-btn" aria-label="Dúvidas e Ajuda">
+                        <i class="fa-solid fa-circle-question"></i>
+                    </button>
+
+                    <button id="theme-toggle" class="icon-btn" aria-label="Alternar Tema">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="container">
+            
+            <section id="dashboard" class="card">
+                <h2><i class="fa-solid fa-chart-pie"></i> Resumo Mensal</h2>
+                <div class="dashboard-content">
+                    <div class="total-display">
+                        <span>Total Gasto:</span>
+                        <strong id="total-gasto">---</strong>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="category-chart"></canvas>
+                    </div>
+                    <div class="goal-summary card-span">
+                        <div class="goal-text">
+                            <span>Meta Mensal:</span>
+                            <strong id="goal-display">---</strong>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div id="progress-bar" class="progress-bar-fill"></div>
+                        </div>
+                        <span id="goal-percentage" class="goal-percentage-text">0%</span>
+                    </div>
+                </div>
+            </section>
+
+            <section id="timeline-card" class="card">
+                <h2><i class="fa-solid fa-chart-line"></i> Evolução</h2>
+                <div class="line-chart-container">
+                    <canvas id="timeline-chart"></canvas>
+                </div>
+            </section>
+
+            <section id="settings-card" class="card">
+                <h2><i class="fa-solid fa-gears"></i> Configurações</h2>
+                <form id="settings-form" class="settings-form">
+                    <div class="form-group">
+                        <label for="currency-select">Moeda Principal</label>
+                        <select id="currency-select">
+                            <option value="BRL">Real Brasileiro (R$)</option>
+                            <option value="USD">Dólar Americano ($)</option>
+                            <option value="EUR">Euro (€)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="meta-input">Definir Meta</label>
+                        <input type="number" id="meta-input" step="50" min="0" placeholder="Ex: 1500">
+                    </div>
+                    <button type="submit" class="btn btn-secondary form-span-btn">
+                        <i class="fa-solid fa-floppy-disk"></i> Salvar
+                    </button>
+                </form>
+                <hr class="divider">
+                <button type="button" id="reset-app-btn" class="btn btn-danger">
+                    <i class="fa-solid fa-trash-can"></i> Resetar Tudo
+                </button>
+            </section>
+
+            <section id="form-container" class="card">
+                <h2><i class="fa-solid fa-plus-circle"></i> Adicionar Despesa</h2>
+                <form id="expense-form">
+                    <div class="form-group">
+                        <label for="descricao">Descrição</label>
+                        <input type="text" id="descricao" placeholder="Ex: Mercado" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="valor">Valor</label>
+                        <input type="number" id="valor" step="0.01" min="0.01" placeholder="0.00" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="categoria">Categoria</label>
+                        <select id="categoria" required>
+                            <option value="">Selecione...</option>
+                            <option value="Alimentação">Alimentação</option>
+                            <option value="Transporte">Transporte</option>
+                            <option value="Lazer">Lazer</option>
+                            <option value="Moradia">Moradia</option>
+                            <option value="Outros">Outros</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="data">Data</label>
+                        <input type="date" id="data" required>
+                    </div>
+                    <button type="submit" class="btn" id="submit-btn">
+                        <i class="fa-solid fa-plus"></i> Adicionar
+                    </button>
+                </form>
+            </section>
+
+            <section id="transactions-list" class="card">
+                <h2><i class="fa-solid fa-list-ul"></i> Histórico</h2>
+                <ul id="list">
+                    </ul>
+            </section>
+
+        </main>
+    </div>
+
+    <div id="faq-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Dúvidas Frequentes</h2>
+                <button id="close-faq" class="close-btn">&times;</button>
+            </div>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-btn">Onde meus dados ficam salvos? <i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="accordion-panel"><p>Seus dados ficam salvos apenas no seu navegador. Nós não temos acesso a eles.</p></div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-btn">Como uso sem internet? <i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="accordion-panel"><p>Após carregar a página, o app funciona 100% offline.</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="tutorial-modal" class="modal hidden">
+        <div class="modal-content tutorial-content">
+            <div class="modal-header">
+                <h2><i class="fa-solid fa-graduation-cap"></i> Como usar o OrçaFácil</h2>
+                <button id="close-tutorial" class="close-btn">&times;</button>
+            </div>
+            
+            <div class="tutorial-steps">
+                <div class="step">
+                    <div class="step-icon"><i class="fa-solid fa-bullseye"></i></div>
+                    <div class="step-info">
+                        <h3>1. Defina sua Meta</h3>
+                        <p>Vá em <strong>Configurações</strong> e defina quanto você pode gastar no mês. A barra de progresso te avisará se você estiver perto do limite!</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-icon"><i class="fa-solid fa-plus-circle"></i></div>
+                    <div class="step-info">
+                        <h3>2. Adicione Despesas</h3>
+                        <p>Fez uma compra? Use o formulário <strong>Adicionar Despesa</strong>. Coloque o valor, categoria e data para manter tudo organizado.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-icon"><i class="fa-solid fa-chart-pie"></i></div>
+                    <div class="step-info">
+                        <h3>3. Analise os Gráficos</h3>
+                        <p>Veja para onde seu dinheiro vai no <strong>Resumo Mensal</strong> (gráfico de pizza) e acompanhe seus gastos diários na <strong>Evolução</strong>.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-icon"><i class="fa-solid fa-moon"></i></div>
+                    <div class="step-info">
+                        <h3>4. Personalize</h3>
+                        <p>Use o ícone de <strong>Lua</strong> no topo para ativar o Modo Escuro e escolha sua moeda (Real, Dólar ou Euro) nas configurações.</p>
+                    </div>
+                </div>
+                
+                <button id="finish-tutorial" class="btn btn-large" style="margin-top: 20px;">
+                    Entendi, vamos começar!
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
