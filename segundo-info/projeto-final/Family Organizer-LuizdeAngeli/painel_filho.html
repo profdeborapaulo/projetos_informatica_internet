@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Filho - Minhas Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Estrutura de cabeçalho para acomodar o botão de Voltar -->
+        <div class="action-bar">
+            <!-- Título será atualizado via JS -->
+            <h1 id="panel-title">Carregando...</h1> 
+            <button id="logout-button" class="secondary-button">Voltar para o Início</button>
+        </div>
+        
+        <!-- Novo: Display de Pontos e Recompensa -->
+        <div id="gamification-display">
+            <p>Carregando seus pontos...</p>
+        </div>
+        
+        <hr style="margin: 30px 0; border-color: #eee;">
+        
+        <h2>Tarefas Pendentes</h2>
+        <div id="pending-task-list">
+            <p>Carregando tarefas...</p>
+        </div>
+
+        <hr style="margin: 30px 0; border-color: #eee;">
+        
+        <h2>Tarefas Concluídas (Aprovadas)</h2>
+        <div id="completed-task-list">
+            <p>Nenhuma tarefa concluída.</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // ----------------------------------------------------
+            // 1. AUTENTICAÇÃO E VARIÁVEIS PRINCIPAIS
+            // ----------------------------------------------------
+            const userProfile = sessionStorage.getItem('userProfile');
+            const loggedInChildName = sessionStorage.getItem('childName'); // Pega o nome: "Filho João" ou "Filha Maria"
+
+            if (userProfile !== 'filho' || !loggedInChildName) {
+                alert('Acesso negado. Por favor, faça login como Filho.');
+                window.location.href = './login.html'; 
+                return;
+            }
+            
+            // Atualiza o título do painel
+            document.getElementById('panel-title').textContent = `${loggedInChildName}'s Painel`;
+
+            const gamificationDiv = document.getElementById('gamification-display');
+
+            // --- Lógica de Logout ---
+            document.getElementById('logout-button').addEventListener('click', () => {
+                sessionStorage.removeItem('userProfile'); 
+                sessionStorage.removeItem('childName'); 
+                window.location.href = './login.html'; 
+            });
+            // ---------------------------
+
+            // Funções auxiliares para localStorage
+            function loadTasks() {
+                const tasksJson = localStorage.getItem('tasks');
+                return tasksJson ? JSON.parse(tasksJson) : [];
+            }
+
+            function saveTasks(tasks) {
+                localStorage.setItem('tasks', JSON.stringify(tasks));
+            }
+            
+            //gamificação 
+
+            function loadPoints() {
+                const pointsJson = localStorage.getItem('childPoints');
+                const defaultPoints = {
+                    "Filho João": { points: 0, rewardGoal: 500, currentReward: 'Passeio Especial' },
+                    "Filha Maria": { points: 0, rewardGoal: 500, currentReward: 'Noite de Cinema' }
+                };
+                return pointsJson ? JSON.parse(pointsJson) : defaultPoints;
+            }
+            
+            function renderGamificationDisplay() {
+                const pointsData = loadPoints();
+                const myData = pointsData[loggedInChildName]; 
+                
+                if (!myData) {
+                    gamificationDiv.innerHTML = `<p style="color:red;">Erro: Dados de gamificação não encontrados para ${loggedInChildName}.</p>`;
+                    return;
+                }
+                
+                const progress = Math.min(100, (myData.points / myData.rewardGoal) * 100);
+                const rewardAchieved = myData.points >= myData.rewardGoal;
+                
+                let message = `Progresso para <strong>${myData.currentReward}</strong>`;
+                if (rewardAchieved) {
+                    message = `<strong style="color:var(--success-green);">🏆 META ATINGIDA! Recompensa: ${myData.currentReward}</strong>`;
+                }
+
+                gamificationDiv.innerHTML = `
+                    <div class="points-display" style="width:100%;">
+                        <span class="icon">💰</span>
+                        <span>Seus Pontos: ${myData.points}</span>
+                    </div>
+                    
+                    <div class="reward-card">
+                        <p style="margin-top:0;">${message}</p>
+                        <div class="reward-progress-bar">
+                            <div class="progress-fill" style="width: ${progress}%;"></div>
+                        </div>
+                        <p style="text-align:right; font-size:0.9em; margin-top:5px;">${myData.points} / ${myData.rewardGoal} pts</p>
+                    </div>
+                `;
+            }
+
+            // Função para alterar o status de uma tarefa
+            window.toggleTaskStatus = function(taskId) {
+                const tasks = loadTasks();
+                const taskIndex = tasks.findIndex(task => task.id === taskId);
+
+                if (taskIndex !== -1) {
+                    const currentStatus = tasks[taskIndex].status;
+                    
+                    if (currentStatus !== 'Concluído' && currentStatus !== 'Aguardando Aprovação') {
+                        tasks[taskIndex].status = 'Aguardando Aprovação'; 
+                        alert(`Tarefa "${tasks[taskIndex].nome}" marcada como AGUARDANDO APROVAÇÃO do Pai. Você ganhará ${tasks[taskIndex].points || 10} pontos ao ser aprovada!`);
+                    } else if (currentStatus === 'Aguardando Aprovação') {
+                        tasks[taskIndex].status = 'Pendente';
+                        alert(`Tarefa "${tasks[taskIndex].nome}" retornada para PENDENTE.`);
+                    }
+                    
+                    saveTasks(tasks);
+                    renderTasks(); 
+                }
+            }
+
+            // Função para renderizar as tarefas na tela
+            function renderTasks() {
+                const tasks = loadTasks();
+                
+                // Filtra as tarefas atribuídas ao filho logado
+                const myTasks = tasks.filter(task => task.atribuidoA === loggedInChildName);
+
+                const pendingListDiv = document.getElementById('pending-task-list');
+                const completedListDiv = document.getElementById('completed-task-list');
+                
+                pendingListDiv.innerHTML = '';
+                completedListDiv.innerHTML = '';
+
+                if (myTasks.length === 0) {
+                    pendingListDiv.innerHTML = '<p>Você não tem tarefas atribuídas ainda. Aproveite!</p>';
+                    return;
+                }
+
+                // Tarefas que o filho pode interagir 
+                const actionableTasks = myTasks.filter(task => task.status === 'Pendente' || task.status === 'Aguardando Aprovação');
+                // Tarefas que já foram aprovadas pelo Pai
+                const completedTasks = myTasks.filter(task => task.status === 'Concluído');
+
+                function createChildTaskCard(task, isCompleted = false) {
+                    const statusText = task.status || 'Pendente'; 
+                    const isAwaiting = task.status === 'Aguardando Aprovação';
+                    const statusClass = isAwaiting ? 'task-status-awaiting' : (isCompleted ? 'task-status-concluido' : 'task-status-pending');
+                    const pointsDisplay = task.points ? `<p style="font-weight:bold; color:var(--gold-points);">Valor: ${task.points} pts</p>` : '';
+                    
+                    let actionButton = '';
+                    if (isCompleted) {
+                        actionButton = `<button class="secondary-button" disabled>Aprovada Pelo Pai</button>`;
+                    } else if (isAwaiting) {
+                        actionButton = `<button class="secondary-button danger-button" onclick="toggleTaskStatus('${task.id}')" style="background-color:#f0a040; color:white;">Cancelar Submissão</button>`;
+                    } else {
+                        actionButton = `<button class="secondary-button" onclick="toggleTaskStatus('${task.id}')">Marcar como Finalizada</button>`;
+                    }
+
+                    return `
+                        <div class="task-card" style="border-left-color: ${isCompleted ? 'var(--success-green)' : (isAwaiting ? 'var(--primary-blue)' : 'orange')};">
+                            <h3>${task.nome}</h3>
+                            <p><strong>Descrição:</strong> ${task.descricao}</p>
+                            <p><strong>Prazo:</strong> ${task.dataEntrega}</p>
+                            ${pointsDisplay}
+                            <p><strong>Status:</strong> <span class="${statusClass}">${statusText}</span></p>
+                            <div style="margin-top: 10px;">${actionButton}</div>
+                        </div>
+                    `;
+                }
+
+                if (actionableTasks.length > 0) {
+                    actionableTasks.forEach(task => {
+                        pendingListDiv.innerHTML += createChildTaskCard(task);
+                    });
+                } else {
+                    pendingListDiv.innerHTML = '<p>🎉 Nenhuma tarefa pendente ou aguardando aprovação neste momento!</p>';
+                }
+
+
+
+                if (completedTasks.length > 0) {
+                    completedTasks.forEach(task => {
+                        completedListDiv.innerHTML += createChildTaskCard(task, true);
+                    });
+                } else {
+                    completedListDiv.innerHTML = '<p>Nenhuma tarefa concluída (aprovada) ainda.</p>';
+                }
+            }
+
+            renderTasks();
+            renderGamificationDisplay();
+        });
+    </script>
+</body>
+</html>

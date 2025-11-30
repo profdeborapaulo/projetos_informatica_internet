@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Gestão de Tarefas Familiar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="login-container">
+        <h1>Acesso Familiar</h1>
+        <p>Use sua senha simulada para acessar seu painel.</p>
+
+        <form id="login-form">
+            <div class="form-group">
+                <label for="profile-select">Selecione seu Perfil:</label>
+                <select id="profile-select" required>
+                    <option value="">-- Escolha um perfil --</option>
+                    <option value="pai">Pai / Administrador</option>
+                    <option value="Filho João">Filho João</option>
+                    <option value="Filha Maria">Filha Maria</option>
+                </select>
+            </div>
+            
+            <div class="form-group" style="margin-top: 15px;">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" required>
+            </div>
+            
+            <button type="submit" class="primary-button">Entrar</button>
+        </form>
+
+        <div id="message" style="margin-top: 15px;"></div>
+        
+        <p style="margin-top: 25px; font-size: 0.85em; color: #777;">
+            Senhas de Teste: Pai=`admin123`, João=`joao123`, Maria=`maria123`
+        </p>
+    </div>
+
+    <script>
+        //simulação de autenticação  
+        document.addEventListener('DOMContentLoaded', () => {
+            const loginForm = document.getElementById('login-form');
+            const profileSelect = document.getElementById('profile-select');
+            const passwordInput = document.getElementById('password');
+            const messageDiv = document.getElementById('message');
+
+            const users = {
+                "pai": "admin123",
+                "Filho João": "joao123",
+                "Filha Maria": "maria123"
+            };
+
+            loginForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                const selectedProfile = profileSelect.value;
+                const enteredPassword = passwordInput.value;
+                messageDiv.textContent = '';
+                messageDiv.style.color = 'red';
+
+                if (!selectedProfile || !enteredPassword) {
+                    messageDiv.textContent = 'Por favor, selecione o perfil e insira a senha.';
+                    return;
+                }
+
+                if (users[selectedProfile] === enteredPassword) {
+                    
+                    messageDiv.textContent = 'Login bem-sucedido! Redirecionando...';
+                    messageDiv.style.color = 'var(--success-green)';
+
+                    if (selectedProfile === 'pai') {
+                        sessionStorage.setItem('userProfile', 'pai');
+                        window.location.href = './painel_pai.html';
+                    } else {
+                        sessionStorage.setItem('userProfile', 'filho'); 
+                        sessionStorage.setItem('childName', selectedProfile); 
+                        window.location.href = './painel_filho.html';
+                    }
+                } else {
+                    messageDiv.textContent = 'Senha incorreta para o perfil selecionado.';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

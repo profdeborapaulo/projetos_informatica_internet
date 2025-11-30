@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Pai - Gestão Completa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="action-bar">
+            <h1>Painel do Administrador (Pai)</h1>
+            <button id="logout-button" class="secondary-button">Voltar para o Início</button>
+        </div>
+        
+        <h2 id="form-title" style="margin-top: 10px;">Criar Nova Tarefa</h2>
+        <form id="task-form">
+            <input type="hidden" id="task-id" name="id">
+            
+            <div class="form-group">
+                <label for="task-nome">Nome da Tarefa:</label>
+                <input type="text" id="task-nome" name="nome" required>
+            </div>
+
+            <div class="form-group">
+                <label for="task-descricao">Descrição:</label>
+                <textarea id="task-descricao" name="descricao" rows="3" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="task-data">Data de Entrega:</label>
+                <input type="date" id="task-data" name="dataEntrega" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="task-points">Pontos ao Aprovar:</label>
+                <input type="number" id="task-points" name="points" min="1" value="10" required>
+            </div>
+
+            <div class="form-group">
+                <label for="task-atribuido">Atribuir a:</label>
+                <select id="task-atribuido" name="atribuidoA" required>
+                    <option value="">-- Selecione o Filho/Responsável --</option>
+                    <option value="Filho João">Filho João</option>
+                    <option value="Filha Maria">Filha Maria</option>
+                </select>
+            </div>
+
+            <button type="submit" id="submit-button">Salvar Tarefa</button>
+            <button type="button" id="cancel-edit-button" class="secondary-button" style="display:none; margin-top:10px;">Cancelar Edição</button>
+        </form>
+        
+        <hr style="margin: 30px 0; border-color: #eee;">
+
+        <h2>🏆 Gestão de Pontos e Recompensas</h2>
+        <div id="points-overview">
+            <p>Carregando status dos filhos...</p>
+        </div>
+        
+        <form id="reward-form" style="margin-top: 20px;">
+            <h3>Configurar Nova Recompensa</h3>
+            <div class="form-group">
+                <label for="reward-child">Filho:</label>
+                <select id="reward-child" required>
+                    <option value="">-- Selecione o Filho --</option>
+                    <option value="Filho João">Filho João</option>
+                    <option value="Filha Maria">Filha Maria</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="reward-name">Nome da Recompensa:</label>
+                <input type="text" id="reward-name" required>
+            </div>
+            <div class="form-group">
+                <label for="reward-goal">Meta de Pontos:</label>
+                <input type="number" id="reward-goal" min="10" value="500" required>
+            </div>
+            <button type="submit" class="primary-button">Definir Recompensa</button>
+        </form>
+        
+        <div style="margin-top: 20px; text-align: right;">
+            <button id="reset-button" class="danger-button" style="width: auto;">Resetar TODAS as Atividades/Pontos</button>
+        </div>
+
+        <hr style="margin: 30px 0; border-color: #eee;">
+        
+        <div class="form-group" style="margin-bottom: 20px;">
+            <label for="view-filter-child">Visualizar Tarefas de:</label>
+            <select id="view-filter-child">
+                <option value="Todos">Todos os Filhos</option>
+                <option value="Filho João">Filho João</option>
+                <option value="Filha Maria">Filha Maria</option>
+            </select>
+        </div>
+        
+        <h2>🚨 Aguardando Aprovação</h2>
+        <div id="awaiting-approval-list">
+            <p>Nenhuma tarefa esperando aprovação.</p>
+        </div>
+
+        <hr style="margin: 30px 0; border-color: #eee;">
+
+        <h2>Tarefas Pendentes e Ativas</h2>
+        <div id="pending-task-list">
+            <p>Carregando tarefas...</p>
+        </div>
+        
+        <hr style="margin: 30px 0; border-color: #eee;">
+
+        <h2>✅ Tarefas Concluídas e Aprovadas</h2>
+        <div id="completed-task-list">
+            <p>Nenhuma tarefa aprovada ainda.</p>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const userProfile = sessionStorage.getItem('userProfile');
+            if (userProfile !== 'pai') {
+                alert('Acesso negado. Por favor, faça login como Pai.');
+                window.location.href = './login.html'; 
+                return;
+            }
+
+            let currentFilterChild = document.getElementById('view-filter-child').value;
+
+            const taskIdInput = document.getElementById('task-id');
+            const formTitle = document.getElementById('form-title');
+            const submitButton = document.getElementById('submit-button');
+            const cancelButton = document.getElementById('cancel-edit-button');
+            const taskForm = document.getElementById('task-form');
+            const pointsOverviewDiv = document.getElementById('points-overview');
+            const rewardForm = document.getElementById('reward-form');
+            const filterDropdown = document.getElementById('view-filter-child');
+
+            filterDropdown.addEventListener('change', (event) => {
+                currentFilterChild = event.target.value;
+                renderTasks();
+            });
+
+            document.getElementById('logout-button').addEventListener('click', () => {
+                sessionStorage.removeItem('userProfile'); 
+                window.location.href = './login.html';
+            });
+            
+            document.getElementById('reset-button').addEventListener('click', () => {
+                const confirmation = window.confirm("ATENÇÃO: Isso apagará TODAS as tarefas E pontuações cadastradas. Tem certeza?");
+                if (confirmation) {
+                    localStorage.removeItem('tasks');
+                    localStorage.removeItem('childPoints'); 
+                    alert("Todas as atividades e pontos foram resetados.");
+                    renderTasks();
+                    renderPointsOverview();
+                }
+            });
+
+            function loadTasks() {
+                const tasksJson = localStorage.getItem('tasks');
+                return tasksJson ? JSON.parse(tasksJson) : [];
+            }
+
+            function saveTasks(tasks) {
+                localStorage.setItem('tasks', JSON.stringify(tasks));
+            }
+            
+            function loadPoints() {
+                const pointsJson = localStorage.getItem('childPoints');
+                const defaultPoints = {
+                    "Filho João": { points: 0, rewardGoal: 500, currentReward: 'Passeio Especial' },
+                    "Filha Maria": { points: 0, rewardGoal: 500, currentReward: 'Noite de Cinema' }
+                };
+                return pointsJson ? JSON.parse(pointsJson) : defaultPoints;
+            }
+
+            function savePoints(pointsData) {
+                localStorage.setItem('childPoints', JSON.stringify(pointsData));
+            }
+
+            function addPoints(childName, amount) {
+                const pointsData = loadPoints();
+                if (pointsData[childName]) {
+                    pointsData[childName].points += amount;
+                    savePoints(pointsData);
+                    renderPointsOverview();
+                    alert(`${childName} ganhou ${amount} pontos! Total: ${pointsData[childName].points}`);
+                }
+            }
+
+            function renderPointsOverview() {
+                const pointsData = loadPoints();
+                pointsOverviewDiv.innerHTML = '';
+
+                for (const childName in pointsData) {
+                    const data = pointsData[childName];
+                    const progress = Math.min(100, (data.points / data.rewardGoal) * 100);
+                    
+                    const card = document.createElement('div');
+                    card.classList.add('reward-card');
+                    
+                    const rewardAchieved = data.points >= data.rewardGoal;
+                    const message = rewardAchieved 
+                        ? `<p style="color:var(--success-green); font-weight:bold;">🏆 Meta Atingida! Resgate a recompensa: ${data.currentReward}</p>`
+                        : `<p>Recompensa Alvo: <strong>${data.currentReward}</strong> (Meta: ${data.rewardGoal} pts)</p>`;
+
+                    card.innerHTML = `
+                        <h3>${childName}</h3>
+                        <div class="points-display">
+                            <span class="icon">💰</span>
+                            <span>Pontos Atuais: ${data.points}</span>
+                        </div>
+                        ${message}
+                        <div class="reward-progress-bar">
+                            <div class="progress-fill" style="width: ${progress}%;"></div>
+                        </div>
+                        <p style="text-align:right; font-size:0.9em; margin-top:5px;">${data.points} / ${data.rewardGoal} pts</p>
+                    `;
+                    pointsOverviewDiv.appendChild(card);
+                }
+            }
+
+            rewardForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+                const childName = document.getElementById('reward-child').value;
+                const rewardName = document.getElementById('reward-name').value;
+                const rewardGoal = parseInt(document.getElementById('reward-goal').value);
+
+                if (childName && rewardName && rewardGoal > 0) {
+                    const pointsData = loadPoints();
+                    if (pointsData[childName]) {
+                        pointsData[childName].currentReward = rewardName;
+                        pointsData[childName].rewardGoal = rewardGoal;
+                        savePoints(pointsData);
+                        alert(`Nova recompensa definida para ${childName}: ${rewardName} (Meta: ${rewardGoal} pts).`);
+                        renderPointsOverview();
+                    }
+                } else {
+                    alert('Por favor, preencha todos os campos da recompensa corretamente.');
+                }
+            });
+
+            window.approveTask = function(taskId) {
+                const tasks = loadTasks();
+                const taskIndex = tasks.findIndex(task => task.id === taskId);
+                
+                if (taskIndex !== -1) {
+                    const task = tasks[taskIndex];
+                    addPoints(task.atribuidoA, task.points); 
+                    task.status = 'Concluído';
+                    saveTasks(tasks);
+                    renderTasks();
+                }
+            }
+
+            window.rejectTask = function(taskId) {
+                const tasks = loadTasks();
+                const taskIndex = tasks.findIndex(task => task.id === taskId);
+                if (taskIndex !== -1) {
+                    tasks[taskIndex].status = 'Pendente';
+                    saveTasks(tasks);
+                    renderTasks();
+                    alert("Tarefa rejeitada e retornada ao status 'Pendente'.");
+                }
+            }
+
+            window.editTask = function(taskId) {
+                const tasks = loadTasks();
+                const taskToEdit = tasks.find(task => task.id === taskId);
+
+                if (taskToEdit) {
+                    taskIdInput.value = taskToEdit.id;
+                    document.getElementById('task-nome').value = taskToEdit.nome;
+                    document.getElementById('task-descricao').value = taskToEdit.descricao;
+                    document.getElementById('task-data').value = taskToEdit.dataEntrega;
+                    document.getElementById('task-points').value = taskToEdit.points || 10; 
+                    document.getElementById('task-atribuido').value = taskToEdit.atribuidoA;
+
+                    formTitle.textContent = 'Editar Tarefa Existente';
+                    submitButton.textContent = 'Salvar Alterações';
+                    cancelButton.style.display = 'block';
+                    window.scrollTo(0, 0); 
+                }
+            }
+
+            cancelButton.addEventListener('click', () => {
+                taskForm.reset();
+                taskIdInput.value = '';
+                formTitle.textContent = 'Criar Nova Tarefa';
+                submitButton.textContent = 'Salvar Tarefa';
+                cancelButton.style.display = 'none';
+            });
+
+            window.deleteTask = function(taskId) {
+                const confirmation = window.confirm("Tem certeza que deseja DELETAR esta tarefa?");
+                if (confirmation) {
+                    let tasks = loadTasks();
+                    tasks = tasks.filter(task => task.id !== taskId);
+                    saveTasks(tasks);
+                    renderTasks();
+                }
+            }
+
+            function renderTasks() {
+                const allTasks = loadTasks();
+                const filteredTasks = allTasks.filter(task => 
+                    currentFilterChild === 'Todos' || task.atribuidoA === currentFilterChild
+                );
+                
+                const filterText = currentFilterChild === 'Todos' ? '' : ` (${currentFilterChild})`;
+                const awaitingListDiv = document.getElementById('awaiting-approval-list');
+                const pendingListDiv = document.getElementById('pending-task-list');
+                const completedListDiv = document.getElementById('completed-task-list');
+
+                awaitingListDiv.innerHTML = ''; 
+                pendingListDiv.innerHTML = '';
+                completedListDiv.innerHTML = '';
+                
+                const awaitingTasks = filteredTasks.filter(task => task.status === 'Aguardando Aprovação');
+                const pendingActiveTasks = filteredTasks.filter(task => task.status === 'Pendente');
+                const approvedTasks = filteredTasks.filter(task => task.status === 'Concluído');
+
+                function createTaskCard(task, borderStyle, actionButtonsHtml = '') {
+                    const statusClass = task.status === 'Concluído' ? 'task-status-concluido' : task.status === 'Aguardando Aprovação' ? 'task-status-awaiting' : 'task-status-pending';
+                    const pointsDisplay = task.points ? `<p style="font-weight:bold; color:var(--gold-points);">Ganha: ${task.points} pts</p>` : '';
+
+                    return `
+                        <div class="task-card" style="border-left-color: ${borderStyle};">
+                            <h3>${task.nome}</h3>
+                            <p><strong>Descrição:</strong> ${task.descricao}</p>
+                            <p><strong>Prazo:</strong> ${task.dataEntrega}</p>
+                            <p><strong>Atribuído a:</strong> ${task.atribuidoA}</p>
+                            ${pointsDisplay}
+                            <p><strong>Status:</strong> <span class="${statusClass}">${task.status}</span></p>
+                            <div style="margin-top: 10px;">
+                                ${actionButtonsHtml}
+                                <button class="secondary-button" onclick="editTask('${task.id}')">Editar</button>
+                                <button class="danger-button" onclick="deleteTask('${task.id}')" style="margin-right: 0;">Deletar</button>
+                            </div>
+                        </div>
+                    `;
+                }
+
+                document.querySelector('h2:nth-of-type(3)').textContent = `🚨 Aguardando Aprovação${filterText}`;
+                if (awaitingTasks.length > 0) {
+                    awaitingTasks.forEach(task => {
+                        const actionButtons = `
+                            <button class="success-button" onclick="approveTask('${task.id}')">Aprovar</button>
+                            <button class="danger-button" onclick="rejectTask('${task.id}')" style="margin-right: 10px;">Rejeitar</button>
+                        `;
+                        awaitingListDiv.innerHTML += createTaskCard(task, 'var(--primary-blue)', actionButtons);
+                    });
+                } else {
+                    awaitingListDiv.innerHTML = '<p>Nenhuma tarefa esperando aprovação. 🎉</p>';
+                }
+
+                document.querySelector('h2:nth-of-type(4)').textContent = `Tarefas Pendentes e Ativas${filterText}`;
+                if (pendingActiveTasks.length > 0) {
+                    pendingActiveTasks.forEach(task => {
+                        pendingListDiv.innerHTML += createTaskCard(task, 'orange');
+                    });
+                } else {
+                    pendingListDiv.innerHTML = '<p>Nenhuma tarefa pendente neste momento.</p>';
+                }
+
+                document.querySelector('h2:nth-of-type(5)').textContent = `✅ Tarefas Concluídas e Aprovadas${filterText}`;
+                if (approvedTasks.length > 0) {
+                    approvedTasks.forEach(task => {
+                        completedListDiv.innerHTML += createTaskCard(task, 'var(--success-green)');
+                    });
+                } else {
+                    completedListDiv.innerHTML = '<p>Nenhuma tarefa concluída e aprovada.</p>';
+                }
+            }
+
+            taskForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                let tasks = loadTasks();
+                const currentId = taskIdInput.value;
+                const pointsValue = parseInt(document.getElementById('task-points').value);
+                
+                const taskData = {
+                    nome: document.getElementById('task-nome').value,
+                    descricao: document.getElementById('task-descricao').value,
+                    dataEntrega: document.getElementById('task-data').value,
+                    points: pointsValue, 
+                    atribuidoA: document.getElementById('task-atribuido').value,
+                    criadoPor: 'Pai (Simulado)'
+                };
+
+                if (currentId) {
+                    const taskIndex = tasks.findIndex(t => t.id === currentId);
+                    if (taskIndex !== -1) {
+                        tasks[taskIndex] = { ...tasks[taskIndex], ...taskData }; 
+                        alert("Tarefa editada com sucesso!");
+                    }
+                } else {
+                    const newId = new Date().getTime().toString(); 
+                    const newTask = { ...taskData, id: newId, status: 'Pendente' };
+                    tasks.push(newTask);
+                    alert("Tarefa criada com sucesso!");
+                }
+                
+                saveTasks(tasks);
+                renderTasks();
+                cancelButton.click(); 
+            });
+
+            renderTasks();
+            renderPointsOverview();
+        });
+    </script>
+</body>
+</html>
