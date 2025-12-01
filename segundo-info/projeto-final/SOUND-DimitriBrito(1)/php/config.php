@@ -1,7 +1,7 @@
 <?php 
     $dbHost = 'localhost:3307';
     $dbUsername = 'root';
-    $dbPassword = '123456';
+    $dbPassword = '';
     $dbName = 'formulario';
 
     $conexao = new mysqli($dbHost,$dbUsername,$dbPassword,$dbName);
@@ -16,4 +16,5 @@
         echo "Conexão efetuada com sucesso";
     }
     */
+
 ?>
