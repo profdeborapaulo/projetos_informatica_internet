@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil - Minha Saúde</title>
+    <link rel="stylesheet" href="../CSS/login-cadastro.css"> 
+    <link rel="stylesheet" href="../CSS/perfil.css"> 
+</head>
+<body>
+    
+    <header class="app-header">
+        <div class="header-conteudo">
+            <a class="home" href="index.html"> <img src="../IMGS/logo.png" class="logo" alt="logo" > </a>
+            <h1 class="title">MInha Saúde</h1>
+        </div> 
+        <button class="logout navbar"> Sair </button>
+    </header>
+
+    <div class="conteudo-principal">
+        
+        <div class="perfil-card">
+            
+            <div class="area-usuario">
+                <img src="../IMGS/foto-perfil.png" alt="" class="perfil-foto">
+                <div class="info-primaria">
+                    <p><strong id="perfil-nome-completo">Nome do Usuário</strong></p>
+                    <p><span id="perfil-idade-anos">Idade</span></p>
+                    <button class="logout perfil">Sair</button>
+                </div>
+            </div>
+
+            <div class="dados-pessoais">
+                <h2>Dados Pessoais</h2>
+                <div class="info-linha">
+                    <strong>CPF:</strong> <span id="perfil-cpf"></span>
+                </div>
+                <div class="info-linha">
+                    <strong>RG:</strong> <span id="perfil-rg"></span>
+                </div>
+                <div class="info-linha">
+                    <strong>Email:</strong> <span id="perfil-email"></span>
+                </div>
+                <div class="info-linha">
+                    <strong>Telefone:</strong> <span id="perfil-telefone"></span>
+                </div>            
+                <button id="btn-deletar-conta" class="btn-perigo">Deletar Conta Permanentemente</button>
+
+            </div>
+            
+        </div>
+        
+        <section class="meus-agendamentos">
+            <div class="agendamentos-header">
+                <h2>Meus Agendamentos</h2>
+                <a href="hospitais.html" id="btn-novo-agendamento" class="btn-acao">Agendar Agora</a> 
+            </div>
+            
+            <ul id="lista-agendamentos" class="lista-agendamentos">
+                <li class="nenhum-agendamento">Carregando agendamentos...</li>
+            </ul>
+        </section>
+
+        </div>
+
+    <footer class="rodape">
+        <p>&copy; Heitor Mimi. Todos os direitos reservados.</p>
+        <a href="https://github.com/mimiitr" target="_blank" class="link-github">
+            GitHub
+        </a>
+    </footer>
+
+    <script src="../JS/perfil.js"></script>
+</body>
+</html>

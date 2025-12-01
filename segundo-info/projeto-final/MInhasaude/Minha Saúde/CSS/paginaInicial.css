@@ -1,0 +1,360 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url(../IMGS/background.png);
+    background-size: 500px;
+}
+/*geral*/
+.botao{
+    max-width: 7rem;
+    margin-left: 70%;
+    margin-bottom: -2rem;
+    display: inline-block;
+    padding: 20px 20px;
+    background-color: #007bffd2;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+.botao:hover {
+    background-color: #0056b3;
+}
+.texto-geral{
+    font-size: clamp(20px, 1.5rem, 50px);
+    font-weight: 200;
+}
+
+/*navbar*/
+.app-header{
+    width: 100%;
+    color: white;
+    background-color: #005BAA;
+    border-bottom: solid 10px #C7CFE9;     
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 10;
+}
+.header-conteudo{
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    height: 5rem;
+}
+.logo{
+    margin-left: 1vw;
+    max-height: 80%;
+}
+.perfil{
+    width: 5rem;
+    margin-right: 3vw;
+}
+
+/*Carrossel*/
+.carousel {
+    width: 100%;
+    height: 65vh;
+    position: relative;
+    overflow: hidden;
+    background-color: #5F86D9;
+    background-image: radial-gradient(rgba(114, 167, 216, 0.87) 0.2vh, transparent 1px);
+    background-size: 1.5vw 1.5vw;
+    background-position: -1v1 -1vw;
+    border-bottom: solid 10px #3E6FB7;
+    box-shadow: 0 4px 6px rgb(0, 0, 0, 0.3);
+    z-index: 5;
+}
+.track-area {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.slide {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.slide.current {
+    opacity: 1; 
+    z-index: 2;
+}
+
+/*slide 1*/
+/*lado esquerdo do slide*/
+.ladoesquerdo{
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+}
+.fotocarrossel1{
+    width: 100%;
+    height: 100%;
+}
+.logogov{
+    position: absolute;
+    height: 10vh;
+    bottom: 4%;
+    left: 3%;
+    z-index: 5;
+}
+/*lado direito do slide*/
+.ladodireito{
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+}
+.titulocarrossel{
+    color: white;
+    font-size: 4vw;
+    margin:auto;
+    width: 70%;
+}
+.tracoazul{
+    width:70%;
+    height: 2%;
+    background-color: #005BAA;
+    position: absolute;
+    right: 0;
+    bottom: 5%;
+}
+.tracobranco{
+    width:80%;
+    height: 2%;
+    background-color: #ffffff;
+    position: absolute;
+    right: 0;
+    bottom: 10%;
+}
+.logosus{
+    width:20vh;
+    margin-bottom: 2rem;
+    margin-left: 70%;
+    z-index: 5;
+}
+
+/*slide 2*/
+/*esquerda*/
+.ladoesquerdo2{
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+}
+.fotocarrossel2{
+    width: 100%;
+    height: 100%;
+}
+/*direita*/
+.ladodireito2{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.titulocarrossel2{
+    color: white;
+    font-size: 4vw;
+    margin:auto;
+    width: 70%;
+}
+
+/*slide 3*/
+/*direita*/
+.ladodireito3{
+    width: 70vw;
+}
+.fotocarrossel3{
+    width: 100%;
+    height: 100%;
+}
+.logogov3{
+    position: absolute;
+    height: 10vh;
+    bottom: 4%;
+    right: 4%;
+    z-index: 5;
+}
+/*esquerda*/
+.ladoesquerdo3{
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    position: relative;
+}
+.titulocarrossel3{
+    color: white;
+    font-size: 4vw;
+    margin:auto;
+    width: 80%;
+}
+.logosus3{
+    width:20vh;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+    z-index: 5;
+}
+.botao-slide3{
+    font-size: 2vh;
+    position: absolute;
+    bottom: 5vh;
+    right: 10vh;
+    padding: 3%;
+    background-color: #007bffd2;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+.botao:hover {
+    background-color: #0056b3;
+}
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+.nav-btn.prev { left: 10px; }
+.nav-btn.next { right: 10px; }
+
+/*Serviços disponíveis*/
+.titulo-index{
+    text-align: center;
+    margin-top: 2rem;
+    margin-right: 46rem;
+    min-width: 250px;
+}
+.index{
+    min-width: 250px;
+    text-align: center;
+    margin-right: 55rem;
+}  
+.container-index{  
+    color: #343333;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    flex-wrap: wrap;
+    gap: 5vw;
+}
+/*cards*/
+.icon-texto{
+    color: #005BAA;
+    display: flex;
+    align-items: center;
+    font-size: clamp(10px, 0.5rem, 50px);
+}
+.icone{
+    width: 10rem;
+    height:12rem;
+}
+.consultar{
+    text-decoration: none;
+    color: #343333;
+    font-size: 1.5rem; 
+    transition: font-size 0.3s ease-in-out, color 0.3s ease-in-out;
+    cursor: pointer;
+    position: absolute;
+}
+.consultar:hover {
+    font-size: 1.7rem; 
+    position: absolute;
+    color: #0056b3;
+}
+.pointer{
+    width: 1rem;
+}
+
+/*O SUS é nossa história*/
+
+.historia{
+    background-color: #3E6FB7;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 100px;
+    align-items: end;
+}
+
+/*lado esquerdo*/
+.ladoesquerdo-historia{
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    padding: 50px;
+}
+.titulo-historia{
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+.texto-historia{
+    font-size: 1.5rem;
+    text-align: justify;
+}
+/*lado direito*/
+.ladodireito-historia{
+    display: flex;
+    flex-direction: column;
+    width: 40rem;
+    position: relative;
+}
+.crianca{
+    max-width: 600px;
+    height: 30rem;
+}
+
+/*rodape*/
+.rodape {
+    background-color: #005BAA;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 1rem;
+    width: 100%;
+    border-top: solid 10px #C7CFE9;
+}
+
+.rodape p {
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.link-github {
+    color: #88c0d0;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: color 0.3s;
+}
+
+.link-github:hover {
+    color: #092fda;
+    text-decoration: underline;
+}

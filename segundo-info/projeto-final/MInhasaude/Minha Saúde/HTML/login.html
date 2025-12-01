@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login de Usuário</title>
+    <link rel="stylesheet" href="../CSS/login-cadastro.css"> 
+</head>
+<body>
+    
+    <form action="/login" method="POST" class="formulario-principal formulario-login">
+        
+        <h1>Fazer Login</h1>
+
+        <div class="campo-grupo">
+            <label for="email_login">E-mail:</label>
+            <input type="email" id="email_login" name="email" required>
+        </div>
+
+        <div class="campo-grupo">
+            <label for="senha_login">Senha:</label>
+            <input type="password" id="senha_login" name="senha" required>
+        </div>
+        
+        <button type="submit" class="botao-acao">Entrar</button>
+
+        <p class="link-cadastro">
+            Não tem uma conta? <a href="cadastro.html">Cadastre-se aqui</a>
+        </p>
+        
+    </form>
+    <script src="../JS/login.js"></script>
+</body>
+</html>
