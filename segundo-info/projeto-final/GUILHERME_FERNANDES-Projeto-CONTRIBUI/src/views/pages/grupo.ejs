@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <%- include('../partials/head'); %>
+    <link rel="stylesheet" href="/CSS/grupo.css">
+</head>
+<body>
+    <%- include('../partials/header'); %>
+
+    <main>
+        <div class="grupo-container">
+            <div class="grupo-header">
+                <div class="grupo-info">
+                    <h1><%= grupo.nome_grupo %></h1>
+                    <span class="grupo-code">Código de compartilhamento: <%= grupo.sharecode %></span>
+                </div>
+                <div class="grupo-actions">
+                    <button id="addLista" class="btn-grupo btn-primary">Adicionar Lista</button>
+                    <button id="addConta" class="btn-grupo btn-primary">Nova Conta</button>
+                    <button class="btn-grupo btn-secondary">Convidar</button>
+                </div>
+            </div>
+
+            <div class="content-grid">
+                <!-- Seção de Listas -->
+                <div class="section-card">
+                    <div class="section-header">
+                        <h2>Listas</h2>
+                    </div>
+                    <ul class="lista-items"></ul>
+                </div>
+
+                <!-- Seção de Contas -->
+                <div class="section-card">
+                    <div class="section-header">
+                        <h2>Contas</h2>
+                    </div>
+                    <ul class="contas-items">
+                        <li class="item">
+                            <div>
+                                <span class="item-status status-pendente"></span>
+                                <span></span>
+                            </div>
+                            <span></span>
+                        </li>
+                        <li class="item">
+                            <div>
+                                <span class="item-status status-pago"></span>
+                                <span></span>
+                            </div>
+                            <span></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <dialog id="dialogCadastrarLista">
+        <button class="close-button" aria-label="Fechar Modal">
+            &times;
+        </button>
+            <h2>Criar Lista</h2>
+            <form class="lista-form" method="POST">
+                <div class="form-group">
+                    <label for="nomeLista">Nome da Lista:</label>
+                    <input type="text" id="nomeLista" name="nomeLista" placeholder="Digite o nome" required>
+                </div>
+
+                <button id="btnCriarLista" type="button" class="btn-send">Criar</button>
+            </form>
+        </div>
+    </dialog>
+
+    <dialog id="dialogCadastrarConta">
+        <button id="dialogCadastrarContaCloseButton" class="close-button" aria-label="Fechar Modal">
+            &times;
+        </button>
+            <h2>Criar Conta</h2>
+            <form class="lista-form" method="POST">
+                <div class="form-group">
+            <label for="nomeConta">Nome da Conta</label>
+            <input type="text" id="nomeConta" name="nomeConta" placeholder="Digite o nome" required>
+            
+            <label for="descricaoConta">Descrição</label>
+            <input type="text" id="descricaoConta" name="descricaoConta" placeholder="Digite a descrição" required>
+            
+            <label for="valorConta">Valor total da Conta</label>
+            <input type="number" id="valorConta" name="valorConta" placeholder="0.00" step="0.01" min="0" required>
+            
+            <label for="dataVencimento">Data de Vencimento</label>
+            <input type="date" id="dataVencimento" name="dataVencimento" required>
+            
+            <label for="dataPagamento">Data de Pagamento</label>
+            <input type="date" id="dataPagamento" name="dataPagamento">
+            
+            <label for="statusPagamento">Status do Pagamento</label>
+            <select id="statusPagamento" name="statusPagamento" required>
+                <option value="">Selecione um status</option>
+                <option value="pendente">Pendente</option>
+                <option value="pago">Pago</option>
+                <option value="atrasado">Atrasado</option>
+            </select>
+            
+            <label for="categoriaConta">Categoria</label>
+            <select id="categoriaConta" name="categoriaConta" required>
+                <option value="">Selecione uma categoria</option>
+                <option value="moradia">Moradia</option>
+                <option value="transporte">Transporte</option>
+                <option value="alimentacao">Alimentação</option>
+                <option value="lazer">Lazer</option>
+                <option value="saude">Saúde</option>
+                <option value="educacao">Educação</option>
+                <option value="outros">Outros</option>
+            </select>
+        </div>
+
+                <button id="btnCriarConta" type="button" class="btn-send">Criar</button>
+            </form>
+        </div>
+    </dialog>
+
+    <!-- Dialog: Ver Lista -->
+    <dialog id="dialogLista" class="dialog-lista">
+        <button class="close-button" id="dialogListaClose" aria-label="Fechar Modal">&times;</button>
+
+        <h2 id="listaTitulo">Lista</h2>
+
+        <div class="lista-meta">
+            <span>Total: R$ <strong id="listaTotal">0.00</strong></span>
+            <span>Itens: <strong id="listaCount">0</strong></span>
+        </div>
+
+        <ul class="lista-itens" id="listaItens"></ul>
+
+        <div class="dialog-btns">
+            <button type="button" id="btnExcluirItem" class="btn-back">Excluir Item</button>
+            <button type="button" id="btnConfirmarExclusao" class="btn-danger" style="display:none;">Excluir Selecionados</button>
+            <button type="button" id="btnAddItem" class="btn-send">Adicionar Item</button>
+        </div>
+    </dialog>
+
+    <dialog id="dialogCadastrarItem">
+    <button class="close-button" id="dialogCadastrarItemCloseButton" aria-label="Fechar">×</button>
+    <h3>Cadastrar Item</h3>
+
+    <form id="formCadastrarItem" class="lista-form">
+        <!-- campo escondido que guarda o lista_id para usar na hora de salvar -->
+        <input type="hidden" id="item_lista_id" name="item_lista_id" value="">
+
+        <div class="form-group">
+            <label for="nomeItem">Nome do item</label>
+            <input type="text" id="nomeItem" name="nomeItem" placeholder="Digite o nome" required>
+            
+            <label for="QuantidadeItem">Quantidade:</label>
+            <input type="number" id="QuantidadeItem" name="QuantidadeItem" placeholder="0" step="1" min="0" required>
+
+            <label for="ValorItem">Valor:</label>
+            <input type="number" id="ValorItem" name="ValorItem" placeholder="R$ 00,00" step="0.01" min="0" required>
+            
+            <label for="categoriaItem">Categoria do Item</label>
+            <select id="categoriaItem" name="categoriaItem" required>
+                <option value="">Selecione uma Categoria</option>
+                <optgroup label="Mercado">
+                    <option value="alimentos">Alimentos</option>
+                    <option value="bebidas">Bebidas</option>
+                    <option value="higiene">Higiene Pessoal</option>
+                    <option value="limpeza">Produtos de Limpeza</option>
+                    <option value="hortifruti">Hortifruti</option>
+                    <option value="padaria">Padaria e Confeitaria</option>
+                    <option value="carnes">Açougue / Frios</option>
+                </optgroup>
+                <optgroup label="Casa">
+                    <option value="decoracao">Decoração</option>
+                    <option value="utensilios">Utensílios Domésticos</option>
+                    <option value="moveis">Móveis</option>
+                    <option value="eletronicos">Eletrodomésticos / Eletrônicos</option>
+                    <option value="ferramentas">Ferramentas</option>
+                    <option value="jardinagem">Jardinagem</option>
+                </optgroup>
+                <optgroup label="Empresa">
+                    <option value="escritorio">Material de Escritório</option>
+                    <option value="informatica">Informática</option>
+                    <option value="limpeza_empresa">Limpeza e Manutenção</option>
+                    <option value="cozinha_empresa">Cozinha / Copa</option>
+                    <option value="seguranca">Segurança e Equipamentos</option>
+                    <option value="papelaria">Papelaria</option>
+                </optgroup>
+            </select>
+            
+            <label for="statusCompraItem">Comprado?</label>
+            <select id="statusCompraItem" name="statusCompraItem" required>
+                <option value="">Selecione</option>
+                <option value="1">Comprado</option>
+                <option value="0">Não comprado</option>
+            </select>
+        </div>
+
+        <div class="dialog-btns">
+            <button type="button" id="btnCancelarCadastrarItem" class="btn-back">Cancelar</button>
+            <button type="submit" id="btnSalvarItem" class="btn-send">Salvar</button>
+        </div>
+    </form>
+</dialog>
+
+    <!-- Loader de carregamento -->
+    <div class="loader-overlay" style="display: none;">
+        <div class="loader"></div>
+    </div>
+    
+
+    <%- include('../partials/footer'); %>
+    <script src="/JS/grupo.js"></script>
+</body>
+</html>

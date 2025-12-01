@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <%- include('../partials/head'); %>
+    <link rel="stylesheet" href="/CSS/perfil.css"> 
+</head>
+<body>
+    <%- include('../partials/header'); %>
+    
+    <main class="perfil-page">
+        <div class="perfil-container">
+            <div class="perfil-header card"> 
+                <div class="perfil-avatar">
+                    <span id="avatarLetra">N</span> </div>
+                <div class="perfil-info">
+                    <h1 id="nomeUsuario">Nome Completo do Usuário</h1>
+                    <span class="perfil-email" id="emailUsuario">usuario.exemplo@email.com</span>
+                </div>
+            </div>
+
+            <div class="perfil-content"> 
+                <div class="perfil-section card"> 
+                    <div class="section-header">
+                        <h2>Dados da Conta</h2>
+                        <button class="btn-perfil btn-secondary" id="btnEditarConta">Editar</button> 
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Nome</span>
+                        <span id="infoNome">Nome Completo do Usuário</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">E-mail</span>
+                        <span id="infoEmail">usuario.exemplo@email.com</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Data de Cadastro</span>
+                        <span id="infoCadastro">01 de Janeiro de 2024</span>
+                    </div>
+                </div>
+
+                <div class="perfil-section card">
+                    <div class="section-header">
+                        <h2>Segurança</h2>
+                    </div>
+                    <div class="info-action">
+                        <span class="info-label">Gerenciar Senha</span>
+                        <button class="btn-perfil btn-primary" id="btnAlterarSenha">Alterar Senha</button>
+                    </div>
+                    <div class="info-action">
+                        <span class="info-label">Atividade Recente</span>
+                        <button class="btn-perfil btn-secondary">Ver Logs</button>
+                    </div>
+                </div>
+
+            </div> </div>
+    </main>
+
+    <dialog class="modal-senha" id="modalAlterarSenha">
+        </dialog>
+
+    <%- include('../partials/footer'); %>
+    <script src="/JS/perfil.js"></script>
+</body>
+</html>
