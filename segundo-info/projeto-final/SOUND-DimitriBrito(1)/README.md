@@ -45,3 +45,5 @@ Após configurar o ambiente e o banco de dados, acesse o projeto pelo seu navega
 ## 🤝 Contribuição
 
 Sinta-se à vontade para contribuir com melhorias no código, relatar bugs ou sugerir novas funcionalidades.
+
+https://www.canva.com/design/DAG5izreV1M/Ohn9GLH12jKFAbIoPFoIOQ/view?utm_content=DAG5izreV1M&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h2ebbc8e2ee
