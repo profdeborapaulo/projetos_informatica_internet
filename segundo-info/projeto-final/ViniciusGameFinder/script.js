@@ -4,23 +4,20 @@
 const searchButton = document.getElementById('search-button');
 const searchInput = document.getElementById('game-search-input');
 const resultsDisplay = document.getElementById('game-results-display');
-// Elemento da lista do histórico e limite
 const historyList = document.getElementById('search-history-list'); 
 const MAX_HISTORY_ITEMS = 5; 
-// ✅ NOVO: Elemento do Banner
 const silksongBanner = document.getElementById('silksong-banner-search');
 
 const USD_TO_BRL = 5.3761; //taxa de conversão USD para BRL
 const BASE_URL = "https://game-finder-sw2025.onrender.com";
-const API_URL = "http://localhost:3000/api/search";
-const DETAILS_API_URL = "http://localhost:3000/api/game-details";
+const API_URL = "https://game-finder-sw2025.onrender.com/api/search";
+const DETAILS_API_URL = "https://game-finder-sw2025.onrender.com/api/game-details";
 
 // Palavras-chave para filtrar resultados que não sejam o jogo base (DLC, etc.)
 const NON_GAME_KEYWORDS = [
   "dlc", "soundtrack", "expansion", "pack", "bundle", "edition", "map", "artbook", "wallpaper", "season pass", "ultimate", "deluxe", "gold", "premium", "key"
 ];
 
-// ✅ LISTA MESTRE FIXA (7 LOJAS DE PC)
 const MASTER_PC_STORES = [
     // Lojas com Ícone (use: IMG/steam_logo.png e IMG/epic_logo.png)
     { name: "Steam", mapNames: ["steam"], icon: "IMG/steam_logo.png" },
@@ -46,8 +43,7 @@ const CHEAPSHARK_STORE_MAP = {
   "29": "Epic Games Store",
   "31": "GOG" 
 };
-
-// ... Mapeamentos RAWG (Mantidos, apenas para referência)
+// Mapeamento RAWG ID para Nome Limpo
 const RAWG_ID_TO_NAME_MAP = {
     "1": "Steam",
     "2": "Xbox Marketplace", 
@@ -70,9 +66,7 @@ const RAWG_ID_TO_NAME_MAP = {
     "20": "Epic Games Store"
 };
 
-// ======================================================================
-// 2. FUNÇÕES DE HISTÓRICO 
-// ======================================================================
+//FUNÇÕES DE HISTÓRICO 
 
 function loadSearchHistory() {
     if (!historyList) return; 
@@ -122,9 +116,7 @@ function displaySearchHistory(history) {
     });
 }
 
-// ======================================================================
 // 3. FUNÇÕES AUXILIARES (EXISTENTES)
-// ======================================================================
 
 // Simulação de Avaliação
 function simulateRating(storeName){
@@ -135,12 +127,10 @@ function simulateRating(storeName){
   return 4.0; // Padrão para outras lojas de PC
 }
 
-// Função para criar o card de loja (Com Lógica de Logo/Text-Logo)
+// Função para criar o card de loja 
 function createStoreCardHTML(store) {
     const { storeName, offer, url, renderIcon, renderTextClass } = store; 
-    // ... (lógica existente) ...
-    
-    // 1. Definição do Preço e Taxa de Economia
+    //Definição do Preço e Taxa de Economia
     let priceHTML = '<p>Preço: N/A</p>';
     let normalPriceHTML = '';
     let savingsBadgeHTML = '';
@@ -171,7 +161,7 @@ function createStoreCardHTML(store) {
         priceSorting = Infinity;
     }
 
-    // 2. Outras Informações
+    // 
     const storeRating = (parseFloat(simulateRating(storeName)).toFixed(1)) || 'N/A';
     const ptbrText = 'N/A'; 
     const storeRatingHTML = `<p>Avaliação: ${storeRating} ⭐⭐</p>`;
@@ -181,7 +171,7 @@ function createStoreCardHTML(store) {
     const finalUrl = url && url !== 'N/A' && url !== '#' ? url : '#';
     const cursorStyle = finalUrl === '#' ? 'cursor-default' : 'cursor-pointer';
 
-    // 3. Lógica de Renderização do Cabeçalho
+    //Lógica de Renderização do Cabeçalho
     let cardHeaderContent = '';
 
     if (renderIcon) {
@@ -192,7 +182,7 @@ function createStoreCardHTML(store) {
         cardHeaderContent = `<span class="store-logo-text">${storeName}</span>`;
     }
     
-    // 4. Retorno do HTML do Card
+    //Retorno do HTML do Card
     return `
         <div class="${cardClass} ${cursorStyle}" onclick="${finalUrl !== '#' ? `window.open('${finalUrl}', '_blank')` : ''}" data-price="${priceSorting}" data-pc="true"> 
             ${savingsBadgeHTML}
@@ -210,9 +200,8 @@ function createStoreCardHTML(store) {
     `;
 }
 
-// ======================================================================
+
 // 4. FUNÇÕES PRINCIPAIS (EXISTENTES)
-// ======================================================================
 
 // Função para criar o card do jogo (Lista de Resultados)
 function createGameListItem(game){
@@ -259,7 +248,7 @@ function displayGameDetails(game){
         ? `<p><strong>Site Oficial:</strong> <a href="${websiteUrl}" target="_blank" rel="noopener noreferrer">${websiteDisplayUrl}</a></p>` 
         : '<p><strong>Site Oficial:</strong> N/A</p>';
 
-    // 1. Processo de filtro CheapShark
+    //Processo de filtro CheapShark
     let bestOffers = {};
     const allowedStoreNames = MASTER_PC_STORES.flatMap(s => s.mapNames);
 
@@ -278,7 +267,7 @@ function displayGameDetails(game){
             return false;
         }
         
-        // Filtro CheapShark por Loja PC
+        //Filtro CheapShark por Loja PC
         const csNameLower = csStoreName.toLowerCase().split('(')[0].trim(); 
         const isPCStore = allowedStoreNames.some(allowedName => allowedName === csNameLower);
 
@@ -293,7 +282,7 @@ function displayGameDetails(game){
         }
     });
 
-    // 2. Processo de Mapeamento RAWG
+    //Processo de Mapeamento RAWG
     const rawgStoreMap = new Map();
     (game.stores || [])
         .filter(rawgStore => {
@@ -307,7 +296,7 @@ function displayGameDetails(game){
             rawgStoreMap.set(rawgNameLower, rawgStore);
         });
         
-    // 3. Iterar sobre a MASTER_PC_STORES para garantir que todos os 7 cards apareçam.
+    //Iterar sobre a MASTER_PC_STORES para garantir que todos os 7 cards apareçam.
     const combinedStores = [];
 
     MASTER_PC_STORES.forEach(masterStore => {
@@ -350,9 +339,8 @@ function displayGameDetails(game){
         return priceA - priceB; // menor preço primeiro
     });
 
-    // ======================================================================
-    // Lógica do Aviso (Se todas as lojas estão indisponíveis/sem link)
-    // ======================================================================
+
+    // Lógica do Aviso (Se todas as lojas estão indisponíveis/sem link)=
     // Verifica se alguma das 7 lojas master tem um preço da CheapShark ou um link RAWG válido
     const isAnyStoreAvailable = orderedStores.some(store => store.offer !== null || (store.url && store.url !== 'N/A' && store.url !== '#'));
     let warningMessageHtml = '';
@@ -478,9 +466,8 @@ async function searchGame() {
     }
 }
 
-// ======================================================================
+
 // 5. EVENTOS E INICIALIZAÇÃO
-// ======================================================================
 
 // eventos de clique e enter
 searchButton.addEventListener("click", searchGame);
@@ -491,7 +478,7 @@ searchInput.addEventListener("keypress", function (e) {
   }
 });
 
-// ✅ NOVO: Evento de clique no Banner para pesquisar "Hollow Knight: Silksong"
+//Evento de clique no Banner para pesquisar Silksong
 if (silksongBanner) {
     silksongBanner.addEventListener('click', () => {
         searchInput.value = 'Hollow Knight: Silksong';
@@ -503,4 +490,3 @@ if (silksongBanner) {
 // CHAMADA PARA CARREGAR O HISTÓRICO
 
 window.addEventListener('load', loadSearchHistory);
-

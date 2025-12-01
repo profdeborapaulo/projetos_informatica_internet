@@ -25,8 +25,6 @@ body {
 
 /* Cabeçalho */
 header {
-  /* ❌ ANTES: background-color: #a9a9a9; */
-  /* Recomendo usar branco puro para alto contraste com a barra escura */
   background-color: rgb(192, 192, 192); 
   color: #1f2937;
   display: flex;
@@ -34,7 +32,6 @@ header {
   align-items: center;
   padding: 10px 20px;
   
-  /* ❌ REMOVE: Borda de 50px sólida */
   border-bottom: none; 
   
   position: relative; 
@@ -44,8 +41,6 @@ header {
 
 /* Garante que a logo fique com um tamanho bom */
 .site-logo {
-    /* ❌ ANTES: max-width: 200px; */
-    /* ✅ NOVO: Tamanho ideal para a logo no header */
     max-width: 250px; 
     max-height: 80px; /* Limitado pela nova altura do header */
     width: auto;
@@ -80,38 +75,35 @@ header a {
 .header-title-text {
     position: absolute;
     /* Centraliza na barra inferior cinza (que tem 50px de altura) */
-    bottom: -40px; /* 50px - 10px (padding do header) - 40px (altura do texto + margem) */
+    bottom: -40px; 
     left: 50%;
     transform: translateX(-50%);
-    font-size: 2.5em; /* Tamanho grande */
+    font-size: 2.5em; 
     font-weight: 700;
-    font-family: 'Inconsolata', monospace; /* Use a fonte definida no seu head */
-    text-shadow: 0 0 10px rgba(0, 228, 255, 0.7); /* Efeito neon sutil */
-    
-    /* Z-index alto para garantir que fique visível */
+    font-family: 'Inconsolata', monospace; 
+    text-shadow: 0 0 10px rgba(0, 228, 255, 0.7); 
     z-index: 5; 
-    white-space: nowrap; /* Não quebra a linha */
+    white-space: nowrap;
 }
 
-/* Cor do texto Game/Finder */
+
 .title-game, .title-finder {
     color: #00e4ff; /* NEON_BLUE */
 }
 
-/* Cor do PC (opcionalmente mais escuro ou em uma cor diferente para destaque) */
 .title-pc {
-    color: #00e4ff; /* Mantendo o NEON_BLUE para consistência */
+    color: #00e4ff; 
     margin-left: 5px;
     font-weight: 900;
 }
 
-/* Correção na área de busca para garantir que o título da seção apareça corretamente */
+
 .game-finder-area h2 {
-    /* Novo nome do título da seção principal */
     font-size: 2em;
-    color: #3a3a3a; /* DARK_GRAY */
-    margin-top: 40px; /* Afasta da barra da header */
+    color: #3a3a3a;
+    margin-top: 40px;
 }
+
 /* Banner */
 .banner {
   max-width: 1000px;
@@ -155,7 +147,7 @@ header a {
     box-shadow: 0 0 20px #00e4ff, 0 0 8px #00e4ff inset;
 }
 .featured-game-frame:hover img {
-    transform: scale(1.02); /* Zoom sutil */
+    transform: scale(1.02);
 }
 
 /*Area da Pesqusisa de Jogos / Jogos mais buscados*/
@@ -368,11 +360,10 @@ header a {
     white-space: pre-wrap;
 }
 
-/* Estilo para o container dos cards de loja */
+
 /* Estilo para o container dos cards de loja */
 .store-list-container {
     display: grid;
-    /* Colunas responsivas, focando em 2 colunas para tela normal */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
     gap: 20px;
     margin-top: 15px;
@@ -384,11 +375,11 @@ header a {
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 4px;
-    background-color: #fff; /* Fundo branco do protótipo */
+    background-color: #fff; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     cursor: pointer; 
     transition: all 0.2s ease-in-out;
-    text-align: left; /* Alinhamento geral à esquerda */
+    text-align: left;
 }
 
 .store-card:hover {
@@ -396,17 +387,15 @@ header a {
     transform: translateY(-2px);
 }
 
-/* Classe de destaque para ofertas (preço baixo simulado) */
 .offer-card {
-    border-color: #22c55e; /* Borda verde para ofertas (opcional) */
+    border-color: #22c55e;
 }
 
-/* Classe de destaque para lojas PC (prioridade) */
+
 .pc-store-card {
-    border-left: 5px solid #3b82f6; /* Borda azul na esquerda para destaque PC */
+    border-left: 5px solid #3b82f6; 
 }
 
-/* Estilo para o cabeçalho do card (Logo/Nome) */
 .store-card .card-header {
     display: flex;
     align-items: center;
@@ -415,22 +404,21 @@ header a {
     font-size: 1.1em;
     font-weight: bold;
     color: #1f2937;
-    border-bottom: 1px solid #eee; /* Linha sutil de separação */
+    border-bottom: 1px solid #eee; 
     padding-bottom: 5px;
 }
 
 .store-card .store-logo {
-    max-width: 100px; /* Logos maiores para se parecer com o protótipo */
+    max-width: 100px;
     max-height: 25px;
     object-fit: contain;
     margin-right: 5px;
 }
 
 .store-card .store-logo-text {
-    font-size: 1.2em; /* Texto maior para nomes sem logo */
+    font-size: 1.2em; 
 }
 
-/* Estilo para o corpo do card (Detalhes: Preço, Avaliação, PT-BR) */
 .store-card .card-body p {
     margin: 5px 0;
     font-size: 1.0em;
@@ -442,27 +430,26 @@ header a {
     font-weight: bold; 
 }
 
-/* Estilo para preço riscado (preço normal) */
+/* Estilo para preço riscado  */
 .strikethrough {
     text-decoration: line-through;
     color: #888;
     font-weight: normal;
 }
 
-/* Ajuste específico para o texto do Nintendo eShop (simular fonte do protótipo) */
+
 .nintendo-eshop-text {
     font-family: Arial, sans-serif;
     font-size: 1.2em;
     font-weight: bold;
-    color: #e4001c; /* Cor do logo Nintendo (Vermelho) */
+    color: #e4001c
 }
 
-/* Esconder os elementos de link desnecessários (agora o card todo é o link) */
+
 .store-link, .normal-price, .sale-price, .savings-badge {
     display: none;
 }
 
-/* ... (Seções anteriores de style.css) ... */
 
 /* Estilo para preço riscado (preço normal) */
 .strikethrough {
@@ -471,14 +458,14 @@ header a {
     font-weight: normal;
 }
 
-/* ✅ NOVO: Estilo para preço indisponível (no card) */
+
 .unavailable-price {
     color: #ef4444; /* Vermelho */
     font-weight: normal;
     font-style: italic;
 }
 
-/* ✅ NOVO: Estilo para link indisponível (no card) */
+
 .link-unavailable {
     color: #ef4444;
     font-size: 0.9em;
@@ -486,14 +473,11 @@ header a {
     margin-top: 5px !important;
 }
 
-/* ✅ NOVO: Estilo para cursor padrão em cards sem link */
+
 .cursor-default {
     cursor: default !important;
 }
 
-/* ... Outros estilos ... */
-
-/* Ajustes para Lojas específicas (Text-Logo) */
 .gog-text {
     font-family: Arial, sans-serif;
     font-size: 1.2em;
@@ -505,19 +489,16 @@ header a {
     font-family: Arial, sans-serif;
     font-size: 1.2em;
     font-weight: bold;
-    color: #f77a00; /* Cor da Origin/EA (Laranja) */
+    color: #f77a00; 
 }
 
 .humble-text {
     font-family: Arial, sans-serif;
     font-size: 1.2em;
     font-weight: bold;
-    color: #499240; /* Cor da Humble (Verde) */
+    color: #499240; 
 }
 
-/* ... Outros estilos ... */
-
-/* Estilo para o cabeçalho do card (Logo/Nome) */
 .store-card .card-header {
     display: flex;
     align-items: center;
@@ -540,26 +521,23 @@ header a {
 .store-card .store-logo-text {
     font-size: 1.2em; 
 }
-/* ... As classes gog-text, origin-text e humble-text já existentes ... */
 
 .greenmangaming-text {
     font-family: Arial, sans-serif;
     font-size: 1.2em;
     font-weight: bold;
-    color: #92b600; /* Cor da GreenManGaming (Verde Lima) */
+    color: #92b600; 
 }
 
-/* ... O restante do seu CSS ... */
-/* ... O restante do seu CSS ... */
 
 /* ... (Seções de responsividade) ... */
-/* RESPONSIVIDADE (A partir daqui, apenas ajustes do seu código original) */
-/* Estilo para a caixa de aviso de lojas indisponíveis */
+
+
 .warning-box {
     margin: 20px 0;
     padding: 15px;
-    border: 1px solid #ffcc00; /* Cor amarela de aviso */
-    background-color: #fff9e6; /* Fundo amarelo claro */
+    border: 1px solid #ffcc00;
+    background-color: #fff9e6; 
     border-radius: 4px;
     color: #333;
     font-size: 0.95em;
@@ -568,11 +546,11 @@ header a {
 .warning-box h4 {
     margin-top: 0;
     margin-bottom: 8px;
-    color: #cc9900; /* Dourado/Âmbar */
+    color: #cc9900; 
     font-weight: bold;
 }
 
-/* Garante que o link oficial não quebre e seja clicável */
+
 .game-details-card a {
     color: #007bff;
     text-decoration: none;

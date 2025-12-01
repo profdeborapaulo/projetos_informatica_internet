@@ -14,7 +14,7 @@ const RAWG_BASE_URL = "https://api.rawg.io/api/games";
 //API CheapShark
 const CHEAPSHARK_BASE_URL = "https://www.cheapshark.com/api/1.0";
 const CHEAPSHARK_STORE_MAP = {
-    // Normalizamos os nomes para que batam com a RAWG
+
     "1": "Steam",
     "2": "GamersGate",
     "3": "GreenManGaming",
@@ -24,12 +24,11 @@ const CHEAPSHARK_STORE_MAP = {
     "13": "Ubisoft Store",
     "25": "Xbox Marketplace", // O nome da loja CheapShark para a Microsoft Store
     "29": "Epic Games Store",
-    // Adicionamos os problemáticos para registrar, mas com um nome de 'IGNORAR'
     "21": "IGNORAR_21", 
     "28": "IGNORAR_28",
 };
 
-// ✅ AJUSTE: Mapeamento de IDs da RAWG para nomes limpos
+
 const RAWG_ID_TO_NAME_MAP = {
     "1": "Steam",
     "2": "Xbox Marketplace",
@@ -59,7 +58,6 @@ const RAWG_URL_TO_NAME_MAP = {
     'gog.com': 'GOG',
     'nintendo.com': 'Nintendo eShop',
     'xbox.com': 'Xbox Marketplace',
-    // ✅ NOVO: Adicionado mapeamento de URL para nomes de lojas de PC
     'origin.com': 'Origin (EA App)', 
     'ea.com': 'Origin (EA App)',     
     'ubisoft.com': 'Ubisoft Store',  
@@ -85,7 +83,7 @@ async function checkUrlAccessibility(url) {
     // Remove parâmetros de query/hash que podem quebrar o HEAD request
     const cleanedUrl = url.split('?')[0].split('#')[0];
     
-    // Lista de domínios que sabemos que vão quebrar o HEAD (ex: Nintendo eShop)
+    // Lista de domínios que vão quebrar o HEAD
     const knownFailingDomains = ['nintendo.com', 'nintendo.co.jp', 'nintendo.co.uk'];
     if (knownFailingDomains.some(domain => cleanedUrl.includes(domain))) {
         // Assume que está ok para não penalizar lojas importantes que falham no HEAD por região
@@ -94,13 +92,11 @@ async function checkUrlAccessibility(url) {
     }
 
     try {
-        // Tenta um HEAD request para verificar o cabeçalho, que é mais rápido que GET
         const response = await axios.head(cleanedUrl, {
             timeout: 5000, // Tempo limite de 5 segundos
             maxRedirects: 5, // Segue até 5 redirecionamentos
         });
         
-        // Verifica o código de status: 2xx (sucesso) ou 3xx (redirecionamento)
         return response.status >= 200 && response.status < 400;
 
     } catch (error) {
@@ -115,7 +111,7 @@ async function checkUrlAccessibility(url) {
 app.use(cors()); // Habilita CORS para permitir requisições de diferentes origens
 app.use(express.json()); // Permite que o servidor entenda JSON no corpo das requisições
 
-// Rota POST para /api/search. (Permanece inalterada)
+// Rota POST para /api/search.
 app.post("/api/search", async (req, res) => {
   const gameName = req.body.gameName;
   if (!gameName) {
@@ -236,7 +232,7 @@ app.get("/api/game-details/:id", async (req, res) => {
         if (!cleanStoreName) {
             cleanStoreName = s.store?.name || s.name;
         }
-        // ✅ NOVO: Normaliza o nome para o frontend (Ex: 'Origin' -> 'Origin (EA App)')
+        //Normaliza o nome para o frontend
         if (cleanStoreName && cleanStoreName.toLowerCase() === 'origin') {
             cleanStoreName = 'Origin (EA App)';
         }
@@ -249,13 +245,13 @@ app.get("/api/game-details/:id", async (req, res) => {
         // 5. Verificação e Sanitização de URL
         let finalUrl = url;
 
-        // ✅ NOVO: Sanitização de Link da Epic Games Store (Anula links de revendedores/quebrados)
+
         // Se a loja for a Epic e a URL contiver '2game.com' (revendedor indesejado), anulamos o link RAWG.
         if (cleanStoreName && cleanStoreName.toLowerCase() === 'epic games store' && url && url.toLowerCase().includes('2game.com')) {
             console.log(`[RAWG STORE] Link da Epic Games Store (2game.com) anulado.`);
             finalUrl = "N/A"; // Anula a URL RAWG para que o frontend priorize o CheapShark ou mostre N/A
         } else {
-            // Tenta validar a acessibilidade da URL (apenas se não foi anulada)
+            // Tenta validar a acessibilidade da URL 
             const isUrlValid = await checkUrlAccessibility(url);
             if (!isUrlValid) {
                 console.log(`[RAWG STORE] Loja ignorada devido à URL inacessível/quebrada: ${cleanStoreName} (${url})`);
@@ -263,11 +259,10 @@ app.get("/api/game-details/:id", async (req, res) => {
             }
         }
         
-        // Adiciona a loja validada ou sanitizada
         validatedStores.push({
             storeId: storeId || "N/A",
             storeName: cleanStoreName,
-            url: finalUrl, // Pode ser o URL original (válido) ou "N/A" (sanitizado)
+            url: finalUrl,
         });
     }
 
