@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetMap</title>
+    <link rel="stylesheet" href="css/styledefault.css">
+    <link rel="stylesheet" href="css/styleindex.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="img/Logo750.png" alt="Logo PetMap" class="logo-img">
+                <span class="logo-text">PetMap</span>
+            </a>
+            <nav>
+                <a href="index.html" class="PagAtual"> Início</a>
+                <a href="busca.html"> Buscar Hotel</a>
+                <a href="login.html">Acesso para dono de Hotel</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <section class="hero">
+        <img src="img/banner.jpg" alt="Imagem de destaque" class="hero-img">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Bem<br>Vindo!</h1>
+            <p>O melhor local para busca de Hotel Pet</p>
+        </div>
+    </section>
+ 
+
+    <section class="search-cta">
+        <p>Busque ou Agende agora!</p>
+        <a href="busca.html" class="btn-buscar">Buscar</a>
+    </section>
+
+
+    <section class="content-section">
+        <div class="content-container">
+            <div class="content-text">
+                <p>
+                   Nossa plataforma reúne hotéis de hospedagem pet bem avaliados, facilitando sua experiência ao buscar um local seguro para o seu companheiro.
+                </p>
+                <p>
+                    Descubra como é fácil garantir uma boa estadia para seu pet. Você pode explorar diferentes opções de hospedagem e comparar com facilidade para encontrar o lugar perfeito para o seu amigo. 
+                </p>
+                <p>
+                    Com poucos cliques, sua comunicação é iniciada e você tem a garantia de que seu pet estará em um ambiente acolhedor, seguro e pronto para recebê-lo.
+                </p>
+            </div>
+            <div class="content-image">
+                <img src="img/SalsichaNaGrama.jpg" alt="Imagem do hotel pet" class="image-placeholder">
+                <div class="image-label">
+                    <div class="image-label-dot"></div>
+                    <span class="image-label-text">Hotel Paraíso dos Animais</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="tips-section">
+        <div class="tips-container">
+            <h2 class="tips-title">Antes de fazer seu agendamento, considere sempre:</h2>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <img src="img/IconCasa.png" alt="icon">
+                    </div>
+
+                    <p class="tip-text">Visitar o local previamente</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <img src="img/IconAperto.png" alt="icon">
+                    </div>
+
+                    <p class="tip-text">A disponibilidade do hotel para o seu pet</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <img src="img/IconCachorro.png" alt="icon">
+                    </div>
+
+                    <p class="tip-text">Certificar-se de que o seu pet está apto para hospedagem</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ 
+    <section id="quem-somos" class="info-section">
+        <div class="info-container">
+            <h2 class="info-title">Quem Somos</h2>
+            <div class="info-content">
+                <p>
+                    Somos uma plataforma que propoe a conectar donos de pet com os hotéis de hospedagem pet para facilitar a sua comunicação. Nossa missão é facilitar a busca e o agendamento de hospedagem para seu companheiro, garantindo conforto, segurança e qualidade.  
+                </p>
+                <p>
+                    Queremos tornar sua experiência simples e agradável, oferecendo filtros intuitivos e informações claras sobre cada hotel. Assim, você escolhe a opção ideal para o seu pet sem preocupações.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="info-section info-section-alt">
+        <div class="info-container">
+            <h2 class="info-title">Contato</h2>
+            
+            
+            <div class="contact-form-container">
+                <h3 class="contact-form-title">Envie uma mensagem</h3>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Nome</label>
+                        <input type="text" id="name" name="name" class="form-input" placeholder="Seu nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="seu@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject" class="form-label">Assunto</label>
+                        <input type="text" id="subject" name="subject" class="form-input" placeholder="Assunto da mensagem" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Mensagem</label>
+                        <textarea id="message" name="message" rows="5" class="form-textarea" placeholder="Sua mensagem..." required></textarea>
+                    </div>
+                    <button type="submit" class="form-submit-btn">Enviar Mensagem</button>
+                </form>
+            </div>
+
+           <div class="info-content">
+            <h3 class="contact-other-title">Outras formas de contato</h3>
+                            <div class="social-links">
+                    <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="social-item">
+                        <div class="social-icon whatsapp">
+                            <img src="img/IconWhatsapp.png" alt="WhatsApp">
+                        </div>
+                        <span>11 98765-4321</span>
+                     </a>
+
+                    <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="social-item">
+                        <div class="social-icon instagram">
+                            <img src="img/IconInstagram.png" alt="Instagram">
+                        </div>
+                        <span>@usuario</span>
+                     </a>
+
+                    <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" class="social-item">
+                        <div class="social-icon facebook">
+                            <img src="img/IconFacebook.png" alt="Facebook">
+                        </div>
+                        <span>usuario</span>
+                    </a>
+                </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="index.html#quem-somos">Quem Somos</a>
+            <span class="footer-separator">-</span>
+            <a href="index.html"> <b>PetMap® </b></a>
+            <span class="footer-separator">-</span>
+            <a href="index.html#contato">Contato</a>
+        </div>
+    </footer>
+</body>
+</html>

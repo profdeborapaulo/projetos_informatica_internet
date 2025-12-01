@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu Hotel - PetMap</title>
+    <meta name="description" content="Gerencie as informações do seu hotel pet-friendly no PetMap">
+    <link rel="stylesheet" href="css/styledefault.css">
+    <link rel="stylesheet" href="css/stylehotel.css">
+    <script src="js/hotel.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="img/Logo750.png" alt="Logo PetMap" class="logo-img">
+                <span class="logo-text">PetMap</span>
+            </a>
+            <nav>
+                <a href="index.html">Início</a>
+                <a href="busca.html">Buscar Hotel</a>
+                <a href="login.html" class="PagAtual">Acesso para dono de Hotel</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main class="hotel-main">
+        <div class="hotel-container">
+            <div class="hotel-header">
+                <h1>SEU HOTEL</h1>
+                <p>Ainda não cadastrou seu hotel? <a href="cadastrar.html" class="link-cadastro">Clique aqui</a> e cadastre-o!</p>
+            </div>
+
+                <div class="hotel-card">
+                    <h2 class="hotel-name">Nome do Hotel</h2>
+
+                    <div class="carousel">
+                        <div class="carousel-inner">
+                        </div>
+
+                        <button class="nav-btn prev-btn" aria-label="Imagem anterior">❮</button>
+                        <button class="nav-btn next-btn" aria-label="Próxima imagem">❯</button>
+                    </div>
+
+                <div class="hotel-rating">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                </div>
+
+                <div class="hotel-location">
+                    <img src="placeholder.svg" alt="Localização" class="location-icon">
+                    <span>Local - Local</span>
+                </div>
+            </div>
+
+            <div class="hotel-form">
+                <h3>Editar Informações do Hotel</h3>
+
+                <form>
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" placeholder="Nome do Hotel">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="endereco">Endereço:</label>
+                        <input type="text" id="endereco" placeholder="Formato: Rua, Bairro, Cidade, Estado, País">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pets">Pets Aceitos:</label>
+                        <input type="text" id="pets" placeholder="Pets Aceitos">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" placeholder="Email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" placeholder="Telefone">
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="social-item">
+                            <div class="social-icon whatsapp">
+                                <img src="img/IconWhatsapp.png" alt="WhatsApp">
+                            </div>
+                            <span>11 98765-4321</span>
+                        </a>
+
+                        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="social-item">
+                            <div class="social-icon instagram">
+                                <img src="img/IconInstagram.png" alt="Instagram">
+                            </div>
+                            <span>@usuario</span>
+                        </a>
+
+                        <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" class="social-item">
+                            <div class="social-icon facebook">
+                                <img src="img/IconFacebook.png" alt="Facebook">
+                            </div>
+                            <span>usuario</span>
+                        </a>
+                    </div>
+
+                    <div class="additional-images">
+                        <p>Adicione novas imagens aqui</p>
+                        <input type="file" id="additional-upload" multiple accept="image/*" class="file-input">
+                        <label for="additional-upload" class="upload-btn">Escolher Imagens</label>
+
+                        <div class="preview-grid" id="preview-grid"></div>
+                    </div>
+
+
+                    <button type="submit" class="submit-btn">Enviar Alterações</button>
+
+                    <button type="button" id="logout-btn" class="logout-btn">Sair</button>
+
+                </form>
+
+                
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="index.html#quem-somos">Quem Somos</a>
+            <span class="footer-separator">-</span>
+            <a href="index.html"><b>PetMap®</b></a>
+            <span class="footer-separator">-</span>
+            <a href="index.html#contato">Contato</a>
+        </div>
+    </footer>
+
+    <script type="module" src="/js/hotel.js"></script>
+
+
+</body>
+
+</html>
+

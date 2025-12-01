@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetMap</title>
+    <link rel="stylesheet" href="css/styledefault.css">
+    <link rel="stylesheet" href="css/stylelogin.css">
+    <script type="module" src="js/login.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="img/Logo750.png" alt="Logo PetMap" class="logo-img">
+                <span class="logo-text">PetMap</span>
+            </a>
+            <nav>
+                <a href="index.html">Início</a>
+                <a href="busca.html">Buscar Hotel</a>
+                <a href="login.html" class="PagAtual">Acesso para dono de Hotel</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <section class="login-section">
+        <div class="login-container">
+            <h2 class="login-title">Acesso do Dono de Hotel</h2>
+            <p class="login-subtitle">Entre na sua conta ou crie uma nova para cadastrar seu hotel.</p>
+
+    
+            <div class="login-tabs">
+                <button class="tab-btn active" data-tab="login">Login</button>
+                <button class="tab-btn" data-tab="register">Criar Conta</button>
+            </div>
+
+            <form id="tab-login" class="login-form active">
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="seuemail@exemplo.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Senha</label>
+                    <input type="password" placeholder="••••••••" required>
+                </div>
+
+                <button type="submit" class="login-btn">Entrar</button>
+            </form>
+
+            <form id="tab-register" class="login-form">
+                <div class="form-group">
+                    <label>Nome Completo</label>
+                    <input type="text" placeholder="Seu nome" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="seuemail@exemplo.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Senha</label>
+                    <input type="password" placeholder="Crie uma senha" required>
+                </div>
+
+                <button type="submit" class="login-btn">Criar Conta</button>
+            </form>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="index.html#quem-somos">Quem Somos</a>
+            <span class="footer-separator">-</span>
+            <a href="index.html"> <b>PetMap® </b></a>
+            <span class="footer-separator">-</span>
+            <a href="index.html#contato">Contato</a>
+        </div>
+    </footer>
+
+    <script>
+        const tabs = document.querySelectorAll(".tab-btn");
+        const forms = document.querySelectorAll(".login-form");
+
+        tabs.forEach(btn => {
+            btn.addEventListener("click", () => {
+                tabs.forEach(b => b.classList.remove("active"));
+                forms.forEach(f => f.classList.remove("active"));
+
+                btn.classList.add("active");
+                document.getElementById("tab-" + btn.dataset.tab).classList.add("active");
+            });
+        });
+    </script>
+
+</body>
+</html>
+

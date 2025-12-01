@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetMap</title>
+    <link rel="stylesheet" href="css/styledefault.css">
+    <link rel="stylesheet" href="css/stylehotel.css">
+    <script type="module" src="js/cadastrar.js"></script>
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <a href="index.html" class="logo">
+            <img src="img/Logo750.png" alt="Logo PetMap" class="logo-img">
+            <span class="logo-text">PetMap</span>
+        </a>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="busca.html">Buscar Hotel</a>
+            <a href="cadastrar.html" class="PagAtual">Cadastro do Hotel</a>
+        </nav>
+    </div>
+</header>
+
+<main class="hotel-main">
+    <div class="hotel-container">
+        <div class="hotel-header">
+            <h1>Cadastro do seu Hotel</h1>
+            <p>Preencha os dados abaixo para cadastrar seu hotel e gerenciá-lo na plataforma.</p>
+        </div>
+
+        <div class="hotel-form">
+            <h3>Informações do Hotel</h3>
+            <form id="hotel-form">
+                <div class="form-group">
+                    <label for="nome">Nome do Hotel:</label>
+                    <input type="text" id="nome" placeholder="Nome do Hotel" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="endereco">Endereço:</label>
+                    <input type="text" id="endereco" placeholder="Formato: Rua, Bairro, Cidade, Estado, País" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="pets">Pets Aceitos:</label>
+                    <input type="text" id="pets" placeholder="Tipos de pets aceitos" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email de Contato:</label>
+                    <input type="email" id="email" placeholder="Email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" placeholder="Telefone" required>
+                </div>
+
+                <div class="additional-images">
+                    <label for="additional-upload" class="upload-area">
+                        <p>Adicione imagens do hotel</p>
+                        <input type="file" id="additional-upload" multiple accept="image/*" class="file-input">
+                    </label>
+                </div>
+
+                <button type="submit" class="submit-btn">Cadastrar Hotel</button>
+            </form>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-links">
+        <a href="index.html#quem-somos">Quem Somos</a>
+        <span class="footer-separator">-</span>
+        <a href="hotel.html"> <b>PetMap®</b></a>
+        <span class="footer-separator">-</span>
+        <a href="index.html#contato">Contato</a>
+    </div>
+</footer>
+
+</body>
+</html>
+

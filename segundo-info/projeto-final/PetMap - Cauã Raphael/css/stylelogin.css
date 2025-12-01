@@ -1,0 +1,133 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+footer {
+    margin-top: auto; 
+}
+.login-section {
+    padding: 4rem 1.5rem;
+    background-color: #FFFBF0;
+    display: flex;
+    justify-content: center;
+}
+
+.login-container {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    width: 100%;
+    max-width: 480px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.login-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #4D2C0F;
+    margin-bottom: 0.5rem;
+}
+
+.login-subtitle {
+    color: #6B4A2B;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.login-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.tab-btn {
+    background: rgba(249, 115, 22, 0.1);
+    border: none;
+    padding: 0.7rem 1.3rem;
+    border-radius: 9999px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #4D2C0F;
+    transition: all 0.3s;
+}
+
+.tab-btn:hover {
+    background: rgba(249, 115, 22, 0.2);
+}
+
+.tab-btn.active {
+    background: #F97316;
+    color: white;
+}
+
+.login-form {
+    display: none;
+    text-align: left;
+}
+
+.login-form.active {
+    display: block;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #4D2C0F;
+    margin-bottom: 0.4rem;
+}
+
+.form-group input {
+    padding: 0.75rem 1rem;
+    border: 1px solid rgba(120, 53, 15, 0.3);
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    background-color: white;
+    transition: 0.2s;
+}
+
+.form-group input:focus {
+    border-color: #F97316;
+    box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.2);
+    outline: none;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    background: #F97316;
+    color: #FFFBF0;
+    border: none;
+    border-radius: 0.4rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 1rem;
+}
+
+.login-btn:hover {
+    background: #EA580C;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        padding: 2rem 1.5rem;
+    }
+}
+

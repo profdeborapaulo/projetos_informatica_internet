@@ -1,0 +1,237 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+main {
+    flex: 1;
+    padding: 2rem 1.5rem;
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #4D2C0F;
+}
+
+
+.tips-section {
+    padding: 2rem 0;
+}
+
+.tips-grid {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+.search-container {
+    max-width: 900px;
+    margin: 2rem auto;
+}
+
+.search-box {
+    background-color: #F97316;
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+
+.search-label {
+    display: block;
+    color: #FFFBF0;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+}
+
+.search-input:focus {
+    box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.5);
+}
+
+
+.map-container {
+    max-width: 900px;
+    margin: 2rem auto;
+}
+
+.map-box {
+    position: relative;
+    background: linear-gradient(135deg, #D1FAE5, #A7F3D0);
+    border-radius: 1rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    height: 500px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.map-placeholder {
+    text-align: center;
+    color: #6B7280;
+}
+
+.map-placeholder p {
+    margin-bottom: 1rem;
+}
+
+.map-placeholder .regions {
+    font-size: 0.875rem;
+    color: #9CA3AF;
+}
+
+
+.marker {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background-color: #EF4444;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.marker.pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.marker-1 {
+    top: 25%;
+    left: 33%;
+}
+
+.marker-2 {
+    top: 50%;
+    right: 33%;
+}
+
+.marker-3 {
+    bottom: 33%;
+    left: 50%;
+}
+
+.marker-4 {
+    top: 33%;
+    right: 25%;
+}
+
+.marker-5 {
+    bottom: 25%;
+    left: 66%;
+}
+
+
+footer {
+    margin-top: auto;
+}
+
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .map-box {
+        height: 400px;
+    }
+}
+
+.hotel-info-box {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background: #F97316;
+    border-radius: 1rem;
+    color: #fff;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.social-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: #4D2C0F;
+    transition: transform 0.3s;
+}
+
+.social-item:hover {
+    transform: scale(1.05);
+}
+
+.social-icon {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.social-icon img {
+    width: 2rem;
+    height: 2rem;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+.social-icon.whatsapp {
+    background-color: #25D366;
+}
+
+.social-icon.instagram {
+    background: linear-gradient(135deg, #833AB4, #FD1D1D, #F77737);
+}
+
+.social-icon.facebook {
+    background-color: #1877F2;
+}
+
+.social-item span {
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+#map {
+    width: 100%;
+    height: 500px; 
+}
