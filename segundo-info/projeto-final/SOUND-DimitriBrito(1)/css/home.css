@@ -1,0 +1,380 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+  background-color: #272727;
+}
+
+nav {
+  width: 100%;
+  height: 60px;
+  background: url('../img/nav.png') no-repeat center center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sair a{
+    text-decoration: none;
+    color: white;
+    margin-right: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 7px;
+    background-color: rgb(182, 22, 22);
+    border-radius: 10px;
+    width: 100px;
+}
+
+.nav img {
+  width: 150px;
+  margin-left: 40px;
+}
+
+.barra-lateral{
+    width: 250px;
+    background-color: #373737;
+    position: fixed;
+    top: 60px;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    overflow: auto;
+}
+
+.atalhos {
+    padding: 20px 0;
+}
+
+.atalho {
+    display: flex;
+    align-items: center;
+    padding: 13px 30px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.atalho img {
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+}
+
+.atalho p {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+.amigos-section {
+    margin-top: 2px;
+}
+
+.amigos-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background-color: #5B5B5B;
+    border-radius: 6px;
+    width: 150px;
+    margin: 0 auto;
+}
+
+.amigos-header p {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.amigos-header span {
+    font-size: 12px;
+}
+
+.telaInteira {
+    display: flex;
+    gap: 30px;
+}
+
+.central {
+    margin-left: 250px;
+    padding: 27px;
+    flex: 1;
+    min-width: 0;
+}
+
+.boasvindas h1 {
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.pesquisa input {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+    color: #000;
+    font-size: 16px;
+}
+
+.pesquisa input::placeholder {
+    color: #4B4B4B;
+}
+
+.post {
+    background-color: #373737;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 30px;
+    max-width: 900px;
+    width: 105%;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.top img:first-child {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.top p {
+    color: white;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.top img:last-child {
+    width: 20px;
+    height: 5px;
+}
+
+.video {
+    margin-bottom: 15px;
+}
+
+.video video {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+.acoes {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.coracao, .confirmado {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.coracao img, .confirmado img, .salvar img {
+    width: 24px;
+    height: 24px;
+}
+
+.coracao p, .confirmado p {
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    margin: 0;
+}
+
+.salvar {
+    margin-left: auto;
+}
+
+.texto-post h2 {
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.texto-post p:first-of-type {
+    color: #B0B0B0;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.texto-post p:last-of-type {
+    color: #6B8EFF;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    margin: 0;
+}
+
+.esquerda {
+    padding-right: 30px;
+    width: 400px;
+}
+
+.propostas {
+    margin-top: 80px;
+}
+
+.proposta {
+    background-color: #373737;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+
+.proposta h3 {
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.proposta p {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #B0B0B0;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.maisprocurados {
+    background-color: #232323;
+    border: 1.3px solid #9D9D9D;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 30px;
+    color: white;
+}
+
+.maisprocurados h3 {
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.maisprocurados img {
+    width: 110px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.maisprocurados p {
+    width: 330px;
+    font-family: Arial, sans-serif;
+    text-align: justify;
+    font-size: 17px;
+    color: #ffffff;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.publicar {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+}
+
+.publicar img {
+    width: 160px;
+    cursor: pointer;
+}
+
+.gradiente-patrocinio {
+  background: linear-gradient(to right, #2EC1EA, #AED4D8, #2EC1EA );
+  margin-left: 10px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+
+
+
+@media (max-width: 1100px) {
+  .esquerda {
+    width: 320px;
+  }
+  .maisprocurados p {
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .barra-lateral {
+    width: 200px;
+  }
+  .central {
+    margin-left: 200px;
+  }
+  .esquerda {
+    width: 300px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .barra-lateral {
+    display: none;
+  }
+  .central {
+    margin-left: 0;
+    padding: 15px;
+  }
+  .post {
+    max-width: 100%;
+  }
+  .esquerda {
+    width: 100%;
+    padding-right: 0;
+    margin-top: 30px;
+  }
+  .telaInteira {
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav img {
+    width: 120px;
+    margin-left: 10px;
+  }
+  .sair a {
+    margin-right: 10px;
+    padding: 6px 10px;
+    width: auto;
+    font-size: 13px;
+  }
+  .publicar img {
+    width: 120px;
+  }
+  .gradiente-patrocinio {
+    margin-left: 6px;
+  }
+}
