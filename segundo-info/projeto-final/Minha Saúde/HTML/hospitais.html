@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospitais</title>
+    <link rel="stylesheet" href="../CSS/hospitais.css"> 
+</head>
+<body>
+
+    <div class="site-conteudo">
+    <!-- Navbar -->
+    <header class="app-header">
+        <div class="header-conteudo">
+            <a class="home" href="index.html"><img src="../IMGS/logo.png" alt="logo" class="logo"></a>
+            <h1 class="title">MInha Saúde</h1>
+        </div>            
+        <a href="../HTML/login.html" class="login-button"> <img src="../IMGS/perfil.png" alt="" class="perfil"> </a>
+    </header>
+
+    <!--Conteúdo-->
+
+    <div class="container-principal">    
+
+
+        
+        <div id="cards-container" class="cards-grid"> <h1 class="titulo-hospital"> Hospitais Próximos </h1>
+        </div>
+        <div class="container-filtro">
+
+            <h3 class="titulo-filtro">Filtro</h3>
+            
+                 <h4 class="subtitulo-filtro"">Filtrar por Exame:</h4>
+
+                <select id="select-exames-detalhe" class="form-select-filtro">
+                  <option value="">Selecione o Exame </option>
+                </select>
+            
+                <h4 class="subtitulo-filtro"">Filtrar por Vacina:</h4>
+
+                  <select id="select-vacinas-detalhe" class="form-select-filtro">
+                   <option value="">Selecione a Vacina</option>
+                  </select>
+        </div>        
+        
+
+         <!--pop-up de agendamento-->
+
+<div id="modal-hospital" class="modal-backdrop" style="display: none;">
+    <div class="modal-conteudo">
+        
+        <div id="modal-topo" class="modal-topo-info">
+            <div class="modal-topo-texto">
+                <h2 id="modal-nome"></h2>
+                <p id="modal-endereco"></p>
+                <p id="modal-telefone"></p>
+            </div>
+
+            <div class="modal-imagem-container">
+                <img id="modal-imagem" src="" alt="Imagem do Hospital"> 
+            </div>
+        </div>
+
+        <div class="modal-corpo-servicos">
+            <button id="btn-diminuir-modal" class="card-botao modal-botao-fechar">Diminuir</button> 
+            
+            <div class="agendamento-container">
+                <h3>Agendar Serviço</h3>
+                
+                <div class="agendamento-grupo">
+                    <label for="select-servico-agendar">Serviço:</label>
+                    <select id="select-servico-agendar" required>
+                        <option value="">Selecione um serviço</option>
+                    </select>
+                </div>
+                
+                <div class="agendamento-grupo">
+                    <label for="input-data-agendar">Data:</label>
+                    <input type="date" id="input-data-agendar" required>
+                </div>
+                
+                <div class="agendamento-grupo">
+                    <label for="select-horario-disponivel">Horário Disponível:</label>
+                    <select id="select-horario-disponivel" required>
+                        <option value="">Selecione a data primeiro</option>
+                    </select>
+                </div>
+                
+                <button id="btn-confirmar-agendamento" class="bota-agendar">Confirmar Agendamento</button>
+                
+                <p id="mensagem-agendamento" class="mensagem-status" style="z-index: 100;"></p>
+            </div>
+            </div>
+        </div>    
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+    <footer class="rodape">
+        <p>&copy; 2025 Heitor Mimi. Todos os direitos reservados.</p>
+            <a href="https://github.com/mimiitr" target="_blank" class="link-github">
+                GitHub
+            </a>
+    </footer>
+
+    <script src="../JS/hospitais.js"></script>
+    <script src="../JS/agendamento.js"></script>
+    <script src="../JS/verificar-login.js"></script>
+</body>
+</html>

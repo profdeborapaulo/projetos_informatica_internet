@@ -1,0 +1,335 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url(../IMGS/background.png);
+    background-size: 500px;
+    color: #343333; 
+}
+.site-conteudo {
+    flex-grow: 1; 
+}
+
+/* Header */
+.app-header{
+    width: 100%;
+    color: white;
+    background-color: #005BAA;
+    border-bottom: solid 10px #C7CFE9;     
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 10;
+}
+.header-conteudo{
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    height: 5rem;
+}
+.home{
+    margin-top: 5%;
+    height: 100%;
+}
+.logo{
+    margin-left: 1vw;
+    max-height: 80%;
+}
+.perfil{
+    width: 5rem;
+    margin-right: 3vw;
+}
+
+.titulo-hospital{
+    text-align: center;
+    margin-top: 20px;
+}
+
+/*container principal*/
+.container-principal{
+    max-width: 1500px;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    position: relative;
+}
+
+/*cards dos hospitais*/
+.hospital-card{
+    width: 100%;
+    display: flex;
+    margin-top: 40px;
+    height: 15rem;      
+    border-radius: 10px;
+    box-shadow: 0 0 5px 5px rgb(0, 0, 0, 0.2);
+    position: relative;
+}
+.cards-grid{
+    margin: auto;
+    width: 50rem;
+
+}
+.card-imagem{      
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.card-imagem img{      
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+.card-info{      
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 15px;
+    width: 100%;
+    background-color: white;
+}
+.card-info p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.card-botao{
+    border-radius: 5px;
+    position: absolute;
+    bottom: 15px;
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #005BAA;
+    color: white;
+}
+.card-botao:hover{
+    cursor: pointer;
+    background-color: #0f60d8;
+}
+/*paginação*/
+.paginacao-estilo{
+    margin-top: 30px;
+    font-size: 1.5rem;
+}
+.paginacao-estilo button{
+    font-size: 1rem;
+    margin: 10px;
+    width: 6rem;
+    height: 2rem;
+    background-color: #005BAA;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+.paginacao-estilo button:hover{
+    background-color: #0468c0;
+    cursor: pointer;
+}
+
+/*Filtros*/
+.container-filtro{
+    text-align: center;
+    margin-top: 1rem;
+    height: 30rem;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px 5px rgb(0, 0, 0, 0.2);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+.titulo-filtro{
+    margin-left: 5%;
+    margin-top: 5%;
+    color: #0f60d8;
+    font-size: 1.5rem;
+}
+.subtitulo-filtro{
+    margin-left: 5%;
+    margin-top: 15%;
+}
+.form-select-filtro{
+    width: 80%;
+    margin-top: 25px;
+    height: 3rem;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 2px 2px rgb(0, 0, 0, 0.1);
+}
+
+/*pop-up*/
+.modal-backdrop{
+    color: white;
+    background-color: #ffffff;
+    max-width: 50rem;
+    height: 700px;
+    position: absolute;
+    top: 1rem;      
+    margin-left: 15%;
+    box-shadow: 0 0 0px 100vh rgba(122, 122, 122, 0.6);
+    border-radius: 20px;
+}
+.modal-backdrop img{
+    border-top-right-radius: 20px;
+    width: 100%;
+    object-fit: cover;
+    height: 100%;       
+    display: flex;
+}
+.modal-topo-info{       
+    border-radius: 20px;
+    display: flex;
+}
+.modal-topo-texto{
+    border-top-left-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #005BAA;
+}
+.modal-imagem-container{
+    height: 10rem;
+}
+.modal-botao-fechar{
+    position: absolute;
+    right: 15%;
+    bottom: 2%;
+    font-size: 0.7rem;
+}
+.modal-corpo-servicos {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#btn-diminuir-modal {
+    align-self: flex-end; 
+    margin-bottom: 10px;
+    background-color: #ccc;
+    color: #333;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#btn-diminuir-modal:hover {
+    background-color: #bbb;
+}
+
+/*agendamentos*/
+.agendamento-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+.agendamento-container h3 {
+    text-align: center;
+    color: #007bff; 
+    margin-bottom: 20px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+}
+.agendamento-grupo {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.agendamento-grupo label {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+}
+.agendamento-grupo select,
+.agendamento-grupo input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+    font-size: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+#btn-confirmar-agendamento {
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    font-size: 17px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+}
+#btn-confirmar-agendamento:hover {
+    background-color: #215a88;
+}
+.mensagem-status {
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    min-height: 20px; 
+    line-height: 1.2;
+}
+.mensagem-status.sucesso {
+    background-color: #d4edda; 
+    color: #155724; 
+    border: 1px solid #c3e6cb;
+}
+.mensagem-status.erro {
+    background-color: #f8d7da; 
+    color: #721c24; 
+    border: 1px solid #f5c6cb;
+}
+
+
+/*rodape*/
+.rodape {
+    background-color: #005BAA;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 1rem;
+    width: 100%;
+    border-top: solid 10px #C7CFE9;
+}
+
+.rodape p {
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.link-github {
+    color: #88c0d0;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: color 0.3s;
+}
+
+.link-github:hover {
+    color: #092fda;
+    text-decoration: underline;
+}

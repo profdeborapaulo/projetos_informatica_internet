@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MInha Saúde</title>
+    <link rel="stylesheet" href="../CSS/paginaInicial.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="app-header">
+        <div class="header-conteudo">
+            <img src="../IMGS/logo.png" alt="logo" class="logo">
+            <h1 class="title">MInha Saúde</h1>
+        </div>            
+        <a href="../HTML/login.html" class="login-button"> <img src="../IMGS/perfil.png" alt="" class="perfil"> </a>
+    </header>
+
+    <!-- Carrossel -->
+    <div class="carousel">
+        <button class="nav-btn prev">&lt;</button>
+        
+        <div class="track-area">
+
+            <div class="track">
+                <div class="slide current">
+                    <!--lado esquerdo (imagem)-->
+                    <div class="ladoesquerdo">
+                     <img src="../IMGS/medica-Carrossel1.png" alt="" class="fotocarrossel1">
+                     <img src="../IMGS/logo-governo.png" alt="" class="logogov">
+                    </div>
+                    <!--lado direito (texto)-->
+                     <div class="ladodireito">
+                     <h1 class="titulocarrossel"> Ajudando Brasileiros Desde 1988</h1>  
+                     <div class="tracoazul"></div>
+                     <div class="tracobranco"></div>
+                     <img src="../IMGS/sus.png" alt="" class="logosus">
+                    </div>
+                </div>
+                
+                <div class="slide"> 
+                    <!--lado esquerdo (imagem)-->
+                    <div class="ladoesquerdo2">
+                     <img src="../IMGS/ze-gotinha-carrossel2.png" alt="" class="fotocarrossel2">
+                     <img src="../IMGS/logo-governo.png" alt="" class="logogov">
+                    </div>
+                    <!--lado direito (texto)-->
+                     <div class="ladodireito2">
+                     <h1 class="titulocarrossel2"> Vacine-se! <br> Confira Disponibilidade</h1>  
+                     <div class="tracoazul"></div>
+                     <div class="tracobranco"></div>
+                     <img src="../IMGS/sus.png" alt="" class="logosus">
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <!--lado esquerdo (imagem)-->
+                    <div class="ladoesquerdo3">
+                     <h1 class="titulocarrossel3"> Confira Hospitais <br> Próximos</h1> 
+                     <a href="#" class="botao-slide3">Consultar </a> 
+                     <div class="tracoazul3"></div>
+                     <div class="tracobranco3"></div>
+                     <img src="../IMGS/sus.png" alt="" class="logosus3">
+                    </div>
+                    <!--lado direito (texto)-->
+                    <div class="ladodireito3">
+                     <img src="../IMGS/medica-carrossel3.png" alt="" class="fotocarrossel3">
+                     <img src="../IMGS/logo-governo.png" alt="" class="logogov3">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <button class="nav-btn next">&gt;</button>
+    </div>
+
+    <!--Serviços-->
+    <h1 class="titulo-index">Saúde que Encaixa na Rotina </h1>
+    <p class="texto-geral index">Escolha um serviço disponível:</p>
+
+    <div class="container-index">
+
+        <div class="card-servico">
+            <div class="icon-texto">
+                <img src="../IMGS/hospital-icon.png" alt="" class="icone">
+                <h1>Hospitais <br> Próximos</h1>
+            </div>
+            
+            <a href="hospitais.html" class="consultar">
+            Consultar Agora 
+            <img src="../IMGS/ponteiro.png" class="pointer" alt=""></a>
+        </div>
+
+        <div class="card-servico">
+            <div class="icon-texto">
+                <img src="../IMGS/calendario-icon.png" alt="" class="icone">
+                <h1>Agendamentos</h1>
+            </div>
+
+            <a href="#" id="link-agendamentos" class="consultar">
+                Consultar Agora 
+                <img src="../IMGS/ponteiro.png" class="pointer" alt="">
+            </a>
+        </div>
+
+        <div class="card-servico">
+            <div class="icon-texto">
+                <img src="../IMGS/vacina-icon.png" alt="" class="icone">
+                <h1>Consulta de <br> Vacinas</h1>
+            </div>
+
+            <a href="hospitais.html" class="consultar">
+            Consultar Agora 
+            <img src="../IMGS/ponteiro.png" class="pointer" alt=""></a>
+        </div>
+
+    </div>
+
+    <!--SUS é nossa história-->
+    <div class="historia">
+        <div class="ladoesquerdo-historia">
+            <h1 class="titulo-historia">O SUS é Nossa História</h1>
+            <p class="texto-historia">Quer aprofundar seu conhecimento sobre o Sistema Único de Saúde, seus serviços e como ele impacta diretamente a sua vida? <br>
+                Acesse o site oficial do Ministério da Saúde e descubra detalhes sobre o calendário de vacinação, as unidades de atendimento mais próximas e as políticas públicas que garantem seu direito à saúde.</p>
+            <a href="https://www.gov.br/saude/pt-br/sus" class="botao"> Saiba Mais </a>
+        </div>
+
+        <div class="ladodireito-historia">
+            <img src="../IMGS/crianca.png" alt="" class="crianca">
+        </div>
+    </div>
+
+    <div class="rodape">
+        <footer class="rodape">
+            <p>&copy; 2025 Heitor Mimi. Todos os direitos reservados.</p>
+                <a href="https://github.com/mimiitr" target="_blank" class="link-github">
+                    GitHub
+                </a>
+        </footer>
+    </div>
+
+    <script src="../JS/verificar-login.js"></script>
+    <script src="../JS/app.js"></script>
+</body>
+</html>

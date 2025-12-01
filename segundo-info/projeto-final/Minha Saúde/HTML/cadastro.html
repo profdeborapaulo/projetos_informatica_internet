@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" href="../CSS/login-cadastro.css"> 
+</head>
+<body>
+    
+    <div class="container-cadastro">
+        
+
+        <form method="POST" class="formulario-principal">
+            
+            <h1 class="titulo-cadastro">MInha Saúde - Cadastro</h1>
+
+            <div class="campo-grupo">
+                <label for="nome_completo">Nome Completo:</label>
+                <input type="text" id="nome_completo" name="nome" required>
+            </div>
+            
+            <div class="campo-grupo">
+                <label for="idade">Idade:</label>
+                <input type="number" id="idade" name="idade" min="0" max="120" required>
+            </div>
+
+            <div class="campo-grupo">
+                <label for="genero">Gênero:</label>
+                <select id="genero" name="genero" required>
+                    <option value="" disabled selected>Selecione</option>
+                    <option value="F">Feminino</option>
+                    <option value="M">Masculino</option>
+                    <option value="NB">Não Binário</option>
+                    <option value="NI">Prefiro não informar</option>
+                </select>
+            </div>
+
+            <div class="campo-grupo">
+                <label for="residencia_cidade">Cidade/Estado (Residência):</label>
+                <input type="text" id="residencia_cidade" name="residencia" placeholder="Ex: São Paulo - SP" required>
+            </div>
+
+            <div class="campo-grupo">
+                <label for="email_contato">E-mail:</label>
+                <input type="email" id="email_contato" name="email" required>
+            </div>
+
+            <div class="campo-grupo">
+                <label for="telefone_contato">Telefone:</label>
+                <input type="tel" id="telefone_contato" name="telefone" placeholder="(99) 99999-9999" required>
+            </div>
+
+            <div class="campo-grupo">
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required minlength="6">
+            </div>
+
+            <div class="campo-grupo">
+                <label for="confirma_senha">Confirme a Senha:</label>
+                <input type="password" id="confirma_senha" name="confirma_senha" required minlength="6">
+            </div>
+            <div class="linha-docs">
+                <div class="campo-grupo">
+                    <label for="rg_doc">RG:</label>
+                    <input type="text" id="rg_doc" name="rg" size="15" maxlength="20" required>
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="cpf_doc">CPF:</label>
+                    <input type="text" id="cpf_doc" name="cpf" placeholder="000.000.000-00" size="14" maxlength="14" required>
+                </div>
+            </div>
+            
+            <button type="submit" class="botao-acao">Enviar Cadastro</button>
+            
+        </form>
+    </div>
+
+    <script src="../JS/cadastro.js"></script>
+</body>
+</html>
