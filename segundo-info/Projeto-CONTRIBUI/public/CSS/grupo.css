@@ -1,0 +1,243 @@
+.grupo-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.grupo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+}
+
+.grupo-info h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.grupo-code {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.grupo-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-grupo {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.section-card {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.lista-items, .contas-items {
+    list-style: none;
+    padding: 0;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+    background: #f9f9f9;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.item:hover {
+    background: #e0f0ff;
+    border-color: #80c1ff;
+    transform: translateX(4px);
+}
+
+.item-status {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.sem-item {
+    text-align: center;
+    padding: 1.5rem;
+    color: #666;
+    font-style: italic;
+    background: #f9f9f9;
+    border-radius: 6px;
+    border: 1px dashed #ddd;
+}
+
+.status-pendente { background-color: #f1c40f; }
+.status-pago { background-color: #2ecc71; }
+.status-atrasado { background-color: #e74c3c; }
+
+/* Dialog Style */
+dialog {
+    border: none;
+    border-radius: 8px;
+    padding: 2rem;
+    z-index: 9999; /* Menor que o z-index do loader */
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+label{
+    padding-bottom: 0px;
+    padding-top: 10px;
+}
+
+.dialog-lista {
+    border: none;
+    border-radius: 8px;
+    max-width: 680px;
+    width: 92%;
+    padding: 1.5rem;
+}
+
+.dialog-lista::backdrop {
+    background: rgba(0,0,0,0.45);
+}
+
+.lista-meta {
+    display: flex;
+    gap: 1.5rem;
+    color: #555;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.lista-itens {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 320px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.lista-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    border-radius: 6px;
+    background: #fafafa;
+    border: 1px solid #eee;
+}
+
+.lista-item label{ 
+    display:flex; 
+    align-items:center; 
+    gap:0.75rem; 
+    cursor:pointer; }
+
+.item-checkbox
+{ 
+    width:18px; 
+    height:18px;
+}
+
+.item-comprado{
+    text-decoration: line-through; 
+    color: #8a8a8a; 
+}
+
+.item-valor{ 
+    color:#333; 
+    font-weight:600; 
+}
+
+.item-qtd, .item-meta {
+    font-size: 0.8rem;
+    color: #777;
+    margin-left: 6px;
+}
+
+.dialog-btns{
+    display:flex; 
+    justify-content:flex-end; 
+    margin-top:1rem; 
+    gap:0.5rem; 
+}
+
+@media (max-width:640px) {
+    .dialog-lista { width: 96%; padding: 1rem; }
+    .lista-meta { flex-direction: column; gap: .5rem; align-items:flex-start; }
+}
+
+.btn-danger {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.btn-grupo.btn-danger:hover {
+    background-color: #c0392b;
+}
+
+.lista-item label.item-excluir-label {
+    display: none;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+}
+
+.dialog-btns.delete-mode-active {
+    justify-content: space-between;
+}
+
+.dialog-btns.delete-mode-active .btn-grupo {
+    width: 49%;
+    text-align: center;
+}
+
+.item-excluir-label span {
+    color: #333;
+    text-decoration: none;
+}

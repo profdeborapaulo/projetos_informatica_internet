@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <%- include('../partials/head'); %>
+    <link rel="stylesheet" href="/CSS/login.css">
+</head>
+<body>
+    <%- include('../partials/header'); %>
+    <section class="login-section">
+        <div class="login-container">
+
+        <!-- Loader de carregamento -->
+        <div class="loader-overlay" style="display: none;">
+            <div class="loader"></div>
+        </div>
+
+        <h2>Criar conta</h2>
+        <form class="login-form" method="POST">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+            </div>
+
+            <div class="form-group">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmsenha">Confirmar Senha</label>
+                <input type="password" id="confirmSenha" name="confirm_senha" placeholder="Confirme sua senha" required>
+                <small id="confirmMessage" style="color:crimson; display:none;">As senhas não conferem.</small>
+            </div><!DOCTYPE html>
+
+            <button id="btnRegister" type="button" class="btn-send">Registrar</button>
+
+            <div class="login-links">
+                <a href="/forgot">Esqueci minha senha</a>
+                <a href="/login">Já tenho Conta (Entrar)</a>
+            </div>
+        </form>
+    </div>
+</section>
+
+    <%- include('../partials/footer'); %>
+    <script src="/JS/cadastro.js"></script>
+</body>
+</html>

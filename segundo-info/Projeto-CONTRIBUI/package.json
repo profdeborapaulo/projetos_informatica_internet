@@ -1,0 +1,27 @@
+{
+  "name": "meu-projeto-node",
+  "version": "1.0.0",
+  "description": "Projeto Node.js básico",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "npx nodemon src/server.js",
+    "dev": "npx nodemon src/server.js"
+  },
+  "author": "Guilherme Fernandes",
+  "license": "Etec Antonio Furlan",
+  "dependencies": {
+    "@neondatabase/serverless": "^1.0.2",
+    "bcryptjs": "^3.0.2",
+    "body-parser": "^2.2.0",
+    "chart.js": "^4.5.1",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^17.2.3",
+    "ejs": "^3.1.10",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

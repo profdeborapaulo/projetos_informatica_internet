@@ -1,0 +1,587 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    color: #000000;
+
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+main, .grupo-container {
+    flex: 1;
+    min-height: calc(100vh - 160px); /* Ajuste conforme altura do header + footer */
+}
+
+/*NavBar Style*/
+.navbar{
+    display: flex;
+    flex-direction: row;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+}
+
+.navbar-nav{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    margin-left: auto;
+}
+
+.nav-link {
+    color: #000000;
+    font-size: 20px;
+}
+
+.navbar-brand img{
+    width: 200px;
+    height: auto;
+    padding: 0;
+}
+
+.nav-img img{
+    height: 40px;
+    border-radius: 50%;
+    border: 0.5px solid black;
+}
+
+/*End NavBar style*/
+
+
+
+/* footer */
+
+.footer {
+    background-color: #2e2e2e; /* neutro, igual ao header */
+    padding: 2rem 1rem;
+    color: #f8f8f8;
+    font-size: 0.95rem;
+    margin-top: auto;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-brand img {
+    height: 40px;
+    opacity: 0.9;
+    transition: opacity 0.2s ease;
+}
+
+.footer-brand img:hover {
+    opacity: 1;
+}
+
+.footer-nav {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: #f8f8f8;
+    transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+    color: #a5a9ad;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #f8f8f8;
+    font-size: 0.85rem;
+}
+
+/* END footer Style*/
+
+.loader-overlay {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.35);
+    z-index: 11000;
+}
+
+.loader {
+    width: 96px;
+    height: 96px;
+    border: 12px solid #f3f3f3;
+    border-top: 12px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+.loader, .loader-overlay > .loader {
+    position: relative;
+}
+
+/* End Loader Style */
+
+
+/* Link Style*/
+
+
+.login-links {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+}
+
+.login-links a {
+    color: #50575e;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    cursor: pointer;
+}
+
+.login-links a:hover {
+    color: #3d4247;
+}
+
+/*END Links Styles*/
+
+/* Dialog Style*/
+
+dialog {
+    margin: auto; 
+    width: 90%; 
+    max-width: 500px;
+    padding: 30px; 
+    border: none; 
+    border-radius: 10px; 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); 
+    background-color: #ffffff;
+    z-index: 999; 
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.8); 
+    backdrop-filter: blur(4px); 
+}
+
+dialog:not([open]) {
+    display: none;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;  
+    right: 10px;
+    background: transparent;
+    border: none;
+    color: #333; 
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 5px; 
+    transition: color 0.2s ease;
+    appearance: none;
+}
+
+.close-button:hover {
+    transition: 1s;
+    color: #ff0000;
+}
+
+.btn-entrar {
+    width: 100%;
+    background-color: #50575e;
+    color: #fff;
+    border: none;
+    padding: 0.9rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #3498db; /* Cor principal */
+    border: 1px solid #3498db;
+}
+
+.btn-secondary:hover {
+    background-color: #f0f0f0;
+    color: #2980b9;
+}
+
+.info-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.info-action:last-child {
+    border-bottom: none;
+}
+
+/* END Dialog Styles*/
+
+/* General Styles */
+
+
+
+.form-group {
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0.3rem;
+}
+
+input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+}
+
+input:focus {
+    border-color: #50575e;
+    outline: none;
+}
+
+h2 {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.form-group input,
+.form-group select {
+    background-color: #fff;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.btn-send {
+    width: 100%;
+    background-color: #50575e;
+    color: #fff;
+    border: none;
+    padding: 0.9rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-send:hover {
+    background-color: #3d4247;
+}
+
+.btn-back {
+    width: 100%;
+    background-color: #e0e0e0;
+    color: #333;
+    border: none;
+    padding: 0.9rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-back:hover {
+    background-color: #ccc;
+}
+
+/* modal list actions */
+.dialog-modal-actions,
+.modal-list .modal-actions {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: flex-end;
+    margin-top: 1.25rem;
+    align-items: center;
+}
+
+.modal-list .btn,
+.dialog-modal-actions .btn {
+    padding: 0.55rem 0.9rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.14s ease, box-shadow 0.12s ease, transform 0.06s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-height: 40px;
+}
+
+.modal-list .btn-cancel,
+.dialog-modal-actions .btn-cancel {
+    background-color: #e9ecef;
+    color: #333;
+    border: 1px solid #d6d8db;
+}
+.modal-list .btn-cancel:hover {
+    background-color: #e0e6ea;
+}
+
+.modal-list .btn-primary,
+.dialog-modal-actions .btn-primary {
+    background-color: #3498db;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(52,152,219,0.08);
+}
+.modal-list .btn-primary:hover {
+    background-color: #2c86c9;
+}
+
+.modal-list .btn-delete,
+.dialog-modal-actions .btn-delete {
+    background-color: #e74c3c;
+    color: #fff;
+    box-shadow: 0 6px 12px rgba(231,76,60,0.12);
+    border: 1px solid rgba(0,0,0,0.06);
+    transition: background-color 0.12s ease, box-shadow 0.14s ease, transform 0.06s ease;
+}
+.modal-list .btn-delete:hover {
+    background-color: #c0392b;
+    box-shadow: 0 8px 18px rgba(192,57,43,0.12);
+    transform: translateY(-1px);
+}
+.modal-list .btn-delete:active {
+    transform: translateY(1px);
+}
+.modal-list .btn-delete:focus,
+.modal-list .btn-delete:focus-visible {
+    outline: 3px solid rgba(231,76,60,0.18);
+    outline-offset: 2px;
+}
+
+#btnConfirmarExclusao,
+.modal-list .btn-excluir-selecionados,
+.dialog-modal-actions .btn-excluir-selecionados,
+.btn-danger {
+    background-color: #e74c3c;      /* vermelho principal */
+    color: #fff;
+    border: 1px solid rgba(0,0,0,0.06);
+    padding: 0.55rem 0.9rem;
+    border-radius: 8px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(231,76,60,0.12);
+    transition: background-color .12s ease, transform .06s ease, box-shadow .12s ease;
+    min-height: 40px;
+}
+#btnConfirmarExclusao:hover,
+.modal-list .btn-excluir-selecionados:hover,
+.btn-danger:hover {
+    background-color: #c0392b;
+    transform: translateY(-1px);
+}
+#btnConfirmarExclusao:active,
+.modal-list .btn-excluir-selecionados:active,
+.btn-danger:active {
+    transform: translateY(1px);
+}
+#btnConfirmarExclusao[disabled],
+.modal-list .btn-excluir-selecionados[disabled],
+.btn-danger[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.lista-itens,
+.modal-list .delete-list,
+.dialog-lista .lista-itens {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.lista-itens li,
+.modal-list .delete-list .delete-item,
+.dialog-lista .lista-itens li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.6rem 0.75rem;
+    background: #ffffff;
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(16,24,40,0.04);
+    transition: transform .08s ease, box-shadow .12s ease, background .12s ease;
+    font-size: 0.97rem;
+    color: #222;
+    line-height: 1.2;
+}
+
+/* Hover / foco do item para dar "vida" */
+.lista-itens li:hover,
+.modal-list .delete-list .delete-item:hover,
+.dialog-lista .lista-itens li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+    background: #fcfeff;
+}
+
+/* Checkbox alinhado e sem margens indesejadas */
+.lista-itens li input[type="checkbox"],
+.modal-list .delete-item input[type="checkbox"],
+.dialog-lista .lista-itens input[type="checkbox"] {
+    margin: 0;
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
+    accent-color: #e74c3c; /* cor do check nos navegadores que suportam */
+    vertical-align: middle;
+}
+
+/* Texto do item (garante que comece colado à caixa) */
+.lista-itens li .item-text,
+.modal-list .delete-item .item-text,
+.dialog-lista .lista-itens .item-text {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    white-space: normal;
+    word-break: break-word;
+    flex: 1 1 auto;
+    font-weight: 600;
+    color: #222;
+}
+
+/* Texto complementar / meta (valor, quantidade) */
+.lista-itens li .item-meta,
+.modal-list .delete-item .item-meta {
+    font-size: 0.86rem;
+    color: #666;
+    margin-left: 0.5rem;
+    white-space: nowrap;
+}
+
+/* Indicador de status (bolinha) */
+.item-status {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex: 0 0 10px;
+    margin-right: 0.25rem;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.06) inset;
+}
+.status-pago { background: #27ae60; }
+.status-pendente { background: #f39c12; }
+.status-atrasado { background: #e74c3c; }
+
+/* Item marcado (ex.: comprado) */
+.lista-itens li.comprado .item-text,
+.modal-list .delete-item.comprado .item-text {
+    opacity: 0.75;
+    text-decoration: line-through;
+    font-weight: 500;
+}
+
+/* ===== Botão confirmar exclusão ===== */
+#btnConfirmarExclusao,
+.modal-list .btn-excluir-selecionados,
+.btn-danger {
+    background: linear-gradient(180deg,#ff5c5c 0%, #e74c3c 100%);
+    color: #fff;
+    border: none;
+    padding: 0.6rem 0.95rem;
+    border-radius: 8px;
+    min-height: 40px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 8px 20px rgba(231,76,60,0.12);
+    transition: transform .06s ease, box-shadow .12s ease, opacity .12s ease;
+}
+#btnConfirmarExclusao:hover,
+.modal-list .btn-excluir-selecionados:hover,
+.btn-danger:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 26px rgba(231,76,60,0.14);
+}
+#btnConfirmarExclusao[disabled],
+.modal-list .btn-excluir-selecionados[disabled],
+.btn-danger[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Responsivo: itens e botão em telas pequenas */
+@media (max-width: 520px) {
+    .lista-itens li,
+    .modal-list .delete-list .delete-item {
+        gap: 0.5rem;
+        padding: 0.5rem;
+    }
+    #btnConfirmarExclusao,
+    .modal-list .btn-excluir-selecionados {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* End General Styles */
