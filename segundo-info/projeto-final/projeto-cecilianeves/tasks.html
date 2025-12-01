@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- importando ícones do Font Awesome-->
+    <script src="https://kit.fontawesome.com/cf7a3c7e0a.js" crossorigin="anonymous"></script>
+    <!-- script -->
+    <script src="js/script.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/tasks.css">
+    <link rel="stylesheet" href="css/global.css">
+    <title>Tarefas | Planeje seu dia</title>
+</head>
+<body>
+    <!--dark mode-->
+    <button class="theme-toggle" id="themeToggle">
+        <i class="fa-solid fa-moon"></i>
+    </button>
+    <button class="menu-toggle" id="menuToggle" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
+    
+    <aside class="sidebar">
+        <div class="sidebar-header"><img src="img/logo.png" alt="Logo"><h2>Equilibra</h2></div>
+        <div class="user-greeting"><h3>Olá, <span id="userName">Usuário</span>!</h3><p>Gerencie suas tarefas</p></div>
+        <nav class="nav-menu">
+            <ul>
+                <li class="nav-item"><a href="dashboard.html" class="nav-link"><i class="fa-solid fa-house"></i><span>Início</span></a></li>
+                <li class="nav-item"><a href="calendar.html" class="nav-link"><i class="fa-solid fa-calendar-days"></i><span>Calendário</span></a></li>
+                <li class="nav-item"><a href="tasks.html" class="nav-link active"><i class="fa-solid fa-list-check"></i><span>Tarefas</span></a></li>
+            </ul>
+        </nav>
+        <div class="logout-button"><a href="index.html" class="logout-link" onclick="logoutAndClearData()"><i class="fa-solid fa-right-from-bracket"></i><span>Sair</span></a></div>
+    </aside>
+
+    <main class="main-content">
+        <div class="page-header"><h1>Minhas Tarefas</h1><p>Organize e acompanhe o progresso</p></div>
+
+        <div class="progress-board">
+            <div class="progress-column">
+                <div class="column-header pending"><div class="column-title"><i class="fa-solid fa-clock"></i><h3>Pendente</h3></div><span class="task-count" id="pendingCount">0</span></div>
+                <div class="tasks-container" id="pendingTasks"></div>
+            </div>
+            <div class="progress-column">
+                <div class="column-header in-progress"><div class="column-title"><i class="fa-solid fa-spinner"></i><h3>Em Progresso</h3></div><span class="task-count" id="progressCount">0</span></div>
+                <div class="tasks-container" id="progressTasks"></div>
+            </div>
+            <div class="progress-column">
+                <div class="column-header completed"><div class="column-title"><i class="fa-solid fa-circle-check"></i><h3>Concluído</h3></div><span class="task-count" id="completedCount">0</span></div>
+                <div class="tasks-container" id="completedTasks"></div>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal-overlay" id="taskModal">
+        <div class="modal">
+            <div class="modal-header"><h2>Nova Tarefa</h2><button class="modal-close" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></button></div>
+            <div class="modal-body">
+                <form id="taskForm">
+                    <div class="form-group"><label for="taskTitle">Título *</label><input type="text" id="taskTitle" required></div>
+                    <div class="form-group"><label>Descrição</label><textarea id="taskDescription"></textarea></div>
+                    <div class="form-row">
+                        <div class="form-group"><label>Data *</label><input type="date" id="taskDate" required></div>
+                        <div class="form-group"><label>Horário *</label><input type="time" id="taskTime" required></div>
+                    </div>
+                    <div class="form-group"><label>Área *</label><select id="taskArea" required></select></div>
+                    <div class="form-group"><label>Urgência *</label>
+                        <div class="urgency-selector">
+                            <div class="urgency-option"><input type="radio" name="urgency" value="low" id="ul" checked><label for="ul" class="urgency-label low">Baixa</label></div>
+                            <div class="urgency-option"><input type="radio" name="urgency" value="medium" id="um"><label for="um" class="urgency-label medium">Média</label></div>
+                            <div class="urgency-option"><input type="radio" name="urgency" value="high" id="uh"><label for="uh" class="urgency-label high">Alta</label></div>
+                        </div>
+                    </div>
+                    <div class="modal-actions">
+                        <button type="button" class="btn-cancel" onclick="closeModal()">Cancelar</button>
+                        <button type="submit" class="btn-save">Salvar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <button class="fab-button" onclick="openModal()"><i class="fa-solid fa-plus"></i></button>
+    
+    <script>
+        let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+
+        function renderProgress() {
+            const pendingTasks = tasks.filter(t => t.status === 'pending' || !t.status);
+            const progressTasks = tasks.filter(t => t.status === 'in-progress');
+            const completedTasks = tasks.filter(t => t.status === 'completed');
+
+            document.getElementById('pendingCount').textContent = pendingTasks.length;
+            document.getElementById('progressCount').textContent = progressTasks.length;
+            document.getElementById('completedCount').textContent = completedTasks.length;
+
+            renderColumn('pendingTasks', pendingTasks);
+            renderColumn('progressTasks', progressTasks);
+            renderColumn('completedTasks', completedTasks);
+        }
+
+        function renderColumn(elementId, taskList) {
+            const container = document.getElementById(elementId);
+            if (taskList.length === 0) {
+                container.innerHTML = `<div class="empty-state"><i class="fa-solid fa-inbox"></i><p>Vazio</p></div>`;
+            } else {
+                container.innerHTML = taskList.map(task => createTaskCard(task)).join('');
+            }
+        }
+
+        function createTaskCard(task) {
+            const urgencyText = { low: 'Baixa', medium: 'Média', high: 'Alta' };
+            const nextStatus = { pending: 'in-progress', 'in-progress': 'completed' };
+            const nextLabel = { pending: 'Iniciar', 'in-progress': 'Concluir' };
+
+            return `
+                <div class="task-card ${task.urgency}">
+                    <div class="task-card-header"><div><div class="task-title">${task.title}</div></div></div>
+                    <div class="task-meta">
+                        <div class="task-meta-item"><i class="fa-solid fa-calendar"></i><span>${new Date(task.date + 'T00:00:00').toLocaleDateString('pt-BR')}</span></div>
+                    </div>
+                    <div class="task-meta" style="margin-top: 10px;">
+                        <span class="task-area-badge">${task.area}</span>
+                        <span class="urgency-badge ${task.urgency}">${urgencyText[task.urgency]}</span>
+                    </div>
+                    <div class="task-actions">
+                        ${task.status !== 'completed' ? `<button class="task-action-btn" onclick="changeTaskStatus(${task.id}, '${nextStatus[task.status] || 'in-progress'}')">${nextLabel[task.status] || 'Iniciar'}</button>` : ''}
+                        ${task.status !== 'pending' ? `<button class="task-action-btn" onclick="changeTaskStatus(${task.id}, 'pending')"><i class="fa-solid fa-rotate-left"></i></button>` : ''}
+                        <button class="task-action-btn delete" onclick="deleteTask(${task.id})"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                </div>
+            `;
+        }
+
+        function changeTaskStatus(id, newStatus) {
+            const task = tasks.find(t => t.id === id);
+            if (task) {
+                task.status = newStatus;
+                task.completed = (newStatus === 'completed');
+                localStorage.setItem('tasks', JSON.stringify(tasks));
+                renderProgress();
+            }
+        }
+
+        function deleteTask(id) {
+            if (confirm('Excluir tarefa?')) {
+                tasks = tasks.filter(t => t.id !== id);
+                localStorage.setItem('tasks', JSON.stringify(tasks));
+                renderProgress();
+            }
+        }
+
+        document.getElementById('taskForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const inputDate = document.getElementById('taskDate').value;
+            const manual = document.querySelector('input[name="urgency"]:checked').value;
+            let final = manual;
+            if (inputDate) {
+                const diff = Math.ceil((new Date(inputDate + 'T00:00:00') - new Date().setHours(0,0,0,0)) / (864e5));
+                if (diff < 1) final = 'high'; else if (diff === 1) final = 'medium';
+            }
+            const order = { low: 0, medium: 1, high: 2 };
+            if (order[manual] > order[final]) final = manual;
+
+            tasks.push({
+                id: Date.now(),
+                title: document.getElementById('taskTitle').value,
+                description: document.getElementById('taskDescription').value,
+                date: inputDate,
+                time: document.getElementById('taskTime').value,
+                area: document.getElementById('taskArea').value,
+                urgency: final,
+                status: 'pending',
+                completed: false
+            });
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+            closeModal();
+            renderProgress();
+        });
+
+        renderProgress();
+    </script>
+</body>
+</html>

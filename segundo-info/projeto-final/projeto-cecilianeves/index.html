@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- importando ícones do Font Awesome-->
+    <script src="https://kit.fontawesome.com/cf7a3c7e0a.js" crossorigin="anonymous"></script>
+    <!-- script-->
+    <script src="script.js"></script>
+    <!-- importando animações da biblioteca AOS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Início</title>
+</head>
+<body>
+    <header>
+        <div class="brand-area">
+            <img src="img/logo.png" class="nav-logo" alt="Logo">
+            <p>Equilibra</p>
+        </div>
+        <ul class="header-list">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="#objetivo">Objetivo</a></li>
+            <li><a href="#funcionalidades">Funcionalidades</a></li>
+        </ul>
+    </header>
+    <hr>
+    <div class="intro">
+        <div class="intro-text">
+        <h1>Planeje seu dia</h1>
+        <h3>Gerencie suas tarefas e projetos pessoais de um jeito simples e visual</h3>
+        <button><a href="app.html">COMECE AQUI</a></button>
+        </div>
+        <div class="intro-img">
+            <img src="img/logo-img.png" class="logo">
+        </div>
+    </div>
+    <div class="phrase">
+        <h1 id="objetivo">"Organizar não é sobre fazer tudo, mas sobre fazer o que importa, no momento certo, sem perder o equilíbrio."</h1>
+    </div>
+    <div class="cards-section" id="funcionalidades">
+        <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-pie-icon lucide-chart-pie"><path d="M21 12c.552 0 1.005-.449.95-.998a10 10 0 0 0-8.953-8.951c-.55-.055-.998.398-.998.95v8a1 1 0 0 0 1 1z"/><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/></svg>
+            <h3>Equilíbrio das áreas da vida</h3>
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="1000">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-list-todo-icon lucide-list-todo"><path d="M13 5h8"/><path d="M13 12h8"/><path d="M13 19h8"/><path d="m3 17 2 2 4-4"/><rect x="3" y="4" width="6" height="6" rx="1"/></svg>
+            <h3>Organização clara e sem estresse</h3>
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="2000">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sprout-icon lucide-sprout"><path d="M14 9.536V7a4 4 0 0 1 4-4h1.5a.5.5 0 0 1 .5.5V5a4 4 0 0 1-4 4 4 4 0 0 0-4 4c0 2 1 3 1 5a5 5 0 0 1-1 3"/><path d="M4 9a5 5 0 0 1 8 4 5 5 0 0 1-8-4"/><path d="M5 21h14"/></svg>
+            <h3>Alertas de Bem-Estar</h3>
+        </div>
+    </div>
+    <section class="benefits">
+        <h2>Por que usar?</h2>
+        
+        <div class="carousel">
+            <div class="cards-container">
+                <div class="card active">
+                    <h3>Menos estresse</h3>
+                    <p>Visualize suas tarefas de forma clara e saiba exatamente o que precisa ser feito. Sem surpresas e sem estresse.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Organização clara</h3>
+                    <p>Todas as suas tarefas em um só lugar, organizadas por áreas da vida e níveis de urgência.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Visão equilibrada</h3>
+                    <p>Gráficos mostram se você está dedicando tempo às diferentes áreas da sua vida de forma balanceada.</p>
+                </div>
+            </div>
+
+            <!-- indicadores -->
+            <div class="carousel-indicators">
+                <span class="indicator active" onclick="goToCard(0)"></span>
+                <span class="indicator" onclick="goToCard(1)"></span>
+                <span class="indicator" onclick="goToCard(2)"></span>
+            </div>
+
+            <!-- setas -->
+            <button class="carousel-arrow prev" onclick="prevCard()">‹</button>
+            <button class="carousel-arrow next" onclick="nextCard()">›</button>
+        </div>
+    </section>
+    <div class="features">
+        <div class="feature">
+            <img src="img/priority.png" class="feature-img">
+            <div class="feature-texto">
+            <h3>Análise de bem-estar e equilíbrio</h3>
+            <p>Priorize aquilo que é mais importante para você</p>
+            <button><a href="app.html">Veja Mais</a></button>
+            </div>
+        </div>
+        <hr>
+        <div class="feature">
+            <img src="img/equilibrio.png" class="feature-img">
+            <div class="feature-texto">
+            <h3>Múltiplas Visualizações de Tarefas</h3>
+            <p>Esteja sempre ciente do equilíbrio entre as diferentes áreas da sua vida, vendo suas tarefas em Lista, Timeline ou Calendário.</p>
+            <button><a href="app.html">Veja Mais</a></button>
+            </div>
+        </div>
+        <hr>
+        <div class="feature">
+            <img src="img/feedback.png" class="feature-img">
+            <div class="feature-texto">
+                <h3>Feedback positivo</h3>
+            <p>Receba recompensas ao concluir tarefas difíceis</p>
+            <button><a href="app.html">Veja Mais</a></button>
+            </div>
+        </div>
+    </div>
+    <section class="final-cta">
+        <h2>Pronto para começar?</h2>
+        <p>Organize sua rotina, reduza o estresse e encontre equilíbrio no seu dia a dia.</p>
+        <a href="app.html" class="cta-button">COMECE AGORA</a>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-left">
+            <img src="img/logo-2.png">
+            <p>Sua ferramenta completa para organizar tarefas, equilibrar e alcançar seus objetivos com clareza e tranquilidade.</p>
+            <div class="socials">
+                <a href="#"><i class="fa-solid fa-house"></i></a>
+                <a href="#objetivo"><i class="fa-solid fa-info"></i></a>
+                <a href="#contato"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+        <ul class="footer-right">
+                <li>
+                    <h2>Recursos</h2>
+                    <ul class="box">
+                        <li><a href="#gerenciamento">Gerenciamento de Tarefas</a></li>
+                        <li><a href="#visualizacoes">Múltiplas Visualizações</a></li>
+                        <li><a href="#analise">Análise de Bem-estar</a></li>
+                    </ul>
+                </li>
+                <li class="features">
+                    <h2>Sobre</h2>
+                    <ul class="box">
+                        <li><a href="#quem-somos">Quem Somos</a></li>
+                        <li><a href="#missao">Nossa Missão</a></li>
+                        <li><a href="#como-funciona">Como Funciona</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <h2>Suporte</h2>
+                    <ul class="box">
+                        <li><a href="#ajuda">Central de Ajuda</a></li>
+                        <li><a href="#tutoriais">Tutoriais</a></li>
+                        <li><a href="#contato">Fale Conosco</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="footer-bottom">
+                <p>Todos os direitos reservados. &copy; 2025 Equilibra</p>
+            </div>
+    </footer>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+    let currentCard = 0;
+    const cards = document.querySelectorAll('.carousel .card');
+    const indicators = document.querySelectorAll('.indicator');
+    const totalCards = cards.length;
+
+    function updateCarousel() {
+        cards.forEach((card, index) => {
+            // remove todas as classes
+            card.classList.remove('active', 'left', 'right', 'side');
+            
+            if (index === currentCard) {
+                // card ativo (na frente)
+                card.classList.add('active');
+            } else if (index === (currentCard - 1 + totalCards) % totalCards) {
+                // card à esquerda
+                card.classList.add('left', 'side');
+            } else if (index === (currentCard + 1) % totalCards) {
+                // card à direita
+                card.classList.add('right', 'side');
+            }
+        });
+        
+        // atualiza indicadores
+        indicators.forEach((indicator, index) => {
+            indicator.classList.toggle('active', index === currentCard);
+        });
+    }
+
+    function nextCard() {
+        currentCard = (currentCard + 1) % totalCards;
+        updateCarousel();
+    }
+
+    function prevCard() {
+        currentCard = (currentCard - 1 + totalCards) % totalCards;
+        updateCarousel();
+    }
+
+    function goToCard(index) {
+        currentCard = index;
+        updateCarousel();
+    }
+
+    // navegação por teclado
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') prevCard();
+        if (e.key === 'ArrowRight') nextCard();
+    });
+
+    // swipe em mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    const carousel = document.querySelector('.carousel');
+
+    carousel.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+
+    carousel.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    });
+
+    function handleSwipe() {
+        if (touchEndX < touchStartX - 50) nextCard();
+        if (touchEndX > touchStartX + 50) prevCard();
+    }
+
+    // inicia o carrossel
+    updateCarousel();
+    </script>
+</body>
+</html>

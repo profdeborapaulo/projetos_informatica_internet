@@ -1,0 +1,543 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html {
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+}
+:root {
+    /*fundos*/
+    --background-primary: #F6F5F4;
+    --background-secondary: #c3c49f;
+    --background-tertiary: #f8f3e8;
+    --surface: #ebe3dcf3;
+    
+    /*textos*/
+    --text-primary: #122220;
+    --text-secondary: #0D0D0D;
+    --text-tertiary: #53582f;
+    --subtitle: #666;
+    --text-on-dark: #F0E7D6;
+
+    /*cores primárias e secundárias*/
+    --primary: #2B583F; /* Verde principal */
+    --primary-variant: #143829; /* Verde escuro */
+    --primary-light: #47622B; /* Verde claro */
+
+    /*bordas*/
+    --border-subtle: #c3c49f;
+    --border-medium: #C8C0B2;
+    --border-strong: #2B583F;
+
+    /*botões e interação*/
+    --button-primary: #3E513E;
+    --button-primary-hover: #506345;
+    --link: #2B583F;
+}
+/*página inicial*/
+/*header*/
+header {
+    background-color: var(--background-primary);
+    text-align: right;
+    padding: 2vh 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+/* área da logo*/
+.brand-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.brand-area img {
+    display: block;
+    width: 45px;
+    height: auto;
+}
+.brand-area p {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+    margin: 0;
+    display: block;
+}
+
+/* menu da direita */
+.header-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+.header-list li {
+    list-style-type: none;
+}
+
+/* responsividade */
+@media (max-width: 1000px) {
+    /* esconde o texto no mobile */
+    .brand-area p {
+        display: none; 
+    }
+    /*ajuste no menu*/
+    .header-list li {
+        margin: 0 10px;
+        font-size: 0.9rem;
+    }
+}
+.header-list {
+    margin: 0;
+    padding: 0;
+}
+.header-list li {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0 20px;
+}
+.header-list li a {
+    text-decoration: none;
+    color: #47622B;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+.header-list li a:hover {
+    color: #36622bd0;
+}
+hr {
+    margin: 0;
+    border: none;
+    border-bottom: 1px solid #3a3a3a54;
+}
+
+/*div "principal" - introdução*/
+.intro {
+    background-color: var(--background-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100svh;
+    padding: 5vh 5vw;
+    flex-wrap: wrap;
+    border-radius: 0 0 50px 50px;
+}
+.intro-text {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex: 1 1 400px;
+    max-width: 400px;
+}
+.intro-text h1 {
+    font-family: 'Libre Baskerville', serif;
+    color: var(--text-secondary);
+    font-size: 5rem;
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+.intro-text h3 {
+    color: #4A4A4A;
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 1.3;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.intro button, .features button {
+    background-color: var(--button-primary);
+    border: none;
+    border-radius: 50px;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.intro button:hover, .features button:hover {
+    background-color: var(--button-primary-hover);
+    transform: translateY(-2px);
+}
+.intro button a, .features button a {
+    text-decoration: none;
+    color: var(--text-on-dark);
+    font-family: 'Lexend', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
+.intro-img {
+    flex: 0 1 auto;
+}
+.logo {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+/*frase*/
+.phrase {
+    justify-content: center;
+}
+.phrase h1 {
+    text-align: center;
+    margin: 100px 150px;
+    padding: 0 150px;
+    font-family: 'Libre Baskerville', serif;
+    color: var(--text-secondary);
+    font-size: 2rem;
+    font-weight: 600;
+}
+/*seção de cards sobre funcionalidades*/
+.cards-section {
+    margin: 100px auto;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.cards-section .card {
+    text-align: center;
+    margin: 40px 0;
+    padding: 100px;
+    height: 300px;
+    color: var(--text-tertiary);
+}
+.cards-section .card h3 {
+    max-width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+}
+/*section benefícios (carrossel)*/
+.benefits {
+    padding: 8vh 5vw;
+    background-color: var(--background-primary);
+    border-radius: 40px;
+    text-align: center;
+}
+.benefits h2 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: var(--text-secondary);
+    margin-bottom: 5vh;
+}
+/*container do carrossel*/
+.carousel {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+.carousel .cards-container {
+    position: relative;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    gap: 0;
+}
+/*estilo dos cards do carrossel*/
+.carousel .card {
+    position: absolute;
+    width: 380px;
+    min-height: 300px;
+    background: white;
+    border-radius: 20px;
+    padding: 3rem 2.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: scale(0.85) translateY(20px);
+    opacity: 0;
+    pointer-events: none;
+}
+/*overlay cinza nos cards inativos*/
+.carousel .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(200, 200, 200, 0.7);
+    border-radius: 20px;
+    opacity: 1;
+    transition: opacity 0.6s ease;
+    z-index: 1;
+}
+/*card ativo - na frente*/
+.carousel .card.active {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+    z-index: 3;
+    pointer-events: auto;
+}
+.carousel .card.active::before {
+    opacity: 0;
+}
+/* Cards laterais - visíveis mas desfocados */
+.carousel .card.side {
+    opacity: 0.6;
+    z-index: 1;
+    pointer-events: none;
+}
+/* card esquerdo */
+.carousel .card.left {
+    transform: scale(0.85) translateX(-300px) translateY(20px);
+    opacity: 0.6;
+    z-index: 2;
+}
+/* card direito */
+.carousel .card.right {
+    transform: scale(0.85) translateX(300px) translateY(20px);
+    opacity: 0.6;
+    z-index: 2;
+}
+
+/* conteúdo do card do carrossel */
+.carousel .card h3 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.8rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 2;
+}
+.carousel .card p {
+    color: #666;
+    line-height: 1.7;
+    font-size: 1.1rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* setas de navegação */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background: var(--button-primary);
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.carousel-arrow:hover {
+    background: var(--button-primary-hover);
+    transform: translateY(-50%) scale(1.1);
+}
+.carousel-arrow.prev {
+    left: -25px;
+}
+.carousel-arrow.next {
+    right: -25px;
+}
+
+/* Indicadores (bolinhas) */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 3rem;
+}
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ccc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.indicator.active {
+    background: var(--button-primary);
+    width: 35px;
+    border-radius: 10px;
+}
+/*recursos oferecidos*/
+.feature {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    gap: 20px;
+}
+.feature:nth-of-type(even) {
+    flex-direction: row-reverse;
+}
+.feature-img {
+    border-radius: 7px;
+    width: 600px;
+    height: auto;
+    margin: 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+.feature-texto {
+    width: 400px;
+    text-align: center;
+    justify-content: center;
+    margin: 100px;
+    line-height: 30px;
+}
+.feature-texto p {
+    margin-bottom: 20px;
+}
+.feature-texto h3 {
+    margin-bottom: 10px;
+}
+.features hr {
+    border: 0.5px solid #3a3a3a44;
+    width: 90%;
+    margin: 40px;
+}
+/*call to action (CTA)*/
+.final-cta {
+    border-radius: 40px 40px 0 0;
+    margin-top: 150px;
+    padding: 80px 40px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 10px 25px #00000018;
+}
+.final-cta h2 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 2.4rem;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+.final-cta p {
+    color: var(--text-tertiary);
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+.final-cta .cta-button {
+    text-decoration: none;
+    background-color: var(--button-primary);
+    color: #fff;
+    font-family: 'Lexend', sans-serif;
+    padding: 1rem 2.8rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    display: inline-block;
+}
+.final-cta .cta-button:hover {
+    background-color: var(--primary-light);
+    transform: translateY(-3px);
+}
+/*footer*/
+footer {
+    display: grid;
+    font-size: 14px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 50px;
+    color: #fff;
+    background-color: #171d19;
+}
+.footer {
+    justify-content: center;
+    align-items: center;
+}
+.footer > *{
+    flex: 1 100%;
+}
+.footer-left {
+    margin-right: 1.25em;
+    margin-bottom: 2em;
+}
+.footer-left img {
+    width: 65%;
+}
+.footer h2 {
+    font-weight: 600;
+    font-size: 17px;
+    margin: 10px;
+}
+.footer ul {
+    padding-left: 0;
+}
+.footer li {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    line-height: 2;
+}
+.footer-right {
+    font-size: 14px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-flow: row wrap;
+}
+.footer-right > * {
+    flex: 1 50%;
+    margin-right: 1.25em;
+}
+.box a, .footer-bottom, .footer-left p {
+    color: #999;
+    text-decoration: none;
+}
+.box a:hover {
+    color: #57a03ac2;
+}
+.footer-bottom {
+    text-align: center;
+    padding-top: 50px;
+}
+.footer-left p {
+    padding-right: 20%;
+    margin-bottom: 15px;
+}
+.socials a {
+    background: #36623da2;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    margin-right: 10px;
+}
+.socials a i {
+    color: #fff;
+    padding: 10px;
+    font-size: 20px;
+}
+@media screen and (min-width: 600px) {
+    .footer-right > * {
+        flex: 1;
+    }
+    .footer-left {
+        flex: 1 0px;
+    }
+    .footer-right {
+        flex: 2 0px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer {
+        padding: 15px;
+    }
+}

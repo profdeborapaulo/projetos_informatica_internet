@@ -1,0 +1,188 @@
+/*header do calendário*/
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.calendar-title h1 { 
+    color: var(--text-secondary);
+    font-size: 2.5rem; 
+}
+.month-nav { 
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+}
+.month-nav button {
+    background: transparent;
+    border: none; 
+    width: 40px; 
+    height: 30px;
+    cursor: pointer; 
+}
+.month-nav button:hover {
+    background: #dbdbdb;
+    border: none; 
+    width: 35px; 
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer; 
+}
+.month-nav span { 
+    font-weight: 600; 
+    font-size: 1.1rem; 
+    min-width: 180px; 
+    text-align: center; 
+}
+.calendar-container {
+    background: white; 
+    padding: 30px; 
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+}
+
+/*grid da semana*/
+.week-header {
+    display: grid;
+    grid-template-columns: 80px repeat(7, minmax(0, 1fr));
+    gap: 10px; 
+    margin-bottom: 15px; 
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f0f0; 
+    position: sticky; 
+    top: 0;
+    background: white; 
+    z-index: 10;
+}
+.week-day { 
+    text-align: center; 
+}
+.week-day-name { 
+    font-weight: 600; 
+    color: var(--text-tertiary); 
+    font-size: 0.9rem; 
+}
+.week-day-date { 
+    font-size: 1.5rem; 
+    font-weight: 700; 
+    color: var(--text-secondary); 
+    margin-top: 5px; 
+}
+.week-day.today { 
+    background: #6f97438a; 
+    color: white;
+    padding: 5px;
+    border-radius: 10px; 
+}
+.week-grid-container { 
+    max-height: 600px; 
+    overflow-y: auto; 
+    padding-right: 10px; 
+}
+.week-grid-container::-webkit-scrollbar { 
+    width: 8px; 
+}
+.week-grid-container::-webkit-scrollbar-track { 
+    background: #f0f0f0; 
+    border-radius: 10px; 
+}
+.week-grid-container::-webkit-scrollbar-thumb { 
+    background: var(--primary-light); 
+    border-radius: 10px; 
+}
+.week-grid { 
+    display: grid; 
+    grid-template-columns: 80px repeat(7, minmax(0,1fr)); 
+    gap: 2px; 
+}
+.time-slot { 
+    padding: 15px 10px;
+    text-align: right;
+    font-size: 0.85rem;
+    color: #999;
+    border-top: 1px solid #f0f0f0;
+}
+.hour-slot {
+    background: var(--bg-primary);
+    padding: 10px;
+    min-height: 50px;
+    border-top: 1px solid #f0f0f0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+.hour-slot:hover {
+    background: #f0f0f0;
+}
+.week-task {
+    background: var(--primary);
+    color: white;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.week-task:hover {
+    transform: translateX(3px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/*modal de detalhes do calendário */
+.task-details-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 4;
+    justify-content: center;
+    align-items: center;
+}
+.task-details-modal.active {
+    display: flex;
+}
+.task-details-content {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+.task-details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 15px;
+}
+.task-detail-item {
+    margin-bottom: 20px;
+}
+.task-detail-item label {
+    display: block;
+    font-weight: 600;
+    color: var(--text-tertiary);
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+.task-detail-item p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    padding: 12px;
+    background: #fafafa;
+    border-radius: 10px;
+}

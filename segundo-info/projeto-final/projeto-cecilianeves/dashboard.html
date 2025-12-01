@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cf7a3c7e0a.js" crossorigin="anonymous"></script>
+    <!-- Ícones - Lucide -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <!-- Gráfico - Chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+    <!-- JS -->
+    <script src="js/script.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/global.css">
+    <title>Dashboard | Planeje seu dia</title>
+</head>
+<body>
+    <!--dark mode-->
+    <button class="theme-toggle" id="themeToggle">
+        <i class="fa-solid fa-moon"></i>
+    </button>
+    <button class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="img/logo.png" alt="Logo">
+            <h2>Equilibra</h2>
+        </div>
+
+        <div class="user-greeting">
+            <h3>Olá, <span id="userName">Usuário</span>!</h3>
+            <p>Organize seu dia</p>
+        </div>
+
+        <nav class="nav-menu">
+            <ul>
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link active">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Início</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="calendar.html" class="nav-link">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <span>Calendário</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="tasks.html" class="nav-link">
+                        <i class="fa-solid fa-list-check"></i>
+                        <span>Tarefas</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="logout-button">
+            <a href="index.html" class="logout-link" onclick="logoutAndClearData()">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Sair</span>
+            </a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <div class="page-header">
+            <h1>Dashboard</h1>
+            <p>Visualize seu progresso e organize suas tarefas</p>
+        </div>
+
+        <div class="dashboard-grid">
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <h3>Equilíbrio das Áreas</h3>
+                </div>
+                <div class="chart-container">
+                    <canvas id="balanceChart"></canvas>
+                </div>
+            </div>
+
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <h3>Seu Bem-estar</h3>
+                </div>
+                <div class="wellness-alert good" id="wellnessAlert">
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-card tasks-table">
+            <div class="card-header">
+                <h3>Suas Tarefas</h3>
+                <i class="fa-solid fa-list-check"></i>
+            </div>
+            <ul class="task-list" id="taskList">
+            </ul>
+        </div>
+    </main>
+
+    <div class="modal-overlay" id="taskModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Nova Tarefa</h2>
+                <button class="modal-close" onclick="closeModal()">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="taskForm">
+                    <div class="form-group">
+                        <label for="taskTitle">Título da tarefa *</label>
+                        <input type="text" id="taskTitle" placeholder="Ex: Reunião" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="taskDescription">Descrição</label>
+                        <textarea id="taskDescription" placeholder="Adicione detalhes..."></textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="taskDate">Data *</label>
+                            <input type="date" id="taskDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="taskTime">Horário *</label>
+                            <input type="time" id="taskTime" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="taskArea">Área da vida *</label>
+                        <select id="taskArea" required>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Urgência *</label>
+                        <div class="urgency-selector">
+                            <div class="urgency-option">
+                                <input type="radio" name="urgency" id="urgency-low" value="low" checked>
+                                <label for="urgency-low" class="urgency-label low">Baixa</label>
+                            </div>
+                            <div class="urgency-option">
+                                <input type="radio" name="urgency" id="urgency-medium" value="medium">
+                                <label for="urgency-medium" class="urgency-label medium">Média</label>
+                            </div>
+                            <div class="urgency-option">
+                                <input type="radio" name="urgency" id="urgency-high" value="high">
+                                <label for="urgency-high" class="urgency-label high">Alta</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-actions">
+                        <button type="button" class="btn-cancel" onclick="closeModal()">Cancelar</button>
+                        <button type="submit" class="btn-save">Salvar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <button class="fab-button" onclick="openModal()">
+        <i class="fa-solid fa-plus"></i>
+    </button>
+    
+    <script>
+        // verificação de segurança
+        //se o usuário não fez o onboarding, é redirecionado
+        if (!localStorage.getItem('onboardingComplete')) {
+            window.location.href = 'app.html';
+        }
+
+        // carregamento de dados
+        let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+        const userAreas = JSON.parse(localStorage.getItem('userAreas')) || [];
+        
+        // cores fixas para o gráfico
+        const areaColors = {
+            'Trabalho': '#6C85F4', 'Saúde': '#B7F475', 'Estudos': '#A45CF5',
+            'Social': '#F5817E', 'Lazer': '#F5CD62', 'Pessoal': '#F25F27'
+        };
+
+        // gráfico de equilíbrio
+        function createBalanceChart() {
+            const ctx = document.getElementById('balanceChart').getContext('2d');
+            const areaCounts = {};
+            
+            // inicializa contadores
+            userAreas.forEach(area => areaCounts[area] = 0);
+            
+            // conta tarefas ativas por área
+            tasks.forEach(task => {
+                if (areaCounts.hasOwnProperty(task.area) && !task.completed) {
+                    areaCounts[task.area]++;
+                }
+            });
+
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: Object.keys(areaCounts),
+                    datasets: [{
+                        data: Object.values(areaCounts),
+                        backgroundColor: Object.keys(areaCounts).map(area => areaColors[area] || '#ccc'),
+                        borderWidth: 0,
+                        hoverOffset: 10
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'bottom', labels: { font: { family: 'Montserrat' } } }
+                    }
+                }
+            });
+        }
+
+        // sistema de alerta de bem-estar
+        function updateWellnessAlert() {
+            const alert = document.getElementById('wellnessAlert');
+            const pendingTasks = tasks.filter(t => !t.completed).length;
+            const urgentTasks = tasks.filter(t => !t.completed && t.urgency === 'high').length;
+            //define estado padrão
+            let statusClass = 'good';
+            let title = 'Tudo equilibrado!';
+            let msg = 'Você está com uma carga de trabalho saudável.';
+
+            if (urgentTasks >= 3 || pendingTasks >= 10) {
+                statusClass = 'critical';
+                title = 'Tome cuidado com a sobrecarga!';
+                msg = 'Muitas tarefas urgentes ou acumuladas.';
+            } else if (urgentTasks >= 1 || pendingTasks >= 5) {
+                statusClass = 'warning';
+                title = 'Fique atento!';
+                msg = 'Organize suas prioridades.';
+            }
+
+            alert.className = `wellness-alert ${statusClass}`;
+            alert.innerHTML = `
+                <div class="alert-content">
+                    <div class="alert-text"><h4>${title}</h4><p>${msg}</p></div>
+                </div>
+            `;
+        }
+
+        // renderizar lista de tarefas
+        function renderTasks() {
+            const taskList = document.getElementById('taskList');
+            
+            if (tasks.length === 0) {
+                taskList.innerHTML = `<div class="empty-state"><h3>Nenhuma tarefa</h3><p>Clique em + para adicionar.</p></div>`;
+                return;
+            }
+
+            const sortedTasks = [...tasks].sort((a, b) => {
+                const urgencyOrder = { high: 0, medium: 1, low: 2 };
+                // ordena por urgência e depois por data
+                if (urgencyOrder[a.urgency] !== urgencyOrder[b.urgency]) {
+                    return urgencyOrder[a.urgency] - urgencyOrder[b.urgency];
+                }
+                return new Date(a.date) - new Date(b.date);
+            });
+
+            const displayTasks = sortedTasks.filter(t => !t.completed).slice(0, 5);
+
+            taskList.innerHTML = displayTasks.map(task => `
+                <li class="task-item ${task.urgency}">
+                    <div class="task-checkbox" onclick="toggleTask(${task.id})"></div>
+                    <div class="task-info">
+                        <div class="task-title">${task.title}</div>
+                        <div class="task-meta">
+                            <span><i class="fa-solid fa-calendar"></i> ${formatDate(task.date)}</span>
+                            <span class="task-area">${task.area}</span>
+                        </div>
+                    </div>
+                    <span class="urgency-badge ${task.urgency}">
+                        ${task.urgency === 'high' ? 'Alta' : task.urgency === 'medium' ? 'Média' : 'Baixa'}
+                    </span>
+                </li>
+            `).join('');
+            
+            if (displayTasks.length === 0 && tasks.length > 0) {
+                 taskList.innerHTML = `<div class="empty-state"><h3>Tudo feito!</h3><p>Você concluiu suas tarefas principais.</p></div>`;
+            }
+        }
+
+        function formatDate(dateString) {
+            if (!dateString) return 'S/ Data';
+            const date = new Date(dateString + 'T00:00:00');
+            return date.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit' });
+        }
+
+        function toggleTask(taskId) {
+            const task = tasks.find(t => t.id === taskId);
+            if (task) {
+                task.completed = !task.completed;
+                task.status = task.completed ? 'completed' : 'pending';
+                localStorage.setItem('tasks', JSON.stringify(tasks));
+                
+                // atualiza tudo
+                renderTasks();
+                updateWellnessAlert();
+                createBalanceChart();
+            }
+        }
+
+        // salvar tarefa (lógica específica do dashboard)
+        document.getElementById('taskForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const inputDate = document.getElementById('taskDate').value;
+            const manualUrgency = document.querySelector('input[name="urgency"]:checked').value;
+            let finalUrgency = manualUrgency;
+
+            // urgência automática
+            if (inputDate) {
+                const diff = Math.ceil((new Date(inputDate + 'T00:00:00') - new Date().setHours(0,0,0,0)) / (864e5));
+                if (diff < 1) finalUrgency = 'high';
+                else if (diff === 1) finalUrgency = 'medium';
+            }
+            
+            // prevalece a maior urgência (manual vs auto)
+            const order = { low: 0, medium: 1, high: 2 };
+            if (order[manualUrgency] > order[finalUrgency]) finalUrgency = manualUrgency;
+
+            const newTask = {
+                id: Date.now(),
+                title: document.getElementById('taskTitle').value,
+                description: document.getElementById('taskDescription').value,
+                date: inputDate,
+                time: document.getElementById('taskTime').value,
+                area: document.getElementById('taskArea').value,
+                urgency: finalUrgency,
+                status: 'pending',
+                completed: false
+            };
+
+            tasks.push(newTask);
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+            
+            closeModal();
+            renderTasks();
+            updateWellnessAlert();
+            createBalanceChart();
+        });
+
+        // inicialização
+        createBalanceChart();
+        updateWellnessAlert();
+        renderTasks();
+        lucide.createIcons();
+    </script>
+</body>
+</html>

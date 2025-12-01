@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Ícones - Font Awesome -->
+    <script src="https://kit.fontawesome.com/cf7a3c7e0a.js" crossorigin="anonymous"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/app.css">
+    <title>Bem-vindo | Planeje seu dia</title>
+</head>
+<body>
+    <div class="onboarding-container">
+        <!-- logo -->
+        <div class="logo-container">
+            <img src="img/logo.png" alt="Logo">
+        </div>
+
+        <!-- indicador de progresso -->
+        <div class="progress-indicator">
+            <div class="progress-dot active" id="dot-0"></div>
+            <div class="progress-dot" id="dot-1"></div>
+            <div class="progress-dot" id="dot-2"></div>
+        </div>
+
+        <!-- step 1: mensagem de boas-vindas -->
+        <div class="step active" id="step-0">
+            <h1>Bem-vindo!</h1>
+            <p class="subtitle">Antes de organizar sua rotina, vamos primeiro te conhecer um pouco.</p>
+            
+            <div class="input-group">
+                <label for="userName">Como você gostaria de ser chamado?</label>
+                <input type="text" id="userName" placeholder="Digite seu nome" autofocus>
+            </div>
+
+            <div class="button-group">
+                <button class="btn-primary" onclick="nextStep()">Continuar</button>
+            </div>
+        </div>
+
+        <!-- step 2: áreas da vida -->
+        <div class="step" id="step-1">
+            <h1>Áreas da sua vida</h1>
+            <p class="subtitle">Vamos começar estabelecendo suas prioridades. Selecione as áreas que você gostaria de organizar.</p>
+
+            <div class="areas-grid">
+                <div class="area-card">
+                    <input type="checkbox" id="area-trabalho" value="Trabalho">
+                    <label for="area-trabalho" class="area-label">
+                        <i class="fa-solid fa-briefcase"></i>
+                        <span>Trabalho</span>
+                    </label>
+                </div>
+
+                <div class="area-card">
+                    <input type="checkbox" id="area-saude" value="Saúde">
+                    <label for="area-saude" class="area-label">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                        <span>Saúde</span>
+                    </label>
+                </div>
+
+                <div class="area-card">
+                    <input type="checkbox" id="area-estudos" value="Estudos">
+                    <label for="area-estudos" class="area-label">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <span>Estudos</span>
+                    </label>
+                </div>
+
+                <div class="area-card">
+                    <input type="checkbox" id="area-social" value="Social">
+                    <label for="area-social" class="area-label">
+                        <i class="fa-solid fa-users"></i>
+                        <span>Social</span>
+                    </label>
+                </div>
+
+                <div class="area-card">
+                    <input type="checkbox" id="area-lazer" value="Lazer">
+                    <label for="area-lazer" class="area-label">
+                        <i class="fa-solid fa-gamepad"></i>
+                        <span>Lazer</span>
+                    </label>
+                </div>
+
+                <div class="area-card">
+                    <input type="checkbox" id="area-pessoal" value="Pessoal">
+                    <label for="area-pessoal" class="area-label">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Pessoal</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button class="btn-secondary" onclick="prevStep()">Voltar</button>
+                <button class="btn-primary" onclick="nextStep()">Continuar</button>
+            </div>
+        </div>
+
+        <!-- step 3: conclusão -->
+        <div class="step" id="step-2">
+            <div class="success-icon">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h1>Tudo pronto, <span id="displayName"></span>!</h1>
+            <p class="subtitle">Vamos lá?</p>
+
+            <div class="button-group">
+                <button class="btn-primary" onclick="finishOnboarding()">Começar a usar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentStep = 0;
+        const totalSteps = 3;
+
+        // navegação entre steps
+        function nextStep() {
+            // validações
+            if (currentStep === 0) {
+                const userName = document.getElementById('userName').value.trim();
+                if (!userName) {
+                    alert('Por favor, digite seu nome!');
+                    return;
+                }
+                localStorage.setItem('userName', userName);
+            }
+
+            if (currentStep === 1) {
+                const selectedAreas = getSelectedAreas();
+                if (selectedAreas.length === 0) {
+                    alert('Selecione pelo menos uma área!');
+                    return;
+                }
+                localStorage.setItem('userAreas', JSON.stringify(selectedAreas));
+                
+                // exibe o nome na última tela
+                document.getElementById('displayName').textContent = localStorage.getItem('userName');
+            }
+
+            // avança para próximo step
+            if (currentStep < totalSteps - 1) {
+                document.getElementById(`step-${currentStep}`).classList.remove('active');
+                document.getElementById(`dot-${currentStep}`).classList.remove('active');
+                
+                currentStep++;
+                
+                document.getElementById(`step-${currentStep}`).classList.add('active');
+                document.getElementById(`dot-${currentStep}`).classList.add('active');
+            }
+        }
+
+        function prevStep() {
+            if (currentStep > 0) {
+                document.getElementById(`step-${currentStep}`).classList.remove('active');
+                document.getElementById(`dot-${currentStep}`).classList.remove('active');
+                
+                currentStep--;
+                
+                document.getElementById(`step-${currentStep}`).classList.add('active');
+                document.getElementById(`dot-${currentStep}`).classList.add('active');
+            }
+        }
+
+        function getSelectedAreas() {
+            const checkboxes = document.querySelectorAll('.area-card input[type="checkbox"]:checked');
+            return Array.from(checkboxes).map(cb => cb.value);
+        }
+
+        function finishOnboarding() {
+            localStorage.setItem('onboardingComplete', 'true');
+            window.location.href = 'dashboard.html'; // Redireciona pro dashboard
+        }
+
+        // enter no input de nome
+        document.getElementById('userName').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                nextStep();
+            }
+        });
+    </script>
+</body>
+</html>

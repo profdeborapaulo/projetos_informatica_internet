@@ -1,0 +1,694 @@
+/*estilos globais, variáveis e componentes compartilhados*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*paleta de cores*/
+:root {
+    /*fundos*/
+    --bg-primary: #F6F5F4;
+    --bg-secondary: #c3c49f;
+
+    /*texto*/
+    --text-primary: #122220;
+    --text-secondary: #0D0D0D;
+    --text-tertiary: #53582f;
+    --text-on-color: #FFFFFF;
+    --subtitle: #777;
+
+    /*botões e ações*/
+    --btn-primary: #3E513E;
+    --btn-primary-hover: #506345;
+    --btn-secondary: #E9972D;
+    --btn-secondary-hover: #C4501B;
+    --btn-danger-bg: #ffe0e0;
+    --btn-danger-text: #c41b1b;
+
+    /*bordas e status */
+    --border-medium: #C8C0B2;
+    --completed: #47622B;
+
+    /*níveis de urgência*/
+    --urgency-low: #4d9623de;
+    --urgency-medium: #E9972D;
+    --urgency-high: #C4501B;
+
+    /*áreas da vida (identidade visual)*/
+    --area-work: #6C85F4;
+    --area-health: #B7F475;
+    --area-study: #A45CF5;
+    --area-social: #F5817E;
+    --area-lazer: #F5CD62;
+    --area-pessoal: #F25F27;
+
+    /*cores do tema geral*/
+    --primary: #2B583F;
+    --primary-light: #47622B;
+    --secondary: #E9972D;
+}
+/*configurações do body*/
+body { 
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-primary);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+/*dark mode*/
+
+/* botão */
+.theme-toggle {
+    position: fixed;
+    top: 25px;
+    right: 30px;
+    left: auto;
+    background: transparent;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 11;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+/* ícone */
+.theme-toggle i {
+    font-size: 1.3rem;
+    color: var(--text-primary);
+    transition: transform 0.5s ease;
+}
+
+/* hover */
+.theme-toggle:hover {
+    background-color: rgba(0,0,0,0.05);
+}
+.theme-toggle:hover i {
+    transform: rotate(15deg) scale(1.1);
+}
+
+body.dark-mode {
+    /* redefinindo as variáveis de cor */
+    --bg-primary: #121614;
+    --bg-secondary: #c3c49f;
+    --text-primary: #E0E2DB;
+    --text-secondary: #F5F7F5;
+    --text-tertiary: #B8BEA4;
+    --text-on-color: #FFFFFF;
+    --subtitle: #9CA3A0;
+    --border-medium: #2F3B36;
+    
+    /* ajuste nas cores principais*/
+    --primary: #4E8062;
+    --primary-light: #6B8F71;
+
+    background-color: var(--bg-primary);
+    color: var(--text-secondary);
+}
+
+/* cor do ícone (sol) no modo escuro */
+body.dark-mode .theme-toggle i {
+    color: #808080;
+}
+body.dark-mode .theme-toggle:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+/* adaptação dos cards, sidebar e modais*/
+body.dark-mode .sidebar,
+body.dark-mode .dashboard-card,
+body.dark-mode .calendar-container,
+body.dark-mode .progress-column,
+body.dark-mode .modal,
+body.dark-mode .task-card,
+body.dark-mode .task-details-content,
+body.dark-mode .onboarding-container {
+    background-color: #1C2421;
+    color: var(--text-secondary);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+body.dark-mode .week-header {
+    background-color: #1C2421;
+    color: var(--text-secondary);
+}
+body.dark-mode .btn-cancel {
+    background-color: #2A332F;
+    color: var(--text-secondary);
+    border: 1px solid #2F3B36;
+}
+body.dark-mode .btn-cancel:hover {
+    background-color: #3E4B45;
+    color: var(--text-primary);
+}
+
+/* campos de leitura da modal de detalhes */
+body.dark-mode .task-detail-item p {
+    background-color: #121614;
+    color: var(--text-secondary);
+    border: 1px solid #2F3B36;
+}
+body.dark-mode .task-details-header {
+    border-bottom-color: #2F3B36;
+}
+
+/* inputs e selects no modo escuro */
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select,
+body.dark-mode .hour-slot {
+    background-color: #121614;
+    border-color: #2F3B36;
+    color: var(--text-secondary);
+}
+body.dark-mode input:focus,
+body.dark-mode textarea:focus,
+body.dark-mode select:focus {
+    background-color: #121614 !important;
+    border-color: var(--primary);
+    color: var(--text-secondary);
+    outline: none;
+}
+
+/* hover específico de slots no calendário */
+body.dark-mode .hour-slot:hover {
+    background-color: #2F3B36;
+}
+
+body.dark-mode .month-nav button,
+body.dark-mode .task-action-btn,
+body.dark-mode .urgency-label {
+    background-color: #2A332F;
+    color: var(--text-secondary);
+}
+
+/*task count*/
+body.dark-mode .task-count {
+    background-color: #2A332F; /* Fundo escuro discreto */
+    color: var(--text-secondary); /* Texto claro */
+    border: 1px solid #2F3B36; /* Borda sutil para definição */
+}
+
+/*botão de logout*/
+body.dark-mode .logout-link:hover {
+    background-color: rgba(196, 27, 27, 0.15); 
+    color: #ff8080; 
+}
+body.dark-mode .logout-button {
+    border-top-color: #2F3B36;
+}
+
+/* alertas - dashboard */
+body.dark-mode .wellness-alert.good {
+    background-color: rgba(71, 98, 43, 0.15); /* Verde suave transparente */
+    border-color: #6B8F71;
+}
+body.dark-mode .wellness-alert.warning {
+    background-color: rgba(233, 151, 45, 0.15); /* Laranja suave transparente */
+    border-color: #E9972D;
+}
+body.dark-mode .wellness-alert.critical {
+    background-color: rgba(196, 80, 27, 0.15); /* Vermelho suave transparente */
+    border-color: #C4501B;
+}
+
+/* cor da fonte (título e texto) dentro do alerta */
+body.dark-mode .alert-text h4 {
+    color: var(--text-primary);
+}
+body.dark-mode .alert-text p {
+    color: var(--text-tertiary);
+}
+
+/*tarefas*/
+body.dark-mode .task-item:hover {
+    background-color: #2F3B36; 
+    border-left-color: var(--primary-light);
+}
+body.dark-mode .task-checkbox {
+    background-color: #121614;
+    border-color: #4E8062;
+}
+body.dark-mode .task-checkbox:hover {
+    background-color: #2F3B36;
+}
+
+/* inverte a cor da logo quando estiver no modo escuro */
+body.dark-mode .sidebar-header img,
+body.dark-mode .logo-container img,
+body.dark-mode .header-logo,
+body.dark-mode .logo,
+body.dark-mode .footer-left img {
+    filter: brightness(0) invert(1);
+}
+/* responsivdade */
+@media (max-width: 768px) {
+    .theme-toggle {
+        top: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/*layout principal*/
+.main-content {
+    margin-left: 280px;
+    padding: 40px;
+    transition: margin-left 0.3s ease;
+}
+.page-header {
+    margin-bottom: 40px;
+}
+.page-header h1 {
+    color: var(--text-primary);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+.page-header p {
+    color: var(--subtitle);
+    font-size: 1.05rem;
+}
+
+/*componente: sidebar (barra lateral)*/
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 280px;
+    height: 100vh;
+    background: white;
+    padding: 30px 0px;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    gap: 15px;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+}
+.sidebar-header img {
+    width: 45px;
+    height: auto;
+}
+.sidebar-header h2 {
+    font-family: 'Libre Baskerville', serif;
+    color: var(--text-secondary);
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+.user-greeting {
+    padding: 0 20px;
+    margin-bottom: 30px;
+    color: var(--text-secondary);
+}
+.user-greeting h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+.user-greeting p {
+    opacity: 0.9;
+    font-size: 0.9rem;
+}
+
+/*navegação*/
+.nav-menu {
+    list-style: none;
+    flex: 1;
+}
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 30px;
+    color: var(--text-tertiary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+.nav-link.active {
+    color: white;
+    background-color: #47622baf;
+}
+.nav-link i {
+    font-size: 1.2rem;
+    width: 25px;
+    text-align: center;
+}
+
+/*botão de sair na sidebar*/
+.logout-button {
+    margin-top: auto;
+    padding: 20px 0;
+    border-top: 2px solid #f0f0f0;
+}
+.logout-link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 30px;
+    color: var(--urgency-high);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+.logout-link:hover {
+    background-color: #ffe8e8;
+    color: #c41b1b;
+}
+.logout-link i {
+    font-size: 1.2rem;
+    width: 25px;
+    text-align: center;
+}
+
+/*botão menu hambúrguer (mobile)*/
+.menu-toggle {
+    display: none;/* Oculto em desktop */
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background: var(--btn-primary);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1100;
+    transition: all 0.3s ease;
+}
+.menu-toggle.active {
+    left: 240px;
+    background: var(--btn-primary-hover);
+}
+
+/*botões gerais*/
+button {
+    font-family: 'Lexend', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.btn-primary {
+    background-color: var(--btn-primary);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 18px 30px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.btn-primary:hover {
+    background-color: var(--btn-primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(62, 81, 62, 0.3);
+}
+
+/*botão (adicionar tarefa)*/
+.fab-button {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 65px;
+    height: 65px;
+    background: var(--btn-primary);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(62, 81, 62, 0.3);
+    transition: all 0.3s ease;
+    z-index: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fab-button:hover {
+    background: var(--btn-primary-hover);
+    transform: translateY(-3px) scale(1.05);
+}
+
+/*componente (modal)*/
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 2000;
+    animation: fadeIn 0.3s ease;
+}
+.modal-overlay.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*animações do modal */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.modal {
+    background: white;
+    border-radius: 25px;
+    width: 90%;
+    max-width: 550px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    animation: slideUp 0.3s ease;
+}
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+.modal-header {
+    padding: 30px 30px 20px;
+    border-bottom: 2px solid #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.modal-header h2 {
+    color: var(--text-secondary);
+    font-size: 1.8rem;
+}
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #999;
+    transition: all 0.3s ease;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.modal-close:hover {
+    background: #f0f0f0;
+    color: var(--text-secondary);
+}
+.modal-body {
+    padding: 30px;
+}
+
+/*formulário (inputs e labels)*/
+.form-group {
+    margin-bottom: 25px;
+}
+.form-group label {
+    display: block;
+    color: var(--text-tertiary);
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #fafafa;
+}
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: white;
+}
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/*seletor de urgência*/
+.urgency-selector {
+    display: flex;
+    gap: 10px;
+}
+.urgency-option {
+    flex: 1;
+    position: relative;
+}
+.urgency-option input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+.urgency-label {
+    display: block;
+    padding: 15px;
+    text-align: center;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    background: #fafafa;
+}
+.urgency-option input:checked + .urgency-label {
+    border-width: 3px;
+    transform: translateY(-2px);
+}
+.urgency-option input:checked + .urgency-label.low {
+    border-color: var(--urgency-low);
+    background: var(--urgency-low);
+    color: var(--text-secondary);
+}
+.urgency-option input:checked + .urgency-label.medium {
+    border-color: var(--urgency-medium);
+    background: var(--urgency-medium);
+    color: white;
+}
+.urgency-option input:checked + .urgency-label.high {
+    border-color: var(--urgency-high);
+    background: var(--urgency-high);
+    color: white;
+}
+
+/*ações do modal (botões)*/
+.modal-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+.modal-actions button {
+    flex: 1;
+    padding: 16px;
+    border: none;
+    border-radius: 50px;
+    font-family: 'Lexend', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.btn-cancel {
+    background: #f0f0f0;
+    color: var(--text-tertiary);
+}
+.btn-cancel:hover {
+    background: #e0e0e0;
+}
+.btn-save {
+    background: var(--btn-primary);
+    color: white;
+}
+.btn-save:hover {
+    background: var(--btn-primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(62,81,62,0.3);
+}
+
+/*empty state*/
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #999;
+}
+.empty-state i {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    opacity: 0.3;
+}
+.empty-state h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--text-tertiary);
+}
+
+/*badges de urgência*/
+.urgency-badge {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: inline-block;
+}
+.urgency-badge.low {
+    background: var(--urgency-low);
+    color: var(--text-secondary);
+}
+.urgency-badge.medium {
+    background: var(--urgency-medium);
+    color: white;
+}
+.urgency-badge.high {
+    background: var(--urgency-high);
+    color: white;
+}
+/*responsividade global*/
+@media (max-width: 768px) {
+    /*mostrar botão menu*/
+    .menu-toggle {
+        display: block;
+    }
+    /*esconder sidebar por padrão*/
+    .sidebar {
+        transform: translateX(-100%);
+    }
+    /*mostrar sidebar quando ativa*/
+    .sidebar.active {
+        transform: translateX(0);
+    }
+    /*remover margem do conteúdo*/
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+    /*ajustes de modal mobile*/
+    .modal {
+        width: 95%;
+        margin: 20px;
+    }
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}

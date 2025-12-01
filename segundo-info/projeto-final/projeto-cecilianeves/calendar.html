@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Ícones - Font Awesome -->
+    <script src="https://kit.fontawesome.com/cf7a3c7e0a.js" crossorigin="anonymous"></script>
+    <!-- JS -->
+    <script src="js/script.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/calendar.css">
+    <title>Calendário | Planeje seu dia</title>
+</head>
+<body>
+    <!--dark mode-->
+    <button class="theme-toggle" id="themeToggle">
+        <i class="fa-solid fa-moon"></i>
+    </button>
+    <button class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+    
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="img/logo.png" alt="Logo">
+            <h2>Equilibra</h2>
+        </div>
+        <div class="user-greeting">
+            <h3>Olá, <span id="userName">Usuário</span>!</h3>
+            <p>Organize seu calendário</p>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Início</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="calendar.html" class="nav-link active">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <span>Calendário</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="tasks.html" class="nav-link">
+                        <i class="fa-solid fa-list-check"></i>
+                        <span>Tarefas</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="logout-button">
+            <a href="index.html" class="logout-link" onclick="logoutAndClearData()">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Sair</span>
+            </a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <div class="calendar-header">
+            <div class="calendar-title"><h1>Calendário</h1></div>
+            <div class="month-nav">
+                <button onclick="previousWeek()"><i class="fa-solid fa-chevron-left"></i></button>
+                <span id="currentWeek">Semana Atual</span>
+                <button onclick="nextWeek()"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+
+        <div class="calendar-container">
+            <div class="week-view">
+                <div class="week-header" id="weekHeader"></div>
+                <div class="week-grid-container">
+                    <div class="week-grid" id="weekGrid"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal-overlay" id="taskModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Nova Tarefa</h2>
+                <button class="modal-close" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+                <form id="taskForm">
+                    <div class="form-group"><label for="taskTitle">Título *</label><input type="text" id="taskTitle" required></div>
+                    <div class="form-group"><label>Descrição</label><textarea id="taskDescription"></textarea></div>
+                    <div class="form-row">
+                        <div class="form-group"><label>Data *</label><input type="date" id="taskDate" required></div>
+                        <div class="form-group"><label>Horário *</label><input type="time" id="taskTime" required></div>
+                    </div>
+                    <div class="form-group"><label>Área *</label><select id="taskArea" required></select></div>
+                    <div class="form-group"><label>Urgência *</label>
+                        <div class="urgency-selector">
+                            <div class="urgency-option"><input type="radio" name="urgency" value="low" id="u-low" checked><label for="u-low" class="urgency-label low">Baixa</label></div>
+                            <div class="urgency-option"><input type="radio" name="urgency" value="medium" id="u-med"><label for="u-med" class="urgency-label medium">Média</label></div>
+                            <div class="urgency-option"><input type="radio" name="urgency" value="high" id="u-high"><label for="u-high" class="urgency-label high">Alta</label></div>
+                        </div>
+                    </div>
+                    <div class="modal-actions">
+                        <button type="button" class="btn-cancel" onclick="closeModal()">Cancelar</button>
+                        <button type="submit" class="btn-save">Salvar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="task-details-modal" id="taskDetailsModal">
+        <div class="task-details-content">
+            <div class="task-details-header">
+                <h3>Detalhes</h3>
+                <button class="modal-close" onclick="closeTaskDetails()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div id="taskDetailsBody"></div>
+        </div>
+    </div>
+
+    <button class="fab-button" onclick="openModal()"><i class="fa-solid fa-plus"></i></button>
+
+    <script src="js/utils.js"></script>
+    <script>
+        // variáveis do calendário
+        let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+        let currentWeekStart = new Date();
+        currentWeekStart.setDate(currentWeekStart.getDate() - currentWeekStart.getDay());
+        currentWeekStart.setHours(0,0,0,0);
+
+        // navegação
+        function previousWeek() {
+            currentWeekStart.setDate(currentWeekStart.getDate() - 7);
+            renderWeekView();
+        }
+        function nextWeek() {
+            currentWeekStart.setDate(currentWeekStart.getDate() + 7);
+            renderWeekView();
+        }
+
+        // renderização principal
+        function renderWeekView() {
+            const header = document.getElementById('weekHeader');
+            const grid = document.getElementById('weekGrid');
+            const startOfWeek = new Date(currentWeekStart);
+            const endOfWeek = new Date(startOfWeek);
+            endOfWeek.setDate(startOfWeek.getDate() + 6);
+            
+            document.getElementById('currentWeek').textContent = 
+                `${startOfWeek.getDate()}/${startOfWeek.getMonth() + 1} - ${endOfWeek.getDate()}/${endOfWeek.getMonth() + 1}`;
+            
+            // renderiza header (dias)
+            let headerHtml = '<div></div>';
+            const weekDays = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
+            const today = new Date(); today.setHours(0,0,0,0);
+            
+            for (let i = 0; i < 7; i++) {
+                const day = new Date(startOfWeek);
+                day.setDate(startOfWeek.getDate() + i);
+                day.setHours(0,0,0,0);
+                const isToday = day.getTime() === today.getTime();
+                headerHtml += `<div class="week-day ${isToday ? 'today' : ''}"><div class="week-day-name">${weekDays[i]}</div><div class="week-day-date">${day.getDate()}</div></div>`;
+            }
+            header.innerHTML = headerHtml;
+            
+            // renderiza grid (horas)
+            let gridHtml = '';
+            for (let hour = 0; hour < 24; hour++) {
+                gridHtml += `<div class="time-slot">${String(hour).padStart(2, '0')}:00</div>`;
+                for (let i = 0; i < 7; i++) {
+                    const day = new Date(startOfWeek);
+                    day.setDate(startOfWeek.getDate() + i);
+                    const dateStr = day.toISOString().split('T')[0];
+                    const hourStr = String(hour).padStart(2, '0') + ':00';
+                    
+                    const hourTasks = tasks.filter(t => t.date === dateStr && t.time && t.time.startsWith(String(hour).padStart(2, '0')) && !t.completed);
+                    
+                    gridHtml += `<div class="hour-slot" onclick="openModalWithDateTime('${dateStr}', '${hourStr}')">
+                        ${hourTasks.map(t => `<div class="week-task" onclick="event.stopPropagation(); openTaskDetails(${t.id})" style="background: ${getUrgencyColor(t.urgency)}">${t.title}</div>`).join('')}
+                    </div>`;
+                }
+            }
+            grid.innerHTML = gridHtml;
+        }
+
+        // --- Helpers ---
+        function getUrgencyColor(urgency) {
+            const colors = { low: '#c3c49f', medium: '#E9972D', high: '#ffa07a' };
+            return colors[urgency] || colors.low;
+        }
+
+        function openModalWithDateTime(date, time) {
+            openModal();
+            document.getElementById('taskDate').value = date;
+            document.getElementById('taskTime').value = time;
+        }
+
+        // --- Detalhes da Tarefa ---
+        function openTaskDetails(taskId) {
+            const task = tasks.find(t => t.id === taskId);
+            if (!task) return;
+            const urgencyText = { 'low': 'Baixa', 'medium': 'Média', 'high': 'Alta' };
+            
+            document.getElementById('taskDetailsBody').innerHTML = `
+                <div class="task-detail-item"><label>Título</label><p>${task.title}</p></div>
+                ${task.description ? `<div class="task-detail-item"><label>Descrição</label><p>${task.description}</p></div>` : ''}
+                <div class="task-detail-item"><label>Data</label><p>${new Date(task.date + 'T00:00:00').toLocaleDateString('pt-BR')}</p></div>
+                <div class="task-detail-item"><label>Horário</label><p>${task.time || 'Não definido'}</p></div>
+                <div class="task-detail-item"><label>Urgência</label><p><span class="urgency-badge ${task.urgency}">${urgencyText[task.urgency]}</span></p></div>
+            `;
+            document.getElementById('taskDetailsModal').classList.add('active');
+        }
+
+        function closeTaskDetails() {
+            document.getElementById('taskDetailsModal').classList.remove('active');
+        }
+
+        // --- Salvar (Lógica Repetida, mas necessária para o reload correto) ---
+        document.getElementById('taskForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Lógica idêntica ao dashboard para calcular urgência
+            const inputDate = document.getElementById('taskDate').value;
+            const manual = document.querySelector('input[name="urgency"]:checked').value;
+            let final = manual;
+            if (inputDate) {
+                const diff = Math.ceil((new Date(inputDate + 'T00:00:00') - new Date().setHours(0,0,0,0)) / (864e5));
+                if (diff < 1) final = 'high'; else if (diff === 1) final = 'medium';
+            }
+            const order = { low: 0, medium: 1, high: 2 };
+            if (order[manual] > order[final]) final = manual;
+
+            const newTask = {
+                id: Date.now(),
+                title: document.getElementById('taskTitle').value,
+                description: document.getElementById('taskDescription').value,
+                date: inputDate,
+                time: document.getElementById('taskTime').value,
+                area: document.getElementById('taskArea').value,
+                urgency: final,
+                status: 'pending',
+                completed: false
+            };
+            tasks.push(newTask);
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+            closeModal();
+            renderWeekView();
+        });
+
+        renderWeekView();
+    </script>
+</body>
+</html>
