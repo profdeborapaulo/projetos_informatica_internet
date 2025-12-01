@@ -90,3 +90,5 @@ Para executar este projeto em um ambiente de desenvolvimento:
     ```
 
 6.  Abra `http://localhost:3000` no seu navegador.
+
+**Slides** `https://docs.google.com/presentation/d/17Ahna2680SaEhhVOEiTU_C0UuDK9ufGFecYsSgPzaX0/edit?usp=sharing`
