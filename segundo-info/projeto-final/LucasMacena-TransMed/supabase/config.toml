@@ -1,4 +1,0 @@
-project_id = "sapbvvumzziqaapztyej"
-
-[functions.get-geoapify-key]
-verify_jwt = false
