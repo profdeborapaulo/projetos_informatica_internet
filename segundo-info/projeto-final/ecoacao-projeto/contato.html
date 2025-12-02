@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contato - EcoAção</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">EcoAção</div>
+
+    <button class="nav-toggle" id="navToggle">
+        ☰
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="como-denunciar.html">Como Denunciar</a></li>
+        <li><a href="contato.html">Contato</a></li>
+    </ul>
+</nav>
+
+<!-- HERO PEQUENO -->
+<header class="hero-small">
+    <h1>Fale Conosco</h1>
+    <p>Estamos sempre abertos para sugestões, dúvidas e parcerias.</p>
+</header>
+
+<!-- CONTEÚDO -->
+<main class="form-section" style="max-width:700px; margin-top:30px;">
+    <h2>Entre em Contato</h2>
+    <p class="section-desc">
+        Envie sua mensagem usando o formulário abaixo. Respondemos o mais rápido possível.
+    </p>
+
+    <form id="contactForm">
+      <label>Seu nome</label>
+      <input id="nome" name="nome" type="text" placeholder="Digite seu nome" required>
+
+      <label>Email</label>
+      <input id="email" name="email" type="email" placeholder="exemplo@email.com" required>
+
+      <label>Mensagem</label>
+      <textarea id="mensagem" name="mensagem" placeholder="Como podemos ajudar?" required></textarea>
+
+      <button class="btn" type="submit">Enviar Mensagem</button>
+    </form>
+
+    <p id="contactMsg" style="margin-top:12px; text-align:center;"></p>
+</main>
+
+<!-- SCRIPT -->
+<script>
+const navToggle = document.getElementById("navToggle");
+const navLinks = document.getElementById("navLinks");
+
+navToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("open");
+});
+
+// Formulário
+document.getElementById('contactForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    const msg = document.getElementById('contactMsg');
+    msg.style.color = '#1B5E20';
+    msg.textContent = 'Obrigado! Sua mensagem foi recebida (formulário demonstrativo).';
+    e.target.reset();
+});
+</script>
+
+</body>
+</html>

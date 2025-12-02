@@ -1,0 +1,18 @@
+{
+  "reports": [
+    {
+      "id": 1764701359986,
+      "descricao": "Queimada na floresta",
+      "localizacao": "Jandira",
+      "imagemUrl": "/uploads/1764701359984-whatsapp-image-2025-06-24-at-073218.jpeg",
+      "createdAt": "2025-12-02T18:49:19.986Z"
+    },
+    {
+      "id": 1764701137110,
+      "descricao": "Descarte de lixo incorreto",
+      "localizacao": "Barueri",
+      "imagemUrl": "/uploads/1764701137096-5385990894_246b9cc8ea_b.jpg",
+      "createdAt": "2025-12-02T18:45:37.110Z"
+    }
+  ]
+}

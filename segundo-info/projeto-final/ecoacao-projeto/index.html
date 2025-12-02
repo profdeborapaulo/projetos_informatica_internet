@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoAção - Plataforma de Denúncias Ambientais</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo">EcoAção</div>
+
+    <button class="nav-toggle" id="navToggle">☰</button>
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="como-denunciar.html">Como Denunciar</a></li>
+        <li><a href="contato.html">Contato</a></li>
+    </ul>
+</nav>
+
+
+
+<header class="hero">
+    <div class="hero-content">
+        <h1>EcoAção</h1>
+        <p>Uma plataforma aberta para denunciar crimes ambientais e proteger a natureza.</p>
+        <a href="#form" class="btn">Fazer Denúncia</a>
+    </div>
+</header>
+
+<div class="dual-sections">
+    <section id="form" class="form-section">
+        <h2>Registrar Denúncia Ambiental</h2>
+
+        <p class="section-desc">
+            Preencha os campos abaixo para reportar algum problema ambiental observado em sua região.
+            Sua participação ajuda a proteger o meio ambiente e a fortalecer ações comunitárias.
+        </p>
+
+        <form id="reportForm" enctype="multipart/form-data">
+            <label>Descrição do ocorrido</label>
+            <textarea name="descricao" placeholder="Explique o que aconteceu..." required></textarea>
+
+            <label>Localização</label>
+            <input name="localizacao" type="text" placeholder="Ex: Bairro X, Rio Y..." required>
+
+            <label>Foto do crime (obrigatória)</label>
+            <input name="foto" type="file" accept="image/*" required>
+
+            <button class="btn" type="submit">Enviar Denúncia</button>
+        </form>
+
+        <p id="msg"></p>
+    </section>
+    <section id="dashboard" class="dashboard">
+        <h2>Denúncias Recentes</h2>
+        <p class="section-desc">As denúncias aparecem automaticamente logo após serem enviadas.</p>
+        <div class="reports-grid" id="reportsGrid"></div>
+    </section>
+</div>
+
+<script>
+async function carregarDenuncias() {
+    const res = await fetch("/reports");
+    const dados = await res.json();
+
+    const grid = document.getElementById("reportsGrid");
+    grid.innerHTML = "";
+
+    dados.forEach(d => {
+        const card = document.createElement("div");
+        card.className = "report-card";
+        card.innerHTML = `
+            <img src="${d.imagemUrl}" alt="Imagem da denúncia">
+            <div class="card-info">
+                <h3>${d.localizacao}</h3>
+                <p class="desc">${d.descricao}</p>
+            </div>
+        `;
+        grid.appendChild(card);
+    });
+}
+
+carregarDenuncias();
+
+document.getElementById("reportForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(e.target);
+
+    const res = await fetch("/report", {
+        method: "POST",
+        body: formData
+    });
+
+    const msg = document.getElementById("msg");
+    
+    if (res.ok) {
+        msg.textContent = "Denúncia enviada com sucesso!";
+        e.target.reset();
+        carregarDenuncias();
+    } else {
+        msg.textContent = "Erro ao enviar denúncia.";
+    }
+});
+document.getElementById("navToggle").addEventListener("click", () => {
+    document.getElementById("navLinks").classList.toggle("show");
+});
+</script>
+
+</body>
+</html>
