@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          'azul-tradicional': '#1E3B5A',
+          'azul-medio': '#2B4F73',
+          'azul-claro': '#33699F',
+          'azul-arroxeado': '#43578E',
+          'azul-login': '#256cd7',
+          'branco-azul': '#dfe8f5',
+          'cinza-claro': '#F5F5F5',
+          'cinza-escuro': '#B0B0B0',
+        },
+        fontFamily: {
+          instrumentsans: ['Instrument Sans', 'sans-serif'],
+          poppins: ['Poppins', 'sans-serif'],
+          roboto: ['Roboto', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+
+    <title>Olheiro</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
